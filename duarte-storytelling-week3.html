@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>写作与表达：Nancy Duarte 故事力 — Week 3</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"原句 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"改后 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.eninsight{background:#eef2f5;padding:16px 20px;margin-top:14px;border-left:3px solid #5a7a9a;font-family:Georgia,serif;font-size:0.95rem;color:#2a3a4a;line-height:1.7;font-style:italic}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* 可视化：共鸣张力图 */
+.tension-vis{background:#f8f6f1;padding:24px 16px;margin:18px 0;border-radius:2px;text-align:center}
+.tension-vis .row{display:flex;justify-content:space-between;align-items:center;gap:14px;margin:8px 0}
+.tension-vis .pole{flex:1;padding:14px 10px;border:1px solid #c8c0a8;background:#fff;font-family:Georgia,serif}
+.tension-vis .pole.what-is{color:#6a6a6a}
+.tension-vis .pole.what-could{color:#8a5a2a;font-weight:600;border-color:#8a7a4a}
+.tension-vis .arrow{font-size:1.4rem;color:#8a7a4a;font-family:Georgia,serif}
+.tension-vis .label-small{font-size:0.78rem;color:#8a8a8a;letter-spacing:1.5px;text-transform:uppercase;margin-top:14px;font-family:Georgia,serif}
+.tension-vis .gap-bar{height:6px;background:linear-gradient(to right,#d8d0bc,#8a7a4a);margin:10px 20%;border-radius:3px}
+.tension-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif}
+
+/* Sparkline SVG 容器 */
+.sparkline-box{background:#f8f6f1;padding:20px 16px 14px;margin:18px 0;border-radius:2px;text-align:center}
+.sparkline-box svg{max-width:100%;height:auto;display:block;margin:0 auto}
+.sparkline-box .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif}
+.sparkline-legend{display:flex;justify-content:space-around;flex-wrap:wrap;gap:10px;margin-top:8px;font-size:0.78rem;color:#5a5a5a;font-family:Georgia,serif;letter-spacing:0.5px}
+.sparkline-legend span:before{content:"●";margin-right:4px}
+.legend-is:before{color:#8a8a8a}
+.legend-could:before{color:#8a7a4a}
+.legend-bliss:before{color:#3a6a3a}
+
+/* Big Idea 公式盒 */
+.formula{background:#1f1f1f;color:#fafafa;padding:24px 22px;margin:18px 0;border-radius:2px;font-family:Georgia,serif;text-align:center}
+.formula .eq{font-size:1.1rem;line-height:2;letter-spacing:0.5px}
+.formula .eq .plus,.formula .eq .eq-sign{color:#d8c98a;margin:0 10px;font-weight:700}
+.formula .eq .term{display:inline-block;padding:4px 10px;border-bottom:1px dashed #d8c98a;font-style:italic}
+.formula .eq .result{display:inline-block;padding:4px 12px;background:#d8c98a;color:#1f1f1f;font-weight:700;border-radius:2px;font-style:normal}
+.formula .caption{font-size:0.85rem;color:#d8c98a;margin-top:12px;font-style:italic}
+
+/* DataStory 三段图 */
+.datastory-vis{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px}
+.datastory-vis .ds-row{display:flex;gap:8px;align-items:stretch}
+.datastory-vis .ds-step{flex:1;padding:14px 10px;background:#fff;border:1px solid #d8d0bc;text-align:center;font-family:Georgia,serif;font-size:0.86rem;color:#3a3a3a;line-height:1.5;border-radius:2px}
+.datastory-vis .ds-step .step-num{display:block;font-size:0.72rem;color:#8a7a4a;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;font-weight:700}
+.datastory-vis .ds-step .step-title{display:block;font-weight:700;color:#1f1f1f;margin-bottom:4px;font-size:0.95rem}
+.datastory-vis .ds-step.peak{background:#1f1f1f;color:#fafafa;border-color:#1f1f1f}
+.datastory-vis .ds-step.peak .step-title{color:#d8c98a}
+.datastory-vis .ds-step.peak .step-num{color:#d8c98a}
+.datastory-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .tension-vis .row{flex-direction:column}
+  .tension-vis .arrow{transform:rotate(90deg)}
+  .datastory-vis .ds-row{flex-direction:column}
+  .formula .eq{font-size:0.95rem;line-height:2.2}
+}
+</style>
+</head>
+<body>
+<a href="https://cissy0802.github.io/" style="position:fixed;top:14px;left:14px;font-size:0.82rem;color:inherit;opacity:0.55;text-decoration:none;padding:6px 12px;border:1px solid currentColor;border-radius:20px;z-index:100;backdrop-filter:blur(6px);transition:opacity 0.2s" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.55">← Hub</a>
+<div class="container">
+
+<header>
+  <div class="week-label">Week 3 · 2026.05.21</div>
+  <h1>写作与表达：Nancy Duarte 故事力<span class="topic">Resonate · Sparkline · Big Idea · DataStory</span></h1>
+  <div class="date">BigCat's Writing Weekly</div>
+  <p class="intro">乔布斯 2007 年 iPhone 发布、林肯葛底斯堡演讲、马丁·路德·金"我有一个梦"——它们都遵循同一种隐形结构。Nancy Duarte 把这些伟大演讲拆开、量化、画成图，把"演讲是天赋"变成"演讲是手艺"。本周我们学她最核心的四件武器。</p>
+</header>
+
+<!-- Card 1: Resonate 与共鸣模型 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>共鸣模型：在「现状」与「可能」之间制造张力</h2>
+  <div class="en-name">Resonate — Oscillate between What Is and What Could Be</div>
+  <span class="tag">Duarte · 核心模型</span>
+
+  <div class="section">
+    <div class="label">原则表述</div>
+    <p>伟大的演讲不是"陈述事实"，而是"制造张力"。Duarte 发现：从林肯到乔布斯，所有改变人心的演讲都在反复地、有节奏地振荡于两极——「现状是什么」（What Is）与「未来可以是什么」（What Could Be）。每一次振荡，把听众从舒适区拉开一点，再拉开一点，最后他们就站到了你想要他们站的地方。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">名家原话</div>
+    <div class="quote">
+      "Great communicators create a gap between the status quo and a better way. Audiences feel the tension and want to resolve it — by adopting the new way. The bigger the gap, the more powerful the resonance."
+      <span class="source">— Nancy Duarte, Resonate, Ch. 2</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：杰出的沟通者会在「现状」与「更好的可能」之间制造落差。听众感受到张力，便想通过采纳新方案来化解它。落差越大，共鸣越强。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>这是一种"心理势能"的设计。当你只讲数据和事实，听众的认知是平的；当你只画大饼，听众觉得不真实。把两者并置——"今天是这样的（沉重）⇄ 明天可以是这样的（光明）"——心理上的位差立刻产生引力。听众不会"被说服"，而是"自己往那边走"。这与变革管理中的 Kotter 八步、产品 pitch 中的 Problem-Solution 弧本质同源。Duarte 的贡献是把它从直觉提炼成可复制的结构。</p>
+    <div class="tension-vis">
+      <div class="row">
+        <div class="pole what-is">What Is<br><span style="font-size:0.82rem;color:#a0a0a0">现状 / 痛点 / 数据</span></div>
+        <div class="arrow">⇄</div>
+        <div class="pole what-could">What Could Be<br><span style="font-size:0.82rem;color:#a0a0a0">愿景 / 可能 / 召唤</span></div>
+      </div>
+      <div class="gap-bar"></div>
+      <div class="label-small">The Gap = Resonance 张力即共鸣</div>
+      <div class="caption">演讲的每一次"振荡"都把听众从现状往可能那一端拉一点</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">我们今年的 Agent 战略包括三个方向：模型升级、工具链整合、Copilot 集成。各方向都有明确的 OKR 和负责人。</span>
+      <span class="after">今天，我们的工程师每天有 40% 时间在重复手工操作（What Is）。一年后，他们应该把这 40% 还给思考、还给设计、还给孩子（What Could Be）。要去那里，我们需要做三件事——模型、工具链、Copilot。</span>
+    </div>
+    <div class="example">
+      <span class="before">This product reduces customer onboarding time by 30%.</span>
+      <span class="after">Today, half of your new customers churn before they ever see value — because onboarding takes two weeks (What Is). Imagine they're activated by day three, loving your product before the trial ends (What Could Be). That's what 30% faster onboarding really means.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景</div>
+    <ul>
+      <li>✓ 公众演讲、Pitch Deck、全员大会、产品发布、变革沟通</li>
+      <li>✓ 任何需要"动员行动"而非"汇报信息"的场合</li>
+      <li>✗ 不适用：纯技术 spec、纯财务汇报、紧急故障通报（场合不允许情感铺垫）</li>
+      <li>✗ 谨慎使用：当听众的 What Is 比你预设的还要痛时，会被认为"何不食肉糜"</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">常见错误</div>
+    <ul>
+      <li>只讲 What Could Be——听起来像鸡汤，无现实锚点</li>
+      <li>只讲 What Is——一份诊断报告而非一次召唤</li>
+      <li>两极描述不对称（痛点写实，愿景空泛；或反之）</li>
+      <li>只振荡一次——力道不够，听众未被推动</li>
+      <li>没有把听众放进 What Could Be——他们是观众而非主角</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Nancy Duarte</span>《Resonate: Present Visual Stories that Transform Audiences》（2010） · <span>Nancy Duarte</span>《Illuminate》（变革叙事四阶段：Dream / Leap / Fight / Climb）</p>
+  </div>
+
+  <div class="eninsight">
+    "Audiences don't want to be informed; they want to be moved." — Nancy Duarte. Information lives in the gap between what is and what could be.
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作</div>
+    <p>选一个你下周要做的汇报或发言。在一张纸的左侧写 5 句话描述 What Is（具体、有数据、有画面）；右侧写 5 句话描述 What Could Be（同样具体、同样有画面）。然后设计开场的前 90 秒：让这 10 句话至少振荡 3 次。读出声，听是否有"势能"。</p>
+  </div>
+</section>
+
+<!-- Card 2: Sparkline 演讲形状 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Sparkline：把演讲画成一条波形</h2>
+  <div class="en-name">The Presentation Form — Charting Speech as a Sparkline</div>
+  <span class="tag">Duarte · 结构图</span>
+
+  <div class="section">
+    <div class="label">原则表述</div>
+    <p>Duarte 把数百场顶级演讲（包括乔布斯、马丁·路德·金、邱吉尔）逐句标注 What Is / What Could Be，连成一条曲线——她称之为 Sparkline。结果惊人地一致：开场建立 What Is，结尾抵达"新极乐"（New Bliss），中间是反复振荡。曲线整体上扬，像一首交响乐的渐强。你的下一次演讲，也可以先画出它的 Sparkline，再写稿。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">名家原话</div>
+    <div class="quote">
+      "When we plotted the greatest speeches of all time, the same shape emerged again and again: a clear beginning, a series of contrasts in the middle, a turning point we call the call to adventure, and an ending that paints a New Bliss the audience now believes is possible."
+      <span class="source">— Nancy Duarte, Resonate, Ch. 5</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：当我们把史上最伟大的演讲一一画成图，同一种形状反复出现：清晰的开场、中段持续的对比、一个被我们称为"召唤启程"的转折点，以及一个让听众相信"原来可能"的「新极乐」式结尾。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>Sparkline 之所以有效，是因为它把"时间维度"显式化。演讲不是一份文档，是一段时间的体验——听众的注意力、情绪、信任度在每一分钟都在变化。Sparkline 强迫你把每一段都问："此刻听众在哪一极？我要把他们推向哪一极？"乔布斯发布 iPhone 时，前 30 秒说"今天我们改变一切"（What Could Be），接着花两分钟讲 iPod / Phone / Internet 三个旧设备的痛苦（What Is），再揭示 iPhone（更高的 What Could Be）——一条标准的上扬 Sparkline。</p>
+
+    <div class="sparkline-box">
+      <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" aria-label="Duarte Sparkline">
+        <!-- 基准线 What Is -->
+        <line x1="20" y1="140" x2="580" y2="140" stroke="#c8c0a8" stroke-width="1" stroke-dasharray="4,4"/>
+        <text x="22" y="155" font-family="Georgia" font-size="11" fill="#8a8a8a">What Is</text>
+
+        <!-- 上限 What Could Be -->
+        <line x1="20" y1="60" x2="580" y2="60" stroke="#c8c0a8" stroke-width="1" stroke-dasharray="4,4"/>
+        <text x="22" y="54" font-family="Georgia" font-size="11" fill="#8a7a4a">What Could Be</text>
+
+        <!-- Sparkline 波形：开场 → 振荡 → 召唤 → 新极乐 -->
+        <path d="M 30 140 L 60 140 L 90 80 L 130 135 L 170 75 L 210 138 L 250 70 L 290 132 L 330 65 L 370 130 L 400 55 L 440 100 L 480 50 L 520 40 L 560 30"
+              fill="none" stroke="#1f1f1f" stroke-width="2.5" stroke-linejoin="round"/>
+
+        <!-- 关键点标记 -->
+        <circle cx="30" cy="140" r="4" fill="#8a8a8a"/>
+        <text x="20" y="178" font-family="Georgia" font-size="10" fill="#5a5a5a">Beginning</text>
+
+        <circle cx="400" cy="55" r="5" fill="#8a7a4a"/>
+        <text x="365" y="42" font-family="Georgia" font-size="10" fill="#8a7a4a" font-style="italic">Call to Adventure</text>
+
+        <circle cx="560" cy="30" r="6" fill="#3a6a3a"/>
+        <text x="500" y="22" font-family="Georgia" font-size="10" fill="#3a6a3a" font-weight="bold">New Bliss</text>
+
+        <!-- 时间轴 -->
+        <line x1="20" y1="180" x2="580" y2="180" stroke="#8a8a8a" stroke-width="0.5"/>
+        <text x="20" y="195" font-family="Georgia" font-size="9" fill="#8a8a8a">0:00</text>
+        <text x="555" y="195" font-family="Georgia" font-size="9" fill="#8a8a8a">END</text>
+      </svg>
+      <div class="sparkline-legend">
+        <span class="legend-is">基线 / 现状</span>
+        <span class="legend-could">理想 / 可能</span>
+        <span class="legend-bliss">新极乐 / 收束</span>
+      </div>
+      <div class="caption">Duarte Sparkline — 把演讲画成一条上扬的振荡曲线</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">（平直版）今天我介绍一下我们 Q3 的成绩：DAU 涨了 10%，留存提升了 5%，新功能 A、B、C 上线……（一路平铺，整段贴在 What Is 基线上）</span>
+      <span class="after">（Sparkline 版）三个月前，我们差点失去一个最大客户（What Is，低点）。今天，他们续约了三年（What Could Be，跳升）。这中间发生了什么？让我带你回到 Q3 第一周的那个早晨……（建立振荡，引向 New Bliss）</span>
+    </div>
+    <div class="example">
+      <span class="before">A pitch that just lists features: "Our product has X, Y, Z. Pricing starts at $X. Demo available."</span>
+      <span class="after">"Last year, a customer told us she stayed up till 2am every Friday closing the books. (What Is) This March, she closed in 40 minutes — and went home to her kids. (What Could Be) Here's how we got her there." Then come the features, each tied to a contrast.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景</div>
+    <ul>
+      <li>✓ 任何 10 分钟以上的演讲、Keynote、TED 式分享、All-hands</li>
+      <li>✓ 投资人 pitch、产品发布、年度战略宣讲</li>
+      <li>✗ 不适用：5 分钟以内的纯信息通报、技术评审会</li>
+      <li>✗ 谨慎使用：内部紧急沟通——结构太"美"会显得不真诚</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">常见错误</div>
+    <ul>
+      <li>整场贴在 What Is 上——一份诊断 PPT 而非演讲</li>
+      <li>整场贴在 What Could Be 上——一场空中楼阁的鸡汤</li>
+      <li>没有 New Bliss——演讲在中间戛然而止，听众无落点</li>
+      <li>缺少"召唤启程"那个明确的转折——听众不知道何时该行动</li>
+      <li>波形振荡频率不均——前半段太密，后半段塌平</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Nancy Duarte</span>《Resonate》Ch. 5 "Create Meaningful Content" · <span>Steve Jobs</span> 2007 Macworld iPhone Keynote（Duarte 在书中逐分钟标注其 Sparkline）</p>
+  </div>
+
+  <div class="eninsight">
+    "Don't write the speech first; draw the sparkline first." — Once you can see the shape, the words come easily — and the audience can feel the rise.
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作</div>
+    <p>找一段 TED 演讲（建议：Brené Brown《脆弱的力量》或 Hans Rosling《最好的统计数据》），每 30 秒做一次记号：此刻在 What Is 还是 What Could Be？记完 18 分钟，把这些点连成线，看是否像 Duarte 的 Sparkline。然后用同样方法画你下周演讲的草图——先画形状，再填字。</p>
+  </div>
+</section>
+
+<!-- Card 3: Big Idea 公式 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Big Idea 公式：一句话说清你要说什么</h2>
+  <div class="en-name">The Big Idea — Your Unique POV + What's at Stake</div>
+  <span class="tag">Duarte · 内容核心</span>
+
+  <div class="section">
+    <div class="label">原则表述</div>
+    <p>在画 Sparkline、做幻灯片、写演讲稿之前，先写出你的 Big Idea。Duarte 的公式：Big Idea = 你独特的观点 + 听众的利害关系。一句话，不超过两行。如果一句话讲不清，说明你还没想清——回去想，不要急着做 PPT。这是所有 Duarte 工作坊的第一道门槛。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">名家原话</div>
+    <div class="quote">
+      "Your big idea must convey your unique perspective and articulate what's at stake. If your audience walks away remembering nothing but one sentence, that sentence is your big idea — make it count."
+      <span class="source">— Nancy Duarte, Resonate, Ch. 4</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：你的 Big Idea 必须传达你独特的视角，并讲清听众的利害所在。如果听完后听众只能记住一句话，那一句就是你的 Big Idea——务必让它值得被记住。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>"独特观点"（POV）让 Big Idea 不沦为大白话——"我们要重视客户" 不是 POV，"我们要把退货当成第二次销售机会" 是 POV。"利害关系"（Stakes）让 Big Idea 不沦为空想——"我们应该投入 AI" 没有 stakes，"不在 18 个月内重写底层，我们将失去开发者市场" 有 stakes。两者相乘，才有共鸣。这与 Made to Stick 的"概念性诱饵"、麦肯锡的"So What"是同一根筋。</p>
+
+    <div class="formula">
+      <div class="eq">
+        <span class="term">独特观点 Your Unique POV</span>
+        <span class="plus">+</span>
+        <span class="term">利害关系 What's at Stake</span>
+      </div>
+      <div class="eq" style="margin-top:6px">
+        <span class="eq-sign">=</span>
+        <span class="result">Big Idea</span>
+      </div>
+      <div class="caption">一句话 · 完整句 · 含动词与后果</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">我今天演讲的主题是：AI 时代的工程师能力升级。（这是 topic，不是 Big Idea）</span>
+      <span class="after">在 AI 接管 70% 编码工作的未来 18 个月，工程师的真正护城河是"对问题的深度理解力"——不升级它，我们就只是更慢的 Claude。（独特观点 + 利害关系）</span>
+    </div>
+    <div class="example">
+      <span class="before">Today I'll talk about remote work culture. (Topic only)</span>
+      <span class="after">Remote work isn't about location — it's a forcing function for written clarity. Companies that don't learn to write will lose their best talent within three years. (POV + Stakes)</span>
+    </div>
+    <div class="example">
+      <span class="before">关于我们明年的产品方向。（无观点，无利害）</span>
+      <span class="after">明年我们应该砍掉 B2C 业务、All in B2B——继续两线作战，我们会在 12 个月内耗尽现金。</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景</div>
+    <ul>
+      <li>✓ 写演讲稿、文章、Memo、Pitch Deck 之前的"立题"环节</li>
+      <li>✓ 团队对齐叙事——所有人都能复述同一句 Big Idea 才算对齐</li>
+      <li>✗ 不适用：开放式探索讨论（此时还不该锁定结论）</li>
+      <li>✗ 谨慎使用：写出来的 Big Idea 不能反复修改——它应该是"已经想清"的产物</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">常见错误</div>
+    <ul>
+      <li>把"主题"当成 Big Idea（如"关于客户成功"——这是个名词，不是一句完整的话）</li>
+      <li>缺独特观点——句子是真的，但人尽皆知</li>
+      <li>缺利害关系——只说"我建议……"不说"否则会……"</li>
+      <li>太长——超过两行，是因为你还没想清</li>
+      <li>用术语包裹大白话（"通过赋能下游协同实现价值闭环"）</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Nancy Duarte</span>《Resonate》Ch. 4 "Define Your Audience" + "Develop Your Premise" · <span>Chip & Dan Heath</span>《Made to Stick》"Simple" 一章的"指挥官意图"</p>
+  </div>
+
+  <div class="eninsight">
+    "If you can't fit your idea on the back of a business card, you don't have an idea — you have a topic." A useful blade for cutting away the throat-clearing.
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作</div>
+    <p>用 Duarte 公式写出三个 Big Idea——分别针对：(1) 你下次要做的工作汇报；(2) 你想说服领导的一件事；(3) 你想对孩子说的人生建议。每个不超过两行，必须含独特观点与利害关系。写完，读给一个朋友听，问他："如果你只能记住一句话，是这句吗？"</p>
+  </div>
+</section>
+
+<!-- Card 4: DataStory -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>DataStory：让数据讲一个故事</h2>
+  <div class="en-name">DataStory — Three Acts: Setup, Conflict, Resolution</div>
+  <span class="tag">Duarte · 数据叙事</span>
+
+  <div class="section">
+    <div class="label">原则表述</div>
+    <p>大多数数据汇报失败，不是因为数据不好，是因为"数据被堆放"而不是"数据在讲一个故事"。Duarte 在《DataStory》中提出三幕结构：Setup（建立基线）→ Conflict（揭示反差/拐点）→ Resolution（导向决策）。每一张图表，每一个数字，都要回答"它在故事中演什么角色"。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">名家原话</div>
+    <div class="quote">
+      "Data without story is noise. Story without data is fiction. The communicator's job is to find the story already living inside the data, and then frame it so the audience can act."
+      <span class="source">— Nancy Duarte, DataStory, Introduction</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：没有故事的数据是噪音，没有数据的故事是虚构。沟通者的任务是找到数据内部本就存在的故事，再用合适的方式呈现，让听众能据此行动。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>数据本身从不会说话——是叙事者赋予它意义。同样一份"留存率 67%"的数据，可以讲三个截然不同的故事：（a）我们的留存好于行业平均，应该加大投放；（b）我们的留存还不够好，落后头部，应该重写 onboarding；（c）我们的留存在三个月里从 50% 涨到 67%，验证了新策略，应该 double down。Duarte 三幕的作用，是逼你显式选择"这份数据为哪一个决策服务"——并据此挑选图表、对比项、叙事路径。</p>
+
+    <div class="datastory-vis">
+      <div class="ds-row">
+        <div class="ds-step">
+          <span class="step-num">Act I</span>
+          <span class="step-title">Setup 建立</span>
+          基线、背景、<br>"我们原来在哪里"
+        </div>
+        <div class="ds-step peak">
+          <span class="step-num">Act II</span>
+          <span class="step-title">Conflict 反差</span>
+          拐点、异常、<br>"发生了什么"
+        </div>
+        <div class="ds-step">
+          <span class="step-num">Act III</span>
+          <span class="step-title">Resolution 化解</span>
+          决策、行动、<br>"我们该怎么办"
+        </div>
+      </div>
+      <div class="caption">DataStory 三幕结构 — 数据从堆叠变成叙事</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">Q3 数据汇报：DAU 1200 万、留存 67%、付费率 4.2%、NPS 38、Crash 率 0.3%、平均会话时长 12.5 分钟……（数据墙，无故事）</span>
+      <span class="after">Q3 我们做对了一件事，也做错了一件事。<br>【建立】Q2 我们的付费转化卡在 3.1%。<br>【反差】Q3 第二周做了 onboarding 简化，付费率三周内跳升到 4.2%（+35%）。但同期 NPS 从 45 跌到 38——简化伤了重度用户。<br>【化解】Q4 建议：保留新 onboarding，新增"专家模式"开关。</span>
+    </div>
+    <div class="example">
+      <span class="before">Sales report: revenue $12M, up from $10M last quarter. (Just a number)</span>
+      <span class="after">Setup: We forecast $11M for Q3. Conflict: We hit $12M — but $1.5M came from a single deal that almost slipped. Resolution: We're over-dependent on whales; Q4 plan adds three mid-market reps.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景</div>
+    <ul>
+      <li>✓ 季度业绩汇报、产品数据评审、A/B 实验结论、董事会数据 deck</li>
+      <li>✓ 把"运营仪表盘"翻译成"决策叙事"的所有场合</li>
+      <li>✗ 不适用：原始数据交付、研究数据集发布（此时反而需要不偏不倚）</li>
+      <li>✗ 谨慎使用：当数据本身极不确定时，强加故事会变成误导</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">常见错误</div>
+    <ul>
+      <li>把所有指标都列出来——"什么都讲" = "什么都没讲"</li>
+      <li>没有"Conflict"——一路向好的故事不让人记住</li>
+      <li>图表自己说话，演讲者只念图——读者不知道"看哪里"</li>
+      <li>缺 Resolution——观众听完不知道下一步该做什么</li>
+      <li>用"漂亮但误导"的图表（截断 Y 轴、不当比例、樱桃挑选）</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Nancy Duarte</span>《DataStory: Explain Data and Inspire Action Through Story》（2019） · <span>Cole Knaflic</span>《Storytelling with Data》（图表层面的姊妹书） · <span>Edward Tufte</span>《The Visual Display of Quantitative Information》</p>
+  </div>
+
+  <div class="eninsight">
+    "Don't show all the data; show the data that drives the decision." — A 50-row table is a database. Three numbers in a sentence is a story.
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作</div>
+    <p>选你最近一份数据汇报或 dashboard 截图。先问："如果只展示三个数字，是哪三个？"把这三个数字按 Setup–Conflict–Resolution 三幕排列，写成不超过 80 字的口述脚本。试着对一个不在你团队的人讲一次——若他能复述这个故事，说明你成功了。</p>
+  </div>
+</section>
+
+<div class="nav">
+  <a href="index.html">← 回到每周写作目录</a>
+</div>
+
+<footer>BigCat · Writing Weekly · Week 3 · 2026</footer>
+
+</div>
+<script src="https://cissy0802.github.io/comments.js" defer></script>
+<script src="https://cissy0802.github.io/search.js" defer></script>
+</body>
+</html>
