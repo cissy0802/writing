@@ -23,7 +23,7 @@ jobs:
         run: |
           changed=0
           while IFS= read -r f; do
-            for script in comments.js search.js; do
+            for script in comments.js search.js index-button.js; do
               if ! grep -q "$script" "$f"; then
                 tag="<script src=\"https://cissy0802.github.io/$script\" defer></script>"
                 if grep -qi "</body>" "$f"; then
