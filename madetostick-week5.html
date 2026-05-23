@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>写作与表达：Made to Stick — Week 5</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"原句 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"改后 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.eninsight{background:#eef2f5;padding:16px 20px;margin-top:14px;border-left:3px solid #5a7a9a;font-family:Georgia,serif;font-size:0.95rem;color:#2a3a4a;line-height:1.7;font-style:italic}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* SUCCESs 六瓣可视化 */
+.success-box{background:#f8f6f1;padding:24px 18px 18px;margin:18px 0;border-radius:2px}
+.success-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.success-grid .cell{background:#fff;border:1px solid #d8d0bc;padding:14px 10px;text-align:center;font-family:Georgia,serif;border-radius:2px}
+.success-grid .cell .letter{display:block;font-size:1.8rem;font-weight:800;color:#8a7a4a;line-height:1;margin-bottom:6px}
+.success-grid .cell .name{display:block;font-size:0.92rem;font-weight:700;color:#1f1f1f}
+.success-grid .cell .cn{display:block;font-size:0.82rem;color:#5a5a5a;margin-top:3px}
+.success-grid .cell.highlight{background:#1f1f1f;border-color:#1f1f1f}
+.success-grid .cell.highlight .letter{color:#d8c98a}
+.success-grid .cell.highlight .name,.success-grid .cell.highlight .cn{color:#fafafa}
+.success-box .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:14px;font-family:Georgia,serif;text-align:center}
+
+/* Gap Theory 缺口示意 */
+.gap-box{background:#f8f6f1;padding:24px 18px;margin:18px 0;border-radius:2px}
+.gap-box .gap-row{display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap}
+.gap-box .pill{background:#fff;border:1px solid #d8d0bc;padding:12px 14px;border-radius:20px;font-family:Georgia,serif;font-size:0.88rem;min-width:130px;text-align:center}
+.gap-box .pill .role{display:block;font-size:0.7rem;color:#8a7a4a;letter-spacing:1.5px;font-weight:700;margin-bottom:4px}
+.gap-box .pill.gap{background:#1f1f1f;border-color:#1f1f1f;color:#fafafa;font-style:italic}
+.gap-box .pill.gap .role{color:#d8c98a}
+.gap-box .arrow{font-size:1.3rem;color:#8a7a4a;font-family:Georgia,serif}
+.gap-box .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:14px;font-family:Georgia,serif;text-align:center}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .success-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+<a href="https://cissy0802.github.io/" style="position:fixed;top:14px;left:14px;font-size:0.82rem;color:inherit;opacity:0.55;text-decoration:none;padding:6px 12px;border:1px solid currentColor;border-radius:20px;z-index:100;backdrop-filter:blur(6px);transition:opacity 0.2s" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.55">← Hub</a>
+<div class="container">
+
+<header>
+  <div class="week-label">Week 5 · 2026.05.23</div>
+  <h1>写作与表达：让想法粘住<span class="topic">Made to Stick — The SUCCESs Framework</span></h1>
+  <div class="date">BigCat's Writing Weekly</div>
+  <p class="intro">"传得开的想法"为什么传得开？兄弟俩 Chip Heath（斯坦福商学院教授）与 Dan Heath 用十年研究都市传说、谚语、广告标语、政治口号，发现 6 个共同特质：Simple、Unexpected、Concrete、Credible、Emotional、Story——首字母拼成 SUCCESs。本周拆其中四把锥子：找核心、制造意外、给具象、加可信。这不是营销技巧，是让你的备忘录、汇报、产品文案、家庭信，从"被听见"升级到"被记住"、再到"被转述"。</p>
+</header>
+
+<!-- Framework Overview -->
+<section class="card">
+  <div class="num">Framework</div>
+  <h2>SUCCESs 六字诀：让想法粘住的六个钩</h2>
+  <div class="en-name">The Six Principles of Sticky Ideas — Chip &amp; Dan Heath, 2007</div>
+  <span class="tag">总览 · Made to Stick</span>
+
+  <div class="section">
+    <div class="label">框架概览</div>
+    <p>Heath 兄弟提出：一个想法要"粘"，至少要踩中六瓣中的几瓣。Sticky = 被理解、被记住、能改变思想或行为。本周我们深耕前四瓣（Simple、Unexpected、Concrete、Credible），后两瓣 Emotional 与 Story 已在 Week 3-4 系统讨论过——但每一篇真正"粘"的文案，往往六瓣都在用力。</p>
+
+    <div class="success-box">
+      <div class="success-grid">
+        <div class="cell highlight"><span class="letter">S</span><span class="name">Simple</span><span class="cn">简单 · 找核心</span></div>
+        <div class="cell highlight"><span class="letter">U</span><span class="name">Unexpected</span><span class="cn">意外 · 制造缺口</span></div>
+        <div class="cell highlight"><span class="letter">C</span><span class="name">Concrete</span><span class="cn">具象 · 可触摸</span></div>
+        <div class="cell highlight"><span class="letter">C</span><span class="name">Credible</span><span class="cn">可信 · 让人相信</span></div>
+        <div class="cell"><span class="letter">E</span><span class="name">Emotional</span><span class="cn">情感 · 让人在乎</span></div>
+        <div class="cell"><span class="letter">S</span><span class="name">Story</span><span class="cn">故事 · 让人行动</span></div>
+      </div>
+      <div class="caption">SUCCESs — 六瓣中本周深耕前四瓣（黑底），后两瓣见 Week 3-4 故事篇</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">为什么不是"创意"</div>
+    <p>Heath 兄弟最重要的发现是：粘性不是天才的创意，是一组可学的设计选择。"It is far easier to uncover an idea that is already sticky than to manufacture stickiness from scratch." 写邮件、写决策备忘录、做季度汇报时，你不需要变成一个创意鬼才——你只需要在六瓣里逐一对照，把空的填上。</p>
+  </div>
+</section>
+
+<!-- Card 1: Simple -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Simple：找到核心，狠下心丢掉其他</h2>
+  <div class="en-name">Find the Core — Commander's Intent</div>
+  <span class="tag">S · 简单</span>
+
+  <div class="section">
+    <div class="label">原则表述</div>
+    <p>Simple ≠ Dumbed-down（弱智化），= "Core + Compact"（核心 + 压缩）。Heath 兄弟从美军军官手册借来一个概念——"Commander's Intent / 司令官的意图"：每一道作战命令，必须能用一句话说清"如果一切计划失败，士兵知道要做什么"。这就是核心。写作里的对应是：删到只剩一句话，这句话还能不能站住？站不住，你还没找到核心。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">名家原话</div>
+    <div class="quote">
+      "To strip an idea down to its core, we must be masters of exclusion. We must relentlessly prioritize. Saying something short is not the mission—saying something profound while saying it short is the goal."
+      <span class="source">— Chip &amp; Dan Heath《Made to Stick》, Ch. 1</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：把想法剥到只剩内核，需要的是排除的本事。要无情地排优先级。说得短不是目的——又短又深，才是目的。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>认知科学早就发现：人对"3 个重点"的记忆约等于"1 个重点"，对"6 个重点"的记忆 ≈ 0。但人脑天然抗拒删减，因为每一条都"重要"。Heath 给出工程化的破解：把一切候选信息排个总顺序（不是分类，是<strong>序号</strong>），把第 2 条之下全部砍掉，看剩下的第 1 条能不能独立支撑全文。可以——它就是核心；不行——你的第 1 条不够锋利，回炉再练。</p>
+    <p style="margin-top:10px">最著名的反例是律师事务所"我们提供全方位法律服务"——这句话试图覆盖一切，结果什么也没说。最著名的正例是 Southwest Airlines 的 "The low-fare airline"——三个字，足以让一个员工在没有手册的情况下决定要不要加沙拉鸡肉餐（不要，因为不便宜）。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">本季度我们将聚焦于：客户增长、产品质量提升、研发效率改进、组织文化建设、合规体系完善、成本优化、品牌升级。（七大重点 = 没有重点）</span>
+      <span class="after">Q3 一件事：把新签客户的首月留存从 38% 拉到 60%。其他工作继续做，但与此冲突时，让路。（一句话司令官的意图——团队任何人在任何会议里都能用它做判断）</span>
+    </div>
+    <div class="example">
+      <span class="before">This memo seeks to outline our strategic considerations regarding the multi-faceted opportunities in the AI infrastructure space. (空话开头)</span>
+      <span class="after">If we don't ship a unified inference gateway by October, we lose three enterprise accounts. Everything else in this memo serves that one fact. (核心先行，其余服务于它)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景</div>
+    <ul>
+      <li>✓ 战略备忘录、年度信、Pitch 第一页、All-hands 开场、产品 OKR</li>
+      <li>✓ 复杂决策邮件——把"我建议 X"放第一句，理由放后面</li>
+      <li>✗ 不适用：操作手册（需要全面）、API 参考文档（需要穷举）</li>
+      <li>✗ 谨慎使用：处理多元利益相关者的政策文件时，"找一个核心"可能政治不正确——但仍要内心清楚那个核心是什么</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">常见错误</div>
+    <ul>
+      <li>把"简单"理解成"短"——其实是"核心 + 压缩"，核心先于压缩</li>
+      <li>用并列 5 项代替排序 1 项，自欺欺人地以为给了优先级</li>
+      <li>核心是名词短语而非可执行命题——"AI 战略"不是核心，"在 9 月前发 v1 给 5 个种子客户"才是</li>
+      <li>怕得罪人，舍不得砍掉次要的——结果首要的也被冲淡</li>
+      <li>每一层都写"司令官意图"，但层层之间不一致——团队总监的核心和工程师的日常脱节</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Chip &amp; Dan Heath</span>《Made to Stick: Why Some Ideas Survive and Others Die》Ch. 1 — Simple · <span>U.S. Army Field Manual</span> Commander's Intent 概念原型</p>
+  </div>
+
+  <div class="eninsight">
+    "If you say three things, you say nothing." — Find the one sentence a tired teammate at 11pm can still act on. That's your core.
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作</div>
+    <p>找你最近写的一篇 1000 字以上的战略/汇报文档。逼自己用<strong>一句话</strong>（≤25 个汉字或 18 个英文词）重写它的"司令官意图"——丢失计划、丢失页码、丢失会议，团队成员凭这句话能不能做对的决策？写不出来，就不是"读者笨"，是你自己还没想清楚。把这句话粘到原文档第一行，再读一遍——你可能会发现 30% 的内容其实可以删。</p>
+  </div>
+</section>
+
+<!-- Card 2: Unexpected -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Unexpected：制造缺口，让好奇心驱动注意</h2>
+  <div class="en-name">Gap Theory of Curiosity — Surprise Then Reward</div>
+  <span class="tag">U · 意外</span>
+
+  <div class="section">
+    <div class="label">原则表述</div>
+    <p>注意力的反义词不是分心，是<strong>"已知"</strong>——大脑对预期内的事物会自动过滤。所以你要先<strong>打破对方的猜测模型（schema）</strong>，让他意识到"我以为我懂——其实我不懂"，然后再补上知识。Heath 引心理学家 George Loewenstein 的"缺口理论"：好奇心源于"我知道我不知道什么"的痛感。先制造缺口，再填上。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">名家原话</div>
+    <div class="quote">
+      "To get people's attention, we have to violate their schemas. But surprise that lacks insight is empty—surprise must lead to insight. Curiosity is the intellectual need to answer questions and close open patterns."
+      <span class="source">— Heath《Made to Stick》, Ch. 2 / 引 George Loewenstein 1994</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：为了让人注意，必须打破他们的预期模式。但只意外不通往洞见，就是空洞。意外必须导向洞见。好奇心是大脑想要把"开着的问题"关上的智力需求。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>Heath 给出经典案例：1980 年代美国电影院食品研究——一桶中等爆米花含 37 克饱和脂肪，相当于"一份培根早餐 + 一份巨无霸 + 一份牛排晚餐合计的饱和脂肪量"。这条信息粘了 30 年。它的工程结构是：先打破你的预期（"爆米花？健康零食吧？"），然后补上一个让你直观恐惧的对照（三餐之合）。</p>
+
+    <div class="gap-box">
+      <div class="gap-row">
+        <div class="pill"><span class="role">第 1 步</span>读者的预期 / Schema</div>
+        <div class="arrow">→</div>
+        <div class="pill gap"><span class="role">第 2 步</span>意外，打破它</div>
+        <div class="arrow">→</div>
+        <div class="pill"><span class="role">第 3 步</span>缺口 / Curiosity Gap</div>
+        <div class="arrow">→</div>
+        <div class="pill"><span class="role">第 4 步</span>洞见 / Insight</div>
+      </div>
+      <div class="caption">Gap Theory — 制造好奇缺口的四步链</div>
+    </div>
+    <p style="margin-top:14px">注意：缺口必须能被你的内容关上。空意外（clickbait）只会激起愤怒，不会粘住——读者带着背叛感离开，下次见你的名字就划走。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">我们的新模型在多个 benchmark 上取得了显著提升，详见附件。（无意外，无缺口，无人点开附件）</span>
+      <span class="after">同一道题，旧模型答错；新模型答对——区别只在我们改了 prompt 里的一个词。这一个词为什么有这么大的杠杆？我们花了三周才搞明白。（先意外，再开缺口，再承诺洞见）</span>
+    </div>
+    <div class="example">
+      <span class="before">Our Q3 results show strong performance across key metrics. (套话，无 schema 冲突)</span>
+      <span class="after">We grew revenue 22%, but our two largest customers churned. Both happened in the same week. This memo is about what those two weeks taught us. (先用矛盾打破"成功 = 好"的 schema)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景</div>
+    <ul>
+      <li>✓ 标题、开场、TED 演讲首 30 秒、销售邮件主题行、Twitter 首句</li>
+      <li>✓ 复盘汇报——用反直觉的事实做钩子，比"按时间线汇报"高 10 倍记忆度</li>
+      <li>✗ 不适用：危机公告（需平实直接）、合规通知（不能玩花样）</li>
+      <li>✗ 严重场合谨慎——年度裁员公告里用"惊喜!"作为修辞钩子是灾难</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">常见错误</div>
+    <ul>
+      <li>意外有了但洞见空——读者读完一头雾水或愤怒（"骗点击"型）</li>
+      <li>意外靠夸张数字（"暴涨 300%！"），但读者已对这种语言脱敏</li>
+      <li>对错对象抛意外——给资深从业者讲他们已知的"反常识"，反而显得你浅</li>
+      <li>所有段都意外——每段都炸，相当于没炸。意外要稀疏，节奏比频率重要</li>
+      <li>意外之后没"关闭缺口"，整篇悬而不解——好奇心耗尽变成不信任</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Heath</span>《Made to Stick》Ch. 2 — Unexpected · <span>George Loewenstein</span>《The Psychology of Curiosity》(1994) — 缺口理论原始论文</p>
+  </div>
+
+  <div class="eninsight">
+    "Surprise grabs. Curiosity holds." — One opens the door; the other walks the reader through it. Engineer both, not just the first.
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作</div>
+    <p>找你下一封要发的工作邮件——主题行通常是"Re: 关于 Q3 OKR 的讨论"或"项目周报 Week 21"。重写主题行：第一种是"事实型反差"（如"上周客户加单 3 倍，但毛利掉了 8 个点"），第二种是"问题型缺口"（如"为什么我们最好的客户也最容易流失？"）。两个版本发给两组同事，看谁的回复率高、回复里有没有人说"看到主题就想点开"——这就是你刚刚校准了 schema violation 的力度。</p>
+  </div>
+</section>
+
+<!-- Card 3: Concrete -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Concrete：把抽象变成可触摸的画面</h2>
+  <div class="en-name">The Velcro Theory of Memory — Hooks for the Brain</div>
+  <span class="tag">C · 具象</span>
+
+  <div class="section">
+    <div class="label">原则表述</div>
+    <p>抽象 = 难记 + 易误解 + 难协作。具象 = 易记 + 共同理解 + 可执行。Heath 提出"魔术贴记忆理论"：大脑像魔术贴，<strong>钩子越多越粘</strong>。一个抽象的"提升效率"在脑子里是一个光秃秃的小球，滚一下就掉；"把新员工 onboarding 从 14 天压到 3 天"是一个长满钩子的毛球。具象不是降智——它是把抽象翻译成所有读者能在同一画面里看到的东西。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">名家原话</div>
+    <div class="quote">
+      "Language is often abstract, but life is not abstract. Concrete is memorable because our brains are wired to remember concrete data. Abstraction makes it harder to understand an idea, and harder to remember it. It also makes it harder to coordinate our activities."
+      <span class="source">— Heath《Made to Stick》, Ch. 3</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：语言常常是抽象的，但生活不是。具象易记，是因为大脑就是为记具象事物长的。抽象让一个想法既难懂、又难记——更让大家难协作。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>"具象"不只是细节多——它是让读者能<strong>在自己脑海里画出来</strong>。三个工程化手法：</p>
+    <ul>
+      <li><strong>替换抽象名词为可观察行为</strong>：把"提升团队执行力" → "周会前每人发 3 行进展周报"</li>
+      <li><strong>替换模糊范畴为具体单位</strong>：把"几百万用户" → "一座小城的居民全部装了它"</li>
+      <li><strong>替换概念为画面</strong>：把"我们要做行业领导者" → "竞争对手开周会时引用我们的产品作为基准"</li>
+    </ul>
+    <p style="margin-top:12px">Heath 引用了 JFK 1961 年那句著名的"Land a man on the moon and return him safely before the decade is out."——10 年内把一个人送上月球、再安全送回来。所有的字都是 6 岁小孩能画出来的：人、月球、回家。这就是为什么 NASA 三十万工程师能朝同一个目标走。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">我们要打造客户至上的文化，提升员工的同理心与服务意识。（4 个抽象名词，0 个画面）</span>
+      <span class="after">从下周一开始，每位工程师每月要做 1 次客服轮岗——接 2 小时真实客户电话。负责人是工程总监，每月给我看 30 个录音中的 3 段。（可看、可问、可考核）</span>
+    </div>
+    <div class="example">
+      <span class="before">Our product offers significant productivity improvements for knowledge workers. (任何 B2B 软件都能这么说)</span>
+      <span class="after">Sarah, a designer at a 40-person startup, used to spend 90 minutes every Monday compiling weekly reports. Now she runs one command. Her Mondays start at 10:30 instead of 8. (一个名字、一个数字、一个画面)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景</div>
+    <ul>
+      <li>✓ 所有需要跨职能协作的文档——具象是协作的最大公约数</li>
+      <li>✓ 给小白 / 跨部门同事讲技术——一个比喻顶半小时白板</li>
+      <li>✓ 教育、培训、家信、写给孩子的人生信</li>
+      <li>✗ 不适用：法律合同（恰恰需要抽象以覆盖未来情形）、数学证明</li>
+      <li>✗ 谨慎使用：跨文化场景——你的具象画面（"像周末逛 Costco"）在对方文化里可能是空的</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">常见错误</div>
+    <ul>
+      <li>用术语代替具象——"赋能 / 抓手 / 闭环"是抽象的伪装，画不出来</li>
+      <li>具象只在标题上，正文又退回抽象——读者像看了精彩预告再读说明书</li>
+      <li>过度细节导致信息噪音——选 1-2 个"代表性细节"，不是把所有细节都写进去</li>
+      <li>具象的画面与论点无关——读者记住了画面但忘了你想说什么</li>
+      <li>中文里用"具象的成语"自欺欺人——"百尺竿头""乘风破浪"对今人来说已经回到抽象</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Heath</span>《Made to Stick》Ch. 3 — Concrete · <span>William Zinsser</span>《On Writing Well》Ch. "Words" — 抽象名词的危险</p>
+  </div>
+
+  <div class="eninsight">
+    "If you can't draw it, you haven't said it." — A six-year-old should be able to sketch your strategy. If not, it's not strategy yet — it's vocabulary.
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作</div>
+    <p>挑你团队最常用的 5 个抽象词（"赋能"、"协同"、"提效"、"对齐"、"沉淀"——或英文的 enable / leverage / synergize / streamline / align）。每个词写一个 1 句话的具象替代——必须包含一个可观察的行为或可数的对象。例：把"我们要提升对齐"换成"每周三 09:30，三位负责人 15 分钟同步本周冲突项"。下次写文档/发邮件时，把抽象词全数替换为具象句子，对方理解速度会瞬间快一倍。</p>
+  </div>
+</section>
+
+<!-- Card 4: Credible -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Credible：让人相信，不靠权威靠细节</h2>
+  <div class="en-name">The Sinatra Test, Anti-Authorities &amp; Vivid Statistics</div>
+  <span class="tag">C · 可信</span>
+
+  <div class="section">
+    <div class="label">原则表述</div>
+    <p>可信不等于"加 CEO 头衔"或"贴麦肯锡 logo"。Heath 提出三种"内生可信"手法：<strong>(1) Sinatra Test</strong>——"If I can make it there, I'll make it anywhere"，一个无可争辩的硬例子顶过十个软证据；<strong>(2) 反权威 / Anti-authority</strong>——让"被影响的普通人"来背书，比专家更让人信；<strong>(3) 可触摸的统计</strong>——把数字翻译成读者能感受的物理量。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">名家原话</div>
+    <div class="quote">
+      "Statistics are rarely meaningful in and of themselves. Statistics will, and should, almost always be used to illustrate a relationship. It's more important for people to remember the relationship than the number."
+      <span class="source">— Heath《Made to Stick》, Ch. 4</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：统计数字本身几乎从不有意义。它们几乎总是、也应该是被用来呈现一种关系。读者应当记住的是那个关系，而不是那个数字。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>三种内生可信，对应三种心理学机制：</p>
+    <ul>
+      <li><strong>Sinatra Test</strong>——一个极端难的成功案例自带"如果连这都能做，剩下的就不在话下"的推理。例：Safexpress 给宝莱坞送过《哈利波特》新书首发——之后所有客户都信它能处理"机密物流"。</li>
+      <li><strong>反权威</strong>——肺癌晚期患者讲戒烟的力量，比医生讲十遍管用。原因是读者会做心理替换："如果他都改变了，我没理由不能。"</li>
+      <li><strong>可触摸统计</strong>——"我们公司核电站年发电 X 兆瓦时"听不懂；"够全洛杉矶用一周"听懂了。Heath 称之为"Human Scale Principle"——把数字压回人体感官的尺度。</li>
+    </ul>
+    <p style="margin-top:12px">关键洞见：可信不是"加权威"，是"减阻力"。每一个让读者要停下来核实、转换、揣测的环节，都在掉信任。让读者一读就 click——这就是可信。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">我们的方案在多个客户处取得了良好效果（无数据）；据 Gartner 报告，该方案领先行业（外援不能替代你自己的证据）。</span>
+      <span class="after">三家客户用我们方案前后对比——A：客服响应从 14 小时 → 2 小时；B：错单率从 3.2% → 0.4%；C：新员工 onboarding 从 14 天 → 3 天。其中 C 客户的运营总监是行业里出了名的难搞，连他都签了续约。（Sinatra Test + 具象统计）</span>
+    </div>
+    <div class="example">
+      <span class="before">Our platform processes billions of requests per day. (数字大但读者无感)</span>
+      <span class="after">Every time you blink, our platform handles 50,000 requests — about the population of a small town reaching for their phones. (转译为人体尺度)</span>
+    </div>
+    <div class="example">
+      <span class="before">According to McKinsey, AI will drive significant productivity gains. (引用权威，但读者已经麻木)</span>
+      <span class="after">My designer Sarah used to dread Mondays — 90 minutes of report-stitching before real work. Last Monday, she sent me a screenshot at 8:15: "Done. Going for coffee." (反权威：让"被影响的人"自己说话)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景</div>
+    <ul>
+      <li>✓ Pitch Deck 的 "Traction" 页、年度回顾、客户案例、晋升答辩</li>
+      <li>✓ 内部说服决策者拨预算——决策者厌倦 Gartner，反而被一线案例打动</li>
+      <li>✓ 公众沟通——专家可信度在持续下降，普通人故事在上升</li>
+      <li>✗ 不适用：监管文件、临床研究报告（必须依赖外部权威与样本量）</li>
+      <li>✗ 谨慎使用：对极端理性的工程师听众——他们要的是分布而不是 N=1</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">常见错误</div>
+    <ul>
+      <li>堆 logo 当可信——"Used by 500+ companies including..."读者已脱敏</li>
+      <li>统计数字不带对比基线——"我们提升 30%"，比什么提升 30%？</li>
+      <li>樱桃挑选 Sinatra 案例时太离群——讲完所有人都觉得"那是特例"</li>
+      <li>反权威用错了人——找了个意见领袖式名人，不是真正被影响的小人物</li>
+      <li>数字精度造假可信——"23.47% 提升"反而比"约 1/4"更可疑（过度精确触发警觉）</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Heath</span>《Made to Stick》Ch. 4 — Credible · <span>Daniel Kahneman</span>《Thinking, Fast and Slow》— 关于 anchoring 与可信度感知的心理学</p>
+  </div>
+
+  <div class="eninsight">
+    "Don't tell me it's big. Tell me it's bigger than my city." — Translate every number to a thing the reader can touch, walk through, or count on their fingers.
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作</div>
+    <p>找你最近一篇含数据的汇报或 Pitch。逐条审视每个数字，问自己三个问题：(1) 读者能否用直觉感受这个量级？不能 → 翻译成人体尺度。(2) 这个数字相对什么是 baseline？没说 → 补上对比基线。(3) 我有没有一个"无可争辩的硬案例"（Sinatra Test）？没有 → 找一个最极端的客户讲他的故事。改完之后，把新旧两版给同一个人看（最好是非本领域同事），问他："你记住了哪些数字？"——能复述的，就是粘住的。</p>
+  </div>
+</section>
+
+<div class="nav">
+  <a href="index.html">← 回到每周写作目录</a>
+</div>
+
+<footer>BigCat · Writing Weekly · Week 5 · 2026</footer>
+
+</div>
+<script src="https://cissy0802.github.io/comments.js" defer></script>
+<script src="https://cissy0802.github.io/search.js" defer></script>
+<script src="https://cissy0802.github.io/index-button.js" defer></script>
+</body>
+</html>
