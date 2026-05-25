@@ -51,6 +51,15 @@ for f in comments.js search.js index-button.js; do
 done
 grep -q "← Hub" "$NEW" && echo "WARN: $NEW hardcodes ← Hub button (will be deduped, consider removing)"
 
+# <div> balance check (catches Claude's nesting errors that break layout)
+OPENS=$(grep -oE '<div[ >]' "$NEW" | wc -l | tr -d ' ')
+CLOSES=$(grep -oE '</div>' "$NEW" | wc -l | tr -d ' ')
+if [ "$OPENS" != "$CLOSES" ]; then
+  echo "ERROR: $NEW has unbalanced <div>: $OPENS opens vs $CLOSES closes (diff $((OPENS-CLOSES)))"
+  echo "       Layout will break. Fix the HTML before publishing."
+  exit 1
+fi
+
 git config user.email "chengchen0802@gmail.com"
 git config user.name "BigCat"
 git add -A
