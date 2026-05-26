@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing & Expression: The Story Masters — Week 4</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.eninsight{background:#eef2f5;padding:16px 20px;margin-top:14px;border-left:3px solid #5a7a9a;font-family:Georgia,serif;font-size:0.95rem;color:#2a3a4a;line-height:1.7;font-style:italic}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+.spine-box{background:#f8f6f1;padding:22px 18px;margin:18px 0;border-radius:2px}
+.spine-box .spine-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.spine-box .beat{flex:1 1 calc(25% - 8px);min-width:140px;background:#fff;border:1px solid #d8d0bc;padding:12px 10px;border-radius:2px;font-family:Georgia,serif;font-size:0.86rem;line-height:1.5;text-align:center;position:relative}
+.spine-box .beat .step-num{display:block;font-size:0.7rem;color:#8a7a4a;letter-spacing:2px;font-weight:700;margin-bottom:6px}
+.spine-box .beat .step-cn{display:block;color:#1f1f1f;font-weight:600;margin-top:4px;font-size:0.84rem}
+.spine-box .beat.pivot{background:#1f1f1f;color:#fafafa;border-color:#1f1f1f}
+.spine-box .beat.pivot .step-num,.spine-box .beat.pivot .step-cn{color:#d8c98a}
+.spine-box .beat.climax{background:#8a7a4a;color:#fff;border-color:#8a7a4a}
+.spine-box .beat.climax .step-num,.spine-box .beat.climax .step-cn{color:#fff}
+.spine-box .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:14px;font-family:Georgia,serif;text-align:center}
+
+.hero-box{background:#f8f6f1;padding:20px 16px;margin:18px 0;border-radius:2px;text-align:center}
+.hero-box svg{max-width:100%;height:auto;display:block;margin:0 auto}
+.hero-box .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif}
+
+.mckee-box{background:#f8f6f1;padding:20px 16px 14px;margin:18px 0;border-radius:2px;text-align:center}
+.mckee-box svg{max-width:100%;height:auto;display:block;margin:0 auto}
+.mckee-box .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif}
+
+.freytag-box{background:#f8f6f1;padding:20px 16px 14px;margin:18px 0;border-radius:2px;text-align:center}
+.freytag-box svg{max-width:100%;height:auto;display:block;margin:0 auto}
+.freytag-box .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .spine-box .beat{flex:1 1 calc(50% - 6px)}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Week 4 · 2026.05.22</div>
+  <h1>The Story Masters<span class="topic">Story Spine · Hero's Journey · McKee · Story Arc</span></h1>
+  <div class="date">BigCat's Writing Weekly</div>
+  <p class="intro">The human brain is a story processor, not a data processor. The same argument that dies in a PowerPoint deck can travel from one stranger to another across a café — that is the leverage of story. This week we apprentice to four masters of the craft: Pixar's eight sentences, Campbell's hero's circle, McKee's law of change, Freytag's classic arc. They are not literary tricks. They are engineering blueprints for saying one thing clearly.</p>
+</header>
+
+<!-- Card 1: Pixar Story Spine -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>The Pixar Story Spine: Eight Sentences That Hold Any Story</h2>
+  <div class="en-name">The Story Spine — Eight Sentences from Once Upon a Time to Moral</div>
+  <span class="tag">Pixar · Micro-Structure</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Compress any story into eight sentence-openers: <em>Once upon a time… Every day… But one day… Because of that… Because of that… Until finally… Ever since that day… The moral of the story is…</em> Originally devised by the improv teacher Kenn Adams and popularized by Pixar storyboard artist Emma Coats, it forces you to make explicit a baseline, a disruption, a chain of cause and effect, a resolution, a new normal, and a lesson. Use it for a product launch or for a divorce — the spine is the same.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "#4: Once upon a time there was ___. Every day, ___. One day ___. Because of that, ___. Because of that, ___. Until finally ___."
+      <span class="source">— Emma Coats, Pixar storyboard artist, "22 Rules of Storytelling" #4 (2011)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The spine's power comes from those two "Because of that" links. The most common failure of a beginning storyteller is "and then, and then, and then" — events laid flat with no causation. The spine forces every step to be the <strong>consequence</strong> of the last, not its neighbor. That aligns with the brain's causal instincts: we remember stories not because the plot is rich, but because "A caused B" carves a path through the mind. Pixar used the template to draft the opening six minutes of <em>Toy Story</em>, <em>WALL·E</em>, and <em>Up</em> — each retells in eight sentences.</p>
+
+    <div class="spine-box">
+      <div class="spine-row">
+        <div class="beat"><span class="step-num">1</span>Once upon a time<span class="step-cn">the world before</span></div>
+        <div class="beat"><span class="step-num">2</span>Every day<span class="step-cn">the routine</span></div>
+        <div class="beat pivot"><span class="step-num">3</span>But one day<span class="step-cn">the disruption</span></div>
+        <div class="beat"><span class="step-num">4</span>Because of that<span class="step-cn">first consequence</span></div>
+      </div>
+      <div class="spine-row" style="margin-top:8px">
+        <div class="beat"><span class="step-num">5</span>Because of that<span class="step-cn">second consequence</span></div>
+        <div class="beat climax"><span class="step-num">6</span>Until finally<span class="step-cn">the resolution</span></div>
+        <div class="beat"><span class="step-num">7</span>Ever since that day<span class="step-cn">the new normal</span></div>
+        <div class="beat"><span class="step-num">8</span>The moral is<span class="step-cn">the lesson earned</span></div>
+      </div>
+      <div class="caption">The Pixar Story Spine — a causal backbone in eight sentences.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">We launched the Agent platform in Q3. It supports multiple models, integrates the toolchain, and offers enterprise permissions. Customer feedback is strong; thirty have signed. (A stack of events, no causation.)</span>
+      <span class="after">Once upon a time, every customer who wanted to plug in an AI model spent three months writing integration code. Every day, they reinvented the same wheel. But one day in December, a CTO wrote: "Solve this, or we switch vendors." Because of that, we killed three other product lines and put the whole team on one unified interface. Because of that, a nine-month plan shipped in six. Until finally, in the first week of Q3, thirty customers signed inside a fortnight. Ever since, our sales cycle has dropped from ninety days to fourteen. The moral: customer pain is the only accurate product roadmap.</span>
+    </div>
+    <div class="example">
+      <span class="before">I joined the team in 2019. We launched X, Y, Z. Now I'm leading the platform group. (CV bullets, no story.)</span>
+      <span class="after">Once upon a time, I was a backend engineer who hated meetings. Every day, I'd dodge them to ship code. But one day, my manager handed me a project no one else would touch. Because of that, I had to learn to write decisions, not just code. Because of that, I discovered that words shipped further than commits. Until finally, I was running the platform group. Ever since, I write before I code. The moral: clarity is leverage.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It</div>
+    <ul>
+      <li>Launch stories, case studies, customer-interview retellings, personal intros ("who you are, why you're here")</li>
+      <li>The 30–90 second opening of a talk, the first page of a pitch deck, brand narrative</li>
+      <li>Skip for: operations manuals, API docs, urgent incident notices — the audience can't wait for a story</li>
+      <li>Use with care for highly technical audiences — "once upon a time" may feel childish; keep the spine, change the words</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Skipping "Every day" — no baseline means no contrast at "But one day"</li>
+      <li>Writing both "Because of that" lines as "And then" — slipping back into chronology</li>
+      <li>"Until finally" treated as "a few more remarks" rather than a peak — the tension drains away</li>
+      <li>A moral that sounds like a fortune cookie ("hard work pays off") rather than a real insight from this story</li>
+      <li>Hero unclear — eight sentences with three different subjects; the audience loses the thread</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Emma Coats</span>, "Pixar's 22 Rules of Storytelling" (2011, Twitter thread) · <span>Kenn Adams</span>, <em>How to Improvise a Full-Length Play</em> (the origin of the spine)</p>
+  </div>
+
+  <div class="eninsight">
+    "And then, and then, and then" is a list. "Because of that, because of that" is a story. — Replace the conjunctions and watch the spine appear.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Pick three stories of different scale and tell each in eight sentences: (1) your most important career turn of the past year; (2) a project you're working on now; (3) something from your youth you've told your child. Each must have two real "Because of that" links — true causation, not chronology. Tell them to a friend and ask: "Can you retell all three back to me?" If they can, you've passed.</p>
+  </div>
+</section>
+
+<!-- Card 2: Hero's Journey -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>The Hero's Journey: From Departure to Return</h2>
+  <div class="en-name">The Hero's Journey — Departure, Initiation, Return (Campbell / Vogler)</div>
+  <span class="tag">Campbell · Mythic Archetype</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Joseph Campbell compared myths across cultures and found a common skeleton: the hero is called out of the ordinary world, crosses a threshold into the unknown, is tested, receives a gift, and returns transformed. Christopher Vogler distilled it into twelve stages in <em>The Writer's Journey</em>, which Hollywood adopted as scripture. <em>Star Wars</em>, <em>The Lion King</em>, <em>The Matrix</em> — all of them. But the shape doesn't only fit movies: it fits founding stories, career pivots, personal growth.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "A hero ventures forth from the world of common day into a region of supernatural wonder: fabulous forces are there encountered and a decisive victory is won: the hero comes back from this mysterious adventure with the power to bestow boons on his fellow man."
+      <span class="source">— Joseph Campbell, <em>The Hero with a Thousand Faces</em> (1949)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The journey is universal because it mirrors the actual <strong>psychology of transformation</strong>: every real change requires leaving what is familiar, crossing the unknown, and returning different. That is why "the story of how I started the company," "the story of how I switched careers," "the story of how we won this customer" are all already hero's journeys. The narrator's worst sin is to play "the smooth winner" — that isn't a hero; that's a poster. The moving versions always include the hesitation of the Refusal, the depression of the Inmost Cave, the dark night of doubt. Audiences don't bond with the hero's victory. They bond with the hero's doubt — because they too are in doubt.</p>
+
+    <div class="hero-box">
+      <svg viewBox="0 0 520 360" xmlns="http://www.w3.org/2000/svg" aria-label="Hero's Journey Circle">
+        <line x1="20" y1="180" x2="500" y2="180" stroke="#c8c0a8" stroke-width="1" stroke-dasharray="4,4"/>
+        <text x="25" y="172" font-family="Georgia" font-size="10" fill="#8a8a8a" font-style="italic">Ordinary World</text>
+        <text x="380" y="195" font-family="Georgia" font-size="10" fill="#8a7a4a" font-style="italic">Special World</text>
+
+        <circle cx="260" cy="180" r="140" fill="none" stroke="#1f1f1f" stroke-width="1.5"/>
+
+        <g font-family="Georgia" font-size="9.5" fill="#1f1f1f">
+          <circle cx="260" cy="40" r="4" fill="#8a8a8a"/>
+          <text x="260" y="28" text-anchor="middle">1. Ordinary World</text>
+
+          <circle cx="330" cy="58" r="4" fill="#8a8a8a"/>
+          <text x="365" y="50" text-anchor="start">2. Call to Adventure</text>
+
+          <circle cx="380" cy="105" r="4" fill="#8a8a8a"/>
+          <text x="395" y="100" text-anchor="start">3. Refusal</text>
+
+          <circle cx="400" cy="160" r="4" fill="#8a8a8a"/>
+          <text x="415" y="155" text-anchor="start">4. Mentor</text>
+
+          <circle cx="400" cy="200" r="5" fill="#8a7a4a"/>
+          <text x="415" y="208" text-anchor="start" fill="#8a7a4a" font-weight="bold">5. Crossing</text>
+
+          <circle cx="380" cy="255" r="4" fill="#8a7a4a"/>
+          <text x="395" y="262" text-anchor="start" fill="#8a7a4a">6. Tests &amp; Allies</text>
+
+          <circle cx="330" cy="302" r="4" fill="#8a7a4a"/>
+          <text x="345" y="312" text-anchor="start" fill="#8a7a4a">7. Inmost Cave</text>
+
+          <circle cx="260" cy="320" r="6" fill="#1f1f1f"/>
+          <text x="260" y="345" text-anchor="middle" fill="#1f1f1f" font-weight="bold">8. Ordeal · Inmost Cave</text>
+
+          <circle cx="190" cy="302" r="4" fill="#8a7a4a"/>
+          <text x="175" y="312" text-anchor="end" fill="#8a7a4a">9. Reward</text>
+
+          <circle cx="120" cy="200" r="5" fill="#3a6a3a"/>
+          <text x="105" y="208" text-anchor="end" fill="#3a6a3a" font-weight="bold">10. Road Back</text>
+
+          <circle cx="140" cy="160" r="4" fill="#3a6a3a"/>
+          <text x="125" y="155" text-anchor="end" fill="#3a6a3a">11. Resurrection</text>
+
+          <circle cx="190" cy="58" r="4" fill="#3a6a3a"/>
+          <text x="175" y="50" text-anchor="end" fill="#3a6a3a">12. Return w/ Elixir</text>
+        </g>
+
+        <path d="M 295 35 L 305 40" stroke="#1f1f1f" stroke-width="1.5" fill="none" marker-end="url(#arrowH)"/>
+        <defs>
+          <marker id="arrowH" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <polygon points="0 0, 6 3, 0 6" fill="#1f1f1f"/>
+          </marker>
+        </defs>
+      </svg>
+      <div class="caption">The twelve-stage hero's journey, after Vogler — top: ordinary; bottom: unknown; left side: return.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">Founding story: "I left BigCo in 2019, built a low-code tool for a year, pivoted to AI Agents in 2022, closed Series B this year." (A résumé.)</span>
+      <span class="after">In 2019, my team and I held respectable, well-paid jobs at BigCo (the ordinary world). Over dinner one evening, an old customer said, "We don't use a single tool you've ever shipped." — the Call. I sat with it for six months (Refusal). What pushed me across the threshold was a mentor's line: "At fifty, you'll regret it." Year one we built low-code and ran into every wall (Tests). By 2022 we had three months of cash — the Inmost Cave. We killed the entire product, bet on Agents — the Ordeal. Six months later, the first customer paid us $100K — the Reward. The team that came back to the market was not the team that left (Return). I'm here today not because we won, but because we very nearly lost.</span>
+    </div>
+    <div class="example">
+      <span class="before">Product launch story: "We identified a problem, built a solution, customers love it."</span>
+      <span class="after">"Six months ago, our best engineer threatened to quit. The build was taking forty minutes; she'd lost a whole day. (Call.) We tried caching. We tried sharding. Nothing worked. (Tests.) One night at 2 a.m., the deploy failed for the eleventh time. (Ordeal.) That was when we realized we'd been solving the wrong problem. (Reward.) We rebuilt the pipeline from scratch. She didn't quit. (Return.) That's the launch we're announcing today."</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It</div>
+    <ul>
+      <li>Founding stories, product origins, personal-pivot talks, founder's letters, brand documentaries</li>
+      <li>Any long-form "protagonist + change" narrative (more than five minutes, more than a thousand words)</li>
+      <li>Skip for: short announcements, how-tos, pure data updates</li>
+      <li>Use with care if every talk you give is "how I conquered hardship" — it starts to feel like self-mythology. Keep the real doubt and the real cost</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>No Refusal — the hero never hesitated, so the audience can't project</li>
+      <li>No Ordeal low point — the story rises uninterrupted; no tension, no credit</li>
+      <li>The "we" replaces the "I" — institutional triumph erases the human vulnerability</li>
+      <li>The hero returns with no Elixir — no concrete thing the audience can take away</li>
+      <li>Mechanically forcing all twelve beats — rigid. Vogler himself said it is a map, not a formula</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Joseph Campbell</span>, <em>The Hero with a Thousand Faces</em> (1949) · <span>Christopher Vogler</span>, <em>The Writer's Journey</em> (1992, the Hollywood manual) · <span>Donald Miller</span>, <em>Building a StoryBrand</em> (the hero's journey as marketing framework)</p>
+  </div>
+
+  <div class="eninsight">
+    "The cave you fear to enter holds the treasure you seek." — Campbell. The honest story always passes through the cave; the dishonest one skips it.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Take your most recent career or project pivot. On one sheet of paper, draw a circle, mark twelve points, and write a single sentence at each. Check honestly: did you write a real Refusal (what you hesitated over) and a real Ordeal (the moment you were most afraid)? The version that omits those two is a hero poster. The version that keeps them is a hero's journey.</p>
+  </div>
+</section>
+
+<!-- Card 3: McKee -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Robert McKee: A Story Is a Change, Not an Event</h2>
+  <div class="en-name">McKee's Story — Inciting Incident, Progressive Complications, Crisis, Climax, Resolution</div>
+  <span class="tag">McKee · Five-Beat Structure</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>In <em>Story</em>, Robert McKee defines: a story is not a sequence of events but a sequence of <strong>changes in value</strong>. The hero begins at one pole of a value pair (love/hate, freedom/captivity, life/death, trust/betrayal) and ends at the other. Five beats drive the change: an <strong>Inciting Incident</strong> breaks the balance → <strong>Progressive Complications</strong> raise the resistance → a <strong>Crisis</strong> forces a choice between two goods → the <strong>Climax</strong> is the choice made → the <strong>Resolution</strong> is the new equilibrium. At the end of each act, the value flips again.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "A story event creates meaningful change in the life situation of a character that is expressed and experienced in terms of a value. A value is a binary quality of human experience — alive/dead, love/hate, courage/cowardice, truth/lie, meaningful/meaningless."
+      <span class="source">— Robert McKee, <em>Story</em> (1997), ch. 2</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>McKee's insight punctures the most common death of corporate narrative — "we shipped X, then shipped Y, then won an award." That isn't a story; it's a record. To become a story, ask: on which value axis did the hero move? From "unseen" to "seen." From "stranger" to "trusted." From "fear" to "courage." The <strong>Inciting Incident</strong> is the event that has to happen — it pushes the hero off the edge. Without it the story doesn't start. The <strong>Crisis</strong> is when the hero must choose between two things both of which hurt — not good versus evil (no choice), but love versus duty (a choice). The <strong>Climax</strong> is the choice itself, and its irreversible price. The five beats are not equal in length; they are unequal in tension. The Crisis–Climax often occupies only the final twenty percent.</p>
+
+    <div class="mckee-box">
+      <svg viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg" aria-label="McKee Five-Beat Arc">
+        <line x1="30" y1="180" x2="570" y2="180" stroke="#c8c0a8" stroke-width="1" stroke-dasharray="4,4"/>
+        <text x="32" y="195" font-family="Georgia" font-size="10" fill="#8a8a8a">Value · negative</text>
+        <text x="32" y="40" font-family="Georgia" font-size="10" fill="#8a7a4a">Value · positive</text>
+        <line x1="30" y1="30" x2="570" y2="30" stroke="#c8c0a8" stroke-width="1" stroke-dasharray="4,4"/>
+
+        <path d="M 40 175 L 110 170 L 130 130 L 200 140 L 260 95 L 320 110 L 380 65 L 430 45 L 470 165 L 520 75 L 560 70"
+              fill="none" stroke="#1f1f1f" stroke-width="2.5" stroke-linejoin="round"/>
+
+        <circle cx="130" cy="130" r="5" fill="#8a7a4a"/>
+        <text x="130" y="118" text-anchor="middle" font-family="Georgia" font-size="10" fill="#8a7a4a" font-weight="bold">1. Inciting</text>
+        <text x="130" y="212" text-anchor="middle" font-family="Georgia" font-size="9" fill="#5a5a5a">balance broken</text>
+
+        <circle cx="320" cy="110" r="4" fill="#8a8a8a"/>
+        <text x="320" y="100" text-anchor="middle" font-family="Georgia" font-size="10" fill="#5a5a5a">2. Complications</text>
+        <text x="320" y="212" text-anchor="middle" font-family="Georgia" font-size="9" fill="#5a5a5a">resistance rises</text>
+
+        <circle cx="430" cy="45" r="6" fill="#1f1f1f"/>
+        <text x="430" y="35" text-anchor="middle" font-family="Georgia" font-size="10" fill="#1f1f1f" font-weight="bold">3. Crisis</text>
+        <text x="430" y="212" text-anchor="middle" font-family="Georgia" font-size="9" fill="#5a5a5a">two-way choice</text>
+
+        <circle cx="470" cy="165" r="6" fill="#a04040"/>
+        <text x="470" y="200" text-anchor="middle" font-family="Georgia" font-size="10" fill="#a04040" font-weight="bold">4. Climax</text>
+
+        <circle cx="555" cy="70" r="5" fill="#3a6a3a"/>
+        <text x="555" y="60" text-anchor="middle" font-family="Georgia" font-size="10" fill="#3a6a3a" font-weight="bold">5. Resolution</text>
+
+        <line x1="30" y1="200" x2="570" y2="200" stroke="#8a8a8a" stroke-width="0.5"/>
+      </svg>
+      <div class="caption">McKee's five-beat tension arc — the value flips at the end of every beat.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">Last year we decided to shut down the B2C business. It was a hard decision, the team aligned, and B2B revenue grew 80% this year. (Events recited; no change in value.)</span>
+      <span class="after">Last November, the CFO slid the cash-flow chart across the table — eighteen months of runway (Inciting Incident: balance broken). We held fourteen strategy meetings; each one ended in argument (Complications). On a Friday in January, I had to give the board an answer: keep the forty people on the B2C team, or keep the two hundred at the company? Both were right; both kept me up at night (Crisis: loyalty vs. duty). I chose the second, and told each of those forty in person (Climax). B2B revenue is up eighty percent today. But I still remember every one of those forty names (Resolution: victory with irreversible cost).</span>
+    </div>
+    <div class="example">
+      <span class="before">A bug took down production for 4 hours. We fixed it and added monitoring.</span>
+      <span class="after">At 3:14 a.m., the pager woke me — production was down, $40K a minute leaking (Inciting). I tried three rollbacks; each made it worse (Complications). By 5 a.m. I faced a choice: roll back the entire week's work — losing the feature the CEO had promised investors — or risk another hour debugging (Crisis: career vs. customers). I rolled back (Climax). The customers came back. The feature didn't ship for another month. My boss never quite forgave me — and I never quite regretted it (Resolution).</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It</div>
+    <ul>
+      <li>Case studies, postmortems, founder narratives, the "moment of decision" chapter in a business book</li>
+      <li>Any story where you want the audience to <em>feel the cost</em> — especially the "why me / why now" segment of a pitch</li>
+      <li>Skip for: weekly updates, status reports, process docs</li>
+      <li>Use with care — manufactured or exaggerated "crises" destroy credibility. The two-way choice must be real</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>No Inciting Incident — story starts in balance, ends in balance, leaves no mark</li>
+      <li>Treating "a hard problem" as a Crisis — a real Crisis is a forced choice between two goods, not "hard but solvable"</li>
+      <li>The hero pays no price — costless victory makes the story weightless</li>
+      <li>The value axis is unclear — the audience can't name what changed</li>
+      <li>All conflict comes from an external villain — no internal growth</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Robert McKee</span>, <em>Story: Substance, Structure, Style, and the Principles of Screenwriting</em> (1997) · <span>Robert McKee &amp; Tom Gerace</span>, <em>Storynomics</em> (applies McKee to business)</p>
+  </div>
+
+  <div class="eninsight">
+    "True choice is not between good and evil — it's between two desires we cannot both have." — McKee. Storytellers who flinch at the crisis end up writing brochures.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Pick a real, hard decision from your work. Write it in five beats: (1) what specific moment was the Inciting Incident? (2) how did resistance compound? (3) which two values could you not both have? (4) what did you choose, and what did it cost? (5) did you and your team become different people for it? Under four hundred words. Then ask yourself: if I delete the Crisis paragraph, does the story still stand? If it still stands, it wasn't a story.</p>
+  </div>
+</section>
+
+<!-- Card 4: Freytag -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Freytag's Arc: The Pyramid of Classical Tension</h2>
+  <div class="en-name">Freytag's Pyramid — Exposition · Rising Action · Climax · Falling Action · Denouement</div>
+  <span class="tag">Freytag · Classic Arc</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>In 1863, the German playwright Gustav Freytag studied Sophocles and Shakespeare and distilled drama into a pyramid: <strong>Exposition</strong> → <strong>Rising Action</strong> → <strong>Climax</strong> → <strong>Falling Action</strong> → <strong>Denouement</strong>. It is the grandfather of McKee's five beats, the hero's journey, the sparkline, and the Pixar spine. Its central contribution is not the structure itself but the insistence that <strong>the falling action cannot be cut</strong> — after the climax, there must be an after-glow that releases the tension and lets the audience land.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "The drama possesses — if one may symbolize its arrangement by lines — a pyramidal structure. It rises from the introduction with the entrance of the exciting forces to the climax, and falls from there to the catastrophe. Between these three parts lie the parts of the rise and the fall."
+      <span class="source">— Gustav Freytag, <em>Die Technik des Dramas</em> (1863), ch. 2</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Freytag doesn't teach you to write a story; he <strong>dissects its breathing</strong>. Most amateur tellers pour everything into the climax — and the story bursts like a balloon: at the peak, there's nothing left. Freytag reminds us that an audience's emotions must be carried up <strong>and carried back down</strong>. The falling action — where the hero reacts, the subplots tie off, the world settles into a new order — is the time the audience needs to digest. Without it the story doesn't close. That is why so many TED talks end at the climax to applause, and are forgotten by lunchtime; the great ones add a line after the peak — "Now, here's what changed in me." That line is the denouement. It is also the hidden craft of emails and memos: don't end at maximum intensity. Add one sentence that lets the reader put the phone down.</p>
+
+    <div class="freytag-box">
+      <svg viewBox="0 0 620 250" xmlns="http://www.w3.org/2000/svg" aria-label="Freytag Pyramid">
+        <path d="M 30 220 L 160 200 L 280 90 L 340 50 L 400 90 L 520 200 L 600 220"
+              fill="none" stroke="#1f1f1f" stroke-width="2.5" stroke-linejoin="round"/>
+
+        <path d="M 30 220 L 160 200 L 160 230 L 30 230 Z" fill="#e8e0c8" opacity="0.5"/>
+        <path d="M 160 200 L 280 90 L 280 230 L 160 230 Z" fill="#d8c8a0" opacity="0.4"/>
+        <path d="M 280 90 L 340 50 L 400 90 L 400 230 L 280 230 Z" fill="#8a7a4a" opacity="0.3"/>
+        <path d="M 400 90 L 520 200 L 520 230 L 400 230 Z" fill="#d8c8a0" opacity="0.4"/>
+        <path d="M 520 200 L 600 220 L 600 230 L 520 230 Z" fill="#e8e0c8" opacity="0.5"/>
+
+        <circle cx="160" cy="200" r="4" fill="#8a7a4a"/>
+        <circle cx="340" cy="50" r="6" fill="#a04040"/>
+        <circle cx="520" cy="200" r="4" fill="#3a6a3a"/>
+
+        <text x="80" y="250" text-anchor="middle" font-family="Georgia" font-size="10.5" fill="#5a5a5a">1. Exposition</text>
+        <text x="80" y="263" text-anchor="middle" font-family="Georgia" font-size="9" fill="#8a8a8a">who · where · when</text>
+
+        <text x="220" y="250" text-anchor="middle" font-family="Georgia" font-size="10.5" fill="#8a7a4a">2. Rising Action</text>
+        <text x="220" y="263" text-anchor="middle" font-family="Georgia" font-size="9" fill="#8a8a8a">conflict compounds</text>
+
+        <text x="340" y="32" text-anchor="middle" font-family="Georgia" font-size="11" fill="#a04040" font-weight="bold">3. Climax</text>
+
+        <text x="460" y="250" text-anchor="middle" font-family="Georgia" font-size="10.5" fill="#8a7a4a">4. Falling Action</text>
+        <text x="460" y="263" text-anchor="middle" font-family="Georgia" font-size="9" fill="#8a8a8a">reaction · loose ends</text>
+
+        <text x="560" y="250" text-anchor="middle" font-family="Georgia" font-size="10.5" fill="#3a6a3a">5. Denouement</text>
+        <text x="560" y="263" text-anchor="middle" font-family="Georgia" font-size="9" fill="#8a8a8a">new equilibrium</text>
+
+        <line x1="30" y1="230" x2="600" y2="230" stroke="#8a8a8a" stroke-width="0.5"/>
+      </svg>
+      <div class="caption">Freytag's pyramid — the climax is not the end; the falling action is the story's breath.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">Talk closing: "…and that's how we finally shipped. Everyone was thrilled. Thank you!" (Cuts at the peak; no landing.)</span>
+      <span class="after">…and that's how we finally shipped. Twenty thousand lines of code, four in the morning, three of us in the office — nobody clapped, nobody cheered. We just watched the monitoring curve climb, slowly, like watching a child take a first breath (falling action). The engineer who'd nearly quit, didn't. The next month, we hired people we'd never been able to hire before. The quarter after, revenue crossed a hundred million. What I took away was that the silence at 4 a.m. was worth more than any victory dinner. (Denouement — gives the tension back to the audience.)</span>
+    </div>
+    <div class="example">
+      <span class="before">Memo closing: "…and we shipped it on Friday. Thanks team!"</span>
+      <span class="after">"…and we shipped it on Friday. The dashboards held. By Monday, support tickets dropped 60%. Sarah, who'd been on the verge of burnout, took her first weekend off in months. What I'll remember from this quarter isn't the launch — it's her Slack message Monday morning: 'I forgot what Saturdays felt like.'" (Falling action + denouement.)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It</div>
+    <ul>
+      <li>Any long narrative that needs an emotional landing — TED talks, annual letters, launch blog posts, eulogies</li>
+      <li>Dramatic case studies, especially B2B customer success stories (which almost always need a denouement)</li>
+      <li>Skip for: list-style information, operating instructions</li>
+      <li>Use with care in short business writing — too long a falling action becomes a drag. One or two sentences will do</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Climax as end — the story collapses at the peak; the audience is left suspended</li>
+      <li>Falling action written as a bullet-point recap — narrative breath replaced by deck format</li>
+      <li>Denouement as moralizing summary ("in conclusion…") — gilding the lily</li>
+      <li>Exposition too long — the audience drifts before the rise begins</li>
+      <li>Rising action written as chronology (A then B then C) without compounding conflict</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Gustav Freytag</span>, <em>Die Technik des Dramas</em> (1863; English: <em>Technique of the Drama</em>) · 朱自清, <em>Beiying</em> ("The View of My Father's Back") — a Chinese short-form pyramid in miniature: the oranges set the scene, the climax is the figure of the father climbing the platform, the falling action is his receding silhouette, the denouement is "I read this with shining tears in my eyes." · 鲁迅, <em>Kong Yiji</em></p>
+  </div>
+
+  <div class="eninsight">
+    "The climax is loud; the denouement is what people remember on the drive home." — A speech without falling action is fireworks; a speech with it is music.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Find a longer piece you recently wrote — a talk, an annual letter, a long email, a launch post. Locate the climactic sentence. Now ask: how many sentences come after it? If zero, add two or three lines of falling action and one line of denouement. Read it twice: once as the ceremonial version (climax only), once with the landing. Send the second to a friend and ask: "Which sentence made you pause?" The answer is almost always somewhere on the way down.</p>
+  </div>
+</section>
+
+<nav class="nav">
+  <a href="index.en.html">← Back to Writing Weekly</a>
+</nav>
+
+<footer>BigCat · Writing Weekly · Week 4 · 2026</footer>
+
+</div>
+</body>
+</html>
