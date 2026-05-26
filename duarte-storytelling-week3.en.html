@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing & Expression: Nancy Duarte's Storytelling — Week 3</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.eninsight{background:#eef2f5;padding:16px 20px;margin-top:14px;border-left:3px solid #5a7a9a;font-family:Georgia,serif;font-size:0.95rem;color:#2a3a4a;line-height:1.7;font-style:italic}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+.tension-vis{background:#f8f6f1;padding:24px 16px;margin:18px 0;border-radius:2px;text-align:center}
+.tension-vis .row{display:flex;justify-content:space-between;align-items:center;gap:14px;margin:8px 0}
+.tension-vis .pole{flex:1;padding:14px 10px;border:1px solid #c8c0a8;background:#fff;font-family:Georgia,serif}
+.tension-vis .pole.what-is{color:#6a6a6a}
+.tension-vis .pole.what-could{color:#8a5a2a;font-weight:600;border-color:#8a7a4a}
+.tension-vis .arrow{font-size:1.4rem;color:#8a7a4a;font-family:Georgia,serif}
+.tension-vis .label-small{font-size:0.78rem;color:#8a8a8a;letter-spacing:1.5px;text-transform:uppercase;margin-top:14px;font-family:Georgia,serif}
+.tension-vis .gap-bar{height:6px;background:linear-gradient(to right,#d8d0bc,#8a7a4a);margin:10px 20%;border-radius:3px}
+.tension-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif}
+
+.sparkline-box{background:#f8f6f1;padding:20px 16px 14px;margin:18px 0;border-radius:2px;text-align:center}
+.sparkline-box svg{max-width:100%;height:auto;display:block;margin:0 auto}
+.sparkline-box .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif}
+.sparkline-legend{display:flex;justify-content:space-around;flex-wrap:wrap;gap:10px;margin-top:8px;font-size:0.78rem;color:#5a5a5a;font-family:Georgia,serif;letter-spacing:0.5px}
+.sparkline-legend span:before{content:"●";margin-right:4px}
+.legend-is:before{color:#8a8a8a}
+.legend-could:before{color:#8a7a4a}
+.legend-bliss:before{color:#3a6a3a}
+
+.formula{background:#1f1f1f;color:#fafafa;padding:24px 22px;margin:18px 0;border-radius:2px;font-family:Georgia,serif;text-align:center}
+.formula .eq{font-size:1.1rem;line-height:2;letter-spacing:0.5px}
+.formula .eq .plus,.formula .eq .eq-sign{color:#d8c98a;margin:0 10px;font-weight:700}
+.formula .eq .term{display:inline-block;padding:4px 10px;border-bottom:1px dashed #d8c98a;font-style:italic}
+.formula .eq .result{display:inline-block;padding:4px 12px;background:#d8c98a;color:#1f1f1f;font-weight:700;border-radius:2px;font-style:normal}
+.formula .caption{font-size:0.85rem;color:#d8c98a;margin-top:12px;font-style:italic}
+
+.datastory-vis{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px}
+.datastory-vis .ds-row{display:flex;gap:8px;align-items:stretch}
+.datastory-vis .ds-step{flex:1;padding:14px 10px;background:#fff;border:1px solid #d8d0bc;text-align:center;font-family:Georgia,serif;font-size:0.86rem;color:#3a3a3a;line-height:1.5;border-radius:2px}
+.datastory-vis .ds-step .step-num{display:block;font-size:0.72rem;color:#8a7a4a;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;font-weight:700}
+.datastory-vis .ds-step .step-title{display:block;font-weight:700;color:#1f1f1f;margin-bottom:4px;font-size:0.95rem}
+.datastory-vis .ds-step.peak{background:#1f1f1f;color:#fafafa;border-color:#1f1f1f}
+.datastory-vis .ds-step.peak .step-title{color:#d8c98a}
+.datastory-vis .ds-step.peak .step-num{color:#d8c98a}
+.datastory-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .tension-vis .row{flex-direction:column}
+  .tension-vis .arrow{transform:rotate(90deg)}
+  .datastory-vis .ds-row{flex-direction:column}
+  .formula .eq{font-size:0.95rem;line-height:2.2}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Week 3 · 2026.05.21</div>
+  <h1>Nancy Duarte's Storytelling<span class="topic">Resonate · Sparkline · Big Idea · DataStory</span></h1>
+  <div class="date">BigCat's Writing Weekly</div>
+  <p class="intro">Jobs unveiling the iPhone in 2007. Lincoln at Gettysburg. King's "I have a dream." They all follow the same invisible structure. Nancy Duarte took the greatest speeches apart, measured them, and graphed them — turning "speaking is a gift" into "speaking is a craft." This week, her four sharpest tools.</p>
+</header>
+
+<!-- Card 1: Resonate -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Resonance: Build Tension Between What Is and What Could Be</h2>
+  <div class="en-name">Resonate — Oscillate between What Is and What Could Be</div>
+  <span class="tag">Duarte · Core Model</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Great speeches don't state facts; they generate tension. Duarte's finding, from Lincoln to Jobs: every speech that has ever moved an audience oscillates rhythmically between two poles — What Is (today's reality) and What Could Be (tomorrow's possibility). Each oscillation pulls listeners a step further from their comfort zone, until they find themselves standing exactly where you meant them to stand.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "Great communicators create a gap between the status quo and a better way. Audiences feel the tension and want to resolve it — by adopting the new way. The bigger the gap, the more powerful the resonance."
+      <span class="source">— Nancy Duarte, <em>Resonate</em>, ch. 2</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>This is the design of psychological potential energy. Pure data leaves the listener flat; pure vision feels weightless. Place them side by side — "today is heavy ⇄ tomorrow could be bright" — and a gravitational pull forms inside the audience. They aren't persuaded; they lean. The same physics underlies Kotter's change model and every Problem–Solution pitch. Duarte's contribution is to turn the instinct into a repeatable shape.</p>
+    <div class="tension-vis">
+      <div class="row">
+        <div class="pole what-is">What Is<br><span style="font-size:0.82rem;color:#a0a0a0">today · pain · data</span></div>
+        <div class="arrow">⇄</div>
+        <div class="pole what-could">What Could Be<br><span style="font-size:0.82rem;color:#a0a0a0">vision · possibility · call</span></div>
+      </div>
+      <div class="gap-bar"></div>
+      <div class="label-small">The Gap = Resonance</div>
+      <div class="caption">Every oscillation tugs the audience a little further toward what could be.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">Our Agent strategy this year covers three pillars: model upgrades, toolchain integration, and Copilot. Each has clear OKRs and an owner.</span>
+      <span class="after">Today, our engineers spend forty percent of their time on repetitive manual work (What Is). A year from now, that forty percent should belong to thinking, to design, to their kids (What Could Be). To get there, we need three things — models, toolchain, Copilot.</span>
+    </div>
+    <div class="example">
+      <span class="before">This product cuts customer onboarding time by 30%.</span>
+      <span class="after">Today, half your new customers churn before they ever see value — onboarding takes two weeks (What Is). Imagine them activated by day three, loving the product before the trial ends (What Could Be). That is what 30% faster onboarding actually means.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It</div>
+    <ul>
+      <li>Public talks, pitch decks, all-hands, product launches, change comms</li>
+      <li>Anywhere the goal is to mobilize, not merely to report</li>
+      <li>Skip for: pure technical specs, dry financials, urgent incident reports</li>
+      <li>Use with care when the audience's What Is is already more painful than the one you sketch — you'll sound out of touch</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Only What Could Be — sounds like a motivational poster, no ground</li>
+      <li>Only What Is — a diagnosis report, not a call</li>
+      <li>Asymmetric poles (vivid pain, vague vision, or the reverse)</li>
+      <li>One oscillation — not enough force to move anyone</li>
+      <li>Failing to place the audience inside the What Could Be — they remain spectators</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Nancy Duarte</span>, <em>Resonate: Present Visual Stories that Transform Audiences</em> (2010) · <span>Nancy Duarte</span>, <em>Illuminate</em> (four-stage change narrative: Dream / Leap / Fight / Climb)</p>
+  </div>
+
+  <div class="eninsight">
+    "Audiences don't want to be informed; they want to be moved." — Nancy Duarte. Information lives in the gap between what is and what could be.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Pick a talk or update you owe next week. On the left of a page, write five sentences describing What Is — concrete, specific, with numbers and images. On the right, five sentences describing What Could Be — equally concrete. Then design the opening ninety seconds so those ten lines oscillate at least three times. Read it aloud. Listen for the pull.</p>
+  </div>
+</section>
+
+<!-- Card 2: Sparkline -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>The Sparkline: Draw the Shape Before You Write the Words</h2>
+  <div class="en-name">The Presentation Form — Charting Speech as a Sparkline</div>
+  <span class="tag">Duarte · Structure</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Duarte annotated hundreds of great speeches — Jobs, King, Churchill — line by line, marking each sentence as What Is or What Could Be, then connected the dots. The curve she calls a sparkline. The shape was eerily consistent: open in What Is, end in a New Bliss, oscillate the whole way through, and rise overall like the swell of a symphony. Before you write your next talk, sketch its sparkline first.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "When we plotted the greatest speeches of all time, the same shape emerged again and again: a clear beginning, a series of contrasts in the middle, a turning point we call the call to adventure, and an ending that paints a New Bliss the audience now believes is possible."
+      <span class="source">— Nancy Duarte, <em>Resonate</em>, ch. 5</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>A sparkline makes time visible. A speech is not a document; it is an experience that unfolds minute by minute, with attention, emotion, and trust shifting at every beat. The sparkline forces you to ask, for each segment: which pole is the audience on right now, and which pole am I pushing them toward? When Jobs introduced the iPhone, the first thirty seconds promised to change everything (What Could Be). The next two minutes dwelled on the pain of juggling an iPod, a phone, and an internet device (What Is). Then he revealed the iPhone (a higher What Could Be). A textbook rising sparkline.</p>
+
+    <div class="sparkline-box">
+      <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" aria-label="Duarte Sparkline">
+        <line x1="20" y1="140" x2="580" y2="140" stroke="#c8c0a8" stroke-width="1" stroke-dasharray="4,4"/>
+        <text x="22" y="155" font-family="Georgia" font-size="11" fill="#8a8a8a">What Is</text>
+
+        <line x1="20" y1="60" x2="580" y2="60" stroke="#c8c0a8" stroke-width="1" stroke-dasharray="4,4"/>
+        <text x="22" y="54" font-family="Georgia" font-size="11" fill="#8a7a4a">What Could Be</text>
+
+        <path d="M 30 140 L 60 140 L 90 80 L 130 135 L 170 75 L 210 138 L 250 70 L 290 132 L 330 65 L 370 130 L 400 55 L 440 100 L 480 50 L 520 40 L 560 30"
+              fill="none" stroke="#1f1f1f" stroke-width="2.5" stroke-linejoin="round"/>
+
+        <circle cx="30" cy="140" r="4" fill="#8a8a8a"/>
+        <text x="20" y="178" font-family="Georgia" font-size="10" fill="#5a5a5a">Beginning</text>
+
+        <circle cx="400" cy="55" r="5" fill="#8a7a4a"/>
+        <text x="365" y="42" font-family="Georgia" font-size="10" fill="#8a7a4a" font-style="italic">Call to Adventure</text>
+
+        <circle cx="560" cy="30" r="6" fill="#3a6a3a"/>
+        <text x="500" y="22" font-family="Georgia" font-size="10" fill="#3a6a3a" font-weight="bold">New Bliss</text>
+
+        <line x1="20" y1="180" x2="580" y2="180" stroke="#8a8a8a" stroke-width="0.5"/>
+        <text x="20" y="195" font-family="Georgia" font-size="9" fill="#8a8a8a">0:00</text>
+        <text x="555" y="195" font-family="Georgia" font-size="9" fill="#8a8a8a">END</text>
+      </svg>
+      <div class="sparkline-legend">
+        <span class="legend-is">Baseline / What Is</span>
+        <span class="legend-could">Possibility / What Could Be</span>
+        <span class="legend-bliss">New Bliss / Close</span>
+      </div>
+      <div class="caption">The Duarte sparkline — a rising oscillation, plotted in time.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">(Flat) Here's Q3: DAU up 10%, retention up 5 points, features A, B, C shipped, plus a roadmap update… (every line glued to the What Is baseline)</span>
+      <span class="after">(Sparkline) Three months ago, we almost lost our largest customer (What Is, low point). Last week, they renewed for three years (What Could Be, jump). What happened in between? Let me take you back to the first Monday of Q3… (oscillation, leading to a New Bliss)</span>
+    </div>
+    <div class="example">
+      <span class="before">A pitch that just lists features: "Our product has X, Y, Z. Pricing starts at $X. Demo available."</span>
+      <span class="after">"Last year, a customer told us she stayed up till 2 a.m. every Friday closing the books (What Is). This March, she closed in forty minutes — and went home to her kids (What Could Be). Here's how we got her there." Then come the features, each tied to a contrast.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It</div>
+    <ul>
+      <li>Any talk longer than ten minutes — keynotes, TED-style talks, all-hands</li>
+      <li>Investor pitches, product launches, annual strategy</li>
+      <li>Skip for: under-five-minute updates, technical reviews</li>
+      <li>Use with care for urgent internal comms — too much shape can feel insincere</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>The whole talk glued to What Is — a diagnostic deck, not a speech</li>
+      <li>The whole talk glued to What Could Be — castles in the air</li>
+      <li>No New Bliss — the talk stops without landing</li>
+      <li>No clear call to adventure — the audience never knows when to act</li>
+      <li>Uneven cadence — dense oscillation early, flat finish</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Nancy Duarte</span>, <em>Resonate</em>, ch. 5 "Create Meaningful Content" · <span>Steve Jobs</span>, 2007 Macworld iPhone Keynote (Duarte annotates its sparkline minute by minute)</p>
+  </div>
+
+  <div class="eninsight">
+    "Don't write the speech first; draw the sparkline first." — Once you can see the shape, the words come easily — and the audience can feel the rise.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Pick a TED talk — try Brené Brown on vulnerability, or Hans Rosling on statistics. Every thirty seconds, mark whether the speaker is in What Is or What Could Be. After eighteen minutes, connect the marks. Does it look like Duarte's sparkline? Then draft your next talk the same way — shape first, words after.</p>
+  </div>
+</section>
+
+<!-- Card 3: Big Idea -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>The Big Idea: One Sentence That Earns Its Keep</h2>
+  <div class="en-name">The Big Idea — Your Unique POV + What's at Stake</div>
+  <span class="tag">Duarte · Content Core</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Before the sparkline, before the slides, before the script — write your Big Idea. Duarte's formula: Big Idea = your unique point of view + what's at stake for the audience. One sentence, no more than two lines. If you can't fit it, you haven't thought it through. Go think. This is the first gate in every Duarte workshop.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "Your big idea must convey your unique perspective and articulate what's at stake. If your audience walks away remembering nothing but one sentence, that sentence is your big idea — make it count."
+      <span class="source">— Nancy Duarte, <em>Resonate</em>, ch. 4</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>A unique point of view keeps the Big Idea from collapsing into platitude. "We should care about customers" is not a POV; "We should treat every return as a second chance to sell" is. Stakes keep it from collapsing into wish. "We should invest in AI" has no stakes; "If we don't rewrite the core in eighteen months, we lose the developer market" has. Multiply the two and you get resonance — the same logic behind the Heaths' Simple, McKinsey's "So what?", and a commander's intent.</p>
+
+    <div class="formula">
+      <div class="eq">
+        <span class="term">Your Unique POV</span>
+        <span class="plus">+</span>
+        <span class="term">What's at Stake</span>
+      </div>
+      <div class="eq" style="margin-top:6px">
+        <span class="eq-sign">=</span>
+        <span class="result">Big Idea</span>
+      </div>
+      <div class="caption">One sentence · complete clause · verb plus consequence</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">My talk today is on engineer skill development in the age of AI. (A topic, not a Big Idea.)</span>
+      <span class="after">In the eighteen months while AI takes over seventy percent of coding, an engineer's only moat is depth of understanding of the problem — without it, we're just slower copies of Claude. (POV + stakes.)</span>
+    </div>
+    <div class="example">
+      <span class="before">Today I'll talk about remote work culture. (Topic only.)</span>
+      <span class="after">Remote work isn't about location — it's a forcing function for written clarity. Companies that don't learn to write will lose their best talent within three years. (POV + stakes.)</span>
+    </div>
+    <div class="example">
+      <span class="before">On our product direction next year. (No view, no stakes.)</span>
+      <span class="after">Next year we should kill the B2C line and go all in on B2B — keep fighting on both fronts and we run out of cash inside twelve months.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It</div>
+    <ul>
+      <li>Before drafting any talk, article, memo, or deck — the "framing" step</li>
+      <li>Aligning a team — only when everyone can recite the same Big Idea are you actually aligned</li>
+      <li>Skip for: open-ended exploration — too early to lock in a conclusion</li>
+      <li>Use with care if the sentence keeps changing — that means the thinking isn't done</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Mistaking a topic ("about customer success") for a Big Idea — that's a noun, not a claim</li>
+      <li>No unique POV — true, but anyone could have said it</li>
+      <li>No stakes — "I recommend X" with no "otherwise Y"</li>
+      <li>Too long — over two lines because the thinking isn't done</li>
+      <li>Jargon dressing up commonplace ("end-to-end value closure via downstream enablement")</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Nancy Duarte</span>, <em>Resonate</em>, ch. 4 "Define Your Audience" and "Develop Your Premise" · <span>Chip & Dan Heath</span>, <em>Made to Stick</em>, "Simple" chapter on Commander's Intent</p>
+  </div>
+
+  <div class="eninsight">
+    "If you can't fit your idea on the back of a business card, you don't have an idea — you have a topic." A useful blade for cutting away the throat-clearing.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Use Duarte's formula to write three Big Ideas: one for your next work update, one for something you want to convince your boss of, one for a piece of life advice you'd give your child. Each: two lines max, with both a unique view and clear stakes. Read each to a friend and ask: "If you could only remember one sentence, would it be this one?"</p>
+  </div>
+</section>
+
+<!-- Card 4: DataStory -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>DataStory: Let the Numbers Tell a Story</h2>
+  <div class="en-name">DataStory — Three Acts: Setup, Conflict, Resolution</div>
+  <span class="tag">Duarte · Data Narrative</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Most data presentations fail not because the data is bad, but because the data is piled, not told. In <em>DataStory</em>, Duarte gives a three-act structure: Setup (establish the baseline), Conflict (reveal the turn), Resolution (point to a decision). Every chart, every number, has to earn its role in that story.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the Author's Words</div>
+    <div class="quote">
+      "Data without story is noise. Story without data is fiction. The communicator's job is to find the story already living inside the data, and then frame it so the audience can act."
+      <span class="source">— Nancy Duarte, <em>DataStory</em>, Introduction</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Numbers do not speak; the narrator gives them voice. A retention figure of sixty-seven percent can tell three different stories. (a) We beat the industry average, so spend more on acquisition. (b) We're behind the leaders, so rewrite onboarding. (c) We climbed from fifty to sixty-seven in three months, validating the new strategy — double down. Duarte's three acts force you to choose, explicitly, which decision this data is meant to serve — and only then to pick the chart, the comparison, and the path.</p>
+
+    <div class="datastory-vis">
+      <div class="ds-row">
+        <div class="ds-step">
+          <span class="step-num">Act I</span>
+          <span class="step-title">Setup</span>
+          baseline, context,<br>"where we were"
+        </div>
+        <div class="ds-step peak">
+          <span class="step-num">Act II</span>
+          <span class="step-title">Conflict</span>
+          turn, anomaly,<br>"what happened"
+        </div>
+        <div class="ds-step">
+          <span class="step-num">Act III</span>
+          <span class="step-title">Resolution</span>
+          decision, action,<br>"what we do now"
+        </div>
+      </div>
+      <div class="caption">DataStory's three acts — numbers move from stack to story.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">Q3 report: DAU 12M, retention 67%, paid conversion 4.2%, NPS 38, crash rate 0.3%, avg session 12.5 min… (a wall of numbers, no story)</span>
+      <span class="after">Q3 we got one big thing right, and one big thing wrong. <br>Setup: Q2 paid conversion stalled at 3.1%. <br>Conflict: In week two of Q3 we simplified onboarding; conversion jumped to 4.2% in three weeks (+35%). In the same window, NPS fell from 45 to 38 — simplification hurt power users. <br>Resolution: For Q4, keep the new onboarding, add a "pro mode" toggle.</span>
+    </div>
+    <div class="example">
+      <span class="before">Sales report: revenue $12M, up from $10M last quarter. (Just a number.)</span>
+      <span class="after">Setup: we forecast $11M for Q3. Conflict: we hit $12M — but $1.5M came from a single deal that almost slipped. Resolution: we are over-dependent on whales; the Q4 plan adds three mid-market reps.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It</div>
+    <ul>
+      <li>Quarterly reviews, product data reviews, A/B readouts, board decks</li>
+      <li>Anywhere you translate a dashboard into a decision narrative</li>
+      <li>Skip for: raw data deliverables and research dataset releases — neutrality is the point</li>
+      <li>Use with care when the data itself is highly uncertain — forcing a story becomes misleading</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Common Mistakes</div>
+    <ul>
+      <li>Listing every metric — "everything" means "nothing"</li>
+      <li>No Conflict — a smooth-rising story is forgettable</li>
+      <li>Letting the chart speak while the presenter reads it — the audience doesn't know where to look</li>
+      <li>No Resolution — the audience leaves without a next step</li>
+      <li>Pretty-but-deceptive charts (truncated axes, bad scales, cherry-picked windows)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Nancy Duarte</span>, <em>DataStory: Explain Data and Inspire Action Through Story</em> (2019) · <span>Cole Knaflic</span>, <em>Storytelling with Data</em> (the chart-craft companion) · <span>Edward Tufte</span>, <em>The Visual Display of Quantitative Information</em></p>
+  </div>
+
+  <div class="eninsight">
+    "Don't show all the data; show the data that drives the decision." — A 50-row table is a database. Three numbers in a sentence is a story.
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise</div>
+    <p>Take your most recent data report or dashboard. Ask: if I could only show three numbers, which three? Arrange them as Setup–Conflict–Resolution. Write the spoken version in under eighty words. Tell it to someone outside your team. If they can retell the story, you've made it.</p>
+  </div>
+</section>
+
+<nav class="nav">
+  <a href="index.en.html">← Back to Writing Weekly</a>
+</nav>
+
+<footer>BigCat · Writing Weekly · Week 3 · 2026</footer>
+
+</div>
+</body>
+</html>
