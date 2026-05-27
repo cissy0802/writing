@@ -15,6 +15,7 @@
 #   - no hardcoded shared scripts (comments/search/index-button/i18n-tts)
 #   - <div> balance + data-zh/data-en attribute integrity
 #   - pushes to main via HEAD:main (bypasses claude/* harness branches)
+#   - also pushes current branch to origin (keeps claude/* harness branches in sync with stop-hook)
 #   - retries push up to 3 times on transient failures
 
 set -e
@@ -110,6 +111,11 @@ for i in 1 2 3; do
     echo "→ https://cissy0802.github.io/$REPO/$PRIMARY"
     EN_FILE=$(echo "$NEW_FILES" | grep '\.en\.html$' | head -1)
     [ -n "$EN_FILE" ] && echo "→ https://cissy0802.github.io/$REPO/$EN_FILE"
+    # Also push current branch (keeps claude/* harness branches in sync with stop-hook).
+    CURBRANCH=$(git rev-parse --abbrev-ref HEAD)
+    if [ "$CURBRANCH" != "main" ] && [ "$CURBRANCH" != "HEAD" ]; then
+      git push -u origin HEAD >/dev/null 2>&1 && echo "✓ Also synced branch: $CURBRANCH"
+    fi
     exit 0
   fi
   echo "Push attempt $i failed, fetching and rebasing..."
