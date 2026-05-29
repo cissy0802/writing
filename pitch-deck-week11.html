@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>写作与表达：Pitch Deck 与故事力 — Week 11</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.trans{font-size:0.92rem;color:#6a6a6a;margin-top:8px}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"原句 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"改后 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8;margin-bottom:8px}
+.exercise .q{color:#d8c98a;font-style:italic}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Sequoia 十块骨架网格 */
+.deck-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:18px 0;background:#f8f6f1;padding:18px 14px;border-radius:2px}
+.deck-grid .slide{background:#fff;border:1px solid #d8d0bc;border-radius:2px;padding:10px 5px;text-align:center;font-family:Georgia,serif;font-size:0.8rem;color:#3a3a3a;line-height:1.4}
+.deck-grid .slide .n{display:block;font-size:0.66rem;color:#8a7a4a;font-weight:700;letter-spacing:1px;margin-bottom:3px}
+.deck-grid .slide.key{background:#1f1f1f;color:#fafafa;border-color:#1f1f1f}
+.deck-grid .slide.key .n{color:#d8c98a}
+.deck-grid-cap{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif;text-align:center}
+
+/* 复用：三/五段流程图 */
+.flow-vis{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px}
+.flow-vis .flow-row{display:flex;gap:8px;align-items:stretch}
+.flow-vis .step{flex:1;padding:14px 8px;background:#fff;border:1px solid #d8d0bc;text-align:center;font-family:Georgia,serif;font-size:0.84rem;color:#3a3a3a;line-height:1.5;border-radius:2px}
+.flow-vis .step .step-num{display:block;font-size:0.7rem;color:#8a7a4a;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;font-weight:700}
+.flow-vis .step .step-title{display:block;font-weight:700;color:#1f1f1f;margin-bottom:4px;font-size:0.92rem}
+.flow-vis .step.peak{background:#1f1f1f;color:#fafafa;border-color:#1f1f1f}
+.flow-vis .step.peak .step-title{color:#d8c98a}
+.flow-vis .step.peak .step-num{color:#d8c98a}
+.flow-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+details{margin:12px 0;border:1px solid #d0d0d0;border-radius:2px;padding:0 16px;background:#fff}
+details summary{cursor:pointer;padding:14px 0;font-weight:600;color:#1f1f1f;font-size:1rem}
+details[open] summary{border-bottom:1px solid #e8e8e8;margin-bottom:12px}
+details .ans{font-size:0.95rem;color:#3a3a3a;line-height:1.8;padding-bottom:16px}
+.deepthink-title{font-size:1.2rem;font-weight:700;color:#1f1f1f;margin:48px 0 18px;text-align:center;letter-spacing:1px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .deck-grid{grid-template-columns:repeat(2,1fr)}
+  .flow-vis .flow-row{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Week 11 · 2026.05.29</div>
+  <h1>写作与表达：Pitch Deck 与故事力<span class="topic">Sequoia 骨架 · Problem-Solution 弧 · Why Now · Airbnb 2009</span></h1>
+  <div class="date">BigCat's Writing Weekly</div>
+  <p class="intro">投资人不会因为一张功能清单而打钱——他们买的是一个故事、一个时机、一支团队。Pitch deck 是把「我们值得被投」压进十张纸的极限写作。本周拆四件武器：Sequoia 的十块骨架、Problem-Solution 叙事引擎、以「世界之变」开场的 Why Now，以及把这一切都做对的 Airbnb 2009 deck。同样适用于争取预算、推动决策、写晋升 packet。</p>
+</header>
+
+<!-- Card 1: Sequoia 骨架 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Sequoia 骨架：一份融资故事的十块积木</h2>
+  <div class="en-name">The Sequoia Skeleton — Ten Slides, One Logic Chain</div>
+  <span class="tag">Sequoia · 结构</span>
+
+  <div class="section">
+    <div class="label">原则 · 名家原话</div>
+    <p>先有骨架，再填血肉。Sequoia 把一份融资故事压成十张幻灯片，每张回答投资人脑中一个必答问题——<strong>顺序不能乱，因为这个顺序本身就是说服的逻辑链</strong>。从"我们是谁"到"为什么是现在"，再到"凭什么是你们"。</p>
+    <div class="quote">
+      "Company purpose: Define your company in a single declarative sentence. This is harder than it sounds — and more important than anything else on the page."
+      <span class="source">— Sequoia Capital, Pitch Deck Template</span>
+    </div>
+    <p class="trans">中译：公司目的——用一个陈述句定义你的公司。这比听起来难，也比这页上任何东西都重要。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>骨架的价值不在"模板"，而在它逼你按投资人的认知顺序思考。人脑接收新信息时会无意识追问一串问题：这是什么？解决谁的痛？为什么是现在？盘子多大？凭什么是你？Sequoia 的十张，正是把这串问题排成一条<strong>不可跳跃的逻辑链</strong>——你跳过哪一张，听众的脑子就在哪一张卡住。</p>
+    <div class="deck-grid">
+      <div class="slide"><span class="n">01</span>公司目的</div>
+      <div class="slide key"><span class="n">02</span>问题</div>
+      <div class="slide"><span class="n">03</span>方案</div>
+      <div class="slide key"><span class="n">04</span>为何现在</div>
+      <div class="slide"><span class="n">05</span>市场规模</div>
+      <div class="slide"><span class="n">06</span>竞争</div>
+      <div class="slide"><span class="n">07</span>产品</div>
+      <div class="slide"><span class="n">08</span>商业模式</div>
+      <div class="slide"><span class="n">09</span>团队</div>
+      <div class="slide"><span class="n">10</span>财务</div>
+    </div>
+    <div class="deck-grid-cap">Sequoia 十块骨架 — 黑块是最常被讲砸、却最致命的两张</div>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">（开场第一张）我们的技术栈：微服务架构、自研向量数据库、三地多活部署……（一上来讲实现，没人知道你做什么、为谁做）</span>
+      <span class="after">（开场第一张）Acme 让中小企业的会计把"关账"从一周缩到一天。（一句陈述句先讲清"是什么、为谁、价值"，技术留到第 7 张）</span>
+    </div>
+    <div class="example">
+      <span class="before">We've built a powerful, AI-native, cloud-first collaboration platform with deep integrations.</span>
+      <span class="after">Acme is the shared inbox that lets a 5-person support team feel like 20. (One sentence: who it's for, what changes.)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 · 常见错误</div>
+    <ul>
+      <li>✓ 融资 pitch、内部立项争预算、新项目提案、晋升 packet（"问题—方案—为何现在—凭什么是我"同样成立）</li>
+      <li>✗ 把第一张用来讲技术架构或团队简历——投资人还不知道你做什么，凭什么在意你的栈</li>
+      <li>✗ 顺序打乱：先讲方案再讲问题，听众接不住"这药治什么病"</li>
+      <li>✗ 把十张当填空题逐项罗列——骨架是叙事顺序，不是表格</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Sequoia Capital</span>《Pitch Deck Template / Writing a Business Plan》（sequoiacap.com） · <span>Reid Hoffman</span> 在 LinkedIn 的 "Annotated Pitch Decks" 系列</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 · 思考题</div>
+    <p>拿你手上一个想推动的事（产品、立项或晋升），按这十张各写一句话。重点打磨第一张——能否用一个陈述句讲清"是什么、为谁、改变了什么"？</p>
+    <p class="q">思考题：当听众已是该领域专家（如对口投资人或资深评委），哪几张可以压缩甚至跳过？骨架的"必经"是绝对的吗？</p>
+  </div>
+</section>
+
+<!-- Card 2: Problem-Solution 弧 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Problem-Solution 弧：先让人疼，再给药</h2>
+  <div class="en-name">The Problem-Solution Arc — No Pain, No Pitch</div>
+  <span class="tag">叙事引擎</span>
+
+  <div class="section">
+    <div class="label">原则 · 名家原话</div>
+    <p>在介绍方案之前，先把问题讲到听众心里发疼。<strong>没有冲突就没有故事；没有"疼"，你的方案只是一个"更好"，而不是一个"必须"</strong>。投资人买的是止痛药（painkiller），不是维生素（vitamin）。</p>
+    <div class="quote">
+      "Conflict is to storytelling what sound is to music."
+      <span class="source">— Robert McKee, Story (1997)</span>
+    </div>
+    <p class="trans">中译：冲突之于故事，犹如声音之于音乐。（没有冲突，故事就是无声的——pitch 里的冲突，就是那个让人坐立难安的问题。）</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>一份 pitch 的能量来自"问题之痛"与"方案之解"的落差——落差越大越具体，方案就越显得不可或缺。大多数 pitch 失败，是因为<strong>急着炫耀方案，把问题一笔带过</strong>，听众没建立起渴望，再好的方案也只换来一句"挺好的"。McKee 点破要害：让人记住的不是方案，是那个被解决的冲突。所以先把问题写实——谁、多频繁、多痛——再让方案像一口长舒的气那样出现。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">我们做了一个 AI 笔记工具，支持多端同步、AI 摘要、团队协作和全文搜索。（功能清单，无痛点）</span>
+      <span class="after">知识工作者每天读 3 小时资料，一周后只记得不到 10%（疼，有数字有画面）。我们的工具让你读完即沉淀，需要时自动浮现在眼前（药，正对那道疼）。</span>
+    </div>
+    <div class="example">
+      <span class="before">Our app has reminders, tags, and cross-device sync.</span>
+      <span class="after">You forget 90% of what you read within a week — the insight you needed is buried in a note you'll never reopen. Our app resurfaces the right note at the moment you need it.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 · 常见错误</div>
+    <ul>
+      <li>✓ 任何 pitch、立项、说服领导改变现状、产品 landing page 的首屏文案</li>
+      <li>✗ 维生素错觉：问题只是"可以更好"，而非"现在很痛"——投资人不会为"更好"买单</li>
+      <li>✗ 问题太抽象（"效率低、体验差"）——没有人、没有频率、没有数字，就不疼</li>
+      <li>✗ 还没让人疼就跳到方案——落差未建立，方案落空</li>
+      <li>✗ 为了煽情夸大问题到失真——一旦被识破，整场信任崩塌</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Robert McKee</span>《Story: Substance, Structure, Style》（1997）；HBR 访谈《Storytelling That Moves People》（2003） · <span>Chip &amp; Dan Heath</span>《Made to Stick》"具体"一章</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 · 思考题</div>
+    <p>选你正在推的方案，只写"问题"那段：用三句话讲清谁、多频繁、多痛，必须含一个数字和一个画面。读给同事，问他："听到这里，你想知道解法吗？"——不想，说明问题还不够疼。</p>
+    <p class="q">思考题：止痛药 vs 维生素的二分法在哪些品类会失灵？（如审美、娱乐、奢侈品——人们确实会为"更好"而非"止痛"买单）</p>
+  </div>
+</section>
+
+<!-- Card 3: Why Now / 世界之变 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>以「世界之变」开场：Why Now 与势</h2>
+  <div class="en-name">Lead with the Change — The Why-Now Narrative</div>
+  <span class="tag">Andy Raskin · 战略叙事</span>
+
+  <div class="section">
+    <div class="label">原则 · 名家原话</div>
+    <p>别从你的产品开场，从"世界正在发生一个不可逆的变化"开场。<strong>这个变化制造了赢家与输家，而你的方案，是站到赢家一边的唯一通道</strong>。它回答投资人那个最尖锐的问题：为什么是现在，而不是三年前或三年后？</p>
+    <div class="quote">
+      "The best strategic narratives don't begin with the product. They begin with a big, undeniable change in the world — one that creates high stakes."
+      <span class="source">— Andy Raskin, "The Greatest Sales Deck I've Ever Seen" (2016)</span>
+    </div>
+    <p class="trans">中译：最好的战略叙事不从产品讲起，而从"世界上一个巨大、不可否认、且带来高利害的变化"讲起。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>"为什么是现在"是 pitch 里最被低估、却最致命的一张。一个变化（技术、监管、行为、成本曲线）打开了一扇五年前不存在、五年后会关上的窗——窗口本身就是"势"。Andy Raskin 拆解顶级 deck，归纳出五步战略叙事：点名世界之变，揭示赢家与输家，描绘"应许之地"，把功能包装成过关"法宝"，以证据收尾。<strong>精髓在顺序：让听众先因"变化"而焦虑，你的方案才成为解药而非推销</strong>。这与 Thiel"什么重要真相只有少数人认同"同一根筋。</p>
+    <div class="flow-vis">
+      <div class="flow-row">
+        <div class="step peak"><span class="step-num">1</span><span class="step-title">世界之变</span>不可逆的转折</div>
+        <div class="step"><span class="step-num">2</span><span class="step-title">赢家/输家</span>高利害对赌</div>
+        <div class="step"><span class="step-num">3</span><span class="step-title">应许之地</span>赢家的样子</div>
+        <div class="step"><span class="step-num">4</span><span class="step-title">法宝</span>功能=过关道具</div>
+        <div class="step"><span class="step-num">5</span><span class="step-title">证据</span>你已在路上</div>
+      </div>
+      <div class="caption">Andy Raskin 五步战略叙事 — 从"世界变了"讲到"你的产品"</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">我们要做企业级 AI Agent 平台，支持多模型编排和私有化部署。（从产品开场，无"势"）</span>
+      <span class="after">过去四十年，软件都在等人来点击操作。现在这个时代正在终结——软件开始自己行动。看不到这一点的公司，会成为下一个柯达。这，就是为什么是现在。（从世界之变开场，制造高利害）</span>
+    </div>
+    <div class="example">
+      <span class="before">We're building an AI agent platform for the enterprise.</span>
+      <span class="after">For 40 years, software waited for a human to click. That era is ending: software now acts on its own. Companies that miss this shift will be the next Blockbuster — that's why now, and why us.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 · 常见错误</div>
+    <ul>
+      <li>✓ 融资 pitch、品类创造型产品发布、内部推动重大战略转向</li>
+      <li>✗ "Why Now"缺席——投资人立刻反问"为什么不是三年前别人没做，三年后不会太晚"</li>
+      <li>✗ 变化太小或人尽皆知（"大家越来越忙了"）——撑不起赢家输家的高利害</li>
+      <li>✗ 描绘了应许之地，却没把听众/客户放进去当主角——他们只是旁观者</li>
+      <li>✗ 谨慎：成熟稳定的市场里硬造"世界之变"，会显得浮夸失真</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Andy Raskin</span>《The Greatest Sales Deck I've Ever Seen》（Medium, 2016） · <span>Peter Thiel</span>《Zero to One》（2014）"秘密"与逆向真相一章</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 · 思考题</div>
+    <p>为你的项目写一张"为什么是现在"。先答两问：这件事五年前为什么做不成？五年后为什么会太晚？把答案压成两三句，确保有一个明确的"变化"在驱动紧迫感。</p>
+    <p class="q">思考题：以"世界之变"开场是硅谷叙事范式。换到偏务实、不爱宏大叙事的中文商务语境，这套"先讲大势"会不会显得空？该如何调音？</p>
+  </div>
+</section>
+
+<!-- Card 4: Airbnb 2009 拆解 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Airbnb 2009 Deck 拆解：一页一意，三句说懂</h2>
+  <div class="en-name">The Airbnb 2009 Deck — One Idea per Slide</div>
+  <span class="tag">名家示范 · 案例</span>
+
+  <div class="section">
+    <div class="label">原则 · 名家原话</div>
+    <p>Airbnb 那份著名的 2009 种子轮 deck 没有华丽设计，却被奉为教科书。原因只有一条：<strong>一张幻灯片只讲一件事，一个数字只服务一个判断</strong>。问题、方案、市场各压成一页，三句话内让人懂。</p>
+    <div class="quote">
+      "Price is an important concern. Hotels leave you disconnected from the city and its culture. No easy way exists to book a room with a local, or become a host."
+      <span class="source">— Airbnb Pitch Deck, "Problem" slide (2009)</span>
+    </div>
+    <p class="trans">中译（问题页原文三句）：价格是个大问题；住酒店让你与城市和它的文化脱节；没有简便的方式向当地人订一个房间、或成为房东。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>看 Airbnb 怎么把前几张做到极致：<strong>问题</strong>页只列三条痛点；<strong>方案</strong>页一句定位——"向当地人订房，而不是住酒店"，配三个收益（省钱、赚钱、文化连接）；<strong>市场</strong>页不喊"万亿蓝海"，而是三个数字层层收窄：全球 20 亿次旅行 → 5.6 亿次线上预订 → 1060 万次可服务短租。每页都过"一眼看懂"测试。这正是前三条原则的落地：清晰骨架 + 真实痛点 + 克制表达，胜过任何动画。</p>
+    <div class="flow-vis">
+      <div class="flow-row">
+        <div class="step"><span class="step-num">Slide</span><span class="step-title">问题</span>三条痛点<br>价格 / 脱节 / 没渠道</div>
+        <div class="step peak"><span class="step-num">Slide</span><span class="step-title">方案</span>一句定位<br>向当地人订房</div>
+        <div class="step"><span class="step-num">Slide</span><span class="step-title">市场</span>三段收窄<br>20亿→5.6亿→1060万</div>
+      </div>
+      <div class="caption">Airbnb 2009 三张核心页 — 每页一意，每数字一用</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">（市场页）我们所处的旅游市场规模巨大、前景广阔，是一个万亿级别、高速增长的蓝海赛道。（全是形容词，零判断）</span>
+      <span class="after">（市场页）全球每年 20 亿次旅行 → 其中 5.6 亿次线上预订 → 我们瞄准想要"本地体验"的 1060 万次短租。（三个数字层层收窄，告诉投资人"我们到底吃哪一口"）</span>
+    </div>
+    <div class="example">
+      <span class="before">The travel market is huge and growing fast.</span>
+      <span class="after">2B trips are booked worldwide each year → 560M go online → we serve the 10.6M who want to stay with a local. (Funnel, not adjectives.)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 · 常见错误</div>
+    <ul>
+      <li>✓ 任何需要"一眼看懂"的对外材料：pitch、一页纸、产品落地页、对外汇报</li>
+      <li>✗ 一页塞多个观点——观众的眼睛和耳朵抢带宽，结果哪个都没记住</li>
+      <li>✗ 市场用形容词不用数字（"巨大""蓝海"）——形容词不能帮投资人做判断</li>
+      <li>✗ 抄它的"朴素设计"却不抄它的"结构与克制"——朴素不是目的，清晰才是</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Airbnb</span> 2009 Seed Pitch Deck（公开可查，被 Slidebean、TechCrunch 反复拆解） · <span>Geoffrey Moore</span>《Crossing the Chasm》的定位句式（"For …who…, X is a…that…, unlike…"）</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 · 思考题</div>
+    <p>把你方案的"市场"用 Airbnb 的漏斗法重写：总盘子 → 可触达 → 你真正吃的那口，三个数字层层收窄。再检查你 deck 里有没有哪一页同时塞了两个观点——拆成两页。</p>
+    <p class="q">思考题：AI 让人人都能一键生成精美 deck。当"漂亮"变得零成本，pitch 里真正稀缺、AI 替不了的东西是什么？</p>
+  </div>
+</section>
+
+<div class="deepthink-title">深入思考</div>
+
+<details>
+  <summary>1. Pitch 的"故事化"在什么场合反而有害？</summary>
+  <div class="ans">当听众是同领域专家、或场合要求高度中立时（尽调的数据核验、监管申报），过度叙事会被读作"在掩盖什么"。专家要的是可证伪的事实与边界条件，不是情绪曲线。判断标准：听众是来"被动员"还是来"做尽调"？前者用故事，后者用证据——高明的做法是外层故事、内层硬数据。</div>
+</details>
+<details>
+  <summary>2. Sequoia 骨架搬到"内部争预算 / 晋升 packet"，要改哪几块？</summary>
+  <div class="ans">逻辑链通用，但权重要变。对内："市场/竞争"换成"这件事对战略多重要、不做的代价"；"团队"换成"为什么我最该拿这笔资源"；"财务"换成 ROI 与风险。"为什么是现在"反而更重要——内部资源零和，你得回答"为什么这季度投我而非别人"。晋升 packet 则换成"我承接的难题—我的判断与行动—可量化的结果"。</div>
+</details>
+<details>
+  <summary>3. "先讲问题让人疼"与"诚实不夸大"如何平衡？</summary>
+  <div class="ans">疼的来源应是"选得准"而非"说得狠"。不是放大痛苦，而是选一个真实、听众能立刻代入的场景——用细节而非形容词共鸣（"周五加班到凌晨两点对账"胜过"效率极其低下"）。一旦用夸张数据被懂行的人当场戳破，整场信任归零。可证伪的具体，永远比不可证伪的夸张更有力。</div>
+</details>
+<details>
+  <summary>4. 文（deck）、讲（路演）、视频（异步 pitch）三种形态，同一套叙事要怎么变？</summary>
+  <div class="ans">Deck 可被翻阅——每页要能脱离讲解独立成立，文字承担更多。路演线性、有你在场——幻灯极简，靠声音和停顿制造 Sparkline 式起伏，把"疼"讲出温度。异步视频介于两者：观众会暂停、流失，前 15 秒必须是最强的"世界之变"钩子，节奏更快、密度更高。同一个 Big Idea，三种交付节奏。</div>
+</details>
+<details>
+  <summary>5. 中文 pitch 与英文 pitch，在"情感铺垫"的尺度上有何不同？</summary>
+  <div class="ans">英文（尤其硅谷）语境鼓励宏大叙事与愿景煽情，容忍度高。偏务实的中文商务场合，过度的"改变世界"开场易被读作浮夸，更吃"先把事说清、用结果说话"的克制路线。调音：中文版把"世界之变"讲得更落地（用行业数据和政策信号代替情绪词），把愿景收一收，让事实自己产生势能。</div>
+</details>
+
+<div class="nav">
+  <a href="index.html">← 回到每周写作目录</a>
+</div>
+
+<footer>BigCat · Writing Weekly · Week 11 · 2026</footer>
+
+</div>
+</body>
+</html>

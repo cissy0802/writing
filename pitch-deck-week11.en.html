@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Speaking: The Pitch Deck &amp; Storytelling — Week 11</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.trans{font-size:0.92rem;color:#6a6a6a;margin-top:8px}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"BEFORE ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"AFTER ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8;margin-bottom:8px}
+.exercise .q{color:#d8c98a;font-style:italic}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Sequoia ten-block skeleton grid */
+.deck-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:18px 0;background:#f8f6f1;padding:18px 14px;border-radius:2px}
+.deck-grid .slide{background:#fff;border:1px solid #d8d0bc;border-radius:2px;padding:10px 5px;text-align:center;font-family:Georgia,serif;font-size:0.78rem;color:#3a3a3a;line-height:1.4}
+.deck-grid .slide .n{display:block;font-size:0.66rem;color:#8a7a4a;font-weight:700;letter-spacing:1px;margin-bottom:3px}
+.deck-grid .slide.key{background:#1f1f1f;color:#fafafa;border-color:#1f1f1f}
+.deck-grid .slide.key .n{color:#d8c98a}
+.deck-grid-cap{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif;text-align:center}
+
+/* Reusable: three/five-step flow */
+.flow-vis{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px}
+.flow-vis .flow-row{display:flex;gap:8px;align-items:stretch}
+.flow-vis .step{flex:1;padding:14px 8px;background:#fff;border:1px solid #d8d0bc;text-align:center;font-family:Georgia,serif;font-size:0.84rem;color:#3a3a3a;line-height:1.5;border-radius:2px}
+.flow-vis .step .step-num{display:block;font-size:0.7rem;color:#8a7a4a;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;font-weight:700}
+.flow-vis .step .step-title{display:block;font-weight:700;color:#1f1f1f;margin-bottom:4px;font-size:0.92rem}
+.flow-vis .step.peak{background:#1f1f1f;color:#fafafa;border-color:#1f1f1f}
+.flow-vis .step.peak .step-title{color:#d8c98a}
+.flow-vis .step.peak .step-num{color:#d8c98a}
+.flow-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+details{margin:12px 0;border:1px solid #d0d0d0;border-radius:2px;padding:0 16px;background:#fff}
+details summary{cursor:pointer;padding:14px 0;font-weight:600;color:#1f1f1f;font-size:1rem}
+details[open] summary{border-bottom:1px solid #e8e8e8;margin-bottom:12px}
+details .ans{font-size:0.95rem;color:#3a3a3a;line-height:1.8;padding-bottom:16px}
+.deepthink-title{font-size:1.2rem;font-weight:700;color:#1f1f1f;margin:48px 0 18px;text-align:center;letter-spacing:1px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .deck-grid{grid-template-columns:repeat(2,1fr)}
+  .flow-vis .flow-row{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Week 11 · 2026.05.29</div>
+  <h1>Writing &amp; Speaking: The Pitch Deck<span class="topic">Sequoia Skeleton · Problem-Solution Arc · Why Now · Airbnb 2009</span></h1>
+  <div class="date">BigCat's Writing Weekly</div>
+  <p class="intro">Investors don't write checks for a feature list — they buy a story, a moment in time, and a team. A pitch deck is the extreme sport of writing: compressing "we're worth betting on" into ten pages. This week, four weapons: Sequoia's ten-block skeleton, the Problem-Solution narrative engine, the Why-Now opening that leads with a change in the world, and the Airbnb 2009 deck that got them all right. The same tools win budget, drive decisions, and write your promo packet.</p>
+</header>
+
+<!-- Card 1: Sequoia Skeleton -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>The Sequoia Skeleton: Ten Building Blocks of a Funding Story</h2>
+  <div class="en-name">Ten Slides, One Logic Chain</div>
+  <span class="tag">Sequoia · Structure</span>
+
+  <div class="section">
+    <div class="label">Principle · In Their Words</div>
+    <p>Skeleton first, flesh later. Sequoia compresses a funding story into ten slides, each answering one unavoidable question in the investor's head — and <strong>the order is the argument</strong>. From "who are we" to "why now" to "why you."</p>
+    <div class="quote">
+      "Company purpose: Define your company in a single declarative sentence. This is harder than it sounds — and more important than anything else on the page."
+      <span class="source">— Sequoia Capital, Pitch Deck Template</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The value isn't the "template" — it's that the skeleton forces you to think in the investor's order of attention. Meeting anything new, a mind silently runs a queue: What is this? Whose pain? Why now? How big is the pool? Why you? Sequoia's ten slides arrange that queue into a <strong>chain you cannot skip</strong> — drop a link, and the listener's mind snags exactly there.</p>
+    <div class="deck-grid">
+      <div class="slide"><span class="n">01</span>Company Purpose</div>
+      <div class="slide key"><span class="n">02</span>Problem</div>
+      <div class="slide"><span class="n">03</span>Solution</div>
+      <div class="slide key"><span class="n">04</span>Why Now</div>
+      <div class="slide"><span class="n">05</span>Market Size</div>
+      <div class="slide"><span class="n">06</span>Competition</div>
+      <div class="slide"><span class="n">07</span>Product</div>
+      <div class="slide"><span class="n">08</span>Business Model</div>
+      <div class="slide"><span class="n">09</span>Team</div>
+      <div class="slide"><span class="n">10</span>Financials</div>
+    </div>
+    <div class="deck-grid-cap">The Sequoia ten-block skeleton — the dark blocks are the two most often botched, and the most fatal.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">(Opening slide) Our tech stack: microservices, an in-house vector DB, multi-region active-active deployment… (Leading with implementation — no one yet knows what you do, or for whom.)</span>
+      <span class="after">(Opening slide) Acme lets small-business accountants close their books in a day, not a week. (One declarative sentence: what, for whom, what changes. The stack waits for slide 7.)</span>
+    </div>
+    <div class="example">
+      <span class="before">We've built a powerful, AI-native, cloud-first collaboration platform with deep integrations.</span>
+      <span class="after">Acme is the shared inbox that lets a 5-person support team feel like 20. (One sentence: who it's for, what changes.)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use · Common Mistakes</div>
+    <ul>
+      <li>Fundraising pitches, internal budget asks, new-project proposals, promo packets ("problem — solution — why now — why me" holds everywhere)</li>
+      <li>Don't open with architecture or résumés — the investor doesn't yet know what you do, so why care about your stack?</li>
+      <li>Don't scramble the order: solution before problem leaves the listener asking "a cure for what?"</li>
+      <li>Don't fill ten slides like a form — the skeleton is a narrative order, not a table</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Sequoia Capital</span>, <em>Pitch Deck Template / Writing a Business Plan</em> (sequoiacap.com) · <span>Reid Hoffman</span>, the "Annotated Pitch Decks" series on LinkedIn</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Drill · Reflection</div>
+    <p>Take something you want to push (a product, a project, a promotion) and write one sentence per slide across the ten. Polish slide one hardest — can a single declarative sentence say what it is, for whom, and what changes?</p>
+    <p class="q">Reflection: when the audience is already an expert (a specialist investor, a senior committee), which slides can shrink or vanish? Is the skeleton's "must-pass" path truly absolute?</p>
+  </div>
+</section>
+
+<!-- Card 2: Problem-Solution Arc -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>The Problem-Solution Arc: Make Them Hurt First, Then Hand Over the Cure</h2>
+  <div class="en-name">No Pain, No Pitch</div>
+  <span class="tag">Narrative Engine</span>
+
+  <div class="section">
+    <div class="label">Principle · In Their Words</div>
+    <p>Before you introduce the solution, make the problem ache. <strong>No conflict, no story; no pain, your solution is merely a "better" — not a "must."</strong> Investors buy painkillers, not vitamins.</p>
+    <div class="quote">
+      "Conflict is to storytelling what sound is to music."
+      <span class="source">— Robert McKee, <em>Story</em> (1997)</span>
+    </div>
+    <p class="trans">Without conflict the story is silent. In a pitch, the conflict is the problem that keeps the audience squirming in their seats.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>A pitch's energy comes from the gap between the pain of the problem and the relief of the solution — the wider and more concrete the gap, the more indispensable the solution feels. Most pitches fail because they <strong>rush to show off the solution and gloss over the problem</strong>; the audience never builds desire, and even a great answer earns only a polite "nice." McKee names the truth: what people remember isn't the solution, it's the conflict it resolved. So write the problem real — who, how often, how much it hurts — then let the solution arrive like a long exhale.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">We built an AI note-taking app with cross-device sync, AI summaries, team collaboration, and full-text search. (A feature list, no pain.)</span>
+      <span class="after">Knowledge workers read three hours a day and remember under 10% a week later (pain — with a number and a picture). Our app makes what you read stick, and resurfaces it the moment you need it (the cure, aimed straight at that ache).</span>
+    </div>
+    <div class="example">
+      <span class="before">Our app has reminders, tags, and cross-device sync.</span>
+      <span class="after">You forget 90% of what you read within a week — the insight you needed is buried in a note you'll never reopen. Our app resurfaces the right note at the moment you need it.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use · Common Mistakes</div>
+    <ul>
+      <li>Any pitch, project proposal, persuading a leader to change the status quo, the hero text of a landing page</li>
+      <li>The vitamin illusion: the problem is only "could be better," not "hurts now" — no one funds "better"</li>
+      <li>Too abstract ("low efficiency, poor experience") — no person, no frequency, no number, no ache</li>
+      <li>Jumping to the solution before the pain lands — the gap was never built</li>
+      <li>Exaggerating the problem into fiction — once a knowledgeable listener catches it, all trust collapses</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Robert McKee</span>, <em>Story: Substance, Structure, Style</em> (1997); HBR interview <em>Storytelling That Moves People</em> (2003) · <span>Chip &amp; Dan Heath</span>, <em>Made to Stick</em>, the "Concrete" chapter</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Drill · Reflection</div>
+    <p>Pick a proposal you're pushing and write only the "problem" passage: three sentences on who, how often, and how much it hurts — with one number and one image. Read it to a colleague and ask, "Do you want the solution now?" If not, the problem isn't painful enough yet.</p>
+    <p class="q">Reflection: where does the painkiller-vs-vitamin dichotomy break down? (In taste, entertainment, luxury — people really do pay for "better," not relief.)</p>
+  </div>
+</section>
+
+<!-- Card 3: Why Now / Lead with the Change -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Open with a Change in the World: Why Now &amp; Momentum</h2>
+  <div class="en-name">Lead with the Change — The Why-Now Narrative</div>
+  <span class="tag">Andy Raskin · Strategic Narrative</span>
+
+  <div class="section">
+    <div class="label">Principle · In Their Words</div>
+    <p>Don't open with your product — open with an irreversible change in the world. <strong>That change creates winners and losers, and your solution is the only path to the winning side.</strong> It answers the sharpest question in the room: why now, and not three years ago or three years from now?</p>
+    <div class="quote">
+      "The best strategic narratives don't begin with the product. They begin with a big, undeniable change in the world — one that creates high stakes."
+      <span class="source">— Andy Raskin, "The Greatest Sales Deck I've Ever Seen" (2016)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>"Why now" is the most underrated, most fatal slide in a pitch. A change — in technology, regulation, behavior, or cost curves — opens a window that didn't exist five years ago and will close five years from now; the window itself is the momentum. Dissecting top decks, Andy Raskin distilled a five-step strategic narrative: name the change, reveal the winners and losers, paint the promised land, frame features as the "magic gifts" for getting there, and close with evidence. <strong>The genius is in the order: make the audience anxious about the change first, and your solution becomes a cure rather than a sales pitch.</strong> Same root as Thiel's "what important truth do very few agree with you on?"</p>
+    <div class="flow-vis">
+      <div class="flow-row">
+        <div class="step peak"><span class="step-num">1</span><span class="step-title">The Change</span>an irreversible shift</div>
+        <div class="step"><span class="step-num">2</span><span class="step-title">Winners/Losers</span>high stakes</div>
+        <div class="step"><span class="step-num">3</span><span class="step-title">Promised Land</span>what winning looks like</div>
+        <div class="step"><span class="step-num">4</span><span class="step-title">Magic Gifts</span>features = tools to pass</div>
+        <div class="step"><span class="step-num">5</span><span class="step-title">Evidence</span>you're already underway</div>
+      </div>
+      <div class="caption">Andy Raskin's five-step strategic narrative — from "the world changed" to "your product."</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">We're building an enterprise AI agent platform with multi-model orchestration and private deployment. (Opens with the product — no momentum.)</span>
+      <span class="after">For 40 years, software waited for a human to click. That era is ending — software now acts on its own. Companies that miss this will become the next Kodak. That is why now. (Opens with a change in the world, manufacturing high stakes.)</span>
+    </div>
+    <div class="example">
+      <span class="before">We're building an AI agent platform for the enterprise.</span>
+      <span class="after">For 40 years, software waited for a human to click. That era is ending: software now acts on its own. Companies that miss this shift will be the next Blockbuster — that's why now, and why us.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use · Common Mistakes</div>
+    <ul>
+      <li>Fundraising pitches, category-creating launches, driving a major internal strategy shift</li>
+      <li>"Why now" absent — the investor instantly fires back, "why didn't someone do this three years ago, and why won't it be too late in three?"</li>
+      <li>The change is too small or too obvious ("everyone's busier these days") — it can't carry high stakes</li>
+      <li>You paint the promised land but leave the audience/customer out of it — they're spectators, not the hero</li>
+      <li>Use with care: manufacturing a "world-changing shift" in a mature, stable market just sounds grandiose</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Andy Raskin</span>, <em>The Greatest Sales Deck I've Ever Seen</em> (Medium, 2016) · <span>Peter Thiel</span>, <em>Zero to One</em> (2014), the chapter on "secrets" and contrarian truths</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Drill · Reflection</div>
+    <p>Write a "why now" slide for your project. Answer two questions first: why couldn't this be done five years ago? Why will it be too late in five years? Compress the answers into two or three sentences, with one clear "change" driving the urgency.</p>
+    <p class="q">Reflection: leading with a "change in the world" is a Silicon Valley idiom. In a pragmatic, grand-narrative-averse business culture, does the "big trend first" opening ring hollow? How would you re-tune it?</p>
+  </div>
+</section>
+
+<!-- Card 4: Airbnb 2009 Deck -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Dissecting the Airbnb 2009 Deck: One Idea per Slide, Understood in Three Lines</h2>
+  <div class="en-name">One Idea per Slide</div>
+  <span class="tag">Masterclass · Case Study</span>
+
+  <div class="section">
+    <div class="label">Principle · In Their Words</div>
+    <p>Airbnb's famous 2009 seed deck had no fancy design, yet it's treated as a textbook. For one reason only: <strong>one slide says one thing; one number serves one judgment.</strong> Problem, solution, and market each compress to a page, understood in under three sentences.</p>
+    <div class="quote">
+      "Price is an important concern. Hotels leave you disconnected from the city and its culture. No easy way exists to book a room with a local, or become a host."
+      <span class="source">— Airbnb Pitch Deck, "Problem" slide (2009)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Watch how Airbnb perfected the first few slides. The <strong>Problem</strong> page lists just three pains. The <strong>Solution</strong> page is one line of positioning — "book rooms with locals, rather than hotels" — plus three benefits (save money, make money, cultural connection). The <strong>Market</strong> page doesn't shout "trillion-dollar blue ocean"; it narrows through three numbers: 2 billion trips worldwide → 560 million booked online → 10.6 million serviceable short-term rentals. Every page passes the "grasp it at a glance" test. This is the first three principles made real: a clear skeleton + a true pain + restraint beats any animation.</p>
+    <div class="flow-vis">
+      <div class="flow-row">
+        <div class="step"><span class="step-num">Slide</span><span class="step-title">Problem</span>three pains<br>price / disconnect / no channel</div>
+        <div class="step peak"><span class="step-num">Slide</span><span class="step-title">Solution</span>one line<br>book with locals</div>
+        <div class="step"><span class="step-num">Slide</span><span class="step-title">Market</span>narrowing funnel<br>2B → 560M → 10.6M</div>
+      </div>
+      <div class="caption">Airbnb 2009, the three core pages — one idea per slide, one job per number.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Practice</div>
+    <div class="example">
+      <span class="before">(Market slide) Our travel market is enormous and fast-growing — a trillion-dollar, high-velocity blue ocean. (All adjectives, zero judgment.)</span>
+      <span class="after">(Market slide) 2 billion trips worldwide each year → 560 million booked online → we target the 10.6 million who want a local stay. (Three numbers narrowing down — telling the investor exactly which bite we take.)</span>
+    </div>
+    <div class="example">
+      <span class="before">The travel market is huge and growing fast.</span>
+      <span class="after">2B trips are booked worldwide each year → 560M go online → we serve the 10.6M who want to stay with a local. (Funnel, not adjectives.)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use · Common Mistakes</div>
+    <ul>
+      <li>Any outward-facing material that must "land at a glance": pitches, one-pagers, landing pages, external updates</li>
+      <li>Cramming several points onto one slide — eyes and ears fight for bandwidth, and none of it sticks</li>
+      <li>Sizing the market in adjectives, not numbers ("huge," "blue ocean") — adjectives can't help an investor judge</li>
+      <li>Copying its "plain design" but not its "structure and restraint" — plainness isn't the goal; clarity is</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Airbnb</span> 2009 Seed Pitch Deck (public; dissected repeatedly by Slidebean, TechCrunch) · <span>Geoffrey Moore</span>, <em>Crossing the Chasm</em> positioning template ("For …who…, X is a…that…, unlike…")</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Drill · Reflection</div>
+    <p>Rewrite your "market" with Airbnb's funnel: total pool → reachable → the bite you actually take, three numbers narrowing down. Then scan your deck for any page carrying two ideas at once — split it into two.</p>
+    <p class="q">Reflection: AI now makes a gorgeous deck a one-click affair. When "beautiful" costs nothing, what becomes genuinely scarce in a pitch — the thing AI can't replace?</p>
+  </div>
+</section>
+
+<div class="deepthink-title">Going Deeper</div>
+
+<details>
+  <summary>1. When does "storytelling" a pitch actually backfire?</summary>
+  <div class="ans">When the audience are domain experts, or the setting demands neutrality (due-diligence data checks, regulatory filings), heavy narrative reads as "what are you hiding?" Experts want falsifiable facts and boundary conditions, not an emotional curve. The test: are they here to be mobilized, or to do diligence? The former wants a story; the latter wants evidence — the masterstroke is a story on the outside, hard data on the inside.</div>
+</details>
+<details>
+  <summary>2. Porting the Sequoia skeleton to an internal budget ask or promo packet — what changes?</summary>
+  <div class="ans">The logic chain is universal; the weights shift. Internally: "market/competition" becomes "why this matters to strategy and the cost of not doing it"; "team" becomes "why I'm the one who should get this resource"; "financials" becomes ROI and risk. "Why now" matters more — internal resources are zero-sum, so answer "why fund me this quarter and not someone else." A promo packet swaps in "the hard problem I owned — my judgment and actions — the quantifiable result."</div>
+</details>
+<details>
+  <summary>3. How do you balance "make them hurt first" with "honest, no exaggeration"?</summary>
+  <div class="ans">The ache should come from choosing well, not stating harshly. Don't amplify pain; pick one real scene the listener instantly inhabits — resonance through detail, not adjectives ("closing the books at 2am on Friday" beats "extremely inefficient"). The moment an inflated number gets caught by someone who knows the space, all trust drops to zero. The falsifiable-and-concrete always outpunches the unfalsifiable-and-grand.</div>
+</details>
+<details>
+  <summary>4. Deck, live pitch, async video — how does the same narrative change across the three?</summary>
+  <div class="ans">A deck is leafed through — each page must stand alone, so text carries more. A live pitch is linear with you present — slides go minimal while your voice and pauses create the Sparkline's rise and give the "pain" warmth. Async video sits between: viewers pause, skip, and bail, so the first 15 seconds must be your strongest "change in the world" hook, the pace faster and denser than live. One Big Idea, three delivery tempos.</div>
+</details>
+<details>
+  <summary>5. Chinese vs. English pitches — how does the tolerance for emotional build-up differ?</summary>
+  <div class="ans">English (especially Silicon Valley) rewards grand narrative and vision; tolerance is high. In a more pragmatic Chinese business setting, an over-the-top "change the world" opening reads as grandiose, and the restrained "state it clearly, let results talk" route lands better. To re-tune: make the "change" more grounded (industry data and policy signals instead of emotional words), dial the vision back, and let facts generate their own momentum.</div>
+</details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Weekly</a>
+</div>
+
+<footer>BigCat · Writing Weekly · Week 11 · 2026</footer>
+
+</div>
+</body>
+</html>
