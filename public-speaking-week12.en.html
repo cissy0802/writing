@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing Weekly: Public Speaking — Week 12</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"BEFORE ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"AFTER ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+.throughline{background:#f8f6f1;padding:24px 16px 18px;margin:18px 0;border-radius:2px}
+.throughline svg{display:block;max-width:100%;height:auto;margin:0 auto}
+.throughline .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif;text-align:center}
+
+.opening-vis{background:#f8f6f1;padding:22px 18px;margin:18px 0;border-radius:2px}
+.opening-vis .row{display:flex;gap:10px;align-items:stretch;margin-bottom:10px}
+.opening-vis .row .label-col{width:120px;flex-shrink:0;font-size:0.82rem;color:#5a5a5a;font-family:Georgia,serif;text-align:right;padding-top:8px}
+.opening-vis .bar{flex:1;height:34px;display:flex;font-family:Georgia,serif;font-size:0.78rem;color:#fff;letter-spacing:0.5px}
+.opening-vis .bar .seg{display:flex;align-items:center;justify-content:center;padding:0 8px;white-space:nowrap;overflow:hidden}
+.opening-vis .seg.waste{background:#c8a8a8;color:#5a2a2a}
+.opening-vis .seg.hook{background:#1f1f1f}
+.opening-vis .seg.body{background:#8a7a4a;color:#fafafa}
+.opening-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif;text-align:center}
+
+.slide-vis{background:#f8f6f1;padding:22px 18px;margin:18px 0;border-radius:2px}
+.slide-vis .row{display:flex;gap:14px;align-items:stretch}
+.slide-vis .slide{flex:1;background:#fff;border:1px solid #c8c0a8;aspect-ratio:16/9;padding:14px;font-family:Georgia,serif;display:flex;flex-direction:column;justify-content:center;position:relative}
+.slide-vis .slide .tag-small{position:absolute;top:6px;right:8px;font-size:0.62rem;letter-spacing:1.5px;color:#a0a0a0;text-transform:uppercase}
+.slide-vis .slide.bad{background:#fefcf6}
+.slide-vis .slide.bad .title{font-size:0.7rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;border-bottom:1px solid #c8c0a8;padding-bottom:3px}
+.slide-vis .slide.bad ul{list-style:disc;margin-left:14px;font-size:0.56rem;color:#5a5a5a;line-height:1.4}
+.slide-vis .slide.good{background:#1f1f1f;color:#fafafa;justify-content:center;align-items:center;text-align:center}
+.slide-vis .slide.good .big{font-size:1.6rem;font-weight:800;letter-spacing:0.5px;color:#d8c98a;line-height:1.2}
+.slide-vis .slide.good .sub{font-size:0.68rem;color:#fafafa;margin-top:6px;letter-spacing:1.5px;text-transform:uppercase;opacity:0.7}
+.slide-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+.qa-vis{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px}
+.qa-vis .ds-row{display:flex;gap:8px;align-items:stretch}
+.qa-vis .ds-step{flex:1;padding:14px 10px;background:#fff;border:1px solid #d8d0bc;text-align:center;font-family:Georgia,serif;font-size:0.86rem;color:#3a3a3a;line-height:1.5;border-radius:2px;position:relative}
+.qa-vis .ds-step .step-num{display:block;font-size:0.72rem;color:#8a7a4a;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;font-weight:700}
+.qa-vis .ds-step .step-title{display:block;font-weight:700;color:#1f1f1f;margin-bottom:4px;font-size:0.95rem}
+.qa-vis .ds-step.land{background:#1f1f1f;color:#fafafa;border-color:#1f1f1f}
+.qa-vis .ds-step.land .step-title{color:#d8c98a}
+.qa-vis .ds-step.land .step-num{color:#d8c98a}
+.qa-vis .ds-step .ex{display:block;margin-top:6px;font-size:0.76rem;color:#8a8a8a;font-style:italic;line-height:1.4}
+.qa-vis .ds-step.land .ex{color:#d0c8a0}
+.qa-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+.deepthink{margin-top:32px;padding:28px 24px;background:#fff;border-top:3px solid #1f1f1f;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06)}
+.deepthink h3{font-size:1.2rem;font-weight:700;color:#1f1f1f;margin-bottom:18px;font-family:Georgia,"Noto Serif SC",serif;letter-spacing:0.5px}
+.deepthink details{margin-bottom:14px;border-bottom:1px solid #ececec;padding-bottom:14px}
+.deepthink details:last-child{border-bottom:none}
+.deepthink summary{cursor:pointer;font-size:1rem;font-weight:600;color:#1f1f1f;padding:6px 0;outline:none;line-height:1.5}
+.deepthink summary:hover{color:#8a7a4a}
+.deepthink details[open] summary{color:#8a7a4a}
+.deepthink details > div{margin-top:10px;padding:12px 16px;background:#f8f6f1;font-size:0.94rem;color:#3a3a3a;line-height:1.75;border-left:3px solid #8a7a4a;border-radius:2px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .opening-vis .row{flex-direction:column;gap:4px}
+  .opening-vis .row .label-col{text-align:left;width:auto;padding-top:0}
+  .slide-vis .row{flex-direction:column}
+  .qa-vis .ds-row{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Week 12 · 2026.05.30</div>
+  <h1>Writing Weekly: Public Speaking<span class="topic">Throughline · The First 30s · Slides as Set · Q&amp;A in Three Steps</span></h1>
+  <div class="date">BigCat's Writing Weekly</div>
+  <p class="intro">Public speaking isn't a talent on stage — it's tens of hours of design off stage. From TED's 18-minute floor to the microphone at your next all-hands, the same toolkit decides whether the audience lights up or looks down at their phones. This week: four tools amateurs ignore and the best speakers grind on.</p>
+</header>
+
+<!-- Card 1: Throughline -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Throughline: One Cord Through the Whole Talk</h2>
+  <div class="en-name">The single sentence your talk is really about</div>
+  <span class="tag">Chris Anderson · TED Core</span>
+
+  <div class="section">
+    <div class="label">Principle</div>
+    <p>TED curator Chris Anderson traces whether a talk gets remembered back to a single invisible cord: what is your 18 minutes really about? Every story, datapoint, joke must hang on that cord. Whatever can't — no matter how good — cut. A talk has exactly one throughline, no longer than 15 words, with a verb and some tension.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the master's words</div>
+    <div class="quote">
+      "Every talk should have a throughline — a connecting theme that ties together each narrative element. Every talk. Think of the throughline as a strong cord onto which you will attach all the elements that are part of the idea you're building."
+      <span class="source">— Chris Anderson, TED Talks: The Official TED Guide to Public Speaking (2016)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>Audience working memory is small. A talk with three independent themes gets remembered as zero. <strong>The throughline is the one sentence a listener can repeat as they walk out</strong> — and the filter you use to select material. It's a cousin of Duarte's Big Idea but emphasizes "running through": unlike an essay, a talk can't be re-read; listeners are dragged along in time, and if the cord breaks they fall off.</p>
+    <div class="throughline">
+      <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" aria-label="Throughline">
+        <line x1="30" y1="100" x2="570" y2="100" stroke="#1f1f1f" stroke-width="3"/>
+        <text x="30" y="88" font-family="Georgia" font-size="11" fill="#1f1f1f" font-style="italic">Throughline · one sentence</text>
+
+        <circle cx="110" cy="100" r="6" fill="#8a7a4a"/>
+        <text x="110" y="135" font-family="Georgia" font-size="11" fill="#5a5a5a" text-anchor="middle">Story</text>
+        <line x1="110" y1="100" x2="110" y2="50" stroke="#c8c0a8" stroke-dasharray="3,3" stroke-width="1"/>
+        <text x="110" y="42" font-family="Georgia" font-size="10" fill="#8a7a4a" text-anchor="middle">A</text>
+
+        <circle cx="220" cy="100" r="6" fill="#8a7a4a"/>
+        <text x="220" y="135" font-family="Georgia" font-size="11" fill="#5a5a5a" text-anchor="middle">Data</text>
+        <line x1="220" y1="100" x2="220" y2="60" stroke="#c8c0a8" stroke-dasharray="3,3" stroke-width="1"/>
+        <text x="220" y="52" font-family="Georgia" font-size="10" fill="#8a7a4a" text-anchor="middle">B</text>
+
+        <circle cx="330" cy="100" r="6" fill="#8a7a4a"/>
+        <text x="330" y="135" font-family="Georgia" font-size="11" fill="#5a5a5a" text-anchor="middle">Case</text>
+        <line x1="330" y1="100" x2="330" y2="45" stroke="#c8c0a8" stroke-dasharray="3,3" stroke-width="1"/>
+        <text x="330" y="37" font-family="Georgia" font-size="10" fill="#8a7a4a" text-anchor="middle">C</text>
+
+        <circle cx="440" cy="100" r="6" fill="#8a7a4a"/>
+        <text x="440" y="135" font-family="Georgia" font-size="11" fill="#5a5a5a" text-anchor="middle">Joke</text>
+        <line x1="440" y1="100" x2="440" y2="55" stroke="#c8c0a8" stroke-dasharray="3,3" stroke-width="1"/>
+        <text x="440" y="47" font-family="Georgia" font-size="10" fill="#8a7a4a" text-anchor="middle">D</text>
+
+        <circle cx="540" cy="100" r="8" fill="#1f1f1f"/>
+        <text x="540" y="135" font-family="Georgia" font-size="11" fill="#1f1f1f" text-anchor="middle" font-weight="bold">Call</text>
+        <line x1="540" y1="100" x2="540" y2="40" stroke="#1f1f1f" stroke-width="1"/>
+        <text x="540" y="32" font-family="Georgia" font-size="10" fill="#1f1f1f" text-anchor="middle" font-weight="bold">E</text>
+
+        <text x="300" y="170" font-family="Georgia" font-size="10" fill="#8a8a8a" text-anchor="middle" font-style="italic">Each element hangs on the cord — whatever can't, cut</text>
+      </svg>
+      <div class="caption">Throughline — a talk is a cord, not a bag</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before / After</div>
+    <div class="example">
+      <span class="before">"Today I want to talk about a few things: the latest in AI, some challenges in our org, and my thoughts on the future of work." (Three lines = no line.)</span>
+      <span class="after">"Today I'm making exactly one argument — <strong>AI isn't a tool, it's a mirror: it's doing for us the things we should have stopped doing ourselves</strong>. Three stories, three numbers, one ask, all hanging on that one sentence."</span>
+    </div>
+    <div class="example">
+      <span class="before">"I want to talk about leadership, culture, and the future of work." (Three topics = no topic.)</span>
+      <span class="after">"<strong>The best leaders subtract more than they add</strong> — and in the next 15 minutes I'll show you why, starting Monday, your job is to take things away."</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use + common mistakes</div>
+    <ul>
+      <li>✓ Any talk over 5 minutes: keynote, tech talk, board update</li>
+      <li>✓ Write the throughline before the script — it's the knife that trims material</li>
+      <li>✗ Mistake: treating the title as the throughline ("AI and the Future" is a noun, not a sentence)</li>
+      <li>✗ Mistake: a throughline so safe no one would disagree ("innovation matters" — fluff); sneaking a second cord in mid-talk — audience falls off</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key references</div>
+    <p class="refs"><span>Chris Anderson</span>, TED Talks: The Official TED Guide to Public Speaking, Ch.3 "Throughline" · companion: <span>Nancy Duarte</span>'s Big Idea formula</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + reflection</div>
+    <p>Write the throughline for your next talk in one sentence — with a verb, with a stance, under 15 words. Tape it to the edge of your screen. After every paragraph you draft, ask: does this hang on the cord? If not — cut.<br><br><strong>Reflection</strong>: For your last three talks, can your closest colleague repeat the throughline in one sentence? If not, the problem isn't the audience.</p>
+  </div>
+</section>
+
+<!-- Card 2: First 30 Seconds -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>The First 30 Seconds: Hook, Don't Clear Your Throat</h2>
+  <div class="en-name">Throw away the throat-clearing — start with the hook</div>
+  <span class="tag">Openings</span>
+
+  <div class="section">
+    <div class="label">Principle</div>
+    <p>The audience decides whether to invest in the first 30 seconds. Most amateurs spend those seconds on greeting + self-deprecation + agenda — "Thank you for having me… I'm not really a public speaker… Today I'll cover three things…" The first sentence of a great speaker is already a hook. Three reliable hooks: <strong>a story, a contrast, a question</strong>. Land directly. No detours.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the master's words</div>
+    <div class="quote">
+      "The first few seconds of any talk are crucial. Audiences need to be intrigued before they will commit. Start with something that piques curiosity, makes them lean in, or reframes what they thought they knew."
+      <span class="source">— Chris Anderson, TED Talks, Ch. 9 "Openings"</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>Brains default to "scan mode" — is this worth putting the phone down for? Greetings are socially polite but signal "not important yet." <strong>A hook opens a loop — brains hate unresolved loops and must keep listening to close them</strong>, the same trick the first shot of a thriller pulls. Anderson's first rehearsal note at TED is always: "Cut the first 60 seconds. Start at 61." Those 60 seconds are almost always throat-clearing.</p>
+    <div class="opening-vis">
+      <div class="row">
+        <div class="label-col">Amateur</div>
+        <div class="bar">
+          <div class="seg waste" style="flex:5">Greeting · Disclaimers · Agenda (45s)</div>
+          <div class="seg body" style="flex:5">Real talk</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="label-col">First-class</div>
+        <div class="bar">
+          <div class="seg hook" style="flex:2">Hook 30s</div>
+          <div class="seg body" style="flex:8">Real talk</div>
+        </div>
+      </div>
+      <div class="caption">The first 30 seconds is the most expensive attention you'll ever get — don't burn it on greetings</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before / After</div>
+    <div class="example">
+      <span class="before">"Hi everyone, thank you so much to the organizers for having me. I'm honored to be here. Let me start by introducing myself… Today I'll cover three sections: background, problem, recommendation."</span>
+      <span class="after">"<strong>Three years ago this month, our system went down for 47 minutes at 3am — and burned through the patience of our biggest customer.</strong> What I learned that night is what I want to give you in the next 15 minutes — and why it's true for you too." (story hook + throughline preview)</span>
+    </div>
+    <div class="example">
+      <span class="before">"Hi everyone, I'm so excited to be here today. I'd like to start by thanking…"</span>
+      <span class="after">"<strong>Nine out of ten engineers I interviewed last quarter could not name the bottleneck in their own service.</strong> Not couldn't measure it — couldn't name it. Today I want to talk about why we stopped knowing our own systems." (contrast + question)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use + common mistakes</div>
+    <ul>
+      <li>✓ TED-style talks, product launches, all-hands, customer pitches, recruiting events</li>
+      <li>✓ Pick one hook: story (concrete time and place) / contrast (numbers) / question (one they answer silently)</li>
+      <li>✗ Mistake: "I'm not really a public speaker" — you've downgraded yourself; audience downgrades expectations too</li>
+      <li>✗ Mistake: the agenda slide ("today I'll cover three parts") flattens suspense; save thank-yous for the end</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key references</div>
+    <p class="refs"><span>Chris Anderson</span>, TED Talks, Ch. 9 "Openings" · <span>Carmine Gallo</span>, Talk Like TED · <span>Patrick McKenzie</span>, "Don't apologize before you speak"</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + reflection</div>
+    <p>Record the first 30 seconds of your next talk. Play it back. Mark every throat-clearing word — "honored," "thank you," "briefly introduce," "three parts." Count the seconds they consumed. Then rewrite the opening so sentence one is already the hook (story / contrast / question). Re-record. Compare.<br><br><strong>Reflection</strong>: What's behind the throat-clearing? It's warm-up time you owe yourself. Warm up backstage and you give those 30 seconds back to the audience.</p>
+  </div>
+</section>
+
+<!-- Card 3: Slides as Set -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Slides as Stage Set, Not Cue Cards</h2>
+  <div class="en-name">The deck supports you — it isn't you</div>
+  <span class="tag">Garr Reynolds · Tufte</span>
+
+  <div class="section">
+    <div class="label">Principle</div>
+    <p>The job of slides isn't to show what you're saying — it's to amplify what you're saying. Eyes and ears compete: the moment the screen fills with text, the audience stops listening and starts silently reading. Silent reading is faster than speech, so they finish ahead of you — and drift. <strong>The right slide: one image, one number, or one word.</strong> Words are for the speaker; the screen is for the image.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the master's words</div>
+    <div class="quote">
+      "The slides are not the show. You are the show. Slides should support your narrative — they should never be the narrative itself. If your slides can be read and understood without you, you don't need to be there."
+      <span class="source">— Garr Reynolds, Presentation Zen (2008)</span>
+    </div>
+    <div class="quote" style="margin-top:14px">
+      "PowerPoint slides with bullet lists actively make us stupid. They reduce analytical thinking to fragments and disconnect ideas from evidence."
+      <span class="source">— Edward Tufte, The Cognitive Style of PowerPoint (2003)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>Cognitive science has the "redundancy effect" (Sweller): when the same information arrives via "on-screen text + speaker's voice," comprehension drops — the two channels fight for working memory. That's why <strong>bullet list + speaker reading it = double the boredom</strong>. Of the ~90 slides in Jobs's 2007 iPhone launch, more than 60 carried a single image or a single word.</p>
+    <div class="slide-vis">
+      <div class="row">
+        <div class="slide bad">
+          <span class="tag-small">Amateur</span>
+          <div class="title">Q3 Strategic Priorities</div>
+          <ul>
+            <li>Advance AI capabilities to empower business growth</li>
+            <li>Optimize organizational synergy and operational efficiency</li>
+            <li>Strengthen infrastructure to ensure platform stability</li>
+            <li>Deepen relationships with core customers</li>
+            <li>Build talent pipeline and reinforce culture</li>
+          </ul>
+        </div>
+        <div class="slide good">
+          <span class="tag-small">First-class</span>
+          <div class="big">3×</div>
+          <div class="sub">faster onboarding</div>
+        </div>
+      </div>
+      <div class="caption">Left: the screen does the talking, the audience stops listening · Right: the screen amplifies you, the audience must listen</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before / After</div>
+    <div class="example">
+      <span class="before">A slide titled "Our advantages," with 6 bullet points underneath, each 15 words. The speaker reads them aloud. (By bullet two, the audience is on their phones.)</span>
+      <span class="after">A single image: a curve bending sharply upward in Q3. The speaker says, "What happened at this moment? Let me tell you." Speaker tells the story, image carries the emotion. Bullets live in speaker notes, not on screen.</span>
+    </div>
+    <div class="example">
+      <span class="before">A slide full of paragraphs explaining "our value proposition" while the speaker reads it aloud.</span>
+      <span class="after">A black slide with one number: <strong>$1.2M</strong>. Speaker: "That's what one bug cost us last March. Here's how we make sure it never costs us that again."</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use + common mistakes</div>
+    <ul>
+      <li>✓ Keynotes, TED-style talks, launches, external pitches — they're listening to you, not reading you</li>
+      <li>✓ Kawasaki's 10/20/30 rule: 10 slides, 20 minutes, font size ≥ 30pt</li>
+      <li>✗ Not for: a "slideument" that doubles as standalone reading — make two versions: projector + read-only</li>
+      <li>✗ Mistake: pasting the script onto slides and reading it; charts with 12 lines and 3 Y-axes; too much transition animation</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key references</div>
+    <p class="refs"><span>Garr Reynolds</span>, Presentation Zen (2008) · <span>Edward Tufte</span>, The Cognitive Style of PowerPoint (2003) · <span>Nancy Duarte</span>, slide:ology</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + reflection</div>
+    <p>Open the deck from your last talk. For each slide, ask: "If I could keep only one sentence / one number / one image, what's left?" Make a stripped version. Move everything you cut into speaker notes. Try giving the talk again from the stripped deck — you'll speak more freely and the audience will look up.<br><br><strong>Reflection</strong>: Is the "slideument" culture (one deck doing double duty as projector and document) the root cause of bad PPTs? Amazon solved it with the 6-pager. Can your company?</p>
+  </div>
+</section>
+
+<!-- Card 4: Q&A Three Steps -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Q&amp;A in Three Steps: Pivot · Bridge · Land</h2>
+  <div class="en-name">Answering hard questions without ducking them</div>
+  <span class="tag">Q&amp;A · Media Training</span>
+
+  <div class="section">
+    <div class="label">Principle</div>
+    <p>Many good talks die in Q&amp;A. Three kinds of hard questions are most common: <strong>hostile</strong> (challenging you), <strong>loaded</strong> (with a baked-in premise), and <strong>I don't know</strong>. Media trainers have a three-step counter: <strong>Pivot</strong> (don't take it head-on, don't deny the question itself) → <strong>Bridge</strong> (a single transition that moves the topic to the square you want) → <strong>Land</strong> (deliver your prepared core message). All three steps must be short, honest, and must not feel like you ducked.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In the master's words</div>
+    <div class="quote">
+      "In a Q&amp;A, you don't have to answer the question they asked. You have to answer the question you wish they had asked — but you must do it honestly, and you must do it in a way that respects what they actually asked."
+      <span class="source">— common media-training maxim, popularized by Carmine Gallo &amp; Frank Luntz</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>The cognitive mechanism: people resent being ignored more than being argued with — Pivot first acknowledges the question, then chooses not to take it head-on. Bridge is a verbal "baffle": an obvious transition word ("more importantly…", "let me step back…") that lets the audience follow you to the new square. Land is your prepared core message — before any talk, have three sentences ready, so whatever you're asked, you can land on one. <strong>For questions you can't answer: just say "I don't know, I'll get back to you" — it builds more ethos than any guess.</strong></p>
+    <div class="qa-vis">
+      <div class="ds-row">
+        <div class="ds-step">
+          <span class="step-num">Step 1</span>
+          <span class="step-title">Pivot</span>
+          Acknowledge,<br>don't engage head-on
+          <span class="ex">"That's a fair question — but let me step back first."</span>
+        </div>
+        <div class="ds-step">
+          <span class="step-num">Step 2</span>
+          <span class="step-title">Bridge</span>
+          One sentence moves<br>the topic to your square
+          <span class="ex">"What really decides the outcome is something else —"</span>
+        </div>
+        <div class="ds-step land">
+          <span class="step-num">Step 3</span>
+          <span class="step-title">Land</span>
+          Pre-rehearsed<br>core message
+          <span class="ex">"…our moat is X, and the evidence is Y."</span>
+        </div>
+      </div>
+      <div class="caption">Pivot · Bridge · Land — three steps for hard questions</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before / After</div>
+    <div class="example">
+      <span class="before">Q: "I heard your project got its budget cut in half this year — is it on the way out?"<br>Weak: "Not at all — who said that? Budget shifts are normal. Everything's fine." (defensive + denial + hollow)</span>
+      <span class="after">Strong: "We did re-allocate resources this year (<strong>Pivot</strong> — acknowledge). What matters more is where the cuts went — 70% flowed into the single core path users complained about most (<strong>Bridge</strong>). The result: over the last 90 days, retention on that path is up 18% (<strong>Land</strong>)."</span>
+    </div>
+    <div class="example">
+      <span class="before">Q: "Aren't you worried OpenAI will just kill your product next quarter?"<br>Weak: "No, we have great moats and I think we'll be fine."</span>
+      <span class="after">Strong: "It's a fair question — every founder in this category should sit with it. (<strong>Pivot</strong>) But the moat we're building isn't the model — it's the workflow data on top of it. (<strong>Bridge</strong>) In the last 30 days, our users averaged 47 corrections per session — training data no foundation model has. (<strong>Land</strong>)"</span>
+    </div>
+    <div class="example">
+      <span class="before">A factual question you don't actually know.<br>Weak: make up a number (later it gets dug up and your ethos goes to zero).</span>
+      <span class="after">"I don't have an accurate number in front of me and I don't want to give you a wrong one. I'll send it tonight." Simple. Honest. Followed up.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use + common mistakes</div>
+    <ul>
+      <li>✓ Investor pitch Q&amp;A, board scrutiny, press interviews, promo committee, external launches</li>
+      <li>✓ Before any talk, list the 10 questions you fear most. Write Pivot · Bridge · Land for each.</li>
+      <li>✗ Mistake: flat denial ("not at all") — pushes the asker into the opposing camp</li>
+      <li>✗ Mistake: a Bridge so blunt ("I don't want to answer that — let me answer this instead") it reads as rude; faking an answer; a Land over 30 seconds — by then the audience has forgotten the question and feels dodged</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key references</div>
+    <p class="refs"><span>Carmine Gallo</span>, Talk Like TED, Q&amp;A chapter · <span>Frank Luntz</span>, Words That Work, "Bridge &amp; Pivot" · <span>Chris Anderson</span>, TED Talks, Ch. 18 "Q&amp;A"</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + reflection</div>
+    <p>Write down the five questions you most fear from your next talk or review. For each, draft a Pivot (one acknowledgment) + Bridge (one transition) + Land (one core message). Ask a colleague to ambush you with the five — three rounds — until the three steps feel like instinct.<br><br><strong>Reflection</strong>: When you "answer the question you wish they'd asked," is that craft or manipulation? My line: the line lies in whether the Land is true. A true core message + a graceful transition = communication craft. A false core message + a slick transition = manipulation.</p>
+  </div>
+</section>
+
+<!-- Deep Reflection -->
+<div class="deepthink">
+  <h3>Deep Reflection</h3>
+
+  <details>
+    <summary>Can a Chinese-language and an English-language opening use the same hook?</summary>
+    <div>The three hooks (story / contrast / question) transfer. But Chinese audiences tolerate self-deprecating openings better and find a too-direct hook "trying too hard," especially in formal settings (annual meetings, talking up the hierarchy, regulatory). For Chinese, soften the hook a little — set up a seemingly casual scene that builds toward tension, instead of "throwing a number on the table" English-style. But "greeting + agenda" dead-air openings deserve to be cut in either language.</div>
+  </details>
+
+  <details>
+    <summary>Are Throughline, Big Idea (Duarte), and SUCCES's "Simple" (Heath) the same thing?</summary>
+    <div>Same root, different jobs. Big Idea filters the idea (unique POV + stakes). Simple filters complexity (cut until only the core remains). Throughline filters structure (does a single cord run through it?). Best workflow is a pipeline: Big Idea to know what you're saying → Simple to compress it to one sentence → Throughline to hang every piece of material onto it.</div>
+  </details>
+
+  <details>
+    <summary>Video talks (webinars, recordings) vs. live — same tools?</summary>
+    <div>Same direction, different weights. Live: body, pauses, eye contact are tools, slides can be "loose" (more image, less text). Video: viewers can fast-forward, pause, or close the tab at any time — opening tolerance is even lower, and the throughline needs to land within 60 seconds. Information density should be higher than live, because there's no live emotional field to carry the slack. Visual aids must also be denser (often the frame is half speaker + half slide, so the slide has to carry attention by itself).</div>
+  </details>
+
+  <details>
+    <summary>How do "Pivot · Bridge · Land" and honesty coexist?</summary>
+    <div>The key isn't the three steps themselves — it's the content of the Land. If your Land is a pre-rehearsed, true core message — fact-based, verifiable — then Pivot and Bridge are just delivery technique, no different from paragraph structure in writing. If your Land is dressed-up vapor, the three steps become manipulation. Same blade, different hand. Worth asking yourself: would my core message hold up if someone dug it up after the Q&amp;A ended?</div>
+  </details>
+</div>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Weekly</a>
+</div>
+
+<footer>BigCat · Writing Weekly · Week 12 · 2026</footer>
+
+</div>
+</body>
+</html>
