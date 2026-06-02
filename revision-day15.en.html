@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: The Craft of Revision — Day 15</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"BEFORE ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"AFTER ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.exercise .think{margin-top:12px;padding-top:12px;border-top:1px solid #4a4a4a;color:#d8c98a;font-style:italic}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Visualization: three-pass revision funnel */
+.funnel{background:#f8f6f1;padding:24px 16px 16px;margin:18px 0;border-radius:2px}
+.funnel .fn-row{margin:8px auto;background:#fff;border:1px solid #d8d0bc;border-radius:2px;padding:12px 14px;text-align:center;font-family:Georgia,serif}
+.funnel .fn-row .fn-pass{display:block;font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;color:#8a7a4a;font-weight:700;margin-bottom:4px}
+.funnel .fn-row .fn-layer{display:block;font-weight:700;color:#1f1f1f;font-size:1.05rem;margin-bottom:3px}
+.funnel .fn-row .fn-do{display:block;font-size:0.86rem;color:#5a5a5a;line-height:1.5}
+.funnel .fn-1{max-width:96%}
+.funnel .fn-2{max-width:72%}
+.funnel .fn-3{max-width:48%}
+.funnel .fn-arrow{text-align:center;color:#8a7a4a;font-size:1.1rem;font-family:Georgia,serif}
+.funnel .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+/* Deep thinking */
+.deepthink{margin-top:32px;padding:28px 24px;background:#fff;border-top:3px solid #1f1f1f;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06)}
+.deepthink h3{font-size:1.2rem;font-weight:700;color:#1f1f1f;margin-bottom:18px;font-family:Georgia,"Noto Serif SC",serif;letter-spacing:0.5px}
+.deepthink details{margin-bottom:14px;border-bottom:1px solid #ececec;padding-bottom:14px}
+.deepthink details:last-child{border-bottom:none}
+.deepthink summary{cursor:pointer;font-size:1rem;font-weight:600;color:#1f1f1f;padding:6px 0;outline:none;line-height:1.5}
+.deepthink summary:hover{color:#8a7a4a}
+.deepthink details[open] summary{color:#8a7a4a}
+.deepthink details > div{margin-top:10px;padding:12px 16px;background:#f8f6f1;font-size:0.94rem;color:#3a3a3a;line-height:1.75;border-left:3px solid #8a7a4a;border-radius:2px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .funnel .fn-1,.funnel .fn-2,.funnel .fn-3{max-width:100%}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 15 · 2026.06.02</div>
+  <h1>Writing &amp; Expression: The Craft of Revision<span class="topic">Shitty First Drafts · Three-Pass Revision · Cool Down &amp; Read Aloud · The Feedback Loop</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">Almost no one nails it in one pass. Good writing isn't written — it's rewritten. Beginners spend all their energy on the first draft and ship it; pros treat the draft as raw material and do the real work in cutting, moving, and polishing. This issue covers the four steps of revision: <strong>let the draft exist, rewrite in layers, see clearly through cooling and reading aloud, and calibrate with a real reader.</strong></p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Allow a Shitty First Draft: Get It Down, Then Get It Right</h2>
+  <div class="en-name">Shitty First Drafts — Separate Generating from Editing</div>
+  <span class="tag">Mindset · Starting</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master's Words</div>
+    <p>A first draft's only job is to <strong>exist</strong>, not to be good. Split "generating" from "editing" into two separate acts: write it all the way through first, then come back and make it good. You can't revise a blank page.</p>
+    <div class="quote">
+      "Almost all good writing begins with terrible first drafts. You need to start somewhere."
+      <span class="source">— Anne Lamott, Bird by Bird (1994)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>"Generating" and "judging" are two opposing mental modes. Writing and deleting at the same time is like one foot on the gas, one on the brake — the car stalls and you're exhausted. The result: you polish the first sentence ten times while the paragraph never takes shape. The fix is to <strong>switch off the inner editor</strong> and let the draft exist — ugly, but complete. Save judgment for the revision stage. Giving yourself permission to write badly is what lets you write fast, and finish.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">The Rewrite (Core)</div>
+    <div class="example">
+      <span class="before">(first draft) In my view, it could perhaps be said that, in some sense, our project is, to a certain extent, encountering some less-than-ideal issues with respect to its progress.</span>
+      <span class="after">The project is stuck.</span>
+    </div>
+    <div class="example">
+      <span class="before">(first draft) 我想，从某种意义上说，或许可以认为，我们在一定程度上正面临着某些挑战。</span>
+      <span class="after">我们卡住了。</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">The filler in a first draft isn't a mistake — it's the scaffolding of thinking-while-writing. Scaffolding is meant to come down, but you have to put it up first.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ The start of any writing: emails, memos, docs, talks — whenever you're stuck on the first paragraph</li>
+      <li>Trap: edit-as-you-write, and an hour later you're still on line one — that's procrastination dressed as diligence</li>
+      <li>Trap: mistaking "written fast" for "written well," and shipping a one-pass draft as final</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Set a 15-minute timer and <strong>write without stopping</strong> on a topic you owe: no deleting, no re-reading, no looking things up. When time's up, don't read it — close it. Open it tomorrow; you'll find usable sentences hiding inside.</p>
+    <p class="think">Reflection: When did you last fail to start because the opening "wasn't good enough"? Did that piece ever get written?</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Three-Pass Revision: One Layer Per Pass</h2>
+  <div class="en-name">Three-Pass Revision — Structure, Then Sentence, Then Word</div>
+  <span class="tag">Method · Layering</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master's Words</div>
+    <p>Don't try to "fix it all in one pass." Make three passes, each looking at only one layer: <strong>structure → sentence → word</strong>. Your brain can't watch paragraph order and punctuation at the same time.</p>
+    <div class="quote">
+      "Rewriting is the essence of writing well: it's where the game is won or lost."
+      <span class="source">— William Zinsser, On Writing Well (1976)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">Lu Xun put it bluntly: "When you finish, read it through at least twice, and ruthlessly cut every word, sentence, and paragraph that can be spared — without regret." (Reply to Beidou Magazine, 1931)</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Revising is like building a house: lay the walls first (structure), then finish the interior (sentences), then pick the paint color (words). The order can't reverse — a sentence you spent ten minutes perfecting may get cut wholesale in the structure pass. Pass one asks only: "Which paragraph is redundant, which is missing, is the order right?" Pass two reworks the logic and rhythm of sentences. Pass three hunts filler words, swaps in concrete ones, fixes punctuation. <strong>One pair of eyes per pass — and you see more clearly.</strong></p>
+    <div class="funnel">
+      <div class="fn-row fn-1"><span class="fn-pass">Pass 1 · Macro</span><span class="fn-layer">Structure</span><span class="fn-do">cut dead paragraphs · add missing links · reorder</span></div>
+      <div class="fn-arrow">↓</div>
+      <div class="fn-row fn-2"><span class="fn-pass">Pass 2 · Meso</span><span class="fn-layer">Sentence</span><span class="fn-do">break up long sentences · passive→active · fix rhythm</span></div>
+      <div class="fn-arrow">↓</div>
+      <div class="fn-row fn-3"><span class="fn-pass">Pass 3 · Micro</span><span class="fn-layer">Word</span><span class="fn-do">cut filler · swap in concrete words · fix punctuation &amp; typos</span></div>
+      <div class="caption">Tighten layer by layer, big to small — set the skeleton before carving details</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">The Rewrite (Core)</div>
+    <div class="example">
+      <span class="before">Due to the fact that the system is currently experiencing performance degradation, it is recommended that an optimization effort be undertaken.</span>
+      <span class="after">The system is slow. Let's fix it.</span>
+    </div>
+    <div class="example">
+      <span class="before">鉴于目前所面临的实际情况，我们认为有必要对现有流程进行一次较为全面的优化改进。</span>
+      <span class="after">现在的流程太慢，我们要重做。</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Any important doc, decision memo, or talk — if it's worth three passes, that's what makes it important</li>
+      <li>Trap: polishing words in pass one — perfecting a sentence whose whole paragraph should be cut</li>
+      <li>Trap: thinking "fixing typos" is revision — that's proofreading, not rewriting</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Take an old piece and revise it in three strict passes: each pass <strong>touches only one layer</strong>; you may not look at sentences until the structure pass is done. Log how many words you cut per pass — usually pass one cuts the most.</p>
+    <p class="think">Reflection: Which layer does your revision usually stop at? Why do you rarely go back and touch structure — unwilling, or unaware it's the problem?</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Cool Down &amp; Read Aloud: Switch from Author Back to Reader</h2>
+  <div class="en-name">Cool Down &amp; Read Aloud — The Ear Is Honest</div>
+  <span class="tag">Perspective · Rhythm</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master's Words</div>
+    <p>Don't revise right after writing. <strong>Sleep on it</strong>, and you turn from "author" back into "reader." Then add one move: <strong>read it aloud</strong> — the ear is more honest than the eye.</p>
+    <div class="quote">
+      "Write with the door closed, rewrite with the door open. Your stuff starts out being just for you… but then it goes out."
+      <span class="source">— Stephen King, On Writing (2000)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">King also offers a formula: 2nd Draft = 1st Draft − 10%.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Right after writing, your head is still full of "what I meant to say," so you read the mental version, not the version on the page. Cooling lets the memory fade, and the text reappears through a stranger's eyes — now the cracks show. <strong>Reading aloud recruits a different organ — the ear.</strong> Tongue-twisters, breathless runs, repetition, monotone rhythm — the eye lets them pass; the mouth and ear don't. Where you run out of breath but can't pause is exactly where the sentence needs a break.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">The Rewrite (Core)</div>
+    <div class="example">
+      <span class="before">The degree of complexity of the coordination work among the various relevant parties involved in the implementation of the proposal was significantly underestimated.</span>
+      <span class="after">We badly underestimated how hard it would be to coordinate everyone.</span>
+    </div>
+    <div class="example">
+      <span class="before">该方案在实施过程中所涉及的相关各方之间的协调工作的复杂程度被显著地低估了。</span>
+      <span class="after">我们严重低估了协调各方的难度。</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">The "before" scrapes by when read silently, but you can't say it in one breath aloud — that's the signal it needs fixing.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Important emails, external memos, talks: both gates — cooling and reading aloud — before they go out</li>
+      <li>✗ An urgent alert leaves no room to sleep on it — then at least read it aloud once before sending</li>
+      <li>Trap: send the moment you finish, trusting "it feels fine" — that feeling comes from the author's view, which can't be trusted</li>
+      <li>Trap: read silently only, missing every rhythm and breathing problem</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>For one important email this week, finish it, <strong>save it to drafts overnight</strong>, and read it aloud the next day before sending. Notice: which sentence made you stumble? Smooth it out.</p>
+    <p class="think">Reflection: Have you ever looked at something days later and realized it said nothing close to what you meant? Would one night of cooling have caught it?</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>The Feedback Loop: You Are Not Your Own Reader</h2>
+  <div class="en-name">The Feedback Loop — Ask Where, Not Whether</div>
+  <span class="tag">External · Calibration</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master's Words</div>
+    <p>You know too well what you meant to say — which is exactly why you can't see where the reader gets stuck. <strong>Find a real reader, and ask "where did you lose me," not "is it good."</strong></p>
+    <div class="quote">
+      "Someone — I can't remember who — once wrote that all novels are really letters aimed at one person. As it happens, I believe this."
+      <span class="source">— Stephen King, On Writing (2000), on the Ideal Reader</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">Write for one specific reader, and the prose instantly finds a direction.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Authors suffer the "curse of knowledge": the context you know, the reader doesn't; the transition you supply in your head isn't actually on the page. The least useful feedback is <strong>evaluation</strong> ("it's good," "a bit wordy"); the most useful is <strong>location</strong> ("by paragraph three I didn't know who you were talking about"). So ask diagnostic questions: Where did you stop? Which sentence did you re-read? Where did you want to skip ahead? Treat the reader as a sensor, not a judge.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">The Rewrite (Core)</div>
+    <div class="example">
+      <span class="before">(asking) So, what do you think — is it any good?</span>
+      <span class="after">Where did you start to drift? Was there a sentence you had to read twice?</span>
+    </div>
+    <div class="example">
+      <span class="before">（提问）你觉得我这篇写得怎么样？</span>
+      <span class="after">读到哪一段你开始走神？有没有哪句你需要回头重读一遍？</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Important docs, public-facing pieces, promo packets, talks you'll polish repeatedly</li>
+      <li>Trap: ask only "do you like it" and harvest a pile of polite lies with nothing to act on</li>
+      <li>Trap: rush to defend when you get feedback, instead of first logging "where the reader broke down"</li>
+      <li>Trap: accept all feedback wholesale and revise away your own judgment and voice</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Send one piece to a real reader this week and <strong>ask only three diagnostic questions</strong> (where you drifted / which sentence you re-read / where you wanted to skip). Don't explain, don't defend — just record. Decide how to revise afterward.</p>
+    <p class="think">Reflection: Last time someone gave feedback on your writing, did you revise first — or explain "what I really meant was…" first?</p>
+  </div>
+</section>
+
+<!-- Deep thinking -->
+<div class="deepthink">
+  <h3>Going Deeper</h3>
+
+  <details>
+    <summary>How much revision is "enough"? Is endless rewriting just another form of procrastination?</summary>
+    <div>Yes. Revision has diminishing returns: the first few passes cut 30% of the filler and straighten the structure — huge payoff; by pass ten you're often just ping-ponging between two equally good words. Two practical "enough" signals: one, you start changing edits back, meaning you've entered useless oscillation; two, more changes no longer affect the reader's understanding or action. Perfectionism here disguises itself as "being responsible," but it's really fear of shipping. Set a deadline — at the bell, send. Imperfect but done.</div>
+  </details>
+
+  <details>
+    <summary>Do Chinese and English have the same revision priorities?</summary>
+    <div>Same skeleton (cut filler, fix structure, get concrete), different surface. In Chinese, hunt: stacked four-character clichés, parasitic verbs like "进行/加以/予以," translationese long modifiers ("的…的…的"), and the all-purpose uplifting ending of report-speak. In English, hunt: adverbs (-ly overload), passive voice, weak "there is / it is…that" openings, and padding written just to complete a parallelism. A rough conversion: Chinese revision mostly means "cut characters," English revision mostly means "swap in a strong verb." The rule both share: turn abstract nouns back into concrete people and actions.</div>
+  </details>
+
+  <details>
+    <summary>Do articles, talks, and video scripts share the same revision standard?</summary>
+    <div>The method transfers (layering, cooling, finding a reader), but the final "sense" differs. An article is for the eye — logic and white space matter, readers can re-scan, so it tolerates higher density. A talk is for the ear and must be revised by reading aloud — check breathing points, check whether it lands on one hearing, check for pauses that let people breathe, since the audience can't rewind. A video script also checks "words-vs-image fit": which line should give way to the shot, where the words are simply redundant. The same content, written three ways, demands attention to entirely different things in revision.</div>
+  </details>
+
+  <details>
+    <summary>Can AI revise for me? Where's the line between AI and human editing?</summary>
+    <div>AI excels at the micro pass — catching filler, fixing grammar, unifying terms, flagging passive voice — fast and reliable. Use it. But it can't make the macro calls: Should this paragraph even exist? Where is the argument weak? Is this example one only you could write, so cutting it kills the soul? Those need a stance and lived experience; AI has only a statistical average. Practical division of labor: let AI run the third pass (cleaning words and sentences), and keep the structure pass and the "which paragraph to kill" decision for yourself.</div>
+  </details>
+
+  <details>
+    <summary>"Kill your darlings" — why is the line you love most often the one to cut?</summary>
+    <div>The phrase traces to Quiller-Couch (often misattributed to Faulkner). The reason: the sentence you "love" is usually loved because it looks clever, pretty, or shows off — not because it serves the reader. It's often the off-topic bon mot, the dispensable quip, the self-performing flourish. The test is simple: delete it — does the reader's grasp of the core message get worse? If not, cut it, however much it hurts. The piece is for the reader, not a display case for the author's vanity. Learning to let go is the dividing line between "writing well" and "revising hard."</div>
+  </details>
+</div>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Index</a>
+</div>
+<footer>BigCat · Writing Daily · Day 15 · 2026</footer>
+
+</div>
+</body>
+</html>
