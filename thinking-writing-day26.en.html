@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing & Expression: Thinking Is Writing — Day 26</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.35rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"VAGUE ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"CLEAR ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .note{display:block;margin-top:8px;font-size:0.86rem;color:#7a7a7a;font-style:italic}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+
+.vt{display:flex;gap:14px;margin:18px 0;flex-wrap:wrap}
+.vt .col{flex:1;min-width:200px;background:#f8f6f1;border-radius:2px;padding:16px 18px}
+.vt .col .head{font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;color:#8a7a4a;font-family:Georgia,serif;margin-bottom:8px;font-weight:700}
+.vt .col p{font-size:0.95rem;color:#2a2a2a;line-height:1.7}
+.vt .voice{background:#1f1f1f;color:#fafafa}
+.vt .voice .head{color:#d8c98a}
+.vt .voice p{color:#fafafa}
+
+details{margin:12px 0;border:1px solid #d0d0d0;border-radius:2px;background:#fff;padding:0 16px}
+details summary{cursor:pointer;padding:14px 0;font-weight:600;color:#1f1f1f;font-size:1rem}
+details[open] summary{border-bottom:1px solid #eee;margin-bottom:10px}
+details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+.deep-title{text-align:center;font-family:Georgia,serif;letter-spacing:2px;text-transform:uppercase;color:#8a8a8a;font-size:0.85rem;margin:40px 0 18px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.05rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .vt{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 26 · 2026.06.13</div>
+  <h1>Writing &amp; Expression: Thinking Is Writing<span class="topic">Writing Is Thinking · Discovery · Dialogue as a Tool · Zettelkasten</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">Most people assume writing is transcribing thoughts you've already formed. The order is usually the reverse: it's in the act of writing that you first think clearly. The blank page isn't a box to store thinking — it's a processor that mercilessly exposes where you're fuzzy. Today we go beneath "nice sentences" to something more fundamental: using writing as your sharpest thinking tool. Why nothing counts as thought until it's written, how writing grows ideas you didn't start with, how to turn readers (and AI) into interrogators, and how a slip-box compounds your thinking.</p>
+</header>
+
+<!-- Card 1: Writing Is Thinking -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Writing Is Thinking: Unwritten Ideas Are Usually Just "I Think I Thought It"</h2>
+  <div class="en-name">写作即思考</div>
+  <span class="tag">Paul Graham · Lamport · A Severe Test</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Writing isn't the record of thinking — it is thinking. <strong>Until an idea has been written as a complete sentence, you have no way of knowing whether it actually holds up.</strong> Writing it down is the most severe checkup your thinking can get.</p>
+    <div class="quote">
+      "Writing about something, even something you know well, usually shows you that you didn't know it as well as you thought. Putting ideas into words is a severe test."
+      <span class="source">— Paul Graham, "Putting Ideas Into Words" (2022)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The mind is good at deceiving itself. A notion can "hold up" in your head on a vague feeling, because you never force it to be tested. The moment it has to become a full sentence, the fuzziness has nowhere to hide: who's the subject, what's the causation, where are the exceptions — each must be accounted for. This is exactly what distributed-systems master Leslie Lamport meant: <strong>"If you're thinking without writing, you only think you're thinking."</strong> Graham puts it more harshly — putting ideas into words is a severe test, and most ideas fail it on the spot. But that's the good news: the sooner an idea fails, the sooner you learn where it isn't sound. Writing isn't the after-the-fact summary; it's where thinking first actually happens.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">(in your head) "I think this design is risky — something just feels off."</span>
+      <span class="after">(once written) "This design is risky: it assumes write-heavy traffic, but ours is read-heavy 10:1, so the cache layer becomes the first bottleneck."</span>
+      <span class="note">"Feels off" survives in the head precisely because it's never tested. Forced into a sentence, you either surface the real reason (a wrong traffic assumption) or discover there wasn't one.</span>
+    </div>
+    <div class="example">
+      <span class="before">"This rewrite will obviously pay for itself."</span>
+      <span class="after">"This rewrite pays off if it cuts on-call load by half within two quarters — otherwise the migration cost outweighs it."</span>
+      <span class="note">Writing turns "I think I understand" into "do I actually understand." A vague judgment, the instant you write it, either levels up into an argument or shows its true colors.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Technical decisions, architecture reviews: write a page before the meeting to force intuition into argument</li>
+      <li>✓ Stuck on a problem? Don't ruminate — open a doc and write it out</li>
+      <li>✗ Mistake: "I get it perfectly, I'm just too lazy to write it" — that clarity is often an illusion</li>
+      <li>✗ Mistake: treating scattered brainstorm fragments as conclusions, untested by full sentences</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Take a work judgment you believe you "figured out long ago." In 15 minutes, write it as a full argument (claim + reasons + one counterexample). <strong>Reflection</strong>: Did your original judgment shift or sharpen? Which step did you not even notice until you wrote it?</p>
+  </div>
+</section>
+
+<!-- Card 2: Writing as Discovery -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Discovery: The Thesis Isn't Thought Out First — It Grows Out of the Draft</h2>
+  <div class="en-name">创造性的发现</div>
+  <span class="tag">Joan Didion · E.M. Forster · Generation</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Writing doesn't only test old ideas — it generates new ones. <strong>Often you don't have the thesis first and then write; you're halfway through when your fingers find the sharper, truer question for you.</strong></p>
+    <div class="quote">
+      "I write entirely to find out what I'm thinking, what I'm looking at, what I see and what it means."
+      <span class="source">— Joan Didion, "Why I Write" (1976)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Didion says she writes "entirely to find out what I'm thinking." That isn't modesty — it's the real mechanism of creation. E.M. Forster relayed an old lady's line: <strong>"How can I tell what I think till I see what I say?"</strong> Writing an idea out moves it from your narrow working memory onto the page, laid flat. Only once it's flat can you compare, spot contradictions, and set two unrelated notions side by side — and novelty is often born in exactly that juxtaposition. The terror of the blank page is also its generosity: it forces you to write one more sentence, and that next sentence is frequently one you didn't have when you sat down. The thesis isn't writing's precondition; it's its product. Start writing, and let discovery happen.</p>
+    <div class="vt">
+      <div class="col"><div class="head">Transcription (myth)</div><p>Form the full thesis in your head → copy it down → writing is mere transport, nothing new</p></div>
+      <div class="col voice"><div class="head">Discovery (truth)</div><p>Start with a fuzzy topic → writing forces out the sharper, real question → the thesis grows mid-draft</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">All you have before writing: "I want to write something about remote work." (a topic, not an idea)</span>
+      <span class="after">The real thesis that surfaces three paragraphs in: "The core tension of remote work isn't productivity — it's visibility. Promotion still rewards being seen, and remote makes contribution invisible."</span>
+      <span class="note">You sat down thinking you'd write about "productivity"; the act of writing found the more worthwhile question. Wait until you've "thought it through," and this thesis never appears.</span>
+    </div>
+    <div class="example">
+      <span class="before">"Our team's velocity problem is about tooling." (the assumed answer)</span>
+      <span class="after">"Writing it out, the velocity problem isn't tooling — it's that no one owns the decision, so every change waits on a meeting."</span>
+      <span class="note">The thesis grows out of the draft. Force yourself to write two more paragraphs, and you often dig up the real thing buried under the topic.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Stuck on a topic, unsure what you really want to say — start writing to scout the terrain</li>
+      <li>✓ Found the real thesis in paragraph three? Move it to the top and rewrite the whole thing</li>
+      <li>✗ Mistake: insisting on "inspiration / full clarity" before starting, so you never start</li>
+      <li>✗ Mistake: taking the first thesis that pops up as final, refusing to write deeper</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Pick a topic you "have a feel for but can't articulate." No outline — write 400 words straight and watch the thesis surface on its own. <strong>Reflection</strong>: Does "discovery in writing" conflict with planning structure before you start? How do you balance "let it emerge" against "have a skeleton"?</p>
+  </div>
+</section>
+
+<!-- Card 3: Dialogue as a Tool -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Dialogue as a Tool: The Fastest Way to Think Clearly Is to Explain It to One Person</h2>
+  <div class="en-name">对话作为工具</div>
+  <span class="tag">Kleist · Feynman · Human-AI</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Ruminating alone tends to spin in circles. <strong>Say or write the idea to one specific person, and the thinking takes shape in the act of expressing it.</strong> The reader — now including AI — is the opponent who forces you to think clearly.</p>
+    <div class="quote">
+      "If you want to know something and cannot find it by meditation, speak about it with the next acquaintance who happens along. ... The appetite comes with eating; ideas form in the act of speaking."
+      <span class="source">— Heinrich von Kleist, "On the Gradual Production of Thoughts Whilst Speaking" (1805)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Two centuries ago Kleist noticed it: when you can't crack something, talk it through with someone, and often the thought clicks halfway through the sentence — "the appetite comes with eating; ideas form in speaking." The mechanism has two layers. First, <strong>the constraint of an audience</strong>: facing a concrete listener, you're forced to fill in the steps you'd skipped, and filling them is exactly where you discover which steps you never understood — the core of the Feynman technique: if you can't explain it to a smart non-expert, you don't truly understand it. Second, <strong>the rebound of feedback</strong>: one "wait, why?" yanks you back to the logical gap. This is the new lever of the AI era: treat AI as the ever-present interlocutor on call — let it interrogate you, play devil's advocate, restate your argument. You're not outsourcing the thinking; you're using it to force yourself to think more clearly.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">(written for yourself, jargon-stacked) "Leverage eventual consistency with CRDTs for conflict-free merges."</span>
+      <span class="after">(explaining to a colleague) "Two people edit the same doc offline, each making their own changes. When they reconnect, how does the system merge both sets automatically without a fight? A CRDT is a data structure built for exactly that."</span>
+      <span class="note">Cast the reader as a smart outsider, and you're forced to fill the steps you skipped — and in filling them you find the ones you never truly worked out.</span>
+    </div>
+    <div class="example">
+      <span class="before">"Our retry logic uses exponential backoff with jitter."</span>
+      <span class="after">"When a request fails, we wait before retrying, and each time we wait longer — plus a random nudge so a thousand clients don't all retry in the same instant and stampede the server."</span>
+      <span class="note">If you can explain it to an outsider, you genuinely understand it. The spot you can't explain is exactly where your thinking has a gap.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Stuck on a complex doc: imagine a colleague across the desk and explain it to them</li>
+      <li>✓ Have AI play a demanding reader, interrogating every line with "why?" and "counterexample?"</li>
+      <li>✗ Mistake: using AI as a ghostwriter to think for you — what you save isn't labor, it's growth</li>
+      <li>✗ Mistake: explaining only to "insiders," skipping key steps, which hides your own blind spots</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Pick a technical concept and write an explanation for a "smart 12-year-old" — no jargon allowed. Then let AI interrogate you for three rounds. <strong>Reflection</strong>: Does "explaining to a person" sacrifice precision for accessibility? Where's the line between simplifying and staying rigorous?</p>
+  </div>
+</section>
+
+<!-- Card 4: Zettelkasten -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Zettelkasten: Let Every Idea Collide With Ideas Yet to Come</h2>
+  <div class="en-name">卡片盒笔记法</div>
+  <span class="tag">Luhmann · Sönke Ahrens · Compounding</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Don't hoard highlights. <strong>Write each idea as an atomic card — restated in your own words and linkable</strong> — and wire it into your existing web of ideas. Then thinking accumulates like compound interest.</p>
+    <div class="quote">
+      "Writing is not what follows research, learning or studying, it is the medium of all this work. ... We don't take notes to store information, we take them to develop ideas."
+      <span class="source">— Sönke Ahrens, "How to Take Smart Notes" (2017)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The sociologist Niklas Luhmann wrote over 70 books and hundreds of papers in his life, and credited the wooden box holding some 90,000 cards — he called it "communication with the slip-box." The secret isn't collecting; it's <strong>three moves</strong>: first, <strong>atomize</strong> — one idea per card, small enough to be summoned anywhere; second, <strong>restate in your own words</strong> — restating is what completes the shift from "read" to "thought"; third, <strong>link explicitly</strong> — wire each new card onto old ones, leaving hooks. Over time the slip-box stops being a warehouse and becomes a partner that talks back, forever forcing new ideas out of collisions between old ones. Ahrens's insight: <strong>writing isn't what comes after research — it is the very medium of thinking itself.</strong></p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">(a highlight) "Quote: 'Writing is the medium of all intellectual work.' — Ahrens, p.18"</span>
+      <span class="after">(a permanent note) "Idea: writing is the container of thinking, not its record. → This is why 'think first, then write' is a trap: clarity is the output of writing, not its precondition. [links → #04 Writing is thinking; → #11 shitty first drafts]"</span>
+      <span class="note">The first just relocates someone else's sentence — worthless in a week. The second restates it in your words, wires it to ideas you already hold, and leaves hooks for future collisions. That's how the slip-box compounds.</span>
+    </div>
+    <div class="example">
+      <span class="before">(a highlight) "Note: Luhmann had 90,000 cards."</span>
+      <span class="after">(a permanent note) "Idea: the value is in the links, not the count. 90k cards only worked because each connected to others. → My takeaway: don't grow the pile, grow the wiring. [link → #26 atomize + link]"</span>
+      <span class="note">A highlight is transport; a permanent note is wiring: restate + link + leave a hook, so every note can react with future ones.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Long-term knowledge: reading, tracking papers, gathering writing material — via links, not folders</li>
+      <li>✓ For each card ask: could me-in-six-months read this one card and actually use it?</li>
+      <li>✗ Mistake: feeling satisfied by highlighting and saving, never restating — that's the same as not reading</li>
+      <li>✗ Mistake: fetishizing tools and color schemes; the pile grows but you never go back to link or reuse</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Take any idea you read this week and write it as one atomic card: restate it in your own words + link it to at least one idea you already hold. <strong>Reflection</strong>: Maintaining a slip-box costs time. For whom, and for what kind of work, does this system's payoff truly exceed its cost?</p>
+  </div>
+</section>
+
+<div class="deep-title">— Going Deeper —</div>
+
+<details>
+  <summary>"Writing is thinking" — but what about people who think clearly in their heads, or on a walk, without writing? A counterexample?</summary>
+  <div class="ans">No — they're just using a different way of externalizing. The point isn't the physical act of "writing," but forcing a fuzzy notion into a constrained, testable, complete structure: talking aloud, explaining to someone, sketching a diagram all do similar work. But writing has two hard-to-replace advantages. One, it's <strong>durable</strong> — the idea is pinned, so you can revisit and compare it repeatedly. Two, it's <strong>serial and merciless</strong> — it won't let you skip steps, forcing every link to be spelled out. Mathematicians fill scratch paper precisely because, purely in the head, working memory can't hold a multi-step derivation. What a walk resolves is usually a problem you've already written, one step from the finish.</div>
+</details>
+<details>
+  <summary>AI can instantly turn a fuzzy idea into clear sentences — does that hollow out the value of "thinking by writing"?</summary>
+  <div class="ans">The opposite — it gets more valuable. Writing's value was never the text produced; it's the thinking power trained by the act of "wringing chaos into clarity" — exactly the capacity the AI era can least outsource. Hand the whole act of writing to AI and what you save isn't labor, it's growth; skip it long enough and your judgment atrophies like an unused muscle. The fix is to change how you use it: don't let AI think for you — make it the opponent, interrogating, playing devil's advocate, restating your argument to force out the holes. Keep the core — "wringing your own ideas into clarity" — and AI is an amplifier; surrender that core, and AI is a replacement.</div>
+</details>
+<details>
+  <summary>Chinese or English — which one forces you to think more clearly?</summary>
+  <div class="ans">Each forces in its own way. English's hypotaxis (explicit subject-verb, tense, connectors) won't tolerate vagueness: write a subordinate clause and you're forced to declare who the subject is, whether the relation is causal or adversative — the grammar audits for you. Chinese is parataxis, stitched by word order and feel, highly tolerant; the upside is fluency, the cost is that fuzziness slips through more easily, so when thinking in Chinese you must police yourself harder: does this causal claim actually hold? A practical move: use English to force skeletal precision, then use Chinese to tune the music of expression — two languages as two different tests, harder to fool yourself with than either alone.</div>
+</details>
+<details>
+  <summary>Speaking and writing both aid thinking — as thinking tools, what are the strengths and weaknesses of each?</summary>
+  <div class="ans">Speaking wins on <strong>speed and instant feedback</strong>: someone interrogates in real time, and the back-and-forth quickly yanks out your logical gaps — ideal for early scouting, getting a vague notion into rough shape. But speech is fleeting and tolerates skipped steps; sounding coherent doesn't mean it's sound — plenty of "smoothly delivered" arguments fall apart the moment they hit paper. Writing wins on being <strong>slow, durable, merciless</strong>: it pins every step, forcing you to account for the whole thing serially — the final test. The smart move is a relay: use speaking (to a person or to AI) to emerge fast and find the rough direction, then use writing to compress it into a structure that survives scrutiny. Speaking diverges; writing converges.</div>
+</details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Daily index</a>
+</div>
+
+<footer>BigCat · Writing Daily · Day 26 · 2026</footer>
+
+</div>
+</body>
+</html>
