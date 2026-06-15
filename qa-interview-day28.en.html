@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: Q&amp;A and Interviews — Day 28</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.3rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .scene{display:block;font-size:0.85rem;color:#8a8a8a;font-family:Georgia,serif;margin-bottom:8px;letter-spacing:0.5px}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+.cn-trans{font-size:0.92rem;color:#6a6a6a;margin-top:8px}
+
+/* Visualization: Q&A three-beat */
+.qa-flow{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px}
+.qa-flow .qa-row{display:flex;gap:8px;align-items:stretch}
+.qa-flow .qa-step{flex:1;padding:14px 10px;background:#fff;border:1px solid #d8d0bc;text-align:center;font-family:Georgia,serif;font-size:0.86rem;color:#3a3a3a;line-height:1.5;border-radius:2px}
+.qa-flow .qa-step .step-num{display:block;font-size:0.72rem;color:#8a7a4a;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;font-weight:700}
+.qa-flow .qa-step .step-title{display:block;font-weight:700;color:#1f1f1f;margin-bottom:4px;font-size:0.98rem}
+.qa-flow .qa-step.peak{background:#1f1f1f;color:#fafafa;border-color:#1f1f1f}
+.qa-flow .qa-step.peak .step-title{color:#d8c98a}
+.qa-flow .qa-step.peak .step-num{color:#d8c98a}
+.qa-flow .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+details{margin:12px 0;background:#fff;border:1px solid #d8d0bc;border-radius:2px;padding:0}
+details summary{cursor:pointer;padding:14px 18px;font-weight:700;color:#1f1f1f;font-size:0.98rem;list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary:before{content:"+ ";color:#8a7a4a;font-weight:700}
+details[open] summary:before{content:"− "}
+details .answer{padding:0 18px 16px;font-size:0.94rem;color:#3a3a3a;line-height:1.75}
+.think-intro{font-size:0.95rem;color:#5a5a5a;font-style:italic;margin-bottom:14px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.05rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .qa-flow .qa-row{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 28 · 2026.06.15</div>
+  <h1>Writing &amp; Expression: Q&amp;A and Interviews<span class="topic">Answer First · The Craft of Asking · Disarming Hard Questions · Don't Lie or Dodge</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">You can rehearse a talk a hundred times, but your credibility is usually decided in the ten unscripted minutes — the review-board follow-up, the sharp question at the all-hands, the press interview, the promo defense. The talk is the self you prepared; the Q&amp;A is the real you. Today: how to answer, how to ask, how to take a hostile question, and how not to lie under pressure.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Answer First, Then Expand: Put the Answer in Sentence One</h2>
+  <div class="en-name">Lead with the Headline, Bridge to the Rest</div>
+  <span class="tag">Q&amp;A Principle · BLUF</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Whatever you're asked, <strong>give the answer in your first sentence</strong> — a yes/no, a number, a verdict — then fill in the context. The common failure isn't answering wrong; it's circling for thirty seconds without touching the question. While you clear your throat, the room starts to suspect you're hiding.</p>
+    <div class="quote">
+      "Clutter is the disease of American writing. We are a society strangling in unnecessary words."
+      <span class="source">— William Zinsser, On Writing Well</span>
+    </div>
+    <p class="cn-trans">Zinsser meant prose, but the spoken version of throat-clearing is worse — it happens while everyone is watching you.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Speech isn't writing: listeners can't scroll back, and attention comes once. Stack all your context, caveats, and setup before the answer, and you've filled their working memory; by the time you reach the verdict, they've drifted — or assumed you couldn't produce one. Lead with the conclusion and you give them a <strong>hook</strong> to hang the rest on. This is military <strong>BLUF</strong> (Bottom Line Up Front), spoken aloud.</p>
+    <div class="qa-flow">
+      <div class="qa-row">
+        <div class="qa-step peak"><span class="step-num">A</span><span class="step-title">Answer</span>One sentence, head-on</div>
+        <div class="qa-step"><span class="step-num">B</span><span class="step-title">Bridge</span>"The reason is…" / "Specifically…"</div>
+        <div class="qa-step"><span class="step-num">C</span><span class="step-title">Context</span>Background, data, next step</div>
+      </div>
+      <div class="caption">The Q&amp;A three-beat: answer first, context after — same root as the writing pyramid</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before &amp; After</div>
+    <div class="example">
+      <span class="scene">Scene: project review — "Whose fault was the slip, exactly?"</span>
+      <span class="before">"Well, it's actually pretty complicated; the schedule assumed an upstream commitment, then requirements changed, and…" (thirty seconds, never touches "fault")</span>
+      <span class="after">"The fault is mostly mine. I underestimated the dependency risk and didn't escalate early enough. Specifically…" (own it, then explain)</span>
+    </div>
+    <div class="example">
+      <span class="scene">Scene: standup — "Why did the project slip?"</span>
+      <span class="before">"Well, there were a number of contributing factors, and the original timeline assumed…"</span>
+      <span class="after">"We slipped three weeks. The root cause was an underestimated dependency — here's what happened and what we changed."</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use · Common Mistakes</div>
+    <ul>
+      <li><strong>Use it</strong>: review follow-ups, promo defenses, upward reporting, client questions — any time the room is waiting on a judgment.</li>
+      <li><strong>Mistake</strong>: treating "context" as the answer. Stating background before a verdict reads as evasion.</li>
+      <li>The other extreme: a verdict with no bridge sounds arbitrary. Always follow A with the "because" of B.</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise · Reflection</div>
+    <p>Take a question you answered ramblingly this week. Rewrite it as three beats: answer sentence, one bridge, two sentences of context.<br>Reflect: which "context" could you delete without losing the listener? Once gone, does the answer read as more credible?</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>The Craft of Asking: Ask Short, Then Shut Up</h2>
+  <div class="en-name">Open Questions, Then Silence</div>
+  <span class="tag">Interviewing · Listening</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Great interviewers don't win by asking <em>more</em>; they win by asking <strong>open questions and then going silent</strong>. Closed and leading questions only return what you already know; an open question plus a beat of silence draws out what the other person actually wants to say. For a leader, knowing how to ask is rarer than knowing how to answer.</p>
+    <div class="quote">
+      "I remind myself every morning: Nothing I say this day will teach me anything. So if I'm going to learn, I must do it by listening."
+      <span class="source">— Larry King</span>
+    </div>
+    <p class="cn-trans">Terry Gross's signature opener is just as plain: "Tell me about yourself."</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>A leading question ("Don't you find it really usable too?") plants your premise in the other person's mouth, and you get polite agreement, not truth — fatal in user research, where you'll "validate" a need that doesn't exist. An open question plus <strong>three seconds of silence</strong> creates a small social vacuum, and people instinctively fill it — and what they say to fill it is usually their most honest line. Reporters call it "letting the silence ask the question."</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before &amp; After</div>
+    <div class="example">
+      <span class="scene">Scene: user interview</span>
+      <span class="before">"Do you find the new dashboard usable?" (closed + leading; you get "it's fine")</span>
+      <span class="after">"Take me back to the last time you opened the dashboard — what were you trying to find?" (open + concrete past behavior)</span>
+    </div>
+    <div class="example">
+      <span class="scene">Scene: 1:1, probing a quiet report's concern</span>
+      <span class="before">"Is everything going okay with the project?" ("Yeah, fine.")</span>
+      <span class="after">"What's the part of this project you're least sure about?" … then wait.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use · Common Mistakes</div>
+    <ul>
+      <li><strong>Use it</strong>: user research, hiring interviews, 1:1s, retros, discovery.</li>
+      <li><strong>Mistake</strong>: rapid-fire follow-ups with no silence; the moment they pause you jump in, and you bury their most honest line.</li>
+      <li>Smuggling the answer into the question ("Is it because of X?"). Switch to "What happened?" and let them attribute it.</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise · Reflection</div>
+    <p>In your next interview or 1:1, prepare three open questions (starting "What…/Take me back to…/How did that happen…") and force yourself to stay silent for three seconds after each.<br>Reflect: during the silence, what's in your head — are you listening, or loading your next line?</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Disarm the Hard Question: Remove the Premise, Answer the Real Thing</h2>
+  <div class="en-name">Name the Loaded Premise, Then Address What's Really Asked</div>
+  <span class="tag">Hard Questions · Reframing</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>A hostile question often hides a <strong>false premise</strong> ("Why does your team always slip?" — "always" is the premise). Defend directly and you've conceded it. Calmly remove the premise, give the facts, then answer the real question behind it.</p>
+    <div class="quote">
+      "The secret to gaining the upper hand in a negotiation is giving the other side the illusion of control."
+      <span class="source">— Chris Voss, Never Split the Difference</span>
+    </div>
+    <p class="cn-trans">Same with hard questions: make the asker feel heard first, and you earn room to steer back to what you want to address.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>A loaded question is a rhetorical trap: "Have you stopped over-running deadlines?" — yes or no, you admit you over-ran. Chris Voss's <strong>calibrated questions</strong> (starting "How/What") and his "empathy before steering" apply here: don't deny the emotion; gently surface the buried "always / never / why are you so bad," correct it with one data point, then answer what the asker actually cares about — usually "what happens next." Disarming a premise is calibration, not counterattack.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before &amp; After</div>
+    <div class="example">
+      <span class="scene">Scene: all-hands — "Why does your team always slip?"</span>
+      <span class="before">"We don't always slip, that's not fair…" (defensive, swallows the "always" premise)</span>
+      <span class="after">"We delivered on time in three of the last four quarters. Last quarter we did slip — the cause was X, and we've shipped Y to fix it." (premise removed, data given, real question answered)</span>
+    </div>
+    <div class="example">
+      <span class="scene">Scene: review — "Why is your design always over-engineered?"</span>
+      <span class="before">"That's not fair, I don't always over-engineer…"</span>
+      <span class="after">"Help me see which part feels heavy. This module is intentionally simple — where would you cut?"</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use · Common Mistakes</div>
+    <ul>
+      <li><strong>Use it</strong>: sharp public questions, press interviews, upward challenges, hostile reviews.</li>
+      <li><strong>Mistake</strong>: taking the emotional bait and firing back — you win the exchange and lose the room.</li>
+      <li>Over-litigating the premise sounds like a lawyer splitting hairs. Touch it lightly; the point is always to return to the real question.</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise · Reflection</div>
+    <p>Write down the barbed question you most dread, find its false premise, and draft a single short line that "removes + corrects" it.<br>Reflect: where's the line between disarming a premise and sophistry? What makes the first read as honest and the second as shifty?</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Don't Lie, Don't Dodge: "I Don't Know" Is a Deposit of Trust</h2>
+  <div class="en-name">Honesty Buys Credibility</div>
+  <span class="tag">Honesty · Credibility</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>If you don't know, say so — then <strong>add a commitment and a deadline</strong>. Deliver bad news straight; don't wrap it in "we're facing some challenges." Dodging and dressing up feel safe but spend down your most expensive asset: others' trust in your word.</p>
+    <div class="quote">
+      "The first principle is that you must not fool yourself — and you are the easiest person to fool."
+      <span class="source">— Richard Feynman, "Cargo Cult Science," Caltech 1974</span>
+    </div>
+    <p class="cn-trans">Before you stop lying to others, stop fooling yourself; most dodges begin the moment you gloss over the truth in your own head.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>People are acutely tuned to vagueness. "Let me get back to you on that" — if it really means you don't know — smells of a dodge, and trust starts to discount. The crisp version, "I don't know; I'll send you the exact figure by end of day," turns a gap in knowledge into a reliable promise: you've <strong>traded honesty for credibility</strong>. Likewise, the more you dress up bad news, the more it looks like you're managing them; said straight, it signals you're in control. The cost of dodging compounds — fool them once, and next time even your truth is half-believed.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before &amp; After</div>
+    <div class="example">
+      <span class="scene">Scene: pressed for a number you don't have</span>
+      <span class="before">"Um… let me go check on that." (sounds like a dodge — or you invent a figure)</span>
+      <span class="after">"I don't know that number. I'll send you the exact data by end of day." (honest + commitment + deadline)</span>
+    </div>
+    <div class="example">
+      <span class="scene">Scene: reporting a bad result</span>
+      <span class="before">"We're running into some challenges on performance." (glossed; they keep probing "how bad?")</span>
+      <span class="after">"Search latency doubled and we're losing users. Here's the cause and the stop-the-bleed plan." (bad news straight + a plan)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use · Common Mistakes</div>
+    <ul>
+      <li><strong>Use it</strong>: high-stakes Q&amp;A, crisis comms, reporting bad news upward, press interviews.</li>
+      <li><strong>Mistake</strong>: reading "honest" as "tell everything." Under confidentiality you can say "I can't share that part" — but you can't lie. The line is don't deceive, not don't withhold.</li>
+      <li>Diluting bad news with "challenges" or "room to optimize" only makes the other side more anxious.</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise · Reflection</div>
+    <p>Recall a time you wrapped bad news in soft language. Rewrite it as one plain sentence, then add a sentence on what you're doing about it.<br>Reflect: which "softenings" protect the other person, and which actually protect you?</p>
+  </div>
+</section>
+
+<section class="card">
+  <div class="num">Going Deeper</div>
+  <h2>Going Deeper</h2>
+  <p class="think-intro">Q&amp;A moves the discipline of writing onto a stage with no delete key. These questions push the edges of today's principles.</p>
+
+  <details>
+    <summary>Does "answer first" cost the same in writing (PR review, email follow-ups) as out loud?</summary>
+    <div class="answer">No. Writing is retraceable and skimmable, so leading with the answer mainly saves time; speech is gone in an instant, so leading is about preventing drift — higher stakes and harder to undo. But writing has a hidden trap: the conclusion is nailed down in black and white, so reversing it later costs more. So in writing, make the conclusion more precise and spell out the caveats; out loud, you can give a directional conclusion first, then qualify with "it depends…". The medium decides whether caveats go before the conclusion or after.</div>
+  </details>
+
+  <details>
+    <summary>How does "don't lie, don't dodge" survive a confidentiality constraint (an unannounced layoff, unreleased earnings)?</summary>
+    <div class="answer">Honest ≠ tell everything. The line is: you may refuse to answer, but you may not answer falsely. "I can't speak to that right now" is honest; "There's no such thing" (when there is) is a lie, and once exposed it devalues all your past credibility at once. The technique is to make the "can't say" itself clear — "This touches non-public information; I can neither confirm nor deny, and I'll tell you the moment it's public." People can accept a boundary on information; they can't accept being deceived. Silence and refusal are tools of honesty; lies aren't.</div>
+  </details>
+
+  <details>
+    <summary>"Answering directly" can read as blunt in Chinese settings; "circling" reads as untrustworthy in English. How do you tune?</summary>
+    <div class="answer">Leading with the conclusion is the skeleton; politeness is the surface wrapping, and the two separate. In Chinese settings, still put the verdict in sentence one, but soften the register with a buffer — "Frankly, the responsibility is mostly mine" — where "frankly" preps the listener while the verdict itself doesn't retreat. In English it's the reverse: too much hedging ("I think maybe perhaps…") reads as evasive, so cut the buffer and give it straight. Same principle — add a little warmth in Chinese, remove a little cushioning in English. The wrapping changes; the first sentence is still the answer.</div>
+  </details>
+
+  <details>
+    <summary>In the AI era you both "ask the AI" and "get questioned by it." Does Terry Gross's craft still hold?</summary>
+    <div class="answer">Mostly, but inverted. With people, "open + silence" draws out the truth; with an AI, silence does nothing, but "open + concrete context" still matters — "take me back to the last time…" becomes, in a prompt, giving rich background and examples instead of asking a closed yes/no. Conversely, a good AI will, like Terry Gross, ask you back to clarify intent — which exposes that your ask was underspecified. Treat each round with the AI as an interview: the more concretely you ask, the more usefully it answers. No different from interviewing a person.</div>
+  </details>
+</section>
+
+<footer>BigCat · Writing Daily · 2026</footer>
+</div>
+</body>
+</html>

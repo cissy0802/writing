@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>写作与表达：问答与访谈 — Day 28</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.3rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .scene{display:block;font-size:0.85rem;color:#8a8a8a;font-family:Georgia,serif;margin-bottom:8px;letter-spacing:0.5px}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"原答 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"改后 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+.cn-trans{font-size:0.92rem;color:#6a6a6a;margin-top:8px}
+
+/* 可视化：问答三段式 */
+.qa-flow{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px}
+.qa-flow .qa-row{display:flex;gap:8px;align-items:stretch}
+.qa-flow .qa-step{flex:1;padding:14px 10px;background:#fff;border:1px solid #d8d0bc;text-align:center;font-family:Georgia,serif;font-size:0.86rem;color:#3a3a3a;line-height:1.5;border-radius:2px}
+.qa-flow .qa-step .step-num{display:block;font-size:0.72rem;color:#8a7a4a;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;font-weight:700}
+.qa-flow .qa-step .step-title{display:block;font-weight:700;color:#1f1f1f;margin-bottom:4px;font-size:0.98rem}
+.qa-flow .qa-step.peak{background:#1f1f1f;color:#fafafa;border-color:#1f1f1f}
+.qa-flow .qa-step.peak .step-title{color:#d8c98a}
+.qa-flow .qa-step.peak .step-num{color:#d8c98a}
+.qa-flow .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+details{margin:12px 0;background:#fff;border:1px solid #d8d0bc;border-radius:2px;padding:0}
+details summary{cursor:pointer;padding:14px 18px;font-weight:700;color:#1f1f1f;font-size:0.98rem;list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary:before{content:"+ ";color:#8a7a4a;font-weight:700}
+details[open] summary:before{content:"− "}
+details .answer{padding:0 18px 16px;font-size:0.94rem;color:#3a3a3a;line-height:1.75}
+.think-intro{font-size:0.95rem;color:#5a5a5a;font-style:italic;margin-bottom:14px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.05rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .qa-flow .qa-row{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 28 · 2026.06.15</div>
+  <h1>写作与表达：问答与访谈<span class="topic">直接回答 · 提问的艺术 · 拆解难题 · 不说谎不逃避</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">演讲稿可以排练一百遍，但你的可信度，往往在没有脚本的那十分钟里被决定——评审会的追问、全员会的尖锐提问、媒体采访、晋升答辩。讲稿是你准备好的自己，问答是真实的你。今天我们练四件事：怎么答、怎么问、怎么接难题、怎么在压力下不说谎。</p>
+</header>
+
+<!-- Card 1: 直接回答 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>先回答，再展开：把答案放进第一句</h2>
+  <div class="en-name">Answer First — Lead with the Headline, Bridge to the Rest</div>
+  <span class="tag">问答原则 · BLUF</span>
+
+  <div class="section">
+    <div class="label">一句话原则</div>
+    <p>被问到什么，<strong>第一句话就给答案</strong>——是/不是、一个数字、一句结论——然后再补背景。最常见的失败不是答错，而是绕了三十秒还没碰到问题本身。听众在你"清嗓子"时就开始怀疑你在躲。</p>
+    <div class="quote">
+      "Clutter is the disease of American writing. We are a society strangling in unnecessary words."
+      <span class="source">— William Zinsser, On Writing Well</span>
+    </div>
+    <p class="cn-trans">中译：冗赘是写作的通病。我们是一个被多余词句扼住喉咙的社会。Zinsser 说的是文字，但口头答问的"清嗓子"病更重——它发生在所有人盯着你的时候。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>口头回答和书面不同：听众无法回看，注意力只有一次。你把背景、铺垫、限定条件全放在答案前面，听众的工作记忆已经被填满，等你说到结论时他早已走神，甚至默认你"答不上来"。先给结论，等于先给听众一个"挂钩"，后面的解释才挂得住。这就是军队的 <strong>BLUF</strong>（Bottom Line Up Front）用在嘴上的版本。</p>
+    <div class="qa-flow">
+      <div class="qa-row">
+        <div class="qa-step peak"><span class="step-num">A</span><span class="step-title">答案</span>一句话正面回答</div>
+        <div class="qa-step"><span class="step-num">B</span><span class="step-title">桥接</span>"原因是…" "具体来说…"</div>
+        <div class="qa-step"><span class="step-num">C</span><span class="step-title">展开</span>背景、数据、下一步</div>
+      </div>
+      <div class="caption">问答三段式：答案在前，背景在后——和写作的金字塔原理同源</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="scene">场景：项目评审会，"这次延期到底是谁的责任？"</span>
+      <span class="before">"嗯，这个问题其实挺复杂的，当时排期是基于上游团队的承诺，中间又有需求变更，而且……"（三十秒没碰到"责任"）</span>
+      <span class="after">"主要责任在我。我低估了依赖项的风险，没有及早升级。具体来说……"（先认领，再解释）</span>
+    </div>
+    <div class="example">
+      <span class="scene">Scene: standup, "Why did the project slip?"</span>
+      <span class="before">"Well, there were a number of contributing factors, and the original timeline assumed…"</span>
+      <span class="after">"We slipped three weeks. The root cause was an underestimated dependency — here's what happened and what we changed."</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 · 常见错误</div>
+    <ul>
+      <li><strong>适用</strong>：评审会追问、晋升答辩、向上汇报、客户提问——任何"听众在等一个判断"的场合。</li>
+      <li><strong>常见错误</strong>：把"展开"当成"答案"。补背景前不先表态，听众会读成回避。</li>
+      <li>另一极端：只给结论不给桥接，显得武断。A 之后一定要有 B 的"因为"。</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 · 思考题</div>
+    <p>挑一个本周被问过、你答得啰嗦的问题，重写成三段式：第一句答案、一句桥接、两句展开。<br>思考：哪些"背景"其实可以删掉而不影响对方理解？删掉它们，答案是否更可信了？</p>
+  </div>
+</section>
+
+<!-- Card 2: 提问的艺术 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>提问的艺术：问得短，然后闭嘴</h2>
+  <div class="en-name">The Craft of Asking — Open Questions, Then Silence</div>
+  <span class="tag">记者提问 · 倾听</span>
+
+  <div class="section">
+    <div class="label">一句话原则</div>
+    <p>好的访谈者不靠"问得多"，靠<strong>问得开放、然后沉默</strong>。封闭和诱导式问题只会换回你已经知道的答案；开放式问题加一段沉默，逼出对方真正想说的话。会问，是 leader 比会答更稀缺的能力。</p>
+    <div class="quote">
+      "I remind myself every morning: Nothing I say this day will teach me anything. So if I'm going to learn, I must do it by listening."
+      <span class="source">— Larry King</span>
+    </div>
+    <p class="cn-trans">中译：我每天早上提醒自己：今天我说的任何话都教不会我任何东西。所以要学到东西，我必须靠倾听。访谈名嘴 Terry Gross 的开场白同样朴素到极致——"Tell me about yourself"（跟我说说你自己）。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>诱导式问题（"你是不是也觉得很好用？"）把你的预设塞进对方嘴里，得到的是礼貌的附和，不是真相——做用户访谈时这是致命的，你会"验证"一个根本不存在的需求。开放式问题加上<strong>沉默的三秒</strong>，制造一种轻微的社交真空，人天然会去填补它——而填补时说出的，往往是最坦诚的部分。记者管这叫"让沉默替你提问"。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="scene">场景：用户访谈</span>
+      <span class="before">"你觉得这个新仪表盘好用吗？"（封闭 + 诱导，只能换来"还行"）</span>
+      <span class="after">"带我回到你上次打开这个仪表盘的时候——你当时想找什么？"（开放 + 具体过去行为）</span>
+    </div>
+    <div class="example">
+      <span class="scene">Scene: 1:1, probing a quiet report's concern</span>
+      <span class="before">"Is everything going okay with the project?" ("Yeah, fine.")</span>
+      <span class="after">"What's the part of this project you're least sure about?" … then wait.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 · 常见错误</div>
+    <ul>
+      <li><strong>适用</strong>：用户研究、招聘面试、1:1、复盘、调研访谈。</li>
+      <li><strong>常见错误</strong>：连珠炮式追问，不留沉默；对方刚停顿你就急着补下一问，把最坦诚的那句话堵了回去。</li>
+      <li>问题里夹带答案（"是不是因为 X？"）。改成"发生了什么？"让对方自己归因。</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 · 思考题</div>
+    <p>下次访谈或 1:1，准备三个开放式问题（以"是什么/带我回到/怎么发生的"开头），并强迫自己每个问题后沉默三秒。<br>思考：沉默时你心里在想什么？是在听，还是在准备下一句话？</p>
+  </div>
+</section>
+
+<!-- Card 3: 拆解难题 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>拆解难题：先拆掉预设，再回答真问题</h2>
+  <div class="en-name">Disarm the Loaded Question — Name the Premise, Answer the Real Thing</div>
+  <span class="tag">难题应对 · 重构</span>
+
+  <div class="section">
+    <div class="label">一句话原则</div>
+    <p>带敌意的难题里常藏着一个<strong>错误前提</strong>（"你们为什么总是延期？"——"总是"是预设）。如果你直接辩护，就等于默认了那个前提。先平静地拆掉它、给出事实，再正面回答背后真正的问题。</p>
+    <div class="quote">
+      "The secret to gaining the upper hand in a negotiation is giving the other side the illusion of control."
+      <span class="source">— Chris Voss, Never Split the Difference</span>
+    </div>
+    <p class="cn-trans">中译：在谈判中占据上风的秘诀，是给对方一种"掌控局面"的错觉。应对难题也一样——先让提问者感到被听见，你才有空间把问题引回你想回答的地方。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>带预设的问题（loaded question）是修辞陷阱："你停止拖延了吗？"——无论答是或否都承认你拖延过。Chris Voss 的<strong>校准式问题</strong>（用"怎么/什么"开头）和"先共情后引导"在这里同样有效：你不否认情绪，而是把那个隐含的"总是/从不/为什么你们这么差"轻轻挑明，用一个数据校正它，然后回答提问者真正关心的事——通常是"接下来会怎样"。拆预设要冷静，不是反击，是校准。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="scene">场景：全员会，"为什么你们团队总是延期？"</span>
+      <span class="before">"我们没有总是延期啊，这不公平……"（防御，掉进"总是"的预设）</span>
+      <span class="after">"过去四个季度我们准时交付了三次。上季度确实延了，原因是 X——我们已经做了 Y 来修复。"（拆掉"总是"，给数据，回答真问题）</span>
+    </div>
+    <div class="example">
+      <span class="scene">Scene: review, "Why is your design always over-engineered?"</span>
+      <span class="before">"That's not fair, I don't always over-engineer…"</span>
+      <span class="after">"Help me see which part feels heavy. This module is intentionally simple — where would you cut?"</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 · 常见错误</div>
+    <ul>
+      <li><strong>适用</strong>：尖锐的公开提问、媒体采访、向上的质询、有敌意的评审。</li>
+      <li><strong>常见错误</strong>：在情绪上接招、反唇相讥——你赢了嘴仗，输了观众。</li>
+      <li>过度纠缠前提，听上去像律师在抠字眼。拆预设要轻，重点永远是回到真问题。</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 · 思考题</div>
+    <p>写下一个你最怕被问到的带刺问题，找出其中的错误前提，写一句不超过十五字的"拆解 + 校正"。<br>思考：拆预设和"狡辩"的界线在哪？什么让前者显得诚实、后者显得心虚？</p>
+  </div>
+</section>
+
+<!-- Card 4: 不说谎不逃避 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>不说谎不逃避：「我不知道」是可信度的存款</h2>
+  <div class="en-name">Don't Lie, Don't Dodge — "I Don't Know" Builds Trust</div>
+  <span class="tag">诚实 · 可信度</span>
+
+  <div class="section">
+    <div class="label">一句话原则</div>
+    <p>不知道就说不知道，<strong>再加一个承诺和时限</strong>。坏消息直说，不要用"遇到一些挑战"去包装。逃避和粉饰看似安全，实则是在透支你最贵的资产——别人对你话语的信任。</p>
+    <div class="quote">
+      "The first principle is that you must not fool yourself — and you are the easiest person to fool."
+      <span class="source">— Richard Feynman, "Cargo Cult Science", Caltech 1974</span>
+    </div>
+    <p class="cn-trans">中译：第一原则是你绝不能欺骗自己——而你正是最容易被自己骗到的人。对外不说谎之前，先对内不自欺；多数逃避，是从对自己粉饰那一刻开始的。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>人对"含糊"高度敏感。一句"这个我回去确认一下"——如果其实是不知道——听众能闻出搪塞，信任开始打折。反过来，干脆的"我不知道，今天下班前给你准确数字"，把一次知识空缺变成一次靠谱的承诺：你<strong>用诚实换来了可信度</strong>。同理，坏消息越是包装，越显得你想糊弄；直说反而显得你掌控全局。逃避的成本是复利的——这次糊弄过去，下次你说真话别人也半信半疑。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="scene">场景：被追问一个你不知道的数字</span>
+      <span class="before">"这个……我需要回去确认一下。"（听起来像搪塞，或临时编一个）</span>
+      <span class="after">"我不知道这个数字。今天下班前发你准确数据。"（诚实 + 承诺 + 时限）</span>
+    </div>
+    <div class="example">
+      <span class="scene">场景：汇报一个坏结果</span>
+      <span class="before">"我们在性能上遇到了一些挑战。"（粉饰，对方追着问"多严重"）</span>
+      <span class="after">"搜索延迟翻了一倍，用户在流失。这是原因和止血计划。"（直说坏消息 + 已有方案）</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 · 常见错误</div>
+    <ul>
+      <li><strong>适用</strong>：高风险问答、危机沟通、向上汇报坏消息、媒体采访。</li>
+      <li><strong>常见错误</strong>：把"诚实"理解成"全盘托出"。在保密约束下，可以说"这部分还不能公开"，但不能撒谎——边界是不骗，不是不留。</li>
+      <li>用"挑战""有待优化"等委婉词稀释坏消息，结果对方更慌。</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 · 思考题</div>
+    <p>回想一次你用委婉词包装坏消息的场合，把它重写成一句直话，再补一句你正在做的应对。<br>思考：哪些"委婉"是体贴对方，哪些其实是在保护你自己？</p>
+  </div>
+</section>
+
+<section class="card">
+  <div class="num">Going Deeper</div>
+  <h2>深入思考</h2>
+  <p class="think-intro">问答是把写作的纪律搬到没有删除键的现场。下面几个问题，推这些原则的边界。</p>
+
+  <details>
+    <summary>书面问答（PR review、邮件追问）和口头问答，「结论先行」的代价一样吗？</summary>
+    <div class="answer">不一样。书面可追溯、可回看，读者能自己跳读，所以结论先行更多是"省时间"；口头转瞬即逝，结论先行是"防走神"，代价更高也更不可逆。但书面有个隐藏陷阱：结论被白纸黑字钉住，将来翻案成本更高。所以书面答问，结论要更精确、限定条件要写全；口头答问，可以先给方向性结论，再用"具体要看……"补限定。介质决定你把限定词放在结论前还是结论后。</div>
+  </details>
+
+  <details>
+    <summary>「不说谎不逃避」遇上保密约束（未公开的裁员、未发布的财报）怎么落地？</summary>
+    <div class="answer">诚实 ≠ 全盘托出。边界是：可以拒绝回答，不能给出虚假回答。"这件事我现在不能讲"是诚实的；"没有这回事"（其实有）是说谎，一旦被戳穿，你过去所有的可信度一起贬值。技巧是把"不能说"本身说清楚——"涉及未公开信息，我不能确认也不能否认，能公开时第一时间告诉你"。听众能接受信息的边界，不能接受被骗。沉默和拒答是诚实的工具，谎言不是。</div>
+  </details>
+
+  <details>
+    <summary>中文语境里「直接回答」常被嫌"太冲"，英文里"绕弯"常被读成"不可信"，怎么调音？</summary>
+    <div class="answer">结论先行是骨架，礼貌是表层包装，两者可以分离。中文场合，结论照样放第一句，但用一层缓冲软化语气——"坦率说，责任主要在我"——"坦率说"三个字给了对方心理准备，结论本身不退让。英文相反，过多的 hedging（"I think maybe perhaps…"）会被读成闪烁，反而要砍掉缓冲、直给。同一条原则，中文加一点温度，英文减一点缓冲——变的是包装，不变的是第一句必须是答案。</div>
+  </details>
+
+  <details>
+    <summary>AI 时代，你既"向 AI 提问"也"被 AI 追问"，Terry Gross 的提问术还成立吗？</summary>
+    <div class="answer">大半成立，但要倒过来用。对人提问靠"开放 + 沉默"逼出真话；对 AI 提问，沉默无效，但"开放 + 具体语境"依然是关键——"带我回到你上次……"对应到 prompt 就是给足背景和实例，而不是问封闭的是非题。反过来，好的 AI 会像 Terry Gross 一样反问你澄清需求，这恰恰暴露了你需求没讲清。把和 AI 的一问一答，当成一次访谈来经营：你问得越具体，它答得越有用——这和访谈人没有区别。</div>
+  </details>
+</section>
+
+<footer>BigCat · Writing Daily · 2026</footer>
+</div>
+</body>
+</html>
