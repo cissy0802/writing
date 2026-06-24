@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>写作与表达：回忆录与自传 — Day 37</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.3rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.5rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.cn-trans{font-size:0.92rem;color:#6a6a6a;margin-top:8px}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"原句 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"改后 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.exercise .q{margin-top:12px;color:#d8c98a;font-style:italic}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:6px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* 漏斗：情境 → 故事 */
+.funnel{background:#f8f6f1;padding:24px 18px 16px;margin:18px 0;border-radius:2px;text-align:center}
+.funnel .band{margin:0 auto;padding:11px 10px;background:#fff;border:1px solid #c8c0a8;font-family:Georgia,serif;font-size:0.88rem;color:#3a3a3a;border-radius:2px}
+.funnel .b1{width:100%}
+.funnel .b2{width:72%}
+.funnel .b3{width:44%;background:#1f1f1f;color:#fafafa;border-color:#1f1f1f;font-weight:700}
+.funnel .arrow{color:#8a7a4a;font-size:0.95rem;margin:5px 0;font-family:Georgia,serif}
+.funnel .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:14px;text-align:center;font-family:Georgia,serif}
+
+/* 冰山：说出口的少，省略的多 */
+.iceberg{background:#eef2f5;padding:20px 16px 14px;margin:18px 0;border-radius:2px;text-align:center}
+.iceberg svg{max-width:100%;height:auto}
+.iceberg .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:10px;text-align:center;font-family:Georgia,serif}
+
+details{background:#fff;border:1px solid #d8d0bc;border-radius:2px;margin:10px 0;padding:4px 16px}
+details summary{cursor:pointer;font-weight:600;color:#1f1f1f;padding:10px 0;font-size:1rem}
+details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+.deep-head{font-size:1.2rem;font-weight:700;margin:48px 0 16px;text-align:center;color:#1f1f1f;letter-spacing:1px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.05rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.25rem}
+  .funnel .b2,.funnel .b3{width:100%}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 37 · 2026.06.24</div>
+  <h1>写作与表达：回忆录与自传<span class="topic">真实与记忆 · 选择性叙事 · 创伤书写 · 普通人的故事</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">回忆录看似私人，却是每个 leader 都在做的事——promo packet、postmortem、「介绍一下你自己」、创始故事，本质都是<strong>从一堆发生过的事里，诚实地选出一个有意义的故事</strong>。本周向 Didion、Gornick、Hemingway、Welty 学四件事，它们会直接改善你写自己的方式。</p>
+</header>
+
+<!-- Card 1: 真实与记忆 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>真实与记忆：诚实地重构，而非精确地复印</h2>
+  <div class="en-name">Truth &amp; Memory — Honest Reconstruction, Not a Transcript</div>
+  <span class="tag">回忆录 · 真实</span>
+
+  <div class="section">
+    <div class="label">一句话原则 + 名家原话</div>
+    <p>回忆录欠读者的，是<strong>情感与诠释上的真实</strong>，不是逐帧的精确。记忆本就是重构——你不能编造明知为假的事，但必须坦白记忆的边界。</p>
+    <div class="quote">
+      "We tell ourselves stories in order to live."
+      <span class="source">— Joan Didion, The White Album (1979)</span>
+    </div>
+    <p class="cn-trans">中译：我们靠给自己讲故事，活下去。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>大脑不存录像，存的是反复被重写的版本，每次回忆都在改写。这不是缺陷，是机制。危险在于：我们太擅长把杂乱的过去整理成一个因果分明、让自己显得明智的故事——Didion 这句名言其实带着警惕，我们「为了活下去」编故事，但编出来的常是安慰性的虚构。技术人写 postmortem、写晋升材料时最易犯此病：把侥幸说成远见，把混乱说成规划。<strong>真实不是记得准，是不骗自己。</strong></p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">我早就预见到这个架构会出问题，所以提前做了重构，最终避免了故障。</span>
+      <span class="after">当时我没意识到风险，重构纯粹是为了赶另一个需求。它恰好让我们躲过了三个月后的那次故障——是运气；也正是这份侥幸提醒我补上了监控。</span>
+    </div>
+    <div class="example">
+      <span class="before">I always knew the migration was the right call, and the results proved me right.</span>
+      <span class="after">I pushed the migration mostly to unblock a deadline. I didn't foresee the outage it later prevented — luck, not foresight. But it taught me to instrument first.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ Postmortem、项目复盘、晋升 packet、「介绍一下你自己」、创始故事</li>
+      <li>✓ 任何回顾性叙事——回顾天然诱使你美化因果</li>
+      <li>✗ 不适用：实时事故记录、需精确取证的合规文件（此处只要事实）</li>
+      <li>✗ 常见错误：把侥幸写成远见；用后见之明伪造当时的判断；删掉所有不利自己的细节；假装记得本已模糊的对话原话</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>写一段 150 字的「我做过的一个决定」——但刻意标出：哪些是你确实记得的，哪些是事后脑补出来的因果链。</p>
+    <p class="q">思考题：当诚实的版本让你显得不那么英明，你还愿意写它吗？谁会因为这份诚实，反而更信任你？</p>
+  </div>
+</section>
+
+<!-- Card 2: 选择性叙事 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>选择性叙事：从「发生了什么」里选出「要说什么」</h2>
+  <div class="en-name">Selection — Finding the Story Inside the Situation</div>
+  <span class="tag">回忆录 · 取舍</span>
+
+  <div class="section">
+    <div class="label">一句话原则 + 名家原话</div>
+    <p>一切回顾性写作都是删减。Gornick 区分两层：<strong>situation</strong>（发生的全部情境）与 <strong>story</strong>（你真正要说的那件事、那点领悟）。写作的功夫，大半在「不写什么」。</p>
+    <div class="quote">
+      "The situation is the context or circumstance; the story is the emotional experience that preoccupies the writer — the thing one has come to say."
+      <span class="source">— Vivian Gornick, The Situation and the Story (2001)</span>
+    </div>
+    <p class="cn-trans">中译：情境是背景与来龙去脉；故事是萦绕作者心头的那份情感体验——是你终于要说出口的那件事。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>没人能、也没人想看你的全部经历。Situation 是素材库，story 是你从中提炼的那条意义主线。先确定 story，situation 里的每个细节才有了去留标准：服务这条线的留，不服务的删——哪怕它真实、有趣。Annie Dillard 提醒，写回忆录别像醉汉那样挂在读者胳膊上说「然后我又做了这个，可有意思了」。晋升材料里堆 40 件事 = 没有故事；选 3 件指向同一条成长弧线 = 有故事。</p>
+    <div class="funnel">
+      <div class="band b1">SITUATION · 这一年发生的全部事</div>
+      <div class="arrow">▼ 用一句话的 story 做筛子</div>
+      <div class="band b2">保留服务主线的细节</div>
+      <div class="arrow">▼</div>
+      <div class="band b3">STORY · 你要说的那一件事</div>
+      <div class="caption">先定 story，再回头筛 situation——而非反过来</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">年度总结：我做了 A、B、C、D、E、F、G……（罗列 20 项，无主线）</span>
+      <span class="after">今年我只想讲一件事：我从「救火的人」变成了「让火烧不起来的人」。三个证据——建了告警体系、推了 review 规范、带出两个能独立 oncall 的人。其余照常，不赘述。</span>
+    </div>
+    <div class="example">
+      <span class="before">This year I shipped feature X, fixed bugs, mentored, did on-call, wrote docs...</span>
+      <span class="after">One throughline this year: I moved from doer to multiplier. Three proofs — the on-call runbook the team now lives by, two engineers I ramped to lead, the design review I started. The rest was table stakes.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ Promo packet、年度总结、个人简介、述职、founder story</li>
+      <li>✓ 任何素材远多于篇幅的场合</li>
+      <li>✗ 不适用：需要穷尽的清单（变更记录、审计台账）</li>
+      <li>✗ 常见错误：怕遗漏而全列，主线被淹没；没先定 story 就动笔；舍不得删掉真实但离题的好细节；一篇里塞进多条主线</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>拿你最近一份年度总结，先用一句话写出它唯一的 story，再删掉所有不服务这句话的条目。看看你删掉了多少。</p>
+    <p class="q">思考题：如果只能留三件事来代表你这一年，是哪三件？被你删掉的那些，真的定义了你吗？</p>
+  </div>
+</section>
+
+<!-- Card 3: 创伤书写 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>创伤书写：节制的力量，把重量交给省略</h2>
+  <div class="en-name">Writing Hard Things — Restraint and the Iceberg</div>
+  <span class="tag">回忆录 · 节制</span>
+
+  <div class="section">
+    <div class="label">一句话原则 + 名家原话</div>
+    <p>写痛苦、失败、冲突时，越克制越有力。把情绪明说出来，读者反而无感；用具体的事实与场景，让<strong>没说出口的部分</strong>承载重量。</p>
+    <div class="quote">
+      "If a writer of prose knows enough of what he is writing about he may omit things… and the reader will feel those things as strongly as though the writer had stated them. The dignity of movement of an iceberg is due to only one-eighth of it being above water."
+      <span class="source">— Ernest Hemingway, Death in the Afternoon (1932)</span>
+    </div>
+    <p class="cn-trans">中译：若作者深知所写之事，便可略去许多——读者仍会强烈地感到那些被略去的东西。冰山之所以移动得庄严，正因它只有八分之一露在水面之上。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>强行渲染情绪（「我崩溃了，痛不欲生」）是替读者把感受打了包，等于不让他自己去感受。节制相反：陈述事实，留出空白，读者自行填入情绪——那情绪才属于他、才真实。Mary Karr 说好回忆录全靠 voice，而 voice 成熟的标志之一就是不滥情。技术语境同理：事故复盘、项目失败、裁员沟通——越想煽情或甩锅，越显轻浮；克制的事实最有分量。</p>
+    <div class="iceberg">
+      <svg viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg" aria-label="冰山理论">
+        <line x1="10" y1="78" x2="350" y2="78" stroke="#5a7a9a" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <text x="14" y="72" font-family="Georgia" font-size="11" fill="#5a7a9a">水面 · 说出口的（1/8）</text>
+        <polygon points="180,20 150,78 210,78" fill="#1f1f1f"/>
+        <polygon points="150,78 210,78 250,200 110,200" fill="#9fb8cc"/>
+        <text x="180" y="120" font-family="Georgia" font-size="11" fill="#1f3550" text-anchor="middle">水下 · 省略的（7/8）</text>
+        <text x="180" y="142" font-family="Georgia" font-size="10" fill="#2a4560" text-anchor="middle">具体事实 · 场景 · 细节</text>
+        <text x="180" y="160" font-family="Georgia" font-size="10" fill="#2a4560" text-anchor="middle">读者自己感受到的情绪</text>
+      </svg>
+      <div class="caption">明说的越少，水下的重量越被读者感到</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">那次线上事故让整个团队陷入绝望，我承受了巨大的压力，那种煎熬难以言表，至今心有余悸。</span>
+      <span class="after">事故持续了六小时。凌晨三点，群里只剩两个人还在回消息。我们没说话，各自盯着同一条不肯下降的曲线。</span>
+    </div>
+    <div class="example">
+      <span class="before">The layoff was devastating and I felt an indescribable sense of loss and betrayal.</span>
+      <span class="after">I packed my desk in nine minutes. Out of habit, I tapped my badge at the door on the way out. It still worked. It didn't on Monday.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ 事故 / 失败复盘、裁员与坏消息沟通、关于挫折的个人文章、面试谈失败</li>
+      <li>✓ 任何情绪本身已经很强、不需你再加码的场合</li>
+      <li>✗ 不适用：确需明确表态、给予共情的安抚场合（但仍忌空洞形容词）</li>
+      <li>✗ 常见错误：用大词形容情绪（「绝望」「崩溃」「巨大压力」）；自怜或甩锅；该给场景时改成抒情；该给细节时只给结论</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>写一件让你难受的工作经历，规则：禁用一切情绪形容词，只写能被摄像机拍到的事实与动作。读一遍，看重量还在不在。</p>
+    <p class="q">思考题：哪些痛苦适合公开写、哪些不适合？节制只是为了读者，还是也是写作者的一种自我保护？</p>
+  </div>
+</section>
+
+<!-- Card 4: 普通人的故事 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>普通人的故事：在具体里，平凡通向普遍</h2>
+  <div class="en-name">Ordinary Lives — The Universal Hides in the Particular</div>
+  <span class="tag">回忆录 · 普遍</span>
+
+  <div class="section">
+    <div class="label">一句话原则 + 名家原话</div>
+    <p>你不需要传奇人生才值得书写。打动人的从不是经历多稀有，而是<strong>细节多具体、诚实多彻底</strong>——越具体，越普遍。</p>
+    <div class="quote">
+      "A sheltered life can be a daring life as well. For all serious daring starts from within."
+      <span class="source">— Eudora Welty, One Writer's Beginnings (1984)</span>
+    </div>
+    <p class="cn-trans">中译：一种安稳平静的人生，同样可以是一种充满勇气的人生。因为一切真正的勇敢，都始于内心。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>新人常以为「我没什么好写的，我又不是 CEO，也没创业卖掉公司」。错。读者在你的具体里看见自己的普遍——他不关心你融了多少钱，关心你凌晨改简历时的那一下犹豫，因为那个犹豫他也有过。抽象的「我热爱技术」谁都能说，等于没说；「我第一次让一千台机器同时响应时，在工位上偷偷笑了很久」只有你能说，于是所有人都懂。<strong>具体，是通往普遍的唯一窄门。</strong></p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">我是一名充满热情、追求卓越、热爱学习的资深工程师。</span>
+      <span class="after">我带的第一个系统至今还在跑。每次它扛过大促，我都会去翻一眼那行八年前写的、丑得要命却从没出过错的重试逻辑。</span>
+    </div>
+    <div class="example">
+      <span class="before">I'm a passionate, results-driven leader who loves solving hard problems.</span>
+      <span class="after">I still remember the first time I deleted code instead of adding it, and the service got faster. That's the day I understood what my job actually was.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ 个人简介、个人品牌文章、面试自我介绍、职业 / 创始故事、conference bio</li>
+      <li>✓ 任何需要「让人记住你是谁」的场合</li>
+      <li>✗ 不适用：纯资质罗列的正式 CV 字段（但其中的摘要段仍可用）</li>
+      <li>✗ 常见错误：用空泛形容词堆人设（「热情」「卓越」「有匠心」）；觉得平凡=不值得写；借宏大叙事掩盖没有细节；套通用模板，谁都能填</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>写一段 100 字自我介绍，禁用一切形容词，只用一个具体到只属于你的瞬间。让一个不认识你的人读，然后问他记住了什么。</p>
+    <p class="q">思考题：你职业生涯里那个「只有你会这么讲」的具体瞬间是什么？为什么你一直以为它不值得讲？</p>
+  </div>
+</section>
+
+<div class="deep-head">深入思考</div>
+
+<details><summary>回忆录强调诚实重构，但 promo packet 的目的就是自我推销。两者冲突吗？</summary><div>不冲突，恰恰相反。最有说服力的自我推销，往往是诚实的那种：承认运气、坦白失败里学到的东西，反而建立可信度（ethos）。评审和读者能闻出粉饰的味道——一份处处英明、零失误的材料，读起来像广告而非人。诚实不等于自贬，它是精准：讲清你真正的贡献，不夸大也不缩小。可信，本身就是最强的说服。</div></details>
+
+<details><summary>中文和英文写个人叙事，分寸有什么不同？</summary><div>英文传统鼓励直接的「I」叙事与情感袒露，自我推销的文化更外显，第一人称的主张被视为自信。中文传统含蓄，过度自陈容易显得「自我膨胀」，更重借事言志、以行动见人品。所以中文写 promo 或 bio，宜让事实和细节替你说话，少用第一人称的情绪形容词，否则极易染上翻译腔的浮夸。同一个核心，换语言要换分寸。</div></details>
+
+<details><summary>文字、口头（面试）、视频，三种形态里个人故事的讲法差别？</summary><div>文字可以反复打磨、靠精确取胜，能容纳细腻。口头靠节奏与停顿，一个具体细节胜过三句概括，且要短到能被当场记住、复述。视频又多了画面与表情，「展示」大于「陈述」，一个动作抵一段独白。同一个故事，文字版可细腻铺陈，口头版砍到只剩一个画面，视频版让画面自己开口——形态变，颗粒度就得变。</div></details>
+
+<details><summary>节制（第 3 条）和金字塔原理 / BLUF 的「结论先行」会打架吗？</summary><div>不打架，因为管的是不同维度。BLUF 管信息结构——结论先行，方便忙人。节制管情感表达——别用大词替读者打包情绪。两者可以叠加：结论照样先行，但在描述过程时克制形容词、多给具体事实。最糟的组合恰是反过来——情绪先行、事实欠奉，读者既抓不到重点，又被迫消化你的抒情。</div></details>
+
+<details><summary>AI 能帮你写回忆 / 个人故事吗？</summary><div>能帮结构、改语言，但帮不了最关键的那一步：提供「只属于你的具体瞬间」——那是 AI 没有、也生成不出的素材。让 AI 当编辑（删形容词、找主线、挑出离题段落），别让它当作者：它只会生成光滑的通用模板，而那正是第 4 条所批判的东西。你负责真实与具体，AI 负责打磨与裁剪，分工才对。</div></details>
+
+<div class="nav">
+  <a href="index.html">← 回到每日写作目录</a>
+</div>
+
+<footer>BigCat · Writing Daily · Day 37 · 2026</footer>
+
+</div>
+</body>
+</html>
