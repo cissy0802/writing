@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>写作与表达：编辑的技艺 — Day 41</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"原句 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"改后 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* 可视化：编辑次序层叠图 */
+.edit-stack{background:#f8f6f1;padding:24px 16px 18px;margin:18px 0;border-radius:2px;text-align:center}
+.edit-stack .layer{margin:6px auto;padding:11px 10px;background:#fff;border:1px solid #d8d0bc;border-radius:2px;font-family:Georgia,serif}
+.edit-stack .layer .step{display:block;font-size:0.7rem;color:#8a7a4a;letter-spacing:2px;font-weight:700;text-transform:uppercase;margin-bottom:3px}
+.edit-stack .layer .lname{font-weight:700;color:#1f1f1f;font-size:0.98rem}
+.edit-stack .layer .ldesc{font-size:0.8rem;color:#6a6a6a;margin-top:2px}
+.edit-stack .layer.first{background:#1f1f1f;border-color:#1f1f1f}
+.edit-stack .layer.first .lname{color:#fafafa}
+.edit-stack .layer.first .ldesc{color:#cfcfcf}
+.edit-stack .layer.first .step{color:#d8c98a}
+.edit-stack .arrow{color:#8a7a4a;font-size:1rem;line-height:1}
+.edit-stack .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif}
+
+.deep-head{font-size:1.2rem;font-weight:700;margin:48px 0 16px;text-align:center;color:#1f1f1f;letter-spacing:1px}
+details{background:#fff;border:1px solid #d8d0bc;border-radius:2px;margin:10px 0;padding:4px 16px}
+details summary{cursor:pointer;font-weight:600;color:#1f1f1f;padding:10px 0;font-size:1rem}
+details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .edit-stack .layer{width:100%!important}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 41 · 2026.06.28</div>
+  <h1>写作与表达：编辑的技艺<span class="topic">结构编辑 · 杀死心爱句子 · 一致性 · 与作者的关系</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">好文章很少是「写」出来的，是「改」出来的。而改，有它自己的章法：先动骨架还是先磨字、如何狠心删掉自己最得意的那句、如何让全文像一个人写的、以及当你编辑别人或自己时，那条「帮忙而不越界」的分寸线。今天我们学这门隐形的手艺。</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>先骨架，后字句：编辑的次序</h2>
+  <div class="en-name">Macro-Editing before Micro-Editing</div>
+  <span class="tag">编辑 · 次序</span>
+
+  <div class="section">
+    <div class="label">一句话原则</div>
+    <p>改文章有先后。<strong>先看结构</strong>（这段该不该存在、顺序对不对、论点立不立得住），<strong>再看句子</strong>（用词、节奏、标点）。次序反了，你会花两小时打磨一段最后整段要删的文字。</p>
+    <div class="quote">
+      "Rewriting is the essence of writing well: it's where the game is won or lost. ... Few people realize how badly they write."
+      <span class="source">— William Zinsser, On Writing Well</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：重写才是写好的本质，胜负都在这里见分晓……很少有人意识到自己初稿写得有多糟。</p>
+  </div>
+
+  <div class="edit-stack">
+    <div class="layer first" style="width:100%"><span class="step">第一遍</span><span class="lname">结构</span><span class="ldesc">该不该存在 · 顺序 · 论点是否成立</span></div>
+    <div class="arrow">↓</div>
+    <div class="layer" style="width:80%"><span class="step">第二遍</span><span class="lname">段落</span><span class="ldesc">一段一个意思 · 段间衔接</span></div>
+    <div class="arrow">↓</div>
+    <div class="layer" style="width:62%"><span class="step">第三遍</span><span class="lname">句子</span><span class="ldesc">节奏 · 主动语态 · 删冗余</span></div>
+    <div class="arrow">↓</div>
+    <div class="layer" style="width:44%"><span class="step">最后</span><span class="lname">词与标点</span><span class="ldesc">术语一致 · 错别字</span></div>
+    <div class="caption">改的次序自上而下——动了上层，下层可能整片消失</div>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>编辑分两种：<strong>宏观编辑（macro-editing）</strong>处理整体——删、改顺序、补论据；<strong>微观编辑（micro-editing）</strong>逐字逐句打磨。先做微观是最常见的浪费：你把一段文字雕成艺术品，回头一看它根本不该在这里。先定骨架，再贴血肉，被删的就不心疼了。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">一封预算申请邮件，每句都打磨得很漂亮：「我们经过审慎而全面的评估，结合上下游的多方考量……」铺垫三段，最后一句才说「请批准 30 万预算」。</span>
+      <span class="after">结构编辑先把「请批准 30 万预算用于 X，三条理由如下」提到第一句，背景压成两行。——若那句漂亮的铺垫正在被删的段落里，再漂亮也是白雕。</span>
+    </div>
+    <div class="example">
+      <span class="before">A report polished sentence-by-sentence, but the conclusion sits in paragraph 6.</span>
+      <span class="after">Move the conclusion to the top first; then decide which of the 5 lead-in paragraphs survive. Polish only the survivors.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ 任何要修改的长文：设计文档、memo、PRD、演讲稿、博客</li>
+      <li>✗ 一上手就改错别字、调字词——在还可能整段删除的文字上做精修</li>
+      <li>✗ 因为「舍不得刚改好的句子」，而拒绝动结构</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Susan Bell</span>《The Artful Edit》（macro / micro 两遍编辑） · <span>William Zinsser</span>《On Writing Well》 · <span>Sol Stein</span>《Stein on Writing》</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>拿一篇你写过的旧文，只做一件事：用一句话写出它的「核心主张」。然后逐段问「这段为这句服务吗？」，删掉所有不服务的段落——这一遍只删不修。思考题：你删得下手吗？如果删不动，是文字舍不得，还是其实你没想清楚核心是什么？</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>杀死心爱的句子</h2>
+  <div class="en-name">Kill Your Darlings</div>
+  <span class="tag">编辑 · 取舍</span>
+
+  <div class="section">
+    <div class="label">一句话原则</div>
+    <p>你写出的最得意、最华丽、最舍不得的那一句，往往就是最该删的。因为你留它，是为了<strong>你自己</strong>（炫技、不舍），不是为了读者。</p>
+    <div class="quote">
+      "Whenever you feel an impulse to perpetrate a piece of exceptionally fine writing, obey it—whole-heartedly—and delete it before sending your manuscript to press. Murder your darlings."
+      <span class="source">— Arthur Quiller-Couch, On the Art of Writing (1916)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：每当你冒出写一段「绝妙好文」的冲动，就放手去写——然后在付印前删掉它。杀死你的心爱之物。（Stephen King 在《On Writing》里把这句话变成了写作者最熟的咒语。）</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>心爱句子让读者注意到「作者真会写」，而不是「这话真有道理」——它把光打在你身上，偏离了信息本身。沉没成本让你不舍：你为这句花了最多力气，于是最想留。鲁迅给的标尺最狠：<strong>「写完后至少看两遍，竭力将可有可无的字、句、段删去，毫不可惜。」</strong>注意是「毫不可惜」——越可惜的越要看清是不是 darling。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">在这个信息如潮水奔涌、算法似巨兽吞噬注意力的时代，我们每个人都是数字海洋里的一叶扁舟……（接着才进正题：本文讲缓存策略）</span>
+      <span class="after">缓存能让接口快十倍，也能让数据悄无声息地错。本文讲三种缓存策略的取舍。——「数字海洋扁舟」是作者最得意的句子，正因如此，删。</span>
+    </div>
+    <div class="example">
+      <span class="before">Like a phoenix rising from the ashes of legacy code, our new system breathes life into a once-dying stack...</span>
+      <span class="after">Our new system cut p99 latency from 800ms to 120ms. Here's how.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ 开头的华丽铺垫、得意的比喻、舍不得的金句，删前先问「这是为读者还是为我」</li>
+      <li>✗ 把「杀 darling」误读成「删掉一切色彩」，写成干巴巴的说明书——该留的好句子是为读者服务的，不是 darling</li>
+      <li>✗ 在没看清全文之前就开始删，删成支离破碎</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Arthur Quiller-Couch</span>《On the Art of Writing》 · <span>Stephen King</span>《On Writing》 · <span>鲁迅</span>《答北斗杂志社问》</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>翻出一段你私心觉得「写得真漂亮」的文字，把它单独剪出来贴到一边，读读剩下的——意思变弱了吗？大多数时候没有。思考题：darling 和「真正的好句子」边界在哪？一个判据是：好句子删了意思会塌，darling 删了只有你自己心疼。</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>让全文像一个人写的：一致性</h2>
+  <div class="en-name">Consistency — One Voice, One Vocabulary</div>
+  <span class="tag">编辑 · 一致性</span>
+
+  <div class="section">
+    <div class="label">一句话原则</div>
+    <p>同一个概念，全文用<strong>同一个词</strong>；同一类东西，全文用<strong>同一种格式</strong>。不一致会让读者暗暗怀疑「这俩是不是不同的东西」，在文字底下收一笔隐形的认知税。</p>
+    <div class="quote">
+      "A foolish consistency is the hobgoblin of little minds."
+      <span class="source">— Ralph Waldo Emerson, Self-Reliance (1841)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：愚蠢的一致是小心灵的妖怪。——爱默生反对的是<strong>思想</strong>上的墨守。但在<strong>文字表层</strong>，机械的一致（术语、格式、口吻）恰恰是替读者省心。该一致的是表面，不该一致的是思想。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>每次术语一变，读者就得停下来判断「这是新概念还是刚才那个换了说法」。这个微小的停顿乘以全篇，就是真实的阅读阻力。一致性不是迂腐，是把读者的脑力<strong>从「解码」省下来给「理解」</strong>。专业的标志，是建一份哪怕只有十行的术语表 / style sheet。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">同一份文档里混用「用户 / 客户 / 使用者 / 用户方」指同一群人；「登录 / 登入 / sign in」交替出现；数字一会儿「5 个」一会儿「五个」。</span>
+      <span class="after">全文统一：人→「用户」，动作→「登录」，数字→正文一律阿拉伯数字。开头建十行术语表，多人协作前先对齐。</span>
+    </div>
+    <div class="example">
+      <span class="before">Mixing "log in" / "login" / "sign in"; "e-mail" / "email"; "Q3" / "third quarter" in one doc.</span>
+      <span class="after">Pick one each ("sign in" v., "email", "Q3") and write a one-line style sheet. The Chicago Manual exists for exactly this.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ 技术文档、API 文档、产品文案、多人协作的长文</li>
+      <li>✗ 多人合写不立 style sheet，每人一套叫法，读者拼图</li>
+      <li>✗ 过度一致：连引用原文里的不同拼写都「改齐」，破坏忠实——这正是爱默生说的「愚蠢的一致」</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>The Chicago Manual of Style</span>（一致性的权威范本） · <span>Strunk &amp; White</span>《The Elements of Style》 · <span>Ralph Waldo Emerson</span>《Self-Reliance》</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>选一份你团队的文档，列出指代「同一事物」却用了不同词的所有地方，做一张术语对照表，全文统一。思考题：哪些一致该交给工具和 style guide（拼写、格式），哪些一致只能靠人（口吻、详略）？后者为什么难自动化？</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>帮忙而不越界：编辑与作者的关系</h2>
+  <div class="en-name">The Editor as Servant, Not Author</div>
+  <span class="tag">编辑 · 分寸</span>
+
+  <div class="section">
+    <div class="label">一句话原则</div>
+    <p>编辑的最高境界，是让作品成为<strong>作者想写的样子</strong>，而不是你会写的样子。改稿多用提问、少用命令；改读者的卡点，不改作者的声音。</p>
+    <div class="quote">
+      "An editor does not add to a book. At best he serves as a handmaiden to an author. ... An editor at most releases energy. He creates nothing."
+      <span class="source">— Maxwell Perkins, 引自 A. Scott Berg《Max Perkins: Editor of Genius》</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：编辑不为一本书增添什么。他至多是作者的侍女……编辑顶多是释放能量，他什么也没创造。（培金斯是海明威、菲茨杰拉德背后的传奇编辑。）</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>两种失败方向相反：<strong>编辑不足</strong>——橡皮图章，只夸不改；<strong>编辑过度</strong>——把作者改成自己。后者的著名案例是 Gordon Lish 大刀阔斧重写 Raymond Carver，删到几乎成了另一个作家。培金斯的「侍女」是一端的标尺：你的工作是放大作者的声音，不是替换它。判断方法很简单——改完后，这还是作者的文章吗？</p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">（命令式、伤自尊）这段逻辑混乱，重写。这个比喻很烂。</span>
+      <span class="after">（提问式、站在读者角度）读到这儿我有点跟不上——你是想说 X 吗？如果是，要不要把结论提前？这个比喻我没立刻 get 到，你想强调的是速度还是规模？</span>
+    </div>
+    <div class="example">
+      <span class="before">"This is confusing. Rewrite it."</span>
+      <span class="after">"I lost the thread here—is the core claim that X? If so, leading with it might help."</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:6px">这叫<strong>提问式编辑（query editing）</strong>：把判断权留给作者。自我编辑时同理——戴两顶帽子但分开时间：写的时候当作者，改的时候当读者，别同时戴。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ code review、给下属改文档、改 PRD、互评、自我修订</li>
+      <li>✗ 把改稿当成「证明我更聪明」的场合</li>
+      <li>✗ 把作者的风格改成自己的口味（over-editing），或只点赞不动刀（under-editing）</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>A. Scott Berg</span>《Max Perkins: Editor of Genius》 · <span>Betsy Lerner</span>《The Forest for the Trees》 · <span>叶圣陶</span>（设身处地、把自己当读者的编辑观）</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>找一段别人的文字（或你自己一周前的草稿），写三条编辑意见，全部用提问句式（「是不是…」「要不要…」），不许出现「改成」「重写」。思考题：培金斯的「侍女」和 Lish 大改 Carver，到底哪个对？编辑越界的边界，该由谁来定？</p>
+  </div>
+</section>
+
+<div class="deep-head">深入思考</div>
+
+<details><summary>「杀死心爱句子」和「句子要有节奏、有色彩」会不会自相矛盾？</summary><div>不矛盾，因为判据是「为谁服务」。好句子和 darling 可能一样漂亮，区别在功能：好句子删了，意思会塌、情感会断、节奏会瘸；darling 删了，只有作者自己心疼，读者毫无损失。色彩本身不是罪，「为炫技而留的色彩」才是。一个实操检验：把那句剪出来读剩下的，如果通顺甚至更利落，它就是 darling。所以这条原则不反对好文采，它反对的是把作者的虚荣伪装成读者的需要。</div></details>
+
+<details><summary>自我编辑最难，因为你既是作者又是编辑。有什么机制能让你对自己下得了手？</summary><div>核心是制造「距离」，让批评的那个你不再是写作的那个你。三种机制：一是<strong>时间</strong>，放一夜甚至一周再看，热情冷却后 darling 自己现形；二是<strong>换媒介</strong>，打印出来、换字体、朗读出来——耳朵比眼睛诚实，拗口的句子一读就露馅；三是<strong>角色切换</strong>，明确「现在我是读者，不是作者」，甚至想象一个具体的、挑剔的读者坐在对面。本质都是把「创作的我」和「评判的我」在时间或空间上分开，别让他们同时在场互相护短。</div></details>
+
+<details><summary>AI 已经能做文字编辑（语法、一致性、错别字），那留给人的编辑工作是什么？</summary><div>AI 接管的恰好是微观层、机械一致这类有明确规则的活——这是好事，把人从校对里解放出来。留给人的是 AI 还做不好的三件：一是<strong>结构判断</strong>，「这段到底该不该存在」需要理解全文意图和读者处境；二是<strong>声音的保全</strong>，AI 倾向把一切磨成同一种顺滑的「正确」，反而抹掉作者的个性，识别并守住作者独有的口吻是人的活；三是<strong>与作者的关系</strong>，提问、共情、分寸，这是人际工作。换句话说，AI 做 copyeditor，人做 developmental editor 和那个懂得「侍女」分寸的人。</div></details>
+
+<details><summary>机械的一致该交给工具，但「口吻一致」很难自动化——口吻的一致到底是什么？</summary><div>口吻不是单个词的选择，是一整套<strong>姿态</strong>：句子的长短偏好、对读者的远近（称「你」还是「各位」）、严肃与俏皮的配比、用不用第一人称、敢不敢留破折号和短句。它一致，是因为背后有一个稳定的「说话的人」。它难自动化，因为它是无数微决策的涌现，没有可枚举的规则；改一个词不破坏口吻，但把所有口语都改成书面语就会。守口吻的办法不是规则表，而是反复问「这是同一个人在说话吗」，并在改稿时刻意保留作者标志性的小习惯。</div></details>
+
+<details><summary>编辑这门手艺，搬到「文、讲、视频」三种载体上各自怎么变？</summary><div>结构编辑三者通用且都最重要。差异在微观层和检验方式：<strong>文字</strong>靠眼睛，可反复回看，所以一致性、术语、标点的精修值得做足；<strong>演讲</strong>靠耳朵且不可回放，编辑要为听觉服务——删从句、拆长句、把术语换成口语、用重复制造记忆点，检验法是站起来念；<strong>视频/音频</strong>多一层「剪辑即编辑」，删掉的不只是字还有时间和停顿，节奏由时长决定，darling 在这里是「舍不得剪掉的好镜头/好段子」。载体越线性、越不可回看，「狠心删」的回报就越高。</div></details>
+
+<div class="nav">
+  <a href="index.html">← 回到每日写作目录</a>
+</div>
+
+<footer>BigCat · Writing Daily · Day 41 · 2026</footer>
+
+</div>
+</body>
+</html>

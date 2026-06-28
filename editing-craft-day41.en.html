@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Delivery: The Craft of Editing — Day 41</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"BEFORE ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"AFTER ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Visualization: editing order stack */
+.edit-stack{background:#f8f6f1;padding:24px 16px 18px;margin:18px 0;border-radius:2px;text-align:center}
+.edit-stack .layer{margin:6px auto;padding:11px 10px;background:#fff;border:1px solid #d8d0bc;border-radius:2px;font-family:Georgia,serif}
+.edit-stack .layer .step{display:block;font-size:0.7rem;color:#8a7a4a;letter-spacing:2px;font-weight:700;text-transform:uppercase;margin-bottom:3px}
+.edit-stack .layer .lname{font-weight:700;color:#1f1f1f;font-size:0.98rem}
+.edit-stack .layer .ldesc{font-size:0.8rem;color:#6a6a6a;margin-top:2px}
+.edit-stack .layer.first{background:#1f1f1f;border-color:#1f1f1f}
+.edit-stack .layer.first .lname{color:#fafafa}
+.edit-stack .layer.first .ldesc{color:#cfcfcf}
+.edit-stack .layer.first .step{color:#d8c98a}
+.edit-stack .arrow{color:#8a7a4a;font-size:1rem;line-height:1}
+.edit-stack .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif}
+
+.deep-head{font-size:1.2rem;font-weight:700;margin:48px 0 16px;text-align:center;color:#1f1f1f;letter-spacing:1px}
+details{background:#fff;border:1px solid #d8d0bc;border-radius:2px;margin:10px 0;padding:4px 16px}
+details summary{cursor:pointer;font-weight:600;color:#1f1f1f;padding:10px 0;font-size:1rem}
+details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .edit-stack .layer{width:100%!important}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 41 · 2026.06.28</div>
+  <h1>Writing &amp; Delivery: The Craft of Editing<span class="topic">Structure first · Kill your darlings · Consistency · The author relationship</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">Good writing is rarely written—it's rewritten. And rewriting has its own discipline: skeleton before sentences, the nerve to cut your favorite line, making the whole thing sound like one person, and—when you edit others or yourself—the fine line between helping and overstepping. Today, the invisible craft.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Skeleton First, Sentences Last: The Order of Editing</h2>
+  <div class="en-name">Macro-Editing before Micro-Editing</div>
+  <span class="tag">Editing · Order</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Editing has an order. <strong>Look at structure first</strong> (should this section exist, is the sequence right, does the argument hold), <strong>then the sentences</strong> (word choice, rhythm, punctuation). Reverse it and you'll spend two hours polishing a paragraph you're about to delete whole.</p>
+    <div class="quote">
+      "Rewriting is the essence of writing well: it's where the game is won or lost. ... Few people realize how badly they write."
+      <span class="source">— William Zinsser, On Writing Well</span>
+    </div>
+  </div>
+
+  <div class="edit-stack">
+    <div class="layer first" style="width:100%"><span class="step">Pass 1</span><span class="lname">Structure</span><span class="ldesc">Should it exist · Sequence · Does the argument hold</span></div>
+    <div class="arrow">↓</div>
+    <div class="layer" style="width:80%"><span class="step">Pass 2</span><span class="lname">Paragraphs</span><span class="ldesc">One idea each · Transitions</span></div>
+    <div class="arrow">↓</div>
+    <div class="layer" style="width:62%"><span class="step">Pass 3</span><span class="lname">Sentences</span><span class="ldesc">Rhythm · Active voice · Cut clutter</span></div>
+    <div class="arrow">↓</div>
+    <div class="layer" style="width:44%"><span class="step">Last</span><span class="lname">Words &amp; Punctuation</span><span class="ldesc">Term consistency · Typos</span></div>
+    <div class="caption">Edit top-down—touch an upper layer and a lower one may vanish entirely</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Editing comes in two kinds: <strong>macro-editing</strong> handles the whole—cutting, reordering, shoring up the argument; <strong>micro-editing</strong> polishes line by line. Doing micro first is the most common waste: you carve a passage into a jewel, then realize it shouldn't be there at all. Set the bones first, then add flesh, and what gets cut won't hurt.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Edit in Action</div>
+    <div class="example">
+      <span class="before">A budget-request email, every sentence buffed: "After a thorough and careful evaluation, weighing considerations upstream and down..." Three paragraphs of runway, then the ask in the last line: "Please approve $300K."</span>
+      <span class="after">Structural edit moves "Please approve $300K for X; three reasons follow" to sentence one, background squeezed to two lines. If that lovely runway sentence sat in a deleted paragraph, lovely or not, it was carved for nothing.</span>
+    </div>
+    <div class="example">
+      <span class="before">A report polished sentence-by-sentence, but the conclusion sits in paragraph 6.</span>
+      <span class="after">Move the conclusion to the top first; then decide which of the 5 lead-in paragraphs survive. Polish only the survivors.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Any long piece you revise: design docs, memos, PRDs, talks, blog posts</li>
+      <li>✗ Fixing typos and word choice first—precision-tuning text that might still be deleted whole</li>
+      <li>✗ Refusing to touch structure because you "can't bear to lose" a just-polished sentence</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Susan Bell</span>, The Artful Edit (macro / micro passes) · <span>William Zinsser</span>, On Writing Well · <span>Sol Stein</span>, Stein on Writing</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Take an old piece of yours and do one thing: write its core claim in a single sentence. Then ask of each paragraph, "Does this serve that sentence?" Delete every one that doesn't—this pass only cuts, never polishes. Question: can you make the cuts? If not, is it that you love the prose, or that you never settled what the core actually is?</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Kill Your Darlings</h2>
+  <div class="en-name">Murder Your Darlings</div>
+  <span class="tag">Editing · Cutting</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>The line you're proudest of, the most ornate, the one you least want to lose—that's usually the one to cut. Because you're keeping it for <strong>yourself</strong> (to show off, out of attachment), not for the reader.</p>
+    <div class="quote">
+      "Whenever you feel an impulse to perpetrate a piece of exceptionally fine writing, obey it—whole-heartedly—and delete it before sending your manuscript to press. Murder your darlings."
+      <span class="source">— Arthur Quiller-Couch, On the Art of Writing (1916)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">Stephen King turned this line into every writer's most familiar mantra in On Writing.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>A darling makes the reader notice "what a writer," not "what a point"—it shines the light on you and away from the message. Sunk cost makes you cling: you spent the most effort on this line, so you most want to keep it. Lu Xun set the harshest yardstick: <strong>"After finishing, read it through at least twice, and ruthlessly delete every dispensable word, sentence, and paragraph—without the slightest regret."</strong> Note "without regret"—the more it hurts to cut, the more it's worth checking whether it's a darling.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Edit in Action</div>
+    <div class="example">
+      <span class="before">"In an age where information surges like a tide and algorithms devour attention like beasts, each of us is a small boat on a digital ocean..." (then, finally, the topic: caching strategy)</span>
+      <span class="after">"Caching can make an endpoint 10× faster—and make data wrong, silently. Here are the trade-offs among three strategies." The "small boat on a digital ocean" was the author's proudest line. Precisely why it goes.</span>
+    </div>
+    <div class="example">
+      <span class="before">Like a phoenix rising from the ashes of legacy code, our new system breathes life into a once-dying stack...</span>
+      <span class="after">Our new system cut p99 latency from 800ms to 120ms. Here's how.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Ornate openings, pet metaphors, quotable lines—before keeping, ask "is this for the reader or for me?"</li>
+      <li>✗ Misreading "kill darlings" as "strip all color," writing a dry spec sheet—a good sentence that serves the reader is not a darling</li>
+      <li>✗ Cutting before you've seen the whole, leaving it in fragments</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Arthur Quiller-Couch</span>, On the Art of Writing · <span>Stephen King</span>, On Writing · <span>Lu Xun</span>, Reply to Beidou Magazine</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Dig out a passage you secretly think "reads beautifully," cut it out to the side, and read what remains—did the meaning weaken? Usually not. Question: where's the line between a darling and a genuinely good sentence? One test: cut a good sentence and the meaning collapses; cut a darling and only you feel the loss.</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Sounding Like One Person: Consistency</h2>
+  <div class="en-name">Consistency — One Voice, One Vocabulary</div>
+  <span class="tag">Editing · Consistency</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>One concept, <strong>one word</strong> throughout; one kind of thing, <strong>one format</strong> throughout. Inconsistency makes the reader quietly wonder "are these two different things?"—a hidden cognitive tax levied beneath the prose.</p>
+    <div class="quote">
+      "A foolish consistency is the hobgoblin of little minds."
+      <span class="source">— Ralph Waldo Emerson, Self-Reliance (1841)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">Emerson is attacking rigidity of <strong>thought</strong>. But at the <strong>surface of the prose</strong>, mechanical consistency (terms, format, voice) is exactly what spares the reader. Be consistent on the surface; be free in the thinking.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Every time a term shifts, the reader must stop to decide "is this a new concept or the old one renamed?" That tiny pause, multiplied across the piece, is real reading friction. Consistency isn't pedantry; it <strong>frees the reader's effort from "decoding" for "understanding."</strong> The mark of a pro is a style sheet—even a ten-line one.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Edit in Action</div>
+    <div class="example">
+      <span class="before">One doc mixing "user / customer / end-user / the user side" for the same group; "log in / login / sign in" alternating; numbers as "5" then "five."</span>
+      <span class="after">Standardize: people → "user," the action → "sign in," numbers → digits in body text. Add a ten-line term table up front, align before co-writing.</span>
+    </div>
+    <div class="example">
+      <span class="before">Mixing "log in" / "login" / "sign in"; "e-mail" / "email"; "Q3" / "third quarter" in one doc.</span>
+      <span class="after">Pick one each ("sign in" v., "email", "Q3") and write a one-line style sheet. The Chicago Manual exists for exactly this.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Technical docs, API docs, product copy, long collaborative documents</li>
+      <li>✗ Co-writing without a style sheet—everyone's own labels, reader left assembling a jigsaw</li>
+      <li>✗ Over-consistency: "fixing" even the varied spellings inside a quotation, breaking fidelity—exactly Emerson's "foolish consistency"</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>The Chicago Manual of Style</span> (the authority on consistency) · <span>Strunk &amp; White</span>, The Elements of Style · <span>Ralph Waldo Emerson</span>, Self-Reliance</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Pick a team document, list every place where the same thing is named differently, build a term table, and unify the whole piece. Question: which consistencies belong to tools and a style guide (spelling, format), and which can only be done by a human (voice, level of detail)? Why is the latter so hard to automate?</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Help Without Overstepping: The Author Relationship</h2>
+  <div class="en-name">The Editor as Servant, Not Author</div>
+  <span class="tag">Editing · Restraint</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>The editor's highest art is making the work <strong>what the author wanted to write</strong>, not what you would have written. Edit with questions, not commands; fix the reader's snags, not the author's voice.</p>
+    <div class="quote">
+      "An editor does not add to a book. At best he serves as a handmaiden to an author. ... An editor at most releases energy. He creates nothing."
+      <span class="source">— Maxwell Perkins, in A. Scott Berg, Max Perkins: Editor of Genius</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">Perkins was the legendary editor behind Hemingway and Fitzgerald.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Two failures, opposite directions: <strong>under-editing</strong>—a rubber stamp, all praise no cut; <strong>over-editing</strong>—turning the author into yourself. The famous case is Gordon Lish, who slashed and rewrote Raymond Carver until it nearly became a different writer. Perkins's "handmaiden" is the yardstick at the other end: your job is to amplify the author's voice, not replace it. The test is simple—after editing, is this still the author's piece?</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Edit in Action</div>
+    <div class="example">
+      <span class="before">(Commanding, ego-bruising) This paragraph is a mess. Rewrite it. This metaphor is bad.</span>
+      <span class="after">(Question-based, from the reader's seat) I lost the thread here—are you saying X? If so, would leading with the conclusion help? I didn't get this metaphor right away—are you stressing speed or scale?</span>
+    </div>
+    <div class="example">
+      <span class="before">"This is confusing. Rewrite it."</span>
+      <span class="after">"I lost the thread here—is the core claim that X? If so, leading with it might help."</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:6px">This is <strong>query editing</strong>: leave the judgment with the author. Self-editing is the same—wear both hats, but at different times: be the author while writing, the reader while revising. Never both at once.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Code review, editing a report for a report, revising a PRD, peer review, self-revision</li>
+      <li>✗ Treating editing as a chance to "prove I'm smarter"</li>
+      <li>✗ Editing the author's style into your taste (over-editing), or only liking without cutting (under-editing)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>A. Scott Berg</span>, Max Perkins: Editor of Genius · <span>Betsy Lerner</span>, The Forest for the Trees · <span>Ye Shengtao</span> (the editor who reads as the reader)</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Take a piece by someone else (or your own draft from a week ago) and write three edit notes, all phrased as questions ("Could you...", "Would it help to..."), with no "change this" or "rewrite." Question: Perkins's "handmaiden" versus Lish reshaping Carver—who's right? Who gets to decide where an editor's overreach begins?</p>
+  </div>
+</section>
+
+<div class="deep-head">Going Deeper</div>
+
+<details><summary>Don't "kill your darlings" and "sentences should have rhythm and color" contradict each other?</summary><div>No, because the test is "whom does it serve." A good sentence and a darling may be equally lovely; the difference is function. Cut a good sentence and the meaning collapses, the emotion breaks, the rhythm limps; cut a darling and only the author feels the loss, the reader none. Color isn't a sin—color kept to show off is. A practical check: lift the line out and read what remains; if it flows, even reads cleaner, it was a darling. So this rule doesn't oppose fine prose—it opposes dressing the author's vanity up as the reader's need.</div></details>
+
+<details><summary>Self-editing is hardest because you're both author and editor. What lets you cut yourself?</summary><div>The key is manufacturing "distance" so the critical you isn't the writing you. Three mechanisms: <strong>time</strong>—set it aside a night or a week, and once the heat fades the darlings reveal themselves; <strong>change the medium</strong>—print it, switch fonts, read it aloud (the ear is more honest than the eye; clunky sentences expose themselves on a read); <strong>switch roles</strong>—declare "right now I'm the reader, not the author," even picture a specific, picky reader across the table. All of it separates the creating self from the judging self in time or space, so they can't be present at once to cover for each other.</div></details>
+
+<details><summary>AI can already do copyediting (grammar, consistency, typos). What editing work is left for humans?</summary><div>AI takes over precisely the micro layer and mechanical consistency—rule-bound work—which is good; it frees humans from proofreading. What's left is the three things AI still does poorly: <strong>structural judgment</strong>, deciding "should this section exist at all," which needs the whole intent and the reader's situation; <strong>preserving voice</strong>—AI tends to sand everything into the same smooth "correct," erasing the author's individuality, and spotting and keeping a unique voice is human work; and <strong>the author relationship</strong>—asking, empathizing, restraint, which is interpersonal. In short: AI is the copyeditor; the human is the developmental editor and the one who knows the "handmaiden" line.</div></details>
+
+<details><summary>Mechanical consistency goes to tools, but "voice consistency" resists automation. What even is consistent voice?</summary><div>Voice isn't single-word choice; it's a whole <strong>posture</strong>: preferred sentence length, distance to the reader (do you say "you"?), the ratio of serious to playful, first person or not, the nerve to keep dashes and short sentences. It's consistent because a stable "person speaking" sits behind it. It resists automation because it emerges from countless micro-decisions with no enumerable rules; changing one word won't break it, but converting all the spoken cadences to formal prose will. The way to guard voice isn't a rule table—it's repeatedly asking "is this the same person speaking?" and deliberately keeping the author's signature little habits while you revise.</div></details>
+
+<details><summary>How does the craft of editing shift across the page, the talk, and video?</summary><div>Structural editing is universal and most important in all three. The differences are in the micro layer and how you test. <strong>Text</strong> works on the eye and can be re-read, so consistency, terms, and punctuation reward full polish. A <strong>talk</strong> works on the ear and can't be replayed, so editing serves hearing—cut subordinate clauses, split long sentences, swap jargon for plain words, use repetition as a memory hook; the test is to stand up and read it aloud. <strong>Video/audio</strong> adds a layer where "the cut is the edit"—you delete not just words but time and pauses, pace is set by duration, and the darling here is "the great shot/bit you can't bear to cut." The more linear and un-rewindable the medium, the higher the payoff of ruthless cutting.</div></details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to the Writing Daily index</a>
+</div>
+
+<footer>BigCat · Writing Daily · Day 41 · 2026</footer>
+
+</div>
+</body>
+</html>
