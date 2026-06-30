@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>写作与表达：视觉叙事与漫画 — Day 43</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"原句 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"改后 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* 可视化：分镜节奏 */
+.panels{background:#f8f6f1;padding:24px 20px 18px;margin:18px 0;border-radius:2px}
+.panels .rlabel{font-size:0.8rem;font-weight:700;letter-spacing:1px;color:#8a7a4a;text-transform:uppercase;margin-bottom:8px;font-family:Georgia,serif}
+.panels .strip{display:flex;gap:6px;align-items:stretch;margin-bottom:16px}
+.panels .strip:last-of-type{margin-bottom:0}
+.panels .panel{border:1.5px solid #1f1f1f;background:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-family:Georgia,serif;font-size:0.74rem;color:#6a6a6a;padding:6px 4px;min-height:58px;border-radius:1px}
+.panels .panel.beat{background:#1f1f1f;color:#e8dcb0;font-weight:700}
+.panels .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:6px;font-family:Georgia,serif;text-align:center}
+
+/* 可视化：视觉层级 */
+.hier{background:#f8f6f1;padding:22px 16px 16px;margin:18px 0;border-radius:2px}
+.hier .cols{display:flex;gap:18px;justify-content:center;align-items:flex-start}
+.hier .col{flex:1;max-width:300px;text-align:center}
+.hier .htitle{font-size:0.78rem;font-weight:700;letter-spacing:1px;color:#8a7a4a;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.hier .grid{display:flex;flex-wrap:wrap;gap:5px;justify-content:center}
+.hier .box{width:44px;height:28px;border:1px solid #b8b0a0;background:#fff;border-radius:2px}
+.hier .box.dim{opacity:0.3}
+.hier .box.focus{background:#1f1f1f;border-color:#1f1f1f;box-shadow:0 0 0 2px #d8c98a}
+.hier .note{font-size:0.82rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif}
+.hier .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:14px;font-family:Georgia,serif;text-align:center}
+
+.deep-head{font-size:1.2rem;font-weight:700;margin:48px 0 16px;text-align:center;color:#1f1f1f;letter-spacing:1px}
+details{background:#fff;border:1px solid #d8d0bc;border-radius:2px;margin:10px 0;padding:4px 16px}
+details summary{cursor:pointer;font-weight:600;color:#1f1f1f;padding:10px 0;font-size:1rem}
+details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .hier .cols{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 43 · 2026.06.30</div>
+  <h1>写作与表达：视觉叙事与漫画<span class="topic">图文关系 · 分镜与节奏 · 信息图叙事 · 图像小说</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">你画的架构图没人看懂，你的 slide 标题和图说着同一句话，你的 dashboard 像一堵数据墙——问题往往不在画图工具，而在不懂「视觉叙事」。漫画家研究了一个世纪：图与文怎么配合、画面怎么排出节奏、一格图怎么扛起一件事。今天我们向漫画与图像小说偷师，把这套手艺搬进技术人的架构图、slide 与 pitch。</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>图文关系：各司其职，而非互相复述</h2>
+  <div class="en-name">Word &amp; Image — Make Them Do Different Work</div>
+  <span class="tag">图文配合 · McCloud</span>
+
+  <div class="section">
+    <div class="label">一句话原则</div>
+    <p>图和文不是互相重复，是互相补足。最弱的配合是<strong>文字说一遍、图再画一遍</strong>；最强的是<strong>文字给结论、图给证据，缺一不可</strong>。一张 slide 也是一格漫画：标题与图各干一半的活。</p>
+    <div class="quote">
+      "In the inter-dependent combination, words and pictures go hand in hand to convey an idea that neither could convey alone."
+      <span class="source">— Scott McCloud, Understanding Comics (1993)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：在「互依」式的配合里，文字与图像携手传达一个谁都无法单独表达的意思。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>图擅长「即刻的感受与全局」，文字擅长「精确与因果」。把两者叠在一起说同一件事，等于浪费了一个通道。McCloud 把图文配合分成几类：最差的是<strong>同义反复</strong>（文字与图说一模一样），最好的是<strong>互依</strong>（各补对方所短）。技术表达里，这条尤其值钱——一页 slide、一张架构图、一段配图的文档，本质都是「图 + 文」的一格，问题永远是：这两半在不在干不同的活？</p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">slide 标题「季度营收」，下面一张营收柱状图。（标题只是图的名字，零信息增量）</span>
+      <span class="after">标题「Q3 营收首次被单一大客户主导」，图里把占比最高那根柱子标红。（文字给结论，图给证据）</span>
+    </div>
+    <div class="example">
+      <span class="before">Title "Monthly Active Users" above a line chart. (The title just names the chart.)</span>
+      <span class="after">Title "MAU growth stalled in March—here's the week it flatlined," with the plateau highlighted. (Words say what; the picture shows where.)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ slide、文档配图、架构图标注、README 截图、pitch deck</li>
+      <li>✗ 图注复述图里已有的内容（「如图所示，这是一个柱状图」）</li>
+      <li>✗ 图只是装饰（stock photo），不承担任何信息</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Scott McCloud</span>《Understanding Comics》（图文配合分类） · <span>Will Eisner</span>《Comics and Sequential Art》 · <span>Garr Reynolds</span>《Presentation Zen》（一页一句话 + 一图）</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>翻出最近一份 deck，逐页问：「标题和图是不是在说同一件事？」把每页标题改成一句「结论句」，让图退为佐证。思考题：如果一页 slide 去掉文字仍懂、或去掉图仍懂，是不是说明你本只需要其中一个？</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>分镜与节奏：留白处，读者自己补</h2>
+  <div class="en-name">Panels, Gutters &amp; Pacing — Closure</div>
+  <span class="tag">节奏 · 闭合</span>
+
+  <div class="section">
+    <div class="label">一句话原则</div>
+    <p>画面之间的「空隙（gutter）」不是空的——读者的大脑在那里自动补全。<strong>节奏由你「切几格、每格多大」决定：小格快，大格慢，最重的一刻给最大的一格。</strong></p>
+    <div class="quote">
+      "Comics panels fracture both time and space, offering a jagged, staccato rhythm of unconnected moments. But closure allows us to connect these moments and mentally construct a continuous, unified reality."
+      <span class="source">— Scott McCloud, Understanding Comics (1993)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：漫画的画格把时间与空间切碎，给出一串互不相连、断续顿挫的瞬间。但「闭合」让我们把这些瞬间接起来，在脑中构建出一个连续、统一的现实。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>McCloud 把它叫<strong>闭合（closure）</strong>：你只给两格，读者会自己脑补中间发生的事。这意味着——你不必画出一切，留白反而让读者参与进来。节奏则是分镜的副产品：四格等大像节拍器，三小一大才有重音。一套 slide、一段 demo、一篇长文的分段，全是分镜——你切在哪、停在哪，决定了别人记住哪。</p>
+
+    <div class="panels">
+      <div class="rlabel">塞满：一格讲完，无节奏</div>
+      <div class="strip">
+        <div class="panel" style="flex:1">整张架构图 30 个组件 + 所有箭头，从头念到尾</div>
+      </div>
+      <div class="rlabel">分镜：每格一个 beat，重点格最大</div>
+      <div class="strip">
+        <div class="panel" style="flex:1">①空骨架</div>
+        <div class="panel" style="flex:1">②加数据层</div>
+        <div class="panel" style="flex:1">③加服务层</div>
+        <div class="panel beat" style="flex:2">④高亮今天要讲的那条链路</div>
+      </div>
+      <div class="caption">把一堵信息墙拆成有节奏的画格——读者在格与格之间自己接上</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">一页 slide 塞下整张架构图（30 个组件、所有箭头），讲者从头念到尾。（无分镜、无节奏，听众瞬间过载）</span>
+      <span class="after">拆成四格：①先给空骨架 ②加数据层 ③加服务层 ④高亮今天要讲的那条链路。每格一个变化，听众的脑子自己接上。</span>
+    </div>
+    <div class="example">
+      <span class="before">A 12-step onboarding flow crammed into one diagram, all arrows at once.</span>
+      <span class="after">Reveal three steps at a time; give the one hard step its own full slide. The gutters between slides do the explaining for you.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ slide 序列、demo 脚本、教程、长文分段、技术博客的配图序列</li>
+      <li>✗ 一格塞满（信息墙没有 gutter，读者无处喘息、无从参与）</li>
+      <li>✗ 格格等大（没有重音，听众抓不到哪一刻最重要）</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Scott McCloud</span>《Understanding Comics》（closure / 画格转换六类） · <span>Will Eisner</span>《Comics and Sequential Art》（论 timing） · <span>Nancy Duarte</span>《Resonate》（slide 即分镜，呼应 Day 3）</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>把你下次要讲的一个复杂概念，强行拆成 4–6 「格」：每格只放一个动作或一个变化，最关键那格画得最大。思考题：漫画靠「不画」让读者参与——你的 slide / 文档里，哪些是你画多了、本该留给读者补的？</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>信息图叙事：图是给眼睛的工具，不是数据的墙</h2>
+  <div class="en-name">Infographic Narrative — Hierarchy &amp; a Reading Path</div>
+  <span class="tag">数据可视化 · Cairo</span>
+
+  <div class="section">
+    <div class="label">一句话原则</div>
+    <p>信息图不是「把数据画出来」，是<strong>替读者的眼睛先看一遍，再把看到的结论铺成一条阅读路径</strong>。没有焦点、没有顺序的图，等于一堵墙。</p>
+    <div class="quote">
+      "The first and main goal of any graphic and visualization is to be a tool for your eyes and brain to perceive what lies beyond their natural reach."
+      <span class="source">— Alberto Cairo, The Functional Art (2013)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：任何图表与可视化的首要目标，是成为你的眼睛与大脑的工具，去感知那些超出它们天生能及之处的东西。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>一张图有没有用，看它有没有<strong>视觉层级</strong>与<strong>阅读路径</strong>。30 个同样粗细的方框、一团乱箭头，眼睛无处落脚；而把主路径加粗、次要组件灰化、关键节点编号，读者三秒就知道「从哪看起、看什么」。Tufte 的名言是「above all else, show the data」，但它不是「show all the data」——是让该被看见的被看见，让噪音退场。</p>
+
+    <div class="hier">
+      <div class="cols">
+        <div class="col">
+          <div class="htitle">无层级</div>
+          <div class="grid">
+            <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+            <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+            <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+          </div>
+          <div class="note">每块同等粗细 → 眼睛无处落脚</div>
+        </div>
+        <div class="col">
+          <div class="htitle">有层级</div>
+          <div class="grid">
+            <div class="box dim"></div><div class="box dim"></div><div class="box focus"></div><div class="box dim"></div>
+            <div class="box dim"></div><div class="box dim"></div><div class="box dim"></div><div class="box dim"></div>
+            <div class="box dim"></div><div class="box dim"></div><div class="box dim"></div><div class="box dim"></div>
+          </div>
+          <div class="note">一个焦点 + 背景降噪 → 一眼抓到重点</div>
+        </div>
+      </div>
+      <div class="caption">同样的元素，差别只在「谁被强调」——强调即叙事</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">架构图：30 个等大方框、密密麻麻的箭头，没有主次。（「什么都画了」＝「什么都没强调」）</span>
+      <span class="after">主调用链加粗高亮，旁路组件降为灰色背景，关键三步标 1→2→3。读者顺着粗线走，一眼抓到主干。</span>
+    </div>
+    <div class="example">
+      <span class="before">A dashboard with 18 equal-weight metrics tiled in a grid.</span>
+      <span class="after">One hero number set large, the rest shrunk to small context. The eye lands first on what actually drives the decision.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ 架构图、系统图、dashboard、数据 deck、白板讲解</li>
+      <li>✗ 所有指标同等突出（＝都不突出）；图没有阅读起点</li>
+      <li>✗ 漂亮但误导（截断 Y 轴、3D 饼图、樱桃挑选数据）</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Alberto Cairo</span>《The Functional Art》《The Truthful Art》 · <span>Edward Tufte</span>《The Visual Display of Quantitative Information》 · <span>Cole Knaflic</span>《Storytelling with Data》</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>拿你画过的最复杂的一张图，做三件事：① 找出唯一的主角（主路径 / 关键数字）并强化；② 把背景元素降噪（灰化、缩小）；③ 给一个明确的阅读起点。思考题：「客观完整地呈现所有数据」与「引导读者看见结论」之间，界线在哪？什么时候强调会变成误导？</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>图像小说：用一格图，扛起抽象的重量</h2>
+  <div class="en-name">The Graphic Novel — Show, Don't Tell, Made Literal</div>
+  <span class="tag">具象 · Show Don't Tell</span>
+
+  <div class="section">
+    <div class="label">一句话原则</div>
+    <p>图像小说证明了一件事：<strong>最沉重、最抽象的东西，常常靠一个具象画面才扛得住。</strong>「Show, don't tell」在这里是字面意义——别说「很悲惨」，给一格让人自己悲惨的画面。</p>
+    <div class="quote">
+      "Pictures are received information. We need no formal education to 'get the message.' ... Writing is perceived information. It takes time and specialized knowledge to decode the abstract symbols of language."
+      <span class="source">— Scott McCloud, Understanding Comics (1993)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：图像是「接收型」的信息，不需任何专门训练就能「读懂」；文字是「感知型」的信息，要花时间和专门知识，才能解码语言这套抽象符号。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>图像小说把「抽象的重量」压进具象。Spiegelman《Maus》用老鼠与猫画大屠杀，一个隐喻扛起整段历史；Satrapi《Persepolis》用极简黑白画出一个孩子眼里的革命。它们的共同手艺是：<strong>不解释痛苦，只给你一个画面，让你自己痛</strong>。技术表达里，这对应「一个能扛起整个战略的核心画面或比喻」——乔布斯发布会上那一张图，胜过十页 bullet。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">那个季度团队士气很低落，大家都很疲惫。（抽象形容词，读者无感）</span>
+      <span class="after">那个季度，站会从十分钟拖成四十分钟，没人再抢着认领任务；周五的庆功蛋糕在冰箱里放到周一，没人动。（给画面，让读者自己读出「低落」）</span>
+    </div>
+    <div class="example">
+      <span class="before">Our legacy system was hard to maintain.</span>
+      <span class="after">Every deploy, two engineers stayed past midnight—one watching the logs, one holding the rollback script like a fire extinguisher.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ keynote 的核心图、个人叙事 / promo packet、复盘、对外故事、用一个比喻收束全文</li>
+      <li>✗ 用抽象形容词代替画面（「非常困难」「极具挑战」「降本增效」）</li>
+      <li>✗ 一次塞十个比喻——一篇 / 一讲只需一个扛得住的核心意象</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">关键参考</div>
+    <p class="refs"><span>Art Spiegelman</span>《Maus》（1992 普利策奖） · <span>Marjane Satrapi</span>《Persepolis》 · <span>Will Eisner</span>《A Contract with God》《Comics and Sequential Art》 · <span>Scott McCloud</span>《Understanding Comics》</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>找你写过的一句抽象判断（「团队很高效」「项目风险很大」），把它换成一个具象画面或一个比喻——一个读者能「看见」的东西。思考题：图像即刻、文字精确——在一个面向技术读者、要求精确的场合，什么时候你该牺牲一点精确，换一个能被「看见」的画面？</p>
+  </div>
+</section>
+
+<div class="deep-head">深入思考</div>
+
+<details><summary>这套「视觉叙事」的手艺，搬到纯文字（没有任何图）的场合还成立吗？</summary><div>成立，而且变成隐喻。漫画的三个核心机制在无图时各有对应：<strong>分镜</strong>＝分段，你在哪断句、哪起新段，就是在切画格；<strong>gutter / 闭合</strong>＝留白，省略掉的过渡让读者自己补，反而更有参与感；<strong>视觉层级</strong>＝加粗、小标题、列表、句子长短，是没有图时的「强调」工具。换句话说，即便一个字的图都不画，你仍在做视觉叙事——只是画布换成了文字的排布。读者的眼睛永远先看「形状」，再读「内容」，这一点不因有没有图而改变。</div></details>
+
+<details><summary>中文和英文在图文配合上，有差异吗？</summary><div>原则一致，质地不同。汉字本身比拉丁字母更「图像化」——方块结构、书法的造型、竖排的可能，使中文天然更接近「图」，读者对图文混排、对字本身的视觉重量也更敏感。古代的「左图右史」、信笺的版式，都是成熟的图文传统。但底层的 closure、层级、节奏完全通用：无论中英，读者都靠脑补连接画面、靠对比定位重点。差别更多在执行层——中文标题字数更紧、排版更讲对仗与留白，英文靠字号与字重拉层级。先通原理，再调手感。</div></details>
+
+<details><summary>AI 已经能生成图表和配图了，视觉叙事还需要人吗？</summary><div>更需要。AI 解决的是「画出来」，没解决「画给谁看、强调什么、留什么白」。它能秒出一张架构图，但不知道今天这场会要高亮哪条链路；能配十张漂亮插画，却常常是与信息无关的装饰——正好踩中 Card 1 的「图只是装饰」之坑。视觉叙事的难点从来不是绘制，是<strong>判断</strong>：哪个是主角、读者的眼睛该怎么走、哪里该省略让人参与。这些是叙事决策，AI 可以执行，方向得人给。AI 越能画，会「指挥」画的人就越值钱。</div></details>
+
+<details><summary>漫画「留白让读者参与」，会不会和技术文档「必须精确无歧义」冲突？</summary><div>分场合，关键是区分「消除歧义」与「包办思考」。<strong>API 文档、操作指南、事故报告</strong>不能留白——这里的 gutter 是 bug，每一步都要钉死，歧义会出事。<strong>愿景、pitch、教学、对外叙事</strong>则需要留白——把每个推论都喂到嘴边，读者反而不投入，自己走完最后一步才记得牢。所以不是「精确 vs 参与」二选一，而是按文体定档位：要被执行的，零留白；要被相信、被记住的，留一道缝让读者自己跨过去。</div></details>
+
+<details><summary>文、讲、视频三种载体，这套视觉手艺各自怎么落地？</summary><div><strong>文</strong>：版式即分镜——用分段、配图序列、加粗与小标题搭出层级和节奏，图与文各司其职（呼应 Card 1）。<strong>讲</strong>：slide 就是画格，节奏靠逐步揭示（reveal）控制，一页一个 beat，最重的一刻给一页大图（Card 2 + Duarte Day 3）。<strong>视频</strong>：进入真正的分镜，多一层「画面与解说的配合」——眼睛看到的别和耳朵听到的打架，且画面要主动承担解说没说的那一半。一条线索贯穿三者：<strong>载体越线性、越依赖即时理解，视觉叙事的回报就越高</strong>。</div></details>
+
+<div class="nav">
+  <a href="index.html">← 回到每日写作目录</a>
+</div>
+
+<footer>BigCat · Writing Daily · Day 43 · 2026</footer>
+
+</div>
+</body>
+</html>

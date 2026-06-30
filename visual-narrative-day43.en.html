@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: Visual Narrative &amp; Comics — Day 43</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Visualization: panels & pacing */
+.panels{background:#f8f6f1;padding:24px 20px 18px;margin:18px 0;border-radius:2px}
+.panels .rlabel{font-size:0.8rem;font-weight:700;letter-spacing:1px;color:#8a7a4a;text-transform:uppercase;margin-bottom:8px;font-family:Georgia,serif}
+.panels .strip{display:flex;gap:6px;align-items:stretch;margin-bottom:16px}
+.panels .strip:last-of-type{margin-bottom:0}
+.panels .panel{border:1.5px solid #1f1f1f;background:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-family:Georgia,serif;font-size:0.74rem;color:#6a6a6a;padding:6px 4px;min-height:58px;border-radius:1px}
+.panels .panel.beat{background:#1f1f1f;color:#e8dcb0;font-weight:700}
+.panels .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:6px;font-family:Georgia,serif;text-align:center}
+
+/* Visualization: visual hierarchy */
+.hier{background:#f8f6f1;padding:22px 16px 16px;margin:18px 0;border-radius:2px}
+.hier .cols{display:flex;gap:18px;justify-content:center;align-items:flex-start}
+.hier .col{flex:1;max-width:300px;text-align:center}
+.hier .htitle{font-size:0.78rem;font-weight:700;letter-spacing:1px;color:#8a7a4a;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.hier .grid{display:flex;flex-wrap:wrap;gap:5px;justify-content:center}
+.hier .box{width:44px;height:28px;border:1px solid #b8b0a0;background:#fff;border-radius:2px}
+.hier .box.dim{opacity:0.3}
+.hier .box.focus{background:#1f1f1f;border-color:#1f1f1f;box-shadow:0 0 0 2px #d8c98a}
+.hier .note{font-size:0.82rem;color:#5a5a5a;font-style:italic;margin-top:10px;font-family:Georgia,serif}
+.hier .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:14px;font-family:Georgia,serif;text-align:center}
+
+.deep-head{font-size:1.2rem;font-weight:700;margin:48px 0 16px;text-align:center;color:#1f1f1f;letter-spacing:1px}
+details{background:#fff;border:1px solid #d8d0bc;border-radius:2px;margin:10px 0;padding:4px 16px}
+details summary{cursor:pointer;font-weight:600;color:#1f1f1f;padding:10px 0;font-size:1rem}
+details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .hier .cols{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 43 · 2026.06.30</div>
+  <h1>Writing &amp; Expression: Visual Narrative &amp; Comics<span class="topic">Word &amp; Image · Panels &amp; Pacing · Infographic Narrative · The Graphic Novel</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">Nobody can read your architecture diagram; your slide title and its chart say the same thing twice; your dashboard is a wall of data. The problem is rarely the drawing tool—it's that you've never been taught visual narrative. Cartoonists have studied it for a century: how words and pictures cooperate, how to pace a sequence of panels, how one frame can carry a whole idea. Today we steal that craft from comics and graphic novels and move it into the engineer's diagrams, slides, and pitches.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Word &amp; Image: Make Them Do Different Work</h2>
+  <div class="en-name">Don't Let Words and Pictures Repeat Each Other</div>
+  <span class="tag">Word/Image · McCloud</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Words and pictures shouldn't repeat each other; they should complete each other. The weakest pairing is <strong>the text saying it, then the picture drawing the same thing</strong>; the strongest is <strong>the words giving the conclusion and the picture giving the evidence—neither dispensable</strong>. A slide is a single comics panel: title and image each do half the job.</p>
+    <div class="quote">
+      "In the inter-dependent combination, words and pictures go hand in hand to convey an idea that neither could convey alone."
+      <span class="source">— Scott McCloud, Understanding Comics (1993)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Pictures excel at the instant impression and the whole; words excel at precision and causation. Layering the two to say the same thing wastes a channel. McCloud sorts word/picture pairings into categories: the worst is <strong>duo-specific</strong> (text and image say exactly the same thing), the best is <strong>interdependent</strong> (each supplies what the other lacks). In technical communication this earns its keep—a slide, an architecture diagram, an illustrated doc are all "image + text" panels, and the question is always: are the two halves doing different jobs?</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">Slide title "Quarterly Revenue" above a revenue bar chart. (The title just names the chart—zero new information.)</span>
+      <span class="after">Title "Q3 revenue is dominated by a single customer for the first time," with the tallest bar flagged red. (Words give the conclusion; the picture gives the evidence.)</span>
+    </div>
+    <div class="example">
+      <span class="before">Title "Monthly Active Users" above a line chart. (The title just names the chart.)</span>
+      <span class="after">Title "MAU growth stalled in March—here's the week it flatlined," with the plateau highlighted. (Words say what; the picture shows where.)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Slides, illustrated docs, labeled architecture diagrams, README screenshots, pitch decks</li>
+      <li>✗ Captions that restate what the image already shows ("As shown, this is a bar chart")</li>
+      <li>✗ Images that are mere decoration (stock photos) carrying no information</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Scott McCloud</span>, Understanding Comics (word/picture combinations) · <span>Will Eisner</span>, Comics and Sequential Art · <span>Garr Reynolds</span>, Presentation Zen (one line + one image per slide)</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Pull up a recent deck and ask, page by page: "Are the title and the image saying the same thing?" Rewrite each title into a conclusion sentence and demote the image to evidence. Reflection: if a slide still reads with the words removed, or still reads with the image removed, doesn't that mean you only ever needed one of them?</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Panels &amp; Pacing: In the Gutter, the Reader Fills In</h2>
+  <div class="en-name">Closure—You Don't Have to Draw Everything</div>
+  <span class="tag">Pacing · Closure</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>The gap between panels—the gutter—is not empty; the reader's mind fills it in automatically. <strong>Pacing is set by how many panels you cut and how big each one is: small panels are fast, big panels are slow, and the heaviest moment gets the biggest frame.</strong></p>
+    <div class="quote">
+      "Comics panels fracture both time and space, offering a jagged, staccato rhythm of unconnected moments. But closure allows us to connect these moments and mentally construct a continuous, unified reality."
+      <span class="source">— Scott McCloud, Understanding Comics (1993)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>McCloud calls it <strong>closure</strong>: give two panels, and the reader imagines what happened in between. That means you don't have to draw everything—the white space actually pulls the reader in. Pacing is a by-product of paneling: four equal frames tick like a metronome; three small and one big create a downbeat. A slide deck, a demo, the paragraphing of a long essay are all paneling—where you cut and where you pause decides what people remember.</p>
+
+    <div class="panels">
+      <div class="rlabel">Crammed: one panel, no rhythm</div>
+      <div class="strip">
+        <div class="panel" style="flex:1">Whole architecture diagram—30 components + every arrow, read top to bottom</div>
+      </div>
+      <div class="rlabel">Paneled: one beat each, biggest frame for the key moment</div>
+      <div class="strip">
+        <div class="panel" style="flex:1">① bare skeleton</div>
+        <div class="panel" style="flex:1">② add data layer</div>
+        <div class="panel" style="flex:1">③ add service layer</div>
+        <div class="panel beat" style="flex:2">④ highlight today's path</div>
+      </div>
+      <div class="caption">Break a wall of information into paced frames—the reader connects them across the gutters</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">One slide crams in the entire architecture diagram (30 components, every arrow); the speaker reads it top to bottom. (No paneling, no rhythm—the audience overloads instantly.)</span>
+      <span class="after">Split into four panels: ① bare skeleton ② add the data layer ③ add the service layer ④ highlight the one path you're here to discuss. One change per frame; the audience's mind connects them.</span>
+    </div>
+    <div class="example">
+      <span class="before">A 12-step onboarding flow crammed into one diagram, all arrows at once.</span>
+      <span class="after">Reveal three steps at a time; give the one hard step its own full slide. The gutters between slides do the explaining for you.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Slide sequences, demo scripts, tutorials, long-form paragraphing, illustrated blog posts</li>
+      <li>✗ One crammed panel (a wall with no gutter—no room to breathe, no way to participate)</li>
+      <li>✗ All panels equal size (no downbeat—the audience can't tell which moment matters most)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Scott McCloud</span>, Understanding Comics (closure / six panel transitions) · <span>Will Eisner</span>, Comics and Sequential Art (on timing) · <span>Nancy Duarte</span>, Resonate (slides as panels—see Day 3)</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Take a complex concept you'll soon present and force it into 4–6 "panels": one action or one change per panel, the most important one drawn largest. Reflection: comics use what they <em>don't</em> draw to pull the reader in—in your slides and docs, what have you over-drawn that should have been left for the reader to fill in?</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Infographic Narrative: A Tool for the Eye, Not a Wall of Data</h2>
+  <div class="en-name">Hierarchy and a Reading Path</div>
+  <span class="tag">Data Viz · Cairo</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>An infographic isn't "drawing the data"—it's <strong>seeing on the reader's behalf first, then laying the conclusion along a reading path</strong>. A chart with no focal point and no order is just a wall.</p>
+    <div class="quote">
+      "The first and main goal of any graphic and visualization is to be a tool for your eyes and brain to perceive what lies beyond their natural reach."
+      <span class="source">— Alberto Cairo, The Functional Art (2013)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Whether a chart is useful comes down to <strong>visual hierarchy</strong> and a <strong>reading path</strong>. Thirty boxes of equal weight and a snarl of arrows leave the eye nowhere to land; bold the main path, gray out the secondary parts, number the key nodes, and the reader knows in three seconds "where to start, what to look at." Tufte's line is "above all else, show the data"—but that is not "show <em>all</em> the data." It means: let what deserves to be seen be seen, and send the noise away.</p>
+
+    <div class="hier">
+      <div class="cols">
+        <div class="col">
+          <div class="htitle">No hierarchy</div>
+          <div class="grid">
+            <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+            <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+            <div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div>
+          </div>
+          <div class="note">Every box equal → the eye has nowhere to land</div>
+        </div>
+        <div class="col">
+          <div class="htitle">With hierarchy</div>
+          <div class="grid">
+            <div class="box dim"></div><div class="box dim"></div><div class="box focus"></div><div class="box dim"></div>
+            <div class="box dim"></div><div class="box dim"></div><div class="box dim"></div><div class="box dim"></div>
+            <div class="box dim"></div><div class="box dim"></div><div class="box dim"></div><div class="box dim"></div>
+          </div>
+          <div class="note">One focus + quieted background → the point lands at a glance</div>
+        </div>
+      </div>
+      <div class="caption">Same elements—the only difference is what's emphasized. Emphasis is narrative.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">Architecture diagram: 30 equal-sized boxes, a snarl of arrows, no hierarchy. ("Drew everything" = "emphasized nothing.")</span>
+      <span class="after">Bold and highlight the main call chain, drop side components to a gray background, number the key three steps 1→2→3. The reader follows the heavy line and grasps the trunk at a glance.</span>
+    </div>
+    <div class="example">
+      <span class="before">A dashboard with 18 equal-weight metrics tiled in a grid.</span>
+      <span class="after">One hero number set large, the rest shrunk to small context. The eye lands first on what actually drives the decision.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Architecture diagrams, system diagrams, dashboards, data decks, whiteboard walkthroughs</li>
+      <li>✗ Emphasizing every metric equally (= emphasizing none); a chart with no starting point</li>
+      <li>✗ Pretty but misleading (truncated Y-axis, 3D pie charts, cherry-picked data)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Alberto Cairo</span>, The Functional Art / The Truthful Art · <span>Edward Tufte</span>, The Visual Display of Quantitative Information · <span>Cole Knaflic</span>, Storytelling with Data</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Take the most complex chart you've ever drawn and do three things: ① find the single protagonist (main path / key number) and strengthen it; ② quiet the background (gray it, shrink it); ③ give one clear starting point. Reflection: where's the line between "present all the data objectively and completely" and "guide the reader to the conclusion"? When does emphasis tip into distortion?</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>The Graphic Novel: One Frame Carries the Abstract Weight</h2>
+  <div class="en-name">Show, Don't Tell, Made Literal</div>
+  <span class="tag">Concrete · Show Don't Tell</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Graphic novels prove one thing: <strong>the heaviest, most abstract material often needs a single concrete image to bear it.</strong> "Show, don't tell" here is literal—don't say "it was tragic," give one frame that makes the reader feel the tragedy.</p>
+    <div class="quote">
+      "Pictures are received information. We need no formal education to 'get the message.' ... Writing is perceived information. It takes time and specialized knowledge to decode the abstract symbols of language."
+      <span class="source">— Scott McCloud, Understanding Comics (1993)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The graphic novel compresses abstract weight into the concrete. Spiegelman's <em>Maus</em> draws the Holocaust as mice and cats—one metaphor carrying an era of history; Satrapi's <em>Persepolis</em> renders a revolution through a child's eyes in stark black and white. Their shared craft: <strong>don't explain the pain—give one image and let the reader feel it</strong>. In technical communication this maps to "one core image or metaphor that can carry an entire strategy"—the single picture in a Jobs keynote that beat ten pages of bullets.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">That quarter, team morale was low and everyone was exhausted. (Abstract adjectives—the reader feels nothing.)</span>
+      <span class="after">That quarter, standup stretched from ten minutes to forty, and nobody volunteered for tasks anymore; the Friday celebration cake sat in the fridge until Monday, untouched. (Give the image; let the reader read "low morale" off it.)</span>
+    </div>
+    <div class="example">
+      <span class="before">Our legacy system was hard to maintain.</span>
+      <span class="after">Every deploy, two engineers stayed past midnight—one watching the logs, one holding the rollback script like a fire extinguisher.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ The hero image in a keynote, personal narrative / promo packet, post-mortems, external storytelling, closing an essay on one metaphor</li>
+      <li>✗ Abstract adjectives in place of an image ("extremely difficult," "highly challenging," "drive efficiency")</li>
+      <li>✗ Ten metaphors at once—one piece, one talk needs a single image strong enough to hold</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Art Spiegelman</span>, Maus (1992 Pulitzer) · <span>Marjane Satrapi</span>, Persepolis · <span>Will Eisner</span>, A Contract with God / Comics and Sequential Art · <span>Scott McCloud</span>, Understanding Comics</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Find one abstract judgment you've written ("the team is highly effective," "the project is high-risk") and swap it for a concrete image or metaphor—something the reader can actually "see." Reflection: pictures are instant, words are precise—in a setting aimed at technical readers that demands precision, when should you trade a little precision for an image that can be "seen"?</p>
+  </div>
+</section>
+
+<div class="deep-head">Going Deeper</div>
+
+<details><summary>Does this "visual narrative" craft still hold in pure-text settings with no images at all?</summary><div>It does—and it turns into metaphor. The three core mechanisms of comics each have a no-image counterpart: <strong>paneling</strong> = paragraphing—where you break and where you start a new section is where you cut a frame; <strong>gutter / closure</strong> = white space—the omitted transition the reader fills in, which actually deepens engagement; <strong>visual hierarchy</strong> = bold, subheads, lists, sentence length—your "emphasis" tools when there's no picture. In other words, even without a single drawn image you're still doing visual narrative; the canvas is just the arrangement of words. The reader's eye always sees the "shape" before reading the "content," image or no image.</div></details>
+
+<details><summary>Is there a difference between Chinese and English in how words and pictures combine?</summary><div>The principles are the same; the texture differs. Chinese characters are more "pictorial" than the Latin alphabet—their block structure, calligraphic form, and the option of vertical layout make Chinese feel closer to "image," and readers are more sensitive to mixed text/picture layouts and to the visual weight of the characters themselves. The classical "pictures left, text right" and the layout of letter-paper are mature word/image traditions. But closure, hierarchy, and pacing carry across fully: in either language, readers connect frames by inference and locate emphasis by contrast. The difference is mostly at the execution layer—Chinese titles run tighter and prize parallelism and white space; English pulls hierarchy through size and weight. Learn the principle first, then tune the feel.</div></details>
+
+<details><summary>AI can already generate charts and illustrations—is human visual narrative still needed?</summary><div>More than ever. AI solves "draw it," not "draw it for whom, emphasize what, leave what blank." It can produce an architecture diagram in a second, but it doesn't know which path today's meeting needs to highlight; it can attach ten pretty illustrations, often unrelated to the message—stepping straight into Card 1's "image as decoration" trap. The hard part of visual narrative was never the rendering; it's <strong>judgment</strong>: who's the protagonist, how the reader's eye should travel, where to omit so the reader participates. These are narrative decisions—AI can execute, but a human must set the direction. The better AI gets at drawing, the more valuable the person who directs it becomes.</div></details>
+
+<details><summary>Does comics' "white space invites the reader" conflict with technical docs' "must be precise and unambiguous"?</summary><div>It depends on the genre; the key is separating "removing ambiguity" from "doing the thinking for them." <strong>API docs, runbooks, incident reports</strong> can't leave gaps—here a gutter is a bug, every step must be nailed down, ambiguity causes outages. <strong>Vision, pitch, teaching, external storytelling</strong> need white space—spoon-feed every inference and the reader disengages; let them walk the last step and it sticks. So it isn't "precision vs. participation" as an either/or—it's setting the level by genre: zero gutter for what must be executed; leave one seam for what must be believed and remembered.</div></details>
+
+<details><summary>Text, talk, video—how does this visual craft land in each?</summary><div><strong>Text</strong>: layout is paneling—build hierarchy and rhythm with paragraphing, image sequences, bold, and subheads, with words and pictures doing different jobs (echoing Card 1). <strong>Talk</strong>: slides are panels, pacing is controlled by progressive reveal, one beat per slide, the heaviest moment given a full-page image (Card 2 + Duarte, Day 3). <strong>Video</strong>: now you're in true storyboarding, with one extra layer—coordinating image and narration so the eye and the ear don't fight, and the image actively carrying the half the narration leaves unsaid. One thread runs through all three: <strong>the more linear the medium and the more it depends on instant comprehension, the higher the return on visual narrative</strong>.</div></details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Daily index</a>
+</div>
+
+<footer>BigCat · Writing Daily · Day 43 · 2026</footer>
+
+</div>
+</body>
+</html>
