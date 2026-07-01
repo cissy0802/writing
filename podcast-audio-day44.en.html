@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: Podcasts &amp; Audio Scripts — Day 44</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"BEFORE ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal;font-size:0.8rem;letter-spacing:1px}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"AFTER ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal;font-size:0.8rem;letter-spacing:1px}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Visualization: audio narrative arc (action -> reflection loop) */
+.arc-vis{background:#f8f6f1;padding:24px 16px 16px;margin:18px 0;border-radius:2px}
+.arc-vis .arc-row{display:flex;align-items:flex-end;gap:6px;justify-content:center;flex-wrap:wrap}
+.arc-vis .beat{flex:1;min-width:70px;padding:12px 8px;background:#fff;border:1px solid #d8d0bc;text-align:center;font-family:Georgia,serif;font-size:0.82rem;color:#3a3a3a;border-radius:2px;line-height:1.4}
+.arc-vis .beat .bt{display:block;font-size:0.68rem;color:#8a7a4a;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px;font-weight:700}
+.arc-vis .beat.reflect{background:#1f1f1f;color:#fafafa;border-color:#1f1f1f;transform:translateY(-14px)}
+.arc-vis .beat.reflect .bt{color:#d8c98a}
+.arc-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:20px;font-family:Georgia,serif;text-align:center}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+details{background:#fff;border-left:3px solid #8a7a4a;margin:12px 0;padding:0;border-radius:2px;box-shadow:0 1px 4px rgba(0,0,0,0.05)}
+details summary{padding:16px 20px;font-weight:700;color:#1f1f1f;cursor:pointer;font-size:1rem;list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary:before{content:"▸ ";color:#8a7a4a}
+details[open] summary:before{content:"▾ "}
+details > div{padding:0 20px 18px;font-size:0.96rem;color:#3a3a3a;line-height:1.8}
+.deep-title{text-align:center;font-size:1.3rem;font-weight:700;margin:48px 0 8px;color:#1f1f1f}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .arc-vis .beat.reflect{transform:none}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 44 · 2026.07.01</div>
+  <h1>Writing &amp; Expression: Podcasts &amp; Audio Scripts<span class="topic">Conversation Design · Interview Prep · Sound Montage · Narrative Arc</span></h1>
+  <div class="date">BigCat's Writing Daily</div>
+  <p class="intro">A podcast is the only medium that crawls into someone's ear and keeps them company while they wash dishes or commute. No visuals, no rewind, pausable at any second—yet it's the fastest-growing form of expression of our time. Writing for audio follows different rules than writing for the page: you aren't writing words, you're designing a stretch of breathing, spoken language for one person's ear. This week, four tools from the backrooms of This American Life, Fresh Air, and Serial.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Conversation Design: Write for the Ear, Not the Eye</h2>
+  <div class="en-name">Write to be heard, not read</div>
+  <span class="tag">Spoken script · Intimate medium</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Print lets readers reread, skim, stop to look up a word; the ear gets none of that. Listeners get one pass, and one wandering thought loses them. So every line of an audio script must be <strong>one idea, sayable in a single breath, sounding like a real person</strong>. Don't write "in conclusion"—write "so." Don't nest three relative clauses—split them. And always read it aloud: if it's awkward to say, it's awkward to hear.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In Their Words</div>
+    <div class="quote">
+      "Writing is talking to someone else on paper. Write with the same clarity and warmth you'd use to talk to a friend."
+      <span class="source">— William Zinsser, On Writing Well</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">Audio pushes this line to its limit: you really are talking to one person—only the paper has become an ear.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The brain processes "seeing" and "hearing" through different channels. Written sentences build structure from punctuation and paragraphs; the ear can't catch a comma—it only follows tone, pause, and rhythm. So writing for the ear means translating visual structure into aural structure: short sentences instead of long, repetition instead of pronouns (don't say "the former," just say the word again), signposts ("first, one thing") instead of headings. Picture phoning one specific person, not addressing a crowd in a square.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">The aforementioned methodology yields a substantial improvement in user retention metrics.</span>
+      <span class="after">So here's what happened. We changed one thing—and people stopped leaving. Retention jumped.</span>
+    </div>
+    <div class="example">
+      <span class="before">Growth this quarter demonstrated a marked upward trajectory, principally attributable to channel optimization.</span>
+      <span class="after">We grew fast this quarter. Why? We changed one thing—where we ran the ads.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use · Common Traps</div>
+    <ul>
+      <li>✓ Podcast narration, voice memos, audio content, meeting openers—anything meant to be heard, not seen</li>
+      <li>✗ Reading a blog post or doc aloud verbatim—prose-voice is hard and tiring in the ear</li>
+      <li>Trap: a sentence with three stacked clauses—by the end, the listener forgot the start</li>
+      <li>Trap: "the aforementioned," "the latter," "said process"—written pronouns keep dropping the thread</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Practice · Reflection</div>
+    <p>Take a recent tech explanation or email and read it aloud on a recording. Play it back: which sentence broke your breath, which one left you unsure of the subject? Cut them short, make them spoken, record again. <strong>Reflection:</strong> where's the line between "sounds like talking" and "imprecise"? Does going spoken cost you accuracy?</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Interview Prep: A Good Question Makes Them Tell the Story</h2>
+  <div class="en-name">The question is the craft</div>
+  <span class="tag">Terry Gross · Question design</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>The quality of an interview is decided before you hit record—by your list of questions. Bad questions buy you "yes" and "it was fine"; good ones send the person back to the scene, into detail and feeling. Three moves: <strong>ask open, not yes/no; ask for the scene, not the verdict; then chase the "why."</strong> The best questions are usually the shortest.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In Their Words</div>
+    <div class="quote">
+      "The best, most reliable interview question I know is also the simplest: 'Tell me about yourself.' It gives people room to lead you to what matters to them."
+      <span class="source">— Terry Gross (host, Fresh Air), on the art of the interview</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Closed questions ("Were you nervous?") lock the answer into one word—and often smuggle in the answer you want, nudging the person to agree. Open questions ("Walk me back to that moment") hand them the wheel, and the details they give are usually better than any you'd have guessed. And silence is the most underrated tool: when they finish, don't rush to fill the gap—wait three seconds. People can't stand a void; they fill it themselves, and what spills out is often the truest thing they say. Half of Terry Gross's forty-year craft is the question; the other half is holding her tongue.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">You must have felt so proud, right? (closed + leading—only "yes")</span>
+      <span class="after">Take me back to the morning you shipped—where were you, what did you do first? (open + scene, pulls detail)</span>
+    </div>
+    <div class="example">
+      <span class="before">Were you nervous before the launch? (yes/no)</span>
+      <span class="after">Walk me through the last hour before you shipped. What were you thinking? (scene + emotion)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use · Common Traps</div>
+    <ul>
+      <li>✓ Podcast interviews, user research, 1:1s, gathering material before a promo case, journalistic digging</li>
+      <li>Trap: stuffing your own view into the question—they can only nod; you're interviewing yourself</li>
+      <li>Trap: firing three questions at once—they answer only the last</li>
+      <li>Trap: they hand you a golden line, and you kill the best silence by rushing in</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Practice · Reflection</div>
+    <p>Find one person and interview them for 10 minutes about one thing they lived through. Rule: no yes/no questions, and force yourself to count three seconds before speaking after each answer. Afterward, replay and mark their most vivid line—which question (or which silence) hooked it out? <strong>Reflection:</strong> last time you "asked" at work, were you really asking, or waiting for them to agree with you?</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Sound Montage: Let Them Hear It, Don't Narrate It</h2>
+  <div class="en-name">Show with sound, don't narrate</div>
+  <span class="tag">Made to Stick · Concreteness</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Audio's sharpest weapon isn't narration—it's <strong>actuality</strong>: ambient sound, the subject's own voice, a real recorded exchange. "The lab was tense" is a report; the listener must imagine it. Swap in the frantic keyboard, someone's sharp intake of breath, the person saying "my palms were soaked"—and tension goes straight into the ear. The rule: <strong>if sound can let people hear it firsthand, don't use narration to hand them the conclusion.</strong></p>
+  </div>
+
+  <div class="section">
+    <div class="label">In Their Words</div>
+    <div class="quote">
+      "Abstraction makes it harder to understand an idea and to remember it. Abstraction is the luxury of the expert."
+      <span class="source">— Chip &amp; Dan Heath, Made to Stick</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">Sound montage is anti-abstraction: don't give the conclusion, give the concrete, hearable evidence.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Narration "tells"; sound "shows"—the aural version of show, don't tell. When narration says "he was proud," you have to trust the narrator; when the subject's own voice shakes with feeling, you believe it involuntarily, because that's evidence, not a verdict. Montage goes further: juxtapose two sounds and let them collide into meaning. A worker says "this job fed three generations," cut immediately to the crashing steel gate of the plant shutting down—no word of explanation needed, the gap speaks for itself. Sound's credibility comes precisely from not passing through the hand of a narrator.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">(Narration) The factory floor was chaotic and loud, and the workers were under pressure.</span>
+      <span class="after">[SFX: clanging metal, a barked order] Worker (on tape): "In here you can't even hear yourself think."—don't say "loud," make them feel deafened.</span>
+    </div>
+    <div class="example">
+      <span class="before">(Narration) The team was overjoyed when the numbers came in.</span>
+      <span class="after">[TAPE: a gasp, then a room erupting] Engineer, voice cracking: "We... we actually did it."</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use · Common Traps</div>
+    <ul>
+      <li>✓ Narrative podcasts, documentaries, product stories, team retros (use a real meeting clip instead of a paraphrase)</li>
+      <li>✗ Pure news/tutorials—here clean narration beats a pile of sound effects</li>
+      <li>Trap: sprinkling effects as decoration, unrelated to the story—just noise added</li>
+      <li>Trap: capturing great tape, then having narration restate it—repetition means you don't trust the sound</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Practice · Reflection</div>
+    <p>Recall a scene you'd like to tell (a launch, an argument, the moment of a decision). List: if it were audio, which 3 sounds would you capture? Turn at least one "narrated conclusion" into "let them hear it." <strong>Reflection:</strong> with no visuals, how does sound establish a sense of place—so a listener knows in one second where they are?</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Narrative Arc: Action Hooks Them, Reflection Keeps Them</h2>
+  <div class="en-name">Anecdote &amp; the moment of reflection</div>
+  <span class="tag">Ira Glass · The story engine</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Ira Glass breaks a "story" into two building blocks. The first is the <strong>anecdote</strong>—a sequence of "and then?" actions that naturally pulls you forward. The second is the <strong>moment of reflection</strong>—a pause where you tell the listener what all this means. Only action is a laundry list; only reflection is a lecture. Good audio alternates: an anecdote hooks you, a line of reflection lights it up, then into the next anecdote.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">In Their Words</div>
+    <div class="quote">
+      "There are two building blocks of a story. The first is the anecdote — a sequence of actions where one thing leads to another. The second is the moment of reflection: a moment where you say, here's why this was worth your time."
+      <span class="source">— Ira Glass, This American Life (on storytelling)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The action sequence runs on the suspense of "and then?"—once the brain enters an unfinished action, it's hard to leave midway. That's exactly why Serial ends each episode on a cliffhanger. But pure action leaves people asking "so what?"—and the moment of reflection is the answer to that "so what." Openings matter most: skip the table-of-contents intro ("today, three points"), which is written for the eye; use a concrete anecdote to drag them through the door first, and let the points come out slowly, tucked behind the story.</p>
+  </div>
+
+  <div class="arc-vis">
+    <div class="arc-row">
+      <div class="beat"><span class="bt">Action</span>and then?</div>
+      <div class="beat"><span class="bt">Action</span>and then?</div>
+      <div class="beat reflect"><span class="bt">Reflect</span>here's why…</div>
+      <div class="beat"><span class="bt">Action</span>and then?</div>
+      <div class="beat reflect"><span class="bt">Reflect</span>so that's it</div>
+    </div>
+    <div class="caption">Ira Glass's story engine: the action sequence builds suspense (hooks), the moment of reflection supplies meaning (keeps)—the two alternate, looping forward.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">In this episode, we'll cover three principles of behavioral economics.</span>
+      <span class="after">A man once paid $100 to NOT eat a chocolate bar. He wasn't crazy—he was running an experiment on himself. And what he found changes how you should think about willpower. (action first, points later)</span>
+    </div>
+    <div class="example">
+      <span class="before">Today we'll walk through three technical points about blockchain.</span>
+      <span class="after">In 2010, a programmer bought two pizzas for ten thousand bitcoin. Today those pizzas are worth hundreds of millions. What did he miss?</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use · Common Traps</div>
+    <ul>
+      <li>✓ Narrative podcasts, keynotes, product launches, the opener of a promo case—anywhere you must "grab first, argue later"</li>
+      <li>Trap: all anecdote, no reflection—fun to hear, but "so what?" never gets answered</li>
+      <li>Trap: all reflection, no action—lecturing from minute one, and no one stays</li>
+      <li>Trap: opening with the menu ("three points today"), wasting the very spot that should hook</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Practice · Reflection</div>
+    <p>Pick a point you want to share—don't state it. First write a 60-second "anecdote": one specific person, a chain of actions, one suspense. Then write one line of "reflection" that reveals what it means. Hide the point behind the story. <strong>Reflection:</strong> last time you gave a report or talk, did you open with an "anecdote" or a "table of contents"?</p>
+  </div>
+</section>
+
+<h2 class="deep-title">Going Deeper</h2>
+
+<details><summary>If audio scripts must "sound like talking," doesn't that clash with technical precision?</summary><div>No clash—the trick is separating "spoken" from "imprecise." Going spoken changes the <strong>syntax</strong>: short sentences, few clauses, "so" instead of "in conclusion." Rigor guards the <strong>facts and logic</strong>: not one datum, cause, or caveat may drop. Precise content can absolutely be delivered in speech: instead of "the approach is effective in most scenarios," say "this works most of the time—but there's one exception, I'll get to it." The second is both spoken and fully qualified. The real enemy isn't speech—it's <strong>prose-voice vagueness</strong>: words like "significant," "correlated," "to some degree" sound rigorous but often say nothing.</div></details>
+
+<details><summary>Where do Chinese and English audio scripts differ in rhythm?</summary><div>English gets its rhythm from <strong>stress and linking</strong>; sentences can build suspense by rising intonation, and short monosyllables ("So. Here's. The. Thing.") have a built-in drumbeat. Chinese is a tonal language, so its rhythm leans more on <strong>pauses and syllable counts</strong>—four-character phrases, parallelism, silence. Writing Chinese audio, exploit the "beat" of a stop: the pause of a single comma, the silence after a rhetorical question, lands harder than in English. Another gap: literary Chinese idioms sound jarring in the ear and must become plain speech—just as English's long Latinate words (utilize, facilitate) should revert to use, help. Both languages obey the same iron law: <strong>read it aloud; if it doesn't say smoothly, it won't hear smoothly.</strong></div></details>
+
+<details><summary>Same story material—podcast, talk, short video: how do you tune each?</summary><div><strong>Podcast:</strong> pure audio, most reliant on sound montage and reflection to "fill in the invisible picture"; pace can be slow, silence and detail allowed. <strong>Talk:</strong> you're present, slides are there, sound is just one layer—so hold back: one beat per slide, riding live energy and pauses (see Duarte Day 3, Writing for the Ear Day 42). <strong>Short video:</strong> visuals steal half the attention, so the first 3 seconds must be your strongest anecdote hook, and reflection compresses into a one-line caption. One thread runs through all three: <strong>the less a medium can be rewound and the more it depends on grabbing attention instantly, the more Ira Glass's "action first" matters.</strong></div></details>
+
+<details><summary>AI can already clone voices and generate podcast dialogue—do we still need people for audio?</summary><div>AI solves "making sound," not "worth hearing." It can generate a fluent exchange in seconds, but it doesn't know who to interview, which second to leave silent, which pause you can't cut, or which raw voice colliding with which crash actually means something—these are <strong>narrative judgments</strong>, the very core of this week's four cards. Ira Glass has a much-quoted line: the hardest stretch for a beginner is when your <strong>taste is already high but your craft hasn't caught up</strong>, and the only way out is to finish a large volume of work. AI happens to let you sprint through the "craft" gate (transcription, editing, voicing), freeing people for what machines can't: judging which story is worth telling, and how to tell it so it moves. The better AI gets at making sound, the scarcer the people who can direct it.</div></details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to the Writing Daily index</a>
+</div>
+
+<footer>BigCat · Writing Daily · Day 44 · 2026</footer>
+
+</div>
+</body>
+</html>
