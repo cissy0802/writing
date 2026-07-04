@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Delivery: Business Stories &amp; Brand Narrative — Day 46</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Visual: Hero / Guide roles */
+.role-vis{background:#f8f6f1;padding:24px 16px 18px;margin:18px 0;border-radius:2px}
+.role-vis .roles{display:flex;gap:12px;align-items:stretch}
+.role-vis .role{flex:1;padding:16px 12px;background:#fff;border:1px solid #d8d0bc;border-radius:2px;text-align:center;font-family:Georgia,serif}
+.role-vis .role .who{display:block;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:#8a7a4a;font-weight:700;margin-bottom:6px}
+.role-vis .role .name{display:block;font-weight:700;color:#1f1f1f;font-size:1.05rem;margin-bottom:4px}
+.role-vis .role .desc{font-size:0.8rem;color:#6a6a6a;line-height:1.5}
+.role-vis .role.hero{background:#1f1f1f;border-color:#1f1f1f}
+.role-vis .role.hero .name{color:#d8c98a}
+.role-vis .role.hero .who{color:#d8c98a}
+.role-vis .role.hero .desc{color:#cfcfcf}
+.role-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+/* Case-study four-beat arc */
+.arc-vis{background:#f8f6f1;padding:22px 16px 16px;margin:18px 0;border-radius:2px}
+.arc-vis .arc-row{display:flex;gap:6px;align-items:stretch}
+.arc-vis .arc-step{flex:1;padding:12px 8px;background:#fff;border:1px solid #d8d0bc;border-radius:2px;text-align:center;font-family:Georgia,serif}
+.arc-vis .arc-step .n{display:block;font-size:0.66rem;letter-spacing:1.5px;text-transform:uppercase;color:#8a7a4a;font-weight:700;margin-bottom:4px}
+.arc-vis .arc-step .t{display:block;font-weight:700;color:#1f1f1f;font-size:0.9rem;margin-bottom:3px}
+.arc-vis .arc-step .d{font-size:0.75rem;color:#6a6a6a;line-height:1.45}
+.arc-vis .arc-step.result{background:#1f1f1f;border-color:#1f1f1f}
+.arc-vis .arc-step.result .t{color:#d8c98a}
+.arc-vis .arc-step.result .n{color:#d8c98a}
+.arc-vis .arc-step.result .d{color:#cfcfcf}
+.arc-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+/* Value proposition template */
+.vp-box{background:#1f1f1f;color:#fafafa;padding:24px 22px;margin:18px 0;border-radius:2px;font-family:Georgia,serif;line-height:2.1}
+.vp-box .vp-line{font-size:1rem}
+.vp-box .slot{display:inline-block;padding:2px 8px;background:#d8c98a;color:#1f1f1f;border-radius:2px;font-weight:700;margin:2px}
+.vp-box .fixed{color:#cfcfcf}
+.vp-box .caption{font-size:0.85rem;color:#d8c98a;margin-top:14px;font-style:italic}
+
+.deep-head{font-size:1.2rem;font-weight:700;margin:48px 0 16px;text-align:center;color:#1f1f1f;letter-spacing:1px}
+details{background:#fff;border:1px solid #d8d0bc;border-radius:2px;margin:10px 0;padding:4px 16px}
+details summary{cursor:pointer;font-weight:600;color:#1f1f1f;padding:10px 0;font-size:1rem}
+details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .role-vis .roles{flex-direction:column}
+  .arc-vis .arc-row{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 46 · 2026.07.04</div>
+  <h1>Writing &amp; Delivery: Business Stories &amp; Brand Narrative<span class="topic">Founding story · Customer as hero · Case study · Value proposition</span></h1>
+  <div class="date">BigCat's Writing</div>
+  <p class="intro">Good products don't speak for themselves. Given the same features, one person writes a spec sheet; another writes a story people remember and retell. Brand narrative isn't packaging—it's making clear why you exist, whom you help, and why they should trust you. Today, four weapons: origin, hero, proof, core.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>The Founding Story: From "What We Do" to "Why We Do It"</h2>
+  <div class="en-name">The Founding Story — Start With Why</div>
+  <span class="tag">Brand · Origin</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Don't open with "Founded in year X, we specialize in Y." <strong>Start with the pain that made you unable to sit still.</strong> The heart of a founding story isn't the company—it's a specific person hitting a real problem, reaching their limit, and doing something about it.</p>
+    <div class="quote">
+      "People don't buy what you do; they buy why you do it."
+      <span class="source">— Simon Sinek, Start With Why</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Features can be copied; the "why" can't. Sinek's Golden Circle works inside-out—Why → How → What—yet most companies run it backward: lead with features, then advantages, motive left vague. The part of the brain that processes motive and emotion is exactly the part that drives decisions. A real origin pain sorts you into "someone like me" rather than "another vendor." Airbnb isn't a "short-term rental platform"—it's two designers who couldn't make rent putting three air mattresses in their living room.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Edit in Action</div>
+    <div class="example">
+      <span class="before">Founded in 2021, we're an AI infrastructure company dedicated to providing enterprises with high-performance, scalable LLM inference services.</span>
+      <span class="after">Three years ago, shipping every new model meant two weeks rebuilding the same inference stack. The 20th time we did it, we snapped. The system we built to stop driving ourselves crazy is the product you see today.</span>
+    </div>
+    <div class="example">
+      <span class="before">A company with a proven track record of delivering innovative solutions.</span>
+      <span class="after">Every launch cost us the same lost fortnight. We got tired of paying it—so we built the thing that gave the time back.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ The website About page, a pitch opener, personal-brand bios, the top of a job post</li>
+      <li>✗ Writing the origin as a timeline (funding round, awards)—that's a résumé, not a story</li>
+      <li>✗ Faking or inflating the motive ("to make the world better")—the audience's radar pings in a second</li>
+      <li>✗ Making "the company" the protagonist instead of a person—an origin needs a specific human to empathize with</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Simon Sinek</span>, Start With Why · <span>Nancy Duarte</span>, Illuminate · Cases: Airbnb / Warby Parker origin narratives</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Write your product's origin in three sentences: who, the specific pain they hit, and what they couldn't stand so they built. No "dedicated to," "specializing in," or "empowering." Question: can your "why" survive follow-up questions? If the motive is invented, readers will eventually find out—an ordinary, real pain always beats a grand, fake mission.</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Make the Customer the Hero; You're Just the Guide</h2>
+  <div class="en-name">The Customer Is the Hero — StoryBrand</div>
+  <span class="tag">Brand · Positioning</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>The biggest brand mistake is casting yourself as the hero. <strong>The hero is the customer; you're the guide who helps the hero.</strong> Be Yoda, not Luke. Be Gandalf, not Frodo.</p>
+    <div class="quote">
+      "The customer is the hero, not your brand."
+      <span class="source">— Donald Miller, Building a StoryBrand</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Everyone lives inside their own story; they wake up thinking about their own problems. When your copy is all "how great we are, how advanced our tech," the reader's subconscious asks, "what does that have to do with me?" Turn the camera onto the customer: who they want to become, where they're stuck, how you'll get them across. A guide has two marks—<strong>empathy</strong> ("I understand your situation") and <strong>authority</strong> ("I've helped many others like you"). Step back half a pace, and the customer can step in.</p>
+    <div class="role-vis">
+      <div class="roles">
+        <div class="role hero"><span class="who">Hero</span><span class="name">The Customer</span><span class="desc">Has a desire and a problem; the story turns on them</span></div>
+        <div class="role"><span class="who">Guide</span><span class="name">Your Brand</span><span class="desc">Gives a plan and proof; helps them arrive</span></div>
+      </div>
+      <div class="caption">Luke is the hero, Yoda is the guide—don't steal the customer's scene</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Edit in Action</div>
+    <div class="example">
+      <span class="before">Our platform features an industry-leading distributed architecture, supports 100-billion-parameter models, and serves the Fortune 500.</span>
+      <span class="after">Your team is holding back on LLMs because inference is slow and costly. We've helped dozens of teams like yours cut that cost in half. You're next.</span>
+    </div>
+    <div class="example">
+      <span class="before">We are the trusted partner of choice for enterprises worldwide.</span>
+      <span class="after">You need this shipped by Friday without a war room. That's the whole job we do—and we've done it for teams your size before.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Landing pages, product copy, sales emails, demo narration</li>
+      <li>✗ Every sentence subject is "we"—count your "we/our" versus "you" ratio</li>
+      <li>✗ Empathy without authority (sounds like support) or authority without empathy (sounds like a huckster)</li>
+      <li>✗ Writing the customer as a helpless victim—a guide empowers, it doesn't condescend</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Donald Miller</span>, Building a StoryBrand (the SB7 framework) · <span>Joseph Campbell</span>, The Hero with a Thousand Faces (the guide archetype) · Steve Jobs's product-launch narratives</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Take a piece of your product copy and circle the subject of every sentence. Rewrite the ones starting with "we" to start with "you," and see if the meaning survives. Question: if you never mention your own features, how will the customer know you can help? The guide still shows a plan and proof—where's the line?</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>The Case Study: One Customer + One Number + One Arc</h2>
+  <div class="en-name">The Case Study — Situation, Complication, Resolution</div>
+  <span class="tag">Narrative · Proof</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>A case study isn't a feature list with a logo stapled on. <strong>It's one customer's miniature hero's journey</strong>: where they were stuck (situation), what went wrong (complication), how you solved it (resolution), and the outcome (a landing with a number).</p>
+    <div class="quote">
+      "A story's power is twofold: it provides simulation—knowledge about how to act—and inspiration—the motivation to act."
+      <span class="source">— Chip &amp; Dan Heath, Made to Stick</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>When a prospect reads a case study, they're really simulating themselves: is this company like mine? Is their problem my problem? So the protagonist must be recognizable—industry, size, the real pain—not "a large enterprise." Conflict is the key: a story that goes only smoothly is neither believed nor remembered. End by landing on one hard number—"deployment from two weeks to two days," "cost down 47%." The number is the story's anchor; without it, the reader can't remember it or retell it to their boss.</p>
+    <div class="arc-vis">
+      <div class="arc-row">
+        <div class="arc-step"><span class="n">Setup</span><span class="t">Situation</span><span class="d">A specific person and context</span></div>
+        <div class="arc-step"><span class="n">Turn</span><span class="t">Complication</span><span class="d">What went wrong</span></div>
+        <div class="arc-step"><span class="n">Fix</span><span class="t">Resolution</span><span class="d">How you stepped in</span></div>
+        <div class="arc-step result"><span class="n">Payoff</span><span class="t">Result</span><span class="d">One hard number</span></div>
+      </div>
+      <div class="caption">No conflict, it's an ad; no number, no one remembers</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Edit in Action</div>
+    <div class="example">
+      <span class="before">A well-known tech company saw significant efficiency gains and great results after adopting our product.</span>
+      <span class="after">A 40-person payments team pulled all-nighters scaling before every sale—and still went down for 20 minutes last Black Friday. With our autoscaling, this year they clocked out on time: peak held, cost down 30%.</span>
+    </div>
+    <div class="example">
+      <span class="before">Our solution helped the client optimize their workflow and improve outcomes.</span>
+      <span class="after">Support was drowning—04-hour reply times, angry reviews. Six weeks after switching, first-reply dropped to 18 minutes and their rating climbed from 3.2 to 4.6.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Website case studies, sales materials, white papers, conference talks</li>
+      <li>✗ "A certain company," "significant gains," "great results"—vague equals useless</li>
+      <li>✗ Result without conflict—reads like an ad, not a story</li>
+      <li>✗ Faked or unattributable numbers—an inflated ROI actually lowers trust</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Chip &amp; Dan Heath</span>, Made to Stick (Concrete / Story) · <span>Robert McKee</span>, Story (the structure of conflict) · The B2B Challenge-Solution-Result template</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Pick a real customer you served and write 120 words as Situation → Complication → Resolution → Result. The result must contain one concrete number. Question: if the customer won't let you use their real name or numbers, can the case still persuade? (Hint: you can anonymize industry and size, but don't lose the specificity of the number.)</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>The Value Proposition: Compress the Whole Story into One Line</h2>
+  <div class="en-name">The Value Proposition — The Job, Not the Feature</div>
+  <span class="tag">Positioning · Core</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>Customers never want your features; they want the thing the features get done for them. <strong>A value proposition names the job they hire you to do</strong>, not the product's specs.</p>
+    <div class="quote">
+      "People don't want to buy a quarter-inch drill. They want a quarter-inch hole."
+      <span class="source">— Theodore Levitt, Harvard Business School</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Features are the means; the "job" (job-to-be-done) is the end. A buyer wants the drill for the hole, the hole to hang a picture, the picture for the warmth of home. The further up you ask, the closer you get to why they really pay. A value proposition compresses that job—and how you do it better than the alternative—into one line that can be remembered and repeated. Geoffrey Moore's classic template forces you to fill every slot with something concrete; if you can't, you haven't figured out your positioning yet.</p>
+    <div class="vp-box">
+      <div class="vp-line"><span class="fixed">For</span> <span class="slot">target customer</span> <span class="fixed">who</span> <span class="slot">job / pain</span>, <span class="slot">product</span> <span class="fixed">is a</span> <span class="slot">category</span> <span class="fixed">that</span> <span class="slot">key benefit</span>. <span class="fixed">Unlike</span> <span class="slot">alternative</span>, <span class="fixed">we</span> <span class="slot">key difference</span>.</div>
+      <div class="caption">Geoffrey Moore's positioning template: no slot takes an adjective—only specifics</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Edit in Action</div>
+    <div class="example">
+      <span class="before">Our product is powerful, high-performance, user-friendly, and affordable.</span>
+      <span class="after">For small teams shipping LLM apps who find self-hosting too slow and costly, we're a plug-in inference layer that gets you live the same day. Unlike self-hosting, you don't need a dedicated infra team.</span>
+    </div>
+    <div class="example">
+      <span class="before">The all-in-one solution for all your business needs.</span>
+      <span class="after">For solo founders who dread bookkeeping, we're an accounting app that files your taxes for you. Unlike a spreadsheet, you never touch a formula.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use + Common Mistakes</div>
+    <ul>
+      <li>✓ Website hero, pitch page one, the elevator pitch, internal positioning alignment</li>
+      <li>✗ Piling up adjectives ("powerful, leading, superior")—adjectives are the cheapest claim</li>
+      <li>✗ Wanting every customer ("fits all enterprises")—no focus means no positioning</li>
+      <li>✗ Talking features instead of the job—users don't care what you have, only what you get done for them</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key References</div>
+    <p class="refs"><span>Theodore Levitt</span>, "the drill / the hole" · <span>Geoffrey Moore</span>, Crossing the Chasm (the positioning template) · <span>Clayton Christensen</span>, Jobs to Be Done · <span>April Dunford</span>, Obviously Awesome</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Question</div>
+    <p>Fill Moore's template for your product in one line; every slot must be concrete, no adjectives. Can't fill in the "key difference"? That's your real problem. Question: should a value proposition be written for "everyone"? A proposition aimed at one narrow segment usually sells better than one that pleases all—counterintuitive, so why?</p>
+  </div>
+</section>
+
+<div class="deep-head">Going Deeper</div>
+
+<details><summary>The founding story tells a "real pain," but once the company grows and the founder steps back, does the origin still hold?</summary><div>It holds, but it has to transform. The value of an origin story isn't the founder as a person—it's the "why" it anchors. If the original pain is still the customer's pain, the story is still true. As the company grows, the protagonist migrates from "a certain founder" to "a belief this group protects together," and even onto the customer. The danger is turning the origin into myth and a cult of personality detached from today's customer reality. Ask periodically: the pain we first solved—do customers still feel it? If they do, the story is still alive.</div></details>
+
+<details><summary>Does "customer as hero" contradict "founder as hero" in the founding story?</summary><div>No—they're different cameras for different scenes. In the origin story, the founder is the protagonist to establish "I understand this pain because I lived it"—he appears as a <strong>former customer</strong>, which is still the customer's point of view at heart. In product narrative, the camera must turn to the current customer, and the founder recedes to guide. The confusion shows up as: a homepage all about how legendary the founder is, saying nothing about what the customer gets. The rule: use the origin to earn <strong>the right to empathize</strong>, use customer narrative to drive <strong>conversion</strong>. Who plays hero depends on what you want the reader to feel right now.</div></details>
+
+<details><summary>Do business storytelling and "telling the truth" conflict? Does dramatizing slide toward exaggeration?</summary><div>There's tension, and the line runs between "selective presentation" and "fabrication." Honest business narrative may choose which customer to feature, which number to highlight, which flat parts to skip—that's editing, not faking. You cross the line when you invent nonexistent customers, inflate unattributable numbers, or pass off a single case as universal. A self-check: if the protagonist of this case read it, would they nod or wince? The power of story comes precisely from truth—an ordinary but credible result closes better than a stunning but suspect number.</div></details>
+
+<details><summary>How do these four (origin / hero / case study / value prop) change across text, talk, and video?</summary><div>The core is constant—whom you solve what for, and why they should trust you. What changes is the carrier. <strong>Text</strong> can be reread, so the value proposition fits the hero section and case studies can spread into detail and number tables; <strong>a talk or pitch</strong> is linear and heard once, so the origin story works best as a gripping opener, and you tell one case, one core number—more won't be remembered; <strong>video</strong> can "put a face to the customer"—a real user on camera telling their own story carries more of the guide's "authority" and "empathy" than any copy. The more immediate and un-rewindable the medium, the more you subtract: one story, one number, one line.</div></details>
+
+<details><summary>AI can now mass-produce marketing copy—what in business storytelling can't it replace?</summary><div>AI can fluently apply StoryBrand and Moore's template and generate smooth copy—which is exactly what makes "formulaic pretty phrasing" cheap and same-y. Three things stay with humans: first, the <strong>real origin and pain</strong>—AI can't invent the specific night your team "had enough"; second, <strong>the real customer's real story</strong>—interviewing, getting permission, mining that moving detail is human work; third, <strong>judging what's worth telling</strong>—recognizing, in a pile of material, that "this customer's this moment will land hardest with that kind of buyer" takes an understanding of people and markets. AI is the skilled copywriter; the human is the one who knows which story is true and worth telling.</div></details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to the writing index</a>
+</div>
+
+<footer>BigCat · Writing · Day 46 · 2026</footer>
+
+</div>
+</body>
+</html>
