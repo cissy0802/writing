@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: Clarity in Academic Writing — Day 47</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.35rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.5rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .cn{display:block;margin-top:10px;font-style:normal;color:#4a4a4a}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"BEFORE ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal;font-size:0.8rem;letter-spacing:1px}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"AFTER ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal;font-size:0.8rem;letter-spacing:1px}
+.example .note{display:block;margin-top:8px;font-size:0.86rem;color:#8a8a8a;font-style:italic}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Abstract four-sentence box */
+.abstract-vis{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px}
+.abstract-vis .ab-row{display:flex;flex-direction:column;gap:8px}
+.abstract-vis .ab-step{padding:12px 16px;background:#fff;border:1px solid #d8d0bc;border-left:4px solid #8a7a4a;border-radius:2px;font-size:0.94rem;color:#3a3a3a;line-height:1.6}
+.abstract-vis .ab-step .n{font-family:Georgia,serif;font-weight:700;color:#8a7a4a;margin-right:8px}
+.abstract-vis .ab-step strong{color:#1f1f1f}
+.abstract-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+/* Topic / stress position sentence diagram */
+.stress-vis{background:#f8f6f1;padding:24px 16px 16px;margin:18px 0;border-radius:2px}
+.stress-vis .bar{display:flex;align-items:stretch;border:1px solid #c8c0a8;border-radius:2px;overflow:hidden}
+.stress-vis .zone{flex:1;padding:14px 12px;background:#fff;text-align:center;font-family:Georgia,serif}
+.stress-vis .zone.mid{flex:1.3;background:#f0ece0;color:#9a9a9a;border-left:1px dashed #c8c0a8;border-right:1px dashed #c8c0a8}
+.stress-vis .zone .z-title{display:block;font-weight:700;color:#1f1f1f;font-size:0.9rem;margin-bottom:4px}
+.stress-vis .zone .z-desc{display:block;font-size:0.8rem;color:#8a7a4a}
+.stress-vis .zone.stress{background:#1f1f1f}
+.stress-vis .zone.stress .z-title{color:#d8c98a}
+.stress-vis .zone.stress .z-desc{color:#d8c98a}
+.stress-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+.deep-head{font-size:1.2rem;font-weight:700;margin:48px 0 16px;text-align:center;color:#1f1f1f;letter-spacing:1px}
+details{background:#fff;border:1px solid #d8d0bc;border-radius:2px;margin:10px 0;padding:4px 16px}
+details summary{cursor:pointer;font-weight:600;color:#1f1f1f;padding:10px 0;font-size:1rem}
+details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.05rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.25rem}
+  .stress-vis .bar{flex-direction:column}
+  .stress-vis .zone.mid{border-left:none;border-right:none;border-top:1px dashed #c8c0a8;border-bottom:1px dashed #c8c0a8}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 47 · 2026.07.05</div>
+  <h1>Writing &amp; Expression: Clarity in Academic Writing<span class="topic">Abstract · Review · Argument · Against Jargon</span></h1>
+  <div class="date">BigCat's Writing</div>
+  <p class="intro">Academic prose is famously hard to read — but it is almost never hard because the ideas run deep. It is hard because the writing is bad: obscurity as a gatekeeper, nominalization to hide emptiness, citation-dumping posing as a review. This issue borrows four people who actually write well, and hauls academic writing back to what it should be: the clear transmission of a thought. Engineers' RFCs, design docs, and promo packets benefit just as much.</p>
+</header>
+
+<!-- Card 1: Abstract -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>The Abstract: Tell a Whole Story in Four Sentences</h2>
+  <div class="en-name">The Abstract — Four Sentences</div>
+  <span class="tag">SPJ · Conclusion First</span>
+
+  <div class="section">
+    <div class="label">The Principle + A Master's Words</div>
+    <p>An abstract is not a table of contents; it is your paper's elevator pitch. Most readers decide whether to read on based on the abstract alone — so it must tell a complete story by itself, and <strong>the conclusion must appear</strong>. No withholding for suspense.</p>
+    <div class="quote">
+      "I usually structure the abstract in four sentences: state the problem; say why it's interesting; say what your solution achieves; say what follows from it."
+      <span class="source">— Simon Peyton Jones, "How to Write a Great Research Paper"</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>When a reader decides whether to invest half an hour in the full text, they weigh just three things: Is this relevant to me? Is it credible? What do I take away? Four sentences answer all three. Academic writing's worst habit is <strong>addiction to throat-clearing</strong> — three paragraphs of background before the point, by which time the reader is gone. The abstract pushes the pyramid principle to its limit: conclusion first, and only one layer deep.</p>
+  </div>
+
+  <div class="abstract-vis">
+    <div class="ab-row">
+      <div class="ab-step"><span class="n">1</span><strong>Problem</strong>　What real, unsolved problem does this field have?</div>
+      <div class="ab-step"><span class="n">2</span><strong>Why it matters</strong>　Once solved, who benefits?</div>
+      <div class="ab-step"><span class="n">3</span><strong>What you did / the result</strong>　What is your solution, and what measurable result did it get?</div>
+      <div class="ab-step"><span class="n">4</span><strong>What it means</strong>　What larger lesson follows from that result?</div>
+    </div>
+    <div class="caption">SPJ's four-sentence abstract: if you can't write the fourth sentence, the work itself hasn't been thought through</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">This paper conducts an in-depth study and discussion of the consistency problem in distributed systems; it first introduces the background, then analyzes shortcomings of existing methods, and finally proposes a new method with experimental verification, achieving good results.</span>
+      <span class="after">Cross-region databases cannot have both strong consistency and low latency, which blocks financial workloads from the cloud. We present X, which cuts cross-region read latency from 200ms to 40ms without violating business invariants. A principled "weak but sufficient" middle ground beats the all-or-nothing debate.</span>
+      <span class="note">The first only says "I studied X"; the second lands all four: problem, importance, result (with a number), implication.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Where to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ Paper abstracts, the TL;DR of an RFC, the one-paragraph summary opening a design doc, the impact summary in a promo packet, the first line of a PR description</li>
+      <li>✗ Stating "I studied X" without "here is what I found" — a topic is not a contribution</li>
+      <li>✗ Filling the space with "fairly good," "to some extent," "explored" — zero-information filler</li>
+      <li>✗ Cramming method detail into the abstract; the reader wants the conclusion, not the procedure</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take a recent design doc or PR. Delete its current summary and rewrite it in SPJ's four sentences: problem / why it matters / what you did / what follows — each under 20 words.<br>Question: If you can't write the fourth sentence — "what follows" — has the meaning of the work itself been thought through yet?</p>
+  </div>
+</section>
+
+<!-- Card 2: Literature Review -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>The Literature Review: Join a Conversation, Not a Roll Call</h2>
+  <div class="en-name">Literature Review — Join the Conversation</div>
+  <span class="tag">Burke · Conversation, Not a List</span>
+
+  <div class="section">
+    <div class="label">The Principle + A Master's Words</div>
+    <p>A review is not proof that "I've read a lot." It places your work inside an ongoing conversation. A bad review is a ledger: "A said…; B said…; C said…". A good one has a line running through it: <strong>what the field is arguing about, where it is stuck, and which sentence you are answering.</strong></p>
+    <div class="quote">
+      "Imagine that you enter a parlor. You come late. … The discussion had already begun long before any of them got there. … You listen for a while, until you decide that you have caught the tenor of the argument; then you put in your oar."
+      <span class="source">— Kenneth Burke, "The Philosophy of Literary Form" (1941)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>A review's real job is to draw a <strong>map of what's known</strong> for the reader and to mark one blank spot on it — that blank is the reason your work exists (the gap). A review without a gap gives the reader no "so what." Burke's parlor reminds you: you are neither the first to speak nor the last; your contribution only means something once it is slotted into the conversation. An engineer's Related Work is the same — not a disclaimer, but a set of coordinates.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">On cache consistency, Smith (2019) proposed method A, Jones (2020) proposed method B, and Lee (2021) studied C. These methods each have pros and cons.</span>
+      <span class="after">Work on cache coherence has swung between speed and correctness: early designs (Smith 2019) traded consistency for latency, while later protocol-heavy approaches (Jones 2020) restored it at 3× the cost. What no one has shown is whether "good-enough" consistency is achievable without protocol overhead — the gap this paper addresses.</span>
+      <span class="note">The ledger becomes a line of tension that lands on the gap, so the reader instantly sees why you need to enter.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Where to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ A paper's Related Work, the "existing options" comparison in a design doc, a tech-selection report, the "why others couldn't do it" in a promo packet</li>
+      <li>✗ The ledger — one sentence per paper, no through-line; or all praise, or all dismissal</li>
+      <li>✗ Ending the review without landing on a gap, leaving the reader with no "so what are you going to do"</li>
+      <li>✗ Piling on unrelated citations to look well-read — a review is a filter, not an inventory count</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Pick a technical field you know. In three sentences, write its conversation: how people used to do it → what problem showed up → where it's stuck now. Then add one sentence for what you'd say next.<br>Question: If you draw that map honestly, is your work filling the blank, or repeating what others have already done?</p>
+  </div>
+</section>
+
+<!-- Card 3: Argument Structure -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Argument Structure: Half a Sentence's Meaning Hides in Position</h2>
+  <div class="en-name">Argument Structure — Reader Expectations</div>
+  <span class="tag">Gopen &amp; Swan · Reader Expectations</span>
+
+  <div class="section">
+    <div class="label">The Principle + A Master's Words</div>
+    <p>Readers have fixed expectations about where information should appear: the start of a sentence (the <strong>topic position</strong>) holds old information and the known character; the end (the <strong>stress position</strong>) holds new information, the thing you want emphasized. Violate that expectation and even an accurate sentence reads badly.</p>
+    <div class="quote">
+      "Readers do not simply read; they interpret. … The information a sentence contains is only part of what a reader gets; the other part comes from where in the sentence that information appears."
+      <span class="source">— Gopen &amp; Swan, "The Science of Scientific Writing," American Scientist (1990)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>This holds in English and Chinese alike. A reader treats the sentence's opening as "who this is about" and its ending as "where the emphasis is." Bury the conclusion mid-sentence, or open every sentence with an unfamiliar new term, and the reader's interpretation engine spins in neutral. Academic arguments become unreadable not usually because the logic broke, but because <strong>the old-info-to-new-info relay broke</strong>: the end of one sentence never handed off to the start of the next.</p>
+  </div>
+
+  <div class="stress-vis">
+    <div class="bar">
+      <div class="zone"><span class="z-title">Topic position (start)</span><span class="z-desc">old info · known character</span></div>
+      <div class="zone mid"><span class="z-title">…</span><span class="z-desc">move forward</span></div>
+      <div class="zone stress"><span class="z-title">Stress position (end)</span><span class="z-desc">new info · what to emphasize</span></div>
+    </div>
+    <div class="caption">Readers naturally read the start as "who" and the end as "the point" — write with that expectation and the sentence clears itself up</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">A causal-order-based conflict detection algorithm was adopted in our system to address the data inconsistency that arises during concurrent writes, which is the core innovation of our method.</span>
+      <span class="after">Concurrent writes cause data inconsistency. Our fix is a causal-order conflict detector that catches conflicts at write time, not after.</span>
+      <span class="note">"Core innovation" moves from the buried tail into the stress position; the known actor returns to the topic position; passive becomes active.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Where to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ Paper bodies, the argument paragraphs of a design doc, decision memos, any long text that must persuade step by step</li>
+      <li>✗ Key conclusions buried mid-sentence or mid-paragraph, so the reader hits the point only at the end</li>
+      <li>✗ Every sentence opening with an unfamiliar new term, so it never connects to the one before</li>
+      <li>✗ Passive voice overused to hide "who did it"; paragraphs with no topic sentence</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take a paragraph of your own technical argument and check each sentence for two things: does it open with the known character? Does the word most worth remembering land at the end? Rewrite the three that violate this.<br>Question: Chinese drops subjects easily (subjectless sentences). Does that make the topic-position rule harder to use, or actually easier?</p>
+  </div>
+</section>
+
+<!-- Card 4: Against Jargon -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Against Jargon: Kill the Zombie Nouns</h2>
+  <div class="en-name">Against Jargon — Zombie Nouns</div>
+  <span class="tag">Sword · Orwell · Anti-Nominalization</span>
+
+  <div class="section">
+    <div class="label">The Principle + A Master's Words</div>
+    <p>Academic jargon's chief symptom is <strong>nominalization</strong> — crushing verbs and adjectives into abstract nouns, so the sentence loses its action and its people. Helen Sword calls them "zombie nouns": they eat verbs, drain adjectives, and swap living humans for abstract entities.</p>
+    <div class="quote">
+      "Nominalizations are the zombie nouns of academic prose: they cannibalize active verbs, suck the lifeblood from adjectives and substitute abstract entities for human beings."
+      <span class="source">— Helen Sword, "Zombie Nouns," New York Times (2012)</span>
+    </div>
+    <div class="quote">
+      "Never use a long word where a short one will do."
+      <span class="source">— George Orwell, "Politics and the English Language" (1946)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Why do smart people write obscurely? Pinker's answer is the <strong>curse of knowledge</strong> — you are so steeped in your own material that you forget the reader isn't inside your head, and you drop the bridge that would let them follow. Nominalization and jargon also serve a less honorable purpose: cover. "Optimization was carried out" need not say what was optimized, or by how much; "there exist certain problems" need not say whose. <strong>Vagueness is the grammar of dodging responsibility; clarity is a form of honesty</strong> — it forces you to commit.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">The implementation of an optimization of system performance was achieved through the modification of the caching strategy.</span>
+      <span class="after">We changed the caching strategy to make the system faster.</span>
+      <span class="note">Three stacked noun-phrases plus "was achieved" compress into one subject and one verb.</span>
+    </div>
+    <div class="example">
+      <span class="before">Owing to certain objective reasons, a degree of challenge exists in the course of the project's advancement.</span>
+      <span class="after">We're short two engineers, so the launch slips three weeks.</span>
+      <span class="note">Jargon's other use is evasion — translate it back into the concrete and the responsibility and the facts reappear.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Where to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ All formal writing — papers, RFCs, weekly reports, postmortems, promo packets. The more you want to "look professional," the more to watch out</li>
+      <li>✗ Using "carry out / undertake / achieve + noun" in place of one verb (carry out an optimization → optimize)</li>
+      <li>✗ Making an abstract noun the subject, so no human appears ("the occurrence of the phenomenon")</li>
+      <li>✗ Mistaking long words for expertise; using vague words to dodge concrete commitments ("to some extent," "the relevant aspects")</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take a recent piece of your formal writing. Circle every "X of Y of Z" noun-stack and every "carry out / undertake + noun," and rewrite each as "who + verb + what." Count the words you deleted.<br>Question: Is there a case where the vague jargon is deliberate — where you don't actually want to commit? Is that a writing problem, or a not-yet-thought-through problem?</p>
+  </div>
+</section>
+
+<div class="deep-head">Going Deeper</div>
+
+<details><summary>Clarity is demanded, but some ideas are genuinely intricate. Does saying them simply distort them?</summary><div>A complex idea and a complex sentence are two different things. Einstein: "as simple as possible, but no simpler." Clarity doesn't simplify the content; it removes the obstacles to understanding — so the reader spends their cognitive budget on the idea, not on decoding the sentence. Intricate ideas need the clearest prose precisely so they aren't misread. If a claim only holds when stated obliquely, that's usually not depth — it hasn't been thought through, or obscurity is hiding a void.</div></details>
+
+<details><summary>Is Chinese "translationese jargon" the same disease as English nominalization?</summary><div>Same root, different form. English nominalizes through -tion/-ment suffixes; Chinese does it through stacked "de" phrases, "carry out / undertake + noun," and "bei + verb" structures borrowed from translation. The root cause in both is <strong>avoiding action and subject</strong>. But Chinese has its own strains: subjectless sentences make "who did it" vanish more easily, and the "-ness / -ize / -degree" suffixes can coin words endlessly. The cure is the same — recover the subject, turn nouns back into verbs, unpack "X of Y" into "who did Y."</div></details>
+
+<details><summary>"Conclusion first" is obvious in papers, but the humanities prize slow buildup to a final reveal. Does clarity have disciplinary borders?</summary><div>It does, but far narrower than most assume. Suspense structure genuinely has value in literature and philosophical essays — the process is the content. Even so, readers still need signposts to know where they are. Most so-called "disciplinary style" is a pretext for bad habits. The test: is your indirection serving the reader's understanding, or covering the fact that you haven't figured it out yourself? The former is art; the latter is jargon.</div></details>
+
+<details><summary>Do technical docs (RFCs, design docs) and academic papers hold clarity to the same standard?</summary><div>Same core — conclusion first, honor reader expectations, avoid jargon — but different weights. A technical doc's reader is "a colleague who has to decide," so front-load the conclusion aggressively and make it scannable; a paper must survive peer review, so it needs a full chain of argument and its place in the literature. What they share: both get pushed toward obscurity by the urge to "seem rigorous," and both should resist. The zombie nouns in your RFC deserve killing just as much as the ones in a paper.</div></details>
+
+<details><summary>AI can already "translate" jargon-laden papers into clear ones, even write the abstract. Is learning to write clearly still worth it?</summary><div>More worth it — the center of gravity just shifted. AI can polish sentences, kill nominalizations, apply an abstract template — the mechanical layer, faster than you. But it can't replace three things: judging where the gap actually is, deciding what the work truly means (the abstract's fourth sentence), and telling whether a review has a real through-line or is just fluent emptiness. The bedrock of clear writing is always clear thinking; AI makes clarity of expression cheap, which forces clarity of thought into being the only scarce thing.</div></details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Index</a>
+</div>
+
+<footer>BigCat · Writing · Day 47 · 2026</footer>
+
+</div>
+</body>
+</html>

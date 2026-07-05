@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>写作与表达：学术写作的清晰化 — Day 47</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.35rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.5rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .cn{display:block;margin-top:10px;font-style:normal;color:#4a4a4a}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"原句 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"改后 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .note{display:block;margin-top:8px;font-size:0.86rem;color:#8a8a8a;font-style:italic}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* 摘要四句公式盒 */
+.abstract-vis{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px}
+.abstract-vis .ab-row{display:flex;flex-direction:column;gap:8px}
+.abstract-vis .ab-step{padding:12px 16px;background:#fff;border:1px solid #d8d0bc;border-left:4px solid #8a7a4a;border-radius:2px;font-size:0.94rem;color:#3a3a3a;line-height:1.6}
+.abstract-vis .ab-step .n{font-family:Georgia,serif;font-weight:700;color:#8a7a4a;margin-right:8px}
+.abstract-vis .ab-step strong{color:#1f1f1f}
+.abstract-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+/* 话题位 / 重音位 句子结构图 */
+.stress-vis{background:#f8f6f1;padding:24px 16px 16px;margin:18px 0;border-radius:2px}
+.stress-vis .bar{display:flex;align-items:stretch;border:1px solid #c8c0a8;border-radius:2px;overflow:hidden}
+.stress-vis .zone{flex:1;padding:14px 12px;background:#fff;text-align:center;font-family:Georgia,serif}
+.stress-vis .zone.mid{flex:1.3;background:#f0ece0;color:#9a9a9a;border-left:1px dashed #c8c0a8;border-right:1px dashed #c8c0a8}
+.stress-vis .zone .z-title{display:block;font-weight:700;color:#1f1f1f;font-size:0.9rem;margin-bottom:4px}
+.stress-vis .zone .z-desc{display:block;font-size:0.8rem;color:#8a7a4a}
+.stress-vis .zone.stress{background:#1f1f1f}
+.stress-vis .zone.stress .z-title{color:#d8c98a}
+.stress-vis .zone.stress .z-desc{color:#d8c98a}
+.stress-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+.deep-head{font-size:1.2rem;font-weight:700;margin:48px 0 16px;text-align:center;color:#1f1f1f;letter-spacing:1px}
+details{background:#fff;border:1px solid #d8d0bc;border-radius:2px;margin:10px 0;padding:4px 16px}
+details summary{cursor:pointer;font-weight:600;color:#1f1f1f;padding:10px 0;font-size:1rem}
+details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.05rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.25rem}
+  .stress-vis .bar{flex-direction:column}
+  .stress-vis .zone.mid{border-left:none;border-right:none;border-top:1px dashed #c8c0a8;border-bottom:1px dashed #c8c0a8}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 47 · 2026.07.05</div>
+  <h1>写作与表达：学术写作的清晰化<span class="topic">摘要 · 综述 · 论证结构 · 反黑话</span></h1>
+  <div class="date">BigCat's Writing</div>
+  <p class="intro">学术写作被公认为最难读的文体——但难读几乎从不因为思想太深，而是因为表达太坏：用晦涩当门槛、用名词化掩饰空洞、用文献堆砌冒充综述。本期借四位真正会写的人，把它救回本该的样子：清晰的思想传递。技术人的 RFC、设计文档、晋升材料，同样受用。</p>
+</header>
+
+<!-- Card 1: 摘要 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>摘要的艺术：用四句话讲完一个故事</h2>
+  <div class="en-name">The Abstract — Four Sentences</div>
+  <span class="tag">SPJ · 结论先行</span>
+
+  <div class="section">
+    <div class="label">一句话原则 + 名家原话</div>
+    <p>摘要不是"内容目录"，是论文的电梯陈述。多数读者只读摘要就决定读不读全文——所以它必须自己讲完一个完整的故事，且<strong>结论必须出现</strong>，不能卖关子。</p>
+    <div class="quote">
+      "I usually structure the abstract in four sentences: state the problem; say why it's interesting; say what your solution achieves; say what follows from it."
+      <span class="cn">我通常用四句话搭摘要：说清问题；说它为何有趣；说你的方案做到了什么；说由此能得出什么。</span>
+      <span class="source">— Simon Peyton Jones,《How to Write a Great Research Paper》</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>读者在决定"要不要花半小时读全文"时，只需判断三件事：与我相关吗？可信吗？能带走什么？四句正好回答。学术写作最大的坏习惯是<strong>铺垫成瘾</strong>——先讲三段背景才亮出观点，读者早跑了。摘要是把金字塔原理逼到极致：结论先行，且只有一层。</p>
+  </div>
+
+  <div class="abstract-vis">
+    <div class="ab-row">
+      <div class="ab-step"><span class="n">1</span><strong>问题</strong>　这个领域有个什么真问题还没解决？</div>
+      <div class="ab-step"><span class="n">2</span><strong>为何重要</strong>　它一旦解决，谁会因此受益？</div>
+      <div class="ab-step"><span class="n">3</span><strong>你做了什么 / 结论</strong>　你的方案是什么，拿到了什么可量化的结果？</div>
+      <div class="ab-step"><span class="n">4</span><strong>意味着什么</strong>　从这个结果能推出什么更大的启示？</div>
+    </div>
+    <div class="caption">SPJ 四句摘要公式：写不出第四句，往往是工作本身还没想清意义</div>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">本文对分布式系统中的一致性问题进行了深入的研究与探讨，首先介绍相关背景，然后分析现有方法的不足，最后提出一种新方法并进行实验验证，取得了较好的效果。</span>
+      <span class="after">跨区域数据库难以同时兼得强一致与低延迟，这直接卡住了金融应用上云。我们提出 X 协议，用因果一致加客户端缓存，把跨区读延迟从 200ms 降到 40ms，且不违反业务不变量。这说明"弱一致但够用"的中间态，比非此即彼的争论更有工程价值。</span>
+      <span class="note">前者只说"我研究了 X"，后者四句到位：问题、重要、结论含数字、启示。</span>
+    </div>
+    <div class="example">
+      <span class="before">This paper studies the important problem of consistency in distributed systems. We review prior work, identify limitations, propose a new approach, and show good experimental results.</span>
+      <span class="after">Cross-region databases cannot have both strong consistency and low latency, which blocks financial workloads from the cloud. We present X, which cuts cross-region read latency from 200ms to 40ms without violating business invariants. A principled "weak but sufficient" middle ground beats the all-or-nothing debate.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ 论文摘要、RFC 的 TL;DR、设计文档开头的"一段话总结"、晋升材料的 impact 摘要、PR 描述首段</li>
+      <li>✗ 只讲"我研究了 X"不讲"我发现了什么"——topic 不等于 contribution</li>
+      <li>✗ 通篇"较好""一定程度""进行了探讨"这类零信息量软词</li>
+      <li>✗ 把方法细节塞进摘要；读者要的是结论，不是过程</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>拿你最近一份设计文档或 PR，删掉现有摘要，用 SPJ 四句重写：问题／为何重要／你做了什么／由此如何，每句不超过 25 字。<br>思考题：如果你写不出第四句"由此如何"，是不是这项工作本身的意义还没想清楚？</p>
+  </div>
+</section>
+
+<!-- Card 2: 文献综述 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>文献综述：加入一场对话，而不是点名册</h2>
+  <div class="en-name">Literature Review — Join the Conversation</div>
+  <span class="tag">Burke · 对话而非清单</span>
+
+  <div class="section">
+    <div class="label">一句话原则 + 名家原话</div>
+    <p>综述不是证明"我读得多"，是把你的工作放进一场持续的对话。坏综述是"A 说…；B 说…；C 说…"的流水账；好综述有一条线：<strong>领域在争什么、卡在哪、你接上哪一句</strong>。</p>
+    <div class="quote">
+      "Imagine that you enter a parlor. You come late. … The discussion had already begun long before any of them got there. … You listen for a while, until you decide that you have caught the tenor of the argument; then you put in your oar."
+      <span class="cn">想象你走进一间客厅，你来晚了……讨论在你到来之前很久就开始了……你先听一阵，直到听懂了争论的脉络，才插进你的桨。</span>
+      <span class="source">— Kenneth Burke,《The Philosophy of Literary Form》(1941)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>综述的真正功能，是替读者画出一张"知识地图"，并标出一处<strong>空白</strong>——那处空白就是你工作的理由（gap）。没有 gap 的综述，等于没给读者一个"所以呢"。Burke 的客厅提醒你：你不是第一个说话的，也不是最后一个；贡献只有嵌进对话里才有意义。技术圈的 Related Work 同理——它不是免责声明，是定位坐标。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">关于缓存一致性，Smith(2019) 提出了 A 方法，Jones(2020) 提出了 B 方法，Lee(2021) 研究了 C。这些方法各有优缺点。</span>
+      <span class="after">缓存一致性的研究一直在"性能"与"正确性"之间摇摆：早期方案（Smith 2019）为速度牺牲了强一致；随后一派（Jones 2020）用重协议换回一致，却把延迟推高了三倍。真正没人解决的是——能不能不加协议开销，就拿到"够用的一致性"？这正是本文的切入点。</span>
+      <span class="note">清单变成一条"张力线"，末尾落在 gap 上，读者立刻知道你为何要出场。</span>
+    </div>
+    <div class="example">
+      <span class="before">Smith (2019) proposed A. Jones (2020) proposed B. Lee (2021) studied C.</span>
+      <span class="after">Work on cache coherence has swung between speed and correctness: early designs (Smith 2019) traded consistency for latency, while later protocol-heavy approaches (Jones 2020) restored it at 3× the cost. What no one has shown is whether "good-enough" consistency is achievable without protocol overhead — the gap this paper addresses.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ 论文 Related Work、设计文档的方案对比、技术选型、晋升材料里"为什么别人没做成"</li>
+      <li>✗ 清单体——每篇一句、无主线；或只夸不评、只贬不引</li>
+      <li>✗ 综述完不落到 gap，读者不知道"所以你要干嘛"</li>
+      <li>✗ 为显博学堆无关文献——综述是筛选，不是清点</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>选你熟悉的一个技术领域，用三句话写出它的"对话脉络"：过去大家怎么做→出现了什么问题→现在卡在哪，最后加一句你想接上的话。<br>思考题：如果你诚实地画出这张地图，你的工作是在"填空白"，还是在重复别人已经做过的事？</p>
+  </div>
+</section>
+
+<!-- Card 3: 论证结构 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>论证结构：句子的意义，一半藏在位置里</h2>
+  <div class="en-name">Argument Structure — Reader Expectations</div>
+  <span class="tag">Gopen &amp; Swan · 读者期待</span>
+
+  <div class="section">
+    <div class="label">一句话原则 + 名家原话</div>
+    <p>读者对"信息该出现在哪里"有固定期待：句子开头（<strong>话题位</strong>）放旧信息、已知的主角；句子结尾（<strong>重音位</strong>）放新信息、你要强调的东西。违反这个期待，再准确的句子也难读。</p>
+    <div class="quote">
+      "Readers do not simply read; they interpret. … The information a sentence contains is only part of what a reader gets; the other part comes from where in the sentence that information appears."
+      <span class="cn">读者不是被动地读，而是主动地解读。……一个句子传递的信息，只有一部分来自内容，另一部分来自这些信息出现在句子的什么位置。</span>
+      <span class="source">— Gopen &amp; Swan,《The Science of Scientific Writing》, American Scientist (1990)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>中文英文都吃这一套。读者会把句子开头当成"这句在讲谁"，把结尾当成"重点在哪"。你若把结论埋在句中，或让每句都从陌生新词开头，读者的解读机器就空转。学术论证读不懂，常常不是逻辑断了，而是<strong>"旧信息—新信息"的接力断了</strong>：上一句的结尾没接上下一句的开头。</p>
+  </div>
+
+  <div class="stress-vis">
+    <div class="bar">
+      <div class="zone"><span class="z-title">话题位（句首）</span><span class="z-desc">旧信息 · 已知主角</span></div>
+      <div class="zone mid"><span class="z-title">……</span><span class="z-desc">推进</span></div>
+      <div class="zone stress"><span class="z-title">重音位（句尾）</span><span class="z-desc">新信息 · 要强调的</span></div>
+    </div>
+    <div class="caption">读者天然把句首读作"讲谁"、句尾读作"重点"——顺着期待写，句子自己就清楚了</div>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">一种基于因果序的冲突检测算法被我们在本系统中采用，以解决并发写入时的数据不一致，这是我们方法的核心创新。</span>
+      <span class="after">并发写入会导致数据不一致。为此，我们的核心创新是一套基于因果序的冲突检测算法——它在写入时就拦下冲突，而非事后修复。</span>
+      <span class="note">"核心创新"提到重音位，主角放回话题位，被动改主动。</span>
+    </div>
+    <div class="example">
+      <span class="before">A causal-order-based conflict detection algorithm was adopted in our system to address the data inconsistency that arises during concurrent writes.</span>
+      <span class="after">Concurrent writes cause data inconsistency. Our fix is a causal-order conflict detector that catches conflicts at write time, not after.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ 论文正文、设计文档的论证段、决策备忘录、任何要一步步说服人的长文</li>
+      <li>✗ 关键结论埋在句中或段落中间，读者读到最后才撞见重点</li>
+      <li>✗ 每句都从陌生新术语开头，读者接不上上一句</li>
+      <li>✗ 滥用被动语态把"谁做的"藏起来；段落没有主题句</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>拿你写的一段技术论证，逐句检查两件事：这句是从"已知的主角"开头吗？最该记住的词落在句尾了吗？改写其中违反的三句。<br>思考题：中文更容易省略主语（无主句），这让"话题位"原则更难用，还是反而更好用？</p>
+  </div>
+</section>
+
+<!-- Card 4: 反黑话 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>学术黑话批判：杀死僵尸名词</h2>
+  <div class="en-name">Against Jargon — Zombie Nouns</div>
+  <span class="tag">Sword · Orwell · 反名词化</span>
+
+  <div class="section">
+    <div class="label">一句话原则 + 名家原话</div>
+    <p>学术黑话的头号病症是<strong>名词化</strong>——把动词和形容词压成抽象名词，句子就失去了动作和人。Helen Sword 叫它们"僵尸名词"：它们吃掉动词、吸干形容词、用抽象实体取代活人。</p>
+    <div class="quote">
+      "Nominalizations are the zombie nouns of academic prose: they cannibalize active verbs, suck the lifeblood from adjectives and substitute abstract entities for human beings."
+      <span class="cn">名词化是学术散文里的僵尸名词：它们吞噬主动动词、吸干形容词的血、用抽象实体取代活生生的人。</span>
+      <span class="source">— Helen Sword,《Zombie Nouns》, New York Times (2012)</span>
+    </div>
+    <div class="quote">
+      "Never use a long word where a short one will do."
+      <span class="cn">能用短词，就绝不用长词。</span>
+      <span class="source">— George Orwell,《Politics and the English Language》(1946)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>为什么聪明人写晦涩？Pinker 的答案是"<strong>知识的诅咒</strong>"——你太熟悉自己的内容，忘了读者不在你脑子里，于是省掉了让别人能懂的那座桥。名词化和黑话还有个不光彩的功能：掩饰。"进行了优化"不必说优化了什么、优化了多少；"存在一定问题"不必说是谁的问题。<strong>含糊是逃避责任的语法；清晰是一种诚实</strong>——它逼你把话说死。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">对系统性能的优化的实现，是通过对缓存策略的调整来进行的。</span>
+      <span class="after">我们调整缓存策略，让系统更快。</span>
+      <span class="note">三个"的字名词块"＋"进行"，压缩成一个主语一个动词。</span>
+    </div>
+    <div class="example">
+      <span class="before">The implementation of an optimization of system performance was achieved through the modification of the caching strategy.</span>
+      <span class="after">We changed the caching strategy to make the system faster.</span>
+    </div>
+    <div class="example">
+      <span class="before">由于某些客观原因，项目在推进过程中存在一定的挑战。</span>
+      <span class="after">我们缺两名工程师，上线要晚三周。</span>
+      <span class="note">黑话的另一种用途是逃避——把它翻译回具体，责任和事实就现形了。</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ 一切正式写作——论文、RFC、周报、复盘、晋升材料。越想"显得专业"的场合越要警惕</li>
+      <li>✗ 用"进行／加以／实现／开展＋名词"代替一个动词（进行优化→优化）</li>
+      <li>✗ 用抽象名词当主语，句子里没有人（"该现象的发生"）</li>
+      <li>✗ 以为长词等于专业；用含糊词逃避具体承诺（"一定程度""相关方面"）</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>拿你最近一段正式文字，圈出所有"X 的 Y 的 Z"名词块和"进行／加以＋名词"结构，逐个改回"谁＋动词＋什么"，数数删了多少字。<br>思考题：有没有一种情况，模糊的黑话是"故意的"——你其实不想把话说死？那是表达问题，还是你还没想清楚？</p>
+  </div>
+</section>
+
+<div class="deep-head">深入思考</div>
+
+<details><summary>学术要求"清晰"，但有些思想本身复杂精微，说得太简单会不会失真？</summary><div>复杂的思想和复杂的句子是两回事。爱因斯坦说"尽量简单，但不能过分简单"。清晰不是简化内容，而是去掉理解的障碍——让读者把认知资源花在思想上，而非解码句子上。精微的思想恰恰需要最清晰的表达才不被误读。如果一个观点只有绕着说才成立，往往不是它太深，而是还没想透，或在用晦涩掩饰空洞。</div></details>
+
+<details><summary>中文的"翻译腔黑话"和英文的名词化，是同一种病吗？</summary><div>同源不同形。英文名词化靠 -tion／-ment 后缀；中文靠"的字堆叠""进行／加以＋名词""被＋动词"这些从翻译学来的结构。病根都是<strong>回避动作和主语</strong>。但中文有独特毒株：无主句让"谁做的"更易凭空消失，"性／化／度"后缀能无限造词。解药相同——找回主语，把名词还原成动词，把"X 的 Y"拆成"谁做了 Y"。</div></details>
+
+<details><summary>"结论先行"在论文里天经地义，但人文学科偏爱"层层铺陈最后揭示"，清晰原则有学科边界吗？</summary><div>有，但比多数人以为的窄得多。悬念结构在文学、哲学随笔里确有价值——过程本身就是内容。但即便如此，读者仍需要"路标"知道自己走到哪了。多数所谓"学科风格"其实是坏习惯的托词。检验：你的迂回是在为读者的理解服务，还是在掩盖你自己也没想清？前者是艺术，后者是黑话。</div></details>
+
+<details><summary>技术文档（RFC、设计文档）和学术论文，清晰的标准一样吗？</summary><div>内核一样——结论先行、顺应读者期待、戒黑话——但权重不同。技术文档读者是"要做决定的同事"，更该激进地前置结论、可扫读；论文要经得起同行审查，需要完整论证链和文献定位。共同点是：两者都被"显得严谨"的冲动推向晦涩，都该抵抗。你 RFC 里的僵尸名词，和论文里的一样该杀。</div></details>
+
+<details><summary>AI 已能把黑话论文"翻译"成清晰版，甚至代写摘要。学清晰写作还值得投入吗？</summary><div>更值得，只是重心变了。AI 能润色句子、消灭名词化、套摘要模板——机械那层它比你快。但它替代不了三件事：判断"gap 到底在哪"、决定"这项工作究竟意味着什么"（摘要第四句）、辨别一段综述是真有主线还是通顺的空话。清晰写作的底层永远是清晰思考；AI 让"表达的清晰"变便宜，反而把"思考的清晰"逼成唯一的稀缺品。</div></details>
+
+<div class="nav">
+  <a href="index.html">← 回到写作目录</a>
+</div>
+
+<footer>BigCat · Writing · Day 47 · 2026</footer>
+
+</div>
+</body>
+</html>
