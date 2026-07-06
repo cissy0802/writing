@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing & Expression: Instructional Writing — Day 48</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.35rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.5rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .cn{display:block;margin-top:10px;font-style:normal;color:#4a4a4a}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"BEFORE ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block;white-space:pre-line}
+.example .after:before{content:"AFTER ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .note{display:block;margin-top:8px;font-size:0.86rem;color:#8a8a8a;font-style:italic}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+
+/* Norman's three models */
+.model-vis{background:#f8f6f1;padding:24px 16px 16px;margin:18px 0;border-radius:2px}
+.model-vis .m-flow{display:flex;flex-direction:column;gap:8px;align-items:center}
+.model-vis .m-box{width:100%;max-width:440px;text-align:center;padding:12px 16px;background:#fff;border:1px solid #d8d0bc;border-radius:2px}
+.model-vis .m-box.mid{background:#1f1f1f;border-color:#1f1f1f}
+.model-vis .m-box .m-t{display:block;font-weight:700;color:#1f1f1f;font-size:0.96rem}
+.model-vis .m-box.mid .m-t{color:#d8c98a}
+.model-vis .m-box .m-d{display:block;font-size:0.82rem;color:#8a7a4a;margin-top:2px;font-family:Georgia,serif}
+.model-vis .m-box.mid .m-d{color:#cfc39a}
+.model-vis .arrow{color:#8a7a4a;font-size:1.15rem;line-height:1}
+.model-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:14px;font-family:Georgia,serif;text-align:center}
+
+.deep-head{font-size:1.2rem;font-weight:700;margin:48px 0 16px;text-align:center;color:#1f1f1f;letter-spacing:1px}
+details{background:#fff;border:1px solid #d8d0bc;border-radius:2px;margin:10px 0;padding:4px 16px}
+details summary{cursor:pointer;font-weight:600;color:#1f1f1f;padding:10px 0;font-size:1rem}
+details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.05rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.25rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 48 · 2026.07.06</div>
+  <h1>Writing & Expression: Instructional Writing<span class="topic">Steps · Mental Models · Error Prevention · Minimalism</span></h1>
+  <div class="date">BigCat's Writing</div>
+  <p class="intro">The manual is the humblest and hardest genre. No one praises a good set of instructions, but a bad one can strand a whole team on the same step. It doesn't chase style — only one thing: let someone who isn't inside your head follow along and get it right. The README, the API doc, the runbook, the onboarding guide — all of it is this genre. Today, four people who truly studied "how to teach someone to do something" help us write it so well that nobody has to ask.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Chunk the Steps: One Action Each, Condition Before Action</h2>
+  <div class="en-name">Chunk the Steps — Condition Before Action</div>
+  <span class="tag">Redish · Numbering · Imperative</span>
+
+  <div class="section">
+    <div class="label">The Principle + In Their Words</div>
+    <p>The smallest unit of instruction is one executable action. Break flowing prose into numbered steps, one action per step, in the imperative (verb first). The key: put the condition, location, or purpose <strong>before the action</strong> — don't let the reader act first and only then discover there was a prerequisite.</p>
+    <div class="quote">
+      "Put the condition or the location before the action. People act as soon as they read the action; if the condition comes afterward, they've already done it wrong."
+      <span class="source">— Ginny Redish, <em>Letting Go of the Words</em> (2007)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>People don't read instructions to admire them; they read to <em>do</em>. Their attention is a laser fixed on "which button next." Hence two iron rules: one, actions must be short enough to be caught while <strong>scanning</strong> — a numbered list with a leading verb beats one long "first… then… next…" paragraph; two, because a reader's hand moves the instant they hit the verb, any prerequisite (back up first, admins only, never in production) must come <strong>before</strong> the action, or it arrives too late.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">The Rewrite</div>
+    <div class="example">
+      <span class="before">Click Delete to remove the record. Note that you should export a backup first, or the data cannot be recovered.</span>
+      <span class="after">1. Export a backup — deleted data cannot be recovered.
+2. Click Delete.</span>
+      <span class="note">The fatal prerequisite ("back up first") moves ahead of the action and becomes its own step — by the time the reader reaches step 2, the backup is done.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ README install steps, runbooks, API call examples, onboarding checklists, incident SOPs</li>
+      <li>✗ Cramming several actions into one step ("configure and restart and verify") — one action per step</li>
+      <li>✗ Prerequisites after the action ("click Submit — remember to fill required fields first"); they already clicked</li>
+      <li>✗ Prose instead of numbering, so the reader can't scan to find which step they're on</li>
+      <li>✗ Skipping a step: the author assumes "obviously you log in first," and the reader stalls at step one</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take a setup or install passage you've written and convert it into numbered steps: each an imperative, verb first, every prerequisite and warning moved ahead of its action. Count how many "do this — actually, do it even earlier" traps you had.<br>Question: The last time someone's doc stalled you, was it "not written down," or "wrong order"?</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>The User's Mental Model: You Write for Their Model, Not Yours</h2>
+  <div class="en-name">The User's Mental Model</div>
+  <span class="tag">Norman · Conceptual Model</span>
+
+  <div class="section">
+    <div class="label">The Principle + In Their Words</div>
+    <p>You (the author) carry a full model of how the system works; the reader doesn't. What they can see — the interface, the naming, the docs — is their only source (Norman calls it the "system image"). A good instruction's job is to install, through that image, a model that is <strong>good enough to predict the next step</strong>.</p>
+    <div class="quote">
+      "A good conceptual model allows us to predict the effects of our actions. Without a good model, we operate by rote, blindly; we do operations as we were told to do them."
+      <span class="source">— Don Norman, <em>The Design of Everyday Things</em> (1988/2013)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>This explains "I followed the steps and still can't do it": pure steps give rote, not a model. The moment the reader hits a case the doc didn't cover, they're lost — they don't grasp the "why." So the best instructions add a <strong>"because"</strong> at key points: not explaining every detail, but giving one mental anchor from which the reader can infer the un-written cases. It's also the cure for the "curse of knowledge" — you know the system too well to remember the reader is a blank slate.</p>
+  </div>
+
+  <div class="model-vis">
+    <div class="m-flow">
+      <div class="m-box"><span class="m-t">Designer's Model</span><span class="m-d">your full picture of how it works</span></div>
+      <div class="arrow">↓</div>
+      <div class="m-box mid"><span class="m-t">System Image</span><span class="m-d">interface · naming · docs — the only channel</span></div>
+      <div class="arrow">↓</div>
+      <div class="m-box"><span class="m-t">User's Model</span><span class="m-d">what the reader infers, and predicts from</span></div>
+    </div>
+    <div class="caption">The designer's model never passes to the user directly; the user can only infer it from the "system image." How well you write decides how cleanly that inference goes</div>
+  </div>
+
+  <div class="section">
+    <div class="label">The Rewrite</div>
+    <div class="example">
+      <span class="before">Run flush to clear the cache.</span>
+      <span class="after">Run flush to clear the cache. The cache is just a temporary in-memory copy — flush drops the copy, never the source data — so it's safe to run.</span>
+      <span class="note">One line of "why it's safe" gives the reader a model: next time they face "should I flush?" they can decide for themselves instead of asking you.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ API behavior notes, error meanings, "what this toggle affects," architecture onboarding, CLI help</li>
+      <li>✗ Actions only, no model — the reader stalls the moment they leave the template</li>
+      <li>✗ The reverse: dumping every implementation detail to show off, drowning the "good-enough" model</li>
+      <li>✗ Naming that contradicts behavior (a "Save" button that submits) — the system image itself lies</li>
+      <li>✗ Assuming the reader shares your concepts; jargon and internal acronyms left unexplained</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Find one pure how-to line in your docs and add a "why / what it's really doing," enough that the reader can infer one adjacent case you didn't write.<br>Question: Do "give a model" and "stay concise" conflict? Which "because" earns its place, and which is you showing off?</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Error Prevention: The Best Error Message Is One That Can't Fire</h2>
+  <div class="en-name">Error Prevention Over Error Messages</div>
+  <span class="tag">Nielsen · Poka-yoke</span>
+
+  <div class="section">
+    <div class="label">The Principle + In Their Words</div>
+    <p>A master of instruction isn't satisfied with "spell out how to do it right." They also ask "where is the reader most likely to go wrong," then set a guardrail just before that step — a warning, a constraint, a safe default, a verification. Better than a good error message is making the error <strong>unable to happen</strong>.</p>
+    <div class="quote">
+      "Good error messages are important, but the best designs carefully prevent problems from occurring in the first place."
+      <span class="source">— Jakob Nielsen, <em>10 Usability Heuristics</em>, #5 (1994)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>An error message is after-the-fact repair; prevention is up-front interception — an order of magnitude cheaper. For a doc writer, "error prevention" has concrete moves: one, flag the <strong>dangerous action</strong> (irreversible / touches production) and set the warning off visually from the body; two, give a <strong>safe default</strong> ("leave it unless you have a reason"), sparing the reader a decision they're not equipped to make; three, turn implicit prerequisites into explicit checks. Norman calls this class of design a forcing function (poka-yoke) — in a doc, it's making the mistake hard to make.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">The Rewrite</div>
+    <div class="example">
+      <span class="before">Change the port in config.yaml, then restart the service.</span>
+      <span class="after">⚠ Test environment only. Production port changes require approval.
+1. Set port in config.yaml (default 8080 — leave it unless you have a reason).
+2. Restart, then verify with curl localhost:&lt;new-port&gt;.</span>
+      <span class="note">Three guardrails: a danger boundary (test only), a safe default (leave it), a verification step (confirm it took) — the mistake is now hard to make.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ Runbooks, production SOPs, irreversible commands, migration/rollback guides, error-prone configs</li>
+      <li>✗ Warning placed after the action, or buried inconspicuously in the body</li>
+      <li>✗ A hollow "please be careful" with no information — state the concrete consequence</li>
+      <li>✗ No default, forcing a choice the reader has no background to make</li>
+      <li>✗ No verification step, so the reader finishes not knowing if it worked</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take a doc with a "dangerous action" and, for each irreversible step, add three things: a warning naming the concrete consequence (ahead of the action), a safe default, and a "how to confirm success" check.<br>Question: Where's the line between prevention in the doc and prevention in the product itself (disabled buttons, confirmations)? What should the doc never have to cover?</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Minimalist Instruction: Cut Until the Reader Can Move</h2>
+  <div class="en-name">Minimalist Instruction</div>
+  <span class="tag">Carroll · Krug · Cut</span>
+
+  <div class="section">
+    <div class="label">The Principle + In Their Words</div>
+    <p>People don't read manuals; they want to get going. Minimalism (Carroll) isn't writing less — it's cutting everything that stands between the reader and their first action: long preambles, obvious explanations, exhaustive options — leaving only the minimum that lets them <strong>act now and recover from errors on their own</strong>.</p>
+    <div class="quote">
+      "The idea of minimalism is to reduce the extent to which instructional materials obstruct learning, and to find ways to support the learning activities already going on."
+      <span class="source">— John M. Carroll, <em>The Nurnberg Funnel</em> (1990)</span>
+    </div>
+    <div class="quote">
+      "Get rid of half the words on each page, then get rid of half of what's left."
+      <span class="source">— Steve Krug, <em>Don't Make Me Think</em> (2000)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Why does "less" work better? Because a reader's patience is scarce; every filler sentence spends it, making them likelier to give up and just poke around. Carroll's counterintuitive finding: give beginners a <em>thicker</em> manual and they learn <strong>slower</strong> — the bulk delays doing. Minimalism has three moves: cut the happy-talk intro ("Welcome! This tool is designed to…") and lead with the first action; cut what the reader already knows (don't explain what "click" means); trade "complete" for "enough" — cover the 80% main path, link edge cases out.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">The Rewrite</div>
+    <div class="example">
+      <span class="before">Welcome! Before we begin, we recommend familiarizing yourself with the overall process. This tool is designed to help you deploy more efficiently. First, make sure all dependencies are installed, and then we can get started.</span>
+      <span class="after">Deploy in 3 steps:
+1. make deps
+2. make deploy
+3. Open /health — "OK" means success.</span>
+      <span class="note">Forty words of warm-up and "designed to help" gone; three actions straight up. The reader is on step one within ten seconds.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ Quickstarts, README openers, tutorials, tool onboarding, "5-minute start" docs</li>
+      <li>✗ Happy-talk intros; zero-information transitions like "as we all know" / "it's worth noting"</li>
+      <li>✗ Exhaustiveness: stuffing every edge option into the main flow, drowning the main path</li>
+      <li>✗ Explaining what the reader already knows (don't teach what a browser is)</li>
+      <li>✗ Mistaking "minimal" for "missing" — error-recovery info can't be cut; that's what beginners need most</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take a quickstart and apply Krug's rule in two passes (cut half, then half of what's left), until the reader can start step one before finishing the read. Check: did you actually lose information?<br>Question: When do "minimal" and "complete" have to conflict? Is the boundary the same for a surgical checklist and an app's onboarding?</p>
+  </div>
+</section>
+
+<div class="deep-head">Going Deeper</div>
+
+<details><summary>Good instruction erases the author's presence; the essay and the speech chase a distinct voice — the opposite. How does one person switch between the two modes?</summary><div>The highest praise for instruction is "transparent" — the reader breezes through the task without noticing the prose. That's the reverse of the "voice" prized in essays and speeches, yet the underlying craft is shared: both demand extreme consideration for the reader. The difference is who you serve — instruction serves task completion, the essay serves resonance of thought. The mark of a mature writer is judging, moment to moment, whether to vanish or to appear — and switching cleanly. Voice isn't for everywhere; it's for when it belongs.</div></details>
+
+<details><summary>What traps are unique to writing instructions in Chinese?</summary><div>Chinese breeds long "的"-strings and subject-less sentences, yet instruction most needs short clauses and an explicit subject (who does what). The imperative naturally drops the subject in Chinese, which is an advantage ("点击保存" is clean); the danger is that "请您"-style politeness dilutes the action, and word order makes "condition before action" harder to arrange. Chinese instructions also love soft words like "即可," "相关," "进行" — enemies of clarity. The cure is the same as in English: lead with the verb, one action per step, cut the filler.</div></details>
+
+<details><summary>When do pictures (screenshots, flowcharts, wordless IKEA diagrams) beat text steps?</summary><div>When the key information is spatial (where the button is, how the wires connect), a picture far beats text — IKEA manuals are nearly wordless for exactly this reason. When the key is sequence and conditional logic (judge A first, then decide B), text plus numbering is clearer. The strongest form has each do its own job: the screenshot shows "where," the text says "what and why." The trap is a screenshot captioned "click here as shown" — don't repeat in words what the image already says.</div></details>
+
+<details><summary>AI can generate docs from code and answer questions conversationally. Will "writing a static manual" be replaced?</summary><div>The form will change; the craft grows more valuable. AI can produce API references and instantly answer "what does this parameter mean" — the mechanical layer, derivable from code, it does well. But it can't infer "where the user will make a fatal mistake," "which prerequisite must come first," "what to cut and what to keep" — these come from empathy for a real reader and judgment about the task. Future "doc writing" is less typing, more designing information architecture, flagging danger, defining the mental model. The person who thinks for the reader is scarcer than ever.</div></details>
+
+<details><summary>Do "make users awesome" (Kathy Sierra) and "don't make me think" (Krug) contradict each other?</summary><div>No — they're layered. Krug's "don't make me think" targets the interface and the path: finding a button, walking a flow, chores that shouldn't cost brainpower. Sierra's <em>Badass</em> targets capability: the tool should make users powerful at the real task. Good instruction does both — drive operational friction to zero (no thinking about how to click) and steer the cognitive investment somewhere worthwhile (understanding the model, mastering the skill). The brainpower you save gets spent where it counts.</div></details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Index</a>
+</div>
+
+<footer>BigCat · Writing · Day 48 · 2026</footer>
+
+</div>
+</body>
+</html>
