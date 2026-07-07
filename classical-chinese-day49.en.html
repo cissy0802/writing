@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: Classical Chinese for Modern Writing — Day 49</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.35rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.5rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .cn{display:block;margin-top:10px;font-style:normal;color:#4a4a4a}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .note{display:block;margin-top:8px;font-size:0.86rem;color:#8a8a8a;font-style:italic}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+
+/* couplet alignment diagram */
+.duizhang{background:#f8f6f1;padding:22px 16px 16px;margin:18px 0;border-radius:2px}
+.duizhang .couplet{display:flex;flex-direction:column;gap:8px}
+.duizhang .line{display:flex;gap:6px;justify-content:center}
+.duizhang .w{flex:0 0 auto;min-width:88px;padding:10px 6px;background:#fff;border:1px solid #d8d0bc;border-radius:2px;text-align:center;font-size:0.92rem;color:#1f1f1f}
+.duizhang .line.down .w{border-color:#8a7a4a;background:#f3ede0}
+.duizhang .roles{display:flex;gap:6px;justify-content:center;margin-top:6px}
+.duizhang .roles .r{flex:0 0 auto;min-width:88px;padding:4px 6px;text-align:center;font-size:0.7rem;color:#8a7a4a;font-family:Georgia,serif}
+.duizhang .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+/* keep / drop diagram */
+.keepdrop{display:flex;gap:14px;margin:18px 0}
+.keepdrop .col{flex:1;border-radius:2px;padding:16px 16px 18px}
+.keepdrop .keep{background:#1f1f1f;color:#fafafa}
+.keepdrop .drop{background:#f3f0e8;border:1px dashed #b8a878}
+.keepdrop .col .ct{font-family:Georgia,serif;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;font-weight:700}
+.keepdrop .keep .ct{color:#d8c98a}
+.keepdrop .drop .ct{color:#8a7a4a}
+.keepdrop .col ul{list-style:none}
+.keepdrop .col li{padding:5px 0 5px 18px;position:relative;font-size:0.94rem;line-height:1.6}
+.keepdrop .keep li{color:#fafafa}
+.keepdrop .keep li:before{content:"＋";position:absolute;left:0;color:#d8c98a}
+.keepdrop .drop li{color:#5a5a5a}
+.keepdrop .drop li:before{content:"－";position:absolute;left:0;color:#b8a878}
+.keepdrop .caption{flex-basis:100%}
+
+.deep-head{font-size:1.2rem;font-weight:700;margin:48px 0 16px;text-align:center;color:#1f1f1f;letter-spacing:1px}
+details{background:#fff;border:1px solid #d8d0bc;border-radius:2px;margin:10px 0;padding:4px 16px}
+details summary{cursor:pointer;font-weight:600;color:#1f1f1f;padding:10px 0;font-size:1rem}
+details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.05rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.25rem}
+  .duizhang .w{min-width:0;flex:1;font-size:0.74rem}
+  .duizhang .roles .r{min-width:0;flex:1;font-size:0.6rem}
+  .keepdrop{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 49 · 2026.07.07</div>
+  <h1>Writing &amp; Expression: Classical Chinese for Modern Writing<span class="topic">Concision · Parallelism · Allusion · Adaptation</span></h1>
+  <div class="date">BigCat's Writing</div>
+  <p class="intro">Classical Chinese isn't a museum specimen — it's a power station still on the grid. A memo, a pitch, a promo packet needn't be archaic, but they can steal four of its skills: pack a line to its densest, make sentences generate force through symmetry, allude without showing off, and carry the sinew of the old prose into today's plain speech. This isn't a lesson in writing archaisms — it's about giving plain prose a backbone.</p>
+</header>
+
+<!-- Card 1: Concision -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Classical Concision: Not One Word to Spare</h2>
+  <div class="en-name">凝练 · Concision</div>
+  <span class="tag">Liu Xie · Rong-Cai</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master's Words</div>
+    <p>The fiercest skill of classical Chinese is density. Learning it isn't nostalgia — it's adopting that <strong>"not one word can be removed" standard</strong>: forcing every character to earn its place, so that cutting one collapses the sentence.</p>
+    <div class="quote">
+      "If a phrase has words that can be cut, its texture is loose; if not a single word can be reduced, only then is it dense."
+      <span class="cn">The classic on rhetoric measures prose by whether anything is deletable — density is the absence of the deletable.</span>
+      <span class="source">— Liu Xie, <em>The Literary Mind and the Carving of Dragons</em> (c. 500 CE)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Plain prose is looser than classical by nature — it bloats on function words, throat-clearing, and padded two-syllable compounds. Concision isn't hacking a line down until it's unreadable; it's cutting the words that <strong>do no work</strong>. Classical training forces you to interrogate each word: what is it doing here? Would the line fall without it? That "cut until nothing more can go" discipline is exactly what plain prose most lacks.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">At this point in time, we should proactively take a series of effective measures in order to address the various complex challenges we currently face.</span>
+      <span class="after">We must meet today's challenges with real action.</span>
+      <span class="note">Twenty-three words down to eight, meaning intact. "At this point in time," "a series of," "various," "we currently face" — all padding.</span>
+    </div>
+    <div class="example">
+      <span class="before">此番架构调整，实乃对现有系统进行了一次较为全面而深入的优化与改进。</span>
+      <span class="after">这次架构调整，把系统彻底重做了一遍。</span>
+      <span class="note">Same disease in Chinese: "实乃," "进行了," "较为...而...的" are pure bloat. Strunk &amp; White: "Omit needless words." — the rule crosses languages.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Traps</div>
+    <ul>
+      <li>✓ The opening line of a memo, a Slack ping, a PR title, a slide headline, the impact sentence of a promo packet</li>
+      <li>✗ Turning "concision" into "so cut it's incomprehensible" — cut the padding, never the information</li>
+      <li>✗ Chains of two-syllable filler: "conduct," "carry out," "in respect of," "with regard to"</li>
+      <li>✗ Smuggling archaic words into plain prose to sound deep (see Card 4)</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take a paragraph you wrote recently (a memo or email will do), and ask of each word: "Would the line fall if I cut this?" Aim to lose thirty percent of the words with no loss of meaning.<br>Question: The words you couldn't cut — aren't those exactly the sentence's real bones?</p>
+  </div>
+</section>
+
+<!-- Card 2: Parallelism -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Parallelism &amp; Antithesis: Symmetry That Generates Force</h2>
+  <div class="en-name">对偶与排比 · Parallel Structure</div>
+  <span class="tag">Liu Xie · Li-Ci</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master's Words</div>
+    <p>Chinese is monosyllabic and born to pair. <strong>Antithesis makes two halves light each other up; parallelism stacks repetition into momentum.</strong> It's a symmetry weapon native to Chinese — and one of the easiest to overuse.</p>
+    <div class="quote">
+      "When Nature grants a form, the limbs must come in pairs; when the spirit is at work, nothing stands alone."
+      <span class="cn">Liu Xie's argument: symmetry is a law of nature, not an ornament bolted on.</span>
+      <span class="source">— Liu Xie, <em>The Literary Mind and the Carving of Dragons</em>, "Parallel Phrasing"</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>The force of antithesis lies in "<strong>same structure, mirrored meaning</strong>": the reader sees the two halves correspond at a glance, and the meaning surfaces on its own through the contrast. Parallelism drives rhythm through identical construction — the more it stacks, the more momentum it builds. But symmetry cuts both ways: precise, it generates force; hollow, it becomes an empty ornamental frame. The point is to align the <strong>meaning</strong>, not just the surface.</p>
+  </div>
+
+  <div class="duizhang">
+    <div class="couplet">
+      <div class="line up"><span class="w">Sunset clouds</span><span class="w">with</span><span class="w">a lone duck</span><span class="w">fly as one</span></div>
+      <div class="line down"><span class="w">Autumn waters</span><span class="w">share</span><span class="w">the vast sky</span><span class="w">one hue</span></div>
+      <div class="roles"><span class="r">noun</span><span class="r">prep.</span><span class="r">noun</span><span class="r">verb</span></div>
+    </div>
+    <div class="caption">Wang Bo, "Preface to the Pavilion of Prince Teng" — every position and part of speech mirrors its opposite; the symmetry itself is the meaning</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">Our approach is faster, and it also costs less, plus people find it easy to use.</span>
+      <span class="after">Faster, cheaper, simpler.</span>
+      <span class="note">Strunk &amp; White: "Express coordinate ideas in similar form." Lincoln's "of the people, by the people, for the people" is the same craft.</span>
+    </div>
+    <div class="example">
+      <span class="before">这个方案能提升性能，而且成本也控制得不错，用户用起来也比较方便。</span>
+      <span class="after">提性能而不加成本，重体验而不失简洁。</span>
+      <span class="note">A loose list becomes an antithesis; the selling points line up and light each other up, and the reader remembers them at a glance.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Traps</div>
+    <ul>
+      <li>✓ Slogans, three-beat slide lines, spoken anaphora, value propositions, closing lines</li>
+      <li>✗ Symmetry for its own sake, padding words at the cost of meaning</li>
+      <li>✗ False parallels: structures that don't actually align ("faster, and it costs less, plus easy")</li>
+      <li>✗ Anaphora that stacks past four or five items without landing — momentum turns to droning</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take three selling points of your product or project and write them as one parallel or antithetical set — each item as equal in length and identical in structure as you can make it.<br>Question: When forced to align the structure, didn't you notice one point actually sits on a different level from the other two?</p>
+  </div>
+</section>
+
+<!-- Card 3: Allusion -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>The Measure of Allusion: A Bonus for Those Who Know, Not a Locked Door for Those Who Don't</h2>
+  <div class="en-name">用典的分寸 · Allusion</div>
+  <span class="tag">Wang Guowei · No Veil</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master's Words</div>
+    <p>An allusion is <strong>an extra layer of flavor for those who catch it, not a door shut on those who don't</strong>. A good allusion reads clearly even to someone who misses the source; those who get it simply smile.</p>
+    <div class="quote">
+      "When every line is right there before your eyes, that is 'no veil.'"
+      <span class="cn">Wang Guowei used this standard to fault overloaded allusion — if a reference leaves the reader "veiled," a layer removed from the meaning, it has failed.</span>
+      <span class="source">— Wang Guowei, <em>Poetic Remarks in the Human World</em> (1908)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>An allusion is a zip file — one word unpacks an entire story. But it must be able to decompress: the reader who doesn't know the source should still get the <strong>surface meaning</strong>, and the one who does gets a layer more. "A thousand sails pass the sunken boat" carries its resilience even to someone who's never heard of the poet Liu Yuxi. The opposite is showing off — piling on obscure references to flaunt learning, shutting readers out, creating exactly the "veil" Wang warned against. Technical writing has its own allusions: jargon, memes, in-house slang. Same rule — the skill is making an outsider understand.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">This is our Waterloo, a Pyrrhic victory at best, lest in our hubris we open Pandora's box.</span>
+      <span class="after">We may win this, but at a cost so high it will feel like losing.</span>
+      <span class="note">Three proper-name allusions stacked in one breath is just showing off. "Sour grapes" works even for someone who's never read Aesop — that's the bar.</span>
+    </div>
+    <div class="example">
+      <span class="before">此番架构调整，颇有「庖丁解牛，游刃有余」之效，然亦需防「刻舟求剑」之弊。</span>
+      <span class="after">这次架构调整像庖丁解牛——顺着系统本身的纹理下刀，就不费力。</span>
+      <span class="note">The Chinese version stacks three classical idioms and half-classical grammar; the fix keeps one, explains it, and reads even for someone who doesn't know the source.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Traps</div>
+    <ul>
+      <li>✓ A memorable line in a talk, an article title, a single layer of pun for insiders, brand narrative</li>
+      <li>✗ Showing off: stacking several references in one sentence, flaunting to lock people out</li>
+      <li>✗ Allusions so obscure they'd need a footnote (the reader won't stop to look it up)</li>
+      <li>✗ The wrong reference, misattributed — worse for your credibility than no allusion at all</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take a metaphor or allusion you've used and ask two questions: does it read clearly for someone who doesn't know the source? Does someone who does get something extra? Keep it only if both answers are yes.<br>Question: The last time you used an allusion, was it to help the reader understand — or to make yourself look well-read?</p>
+  </div>
+</section>
+
+<!-- Card 4: Adaptation -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Adapting the Classical: Take the Bone, Not the Costume</h2>
+  <div class="en-name">古为今用 · Adaptation</div>
+  <span class="tag">Lu Xun · Grab-ism</span>
+
+  <div class="section">
+    <div class="label">The Principle + The Master's Words</div>
+    <p>Adapting the classical isn't writing mock-archaic prose. It's <strong>taking its bone — concision, rhythm, imagery — into today's plain speech, and discarding its costume — the "thee and thou" cadence</strong>. Mimicry is dead; adaptation is alive.</p>
+    <div class="quote">
+      "We must use our brains, open our eyes, and grab things for ourselves!"
+      <span class="cn">Facing an inheritance, don't swallow it whole and don't reject it wholesale — actively pick out what's useful and make it your own. That is the right stance toward the classical.</span>
+      <span class="source">— Lu Xun, "Grab-ism" (1934)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>There are two dead ends with the classical: discard it entirely and write boneless translationese, or copy it wholesale and write a half-classical fake antique. Lu Xun's "grab-ism" offers a third road — <strong>pick</strong>. Pick the concision and elasticity, the imagery and rhythm, and reorganize them with modern grammar. Lincoln's "Four score and seven years ago" borrows the grave cadence of the King James Bible, not actual archaic English; he wanted the bone, not the costume.</p>
+  </div>
+
+  <div class="keepdrop">
+    <div class="col keep">
+      <div class="ct">Grab (the bone)</div>
+      <ul>
+        <li>Density of concision</li>
+        <li>Rhythm of symmetry</li>
+        <li>Vivid imagery</li>
+        <li>Elasticity of the monosyllable</li>
+      </ul>
+    </div>
+    <div class="col drop">
+      <div class="ct">Drop (the costume)</div>
+      <ul>
+        <li>The archaic cadence</li>
+        <li>Obscure allusions</li>
+        <li>Half-classical mush</li>
+        <li>Old-for-old's-sake</li>
+      </ul>
+    </div>
+    <div class="caption">Adaptation = keep the bone that generates force, throw out the shell that's only an antique</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">We hereby cordially request the esteemed pleasure of your attendance at the aforementioned gathering, that we may jointly deliberate on matters ensuing.</span>
+      <span class="after">Please join us Monday to review the project — let's decide the next step together.</span>
+      <span class="note">"Hereby," "esteemed pleasure," "aforementioned" are dead shells borrowed to fake gravity. Strip them and the line comes alive.</span>
+    </div>
+    <div class="example">
+      <span class="before">兹定于下周一召开项目复盘会议，望各位同仁届时拨冗出席，是所至盼。</span>
+      <span class="after">下周一开项目复盘，请大家都到——一起定下一步怎么走。</span>
+      <span class="note">Chinese bureaucratese ("兹," "望," "拨冗," "是所至盼") is the same disease. Real gravity looks like Lincoln — borrow the rhythm, never the costume.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Traps</div>
+    <ul>
+      <li>✓ When you want to give plain prose backbone: slogans, closings, talks, brand copy</li>
+      <li>✗ Mimicry: half-classical mush faking depth (forcing "verily," "thusly," "whereupon" into plain prose)</li>
+      <li>✗ Bureaucratic shells: "hereby," "aforementioned," "please be advised," "for your kind perusal"</li>
+      <li>✗ Mistaking "adapt the classical" for "the more archaic the word, the better"</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take a piece of formal writing you've done, circle every "archaic shell" word (hereby, whereupon, verily, aforementioned…), and either cut them or swap in plain speech. Then pick one spot and try borrowing a single concise classical image to lift it.<br>Question: With those old shells gone, did the sentence get emptier — or more solid?</p>
+  </div>
+</section>
+
+<div class="deep-head">Going Deeper</div>
+
+<details><summary>Is classical concision the same thing as English brevity (Strunk / Zinsser)?</summary><div>The core is the same — cut function words, chase density — but the leverage point differs. Chinese concision leans on monosyllables and parataxis: drop the conjunctions, drop even the subject, and four characters can still paint a whole scene, which an alphabetic language struggles to do. English brevity leans more on cutting modifiers, avoiding the passive, and choosing exact verbs. Don't conflate the two: learn Chinese's density of image and English's directness of syntax — take the strength of each.</div></details>
+
+<details><summary>A century ago the vernacular movement wanted to "overthrow classical Chinese"; now we talk of "adapting the classical." Isn't that a contradiction?</summary><div>No. What Hu Shi's generation overthrew was classical Chinese as the sole written language, and the deadness of the eight-legged essay — not every nutrient in it. Once the vernacular had won, it could turn back and calmly pick the still-living parts of the inheritance. Shedding the shackles isn't the same as throwing out the whole toolbox. What's really worth guarding against is letting "anti-classical" harden into a new orthodoxy of its own.</div></details>
+
+<details><summary>English has antithesis and parallelism too — why is Chinese's parallel craft uniquely strong?</summary><div>Chinese is monosyllabic, has no inflection, and lets parts of speech flex freely, so it can align character-for-character with perfect precision; the blocky evenness of five- and seven-character lines is something an inflected language can barely reproduce. That's a structural advantage — and also a trap: because alignment is so easy, it's easily overused into the empty ornamental frame of parallel prose. The strength and the weakness share one root, so when you use it, add one question: is the <strong>meaning</strong> in parallel, or only the surface?</div></details>
+
+<details><summary>AI can already imitate classical prose and generate matched couplets — is "classical grounding" still worth training?</summary><div>More so, only the emphasis has shifted. AI can imitate the form — turn out a well-matched couplet, mimic the cadence — but it can't judge the spirit: whether an allusion belongs here, whether borrowing the archaic rings false, whether a parallel generates force or just pads. Classical training gives you not the power to generate but the power to <strong>judge</strong>. When imitation becomes dirt cheap, judgment becomes the only scarce thing.</div></details>
+
+<details><summary>Technical docs prize "fast, skimmable" prose — won't classical concision and symmetry feel too "literary"?</summary><div>No, if you use it in the right place. Body text should be plain and skimmable, unadorned; but titles, closing lines, slogans, the opening of a talk — those are exactly where concision and symmetry should exert force. A slide headline in antithesis is ten times more memorable than a loose statement. The classical isn't cologne sprayed over the body text — it's a bone set at the key joints, so the reader remembers and passes it on.</div></details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Index</a>
+</div>
+
+<footer>BigCat · Writing · Day 49 · 2026</footer>
+
+</div>
+</body>
+</html>

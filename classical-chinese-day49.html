@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>写作与表达：中文古典的现代用 — Day 49</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.35rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.5rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .cn{display:block;margin-top:10px;font-style:normal;color:#4a4a4a}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"原句 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"改后 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .note{display:block;margin-top:8px;font-size:0.86rem;color:#8a8a8a;font-style:italic}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+
+/* 对仗对齐图 */
+.duizhang{background:#f8f6f1;padding:22px 16px 16px;margin:18px 0;border-radius:2px}
+.duizhang .couplet{display:flex;flex-direction:column;gap:8px}
+.duizhang .line{display:flex;gap:6px;justify-content:center}
+.duizhang .w{flex:0 0 auto;min-width:52px;padding:10px 6px;background:#fff;border:1px solid #d8d0bc;border-radius:2px;text-align:center;font-size:1.05rem;color:#1f1f1f}
+.duizhang .line.down .w{border-color:#8a7a4a;background:#f3ede0}
+.duizhang .roles{display:flex;gap:6px;justify-content:center;margin-top:6px}
+.duizhang .roles .r{flex:0 0 auto;min-width:52px;padding:4px 6px;text-align:center;font-size:0.72rem;color:#8a7a4a;font-family:Georgia,serif}
+.duizhang .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+/* 骨 / 形 取舍图 */
+.keepdrop{display:flex;gap:14px;margin:18px 0}
+.keepdrop .col{flex:1;border-radius:2px;padding:16px 16px 18px}
+.keepdrop .keep{background:#1f1f1f;color:#fafafa}
+.keepdrop .drop{background:#f3f0e8;border:1px dashed #b8a878}
+.keepdrop .col .ct{font-family:Georgia,serif;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;font-weight:700}
+.keepdrop .keep .ct{color:#d8c98a}
+.keepdrop .drop .ct{color:#8a7a4a}
+.keepdrop .col ul{list-style:none}
+.keepdrop .col li{padding:5px 0 5px 18px;position:relative;font-size:0.94rem;line-height:1.6}
+.keepdrop .keep li{color:#fafafa}
+.keepdrop .keep li:before{content:"＋";position:absolute;left:0;color:#d8c98a}
+.keepdrop .drop li{color:#5a5a5a}
+.keepdrop .drop li:before{content:"－";position:absolute;left:0;color:#b8a878}
+.keepdrop .caption{flex-basis:100%}
+
+.deep-head{font-size:1.2rem;font-weight:700;margin:48px 0 16px;text-align:center;color:#1f1f1f;letter-spacing:1px}
+details{background:#fff;border:1px solid #d8d0bc;border-radius:2px;margin:10px 0;padding:4px 16px}
+details summary{cursor:pointer;font-weight:600;color:#1f1f1f;padding:10px 0;font-size:1rem}
+details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.05rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.25rem}
+  .duizhang .w{min-width:40px;font-size:0.92rem}
+  .duizhang .roles .r{min-width:40px;font-size:0.64rem}
+  .keepdrop{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 49 · 2026.07.07</div>
+  <h1>写作与表达：中文古典的现代用<span class="topic">凝练 · 对偶排比 · 用典分寸 · 古为今用</span></h1>
+  <div class="date">BigCat's Writing</div>
+  <p class="intro">文言不是博物馆里的标本，是一座还在供电的语言电站。写 memo、做 pitch、报晋升，未必要文绉绉，但可以偷学文言的四样本事：把话说到最密、让句子对称生势、用典而不掉书袋、取古人的骨力化进今天的白话。本期不教你写之乎者也，教你让白话更有筋骨。</p>
+</header>
+
+<!-- Card 1: 凝练 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>文言的凝练：一个字都拿不掉</h2>
+  <div class="en-name">Concision — Not One Word to Spare</div>
+  <span class="tag">刘勰 · 熔裁</span>
+
+  <div class="section">
+    <div class="label">一句话原则 + 名家原话</div>
+    <p>文言最狠的本事是密度。学它不是复古，是学那份<strong>「字不得减」的自我要求</strong>——逼每个字都在干活，删一个句子就塌。</p>
+    <div class="quote">
+      「句有可削，足见其疏；字不得减，乃知其密。」
+      <span class="cn">句子若有能删的，说明它松；一个字都减不掉，才见它密实。</span>
+      <span class="source">— 刘勰《文心雕龙·熔裁》</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>白话天生比文言松，容易被虚词、铺垫、双音节词撑得虚胖。凝练不是把话砍到看不懂，是砍掉<strong>不干活的字</strong>。文言的训练正是逼你逐字追问：它在这儿做什么？删了会塌吗？——这套「删到不能再删」的纪律，恰是白话最缺的一课。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">我们应当在目前这个阶段积极主动地去采取一系列切实有效的措施，来应对当前所面临的各种复杂挑战。</span>
+      <span class="after">眼下挑战多，须以实招应对。</span>
+      <span class="note">37 字砍到 10 字，意思一点没少。「目前这个阶段」「一系列」「各种」「所面临的」全是虚胖。</span>
+    </div>
+    <div class="example">
+      <span class="before">At this point in time, we should proactively take a series of effective measures in order to address the various challenges we currently face.</span>
+      <span class="after">We must meet today's challenges with real action.</span>
+      <span class="note">Strunk &amp; White:「Omit needless words.」中英同理——先杀虚字。</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ memo 首句、Slack 通知、PR 标题、slide 标题、晋升材料的 impact 句</li>
+      <li>✗ 把「凝练」做成「删到读者看不懂」——凝练删虚字，不删信息</li>
+      <li>✗ 双音节冗余成串：「进行」「加以」「对…的」「所…的」</li>
+      <li>✗ 误把文言词塞进白话装深（见 Card 4）</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>拿你最近写的一段话（memo 或邮件皆可），逐字问「删了这个字会塌吗」，目标砍掉三成字数而意思不变。<br>思考题：你砍不掉的那些字，是不是恰好是句子真正的骨头？</p>
+  </div>
+</section>
+
+<!-- Card 2: 对偶与排比 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>对偶与排比：让句子对称生势</h2>
+  <div class="en-name">Parallelism &amp; Antithesis</div>
+  <span class="tag">刘勰 · 丽辞</span>
+
+  <div class="section">
+    <div class="label">一句话原则 + 名家原话</div>
+    <p>汉语单音成字、天生能对。<strong>对偶让两半互相照亮，排比用重复叠出气势</strong>——这是中文独有的对称武器，也是最易滥用的一把。</p>
+    <div class="quote">
+      「造化赋形，支体必双；神理为用，事不孤立。」
+      <span class="cn">造物赋予形体，肢体必成双；精神发挥作用，事物从不孤立。对称是天理，非雕琢。</span>
+      <span class="source">— 刘勰《文心雕龙·丽辞》</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>对偶的力量在「<strong>结构相同、意义相映</strong>」：读者一眼看出两半的对应，意义在对比中自己浮现。排比则靠同构的重复推动节奏，越排越有势。但对称是双刃剑——对得准则生势，对得空则成骈文的花架子。关键是：对的是<strong>意思</strong>，不只是字面。</p>
+  </div>
+
+  <div class="duizhang">
+    <div class="couplet">
+      <div class="line up"><span class="w">落霞</span><span class="w">与</span><span class="w">孤鹜</span><span class="w">齐飞</span></div>
+      <div class="line down"><span class="w">秋水</span><span class="w">共</span><span class="w">长天</span><span class="w">一色</span></div>
+      <div class="roles"><span class="r">名词</span><span class="r">介词</span><span class="r">名词</span><span class="r">动/状</span></div>
+    </div>
+    <div class="caption">王勃《滕王阁序》——上下联字字位置、词性一一对应，对称本身就是意义</div>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">这个方案能提升性能，而且成本也控制得不错，用户用起来也比较方便。</span>
+      <span class="after">提性能而不加成本，重体验而不失简洁——一步到位。</span>
+      <span class="note">松散并列变成对偶，卖点站成一排、彼此照亮，读者一眼记住。</span>
+    </div>
+    <div class="example">
+      <span class="before">Our approach is faster, and it also costs less, plus people find it easy to use.</span>
+      <span class="after">Faster, cheaper, simpler.</span>
+      <span class="note">Strunk &amp; White:「Express coordinate ideas in similar form.」林肯的「of the people, by the people, for the people」是同一门功夫。</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ slogan、slide 三段式、演讲排比、价值主张、结尾金句</li>
+      <li>✗ 为对而对，凑字数损意思（骈文病）</li>
+      <li>✗ 假排比：结构没真对齐（「faster, and it costs less, plus easy」）</li>
+      <li>✗ 排比堆过四五项还不收，气势变啰嗦</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>把你产品或项目的三个卖点，写成一组对偶或排比，每项字数尽量相等、结构一致。<br>思考题：当你被迫对齐结构，是不是发现有个卖点其实和另两个不在同一层次？</p>
+  </div>
+</section>
+
+<!-- Card 3: 用典的分寸 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>用典的分寸：给懂的人多一层，不把不懂的人关门外</h2>
+  <div class="en-name">Allusion — The Measure of It</div>
+  <span class="tag">王国维 · 不隔</span>
+
+  <div class="section">
+    <div class="label">一句话原则 + 名家原话</div>
+    <p>用典是<strong>给懂的人多一层滋味，不是把不懂的人挡在门外</strong>。好用典，不知出处也读得通；知出处则会心一笑。</p>
+    <div class="quote">
+      「语语都在目前，便是不隔。」
+      <span class="cn">每句都如在眼前，就叫「不隔」。王国维正是以此批评用典过密之弊——典若让读者「隔」了一层，便失败了。</span>
+      <span class="source">— 王国维《人间词话》</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>典故是压缩包——一个词能调出整个故事。但压缩包必须能解压：读者不知出处也该拿到<strong>表层意思</strong>，知道了再多一层。「沉舟侧畔千帆过」不懂刘禹锡，也读得出那份豁达。反面是掉书袋——堆生僻典彰显博学，把读者挡在门外，制造王国维说的「隔」。技术写作也有典：行话、梗、内部黑话，同理，能让外人读懂才叫本事。</p>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">此番架构调整，颇有「庖丁解牛，游刃有余」之效，然亦需防「刻舟求剑」之弊，方能「因势利导」。</span>
+      <span class="after">这次架构调整像庖丁解牛——顺着系统本身的纹理下刀，就不费力。但别照旧图刻舟求剑：环境变了，方案也得跟着变。</span>
+      <span class="note">前者三典连堆、文白夹生，读者被典压住；后者只留一典、讲透它，不懂出处也懂意思。</span>
+    </div>
+    <div class="example">
+      <span class="before">This is our Waterloo, a Pyrrhic victory at best, lest we open Pandora's box.</span>
+      <span class="after">We may win this, but at a cost so high it will feel like losing.</span>
+      <span class="note">英文用典同理——「sour grapes」不懂伊索也读得通；连堆三个专名，只显摆。</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ 演讲金句、文章标题、给圈内人的一层双关、品牌叙事</li>
+      <li>✗ 掉书袋：一句连堆数典，炫学挡人</li>
+      <li>✗ 用生僻到需要脚注的典（读者不会停下来查）</li>
+      <li>✗ 用错典、张冠李戴——比不用更伤可信度</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>找你写过的一个比喻或典故，问两个问题：不懂出处的人读得通吗？懂的人会多得到什么吗？两个都「是」才留下。<br>思考题：你上次用典，是为了帮读者理解，还是为了让自己显得读书多？</p>
+  </div>
+</section>
+
+<!-- Card 4: 古为今用 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>古为今用：取其骨，弃其形</h2>
+  <div class="en-name">Adapting the Classical — Take the Bone, Not the Costume</div>
+  <span class="tag">鲁迅 · 拿来主义</span>
+
+  <div class="section">
+    <div class="label">一句话原则 + 名家原话</div>
+    <p>古为今用不是仿古写文言，是<strong>取它的骨——凝练、节奏、意象——化进今天的白话，弃它的形——之乎者也的腔调</strong>。仿古是死，化用是活。</p>
+    <div class="quote">
+      「我们要运用脑髓，放出眼光，自己来拿！」
+      <span class="cn">面对遗产，既不全盘照搬，也不一概拒绝，而是主动挑出有用的，据为己有。这就是对待文言该有的姿态。</span>
+      <span class="source">— 鲁迅《拿来主义》</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">原理解读</div>
+    <p>对文言有两条死路：一是全盘丢弃，写出没骨头的翻译腔白话；二是全盘照搬，写出半文不白的假古董。鲁迅的「拿来主义」给出第三条——<strong>挑</strong>。挑文言的简洁弹性、意象与节奏，用现代语法重新组织。林肯的「Four score and seven years ago」，借的是钦定本圣经的庄重节奏，而非真去写古英语；他要的是骨，不是戏服。</p>
+  </div>
+
+  <div class="keepdrop">
+    <div class="col keep">
+      <div class="ct">拿来（骨）</div>
+      <ul>
+        <li>凝练的密度</li>
+        <li>对称的节奏</li>
+        <li>鲜活的意象</li>
+        <li>单音词的弹性</li>
+      </ul>
+    </div>
+    <div class="col drop">
+      <div class="ct">丢下（形）</div>
+      <ul>
+        <li>之乎者也的腔</li>
+        <li>生僻的典故</li>
+        <li>半文半白的夹生</li>
+        <li>为古而古</li>
+      </ul>
+    </div>
+    <div class="caption">古为今用 = 留下能发力的骨，扔掉只作古董的壳</div>
+  </div>
+
+  <div class="section">
+    <div class="label">修改示范</div>
+    <div class="example">
+      <span class="before">兹定于下周一召开项目复盘会议，望各位同仁届时拨冗出席，共商后续事宜，是所至盼。</span>
+      <span class="after">下周一开项目复盘，请大家都到——一起定下一步怎么走。</span>
+      <span class="note">「兹」「望」「拨冗」「是所至盼」是死掉的文言壳；剥掉它，话立刻活。真要借文言，借「落霞孤鹜」那种凝练意象，不是这种腔。</span>
+    </div>
+    <div class="example">
+      <span class="before">We hereby cordially request the esteemed pleasure of your attendance at the aforementioned gathering.</span>
+      <span class="after">Please join us Monday to review the project.</span>
+      <span class="note">英文的假古董和中文的公文腔是同一种病：拿旧壳冒充庄重。真庄重像林肯——借节奏，不借戏服。</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">适用场景 + 常见错误</div>
+    <ul>
+      <li>✓ 想给现代白话加「骨力」时：标语、结尾、演讲、品牌文案</li>
+      <li>✗ 仿古：半文半白装深沉（「甚是」「颇为」「实乃」硬塞进白话）</li>
+      <li>✗ 公文八股壳：「兹」「特此」「望知悉」「是所至盼」</li>
+      <li>✗ 把「古为今用」误解成用词越古越好</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">本周习作 + 思考题</div>
+    <p>找一段你写的正式文字，圈出所有「文言壳」词（兹／望／颇／实乃／之…），全删或换成大白话；再挑一处，试着借一个凝练的古典意象提气。<br>思考题：删掉那些古壳后，句子是更空了，还是更实了？</p>
+  </div>
+</section>
+
+<div class="deep-head">深入思考</div>
+
+<details><summary>文言的凝练，和英文的简洁（Strunk / Zinsser）是一回事吗？</summary><div>内核相同——都是删虚字、追密度；但发力点不同。汉语的凝练更依赖单音词与意合：省掉连词、省掉主语，也能「落霞孤鹜」四字成画，这是拼音文字难做的。英文的简洁更靠删修饰、少被动、动词选得准。别把两种简洁混为一谈：学汉语的意象密度，也学英文的句法直白，各取其长。</div></details>
+
+<details><summary>白话文运动百年前要「打倒文言」，今天又谈「古为今用」，不矛盾吗？</summary><div>不矛盾。胡适们打倒的是文言作为唯一书面语的垄断，以及八股的僵死，不是文言的一切养分。白话赢了之后，反而可以从容回头，挑遗产里还活着的部分为己所用。丢掉枷锁，不等于丢掉整个工具箱。真正该警惕的，是把「反文言」也变成一种新八股。</div></details>
+
+<details><summary>对偶排比英文里也有（antithesis、parallelism），为何汉语的对仗独强？</summary><div>汉语单音节、无形态变化、词性灵活，天生能做到字字工对，五言七言那种方块的整齐，是屈折语难以复制的。这是汉语的结构性优势——但也是陷阱：太容易对齐，就太容易滥用成骈文的空架子。优势和病根同源，用它时要额外问一句：这组对偶，是意思在对，还是只有字面在对？</div></details>
+
+<details><summary>AI 已能仿写文言、生成工整对联，那「古典功底」还值得练吗？</summary><div>更值得，只是重心变了。AI 能仿形——对出工整的对联、套出文言的腔；但它判不了神：这个典此处该不该用、这句借古会不会假、这组对偶是生势还是凑数，仍要人的语感来定。古典训练给你的不是生成力，是<strong>判断力</strong>。当仿形变得极廉价，判断反而成了唯一稀缺的东西。</div></details>
+
+<details><summary>技术文档讲究「快速可扫读」，古典的凝练与对称会不会太「文艺」？</summary><div>不会，看用在哪。正文该平实、可扫读，不必雕琢；但标题、结论句、slogan、演讲开场，正是凝练与对称最该发力的地方。一个对偶的 slide 标题，比一句松散陈述好记十倍。古典不是往正文洒香水，是在关键处上一根骨——让读者记得住、传得开。</div></details>
+
+<div class="nav">
+  <a href="index.html">← 回到写作目录</a>
+</div>
+
+<footer>BigCat · Writing · Day 49 · 2026</footer>
+
+</div>
+</body>
+</html>
