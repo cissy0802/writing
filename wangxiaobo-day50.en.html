@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing & Expression: Masters · Wang Xiaobo — Day 50</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.35rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"FLAT ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"MASTER ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .note{display:block;margin-top:8px;font-size:0.86rem;color:#7a7a7a;font-style:italic}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+
+/* lineage */
+.formula{background:#1f1f1f;color:#fafafa;padding:22px 20px;margin:18px 0;border-radius:2px;font-family:Georgia,"Noto Serif SC",serif;text-align:center}
+.formula .eq{font-size:1.05rem;line-height:1.9;letter-spacing:0.5px}
+.formula .eq .op{color:#d8c98a;margin:0 8px;font-weight:700}
+.formula .eq .term{display:inline-block;padding:3px 9px;border-bottom:1px dashed #d8c98a}
+.formula .eq .result{display:inline-block;padding:3px 11px;background:#d8c98a;color:#1f1f1f;font-weight:700;border-radius:2px}
+.formula .caption{font-size:0.85rem;color:#d8c98a;margin-top:12px;font-style:italic}
+
+details{margin:12px 0;border:1px solid #d0d0d0;border-radius:2px;background:#fff;padding:0 16px}
+details summary{cursor:pointer;padding:14px 0;font-weight:600;color:#1f1f1f;font-size:1rem}
+details[open] summary{border-bottom:1px solid #eee;margin-bottom:10px}
+details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+.deep-title{text-align:center;font-family:Georgia,serif;letter-spacing:2px;text-transform:uppercase;color:#8a8a8a;font-size:0.85rem;margin:40px 0 18px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.05rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .formula .eq{font-size:0.95rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 50 · 2026.07.08</div>
+  <h1>Writing &amp; Expression: Masters · Wang Xiaobo<span class="topic">Wit &amp; Reason · Warm Irony · The Free Style · Essays &amp; Fiction</span></h1>
+  <div class="date">BigCat's Writing</div>
+  <p class="intro">Wang Xiaobo said all he wanted from life was to understand a few things and meet a few interesting ones. Today we study not his thought but his craft — how a man trained in the sciences made "being interesting" the highest law of writing, gave his irony warmth instead of malice, claimed his lineage from translators' prose, and used essays to argue and fiction to build worlds — two registers holding one free soul.</p>
+</header>
+
+<!-- Card 1: Wit and Reason -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Wit and Reason: Make "Interesting" the Highest Law</h2>
+  <div class="en-name">趣味与理性 · Wit and Reason</div>
+  <span class="tag">Wang Xiaobo · Wit · Reason</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Wang Xiaobo made "being interesting" the highest standard of writing and life — and reason, thinking a thing through, is the base that interest stands on. <strong>Dullness is a sin, and solemn preaching is its leading cause.</strong></p>
+    <div class="quote">
+      "I ask little of myself: to live in this world, understand a few truths, and meet a few interesting things. If I get that, I'll call my life a success."
+      <span class="source">— Wang Xiaobo, <em>The Pleasure of Thinking</em> (1996)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>"Understanding truths" is reason; "meeting interesting things" is wit — Wang's whole body of work rests on these two pillars. Trained in the sciences, he prized rigor of argument, yet refused to let seriousness curdle into tedium. To him, a truth told without interest is usually a truth not thought through, or one the author doesn't really believe. <strong>Wit isn't a discount on seriousness — it's the ease that comes after you've understood.</strong> Only someone who has truly mastered a thing can hold it lightly enough to joke about it. That's why his essays are both sharp and readable: logic is the bone, wit the flesh.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">我们应当保持独立思考，不要人云亦云。</span>
+      <span class="after">我最怕有人替我思考，好像我的脑子是长在他脖子上的。</span>
+      <span class="note">Same point about thinking for yourself: the first is a correct platitude you forget instantly; the second gives it an absurd, concrete image — sensory and funny. That's arguing with wit.</span>
+    </div>
+    <div class="example">
+      <span class="before">It is important to think for yourself rather than defer to authority.</span>
+      <span class="after">The trouble with letting someone else think for you is that they so rarely give the brain back.</span>
+      <span class="note">Argument needn't wear a stern face; a metaphor with a smile in it outlasts a correct sermon.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ Opinion pieces, science writing, internal talks, personal brand — anywhere you want a "truth" to be remembered</li>
+      <li>✓ Think the truth all the way through first, then wrap it in something concrete, surprising, a little self-mocking</li>
+      <li>✗ Trap: joking for the sake of jokes — the gag drowns the point. Wit is the flesh of reason; it can't stand without bone</li>
+      <li>✗ Trap: assuming professional = solemn = dull, and writing a clear idea into a sleeping pill</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take a "correct truth" you often repeat ("always do a retro," "stay focused"). First write it as an earnest sermon, then rewrite it Wang-style — concrete image, a touch of self-mockery. <strong>To ponder</strong>: Is "being interesting" an inborn temperament, or a craft you can train? If a craft, what do you practice first?</p>
+  </div>
+</section>
+
+<!-- Card 2: Warm Irony -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Warm Irony: Say It with a Smile, but Keep a Spine</h2>
+  <div class="en-name">反讽的温度 · Warm Irony</div>
+  <span class="tag">Wang Xiaobo · Irony · Humor</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Wang's irony never bites. He aims at "the people who want to arrange other people's lives," yet wraps the critique in humor, self-mockery, and a little tenderness — <strong>irony can be a cold blade or a warm fire; he chose the fire.</strong></p>
+    <div class="quote">
+      "I'm forty now, and apart from this pig I've never seen anyone dare to so completely ignore the arrangements set for a life… For that reason, I've always missed that maverick pig."
+      <span class="source">— Wang Xiaobo, <em>A Maverick Pig</em> (1996)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Irony, at bottom, lets a light surface wrap a serious core. Lu Xun's irony (see Day 20) is a cold blade; Wang's is warm — he casts himself as, and mocks himself through, a "maverick pig," so the reader laughs first and only then realizes he too is one of those "content to have their life arranged." <strong>Warmth lets the critique be accepted:</strong> a cold blade makes people defend; a joke that lands gently makes them reflect. This doesn't soften the stance — it hides the stance inside the humor, so it slips past the reader's defenses and lands on the heart.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">那些试图控制他人生活的人十分可悲，我们应当勇敢反抗。</span>
+      <span class="after">我见过很多想设置别人生活的人，也见过对被设置的生活安之若素的人——说来惭愧，大多数时候，我是后一种。</span>
+      <span class="note">The first is an angry slogan that leaves the reader safely watching; the second uses self-mockery to pull "you and me" in — and stings more for it.</span>
+    </div>
+    <div class="example">
+      <span class="before">People who try to control others' lives are pitiful, and we must resist.</span>
+      <span class="after">I've met many people eager to arrange other people's lives — and many, myself included, quite content to have their own arranged for them.</span>
+      <span class="note">Put yourself on the side being criticized, and the irony gains both warmth and credibility.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ Commentary, observational essays, gentle critique of a convention or institution, anywhere you want to stop short of the knife</li>
+      <li>✓ Put yourself in the frame first: self-mockery is the source of warmth and the guardrail of proportion</li>
+      <li>✗ Trap: irony sliding into cruelty — aim at the person, not the thing, and the smile becomes a barb</li>
+      <li>✗ Trap: irony too oblique, the reader misses it, and you're left with mere puzzlement. Warmth needs clarity beside it</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Pick something you want to criticize (a workplace habit, a fashionable phrase) and write a passage of irony, with one rule: you must place yourself on the side being criticized, and end on self-mockery. <strong>To ponder</strong>: Irony depends on the reader catching the overtone. Across cultures and ranks, where does its risk lie — and when should you simply say it plainly?</p>
+  </div>
+</section>
+
+<!-- Card 3: My Lineage / The Free Style -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>My Lineage: The Best Chinese Hides in Translation</h2>
+  <div class="en-name">自由的文体 · The Free Style</div>
+  <span class="tag">Wang Xiaobo · Style · Lineage</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Wang said his literary lineage came not from famous authors but from a few translators. The best modern literary Chinese, he held, was forged by people who kept the ear of the mother tongue while being pressed by the precision of the original — <strong>a free style is the ease of speech plus the rigor of logic.</strong></p>
+    <div class="quote">
+      "Zha Liangzheng and Wang Daoqian have helped me more than all the famous modern Chinese writers combined."
+      <span class="source">— Wang Xiaobo, <em>My Lineage</em> (1997)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Zha Liangzheng (the poet Mu Dan) translated Pushkin; Wang Daoqian translated Duras — and from their prose Wang claimed his own style. He had a famous verdict: <strong>"Words are made to be read aloud and heard, not to be looked at."</strong> A good sentence breathes, has rhythm, and holds up when spoken. Translators' language is good because they keep a Chinese ear while being forced by the foreign original's logic and precision to leave nothing vague — and so grow a vernacular both loose and exact. This is the same enterprise as Lu Xun forging modern Chinese (Day 20), one generation later: the modernity of the language was tested into being, sentence by sentence.</p>
+    <div class="formula">
+      <div class="eq">
+        <span class="term">Original (Pushkin / Duras)</span>
+        <span class="op">→</span>
+        <span class="term">Translator (Zha / Wang Daoqian)</span>
+        <span class="op">→</span>
+        <span class="result">Wang Xiaobo's free style</span>
+      </div>
+      <div class="caption">"My Lineage" — the best modern Chinese, pressed into being by the precision of the original</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">我现今已届年迈，某日，于一公共场所之大厅内，有一男子朝我走来并主动作自我介绍。</span>
+      <span class="after">我已经老了。有一天，在一处公共场所的大厅里，有一个男人向我走来。他主动介绍自己。</span>
+      <span class="note">The "after" is Wang Daoqian's rendering of the opening of Duras's <em>The Lover</em>: same meaning, broken into short clauses that breathe like speech — this is prose "to be read and heard."</span>
+    </div>
+    <div class="example">
+      <span class="before">Upon reaching an advanced age, I was approached by a gentleman who introduced himself within a public venue.</span>
+      <span class="after">I am old now. One day, in the lobby of a public building, a man came up to me. He introduced himself.</span>
+      <span class="note">One long sentence broken into short ones; bureaucratic stiffness becomes the breath of speech. The same holds in both languages: it must be hearable before it's good.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ Any writing that must "read smooth and sound right": speeches, brand copy, anything for a general audience</li>
+      <li>✓ Read it aloud when done: wherever you stumble or run out of breath is exactly what to fix</li>
+      <li>✗ Trap: piling up bookish words and long modifiers, mistaking "formal" for "elevated" — it's just unreadable</li>
+      <li>✗ Trap: chasing loose speech and losing the rigor of logic — freedom is not carelessness</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take a paragraph you wrote recently, read it aloud, break every "can't-catch-a-breath" long sentence into short ones, and swap awkward bookish words for words you could say out loud. <strong>To ponder</strong>: Wang credited the best Chinese to translators. Does this suggest a language often evolves through collision with a foreign one? Do bilingual writers, then, hold an advantage?</p>
+  </div>
+</section>
+
+<!-- Card 4: Essays and Fiction -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Two Registers: Essays Argue, Fiction Builds Worlds</h2>
+  <div class="en-name">杂文与小说 · Essays &amp; Fiction</div>
+  <span class="tag">Wang Xiaobo · Essay · Fiction</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>The same Wang Xiaobo used essays to make a point clear and sharp, and fiction to build a world absurd and poetic. <strong>An essay "tells you"; fiction "makes you live it"</strong> — two registers, one shared core: a free soul.</p>
+    <div class="quote">
+      "That year I was twenty-one, in the golden age of my life. I had so many hopes… Later I learned that life is a slow hammering: you age day by day, your hopes fade day by day, until you end up like an ox that's been hit on the head."
+      <span class="source">— Wang Xiaobo, <em>The Golden Age</em> (1991)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>An essay uses logic to state a thing plainly; fiction uses images to give only the experience. To convey "reality wears down our ideals," an essay says outright "your hopes fade day by day" — you understand, but you merely know it; fiction writes it as "like an ox that's been hit on the head" — you don't know it, you ache. <strong>Argument earns agreement; scene-building lets you live it</strong>, and the second lasts longer. Same for a leader: a decision memo needs the "essay brain" — say it to zero ambiguity; casting a vision or leading a team needs the "fiction brain" — give an image you can stand inside, not a string of correct adjectives.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">人在成长中，理想会被现实不断消磨，最终归于平庸。</span>
+      <span class="after">生活就是个缓慢受锤的过程，人一天天老下去，最后变得像挨了锤的牛一样。</span>
+      <span class="note">The first you "know"; the second you "feel" — one image of a hammered ox beats ten correct declarative sentences.</span>
+    </div>
+    <div class="example">
+      <span class="before">Over time, reality wears down our youthful ambitions until little remains.</span>
+      <span class="after">Life, I learned, is a slow hammering — each day a little less of you, until you stand there dumb as an ox that's been hit on the head.</span>
+      <span class="note">Same idea, turned into a touchable image; the reader moves from "got it" to "felt it."</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ Essay brain: memos, retros, how-to docs — you want clarity, zero ambiguity</li>
+      <li>✓ Fiction brain: vision talks, story passages, brand narrative — you want the reader to stand inside it</li>
+      <li>✗ Trap: playing literary when you should be clear — piling images into a memo, and the reader can't find the point</li>
+      <li>✗ Trap: lecturing when you should build a scene — stacking adjectives in a vision talk, and no one is moved</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Pick a truth you want to convey ("small fast steps beat a big-bang launch"). First use the "essay brain" to state it clearly, then the "fiction brain" to write a concrete scene or short story you can stand inside. <strong>To ponder</strong>: What lets one person switch freely between the two registers? Can an essay's "clarity" and fiction's "scene-building" coexist in a single passage?</p>
+  </div>
+</section>
+
+<div class="deep-title">— Deeper Questions —</div>
+
+<details>
+  <summary>Doesn't Wang's "wit above all" risk making writing flippant, dodging the weight of seriousness?</summary>
+  <div class="ans">There's a risk, but Wang himself doesn't fall to it. His "interest" rests on rigor of reason and a serious belief in freedom — it's the ease that follows understanding, not evasion. The difference: if wit is the flesh of the argument, it makes seriousness easier to swallow; if wit becomes the goal and drowns the argument, it slides into frivolity. Learn from him by learning "understand" first, "be interesting" second.</div>
+</details>
+<details>
+  <summary>Wang's irony is "warm," Lu Xun's is "cold." Which should professional writing learn?</summary>
+  <div class="ans">It depends on the aim and the relationship. To expose, to shock, to face the intolerable, the cold blade cuts harder; to criticize while keeping the relationship, the warm fire fits better. In workplaces, where the target is the issue not the person, Wang's self-mocking irony is lower-risk and reads as higher EQ. But both share one precondition: a real stance underneath. Irony without a stance is cruelty when cold, oiliness when warm.</div>
+</details>
+<details>
+  <summary>He credited the best modern Chinese to translators. What does that mean for a "native writer"?</summary>
+  <div class="ans">It means a mother tongue isn't written well by nature — good language is often pressed into being by collision with something foreign. Translators, forced by the precision of the original to leave nothing vague, refine a more exact Chinese. For a bilingual writer this is a hint: the two languages are mirrors — English logic makes your Chinese clearer, Chinese concision makes your English weightier. Bilingualism isn't a burden; it may be an edge.</div>
+</details>
+<details>
+  <summary>Essay brain vs. fiction brain — how should a leader switch between a memo and a vision talk?</summary>
+  <div class="ans">First sort the aim: do you want them to "act" or to "be ignited"? To act, use the essay brain — conclusion first, zero ambiguity, executable; to ignite, use the fiction brain — give a concrete, felt image or story that moves before it asks. Strong leaders even layer both in one document: open with the essay brain to make things clear, close with a fiction-brain image to send people out the door. The underlying skill is asking, at every moment: right now, do I want the reader to "understand," or to "feel"?</div>
+</details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Index</a>
+</div>
+
+<footer>BigCat · Writing · Day 50 · 2026</footer>
+
+</div>
+</body>
+</html>
