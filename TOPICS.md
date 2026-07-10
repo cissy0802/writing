@@ -1,5 +1,7 @@
 # Topics Roadmap
 
+> **⚠️ routine 须知**：本表即全部计划。只写下面**已列出**的条目；**全部写完就停**——别自己发明新主题、别往本文件加行。写完只发一条 PushNotification 请 BigCat 补充。（新条目由 BigCat / deep-research 反哺加进本表，届时你自然继续写。）
+
 源是仓库中的文件本身（`ls *-{day,week,book,issue}*.html`）。本文件只是主题查找表：N → 主题。超过现有编号时 routine 会 append 新主题。
 
 - Day 1: 清晰的原则 — 删除冗余词, 主动语态 vs 被动语态, 具体名词与动词, Zinsser 原则
