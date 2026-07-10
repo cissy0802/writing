@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: Masters · E.B. White — Day 52</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.35rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .note{display:block;margin-top:8px;font-size:0.86rem;color:#7a7a7a;font-style:italic}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.exercise strong{color:#d8c98a}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* structure diagram: the cutting scale */
+.scale-vis{background:#f8f6f1;padding:22px 18px;margin:18px 0;border-radius:2px;text-align:center}
+.scale-vis .row{display:flex;justify-content:space-between;align-items:stretch;gap:12px}
+.scale-vis .col{flex:1;padding:14px 12px;border:1px solid #d8d0bc;background:#fff;border-radius:2px;font-family:Georgia,serif}
+.scale-vis .col.drop{color:#a04040}
+.scale-vis .col.keep{color:#3a6a3a;border-color:#8a7a4a}
+.scale-vis .col .h{display:block;font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;color:#8a8a8a;font-weight:700}
+.scale-vis .col .items{font-size:0.9rem;line-height:1.9;color:#3a3a3a}
+.scale-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:14px;font-family:Georgia,serif}
+
+details{margin:12px 0;border:1px solid #d0d0d0;border-radius:2px;background:#fff;padding:0 16px}
+details summary{cursor:pointer;padding:14px 0;font-weight:600;color:#1f1f1f;font-size:1rem}
+details[open] summary{border-bottom:1px solid #eee;margin-bottom:10px}
+details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+.deep-title{text-align:center;font-family:Georgia,serif;letter-spacing:2px;text-transform:uppercase;color:#8a8a8a;font-size:0.85rem;margin:40px 0 18px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.05rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .scale-vis .row{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 52 · 2026.07.10</div>
+  <h1>Writing &amp; Expression: Masters · E.B. White<span class="topic">Elegant concision · The elements of style · The intimacy of the essay · Writing up for children</span></h1>
+  <div class="date">BigCat's Writing</div>
+  <p class="intro">E.B. White was The New Yorker's finest essayist, the author of Charlotte's Web, and the man who rewrote that slim bible of writing, The Elements of Style. His whole life served one aim — to say things cleanly, to say them like a person, to say them straight to the reader. Today we learn four of his crafts: how to cut, how to hide yourself, how to speak to one reader, and how to explain hard things to those who don't yet understand without ever talking down.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Omit Needless Words: Not One Spare Word in a Sentence</h2>
+  <div class="en-name">Vigorous Writing Is Concise</div>
+  <span class="tag">Elements of Style · Rule 17</span>
+
+  <div class="section">
+    <div class="label">The principle + the master's words</div>
+    <p>Vigorous writing is concise: a good sentence has no word you could cut, just as a good machine has no part you could remove.</p>
+    <div class="quote">
+      "Vigorous writing is concise. A sentence should contain no unnecessary words, a paragraph no unnecessary sentences, for the same reason that a drawing should have no unnecessary lines and a machine no unnecessary parts."
+      <span class="source">— Strunk &amp; White, The Elements of Style, Rule 17</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>Cutting words isn't about brevity; it's about <strong>force</strong>. Spare words dilute a sentence's concentration; delete one and the survivors land harder. This isn't "make every sentence short" — it's "make every word do work." It matters doubly for engineers: padding is usually the residue of unfinished thinking. Hedges like "it can basically be assumed that in most cases" reveal that you aren't sure either. Cut until you can't, and what remains is the sentence you're actually willing to stand behind.</p>
+    <div class="scale-vis">
+      <div class="row">
+        <div class="col drop">
+          <span class="h">Cut</span>
+          <div class="items">Hedges (basically, accordingly)<br>Dead verbs (make an X of, carry out)<br>Redundancy (free gift)<br>Vague pointers (this thing, so-called)</div>
+        </div>
+        <div class="col keep">
+          <span class="h">Keep</span>
+          <div class="items">Concrete nouns<br>Strong verbs<br>Necessary qualifiers<br>One precise number</div>
+        </div>
+      </div>
+      <div class="caption">Cutting is like whetting a blade — you grind off the dullness and leave the edge</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">The revision</div>
+    <div class="example">
+      <span class="before">the question as to whether we should proceed with the migration at this point in time</span>
+      <span class="after">whether to migrate now</span>
+      <span class="note">Strunk's classic surgery: "the question as to whether" → "whether"; "at this point in time" → "now." Twelve words down to three, meaning intact.</span>
+    </div>
+    <div class="example">
+      <span class="before">At the current stage, it is necessary for us to carry out a corresponding optimization of the system's overall performance.</span>
+      <span class="after">It's time to optimize performance.</span>
+      <span class="note">"At the current stage" = now; "carry out a corresponding optimization of" = optimize. What's cut is hedge and filler; what's left is a sentence willing to make the call.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use it + common traps</div>
+    <ul>
+      <li>✓ Decision memos, RFC abstracts, status updates, PR descriptions — anything readers must grasp fast</li>
+      <li>✓ Run a dedicated "cut" pass in revision: first draft for completeness, second for cleanliness</li>
+      <li>✗ Trap: mistaking "concise" for "short" — sacrificing clarity for length until no one understands</li>
+      <li>✗ Trap: cutting padding but leaving abstraction — "optimize the experience" is emptier than "load the page in 2 seconds"</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + a question</div>
+    <p>Take a paragraph you wrote last week (email or doc). For each word ask, "If I cut this, does the meaning change?" If not, cut it. Aim to lose a third of the words without losing information. <strong>Question:</strong> At what point does cutting go too far — forcing the reader to fill in the gaps? Where is the line between concise and cryptic?</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Place Yourself in the Background: Style Is Character</h2>
+  <div class="en-name">The Less You Perform Style, the More It Shows</div>
+  <span class="tag">An Approach to Style</span>
+
+  <div class="section">
+    <div class="label">The principle + the master's words</div>
+    <p>Style is not decoration you paste onto prose; it's the person showing through the words. The harder you try to display style, the less of it appears.</p>
+    <div class="quote">
+      "Style takes its final shape more from attitudes of mind than from principles of composition… Every writer, by the way he uses the language, reveals something of his spirit, his habits, his capacities, his bias. This is inevitable as well as enjoyable."
+      <span class="source">— E.B. White, "An Approach to Style", The Elements of Style</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>Beginners think "having style" means adding — ornate words, tortured long sentences. White inverts it: style is what you <strong>subtract</strong> to — the voice left over once you step into the background and let the content take the stage. Deliberate flourish is like heavy makeup; people see the paint, not the face. Real style can't be hidden or faked — it is the texture of your thinking. For a leader this is hard truth: an email trying to sound impressive usually sounds insecure; an email that only wants to be clear shows your weight instead.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">The revision</div>
+    <div class="example">
+      <span class="before">It is with considerable reluctance and no small measure of trepidation that I pen these words to you.</span>
+      <span class="after">I hesitate to write this, but I have to.</span>
+      <span class="note">The first performs "I am being solemn"; the second simply is solemn. Cut the performance and the person appears.</span>
+    </div>
+    <div class="example">
+      <span class="before">The author, conscious of his own limitations, humbly ventures to offer a few modest observations on the matter for your consideration.</span>
+      <span class="after">Here's what I think.</span>
+      <span class="note">Piled-up modesty is its own kind of showing off — showing off that "I know the etiquette." Drop it, and the reader hears a real person instead of a register.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use it + common traps</div>
+    <ul>
+      <li>✓ Personal-brand writing, leadership comms, open letters, eulogies — wherever "who you are" outweighs the information</li>
+      <li>✓ Self-check: delete every sentence written to "seem smart" and see whether the rest sounds more like you</li>
+      <li>✗ Trap: treating "having a voice" as piling on adjectives, cracking jokes, name-dropping</li>
+      <li>✗ Trap: imitating a master's mannerisms, not his attitude — White's short sentences are easy to copy, his honesty is not</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + a question</div>
+    <p>Find a passage you wrote at your "hardest," and for each sentence ask: is this to make the point clear, or to make me look clever? Delete all of the latter and read what's left. <strong>Question:</strong> Does "place yourself in the background" contradict today's imperative to build a personal brand? How can hiding yourself be what makes you memorable?</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Speak to One Person: The Intimacy of the Essay</h2>
+  <div class="en-name">Write to One Reader, Not a Crowd</div>
+  <span class="tag">Essays of E.B. White</span>
+
+  <div class="section">
+    <div class="label">The principle + the master's words</div>
+    <p>Good writing isn't broadcast to a crowd; it's said quietly to one person. Write "you," and the reader feels you're writing to them.</p>
+    <div class="quote">
+      "The essayist is a self-liberated man, sustained by the childish belief that everything he thinks about, everything that happens to him, is of general interest."
+      <span class="source">— E.B. White, Foreword, Essays of E.B. White (1977)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>Intimacy isn't chumminess; it's <strong>treating the reader as one specific person</strong>. The institutional voice ("This document seeks to articulate…") assumes the reader is "the public," so no one feels addressed. White's essays move us — in "Once More to the Lake" he takes his son back to the lake of his own childhood and, for a moment, can't tell whether he's the father or the boy — because he is always speaking to "you," someone sitting across from him, about his own life. As you write, lock onto one real reader: a colleague, a report, a particular user. The register shifts at once from announcement to conversation.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">The revision</div>
+    <div class="example">
+      <span class="before">This document seeks to articulate the organization's strategic vision for the coming fiscal year.</span>
+      <span class="after">I want to tell you where we're headed next year, and why I think it's worth it.</span>
+      <span class="note">"This document seeks to" has no person and no warmth; "I want to tell you" holds an I and a you.</span>
+    </div>
+    <div class="example">
+      <span class="before">The following constitutes an explanation of the team's direction for the next phase.</span>
+      <span class="after">There's one thing I want to be clear with you about: where we go this half.</span>
+      <span class="note">"The following constitutes an explanation" is the moat of officialese, keeping people out. "I want to be clear with you" fills the moat in.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use it + common traps</div>
+    <ul>
+      <li>✓ All-hands notes, newsletters, product copy, thank-yous, recruiting — wherever you want people to feel "in conversation"</li>
+      <li>✓ Before writing, decide: who am I speaking to? Picture that person's face</li>
+      <li>✗ Not for: legal contracts, formal specs, the factual part of incident reports — those need precision, not warmth</li>
+      <li>✗ Trap: intimacy sliding into slickness — a forced "hey, you get it, right?" is more skin-crawling than officialese</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + a question</div>
+    <p>Take a mass email you sent recently and rewrite it to one specific person on that list. Use "you," use "I," drop every "dear all." Read both versions and feel the difference in warmth. <strong>Question:</strong> Can one-to-one intimacy scale? When the readers really number ten thousand, does "speak to one person" still hold, or does it start to feel fake?</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Write Up, Not Down: Writing for Those Who Don't Yet Know</h2>
+  <div class="en-name">Writing for Children</div>
+  <span class="tag">Charlotte's Web · Paris Review</span>
+
+  <div class="section">
+    <div class="label">The principle + the master's words</div>
+    <p>Writing for people who know less than you isn't lowering your words to indulge them; it's raising yourself to respect their intelligence.</p>
+    <div class="quote">
+      "Anyone who writes down to children is simply wasting his time. You have to write up, not down. Children are demanding. They are the most attentive, curious, eager, observant, sensitive, quick, and generally congenial readers on earth."
+      <span class="source">— E.B. White, The Art of the Essay No. 1, The Paris Review (1969)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>Swap "children" for "a non-technical executive," "a colleague from another team," "someone using your product for the first time," and this becomes the one line every engineer should memorize. <strong>Condescending writing isn't too simple — it's too lazy.</strong> It assumes the reader is dim, so it gives neither accurate detail nor respect. In Charlotte's Web, White tells children about death and friendship in the clearest short sentences and the most honest emotion, never once coddling them. Explaining something complex to a layperson works the same way: not diluting the content, but distilling the expression — finding the phrasing that is both accurate and understandable to anyone.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">The revision</div>
+    <div class="example">
+      <span class="before">If Charlotte's Web began: Once upon a time there was a kind little girl who loved all the sweet little animals ever so much.</span>
+      <span class="after">"Where's Papa going with that ax?" said Fern to her mother as they were setting the table for breakfast.</span>
+      <span class="note">White's real opening — a breakfast table, an ax, a chilling question. No coddling, no detour; it drags the child (and you) straight into the story. That's "writing up."</span>
+    </div>
+    <div class="example">
+      <span class="before">Hey everyone! Today we're going to learn a super fun little fact! (a technical note written for non-technical readers)</span>
+      <span class="after">This feature saves your draft automatically — every time you finish a sentence, it quietly stores a copy, so you won't lose it even if the power cuts out.</span>
+      <span class="note">The first uses cutesiness to cover for not explaining; the second uses one precise image to make the mechanism clear. Respecting the reader's intelligence means giving them the real thing.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use it + common traps</div>
+    <ul>
+      <li>✓ Executive briefings, user docs, popular science, explaining things to kids, cross-discipline communication</li>
+      <li>✓ The test: can you convey undiluted accuracy in words the other person knows? If yes, you've "written up"</li>
+      <li>✗ Trap: equating "accessible" with "cutesy + analogies" — an inaccurate analogy makes things worse</li>
+      <li>✗ Trap: piling on jargon to look expert — that's another form of talking down, locking the reader out</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + a question</div>
+    <p>Pick a concept from your field and write two paragraphs explaining it to a smart but total layperson (a parent, a child): no jargon allowed, and no sacrificing accuracy. When done, ask them to repeat it back — if they get it right, you've succeeded. <strong>Question:</strong> "Writing up" demands both accuracy and accessibility, but some concepts' accuracy depends on jargon. When the two truly conflict, which do you protect first?</p>
+  </div>
+</section>
+
+<div class="deep-title">— Going Deeper —</div>
+
+<details>
+  <summary>The Elements of Style is criticized as "arbitrary." Why is it still the most useful writing book?</summary>
+  <div class="ans">Because its value isn't in each rule's absolute rightness but in how it forces you to account for every word. "Omit needless words" has exceptions — sometimes redundancy is rhythm, courtesy, a buffer. But for most people who write bloated prose, learning to cut first and to know when not to cut second is the right order. Treat it as a knife, not a code of law: use it to shear off ninety percent of the fat, and leave the rest to your ear. Rules are scaffolding; once mature, you take them down.</div>
+</details>
+<details>
+  <summary>White's "concision" is an English tradition. Chinese prizes elaboration and parallelism — does it transplant?</summary>
+  <div class="ans">Separate two things. As a disease, Chinese "bloat" — translationese, officialese, empty verbs — is the same illness as English padding, and White's knife works on it fine. As an art, Chinese parallelism and calculated white space are active music, not surplus; cut them and you wound the prose. The test: is this elaboration the product of unclear thinking, or a deliberate rhythm? Cut the former, keep the latter. Concision's enemy is always waste, never richness.</div>
+</details>
+<details>
+  <summary>Doesn't "place yourself in the background" run counter to today's age of the personal brand?</summary>
+  <div class="ans">Just the opposite — it's the honest road to one. A carefully engineered persona is seen through fast, because it's pasted on; but hide the urge to perform, focus only on doing and saying things well, and your judgment, honesty, and taste leak through the seams — that is the "you" people actually remember. A brand isn't what you say you are; it's the person others read out of a body of consistent work. White never self-promoted, yet became a generation's benchmark for style.</div>
+</details>
+<details>
+  <summary>How does "writing up" change in speech and video? Are spoken formats likelier to slide "down"?</summary>
+  <div class="ans">Likelier, and riskier. On the page a reader can re-read; speech flashes by, so speakers reach for exaggeration, cutesiness, and slogans to "grab" the audience — which is writing down. The spoken version of writing up is to replace hollow sentiment with concrete stories and precise images, trusting listeners to follow a real complexity. The best technical talks on TED treat executives as smart laypeople — handing them a real problem, not coaxing applause. On camera especially: intimacy is not the same as dumbing down.</div>
+</details>
+<details>
+  <summary>If the four principles were ranked, which should an engineer practice first?</summary>
+  <div class="ans">Start with "omit needless words" — it pays off fastest, transfers widest, and is the foundation of the other three; with bloated prose there's no talking about style, intimacy, or writing up. Once your prose is clean, practice "writing up," since an engineer's biggest expressive debt is failing to explain things to laypeople. "Intimacy" and "hiding yourself" are higher-heat crafts that need the first two as a base so they don't turn slick or affected. The order isn't iron law, but for most engineers, starting with the cut is hardest to get wrong.</div>
+</details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Index</a>
+</div>
+
+<footer>BigCat · Writing · Day 52 · 2026</footer>
+
+</div>
+</body>
+</html>
