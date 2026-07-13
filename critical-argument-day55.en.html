@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: Argument &amp; Critical Writing — Day 55</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.3rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"WEAK ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"SOLID ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .note{display:block;margin-top:8px;font-size:0.86rem;color:#7a7a7a;font-style:italic}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+
+/* Toulmin structure */
+.toulmin{background:#f8f6f1;padding:22px 14px;margin:18px 0;border-radius:2px}
+.toulmin .flow{display:flex;align-items:stretch;gap:8px}
+.toulmin .tb{flex:1;padding:12px 8px;background:#fff;border:1px solid #d8d0bc;text-align:center;font-family:Georgia,serif;font-size:0.84rem;line-height:1.45;border-radius:2px}
+.toulmin .tb .t{display:block;font-weight:700;color:#1f1f1f;margin-bottom:3px;font-size:0.9rem}
+.toulmin .tb.claim{background:#1f1f1f;color:#fafafa;border-color:#1f1f1f}
+.toulmin .tb.claim .t{color:#d8c98a}
+.toulmin .arrow{display:flex;flex-direction:column;justify-content:center;align-items:center;color:#8a7a4a;font-size:0.7rem;font-family:Georgia,serif;flex-shrink:0}
+.toulmin .arrow .a{font-size:1.4rem;line-height:1}
+.toulmin .foot{margin-top:12px;text-align:center;font-size:0.82rem;color:#8a7a4a;font-family:Georgia,serif;font-style:italic}
+.toulmin .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:8px;text-align:center;font-family:Georgia,serif}
+
+/* Evidence pyramid */
+.pyr{background:#1f1f1f;padding:22px 18px;margin:18px 0;border-radius:2px;font-family:Georgia,serif}
+.pyr .lvl{margin:5px auto;padding:8px 6px;text-align:center;color:#1f1f1f;border-radius:2px;font-size:0.83rem;line-height:1.4}
+.pyr .l1{width:52%;background:#d8c98a;font-weight:700}
+.pyr .l2{width:64%;background:#c3b483}
+.pyr .l3{width:76%;background:#a99a6a;color:#fafafa}
+.pyr .l4{width:88%;background:#8a7a4a;color:#fafafa}
+.pyr .l5{width:100%;background:#6a5f3f;color:#fafafa}
+.pyr .side{display:flex;justify-content:space-between;font-size:0.74rem;color:#d8c98a;margin:12px 4px 0;font-style:italic}
+.pyr .caption{font-size:0.85rem;color:#d8c98a;margin-top:8px;text-align:center;font-style:italic}
+
+/* Fallacy list */
+.fallacy{background:#f8f6f1;padding:18px 18px;margin:18px 0;border-radius:2px}
+.fallacy .row{display:flex;gap:12px;padding:7px 0;border-bottom:1px dashed #ddd6c4;font-size:0.9rem;line-height:1.5}
+.fallacy .row:last-child{border-bottom:none}
+.fallacy .nm{flex-shrink:0;width:150px;font-weight:700;color:#8a5a2a}
+.fallacy .ds{color:#3a3a3a}
+.fallacy .caption{font-size:0.85rem;color:#5a5a5a;margin-top:10px;text-align:center;font-style:italic;font-family:Georgia,serif}
+
+/* Disagreement ladder */
+.ladder{background:#f8f6f1;padding:22px 18px;margin:18px 0;border-radius:2px;font-family:Georgia,serif}
+.ladder .rung{display:flex;align-items:center;gap:12px;padding:7px 0;border-bottom:1px dashed #ddd6c4}
+.ladder .rung:last-child{border-bottom:none}
+.ladder .dh{width:56px;flex-shrink:0;text-align:center;font-size:0.72rem;font-weight:700;color:#8a7a4a;font-family:Georgia,serif}
+.ladder .what{font-size:0.88rem;color:#2a2a2a;line-height:1.4}
+.ladder .rung.top{background:#1f1f1f;margin:6px -8px 0;padding:11px 8px;border-radius:2px;border-bottom:none}
+.ladder .rung.top .dh{color:#d8c98a}
+.ladder .rung.top .what{color:#fafafa;font-weight:600}
+.ladder .caption{font-size:0.85rem;color:#5a5a5a;margin-top:12px;text-align:center;font-style:italic;font-family:Georgia,serif}
+
+details{margin:12px 0;border:1px solid #d0d0d0;border-radius:2px;background:#fff;padding:0 16px}
+details summary{cursor:pointer;padding:14px 0;font-weight:600;color:#1f1f1f;font-size:1rem}
+details[open] summary{border-bottom:1px solid #eee;margin-bottom:10px}
+details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+.deep-title{text-align:center;font-family:Georgia,serif;letter-spacing:2px;text-transform:uppercase;color:#8a8a8a;font-size:0.85rem;margin:40px 0 18px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.05rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .toulmin .flow{flex-direction:column}
+  .toulmin .arrow .a{transform:rotate(90deg)}
+  .fallacy .row{flex-direction:column;gap:2px}
+  .fallacy .nm{width:auto}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 55 · 2026.07.13</div>
+  <h1>Writing &amp; Expression: Argument &amp; Critical Writing<span class="topic">Claim &amp; Rebuttal · Evidence Hierarchy · Fallacies · Steel-Manning</span></h1>
+  <div class="date">BigCat's Writing</div>
+  <p class="intro">In an age flooded with things that merely <em>sound</em> reasonable, the ability to actually argue is a scarce, hard skill. A memo, a design review, a debate — the winner is rarely the loudest voice, but the one whose reasoning survives scrutiny. Today, four moves: how to build a claim that stands, how to weigh evidence, how to spot the cracks in reasoning, and the hardest one — how to state your opponent's case at its strongest before you refute it.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>The Anatomy of Argument: Claim, Grounds, Warrant — none is optional</h2>
+  <div class="en-name">Claim · Grounds · Warrant (Toulmin)</div>
+  <span class="tag">Claim · Toulmin · Structure</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>"I think X" is not an argument — it's a stance. A real argument has three bones: <strong>a claim (I say X) + grounds (because Y) + a warrant (Y supports X, because Z).</strong> Drop the grounds and it's a bare assertion; drop that often-hidden warrant and it's a leap across a gap with no bridge.</p>
+    <div class="quote">
+      "Warrants are general, hypothetical statements, which can act as bridges, and authorise the sort of step to which our particular argument commits us. What people really challenge is often not your data, but whether that bridge holds."
+      <span class="source">— Stephen Toulmin, <em>The Uses of Argument</em> (1958)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Toulmin breaks an argument into six parts; three are core: <strong>Claim, Grounds, Warrant</strong>. Grounds are the facts you put on the table; the warrant is the implicit rule for why those facts license the claim. Add two shock absorbers: a qualifier ("in most cases") and a rebuttal condition ("unless..."). Technical writers usually offer only claim and data and skip the warrant — yet that unspoken assumption is exactly where the argument is easiest to break. Make it explicit, and the argument shifts from "I feel" to "you have to concede."</p>
+    <div class="toulmin">
+      <div class="flow">
+        <div class="tb"><span class="t">Grounds</span>the facts &amp; data you present</div>
+        <div class="arrow"><span class="a">→</span><span>Warrant<br>(on what basis)</span></div>
+        <div class="tb claim"><span class="t">Claim</span>the conclusion you want accepted</div>
+      </div>
+      <div class="foot">↑ Qualifier "in most cases"　·　Rebuttal "unless..." ↑</div>
+      <div class="caption">The Toulmin model — the weakest link is usually that unspoken bridge</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">We should migrate to microservices right away.</span>
+      <span class="after">Let's split the order system into its own service in Q3 (claim) — it's the current deployment bottleneck, forcing a full release for every small change and blocking two ships a week (grounds); for a system changed twenty times a day, decoupling deploy units clearly lowers release risk (warrant). Unless the team is too small to run service governance, in which case we reconsider (rebuttal).</span>
+      <span class="note">The first is a bare claim; the second puts grounds, the hidden warrant, and the boundary condition on the table — to disagree, you now have to disagree with a specific link.</span>
+    </div>
+    <div class="example">
+      <span class="before">We need a four-day work week.</span>
+      <span class="after">We should pilot a four-day week in Q3 (claim), because attrition rose to 18% and engineers report burnout (grounds); comparable firms cut attrition this way without losing output (warrant) — unless our on-call coverage can't absorb the lost day (rebuttal).</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Where to Use It · Common Mistakes</div>
+    <ul>
+      <li>✓ Decision memos, design-doc tradeoffs, defending a choice in code review, persuading a superior</li>
+      <li>✓ Self-check: write out the "because" and the "which is why this shows" explicitly; supply whichever bone is missing</li>
+      <li>✗ Trap: claim without grounds — "obviously" and "as everyone knows" are the fig leaves of missing evidence</li>
+      <li>✗ Trap: hiding the warrant — the more crucial the assumption, the more it should be exposed to scrutiny</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Take a recent claim of yours and write it in four lines: claim — grounds — warrant — rebuttal condition. Focus on surfacing the warrant you usually leave buried. <strong>Reflection</strong>: what's easier to attack — the evidence or the warrant? Why do skilled debaters often ignore your data and go straight for the bridge?</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>The Hierarchy of Evidence: not all "evidence" weighs the same</h2>
+  <div class="en-name">Not All Proof Is Equal</div>
+  <span class="tag">Evidence · Hu Shih · Tiers</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>"Having evidence" is not the same as "having strong evidence." An anecdote, an expert's assertion, a controlled trial, a systematic review — worlds apart in weight. <strong>An argument's strength is set by the hardest tier of evidence you hold; its credibility, by whether you honestly admit that's all it is.</strong></p>
+    <div class="quote">
+      "Say only as much as your evidence allows: with one part of proof, claim only one part; with seven parts, you may not claim eight."
+      <span class="source">— Hu Shih (on scholarly method)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Evidence is tiered. As early as the Warring States period, the philosopher Mozi proposed the <strong>"Three Tests"</strong> — check it against history, against the senses of the many, and against practical results: already a crude evidence hierarchy. The modern version, weakest to strongest: <strong>personal anecdote → expert opinion → single case → statistics &amp; controlled trials → meta-analysis &amp; systematic review</strong>. The higher you climb, the more you rule out chance, bias, and survivorship. Honest writing means marking which tier you're citing — not dressing "a friend of mine" up as "large studies show."</p>
+    <div class="pyr">
+      <div class="lvl l1">Systematic review · Meta-analysis</div>
+      <div class="lvl l2">Statistics · Controlled trials</div>
+      <div class="lvl l3">Multiple cases · Observation</div>
+      <div class="lvl l4">Expert opinion · Authority</div>
+      <div class="lvl l5">Anecdote · "a friend of mine"</div>
+      <div class="side"><span>↑ narrower = harder = more convincing</span><span>wider = softer = more misleading ↓</span></div>
+      <div class="caption">The evidence pyramid — an argument's force is set by its highest tier</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">A friend of mine doubled his output with this framework, so the whole company should switch.</span>
+      <span class="after">One colleague's output rose after trying it (a single case, n=1, possible survivorship bias); I then found two public benchmarks and a 500-person survey pointing the same way (up to the statistical tier) — so let's A/B it in two teams, validate on our own data, then roll out.</span>
+      <span class="note">The point isn't that anecdotes are banned, but that you flag it as the pyramid's base and actively climb one tier toward harder evidence.</span>
+    </div>
+    <div class="example">
+      <span class="before">Studies show sugar makes kids hyperactive, so we should ban it.</span>
+      <span class="after">A few early studies hinted at a sugar-hyperactivity link, but a meta-analysis of 23 controlled trials found no effect — and a higher tier of evidence overrides a lower one.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Where to Use It · Common Mistakes</div>
+    <ul>
+      <li>✓ Data reviews, literature summaries, due diligence, any sentence that opens with "the data shows" or "research says"</li>
+      <li>✓ Self-check: ask "how many samples? whose interest is in this? what counter-example did I skip?"</li>
+      <li>✗ Trap: treating "an authority said so" as the top tier — Hu Shih and Sagan both warn: authorities err too</li>
+      <li>✗ Trap: cherry-picking — quoting only the one study that flatters your case</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Take a "data point / study" you recently cited, mark which pyramid tier it sits on, then find a higher-tier piece of evidence that might refute it. <strong>Reflection</strong>: in an age of information overload, a vivid anecdote often persuades better than a rigorous statistic. For an honest writer, is that gap a trap to resist, or a tool to use well?</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Spotting Fallacies: the common cracks that make an argument collapse</h2>
+  <div class="en-name">The Common Cracks in Reasoning</div>
+  <span class="tag">Fallacies · Critique · Sagan</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>A fallacy is reasoning that <em>looks</em> like an argument but doesn't hold. Learn to spot them and you both keep yourself from collapsing and see through others' tricks. <strong>The most dangerous fallacy is never someone else's — it's the one you don't notice and still find perfectly reasonable.</strong></p>
+    <div class="quote">
+      "Arguments from authority carry little weight — authorities have made mistakes in the past. They will do so again in the future. In science there are no authorities; at most, there are experts."
+      <span class="source">— Carl Sagan, <em>The Demon-Haunted World</em> (1995)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Sagan offers a <strong>"Baloney Detection Kit"</strong> whose core is a checklist of common fallacies. Their shared trait: they bypass one link in "grounds → warrant → claim," substituting emotion, identity, or a false connection for reasoning. The few below are the highest-frequency ones in workplace writing and online debate. Knowing them installs a "wait a beat" brake on your judgment.</p>
+    <div class="fallacy">
+      <div class="row"><span class="nm">Straw Man</span><span class="ds">distort the opponent's view into a weaker, sillier version, then attack that.</span></div>
+      <div class="row"><span class="nm">Ad Hominem</span><span class="ds">attack the person making the point instead of the point — "what would you know."</span></div>
+      <div class="row"><span class="nm">False Dilemma</span><span class="ds">offer only two extremes, hiding the third path in the middle.</span></div>
+      <div class="row"><span class="nm">Slippery Slope</span><span class="ds">"once X, then inevitably Y, and finally Z" — every step short on evidence.</span></div>
+      <div class="row"><span class="nm">Appeal to Authority</span><span class="ds">"an expert said so" as the conclusion itself, not as testable evidence.</span></div>
+      <div class="row"><span class="nm">Correlation = Cause</span><span class="ds">two things co-occur, so one is declared the cause of the other.</span></div>
+      <div class="caption">High-frequency fallacies — each skips a link in the chain of reasoning</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">So you want to control the budget — meaning you want us to do nothing and starve innovation to death.</span>
+      <span class="after">You're proposing a 20% cut to marketing spend; I take your goal to be extending our cash runway. My worry is that cutting acquisition drops next quarter's revenue by more than we save — can we look channel by channel rather than one blunt cut?</span>
+      <span class="note">The first is a straw man (inflating "control the budget" into "do nothing"); the second restates the opponent fairly, then raises the real point of disagreement.</span>
+    </div>
+    <div class="example">
+      <span class="before">Either we ship this Friday or the whole quarter is a failure.</span>
+      <span class="after">Shipping Friday is ideal, but a one-week slip with a stable release is also on the table — let's weigh both against the actual quarter goal.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Where to Use It · Common Mistakes</div>
+    <ul>
+      <li>✓ A "baloney detector" for code review, debate, reviews, and reading press or PR copy</li>
+      <li>✓ Self-check: when a line makes you nod emotionally before you think, pause and find the reasoning it skipped</li>
+      <li>✗ Trap: learning the names and then "spotting fallacies" everywhere — shouting "that's a slippery slope!" is often itself a dodge</li>
+      <li>✗ Trap: mistaking "I disagree" for "you committed a fallacy" — a different view is not a logic error</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Pick an article you disagree with, find one genuine logical fallacy in it (not merely a position you oppose), and say in one sentence why it doesn't hold. <strong>Reflection</strong>: labeling a fallacy can itself be lazy — how do you point out the crack yet still engage the opponent's core, rather than ending the conversation with "you committed fallacy X"?</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Fair to Your Opponent: state their case better than they can — then refute it</h2>
+  <div class="en-name">Steel-Manning — Refute the Strongest Version</div>
+  <span class="tag">Rebuttal · Steel Man · Rapoport / Dennett</span>
+
+  <div class="section">
+    <div class="label">The Principle</div>
+    <p>A straw man weakens the opponent before hitting them; a steel man first reinforces their position to its strongest form — one they'd nod at — and only then refutes it. <strong>Only by beating the strongest version does your conclusion truly stand; knock down a straw man and you persuade no one.</strong></p>
+    <div class="quote">
+      "You should attempt to re-express your target's position so clearly, vividly, and fairly that your target says, 'Thanks, I wish I'd thought of putting it that way.' Only then are you entitled to rebut."
+      <span class="source">— Daniel Dennett, <em>Intuition Pumps</em> (2013), citing Rapoport's rules</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Rapoport's rules run four steps: restate the opponent to their satisfaction, list your points of agreement, say what you learned, and only then rebut. This isn't mere politeness — it <strong>first clears away "I actually misread them," the most common failure</strong>, and lands your rebuttal on the real problem. In <em>How to Disagree</em>, Paul Graham lays out a ladder of refutation, from the lowest name-calling up to "refuting the central point." Most online quarrels stall in the bottom three rungs; real critical writing happens only at the top.</p>
+    <div class="ladder">
+      <div class="rung"><span class="dh">DH0-1</span><span class="what">Name-calling / tone: "utter nonsense" — zero information</span></div>
+      <div class="rung"><span class="dh">DH2</span><span class="what">Ad hominem: attacking the person, not the view</span></div>
+      <div class="rung"><span class="dh">DH3</span><span class="what">Contradiction: stating the opposite with no reasons</span></div>
+      <div class="rung"><span class="dh">DH4</span><span class="what">Counterargument: finally reasoning, with evidence</span></div>
+      <div class="rung"><span class="dh">DH5</span><span class="what">Refutation: quote first, then answer point by point</span></div>
+      <div class="rung top"><span class="dh">DH6</span><span class="what">Refute the central point: hit the crux, not a detail</span></div>
+      <div class="caption">Paul Graham's disagreement ladder — higher is harder, and more persuasive</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Before → After</div>
+    <div class="example">
+      <span class="before">People who oppose remote work just don't understand modern collaboration — it's all about a need for control.</span>
+      <span class="after">Those who want people back in the office have a real point: junior colleagues grow by osmosis, and remote genuinely weakens that transmission (state them at their strongest). But structured mentorship can close that gap without sacrificing everyone's flexibility — so I still argue for hybrid.</span>
+      <span class="note">The first is mind-reading plus a straw man; the second gives the opponent their strongest ground, grants its weight, then rebuts on the same level — and the conclusion stands firmer for it.</span>
+    </div>
+    <div class="example">
+      <span class="before">People who want RTO just miss micromanaging.</span>
+      <span class="after">The strongest case for RTO is real: juniors learn by osmosis, and remote weakens that. But structured mentorship can close the gap without forcing everyone back — so I'd argue for hybrid, not full RTO.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Where to Use It · Common Mistakes</div>
+    <ul>
+      <li>✓ Decision debates, rebuttal essays, negotiation, opposing a proposal in code review, cross-team alignment</li>
+      <li>✓ Self-check: before you write the rebuttal, write one line — "the opponent's strongest point is..."</li>
+      <li>✗ Trap: winning the argument, losing the relationship — the goal is a better answer, not humiliation</li>
+      <li>✗ Trap: the fake steel man — saying "I understand you" while restating a weakened version</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + Reflection</div>
+    <p>Take a position you firmly hold and, using Rapoport's rules, write the strongest possible defense of the other side — strong enough that you waver a little; then write why you still don't change. <strong>Reflection</strong>: "state them strong, then rebut" takes standing and security. When power is unequal and you're rebutting a superior, how do you stay both fair and firm in your own view?</p>
+  </div>
+</section>
+
+<div class="deep-title">— Going Deeper —</div>
+
+<details>
+  <summary>Does the evidence pyramid apply everywhere? Engineering decisions, product intuition, life choices — is "top-tier evidence" the same thing in each?</summary>
+  <div class="ans">Not entirely. The pyramid comes from evidence-based medicine and fits domains with stable causation and repeatable experiments — engineering performance and A/B tests love it. But product intuition, taste, and strategy are high-uncertainty, non-repeatable judgments with no controlled trial to run; there a high-quality analogy or a few people's deep insight can outweigh a vague survey. The point isn't to worship the pyramid but to ask first "for this question, what counts as strong evidence" — and to admit some decisions must be made when evidence is thin.</div>
+</details>
+<details>
+  <summary>Are persuasion and truth-seeking the same thing? Is an argument meant to "get agreement" or to "get closer to the right answer"?</summary>
+  <div class="ans">Often aligned, but they diverge. Truth-seeking asks you to present the opponent's strongest reasons and flag your own evidence's weaknesses; pure persuasion tempts you to hide the unfavorable and inflate the favorable. Character shows at the fork: propaganda puts persuasion over truth and slides into manipulation. For a writer who wants to be trusted long-term, the answer is to treat truth as a constraint — persuade only in ways that survive the opponent's scrutiny. You may win fewer rounds short-term; long-term you win credibility, the most expensive ethos of all.</div>
+</details>
+<details>
+  <summary>AI can instantly generate arguments that "look rigorous" and citations that seem authoritative. What must a critical writer hold on to?</summary>
+  <div class="ans">Exactly the three things AI struggles with most: one, verification — chase the original source and confirm the citation actually exists (AI fabricates convincing references); two, judging the evidence tier — a fluent argument may rest entirely on a bottom-tier anecdote, its formal rigor masking a hollow core; three, asking the real question — AI is good at filling a given frame but poor at challenging the frame itself. When generating arguments becomes cheap, the scarce thing is no longer "writing that looks the part" but "judging whether it is true." Critical judgment is promoted from a writing skill to a survival skill.</div>
+</details>
+<details>
+  <summary>English and Chinese argument cultures differ: English essays favor thesis-first, direct rebuttal; the Chinese tradition leans on persuading with reason and "leaving room." How do you adjust for different readers?</summary>
+  <div class="ans">This is a real pragmatic difference, not a matter of better or worse. English technical and business writing prefers conclusion-first, explicit rebuttal, sharp edges; in a Chinese context, too-direct refutation can read as "not giving face," and restraint and "leaving room" are themselves rhetorical wisdom. The trick for cross-cultural writing is "same skeleton, layered tone": the argument's bones — claim, grounds, warrant — are needed in every culture and can't be dropped; but the surface wording — whether you say "you're wrong" or "perhaps worth another look" — flexes to the reader. Write thesis-first, state disagreement plainly for an international team; for a relationship-heavy Chinese setting, build shared ground first, then advance gently. The bone stays; the skin follows the reader.</div>
+</details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Index</a>
+</div>
+
+<footer>BigCat · Writing · Day 55 · 2026</footer>
+
+</div>
+</body>
+</html>
