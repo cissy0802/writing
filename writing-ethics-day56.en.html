@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Expression: The Ethics of Writing — Day 56</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.1rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.2rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.5rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"Before ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"After ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+.spectrum{background:#f8f6f1;padding:22px 18px 16px;margin:18px 0;border-radius:2px}
+.spectrum .bar{height:12px;border-radius:6px;background:linear-gradient(to right,#3a6a3a,#c9b458 52%,#a04040);margin:10px 0 6px}
+.spectrum .ends{display:flex;justify-content:space-between;font-size:0.78rem;color:#5a5a5a;font-family:Georgia,serif;letter-spacing:0.5px}
+.spectrum .ends span:last-child{color:#a04040}
+.spectrum .ends span:first-child{color:#3a6a3a}
+.spectrum .steps{display:flex;gap:8px;margin-top:14px}
+.spectrum .step{flex:1;padding:10px 8px;background:#fff;border:1px solid #d8d0bc;font-family:Georgia,serif;font-size:0.8rem;color:#3a3a3a;line-height:1.5;text-align:center;border-radius:2px}
+.spectrum .step b{display:block;color:#1f1f1f;font-size:0.85rem;margin-bottom:3px}
+.spectrum .caption{font-size:0.86rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+.decide{background:#f8f6f1;padding:20px 18px;margin:18px 0;border-radius:2px}
+.decide .drow{display:flex;gap:10px}
+.decide .col{flex:1;padding:14px 12px;background:#fff;border-radius:2px;font-size:0.9rem;line-height:1.6}
+.decide .col.ok{border-top:3px solid #3a6a3a}
+.decide .col.no{border-top:3px solid #a04040}
+.decide .col .h{font-family:Georgia,serif;font-weight:700;font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.decide .col.ok .h{color:#3a6a3a}
+.decide .col.no .h{color:#a04040}
+.decide .caption{font-size:0.86rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+details{margin:12px 0;border:1px solid #d0d0d0;border-radius:2px;background:#fff;padding:0 16px}
+details summary{cursor:pointer;padding:14px 0;font-weight:600;color:#1f1f1f;font-size:1rem}
+details[open] summary{border-bottom:1px solid #eee;margin-bottom:10px}
+details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+.deep-title{text-align:center;font-family:Georgia,serif;letter-spacing:2px;text-transform:uppercase;color:#8a8a8a;font-size:0.85rem;margin:40px 0 18px}
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.6rem}
+  header h1 .topic{font-size:1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.25rem}
+  .spectrum .steps,.decide .drow{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 56 · 2026.07.14</div>
+  <h1>Writing &amp; Expression: The Ethics of Writing<span class="topic">Citation · Ghostwriting · Truth vs Story · Real People</span></h1>
+  <div class="date">BigCat's Writing</div>
+  <p class="intro">Craft teaches you to say things beautifully; ethics decides whether that beauty deserves to be believed. Is a borrowed line homage or theft? Whose name goes on the memo? Did that remembered line of dialogue actually happen? Will the colleague you wrote into your story get hurt? These aren't literary trivia — they're the foundation of a writer's credibility. When the foundation cracks, style just makes it collapse more elegantly. Four lines you don't cross.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Citation &amp; Plagiarism: Borrowing Is Homage; Hiding the Source Is Theft</h2>
+  <div class="en-name">Credit Is the Rent You Pay on Ideas</div>
+  <span class="tag">Line · Attribution</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>The line for plagiarism was never "did you use someone else's material" — all writing stands on the shoulders of others. It's whether <strong>you let the reader see what is yours and what is borrowed</strong>. Hiding the source, passing off another's sentences, data, or framework as your own invention — that is theft. Credit is the rent you pay on borrowed ideas; pay it, and the borrowing is aboveboard.</p>
+    <div class="quote">
+      "With one part of evidence, you may say only one part; with seven parts, you must not say eight."
+      <span class="source">— Hu Shi, "Introducing My Own Thought"</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:6px">Hu Shi meant the evidentiary ethic of scholarship: every ounce of certainty must trace back to its source. Citation simply lays that source open for the reader.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Naming your sources doesn't diminish you — it adds value: it proves you read widely, are honest, and can withstand a fact-check. Real originality shows precisely in how you select, arrange, and rebut those sources, not in pretending they don't exist. The AI era tightens this: models can generate convincing "original-looking" passages and plausible fake citations on demand. What's scarce is no longer "being able to write it" but "labeling it clearly, verifying it truly."</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">A team should run like a fire brigade: blameless postmortems, a clear incident commander, drills in peacetime. (These three are lifted verbatim from an SRE book, uncredited.)</span>
+      <span class="after">Google's SRE handbook likens incident response to a fire brigade — blameless postmortems, a clear Incident Commander, peacetime drills. Let me add one thing it doesn't stress: the "face" cost in Chinese teams makes "blameless" far harder than the book admits.</span>
+    </div>
+    <div class="example">
+      <span class="before">As I always say, culture eats strategy for breakfast.</span>
+      <span class="after">Peter Drucker is often credited with "culture eats strategy for breakfast" — the attribution is disputed, but the point stands, and it isn't mine to claim.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ Design docs, literature reviews, talks, newsletters — anywhere you borrow a framework, dataset, or memorable line</li>
+      <li>✗ Rinsing: swap a few words, reorder clauses, call it yours — legally grey, ethically already over the line</li>
+      <li>✗ Abusing the "common knowledge" exemption: fogging a clearly-sourced idea into "everyone says" to dodge credit</li>
+      <li>✗ Self-plagiarism: republishing old work verbatim as new, without noting it, deceives readers just the same</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Pull up a recent doc or post and give every idea, datum, or analogy you didn't originate a source (even just "a book," "a colleague"). <strong>Question</strong>: when you genuinely can't recall whether an idea was read or your own, should the default be to credit others, or to claim it? Why?</p>
+  </div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Ghostwriting: The Name Belongs to Whoever Owns the Thinking</h2>
+  <div class="en-name">Whose Ideas Get Whose Name</div>
+  <span class="tag">Ghostwriting · Byline Ethics</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Ghostwriting isn't dirty in itself — CEO letters, leaders' all-hands emails, speeches have always been penned by others. Whether it's honest turns on one thing: <strong>does the person whose name it bears truly own the thinking and judgment, and answer for them?</strong> Making their point clear for them is craft; thinking <em>for</em> them while letting readers believe they thought it — that slides into deception.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>A byline conveys "responsibility" and "credibility," not "word-by-word labor." From a CEO letter, readers want the CEO to answer for the content — whose fingers hit the keys is irrelevant. So the test is <strong>substantive ownership</strong>: if the thinking is the signer's and the ghost only handles expression, it's ethical; if the thinking is also the ghost's and the signer merely lends a name, it's claiming credit falsely. That's why academic papers forbid ghostwriting — there, a byline claims exactly "this idea and research are mine."</p>
+    <div class="decide">
+      <div class="drow">
+        <div class="col ok">
+          <div class="h">Honest ghostwriting</div>
+          The signer sets the view, decides, and answers for it; the ghost only smooths the words. E.g. an exec memo, a leader's speech, tightening a report's own ideas.
+        </div>
+        <div class="col no">
+          <div class="h">Ghostwriting over the line</div>
+          Neither the thinking nor the research is the signer's; they only borrow a name. E.g. buying a paper, a self-review claiming work never done, a fake "personal blog."
+        </div>
+      </div>
+      <div class="caption">Same act — ghostwriting — one dividing line: does the signer truly own and answer for the content?</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">(Rewriting a report's self-review) I rebuilt the entire scheduling module, boosting performance 40%.</span>
+      <span class="after">Keep his real credit and first person, fix only the expression: "I moved scheduling from polling to event-driven; P99 latency dropped 40%." His work, his number, his name — I just made it clearer.</span>
+    </div>
+    <div class="example">
+      <span class="before">(Writing a leader's all-hands letter, slipping in your own pet agenda.)</span>
+      <span class="after">Align on the view first, then have them confirm every paragraph: "Is this your judgment? Will you sign it?" Every change they make turns the letter genuinely into theirs.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ Exec communications, leaders' speeches, polishing a colleague's own ideas and credit</li>
+      <li>✗ Academic bylines; promo packets claiming contributions that never happened — that's fabrication, not ghostwriting</li>
+      <li>✗ The ghost smuggling in an agenda: using another's mouth to say what they never agreed to say</li>
+      <li>✗ Using AI to ghostwrite, then faking a personal hand where "this is your own thinking" is expected (a reference, a confession)</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Recall a time you wrote for someone, or had someone write for you, and test it against the line above: whose thinking was it, really? <strong>Question</strong>: when you use AI to draft a letter that should be in your own hand (an apology, a recommendation, a eulogy), and the reader assumes you wrote it — is that ghostwriting yourself? Where's the edge?</p>
+  </div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Truth vs Story: You May Compress, You May Not Invent</h2>
+  <div class="en-name">Compression Is Fair, Invention Is Not</div>
+  <span class="tag">Nonfiction · The Reader's Contract</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>A good story needs cutting, selecting, an arc — that's craft, not lying. But the moment you hang the word "true" over your piece, you sign a contract with the reader. <strong>Cutting and compressing are allowed; inventing from nothing is not</strong>: you may omit, you may focus, but you may not write what didn't happen as if it did.</p>
+    <div class="quote">
+      "The writer of nonfiction is only doing his job when he says: none of it was made up."
+      <span class="source">— John Hersey, "The Legend on the License" (1980)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:6px">Ba Jin's late-life <em>Random Thoughts</em> circles one thing throughout — <strong>tell the truth</strong>.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>Readers hold entirely different trust expectations for "true" and "fiction." In fiction, inventing a moving line of dialogue is art; in nonfiction, that same invented line is betrayal — because the reader receives it as "this really happened." The danger hides in the most tempting spots: a too-perfect composite character, a line you "recall the gist of" and supply for someone. They make the draft better and quietly spend the credibility of every word you'll ever write.</p>
+    <div class="spectrum">
+      <div class="bar"></div>
+      <div class="ends"><span>Honest shaping</span><span>Invention over the line</span></div>
+      <div class="steps">
+        <div class="step"><b>Compress</b>three months into one passage</div>
+        <div class="step"><b>Focus</b>drop irrelevant threads</div>
+        <div class="step"><b>Composite</b>merge several into one "character"</div>
+        <div class="step"><b>Fabricate</b>invent dialogue / events</div>
+      </div>
+      <div class="caption">Left is shaping, right is deception; the further right, the more you owe the reader an explicit "this was altered"</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">(An incident writeup) At 3 a.m. I stared at the dashboard, a "we're done for" flashing through my mind, hands eerily calm as I typed the rollback. (The detail was dramatized after the fact.)</span>
+      <span class="after">The alert woke me before dawn; the first thing I did was roll back. (Don't backfill the inner drama you can't recall — the facts suffice. For tension, use verifiable evidence: it took four messages to wake the on-call.)</span>
+    </div>
+    <div class="example">
+      <span class="before">In my memoir: "You never believed in me," she said, turning away. (Dialogue built from "the gist.")</span>
+      <span class="after">I remember the feeling that she didn't believe in me — though I can't reconstruct her exact words. (Admitting memory's edge is more credible than faking precision.)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ Memoir, postmortems, case studies, reportage, founding stories — anywhere you claim "true"</li>
+      <li>✗ Composite characters or grafted timelines, undisclosed to the reader</li>
+      <li>✗ "Emotional truth" as a shield: altering facts because it "feels right" (the very fight in <em>The Lifespan of a Fact</em>)</li>
+      <li>✗ Sneaking a marketing story's gloss into a postmortem or due-diligence where facts are owed</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Write 150 words of true experience, then annotate each sentence: which you know happened, which you "reasonably inferred" or embellished. Delete the latter or change them to "what I remember is…". <strong>Question</strong>: marketing and brand stories inherently glorify — how does that coexist with nonfiction's "truth contract"? How much room would you leave a brand story to "shape"?</p>
+  </div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Writing About Real People: Is It Fine If They Never Read It?</h2>
+  <div class="en-name">Everyone You Write About Is Real</div>
+  <span class="tag">Privacy · Consent · Power</span>
+
+  <div class="section">
+    <div class="label">The Principle in One Line</div>
+    <p>Every "he" and "she" you write down is a real person who can be hurt, hold a grudge, be recognized by colleagues. <strong>Before writing others, clear three gates: true, necessary, power</strong> — is it true? Must it be written, or is it just for effect? And who holds more power, you or the one written about? The more you expose a flaw, write a subordinate, write family, the more you should stop and weigh.</p>
+    <div class="quote">
+      "Every journalist who is not too stupid or too full of himself to notice what is going on knows that what he does is morally indefensible."
+      <span class="source">— Janet Malcolm, The Journalist and the Murderer (1990)</span>
+    </div>
+    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:6px">Writing about others is, at bottom, a kind of taking — worth an unease you never quite lose.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why It Works</div>
+    <p>At the other pole is Anne Lamott's famous line: "You own everything that happened to you. Tell your stories. If people wanted you to write warmly about them, they should have behaved better." (<em>Bird by Bird</em>) The two seem to clash but frame the real tension: <strong>you have the right to write your life, but the people in it have lives of their own.</strong> The mature writer picks no side — at each point, they weigh "the truth I want to tell" against "the harm I'll cause," and when power is unequal — writing a subordinate, a child, someone who trusts you — the scale should tip toward restraint.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision in Action</div>
+    <div class="example">
+      <span class="before">(In a blameless postmortem) This outage was Wang pushing the wrong config; he's always careless.</span>
+      <span class="after">The config change lacked a second confirmation, so a wrong config reached production. (On the act, not the person: a postmortem fixes the process gap, not nails a real human to a pillory — he's still on this team tomorrow.)</span>
+    </div>
+    <div class="example">
+      <span class="before">In my post about the layoff: "My manager, Dave, coldly told me I was let go." (Real name + subjective verdict)</span>
+      <span class="after">"The manager who delivered the news kept it brief." (Unless exposing injustice is your legitimate aim, drop the real name and the mind-reading adjectives — it protects them and you.)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to Use It + Common Mistakes</div>
+    <ul>
+      <li>✓ Postmortems, memoir, leadership narrative, public posts — anywhere a recognizable real person appears</li>
+      <li>✗ Using a subordinate or the weak as a negative exhibit while you stand safely above</li>
+      <li>✗ "They don't read English / aren't on this platform" — spread is never yours to control; screenshots reach the subject</li>
+      <li>✗ Writing family, especially children: they never consented to being public, and the bond is lifelong — picture ten years from now</li>
+    </ul>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This Week's Exercise + A Question</div>
+    <p>Take a passage where you wrote a real colleague or family member, and for each person ask: "If they were reading this right now, would I still dare post it as is?" Edit until you dare. <strong>Question</strong>: between Malcolm's "morally indefensible" and Lamott's "should have behaved better," which pole are you closer to? When "telling the truth" would hurt someone who trusts you, what standard decides write or not?</p>
+  </div>
+</section>
+
+<div class="deep-title">— Going Deeper —</div>
+
+<details>
+  <summary>Once AI is deeply involved in writing, what does a "byline" even mean? Is it honest to sign my name to a piece AI drafted, revised, and polished?</summary>
+  <div class="ans">The key isn't "did you use AI" but what the byline promises. If it promises "I'm responsible for this content, it represents my judgment," then as long as you truly vet, endorse, and answer for it, the byline holds — whether the tool was AI or an assistant — just as a CEO letter never asks who typed. But some contexts promise something special: "this is my own thinking and hand" — confessions, recommendations, eulogies, student work. Using AI there and faking a personal hand betrays that particular expectation. So ask first: what exactly does the byline guarantee the reader here — and did you deliver it?</div>
+</details>
+<details>
+  <summary>Marketing and brand stories inherently glorify — how do they coexist with nonfiction's "truth contract"? Are marketers doomed to work in a grey zone?</summary>
+  <div class="ans">The way out is to separate "selective" from "false." A brand story may pick its best face and skip the mediocre parts — the same logic as memoir "writing only what's worth writing," shaping not lying. The line is crossed when you say you did what you didn't, inflate one case into a rule, or fabricate testimonials. A practical test: for each flattering line, if pressed "where's the evidence?" — can you produce it? Praise you can't back is invention. The best brand narrative actually wins trust by "daring to show flaws" — a product story that admits limits reads truer than a flawless one. The grey zone exists, but it's narrower than most assume.</div>
+</details>
+<details>
+  <summary>Do writing ethics differ across cultures? Does the Western-individualist "I own my story" hold in an East Asian context that prizes the collective and relationships?</summary>
+  <div class="ans">The underlying principles carry over — truth, attribution, not harming the weak; every culture affirms these. But the weights and expression differ. Lamott's "I have the right to write my life" carries a strong individualist tint; East Asia weighs relationships and "face" more, where "leaving the other room" when writing family or colleagues is seen as virtue, not cowardice. This isn't higher versus lower ground but two assumptions about the self–other boundary. The writer's wisdom is "one skeleton, discretion by context": the bones of truth and attribution can't be dropped, but how much you expose, real name or pseudonym, blunt or oblique — tune to the reader's culture and closeness.</div>
+</details>
+<details>
+  <summary>Is "telling the truth" ever too costly? Ba Jin spent a lifetime urging it — but if the truth would destroy someone who trusts you, is silence another form of honesty?</summary>
+  <div class="ans">The opposite of telling the truth is telling lies, not "saying everything." What Ba Jin repented was knowing the truth yet speaking falsely, joining the crowd to frame others — active betrayal. "Choosing not to speak now" and "speaking a lie" are different: restraint out of protection, so long as you don't therefore lie or whitewash, can be honesty with proportion. The divide is in motive: distorting facts to save yourself is cowardice; delaying disclosure to spare the innocent is mercy. The danger is using "mercy" to cover "cowardice" — so every silence deserves the question: am I protecting them, or just my own comfort?</div>
+</details>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Index</a>
+</div>
+
+<footer>BigCat · Writing · Day 56 · 2026</footer>
+
+</div>
+</body>
+</html>
