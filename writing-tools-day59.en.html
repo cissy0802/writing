@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing & Expression: Writing Tools & Methods — Day 59</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.3rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.5rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none;margin-top:8px}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.trans{font-size:0.92rem;color:#6a6a6a;margin-top:8px}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"BEFORE ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"AFTER ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Visualization: slip-box emergence */
+.zettel-vis{background:#f8f6f1;padding:24px 18px;margin:18px 0;border-radius:2px}
+.zettel-vis .cards-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px}
+.zettel-vis .slip{background:#fff;border:1px solid #c8c0a8;border-radius:2px;padding:8px 10px;font-family:Georgia,serif;font-size:0.8rem;color:#5a5a5a;min-width:88px;text-align:center;position:relative}
+.zettel-vis .slip.linked{border-color:#8a7a4a;color:#8a5a2a}
+.zettel-vis .arrow-down{text-align:center;font-size:1.4rem;color:#8a7a4a;margin:4px 0}
+.zettel-vis .emergent{background:#1f1f1f;color:#d8c98a;text-align:center;padding:12px 14px;border-radius:2px;font-family:Georgia,serif;font-size:0.92rem;font-weight:600}
+.zettel-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+/* Visualization: outline–emergence spectrum */
+.spectrum-vis{background:#f8f6f1;padding:22px 18px;margin:18px 0;border-radius:2px}
+.spectrum-vis .bar{height:8px;background:linear-gradient(to right,#1f1f1f,#8a7a4a,#d8d0bc);border-radius:4px;margin:14px 0 6px}
+.spectrum-vis .poles{display:flex;justify-content:space-between;font-family:Georgia,serif;font-size:0.86rem;color:#3a3a3a}
+.spectrum-vis .poles .p-left{font-weight:700;color:#1f1f1f}
+.spectrum-vis .poles .p-right{font-weight:700;color:#8a7a4a}
+.spectrum-vis .marks{display:flex;justify-content:space-between;font-size:0.78rem;color:#8a8a8a;margin-top:10px;font-family:Georgia,serif;flex-wrap:wrap;gap:6px}
+.spectrum-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;font-family:Georgia,serif;text-align:center}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+details{margin:10px 0;background:#fff;border:1px solid #e0ddd4;border-radius:2px;padding:4px 16px}
+details summary{cursor:pointer;font-weight:600;color:#1f1f1f;padding:10px 0;font-size:0.98rem}
+details .think{color:#3a3a3a;font-size:0.94rem;line-height:1.75;padding:4px 0 14px}
+.closing{background:#fff;border-top:3px solid #8a7a4a;padding:32px;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06)}
+.closing h2{font-size:1.35rem;margin-bottom:6px}
+.closing .en-name{font-size:0.95rem;color:#6a6a6a;font-style:italic;margin-bottom:18px;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.05rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.25rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="week-label">Day 59 · 2026.07.17</div>
+  <h1>Writing & Expression: Writing Tools & Methods<span class="topic">Slip-box · Atomic notes · Outline vs emergence · Tool discipline</span></h1>
+  <div class="date">BigCat's Writing</div>
+  <p class="intro">Being stuck is rarely a lack of inspiration — it's asking the blank page to carry weight that belongs to a system. Prolific writers nearly all stash their thinking in some "external brain" long before they draft. Today, no app reviews — just method: how to turn writing from "generate on the spot" into "arrange what you already have."</p>
+</header>
+
+<!-- Card 1: Atomic notes -->
+<section class="card">
+  <div class="num">Principle 01</div>
+  <h2>Atomic Notes: One Card, One Idea</h2>
+  <div class="en-name">The smallest reusable unit of thought</div>
+  <span class="tag">Zettelkasten · Base unit</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's words</div>
+    <p>Cut knowledge into the smallest unit that is "one complete idea, in your own words, able to stand alone." Only then can it be searched, quoted, and recombined later.</p>
+    <div class="quote">
+      "Evergreen notes should be atomic: it's best to have notes which are only about one thing — but which, as much as possible, capture the entirety of that thing."
+      <span class="source">— Andy Matuschak, Evergreen notes</span>
+    </div>
+    <p class="trans">Atomic notes aren't just storage — they force you to finish the thinking at the moment of input.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>Why is "atomic" the foundation? Because writing is fundamentally <strong>recombination</strong>, and only units of consistent grain and clear boundaries can be recombined. A full page of notes can later only be dumped in whole or discarded in whole; a card that says only "sunk-cost fallacy" can go into a decision memo, a talk, and an explanation for your kid — one idea, three venues. More crucial is "in your own words": paraphrase is the litmus test of understanding. Every card you <em>can't</em> write is a place you didn't actually grasp.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision demo (the core)</div>
+    <div class="example">
+      <span class="before">Book note on <em>Thinking, Fast and Slow</em>: Part 1 covers System 1 / System 2, Part 2 covers biases (anchoring, availability, representativeness…), Kahneman argues people aren't rational — very inspiring, worth a reread. (A whole book crushed into one line; nothing is quotable later.)</span>
+      <span class="after">Card ① 〔Anchoring〕The first number shown drags all later judgments, even when plainly irrelevant. → Open first in negotiation, price-sheet anchors, performance-rating baselines. | Card ② 〔Peak-end rule〕Memory of an experience = its peak + its ending, almost independent of duration. → Speech closings, exit interviews, product onboarding. (Two standalone, retrievable cards.)</span>
+    </div>
+    <div class="example">
+      <span class="before">Meeting note: "Discussed caching strategy, Q3 goals, and the new hire — lots of good points, follow up next week." (Everything fused; nothing retrievable.)</span>
+      <span class="after">Card A 〔Cache invalidation is a naming problem〕Most cache bugs are really stale-key bugs → link to "idempotency," "event sourcing." Card B 〔Onboarding debt compounds〕Every undocumented decision costs the next hire a day → link to "writing as leverage."</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use + Common errors</div>
+    <ul>
+      <li>✓ Reading, podcasts, meetings, flashes of insight — at the moment of input, slice into atomic cards</li>
+      <li>✗ Not for: to-dos, schedules, pure factual jottings (that's a list, not an idea card)</li>
+      <li>✗ Trap: treating highlights as notes — copied text never passed through your brain, so nothing was learned</li>
+      <li>✗ Trap: cramming several ideas onto one card — which drawer does it belong to? None, so it sinks forever</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key references</div>
+    <p class="refs"><span>Sönke Ahrens</span>, <em>How to Take Smart Notes</em> (2017) · <span>Andy Matuschak</span>, "Evergreen notes" (public notes site)</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + Reflection</div>
+    <p>Take a passage you recently found striking. In your own words, turn it into 2–3 atomic cards, each under 40 words, each with a "where might this be used?" arrow. <strong>Reflection:</strong> if you can't write one of them — is it that you didn't really understand the idea, or that it wasn't worth keeping?</p>
+  </div>
+</section>
+
+<!-- Card 2: Linking & emergence -->
+<section class="card">
+  <div class="num">Principle 02</div>
+  <h2>Linking over Collecting: Let the Slip-box Grow Your Essay</h2>
+  <div class="en-name">Structure emerges from connections, not folders</div>
+  <span class="tag">Zettelkasten · Emergence</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's words</div>
+    <p>A card's value isn't in count but in <strong>connection</strong>. As you keep linking new cards to old, the essay isn't "thought up" — it <em>grows</em> out of the connections. You no longer face a blank page; you face a web already dense with threads.</p>
+    <div class="quote">
+      "Writing is not what follows research, learning or studying, it is the medium of all this work."
+      <span class="source">— Sönke Ahrens, How to Take Smart Notes</span>
+    </div>
+    <p class="trans">Writing is a form of thinking, not the report you file after thinking is done.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>The German sociologist Niklas Luhmann published 70+ books thanks to a slip-box (Zettelkasten) of roughly 90,000 cards. When writing, he wasn't "forcing out the next sentence" — he asked the slip-box "what comes next?" and it handed him unexpected connections. That's <strong>bottom-up</strong>: not outline-first-then-fill (which only lets you write what you already know), but letting the topic <strong>emerge</strong> from dense links. A thousand disconnected cards are a thousand islands; three hundred connected ones will tell you, "there's an essay here."</p>
+
+    <div class="zettel-vis">
+      <div class="cards-row">
+        <div class="slip">Attention economy</div>
+        <div class="slip linked">Deep work</div>
+        <div class="slip linked">Writing = thinking</div>
+        <div class="slip">Distributed consensus</div>
+        <div class="slip linked">Async comms</div>
+      </div>
+      <div class="arrow-down">↓ where links cluster, a topic rises</div>
+      <div class="emergent">Emergent topic: "Why remote teams decide by writing, not meetings"</div>
+      <div class="caption">The slip-box isn't a warehouse — it's a thinking partner that prompts the next step</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision demo (the core)</div>
+    <div class="example">
+      <span class="before">(Collector mode) My notes app has 800 highlights, 200 unread links, 50 "write this someday" titles — yet every time I draft I start from zero, staring at an empty doc.</span>
+      <span class="after">(Connector mode) For each new card I ask, "which existing card is it like? which does it rebut?" and link by hand. Three months later, "writing as leverage" has 11 links clustered around it — the essay's skeleton is already there; I just read it out.</span>
+    </div>
+    <div class="example">
+      <span class="before">(Collector's fallacy) Saved 40 articles to "read later." The folder is a graveyard; the ideas never met each other.</span>
+      <span class="after">For each saved idea, write one line: "This connects to ___ because ___." The note on 'idempotency' now links to 'retries', 'exactly-once', and — surprisingly — 'good apologies.' That last link became an essay.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use + Common errors</div>
+    <ul>
+      <li>✓ Long-term knowledge building; the source layer for deep essays / internal white papers / promo packets</li>
+      <li>✗ Not for: one-off, time-sensitive output (don't build a knowledge web for today's announcement)</li>
+      <li>✗ Trap: the "collector's fallacy" — mistaking "saved it" for "learned it," hoarding without linking</li>
+      <li>✗ Trap: relying on tags alone without links — tags are drawers; links are the train of thought</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key references</div>
+    <p class="refs"><span>Niklas Luhmann</span>, "Communicating with Slip Boxes" (1981) · <span>Sönke Ahrens</span>, <em>How to Take Smart Notes</em>, Part II</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + Reflection</div>
+    <p>Pull the last 10 entries in your notes and force at least 5 links between them ("A supports B," "C rebuts D," "E is a special case of F"). If one node sprouts 3+ links, that's probably your next piece. <strong>Reflection:</strong> do you hoard more, or connect more? Why does hoarding feel safe and connecting feel hard?</p>
+  </div>
+</section>
+
+<!-- Card 3: Outline vs emergence -->
+<section class="card">
+  <div class="num">Principle 03</div>
+  <h2>Plotters vs Pantsers: Plan First, or Discover as You Write</h2>
+  <div class="en-name">Two legitimate modes — match the mode to the genre</div>
+  <span class="tag">Writing modes · Choice</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's words</div>
+    <p>Writing has two legitimate modes: build the outline then fill it (the planner), and write to discover what you mean (the discoverer). <strong>Neither is superior — pick by genre and goal.</strong> The real inefficiency is using the wrong mode.</p>
+    <div class="quote">
+      "How can I know what I think till I see what I say?"
+      <span class="source">— E.M. Forster, Aspects of the Novel (1927)</span>
+    </div>
+    <p class="trans">The discoverer's creed: writing is discovery, not merely transcription.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>Each mode has its logic. <strong>The planner</strong> (pyramid principle, decision memos, design docs) — conclusion first, clear structure; the reader wants the answer fast, so outlining prevents drift and ensures coverage. <strong>The discoverer</strong> (essays, retros, exploratory thinking) — the very reason you write is to think a fuzzy thing clear, and a premature outline locks in a judgment you haven't formed. Stephen King says he "distrusts plot" because "plotting and the spontaneity of real creation aren't compatible." The key: <strong>first decide "do I already know the answer, or am I writing to find it?"</strong> — outline for the former, discover for the latter, then rebuild the discovered draft with an outline.</p>
+
+    <div class="spectrum-vis">
+      <div class="bar"></div>
+      <div class="poles">
+        <span class="p-left">Outline-first</span>
+        <span class="p-right">Discovery</span>
+      </div>
+      <div class="marks">
+        <span>Decision memo · design doc</span>
+        <span>Persuasion · report</span>
+        <span>Retro · essay · exploration</span>
+      </div>
+      <div class="caption">The same person should stand at different points for different genres</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision demo (the core)</div>
+    <div class="example">
+      <span class="before">(Mode mismatch) Writing a decision memo for the VP in pure discovery mode: three pages in, the reader still doesn't know what you're recommending.</span>
+      <span class="after">Write the conclusion in one line first ("Recommend we stop building in-house in Q4 and buy instead"), then three supports and one risk — outline first; drafting just fleshes out the skeleton. The VP grasps the point in 30 seconds.</span>
+    </div>
+    <div class="example">
+      <span class="before">(Mode mismatch) Forcing a rigid outline onto a messy retro you haven't understood yet — you just defend the outline instead of learning.</span>
+      <span class="after">Free-write the retro first: "What actually surprised me?" Let the real lesson surface on the page. Then, and only then, impose structure for the reader.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use + Common errors</div>
+    <ul>
+      <li>✓ Planner: conclusion known, needs efficient delivery — memos, design docs, pitches, reports</li>
+      <li>✓ Discoverer: conclusion unknown, writing to think it clear — retros, pre-decision thinking, deep essays</li>
+      <li>✗ Trap: forcing an outline on exploratory thinking — you're just defending an unformed conclusion</li>
+      <li>✗ Trap: using discovery for a decision doc — the reader is dragged through your detours</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key references</div>
+    <p class="refs"><span>Stephen King</span>, <em>On Writing</em> (on discovery writing) · <span>Barbara Minto</span>, <em>The Pyramid Principle</em> (on structure-first)</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + Reflection</div>
+    <p>Take two things you must write this week and place them on the spectrum above: which is "I know the conclusion" (outline first), which is "I write to think it clear" (discover, then rebuild)? Draft the first paragraph of each in its matching mode. <strong>Reflection:</strong> which mode is your default? Have you been inefficient at the other kind of task simply out of habit?</p>
+  </div>
+</section>
+
+<!-- Card 4: Tool discipline -->
+<section class="card">
+  <div class="num">Principle 04</div>
+  <h2>Tool Discipline: Serve the Thinking, Not the App</h2>
+  <div class="en-name">Fancy software never wrote a sentence</div>
+  <span class="tag">Digital tools · Discipline</span>
+
+  <div class="section">
+    <div class="label">Principle + Master's words</div>
+    <p>No amount of fancy software writes a sentence for you. A tool's only value is <strong>reducing the friction between you and the idea</strong>. The moment you spend more time tinkering with the system — comparing apps, tuning colors — than writing, the tool becomes procrastination in its most sophisticated form.</p>
+    <div class="quote">
+      "We shape our tools, and thereafter our tools shape us."
+      <span class="source">— often attributed to Marshall McLuhan (actually John Culkin, 1967)</span>
+    </div>
+    <p class="trans">Precisely because tools shape us in turn, choose them carefully — and use them with restraint.</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Why it works</div>
+    <p>"Productivity porn" is when the instant gratification of building the perfect system substitutes for the genuinely hard work of output. It seduces because organizing has progress bars and a sense of control, while writing has only the anxiety of the blank page. Three disciplines save you. <strong>One: use plain text</strong> (Markdown / plaintext) — it still opens in thirty years, beholden to no vendor; Luhmann's paper cards lasting a lifetime is the same logic. <strong>Two: fix one good-enough toolset and use it for three full months before re-evaluating</strong> — frequent migration is itself avoidance. <strong>Three: treat AI as a thinking partner, not a ghostwriter</strong>: let it challenge your claims, surface counterexamples, check structure — not generate for you. Once you stop thinking yourself, "tools shape you" slides into "tools replace you."</p>
+  </div>
+
+  <div class="section">
+    <div class="label">Revision demo (the core)</div>
+    <div class="example">
+      <span class="before">(Tool-first) This month I migrated between Notion / Obsidian / Logseq three times, perfected backlinks, templates, and theme colors — and finished not a single essay.</span>
+      <span class="after">(Output-first) Lock one plain-text folder; ban config-tinkering for three months. Write 300 words a day first, organize later. An ugly system is fine — the essay got finished.</span>
+    </div>
+    <div class="example">
+      <span class="before">(AI as ghostwriter) "Write me a 500-word memo on X." Paste, ship. You learned nothing; the thinking never happened in your head.</span>
+      <span class="after">(AI as sparring partner) "Here's my draft memo. Attack the weakest claim. What would a skeptical VP ask? Where am I burying the lede?" You keep the pen; the AI sharpens the blade.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">When to use + Common errors</div>
+    <ul>
+      <li>✓ Always: judge "am I writing, or preparing to write?" — only the former counts</li>
+      <li>✓ With AI: use it as questioner, skeptic, structure-reviewer; the pen stays in your hand</li>
+      <li>✗ Trap: treating a tool switch as the new hope that "this time I'll be productive" — migration is fake progress</li>
+      <li>✗ Trap: letting AI ghostwrite entirely — what you save is the thinking, and thinking is the point of writing</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">Key references</div>
+    <p class="refs"><span>Cal Newport</span>, <em>Deep Work</em> (focus vs tool-switching) · <span>Sönke Ahrens</span>, <em>How to Take Smart Notes</em> (simple beats fancy)</p>
+  </div>
+
+  <div class="exercise">
+    <div class="label">This week's exercise + Reflection</div>
+    <p>Tally last week: time spent "organizing / picking tools / tuning the system" versus time spent actually writing. If organizing &gt; writing, set one rule this week: no touching any setting until you've drafted 300 words. <strong>Reflection:</strong> did your last "a new tool will make me productive" hope pay off — or just buy another round of tinkering?</p>
+  </div>
+</section>
+
+<!-- Closing -->
+<section class="closing">
+  <h2>The method, in one line</h2>
+  <div class="en-name">Four principles, one idea</div>
+  <p style="font-size:1rem;color:#2a2a2a;line-height:1.9">The four are really one thing: <strong>get your thinking out of your head early, into an external system that can be recombined.</strong> Atomic notes set the grain, links let the essay emerge, choosing outline-or-discovery sets the efficiency, and tool discipline keeps your effort on output rather than the system. A writer's true productivity was never "writing fast" — it's that "when you pick up the pen, most of the thinking is already done."</p>
+
+  <details>
+    <summary>Reflection 1: Is the slip-box right for all writing, or only "accumulation-type" deep output?</summary>
+    <div class="think">The slip-box pays off most for long-term, cross-domain, reused writing — it weaves a decade of scattered thought into a web. For time-sensitive, one-off output (today's announcement, an on-the-spot remark) it's nearly useless, even a burden. Test: will this idea be reused in future? If yes, into the slip-box; if not, just write it and ship. Don't build a lifelong system for a one-off.</div>
+  </details>
+  <details>
+    <summary>Reflection 2: In Chinese writing, does "paraphrasing in your own words" risk losing the subtlety of the original?</summary>
+    <div class="think">The opposite. Much "looks understood, can't write it" pseudo-understanding is exposed precisely by forced paraphrase. The exception: classic lines, precise definitions, poetry — where "the original wording is the value" — should be recorded verbatim with a citation, with a separate "my understanding" card placed beside it. Rule: concepts in your own words, source texts verbatim, split across cards and cross-linked.</div>
+  </details>
+  <details>
+    <summary>Reflection 3: In the AI era, can the "external brain" be outsourced entirely to AI, so no slip-box is needed?</summary>
+    <div class="think">You can outsource "storage," not "understanding." AI can retrieve, connect, and summarize, but the value of "paraphrasing in your own words" lies in its happening inside your head — that's the exercise of understanding; outsource it and you never trained. Better division: the slip-box stores judgments you've digested; AI accelerates retrieval and skepticism. You do the thinking; it pushes you to think harder. Reverse it, and you own a library you don't understand.</div>
+  </details>
+  <details>
+    <summary>Reflection 4: Do slip-boxes and the outline-vs-emergence frame apply to speaking and video?</summary>
+    <div class="think">Yes, but reweighted. Speaking needs "outline first" more than prose does — the audience can't re-read, so structure must be instantly legible (recall Day 3's Duarte sparkline). Here the slip-box is the source layer: story cards, quote cards, data cards accumulated over time, arranged live along a sparkline. Impromptu speaking (covered on Day 61) leans more on emergence — but that's "prepared improvisation" built atop long-term cards. You improvise freely only when you hold cards in hand.</div>
+  </details>
+</section>
+
+<div class="nav">
+  <a href="index.en.html">← Back to Writing Index</a>
+</div>
+
+<footer>BigCat · Writing · Day 59 · 2026</footer>
+
+</div>
+</body>
+</html>
