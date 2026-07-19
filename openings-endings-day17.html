@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>写作与表达：开头与结尾 — Day 17</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -99,301 +100,264 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 </head>
 <body>
 <div class="container">
-
 <header>
-  <div class="week-label">Day 17 · 2026.06.04</div>
-  <h1>写作与表达：开头与结尾<span class="topic">In Medias Res · Curiosity Gap · The Hook · Full-Circle</span></h1>
-  <div class="date">BigCat's Writing</div>
-  <p class="intro">读者只给你一两句话的耐心。开头决定他要不要读下去，结尾决定他记住什么、要不要行动。中间写得再漂亮，开头没钩住、结尾没落地，都白费。今天我们拆开这两个杠杆最高的位置——以场景开场、以问题开场、Hook 的解剖，以及让全文闭环的结尾。</p>
+<div class="week-label">Day 17 · 2026.06.04</div>
+<h1 data-tts="c24319d1c457e468">写作与表达：开头与结尾<span class="topic">In Medias Res · Curiosity Gap · The Hook · Full-Circle</span></h1>
+<div class="date">BigCat's Writing</div>
+<p class="intro">读者只给你一两句话的耐心。开头决定他要不要读下去，结尾决定他记住什么、要不要行动。中间写得再漂亮，开头没钩住、结尾没落地，都白费。今天我们拆开这两个杠杆最高的位置——以场景开场、以问题开场、Hook 的解剖，以及让全文闭环的结尾。</p>
 </header>
-
 <!-- Card 1: 以场景开场 -->
 <section class="card">
-  <div class="num">Principle 01</div>
-  <h2>以场景开场：把读者直接扔进现场</h2>
-  <div class="en-name">Open Cold on a Scene — In Medias Res</div>
-  <span class="tag">开头 · 具象</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>不要「清嗓子」。多数初稿的前两段是热身——背景、定义、「众所周知」。删掉它们，<strong>直接从一个具体的时刻、画面、动作开始</strong>。贺拉斯两千年前就给了这条铁律：in medias res，「扔进事情的中间」。</p>
-    <div class="quote">
+<div class="num">Principle 01</div>
+<h2 data-tts="593e6ae9858687cd">以场景开场：把读者直接扔进现场</h2>
+<div class="en-name">Open Cold on a Scene — In Medias Res</div>
+<span class="tag">开头 · 具象</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>不要「清嗓子」。多数初稿的前两段是热身——背景、定义、「众所周知」。删掉它们，<strong>直接从一个具体的时刻、画面、动作开始</strong>。贺拉斯两千年前就给了这条铁律：in medias res，「扔进事情的中间」。</p>
+<div class="quote">
       "He does not begin from the egg, but always he hurries to the outcome and snatches his hearer into the middle of things."
       <span class="source">— Horace, Ars Poetica（约公元前 19 年）</span>
-    </div>
-    <p class="trans">中译：他从不从蛋讲起，而是径直奔向结局，一把将听者拽入事件的中央。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>抽象信息要读者自己在脑中「渲染」，具体场景却已渲染好了——读者直接看见、在场。神经层面，<strong>具象语言激活感官皮层，抽象命题不会</strong>。所以「我们的运维流程存在效率问题」让人滑过去，而「凌晨三点，值班工程师第七次手动重启那台服务器」让人停下。更关键的一点：初稿真正的开头，往往藏在你写的第三段——前两段是写给自己的热身。修订时先问：能不能从第三段开始？</p>
-    <div class="draft-funnel">
-      <div class="para cut">第一段：背景铺垫、行业现状、「随着……的发展」<span class="note">热身，删</span></div>
-      <div class="para cut">第二段：定义概念、「众所周知」、清嗓子<span class="note">写给自己的，删</span></div>
-      <div class="para real">第三段：一个具体的时刻 —— 真正的开头在这里 ↑</div>
-      <div class="caption">修订铁律：删掉前两段，读读看是不是更好了</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">在讨论分布式锁之前，我们有必要先回顾一下并发的基本概念。并发是指多个执行单元……</span>
-      <span class="after">两个请求在同一毫秒抢同一行库存。没有锁，它们都读到「剩 1 件」，都扣减，于是你卖出了两件只有一件的货。分布式锁，就是来堵这个洞的。</span>
-    </div>
-    <div class="example">
-      <span class="before">This document provides an overview of the challenges our team has faced regarding deployment reliability over the past quarter.</span>
-      <span class="after">Last Tuesday, a one-line config change took down checkout for 19 minutes — the third such outage this quarter. Here's why our deploys keep breaking, and the three fixes that will stop it.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 技术博客、事故复盘、演讲开场、Pitch、个人随笔、晋升 packet 的「影响力故事」</li>
-      <li>✗ 纯 API 文档、法律/合规文本——场合不容场景化铺陈</li>
-      <li>坑：场景与主旨无关——为生动而生动，把读者带偏</li>
-      <li>坑：场景太长，铺了五句还没进正题；或忘了「落地」——场景之后必须有一句把画面接回主旨</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <div class="label">关键参考</div>
-    <p class="refs"><span>Horace</span>《Ars Poetica》（in medias res 的出处） · <span>Sol Stein</span>《Stein on Writing》（"start in the middle of an action"） · <span>William Zinsser</span>《On Writing Well》</p>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作</div>
-    <p>拿出你最近写的一篇文档或邮件。删掉第一段，读读看——是不是更好了？如果是，再问第二段能不能也删。然后为它写一个「场景开场」：一个具体的时刻、人、动作，三句话以内，第四句把画面接回主旨。</p>
-    <p class="think">思考题：你写的东西里，有多少「开头」其实是写给自己的热身？</p>
-  </div>
+</div>
+<p class="trans">中译：他从不从蛋讲起，而是径直奔向结局，一把将听者拽入事件的中央。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>抽象信息要读者自己在脑中「渲染」，具体场景却已渲染好了——读者直接看见、在场。神经层面，<strong>具象语言激活感官皮层，抽象命题不会</strong>。所以「我们的运维流程存在效率问题」让人滑过去，而「凌晨三点，值班工程师第七次手动重启那台服务器」让人停下。更关键的一点：初稿真正的开头，往往藏在你写的第三段——前两段是写给自己的热身。修订时先问：能不能从第三段开始？</p>
+<div class="draft-funnel">
+<div class="para cut">第一段：背景铺垫、行业现状、「随着……的发展」<span class="note">热身，删</span></div>
+<div class="para cut">第二段：定义概念、「众所周知」、清嗓子<span class="note">写给自己的，删</span></div>
+<div class="para real">第三段：一个具体的时刻 —— 真正的开头在这里 ↑</div>
+<div class="caption">修订铁律：删掉前两段，读读看是不是更好了</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">在讨论分布式锁之前，我们有必要先回顾一下并发的基本概念。并发是指多个执行单元……</span>
+<span class="after">两个请求在同一毫秒抢同一行库存。没有锁，它们都读到「剩 1 件」，都扣减，于是你卖出了两件只有一件的货。分布式锁，就是来堵这个洞的。</span>
+</div>
+<div class="example">
+<span class="before">This document provides an overview of the challenges our team has faced regarding deployment reliability over the past quarter.</span>
+<span class="after">Last Tuesday, a one-line config change took down checkout for 19 minutes — the third such outage this quarter. Here's why our deploys keep breaking, and the three fixes that will stop it.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 技术博客、事故复盘、演讲开场、Pitch、个人随笔、晋升 packet 的「影响力故事」</li>
+<li>✗ 纯 API 文档、法律/合规文本——场合不容场景化铺陈</li>
+<li>坑：场景与主旨无关——为生动而生动，把读者带偏</li>
+<li>坑：场景太长，铺了五句还没进正题；或忘了「落地」——场景之后必须有一句把画面接回主旨</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">关键参考</div>
+<p class="refs"><span>Horace</span>《Ars Poetica》（in medias res 的出处） · <span>Sol Stein</span>《Stein on Writing》（"start in the middle of an action"） · <span>William Zinsser</span>《On Writing Well》</p>
+</div>
+<div class="exercise">
+<div class="label">本周习作</div>
+<p>拿出你最近写的一篇文档或邮件。删掉第一段，读读看——是不是更好了？如果是，再问第二段能不能也删。然后为它写一个「场景开场」：一个具体的时刻、人、动作，三句话以内，第四句把画面接回主旨。</p>
+<p class="think">思考题：你写的东西里，有多少「开头」其实是写给自己的热身？</p>
+</div>
 </section>
-
 <!-- Card 2: 以问题开场 -->
 <section class="card">
-  <div class="num">Principle 02</div>
-  <h2>以问题开场：凿一个「非填不可」的缺口</h2>
-  <div class="en-name">Open with a Question — The Curiosity Gap</div>
-  <span class="tag">开头 · 悬念</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>好奇不是性格，是状态——它在你意识到「自己缺了一块」的瞬间被点燃（Loewenstein 的「信息缺口」理论）。好的开头不急着给答案，而是<strong>先精准地凿开一个缺口，让读者痒</strong>。</p>
-    <div class="quote">
+<div class="num">Principle 02</div>
+<h2 data-tts="1b288b7e6a71d83d">以问题开场：凿一个「非填不可」的缺口</h2>
+<div class="en-name">Open with a Question — The Curiosity Gap</div>
+<span class="tag">开头 · 悬念</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>好奇不是性格，是状态——它在你意识到「自己缺了一块」的瞬间被点燃（Loewenstein 的「信息缺口」理论）。好的开头不急着给答案，而是<strong>先精准地凿开一个缺口，让读者痒</strong>。</p>
+<div class="quote">
       "Curiosity happens when we feel a gap in our knowledge. Gaps cause pain. When we want to know something but don't, it's like having an itch that we need to scratch."
       <span class="source">— Chip &amp; Dan Heath, Made to Stick, "Unexpected"</span>
-    </div>
-    <p class="trans">中译：好奇发生在我们感到知识出现缺口时。缺口带来痛感。想知道却不知道，就像有个非挠不可的痒处。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>关键全在「缺口」的精准。「今天聊聊领导力」不制造缺口——太大太泛，读者不痒。「为什么最优秀的工程师，升到管理岗后反而带不好团队？」制造缺口——它点出一个你以为理所当然、细想却矛盾的事实。Heath 兄弟的洞见是：<strong>与其先想「我要传达什么信息」，不如先想「我要让读者产生什么问题」</strong>。缺口还必须建在读者已有的知识上——他得先「以为自己知道」，你才能让他发现「原来没想透」。</p>
-    <div class="gap-vis">
-      <div class="gap-row">
-        <div class="gbox known">已知<small>读者以为自己懂了</small></div>
-        <div class="gbox gap">缺口 = 痒<small>「咦，为什么？」</small></div>
-        <div class="gbox want">想知道<small>读下去找答案</small></div>
-      </div>
-      <div class="caption">缺口太大不痒，缺口不真不痒——精准凿在「自以为知道」与「其实没想透」之间</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">今天我想和大家分享我们团队在 AI 工具落地上的一些经验和思考。</span>
-      <span class="after">我们给全团队发了 Copilot 许可证。三个月后，用得最猛的那几个人，产出反而下降了。这件事颠覆了我对「效率工具」的理解——今天就讲讲为什么。</span>
-    </div>
-    <div class="example">
-      <span class="before">In this post I'll discuss the importance of writing good documentation.</span>
-      <span class="after">Your best engineer just quit. In her exit interview she never mentioned pay. She said: "I spent half my time reverse-engineering code no one bothered to explain." This is a post about docs — but really it's about why people leave.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ Newsletter、演讲、博客、Pitch、会议开场、教学</li>
-      <li>✗ 紧急通报、纯 spec——读者要的是答案，不是悬念</li>
-      <li>坑：缺口太大太泛（整个领域），读者不痒；或误判读者的已知，缺口根本不成立</li>
-      <li>坑：「标题党」凿了缺口却不兑现，被骗一次就不再信；或问完立刻自答，没留出「痒」的时间</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <div class="label">关键参考</div>
-    <p class="refs"><span>Chip &amp; Dan Heath</span>《Made to Stick》"Unexpected"（gap theory） · <span>George Loewenstein</span>"The Psychology of Curiosity"（1994，信息缺口理论原始论文）</p>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作</div>
-    <p>把你下一篇要写的东西的主旨，改写成一个「读者以为自己知道答案、其实没想透」的问题。测试方法：把这个问题发给三个同事，看有几个会回「咦，为什么？」——回得越多，缺口凿得越准。</p>
-    <p class="think">思考题：「标题党」和「好奇缺口」，边界到底在哪？</p>
-  </div>
+</div>
+<p class="trans">中译：好奇发生在我们感到知识出现缺口时。缺口带来痛感。想知道却不知道，就像有个非挠不可的痒处。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>关键全在「缺口」的精准。「今天聊聊领导力」不制造缺口——太大太泛，读者不痒。「为什么最优秀的工程师，升到管理岗后反而带不好团队？」制造缺口——它点出一个你以为理所当然、细想却矛盾的事实。Heath 兄弟的洞见是：<strong>与其先想「我要传达什么信息」，不如先想「我要让读者产生什么问题」</strong>。缺口还必须建在读者已有的知识上——他得先「以为自己知道」，你才能让他发现「原来没想透」。</p>
+<div class="gap-vis">
+<div class="gap-row">
+<div class="gbox known">已知<small>读者以为自己懂了</small></div>
+<div class="gbox gap">缺口 = 痒<small>「咦，为什么？」</small></div>
+<div class="gbox want">想知道<small>读下去找答案</small></div>
+</div>
+<div class="caption">缺口太大不痒，缺口不真不痒——精准凿在「自以为知道」与「其实没想透」之间</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">今天我想和大家分享我们团队在 AI 工具落地上的一些经验和思考。</span>
+<span class="after">我们给全团队发了 Copilot 许可证。三个月后，用得最猛的那几个人，产出反而下降了。这件事颠覆了我对「效率工具」的理解——今天就讲讲为什么。</span>
+</div>
+<div class="example">
+<span class="before">In this post I'll discuss the importance of writing good documentation.</span>
+<span class="after">Your best engineer just quit. In her exit interview she never mentioned pay. She said: "I spent half my time reverse-engineering code no one bothered to explain." This is a post about docs — but really it's about why people leave.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ Newsletter、演讲、博客、Pitch、会议开场、教学</li>
+<li>✗ 紧急通报、纯 spec——读者要的是答案，不是悬念</li>
+<li>坑：缺口太大太泛（整个领域），读者不痒；或误判读者的已知，缺口根本不成立</li>
+<li>坑：「标题党」凿了缺口却不兑现，被骗一次就不再信；或问完立刻自答，没留出「痒」的时间</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">关键参考</div>
+<p class="refs"><span>Chip &amp; Dan Heath</span>《Made to Stick》"Unexpected"（gap theory） · <span>George Loewenstein</span>"The Psychology of Curiosity"（1994，信息缺口理论原始论文）</p>
+</div>
+<div class="exercise">
+<div class="label">本周习作</div>
+<p>把你下一篇要写的东西的主旨，改写成一个「读者以为自己知道答案、其实没想透」的问题。测试方法：把这个问题发给三个同事，看有几个会回「咦，为什么？」——回得越多，缺口凿得越准。</p>
+<p class="think">思考题：「标题党」和「好奇缺口」，边界到底在哪？</p>
+</div>
 </section>
-
 <!-- Card 3: Hook 原理 -->
 <section class="card">
-  <div class="num">Principle 03</div>
-  <h2>Hook 原理：第一句话只有一个任务</h2>
-  <div class="en-name">The Hook — The First Sentence's Only Job</div>
-  <span class="tag">开头 · 机制</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>第一句话的唯一任务，是让人读第二句；第二句的唯一任务，是让第三句。<strong>开头不必「概括全文」，它要「产生动力」</strong>。Zinsser 说得最狠：勾不住，文章就死了。</p>
-    <div class="quote">
+<div class="num">Principle 03</div>
+<h2 data-tts="eeae77b5b894349b">Hook 原理：第一句话只有一个任务</h2>
+<div class="en-name">The Hook — The First Sentence's Only Job</div>
+<span class="tag">开头 · 机制</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>第一句话的唯一任务，是让人读第二句；第二句的唯一任务，是让第三句。<strong>开头不必「概括全文」，它要「产生动力」</strong>。Zinsser 说得最狠：勾不住，文章就死了。</p>
+<div class="quote">
       "The most important sentence in any article is the first one. If it doesn't induce the reader to proceed to the second sentence, your article is dead."
       <span class="source">— William Zinsser, On Writing Well, "The Lead and the Ending"</span>
-    </div>
-    <p class="trans">中译：任何文章最重要的一句，是第一句。如果它不能诱使读者读到第二句，你的文章就死了。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>注意 Zinsser 的用词是<strong>「诱使」（induce），不是「概括」</strong>。很多人把开头当摘要——「本文将探讨……」，正是把第一句的动力卸了。Stephen King 花几个月打磨开头，他说好开头是在对读者说：「听着。进来。你会想知道这件事的。」它是邀请，不是目录。还有一种更狠的检验来自记者训练：Nora Ephron 的中学老师让全班写一则导语——校长宣布周四全体教师去开会。学生们都在罗列细节，老师说，导语只有一句：「<strong>周四不上课。</strong>」——读者真正关心的那一点，就是钩子。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">本文将从背景、现状、问题、对策四个方面，系统阐述我们的数据治理方案。</span>
-      <span class="after">我们有 47 个「唯一可信数据源」，其中 9 个互相矛盾。这就是上周两份报表对不上的原因。</span>
-    </div>
-    <div class="example">
-      <span class="before">This essay explores the relationship between writing and thinking.</span>
-      <span class="after">You don't write to record a thought. You write to find out whether you have one.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 文章首句、邮件主题行与首句、演讲第一句、PR 描述、晋升 packet 摘要</li>
-      <li>坑：把第一句写成目录（「本文分为三部分」）；或清嗓子（「随着 AI 的快速发展……」）——万能开头 = 没有开头</li>
-      <li>坑：钩子与正文脱节，钩得猛接不住；或过度承诺，正文配不上开头吊起的胃口</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <div class="label">关键参考</div>
-    <p class="refs"><span>William Zinsser</span>《On Writing Well》"The Lead and the Ending" · <span>Stephen King</span>"Why I Spend Months on Opening Sentences"（The Atlantic, 2013） · <span>Nora Ephron</span>「周四不上课」导语课的回忆</p>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作</div>
-    <p>找你写过的三段开头，圈出第一句。逐句问：它在「概括」还是在「诱使」？把「概括型」改成「诱使型」——删掉「本文将」，换成一个具体事实、一个反常、或一个未答的问题。</p>
-    <p class="think">思考题：邮件主题行本质就是一句 Hook——你上一封邮件的主题行，会让你自己想点开吗？</p>
-  </div>
+</div>
+<p class="trans">中译：任何文章最重要的一句，是第一句。如果它不能诱使读者读到第二句，你的文章就死了。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>注意 Zinsser 的用词是<strong>「诱使」（induce），不是「概括」</strong>。很多人把开头当摘要——「本文将探讨……」，正是把第一句的动力卸了。Stephen King 花几个月打磨开头，他说好开头是在对读者说：「听着。进来。你会想知道这件事的。」它是邀请，不是目录。还有一种更狠的检验来自记者训练：Nora Ephron 的中学老师让全班写一则导语——校长宣布周四全体教师去开会。学生们都在罗列细节，老师说，导语只有一句：「<strong>周四不上课。</strong>」——读者真正关心的那一点，就是钩子。</p>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">本文将从背景、现状、问题、对策四个方面，系统阐述我们的数据治理方案。</span>
+<span class="after">我们有 47 个「唯一可信数据源」，其中 9 个互相矛盾。这就是上周两份报表对不上的原因。</span>
+</div>
+<div class="example">
+<span class="before">This essay explores the relationship between writing and thinking.</span>
+<span class="after">You don't write to record a thought. You write to find out whether you have one.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 文章首句、邮件主题行与首句、演讲第一句、PR 描述、晋升 packet 摘要</li>
+<li>坑：把第一句写成目录（「本文分为三部分」）；或清嗓子（「随着 AI 的快速发展……」）——万能开头 = 没有开头</li>
+<li>坑：钩子与正文脱节，钩得猛接不住；或过度承诺，正文配不上开头吊起的胃口</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">关键参考</div>
+<p class="refs"><span>William Zinsser</span>《On Writing Well》"The Lead and the Ending" · <span>Stephen King</span>"Why I Spend Months on Opening Sentences"（The Atlantic, 2013） · <span>Nora Ephron</span>「周四不上课」导语课的回忆</p>
+</div>
+<div class="exercise">
+<div class="label">本周习作</div>
+<p>找你写过的三段开头，圈出第一句。逐句问：它在「概括」还是在「诱使」？把「概括型」改成「诱使型」——删掉「本文将」，换成一个具体事实、一个反常、或一个未答的问题。</p>
+<p class="think">思考题：邮件主题行本质就是一句 Hook——你上一封邮件的主题行，会让你自己想点开吗？</p>
+</div>
 </section>
-
 <!-- Card 4: 闭环式结尾 -->
 <section class="card">
-  <div class="num">Principle 04</div>
-  <h2>闭环式结尾：回到开头，但读者已经变了</h2>
-  <div class="en-name">The Full-Circle Ending — Land Where You Took Off</div>
-  <span class="tag">结尾 · 收束</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>最好的结尾，常常是回到开头那个画面、那句话、那个问题——但因为中间走过的路，<strong>同样的东西此刻有了新意义</strong>。它给读者「完成感」，像一首歌回到主和弦。</p>
-    <div class="quote">
+<div class="num">Principle 04</div>
+<h2 data-tts="bb3b7c6232b93052">闭环式结尾：回到开头，但读者已经变了</h2>
+<div class="en-name">The Full-Circle Ending — Land Where You Took Off</div>
+<span class="tag">结尾 · 收束</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>最好的结尾，常常是回到开头那个画面、那句话、那个问题——但因为中间走过的路，<strong>同样的东西此刻有了新意义</strong>。它给读者「完成感」，像一首歌回到主和弦。</p>
+<div class="quote">
       "The perfect ending should take your readers slightly by surprise and yet seem exactly right."
       <span class="source">— William Zinsser, On Writing Well, "The Lead and the Ending"</span>
-    </div>
-    <p class="trans">中译：完美的结尾应当让读者略感意外，却又觉得恰如其分。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>闭环有力，是因为它同时利用了记忆的「首因」与「近因」——开头埋下的画面停在读者脑中，结尾把它唤回，中间的内容就被这道弧线「收」住。McPhee 说，一篇文章要「start somewhere, go somewhere, and sit down when it gets there」——结尾不是停下，是「落座」。开头那个凌晨三点重启服务器的工程师，结尾可以是「现在，凌晨三点没人需要醒着——系统自己处理了」：同一场景，意义翻转。但注意 Zinsser 的「意外又恰当」：<strong>纯粹重复开头是廉价的</strong>，要让读者发现「同样的画面，我已经不是刚才那个我了」。</p>
-    <div class="loop-vis">
-      <div class="loop-row">
-        <div class="node start"><small>开头</small>凌晨三点，工程师第七次手动重启服务器</div>
-        <div class="arrow">→</div>
-        <div class="mid">（全文：诊断 · 论证 · 三个改动）</div>
-        <div class="arrow">→</div>
-        <div class="node end"><small>结尾</small>凌晨三点，没人需要醒着——系统自己处理了</div>
-      </div>
-      <div class="return">↩ 同一个画面，意义已翻转：读者完成了一道弧线</div>
-      <div class="caption">闭环 = 回到起点 + 增量意义（不是原样复读）</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">综上所述，通过以上措施，我们有信心在下个季度显著改善部署可靠性。谢谢大家。</span>
-      <span class="after">还记得开头那 19 分钟吗？做完这三件事，下一次同样的配置改动，会在 19 秒内被自动拦下。这就是我们要去的地方。</span>
-    </div>
-    <div class="example">
-      <span class="before">In conclusion, documentation is very important and we should all write more of it.</span>
-      <span class="after">Remember the engineer who quit? The next one won't have to reverse-engineer anything. That's the whole point of writing it down.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 演讲、长文、Memo、Pitch、复盘、个人随笔</li>
-      <li>坑：「综上所述/总而言之」公文式收尾，泄气；或在最高点之后又补一堆，冲淡落点（讲完就坐下）</li>
-      <li>坑：结尾引入全新信息——这里不是开新话题的地方；或纯重复开头、零增量，读者觉得被绕一圈</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <div class="label">关键参考</div>
-    <p class="refs"><span>William Zinsser</span>《On Writing Well》"The Lead and the Ending" · <span>John McPhee</span>《Draft No. 4》（"sit down when it gets there"；论结尾与开头的呼应）</p>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作</div>
-    <p>翻出你一篇有「开头画面/问题」的旧文。重写结尾，让它回到那个画面或问题——但带上全文走过之后的新意义。读两遍：第一遍看是否「意外」，第二遍看是否「恰当」。</p>
-    <p class="think">思考题：哪些文体适合闭环结尾，哪些更适合「戛然而止」或「行动号召」？</p>
-  </div>
+</div>
+<p class="trans">中译：完美的结尾应当让读者略感意外，却又觉得恰如其分。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>闭环有力，是因为它同时利用了记忆的「首因」与「近因」——开头埋下的画面停在读者脑中，结尾把它唤回，中间的内容就被这道弧线「收」住。McPhee 说，一篇文章要「start somewhere, go somewhere, and sit down when it gets there」——结尾不是停下，是「落座」。开头那个凌晨三点重启服务器的工程师，结尾可以是「现在，凌晨三点没人需要醒着——系统自己处理了」：同一场景，意义翻转。但注意 Zinsser 的「意外又恰当」：<strong>纯粹重复开头是廉价的</strong>，要让读者发现「同样的画面，我已经不是刚才那个我了」。</p>
+<div class="loop-vis">
+<div class="loop-row">
+<div class="node start"><small>开头</small>凌晨三点，工程师第七次手动重启服务器</div>
+<div class="arrow">→</div>
+<div class="mid">（全文：诊断 · 论证 · 三个改动）</div>
+<div class="arrow">→</div>
+<div class="node end"><small>结尾</small>凌晨三点，没人需要醒着——系统自己处理了</div>
+</div>
+<div class="return">↩ 同一个画面，意义已翻转：读者完成了一道弧线</div>
+<div class="caption">闭环 = 回到起点 + 增量意义（不是原样复读）</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">综上所述，通过以上措施，我们有信心在下个季度显著改善部署可靠性。谢谢大家。</span>
+<span class="after">还记得开头那 19 分钟吗？做完这三件事，下一次同样的配置改动，会在 19 秒内被自动拦下。这就是我们要去的地方。</span>
+</div>
+<div class="example">
+<span class="before">In conclusion, documentation is very important and we should all write more of it.</span>
+<span class="after">Remember the engineer who quit? The next one won't have to reverse-engineer anything. That's the whole point of writing it down.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 演讲、长文、Memo、Pitch、复盘、个人随笔</li>
+<li>坑：「综上所述/总而言之」公文式收尾，泄气；或在最高点之后又补一堆，冲淡落点（讲完就坐下）</li>
+<li>坑：结尾引入全新信息——这里不是开新话题的地方；或纯重复开头、零增量，读者觉得被绕一圈</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">关键参考</div>
+<p class="refs"><span>William Zinsser</span>《On Writing Well》"The Lead and the Ending" · <span>John McPhee</span>《Draft No. 4》（"sit down when it gets there"；论结尾与开头的呼应）</p>
+</div>
+<div class="exercise">
+<div class="label">本周习作</div>
+<p>翻出你一篇有「开头画面/问题」的旧文。重写结尾，让它回到那个画面或问题——但带上全文走过之后的新意义。读两遍：第一遍看是否「意外」，第二遍看是否「恰当」。</p>
+<p class="think">思考题：哪些文体适合闭环结尾，哪些更适合「戛然而止」或「行动号召」？</p>
+</div>
 </section>
-
 <!-- 深入思考 -->
 <div class="deep">
-  <h2>深入思考</h2>
-  <div class="sub">推原则的边界、中英文差异、不同形态的适配</div>
-
-  <details>
-    <summary>开头与结尾，哪个更难写？为什么很多人能起好头却收不住尾？</summary>
-    <div class="ans">开头难在「无中生有」，结尾难在「有中收束」——多数人被一个画面点燃，写到结尾却已耗尽能量，用「综上所述」草草泄气。实用招：写完初稿后把结尾和开头并排放，问它们能不能「对话」。开头抛过的问题、画过的画面，结尾都有现成的回声可用——闭环法把「想结尾」变成「呼应开头」，难度减半。</div>
-  </details>
-
-  <details>
-    <summary>中英文的开头习惯差异：「起承转合」的铺垫 vs 倒金字塔的结论先行，该往哪边靠？</summary>
-    <div class="ans">中文传统重「起承转合」，爱先铺垫后入题；英文新闻与商业写作是「倒金字塔」，结论先行。职场场景几乎一边倒偏向后者——读者是没耐心的同事和上级。但要分清「铺垫」和「场景」：删掉的是抽象铺垫（背景定义），保留的是具体场景（一个画面也能瞬间入题）。场景开场，正是两种传统的交集。</div>
-  </details>
-
-  <details>
-    <summary>文、讲、视频三种形态，Hook 的「时间窗」各有多长？机制相同吗？</summary>
-    <div class="ans">长文的窗口是第一句（约 3 秒扫读）；演讲是前 30 秒；短视频残酷到前 3 秒（滑走只需一个拇指）。机制同源——都是「制造继续下去的动力」——但杠杆不同：文字靠一个反常事实或精准问题，演讲可加停顿、眼神、道具，视频靠画面冲突与节奏。越短的形态，越要把缺口前置，连「清嗓子」的余地都没有。</div>
-  </details>
-
-  <details>
-    <summary>AI 写的开头为什么常是「随着……的发展」？怎么训练它（和自己）跳过热身？</summary>
-    <div class="ans">因为这类开头统计上最安全——海量文本里它频率最高，模型默认回归均值。破法有二：一是明确指令「禁止任何背景铺垫，第一句必须是具体场景或未答的问题」；二是把它的初稿当「热身稿」，直接砍掉前两段，从第三段读起。对自己也一样——承认前两段是写给自己的，删起来才不心疼。</div>
-  </details>
-
-  <details>
-    <summary>「意外又恰当」是个矛盾要求——意外靠什么？恰当又靠什么？两者如何兼得？</summary>
-    <div class="ans">意外靠「角度」——结尾不复述旧话，而把读者带到一个略高的位置回看；恰当靠「伏笔」——这角度必须早在开头或中途埋过线索，读者一读就「啊，原来如此」。闭环法天然兼得：回到开头的画面是「恰当」（线索早埋好），画面意义的翻转是「意外」（同样的东西有了新解）。好结尾不是凭空蹦出的金句，是开头种下、全文浇灌、最后结出的果。</div>
-  </details>
+<h2 data-tts="32520b3553c2ff98">深入思考</h2>
+<div class="sub">推原则的边界、中英文差异、不同形态的适配</div>
+<details>
+<summary>开头与结尾，哪个更难写？为什么很多人能起好头却收不住尾？</summary>
+<div class="ans">开头难在「无中生有」，结尾难在「有中收束」——多数人被一个画面点燃，写到结尾却已耗尽能量，用「综上所述」草草泄气。实用招：写完初稿后把结尾和开头并排放，问它们能不能「对话」。开头抛过的问题、画过的画面，结尾都有现成的回声可用——闭环法把「想结尾」变成「呼应开头」，难度减半。</div>
+</details>
+<details>
+<summary>中英文的开头习惯差异：「起承转合」的铺垫 vs 倒金字塔的结论先行，该往哪边靠？</summary>
+<div class="ans">中文传统重「起承转合」，爱先铺垫后入题；英文新闻与商业写作是「倒金字塔」，结论先行。职场场景几乎一边倒偏向后者——读者是没耐心的同事和上级。但要分清「铺垫」和「场景」：删掉的是抽象铺垫（背景定义），保留的是具体场景（一个画面也能瞬间入题）。场景开场，正是两种传统的交集。</div>
+</details>
+<details>
+<summary>文、讲、视频三种形态，Hook 的「时间窗」各有多长？机制相同吗？</summary>
+<div class="ans">长文的窗口是第一句（约 3 秒扫读）；演讲是前 30 秒；短视频残酷到前 3 秒（滑走只需一个拇指）。机制同源——都是「制造继续下去的动力」——但杠杆不同：文字靠一个反常事实或精准问题，演讲可加停顿、眼神、道具，视频靠画面冲突与节奏。越短的形态，越要把缺口前置，连「清嗓子」的余地都没有。</div>
+</details>
+<details>
+<summary>AI 写的开头为什么常是「随着……的发展」？怎么训练它（和自己）跳过热身？</summary>
+<div class="ans">因为这类开头统计上最安全——海量文本里它频率最高，模型默认回归均值。破法有二：一是明确指令「禁止任何背景铺垫，第一句必须是具体场景或未答的问题」；二是把它的初稿当「热身稿」，直接砍掉前两段，从第三段读起。对自己也一样——承认前两段是写给自己的，删起来才不心疼。</div>
+</details>
+<details>
+<summary>「意外又恰当」是个矛盾要求——意外靠什么？恰当又靠什么？两者如何兼得？</summary>
+<div class="ans">意外靠「角度」——结尾不复述旧话，而把读者带到一个略高的位置回看；恰当靠「伏笔」——这角度必须早在开头或中途埋过线索，读者一读就「啊，原来如此」。闭环法天然兼得：回到开头的画面是「恰当」（线索早埋好），画面意义的翻转是「意外」（同样的东西有了新解）。好结尾不是凭空蹦出的金句，是开头种下、全文浇灌、最后结出的果。</div>
+</details>
 </div>
-
 <div class="nav">
-  <a href="index.html">← 返回目录</a>
+<a href="index.html">← 返回目录</a>
 </div>
 <footer>BigCat · Writing · Day 17 · 2026</footer>
-
 </div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
+<script defer="" src="https://cissy0802.github.io/comments.js"></script>
+<script defer="" src="https://cissy0802.github.io/search.js"></script>
+<script defer="" src="https://cissy0802.github.io/index-button.js"></script>
+<script defer="" src="https://cissy0802.github.io/i18n-tts.js"></script>
 </body>
 </html>

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>写作与表达：名家示范·Paul Graham — Day 22</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -66,257 +67,227 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 </head>
 <body>
 <div class="container">
-
 <header>
-  <div class="week-label">Day 22 · 2026.06.09</div>
-  <h1>写作与表达：名家示范·Paul Graham<span class="topic">有用的写作 · essay 即思考 · 越短越好 · 像对朋友说话</span></h1>
-  <div class="date">BigCat's Writing</div>
-  <p class="intro">Paul Graham 是 Lisp 黑客、Y Combinator 创始人，但更多人因他的 essay 认识他。他写的不是文采，是思考——把随笔变成一台「想清楚」的机器。今天学他四件事：怎样写出有用的文章、为什么写作就是思考、为什么越短越好、以及怎样像对朋友说话那样写。</p>
+<div class="week-label">Day 22 · 2026.06.09</div>
+<h1 data-tts="22e002622bb1fcb8">写作与表达：名家示范·Paul Graham<span class="topic">有用的写作 · essay 即思考 · 越短越好 · 像对朋友说话</span></h1>
+<div class="date">BigCat's Writing</div>
+<p class="intro">Paul Graham 是 Lisp 黑客、Y Combinator 创始人，但更多人因他的 essay 认识他。他写的不是文采，是思考——把随笔变成一台「想清楚」的机器。今天学他四件事：怎样写出有用的文章、为什么写作就是思考、为什么越短越好、以及怎样像对朋友说话那样写。</p>
 </header>
-
 <!-- Card 1: 有用的写作 -->
 <section class="card">
-  <div class="num">Principle 01</div>
-  <h2>有用的写作：真、重要、说得斩钉截铁</h2>
-  <div class="en-name">How to Write Usefully</div>
-  <span class="tag">Paul Graham · 有用 · 框架</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>PG 不问「写得好不好」，他问「有没有用」。有用的文章只做一件事：告诉读者一件<strong>真的、重要的、他原本不知道的事</strong>，并尽可能说得不含糊。</p>
-    <div class="quote">
+<div class="num">Principle 01</div>
+<h2 data-tts="6b6841b81c4092ad">有用的写作：真、重要、说得斩钉截铁</h2>
+<div class="en-name">How to Write Usefully</div>
+<span class="tag">Paul Graham · 有用 · 框架</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>PG 不问「写得好不好」，他问「有没有用」。有用的文章只做一件事：告诉读者一件<strong>真的、重要的、他原本不知道的事</strong>，并尽可能说得不含糊。</p>
+<div class="quote">
       "Useful writing tells people something true and important that they didn't already know, and tells them as unequivocally as possible."
       <span class="source">— Paul Graham《How to Write Usefully》(2020)</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>PG 把「有用」拆成四个可以分别打磨的零件：重要、新颖、正确、有力。前两个决定值不值得读，后两个决定能不能信。最反直觉的是「有力」——他主张<strong>把主张说到尽可能强，强到再强一点就会变成假的为止</strong>。多数人写作时本能地往句子里塞「可能」「在某种程度上」「我觉得」这类缓冲垫，以为稳妥；其实那只是在稀释信息、回避担责。有用的写作要的是精确，而非模糊带来的安全——把话说到边界，但不越过真假那条线。</p>
-    <div class="formula">
-      <div class="eq">
-        <span class="term">重要</span><span class="op">×</span><span class="term">新颖</span><span class="op">×</span><span class="term">正确</span><span class="op">×</span><span class="term">有力</span>
-      </div>
-      <div class="caption">四者相乘——任一项为零，整篇归零；想更有用，就把最弱那项做强</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">It could perhaps be argued that, in certain contexts, microservices may sometimes offer some advantages.</span>
-      <span class="after">Microservices help when your teams ship faster apart than together. Otherwise they cost more than they're worth.</span>
-      <span class="note">前者全是缓冲垫，读完不知道你到底主张什么；后者给出一个可被反驳的强主张——这才有用。</span>
-    </div>
-    <div class="example">
-      <span class="before">关于是否采用该方案，需结合多方因素综合考量，不宜一概而论。</span>
-      <span class="after">这个方案值得做；唯一的风险是迁移期的双写，我们用灰度发布扛住。</span>
-      <span class="note">「综合考量」是把判断又推回给读者；强主张是把判断扛在自己肩上。</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 决策备忘、技术选型、复盘结论、对外观点——任何读者指望你给出判断的地方</li>
-      <li>✓ 写完自检：我最强的主张是哪句？能不能再强一点而不撒谎？</li>
-      <li>✗ 误区：用「可能／也许／在某种程度上」当免责声明，把模糊误当严谨</li>
-      <li>✗ 误区：只追求「正确」——说了等于没说的废话也正确，却忘了重要与新颖</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>找一段你最近写的结论，圈出所有「可能／或许／某种程度上」，逐个删掉或换成可被反驳的强主张，看信息量怎么变。<strong>思考题</strong>：「把话说到强而不假的边界」与「为自己留退路」，在职场里如何平衡？</p>
-  </div>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>PG 把「有用」拆成四个可以分别打磨的零件：重要、新颖、正确、有力。前两个决定值不值得读，后两个决定能不能信。最反直觉的是「有力」——他主张<strong>把主张说到尽可能强，强到再强一点就会变成假的为止</strong>。多数人写作时本能地往句子里塞「可能」「在某种程度上」「我觉得」这类缓冲垫，以为稳妥；其实那只是在稀释信息、回避担责。有用的写作要的是精确，而非模糊带来的安全——把话说到边界，但不越过真假那条线。</p>
+<div class="formula">
+<div class="eq">
+<span class="term">重要</span><span class="op">×</span><span class="term">新颖</span><span class="op">×</span><span class="term">正确</span><span class="op">×</span><span class="term">有力</span>
+</div>
+<div class="caption">四者相乘——任一项为零，整篇归零；想更有用，就把最弱那项做强</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">It could perhaps be argued that, in certain contexts, microservices may sometimes offer some advantages.</span>
+<span class="after">Microservices help when your teams ship faster apart than together. Otherwise they cost more than they're worth.</span>
+<span class="note">前者全是缓冲垫，读完不知道你到底主张什么；后者给出一个可被反驳的强主张——这才有用。</span>
+</div>
+<div class="example">
+<span class="before">关于是否采用该方案，需结合多方因素综合考量，不宜一概而论。</span>
+<span class="after">这个方案值得做；唯一的风险是迁移期的双写，我们用灰度发布扛住。</span>
+<span class="note">「综合考量」是把判断又推回给读者；强主张是把判断扛在自己肩上。</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 决策备忘、技术选型、复盘结论、对外观点——任何读者指望你给出判断的地方</li>
+<li>✓ 写完自检：我最强的主张是哪句？能不能再强一点而不撒谎？</li>
+<li>✗ 误区：用「可能／也许／在某种程度上」当免责声明，把模糊误当严谨</li>
+<li>✗ 误区：只追求「正确」——说了等于没说的废话也正确，却忘了重要与新颖</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>找一段你最近写的结论，圈出所有「可能／或许／某种程度上」，逐个删掉或换成可被反驳的强主张，看信息量怎么变。<strong>思考题</strong>：「把话说到强而不假的边界」与「为自己留退路」，在职场里如何平衡？</p>
+</div>
 </section>
-
 <!-- Card 2: essay 即思考 -->
 <section class="card">
-  <div class="num">Principle 02</div>
-  <h2>essay 即思考：写作是想清楚的工具</h2>
-  <div class="en-name">The Essay as Thinking</div>
-  <span class="tag">Paul Graham · 思考 · essay</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>essay 一词源于法语 essayer——「尝试」。PG 说，essay 不是把想好的结论抄下来，而是<strong>在写的过程里把它想出来</strong>。</p>
-    <div class="quote">
+<div class="num">Principle 02</div>
+<h2 data-tts="4285621d7c3df68d">essay 即思考：写作是想清楚的工具</h2>
+<div class="en-name">The Essay as Thinking</div>
+<span class="tag">Paul Graham · 思考 · essay</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>essay 一词源于法语 essayer——「尝试」。PG 说，essay 不是把想好的结论抄下来，而是<strong>在写的过程里把它想出来</strong>。</p>
+<div class="quote">
       "Writing about something, even something you know well, usually shows you that you didn't know it as well as you thought."
       <span class="source">— Paul Graham《Putting Ideas into Words》(2022)</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>这条颠覆了多数人的常识——「先想清楚，再下笔」。PG 的经验恰恰相反：你以为懂了，一动笔才发现满是漏洞。脑子里的想法可以含糊地共存、互相矛盾而不被察觉；可一旦逼成线性的句子，每个跳跃、每个没想通的环节都暴露出来。所以写作是一台<strong>思考的测谎仪</strong>：它不奖励文采，奖励你诚实地把一件事想到底。对技术人和 leader 尤其值钱——写设计文档、写决策备忘真正的收益，往往不是文档本身，而是写的过程逼你发现了那个原本会忽略的边界条件。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">这个缓存方案应该没问题，大概能扛住。</span>
-      <span class="after">这个缓存在写多读少时会脏读，除非加版本号——我是写文档时才想到的。</span>
-      <span class="note">句子没变漂亮，是想法变深了。写作真正的产出，是它逼你想清的那一部分。</span>
-    </div>
-    <div class="example">
-      <span class="before">I basically understand how OAuth refresh works.</span>
-      <span class="after">Writing the doc, I couldn't explain token rotation — which proved I didn't actually understand it.</span>
-      <span class="note">「大致懂」经不起写作的考验；写不出来，就是没真懂。</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 任何你「自以为想清楚了」的复杂问题：架构决策、战略、复盘——先写一版逼自己暴露漏洞</li>
-      <li>✓ 把写作当思考工具，而非汇报负担：初稿是写给自己想的，不是给别人看的</li>
-      <li>✗ 误区：迟迟不动笔，等「完全想清楚」——那一刻永不会到来，是写让它到来</li>
-      <li>✗ 误区：让 AI 替你把草稿写顺——顺的是文字，你却跳过了那场最值钱的思考</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>挑一个你「觉得已经懂」的技术或决策，不查资料，逼自己写 300 字解释给外行听。记下卡住的地方——那就是你其实没懂的地方。<strong>思考题</strong>：如果 AI 能替你写出流畅的解释，你会失去什么？</p>
-  </div>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>这条颠覆了多数人的常识——「先想清楚，再下笔」。PG 的经验恰恰相反：你以为懂了，一动笔才发现满是漏洞。脑子里的想法可以含糊地共存、互相矛盾而不被察觉；可一旦逼成线性的句子，每个跳跃、每个没想通的环节都暴露出来。所以写作是一台<strong>思考的测谎仪</strong>：它不奖励文采，奖励你诚实地把一件事想到底。对技术人和 leader 尤其值钱——写设计文档、写决策备忘真正的收益，往往不是文档本身，而是写的过程逼你发现了那个原本会忽略的边界条件。</p>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">这个缓存方案应该没问题，大概能扛住。</span>
+<span class="after">这个缓存在写多读少时会脏读，除非加版本号——我是写文档时才想到的。</span>
+<span class="note">句子没变漂亮，是想法变深了。写作真正的产出，是它逼你想清的那一部分。</span>
+</div>
+<div class="example">
+<span class="before">I basically understand how OAuth refresh works.</span>
+<span class="after">Writing the doc, I couldn't explain token rotation — which proved I didn't actually understand it.</span>
+<span class="note">「大致懂」经不起写作的考验；写不出来，就是没真懂。</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 任何你「自以为想清楚了」的复杂问题：架构决策、战略、复盘——先写一版逼自己暴露漏洞</li>
+<li>✓ 把写作当思考工具，而非汇报负担：初稿是写给自己想的，不是给别人看的</li>
+<li>✗ 误区：迟迟不动笔，等「完全想清楚」——那一刻永不会到来，是写让它到来</li>
+<li>✗ 误区：让 AI 替你把草稿写顺——顺的是文字，你却跳过了那场最值钱的思考</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>挑一个你「觉得已经懂」的技术或决策，不查资料，逼自己写 300 字解释给外行听。记下卡住的地方——那就是你其实没懂的地方。<strong>思考题</strong>：如果 AI 能替你写出流畅的解释，你会失去什么？</p>
+</div>
 </section>
-
 <!-- Card 3: 越短越好 -->
 <section class="card">
-  <div class="num">Principle 03</div>
-  <h2>越短越好：普通词、简单句、删到不能再删</h2>
-  <div class="en-name">Write Simply</div>
-  <span class="tag">Paul Graham · 简洁 · 删减</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>PG 刻意用最普通的词、最简单的句子写作。不是词汇贫乏，而是因为<strong>读者花在解码句子上的力气，本该留给你的思想</strong>。</p>
-    <div class="quote">
+<div class="num">Principle 03</div>
+<h2 data-tts="206b87bb6cbdca44">越短越好：普通词、简单句、删到不能再删</h2>
+<div class="en-name">Write Simply</div>
+<span class="tag">Paul Graham · 简洁 · 删减</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>PG 刻意用最普通的词、最简单的句子写作。不是词汇贫乏，而是因为<strong>读者花在解码句子上的力气，本该留给你的思想</strong>。</p>
+<div class="quote">
       "The less energy readers expend on your prose, the more they'll have left for your ideas."
       <span class="source">— Paul Graham《Write Simply》(2021)</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>复杂的句子和大词常被当成聪明的标志，PG 说那恰恰是写作者偷懒、或想唬人的信号。他的逻辑是经济学的：读者的注意力是有限预算，每个生僻词、每个绕弯的从句都在<strong>征税</strong>；税收得越多，留给你真正想传递的 idea 就越少。这和奥威尔「能删就删」同源，而 PG 又在《Writing, Briefly》里把整套写作浓缩成一句近乎全部的建议——<strong>删掉一切不必要的</strong>。短不是目的，短是把读者的认知预算还给思想的手段。但注意：简单 ≠ 简陋。复杂的思想完全能用简单的句子承载，难的是写作者愿不愿意替读者把复杂先消化掉。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">We endeavored to ascertain whether the implementation would be efficacious prior to its deployment.</span>
-      <span class="after">We tested it before shipping.</span>
-      <span class="note">大词（endeavored / ascertain / efficacious）每个都在向读者征税；换成普通词，意思一点没少。</span>
-    </div>
-    <div class="example">
-      <span class="before">就上述事宜，建议予以审慎评估后再行决策。</span>
-      <span class="after">这事先评估，再定。</span>
-      <span class="note">中文的大词是文绉绉的套话；删到只剩骨头，反而更有力。</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 一切以「被理解」为目的的写作；尤其面向跨团队、跨背景读者时</li>
-      <li>✓ 终稿前做一遍「征税审计」：每个大词、每个长从句，问它值不值这笔税</li>
-      <li>✗ 误区：用大词长句营造专业感——多数读者只感到费劲，不感到佩服</li>
-      <li>✗ 误区：把「简单」误当「简陋」，于是不敢简化复杂思想——其实那才是真功夫</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>拿一段你写过的「显得专业」的文字，把每个大词换成口语里会用的普通词，统计句子缩短了多少、意思丢了没有。<strong>思考题</strong>：在你的行业，「写得简单」会不会被误读成「想得简单」？怎么破？</p>
-  </div>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>复杂的句子和大词常被当成聪明的标志，PG 说那恰恰是写作者偷懒、或想唬人的信号。他的逻辑是经济学的：读者的注意力是有限预算，每个生僻词、每个绕弯的从句都在<strong>征税</strong>；税收得越多，留给你真正想传递的 idea 就越少。这和奥威尔「能删就删」同源，而 PG 又在《Writing, Briefly》里把整套写作浓缩成一句近乎全部的建议——<strong>删掉一切不必要的</strong>。短不是目的，短是把读者的认知预算还给思想的手段。但注意：简单 ≠ 简陋。复杂的思想完全能用简单的句子承载，难的是写作者愿不愿意替读者把复杂先消化掉。</p>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">We endeavored to ascertain whether the implementation would be efficacious prior to its deployment.</span>
+<span class="after">We tested it before shipping.</span>
+<span class="note">大词（endeavored / ascertain / efficacious）每个都在向读者征税；换成普通词，意思一点没少。</span>
+</div>
+<div class="example">
+<span class="before">就上述事宜，建议予以审慎评估后再行决策。</span>
+<span class="after">这事先评估，再定。</span>
+<span class="note">中文的大词是文绉绉的套话；删到只剩骨头，反而更有力。</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 一切以「被理解」为目的的写作；尤其面向跨团队、跨背景读者时</li>
+<li>✓ 终稿前做一遍「征税审计」：每个大词、每个长从句，问它值不值这笔税</li>
+<li>✗ 误区：用大词长句营造专业感——多数读者只感到费劲，不感到佩服</li>
+<li>✗ 误区：把「简单」误当「简陋」，于是不敢简化复杂思想——其实那才是真功夫</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>拿一段你写过的「显得专业」的文字，把每个大词换成口语里会用的普通词，统计句子缩短了多少、意思丢了没有。<strong>思考题</strong>：在你的行业，「写得简单」会不会被误读成「想得简单」？怎么破？</p>
+</div>
 </section>
-
 <!-- Card 4: 像对朋友说话 -->
 <section class="card">
-  <div class="num">Principle 04</div>
-  <h2>像对朋友说话：口语是思想的运动装</h2>
-  <div class="en-name">Write Like You Talk</div>
-  <span class="tag">Paul Graham · 亲近 · 声音</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>PG 写文章像在跟一个聪明的朋友聊天——不端着、不掉书袋。他有一句精到的比喻：<strong>口语，是思想的运动装</strong>。</p>
-    <div class="quote">
+<div class="num">Principle 04</div>
+<h2 data-tts="40c0058c71c945f9">像对朋友说话：口语是思想的运动装</h2>
+<div class="en-name">Write Like You Talk</div>
+<span class="tag">Paul Graham · 亲近 · 声音</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>PG 写文章像在跟一个聪明的朋友聊天——不端着、不掉书袋。他有一句精到的比喻：<strong>口语，是思想的运动装</strong>。</p>
+<div class="quote">
       "Informal language is the athletic clothing of ideas."
       <span class="source">— Paul Graham《Write Like You Talk》(2015)</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>正式书面语像西装——挺括、得体，却束缚动作。PG 说，思想要跑起来、要试探、要灵活转身，得换上运动装：口语。他给了一个极实用的检验法——<strong>写完一段，想象你正读给一个朋友听，凡是你嘴里绝不会这么说的句子，统统改掉</strong>。这不是降低标准，而是用「会不会这么对朋友说」当真诚的探测器：书面腔最容易藏含糊和虚张声势，因为它替空洞披了件正装。也要拿捏分寸——「像说话」指的是自然、亲近、不端架子，不是把口头禅、语气词、啰嗦原样搬上纸。它是经过修剪的口语：保留温度，去掉杂音。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">It is the contention of the author that this approach is suboptimal.</span>
-      <span class="after">I think this approach is wrong, and here's why.</span>
-      <span class="note">「It is the contention of the author that」是没人会对朋友说的话；换成「I think」，立刻有了人味和担当。</span>
-    </div>
-    <div class="example">
-      <span class="before">笔者认为，该路径或存在进一步优化之空间。</span>
-      <span class="after">我觉得这条路不对，更好的做法是……</span>
-      <span class="note">「笔者」「或存在……空间」是正装腔；说人话，读者才把你当一个有判断的人。</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ essay、newsletter、个人品牌、内部沟通——任何你想被当成「一个人」而非「一份文件」的地方</li>
-      <li>✓ 检验法：把这段读给朋友听，哪句你嘴里说不出口？改掉它</li>
-      <li>✗ 误区：把「像说话」当成可以啰嗦、可以塞语气词——它是修剪过的口语，不是录音稿</li>
-      <li>✗ 误区：在该正式的场合（合同、对外公告、合规文档）也一味口语，失了分寸</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>拿一段你写的正式文字，逐句读出声，把每句「我绝不会这么对朋友说」的话，改成你真会说的话。<strong>思考题</strong>：奥威尔要「透明的玻璃」，PG 要「像对朋友说话」——这两条是同一件事的两面，还是有冲突？什么场合该收起亲近、换上正装？</p>
-  </div>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>正式书面语像西装——挺括、得体，却束缚动作。PG 说，思想要跑起来、要试探、要灵活转身，得换上运动装：口语。他给了一个极实用的检验法——<strong>写完一段，想象你正读给一个朋友听，凡是你嘴里绝不会这么说的句子，统统改掉</strong>。这不是降低标准，而是用「会不会这么对朋友说」当真诚的探测器：书面腔最容易藏含糊和虚张声势，因为它替空洞披了件正装。也要拿捏分寸——「像说话」指的是自然、亲近、不端架子，不是把口头禅、语气词、啰嗦原样搬上纸。它是经过修剪的口语：保留温度，去掉杂音。</p>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">It is the contention of the author that this approach is suboptimal.</span>
+<span class="after">I think this approach is wrong, and here's why.</span>
+<span class="note">「It is the contention of the author that」是没人会对朋友说的话；换成「I think」，立刻有了人味和担当。</span>
+</div>
+<div class="example">
+<span class="before">笔者认为，该路径或存在进一步优化之空间。</span>
+<span class="after">我觉得这条路不对，更好的做法是……</span>
+<span class="note">「笔者」「或存在……空间」是正装腔；说人话，读者才把你当一个有判断的人。</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ essay、newsletter、个人品牌、内部沟通——任何你想被当成「一个人」而非「一份文件」的地方</li>
+<li>✓ 检验法：把这段读给朋友听，哪句你嘴里说不出口？改掉它</li>
+<li>✗ 误区：把「像说话」当成可以啰嗦、可以塞语气词——它是修剪过的口语，不是录音稿</li>
+<li>✗ 误区：在该正式的场合（合同、对外公告、合规文档）也一味口语，失了分寸</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>拿一段你写的正式文字，逐句读出声，把每句「我绝不会这么对朋友说」的话，改成你真会说的话。<strong>思考题</strong>：奥威尔要「透明的玻璃」，PG 要「像对朋友说话」——这两条是同一件事的两面，还是有冲突？什么场合该收起亲近、换上正装？</p>
+</div>
 </section>
-
 <div class="deep-title">— 深入思考 —</div>
-
 <details>
-  <summary>PG 说有用的写作要「强到再强就变假」。这会不会鼓励过度自信、忽略不确定性？</summary>
-  <div class="ans">不会，关键在「不假」这条边界。PG 要的不是虚张声势，而是把真实的确信度精确说出来——如果你只有七成把握，诚实的强主张是「我七成确信 X，赌注押在 Y」，而非含糊的「可能 X」。真正的不确定该被精确描述，而不是用模糊语气稀释掉。缓冲垫掩盖的往往不是谦逊，是没想清楚或不敢担责。</div>
+<summary>PG 说有用的写作要「强到再强就变假」。这会不会鼓励过度自信、忽略不确定性？</summary>
+<div class="ans">不会，关键在「不假」这条边界。PG 要的不是虚张声势，而是把真实的确信度精确说出来——如果你只有七成把握，诚实的强主张是「我七成确信 X，赌注押在 Y」，而非含糊的「可能 X」。真正的不确定该被精确描述，而不是用模糊语气稀释掉。缓冲垫掩盖的往往不是谦逊，是没想清楚或不敢担责。</div>
 </details>
 <details>
-  <summary>essay 源于「尝试」，意味着可以不下结论。但职场写作（备忘、决策）往往必须给答案，两者矛盾吗？</summary>
-  <div class="ans">分场景。PG 的探索式 essay 适合个人思考、博客、对复杂问题的公开试探——过程本身即价值。但 decision memo 的读者要的是判断，探索应当发生在动笔的前半程（你私下的草稿里），交付的终稿则收敛成结论。诀窍是：用 essay 的方式去想，用金字塔的方式去交付。思考可以发散，输出必须收敛。</div>
+<summary>essay 源于「尝试」，意味着可以不下结论。但职场写作（备忘、决策）往往必须给答案，两者矛盾吗？</summary>
+<div class="ans">分场景。PG 的探索式 essay 适合个人思考、博客、对复杂问题的公开试探——过程本身即价值。但 decision memo 的读者要的是判断，探索应当发生在动笔的前半程（你私下的草稿里），交付的终稿则收敛成结论。诀窍是：用 essay 的方式去想，用金字塔的方式去交付。思考可以发散，输出必须收敛。</div>
 </details>
 <details>
-  <summary>「越短越好」有没有尽头？什么时候短会损害理解？</summary>
-  <div class="ans">有。PG 自己的原则是「删掉不必要的」，关键词是「不必要」，不是「短」。当删减开始牺牲读者理解所需的背景、例子、推理链时，就过界了——极简到让读者补不上逻辑跳跃，是另一种自私。标尺始终是读者：删到「再删读者就看不懂」为止，而不是删到字数最少为止。</div>
+<summary>「越短越好」有没有尽头？什么时候短会损害理解？</summary>
+<div class="ans">有。PG 自己的原则是「删掉不必要的」，关键词是「不必要」，不是「短」。当删减开始牺牲读者理解所需的背景、例子、推理链时，就过界了——极简到让读者补不上逻辑跳跃，是另一种自私。标尺始终是读者：删到「再删读者就看不懂」为止，而不是删到字数最少为止。</div>
 </details>
 <details>
-  <summary>中文写作能直接套用「像对朋友说话」吗？中文口语和书面的差距比英文大。</summary>
-  <div class="ans">精神适用，分寸要调。中文口语和书面的距离确实更大，直接照搬大白话可能显得轻浮、不够庄重。但 PG 的内核不是「用口语词」，而是「用真诚、不端架子的声音」——这在中文里表现为去掉「笔者」「予以」「之」这类正装腔，而非堆网络流行语。王小波就是范本：口语的鲜活 + 书面的精确，两不耽误。</div>
+<summary>中文写作能直接套用「像对朋友说话」吗？中文口语和书面的差距比英文大。</summary>
+<div class="ans">精神适用，分寸要调。中文口语和书面的距离确实更大，直接照搬大白话可能显得轻浮、不够庄重。但 PG 的内核不是「用口语词」，而是「用真诚、不端架子的声音」——这在中文里表现为去掉「笔者」「予以」「之」这类正装腔，而非堆网络流行语。王小波就是范本：口语的鲜活 + 书面的精确，两不耽误。</div>
 </details>
 <details>
-  <summary>在 AI 能瞬间生成流畅 essay 的时代，PG 的「写作即思考」还成立吗？</summary>
-  <div class="ans">比任何时候都更成立。AI 能替你产出文字，但思考的收益恰恰来自「你自己被句子逼着想通」的那个过程——这部分无法外包。如果让 AI 写完直接交，你得到了文档，却跳过了写作本该带给你的认知升级。PG 的洞见反而成了试金石：在 AI 时代，写作的价值从「产出文字」彻底转向「锻炼思考」，而后者只有亲自写才拿得到。</div>
+<summary>在 AI 能瞬间生成流畅 essay 的时代，PG 的「写作即思考」还成立吗？</summary>
+<div class="ans">比任何时候都更成立。AI 能替你产出文字，但思考的收益恰恰来自「你自己被句子逼着想通」的那个过程——这部分无法外包。如果让 AI 写完直接交，你得到了文档，却跳过了写作本该带给你的认知升级。PG 的洞见反而成了试金石：在 AI 时代，写作的价值从「产出文字」彻底转向「锻炼思考」，而后者只有亲自写才拿得到。</div>
 </details>
-
 <div class="nav">
-  <a href="index.html">← 回到写作目录</a>
+<a href="index.html">← 回到写作目录</a>
 </div>
-
 <footer>BigCat · Writing · Day 22 · 2026</footer>
-
 </div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
+<script defer="" src="https://cissy0802.github.io/comments.js"></script>
+<script defer="" src="https://cissy0802.github.io/search.js"></script>
+<script defer="" src="https://cissy0802.github.io/index-button.js"></script>
+<script defer="" src="https://cissy0802.github.io/i18n-tts.js"></script>
 </body>
 </html>
