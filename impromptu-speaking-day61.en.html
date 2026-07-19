@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Writing &amp; Expression: Impromptu Speaking — Day 61</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.4rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"BEFORE ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"AFTER ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* Flow diagram: structures / bridging */
+.flow-vis{background:#f8f6f1;padding:22px 16px;margin:18px 0;border-radius:2px}
+.flow-vis .frow{display:flex;gap:8px;align-items:stretch;margin:8px 0}
+.flow-vis .fstep{flex:1;padding:12px 8px;background:#fff;border:1px solid #d8d0bc;text-align:center;font-family:Georgia,serif;font-size:0.86rem;color:#3a3a3a;border-radius:2px;line-height:1.5}
+.flow-vis .fstep .sn{display:block;font-size:0.7rem;color:#8a7a4a;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px;font-weight:700}
+.flow-vis .fstep .st{display:block;font-weight:700;color:#1f1f1f;margin-bottom:3px;font-size:0.92rem}
+.flow-vis .fstep.hi{background:#1f1f1f;color:#fafafa;border-color:#1f1f1f}
+.flow-vis .fstep.hi .st{color:#d8c98a}
+.flow-vis .fstep.hi .sn{color:#d8c98a}
+.flow-vis .caption{font-size:0.88rem;color:#5a5a5a;font-style:italic;margin-top:12px;text-align:center;font-family:Georgia,serif}
+
+details{margin:12px 0;border:1px solid #d0d0d0;border-radius:2px;background:#fff;padding:0 16px}
+details summary{cursor:pointer;padding:14px 0;font-weight:600;color:#1f1f1f;font-size:1rem}
+details[open] summary{border-bottom:1px solid #eee;margin-bottom:10px}
+details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
+.deep-title{text-align:center;font-family:Georgia,serif;letter-spacing:2px;text-transform:uppercase;color:#8a8a8a;font-size:0.85rem;margin:40px 0 18px}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1.1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .flow-vis .frow{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<div class="week-label">Day 61 · 2026.07.19</div>
+<h1>Writing &amp; Expression: Impromptu Speaking<span class="topic">The 40 Seconds With No Script</span></h1>
+<div class="date">BigCat's Writing</div>
+<p class="intro">The exec who asks "how's the project going?" in the elevator. The all-hands where you're suddenly called on. The review where someone probes an angle you never prepared. What really defines your professional presence is rarely the rehearsed 40-minute keynote — it's these unscripted 40 seconds. The good news: impromptu speaking isn't a gift, it's a trainable craft. Four tools this week.</p>
+</header>
+
+<!-- Card 1 -->
+<section class="card">
+<div class="num">Principle 01</div>
+<h2>Carry a Structure — Turn the Essay Into a Fill-in-the-Blank</h2>
+<div class="en-name">PREP &amp; What / So What / Now What</div>
+<span class="tag">Abrahams · Structure</span>
+<div class="section">
+<div class="label">The Principle</div>
+<p>The great enemy of impromptu speaking isn't nerves — it's the wandering that comes from not knowing where to start. The cure isn't memorizing a script; it's carrying one or two ready-made frameworks. With a structure, the moment turns from "write an essay" into "fill in the blanks": your brain supplies content instead of inventing organization on the fly.</p>
+</div>
+<div class="section">
+<div class="label">In the Master's Words</div>
+<div class="quote">
+"Structure sets you free. When you know your structure, you can focus on your message and your audience rather than on what comes next."
+<span class="source">— Matt Abrahams, Think Faster, Talk Smarter (2023)</span>
+</div>
+</div>
+<div class="section">
+<div class="label">Why It Works</div>
+<p>Working memory is a narrow pipe. When you speak off the cuff, it's already juggling content, emotion, and the faces in front of you. Ask it to also invent a structure and it overloads — you freeze, or you circle endlessly. A pre-loaded framework makes "organize" an <strong>automatic call</strong>, freeing every remaining cycle for content. The two most useful: <strong>PREP</strong> = Point → Reason → Example → Point; <strong>What? So What? Now What?</strong> = the fact → what it means → what to do. The first is for delivering a conclusion; the second for explaining why something matters.</p>
+<div class="flow-vis">
+<div class="frow">
+<div class="fstep hi"><span class="sn">P</span><span class="st">Point</span>lead with it</div>
+<div class="fstep"><span class="sn">R</span><span class="st">Reason</span>why</div>
+<div class="fstep"><span class="sn">E</span><span class="st">Example</span>one proof</div>
+<div class="fstep hi"><span class="sn">P</span><span class="st">Point</span>restate it</div>
+</div>
+<div class="frow">
+<div class="fstep"><span class="sn">What?</span><span class="st">the fact</span>what happened</div>
+<div class="fstep"><span class="sn">So What?</span><span class="st">the meaning</span>impact</div>
+<div class="fstep"><span class="sn">Now What?</span><span class="st">the move</span>next step</div>
+</div>
+<div class="caption">Two portable skeletons: demote the essay to a fill-in-the-blank</div>
+</div>
+</div>
+<div class="section">
+<div class="label">Before &amp; After</div>
+<div class="example">
+<span class="before">(CEO in the elevator: "How's the Agent project going?") Uh, so... we've been really busy, the model upgrade is going, the tooling is coming along, we hit some issues, the team's working late on it, should be soon.</span>
+<span class="after">We're on track (Point). The core metric — task success rate — went from 61% to 78% (Reason). Last week Finance used it to auto-generate the quarterly reconciliation: three days of work down to two hours (Example). So at this pace, we ship on time in Q4 (Point).</span>
+</div>
+<div class="example">
+<span class="before">Um, so, we've been really busy, the migration is kind of ongoing, there were some blockers but we're on it, should be fine.</span>
+<span class="after">We've cut customer onboarding from two weeks to three days (What). That means new users hit value before the trial ends — exactly where churn was killing us (So What). Next, we roll it to the enterprise tier by Q4 (Now What).</span>
+</div>
+</div>
+<div class="section">
+<div class="label">When to Use · Common Mistakes</div>
+<ul>
+<li>✓ Being called on to report, elevator Q&amp;A, interview curveballs, off-the-cuff review remarks</li>
+<li>✗ Trying to memorize a full script — one break and it all collapses; impromptu wants a skeleton, not lines</li>
+<li>✗ Picking a framework too complex to recall live — two is plenty; drill them to reflex</li>
+<li>✗ Point with no Example sounds hollow; missing Now What leaves the audience without a next step</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">This Week's Exercise · A Question</div>
+<p>Write PREP and What/So What/Now What each on a card; keep them in your wallet or phone notes. Any time you're asked a work question this week, force yourself to answer through one of them, even if it slows you a beat. <strong>Question:</strong> which skeleton fits the impromptu moments you meet most often — and why?</p>
+</div>
+</section>
+
+<!-- Card 2 -->
+<section class="card">
+<div class="num">Principle 02</div>
+<h2>Buy Thinking Time — Make the Pause an Asset</h2>
+<div class="en-name">The Power of the Purposeful Pause</div>
+<span class="tag">Live · Buffering</span>
+<div class="section">
+<div class="label">The Principle</div>
+<p>When you're caught, the two easy mistakes are filling the silence with "uh... um..." or blurting a bad answer. The skilled speaker takes a few seconds of <strong>quality pause</strong> to organize — and what the audience reads isn't "stuck," it's "thinking carefully." The pause is a privilege, not a flaw.</p>
+</div>
+<div class="section">
+<div class="label">In the Master's Words</div>
+<div class="quote">
+"The right word may be effective, but no word was ever as effective as a rightly timed pause."
+<span class="source">— Mark Twain</span>
+</div>
+</div>
+<div class="section">
+<div class="label">Why It Works</div>
+<p>Silence is amplified three or four times in the speaker's own ears — you feel a long gap; the audience registers a fraction of a second. So <strong>your discomfort is not their awkwardness</strong>. Instead of leaking panic through filler, use three legitimate ways to buy time: <strong>① restate or reframe the question</strong> ("So you're asking whether... right?") — it confirms and buys five seconds; <strong>② unpack a key word</strong> ("'Scale' actually means two different things here..."); <strong>③ an honest meta-comment</strong> ("That's worth thinking about for a second"). All three do work and read as professional. "Uh" does not.</p>
+</div>
+<div class="section">
+<div class="label">Before &amp; After</div>
+<div class="example">
+<span class="before">(Manager: "What's the biggest risk in this plan?") Uh... risk... hmm... let me think... maybe the timeline?</span>
+<span class="after">The biggest risk — let me narrow the question first: are you more worried about technical risk or adoption risk? (Restate + counter-question: buys time and pins the scope) ...If it's adoption, it's the cross-team dependency.</span>
+</div>
+<div class="example">
+<span class="before">Uh, the biggest risk, hmm, I guess... maybe the timeline?</span>
+<span class="after">The biggest risk — let me make sure I answer the right one: are you asking about technical risk or adoption risk? ...If it's adoption, it's the cross-team dependency.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">When to Use · Common Mistakes</div>
+<ul>
+<li>✓ High-pressure Q&amp;A, interviews, board follow-ups, being cued to weigh in on the spot</li>
+<li>✗ Plugging the silence with filler (uh / um / like / you know)</li>
+<li>✗ Darting eyes and fidgeting during the pause — the silence didn't expose you, your body did</li>
+<li>✗ Restating until it becomes stalling; or opening with an apology ("sorry, I didn't prepare") — self-sabotage</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">This Week's Exercise · A Question</div>
+<p>Record yourself answering three "ambush" questions and count the "uh"s and "um"s. On the next round, force yourself to replace every filler with a restatement of the question. <strong>Question:</strong> which filler word is your default — and what is it covering for: that you haven't thought it through, or that you fear the silence?</p>
+</div>
+</section>
+
+<!-- Card 3 -->
+<section class="card">
+<div class="num">Principle 03</div>
+<h2>Interruptions &amp; Hostile Questions: Acknowledge — Bridge — Communicate</h2>
+<div class="en-name">The ABC of Not Getting Dragged Off Message</div>
+<span class="tag">Live · Bridging</span>
+<div class="section">
+<div class="label">The Principle</div>
+<p>A hostile question or an interruption is, at bottom, an attempt to drag you off <em>your</em> message. Bridging lets you politely <strong>acknowledge</strong> the other person, then pull the conversation back to the core you want to deliver — without stonewalling, and without being led away.</p>
+</div>
+<div class="section">
+<div class="label">In the Master's Words</div>
+<div class="quote">
+"Tactical empathy is understanding the feelings and mindset of another in the moment... It's about acknowledging their perspective, not necessarily agreeing with it."
+<span class="source">— Chris Voss, Never Split the Difference (2016)</span>
+</div>
+</div>
+<div class="section">
+<div class="label">Why It Works</div>
+<p>Under attack, the two instincts — defensive stonewalling or caving and getting led away — both lose. The old crisis-comms formula, <strong>ABC</strong>, offers a third path: <strong>Acknowledge</strong> the legitimate kernel in their question (not surrender — just "I heard you") → <strong>Bridge</strong> with a transition ("What matters more is...") → <strong>Communicate</strong>, returning to your prepared core. Acknowledgment makes them feel heard and lowers the heat; the bridge leaves no vacuum for them to keep pressing. Same for interruptions: a brief acknowledgment ("Important point — I'm getting to it") then reclaim the rhythm.</p>
+<div class="flow-vis">
+<div class="frow">
+<div class="fstep"><span class="sn">A</span><span class="st">Acknowledge</span>"You're right that..."<br/>catch the heat</div>
+<div class="fstep hi"><span class="sn">B</span><span class="st">Bridge</span>"That's exactly why..."<br/>one transition</div>
+<div class="fstep"><span class="sn">C</span><span class="st">Communicate</span>back to your<br/>core message</div>
+</div>
+<div class="caption">ABC: the third path — no stonewall, no getting led away</div>
+</div>
+</div>
+<div class="section">
+<div class="label">Before &amp; After</div>
+<div class="example">
+<span class="before">(Challenged: "Your plan already failed last quarter — why would it work now?") That's not fair, last time was totally different, and it wasn't even our fault...</span>
+<span class="after">You're right, we missed last quarter (Acknowledge). That's exactly why we changed the one thing that broke it — we now ship in three reversible stages (Bridge). So a failure in any single step can't sink the whole launch (Communicate).</span>
+</div>
+<div class="example">
+<span class="before">That's not fair — last time was totally different, and it wasn't even our fault.</span>
+<span class="after">You're right, we missed last quarter (Acknowledge). That's exactly why we changed the one thing that broke it — we now ship in three reversible stages (Bridge). So a failure in any step can't sink the whole launch (Communicate).</span>
+</div>
+</div>
+<div class="section">
+<div class="label">When to Use · Common Mistakes</div>
+<ul>
+<li>✓ Review defenses, crisis comms, a challenged pitch, performance conversations, sharp client questions</li>
+<li>✗ Skipping the acknowledgment and bridging straight away — they feel ignored, and burn hotter</li>
+<li>✗ Over-acknowledging into an apology tour; or a clunky "but..." bridge that reads as dodging</li>
+<li>✗ No Communicate — acknowledging with nothing after it = surrender; talking over an interrupter reads as domineering — confirm, don't crush</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">This Week's Exercise · A Question</div>
+<p>Recall a recent time you were challenged and fumbled the answer. Rewrite it with ABC in three sentences, and read it aloud. <strong>Question:</strong> the hardest part of Acknowledge is granting that they're <em>partly</em> right without conceding — can you find that honest, non-self-destructive pivot?</p>
+</div>
+</section>
+
+<!-- Card 4 -->
+<section class="card">
+<div class="num">Principle 04</div>
+<h2>Impromptu Rests on Preparation: From "Performing" to "Communicating"</h2>
+<div class="en-name">The Paradox — Great Improv Is Rehearsed Readiness</div>
+<span class="tag">Mindset · Improv &amp; Prep</span>
+<div class="section">
+<div class="label">The Principle</div>
+<p>The most counterintuitive lesson: <strong>the best impromptu speakers are the best prepared.</strong> Impromptu doesn't mean "unprepared" — it means preparation internalized until it's available on demand, plus a mental switch that brings the anxiety down.</p>
+</div>
+<div class="section">
+<div class="label">In the Master's Words</div>
+<div class="quote">
+"It usually takes me more than three weeks to prepare a good impromptu speech."
+<span class="source">— widely attributed to Mark Twain</span>
+</div>
+</div>
+<div class="section">
+<div class="label">Why It Works</div>
+<p>Two mechanisms. First, an <strong>internalized reserve</strong>: classical rhetoric already taught orators to stockpile examples, analogies, and lines (Latin <em>copia</em>, "abundance") so the moment is just retrieval — your "spontaneous" gem is usually old stock. Second, a <strong>reframe</strong>: Matt Abrahams notes that stage anxiety flows mostly from a "performance orientation" (everyone is judging me). Switch to a "communication orientation" (I'm helping this audience get something useful) and attention moves from self to other; the anxiety recedes. The companion move: don't aim for "brilliant," aim for "clear and good enough" — chasing perfection only amplifies the panic.</p>
+</div>
+<div class="section">
+<div class="label">Before &amp; After (rewriting the pre-stage inner monologue)</div>
+<div class="example">
+<span class="before">This is a disaster — everyone's watching, one slip and I'm done, I have to look impressive.</span>
+<span class="after">They're not here to judge me — they want to know about this. My only job is to make it clear. Good enough is fine.</span>
+</div>
+<div class="example">
+<span class="before">Everyone's judging me. I have to nail this and sound brilliant.</span>
+<span class="after">They're not here to judge me — they want the information. My job is to make it clear, not perfect.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">When to Use · Common Mistakes</div>
+<ul>
+<li>✓ The "warm-up" before any impromptu moment; the long build of impromptu capability</li>
+<li>✗ Romanticizing improv as "talent" and never training it — it's a muscle, not a bloodline</li>
+<li>✗ Sourcing content only in the moment, with no stockpile; chasing "dazzling" until you overload</li>
+<li>✗ Treating nerves as an enemy to suppress — the harder you press, the tighter you get; relabel the energy as "I'm engaged"</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">This Week's Exercise · A Question</div>
+<p>Build an "ammunition store": collect 10 reusable analogies / figures / short stories from your field, and drill each until you can tell it in 30 seconds. This is the reserve behind every future impromptu. <strong>Question:</strong> next time you're nervous, swap the inner "I'm so anxious" for "I'm so engaged," and watch your body — does the feeling follow the label?</p>
+</div>
+</section>
+
+<div class="deep-title">— Going Deeper —</div>
+<details>
+<summary>Improv and preparation seem opposed, yet this issue says "impromptu rests on preparation." So where does "presence" really come from — being unprepared, or being prepared to the point of invisibility?</summary>
+<div class="ans">Real presence comes from preparation so thorough it leaves no trace. The audience feels "natural" precisely because you're not distracted tuning structure or hunting for an example — they're already reflex. A jazz musician drilled scales for a thousand hours before improvising; a stand-up's "ad lib" sits on a mountain of stored material. What we call talent is mostly practice hidden well enough. Unprepared improv isn't freedom — it's exposure: no skeleton, no ammunition, just anxiety amplified. The paradox: the more you prepare for the impromptu, the more it looks like you were born able to speak. The scarce thing was never nerve to open your mouth — it's having something ready when you do.</div>
+</details>
+<details>
+<summary>AI can feed you answers in real time (an earpiece prompter). Doesn't that devalue the skill of impromptu speaking?</summary>
+<div class="ans">What gets devalued is memorizing an answer; what doesn't is reading the room. AI can supply content, structure, and phrasing — but the core of impromptu lives exactly where a prompter can't reach: sensing the doubt on the face in front of you, hearing the real concern behind the question, deciding in half a second whether to push or soften, catching the moment with an example only someone present would get. Those are the abilities of being there, not of retrieval. The more fluent AI's generated content becomes, the more the human moat shifts toward real-time social judgment and adaptation. The skilled improviser isn't replaced by AI — their reserve just gained a faster assistant.</div>
+</details>
+<details>
+<summary>How does impromptu differ across languages? Would a Western skeleton like PREP — "lead with your point" — feel abrupt when delivered aloud in a high-context culture?</summary>
+<div class="ans">The skeleton transfers; the register must be localized. High-context conversation tends to set up relationship and background before the conclusion, so an abrupt "My point is..." can read as pushy in some formal settings. The fix isn't to abandon PREP but to add a softening lead-in — "I have a rough thought on this," then the Point, or turning the closing restatement into an invitation, "I wonder if that holds up." In lower-context, English-speaking rooms it's the reverse: too much setup reads as evasive or unsure, and getting to the point looks professional. Same skeleton — wrapped in deference and relationship in one culture, stripped to the facts in another. What localizes is the shell, not the logic.</div>
+</details>
+<details>
+<summary>How do you calibrate "acknowledge" (the A in ABC) when power is unequal — a junior being needled by a senior? Where does professional end and weak begin?</summary>
+<div class="ans">Separate acknowledging a fact from acknowledging your worth. Granting a specific fact they raised ("yes, that number did lag") is professional — it rests on shared ground and makes you look steady and honest. Acknowledging all the way to "it's my fault, blame me" is weakness: it slides the discussion from problem to penance. The pivot: acknowledgment must be followed by Bridge and Communicate — you caught the heat, then immediately steer back to something actionable. When power is unequal, the strongest posture is neither firing back nor lying down, but "I hear your concern, and here's how I plan to handle it." Acknowledgment buys the right to keep being heard — not the signal of surrender.</div>
+</details>
+
+<div class="nav">
+<a href="index.en.html">← Back to Writing Index</a>
+</div>
+<footer>BigCat · Writing · Day 61 · 2026</footer>
+</div>
+</body>
+</html>
