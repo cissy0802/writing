@@ -25,7 +25,7 @@ jobs:
           while IFS= read -r f; do
             for script in comments.js search.js index-button.js i18n-tts.js; do
               if ! grep -q "$script" "$f"; then
-                tag="<script src=\"https://cissy0802.github.io/$script\" defer></script>"
+                tag="<script src=\"https://hub.cissychen.com/$script\" defer></script>"
                 if grep -qi "</body>" "$f"; then
                   awk -v tag="$tag" 'BEGIN{IGNORECASE=1} /<\/body>/ && !done { print tag; done=1 } { print }' "$f" > "$f.tmp" && mv "$f.tmp" "$f"
                 else
