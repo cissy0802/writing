@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>写作与表达：思考即写作 — Day 26</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -67,251 +68,221 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 </head>
 <body>
 <div class="container">
-
 <header>
-  <div class="week-label">Day 26 · 2026.06.13</div>
-  <h1>写作与表达：思考即写作<span class="topic">写作即思考 · 创造性的发现 · 对话作为工具 · 卡片盒笔记法</span></h1>
-  <div class="date">BigCat's Writing</div>
-  <p class="intro">多数人以为写作是把想好的东西誊到纸上。其实顺序常常反过来：你是在写的过程里，才第一次真正想清楚。空白页不是思考的收纳盒，而是思考的处理器——它无情地暴露你含糊的地方。今天谈比「句子漂亮」更底层的事：把写作当成最锋利的思考工具。为什么写下来才算想过、怎样让写作长出你原本没有的想法、怎样把读者（和 AI）变成逼问你的对话者，以及怎样用卡片盒让思想复利。</p>
+<div class="week-label">Day 26 · 2026.06.13</div>
+<h1 data-tts="f1b6c0a62a806ada">写作与表达：思考即写作<span class="topic">写作即思考 · 创造性的发现 · 对话作为工具 · 卡片盒笔记法</span></h1>
+<div class="date">BigCat's Writing</div>
+<p class="intro">多数人以为写作是把想好的东西誊到纸上。其实顺序常常反过来：你是在写的过程里，才第一次真正想清楚。空白页不是思考的收纳盒，而是思考的处理器——它无情地暴露你含糊的地方。今天谈比「句子漂亮」更底层的事：把写作当成最锋利的思考工具。为什么写下来才算想过、怎样让写作长出你原本没有的想法、怎样把读者（和 AI）变成逼问你的对话者，以及怎样用卡片盒让思想复利。</p>
 </header>
-
 <!-- Card 1: 写作即思考 -->
 <section class="card">
-  <div class="num">Principle 01</div>
-  <h2>写作即思考：没写下来的，多半只是「以为想过」</h2>
-  <div class="en-name">Writing Is Thinking</div>
-  <span class="tag">Paul Graham · Lamport · 严苛的测试</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>写作不是思考的记录，是思考本身。<strong>一个想法只要还没被写成完整句子，你就无从知道它到底成不成立</strong>——写下来，是对思考最严苛的一次体检。</p>
-    <div class="quote">
+<div class="num">Principle 01</div>
+<h2 data-tts="29c5e5214de1202f">写作即思考：没写下来的，多半只是「以为想过」</h2>
+<div class="en-name">Writing Is Thinking</div>
+<span class="tag">Paul Graham · Lamport · 严苛的测试</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>写作不是思考的记录，是思考本身。<strong>一个想法只要还没被写成完整句子，你就无从知道它到底成不成立</strong>——写下来，是对思考最严苛的一次体检。</p>
+<div class="quote">
       "Writing about something, even something you know well, usually shows you that you didn't know it as well as you thought. Putting ideas into words is a severe test."
       <span class="source">— Paul Graham《Putting Ideas Into Words》(2022)</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>脑子善于自我欺骗。一个念头在脑中能靠一团模糊的感觉「成立」，因为你从不强迫它受检验。一旦写成完整的话，含糊就无处藏身：主语是谁、因果是什么、例外在哪，每一项都得交代。这正是分布式系统大师 Leslie Lamport 那句名言的意思——<strong>「如果你只在脑中思考而不写下来，你只是以为自己在思考」</strong>。Graham 说得更狠：把想法写成文字是一场严苛的测试，多数想法会当场不及格。但这恰是好消息——不及格暴露得越早，你越早知道哪里没想通。写作不是事后的总结，它是思考第一次真正发生的现场。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">（脑中）「这个架构我觉得有风险，反正感觉不对。」</span>
-      <span class="after">（写下后）「这个架构有风险：它默认写多读少，但我们的流量是读多写少 10:1，所以缓存层会先成为瓶颈。」</span>
-      <span class="note">「感觉不对」在脑中能含糊地活着，正因为它从不受检验。逼着写成句子，你要么找到真正的理由（一个错误的流量假设），要么发现根本没有理由。</span>
-    </div>
-    <div class="example">
-      <span class="before">"I think this design is risky — something just feels off."</span>
-      <span class="after">"This design is risky: it assumes write-heavy traffic, but ours is read-heavy 10:1, so the cache layer becomes the first bottleneck."</span>
-      <span class="note">写作把「我以为我懂」逼成「我到底懂不懂」。模糊的判断在动笔那一刻，要么升级为论证，要么原形毕露。</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 技术决策、架构评审：开会前先写一页，逼自己把直觉变成论证</li>
-      <li>✓ 想不通一件事时，别空想——打开文档把它写出来</li>
-      <li>✗ 误区：「我心里很清楚，只是懒得写」——心里清楚常是错觉</li>
-      <li>✗ 误区：把脑暴的零散念头当结论，没经过成句的检验</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>挑一件你自认「早就想明白」的工作判断，限时 15 分钟把它写成一段完整论证（主张 + 理由 + 一个反例）。<strong>思考题</strong>：写完后，你原来的判断有没有松动或变精确？哪一步是写之前根本没意识到的？</p>
-  </div>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>脑子善于自我欺骗。一个念头在脑中能靠一团模糊的感觉「成立」，因为你从不强迫它受检验。一旦写成完整的话，含糊就无处藏身：主语是谁、因果是什么、例外在哪，每一项都得交代。这正是分布式系统大师 Leslie Lamport 那句名言的意思——<strong>「如果你只在脑中思考而不写下来，你只是以为自己在思考」</strong>。Graham 说得更狠：把想法写成文字是一场严苛的测试，多数想法会当场不及格。但这恰是好消息——不及格暴露得越早，你越早知道哪里没想通。写作不是事后的总结，它是思考第一次真正发生的现场。</p>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">（脑中）「这个架构我觉得有风险，反正感觉不对。」</span>
+<span class="after">（写下后）「这个架构有风险：它默认写多读少，但我们的流量是读多写少 10:1，所以缓存层会先成为瓶颈。」</span>
+<span class="note">「感觉不对」在脑中能含糊地活着，正因为它从不受检验。逼着写成句子，你要么找到真正的理由（一个错误的流量假设），要么发现根本没有理由。</span>
+</div>
+<div class="example">
+<span class="before">"I think this design is risky — something just feels off."</span>
+<span class="after">"This design is risky: it assumes write-heavy traffic, but ours is read-heavy 10:1, so the cache layer becomes the first bottleneck."</span>
+<span class="note">写作把「我以为我懂」逼成「我到底懂不懂」。模糊的判断在动笔那一刻，要么升级为论证，要么原形毕露。</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 技术决策、架构评审：开会前先写一页，逼自己把直觉变成论证</li>
+<li>✓ 想不通一件事时，别空想——打开文档把它写出来</li>
+<li>✗ 误区：「我心里很清楚，只是懒得写」——心里清楚常是错觉</li>
+<li>✗ 误区：把脑暴的零散念头当结论，没经过成句的检验</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>挑一件你自认「早就想明白」的工作判断，限时 15 分钟把它写成一段完整论证（主张 + 理由 + 一个反例）。<strong>思考题</strong>：写完后，你原来的判断有没有松动或变精确？哪一步是写之前根本没意识到的？</p>
+</div>
 </section>
-
 <!-- Card 2: 创造性的发现 -->
 <section class="card">
-  <div class="num">Principle 02</div>
-  <h2>创造性的发现：论点不是想好才写，是写出来才长出来</h2>
-  <div class="en-name">Writing as Discovery</div>
-  <span class="tag">Joan Didion · E.M. Forster · 生成</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>写作不只检验旧想法，更会生出新想法。<strong>很多时候你不是先有论点再下笔，而是写到一半，手指替你找到了那个更尖锐的真问题</strong>。</p>
-    <div class="quote">
+<div class="num">Principle 02</div>
+<h2 data-tts="2c84664312ef0b6b">创造性的发现：论点不是想好才写，是写出来才长出来</h2>
+<div class="en-name">Writing as Discovery</div>
+<span class="tag">Joan Didion · E.M. Forster · 生成</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>写作不只检验旧想法，更会生出新想法。<strong>很多时候你不是先有论点再下笔，而是写到一半，手指替你找到了那个更尖锐的真问题</strong>。</p>
+<div class="quote">
       "I write entirely to find out what I'm thinking, what I'm looking at, what I see and what it means."
       <span class="source">— Joan Didion《Why I Write》(1976)</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>Didion 说她写作「完全是为了搞清楚自己在想什么」。这不是谦辞，是创作的真实机制。E.M. Forster 转述过一位老太太的话——<strong>「我没看见自己说了什么，怎么知道自己在想什么？」</strong>把想法写出来，等于把它从狭窄的工作记忆里搬到纸上摊开：一旦摊开，你才能比对、发现矛盾、把两个原本不相干的念头并在一起——新意往往就在这种并置里诞生。空白页的可怕也是它的慷慨：它逼你往下再写一句，而下一句常常是你坐下时根本没有的。论点不是写作的前提，是写作的产物。先写起来，让发现发生。</p>
-    <div class="vt">
-      <div class="col"><div class="head">记录式（误解）</div><p>先在脑中想好完整论点 → 再誊写下来 → 写作只是搬运，没有新东西</p></div>
-      <div class="col voice"><div class="head">发现式（真相）</div><p>带着模糊的题目动笔 → 写的过程逼出更尖锐的真问题 → 论点在写中长出来</p></div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">动笔前的全部想法：「我想写一篇关于远程办公的文章。」（只有题目，没有论点）</span>
-      <span class="after">写了三段后冒出的真正论点：「远程办公的核心矛盾不是效率，而是『被看见』——晋升仍然奖励可见度，而远程让贡献隐形。」</span>
-      <span class="note">你坐下时以为要写「效率」，是写的过程替你找到了更值得写的问题。若等「想清楚再写」，这个论点永远不会出现。</span>
-    </div>
-    <div class="example">
-      <span class="before">"I want to write something about remote work." (a topic, not an idea)</span>
-      <span class="after">"The real tension in remote work isn't productivity — it's visibility. Promotion still rewards being seen, and remote makes contribution invisible."</span>
-      <span class="note">论点是写出来才长出来的。逼自己多写两段，常常就翻出了埋在题目底下的真东西。</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 选题卡壳、不知道自己真正想说什么时——先写起来探路</li>
-      <li>✓ 写完发现真正的论点在第三段：把它提到开头，重写全文</li>
-      <li>✗ 误区：非要等「灵感来了、想透了」才动笔，于是永远不动</li>
-      <li>✗ 误区：把第一个冒出来的论点当终点，不肯再往深处写</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>选一个你「有感觉但说不清」的话题，不打提纲，直接写满 400 字，看论点会自己浮出来。<strong>思考题</strong>：「写中发现」和「下笔前的结构规划」会冲突吗？该怎么在「让它涌现」与「有骨架」之间拿捏？</p>
-  </div>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>Didion 说她写作「完全是为了搞清楚自己在想什么」。这不是谦辞，是创作的真实机制。E.M. Forster 转述过一位老太太的话——<strong>「我没看见自己说了什么，怎么知道自己在想什么？」</strong>把想法写出来，等于把它从狭窄的工作记忆里搬到纸上摊开：一旦摊开，你才能比对、发现矛盾、把两个原本不相干的念头并在一起——新意往往就在这种并置里诞生。空白页的可怕也是它的慷慨：它逼你往下再写一句，而下一句常常是你坐下时根本没有的。论点不是写作的前提，是写作的产物。先写起来，让发现发生。</p>
+<div class="vt">
+<div class="col"><div class="head">记录式（误解）</div><p>先在脑中想好完整论点 → 再誊写下来 → 写作只是搬运，没有新东西</p></div>
+<div class="col voice"><div class="head">发现式（真相）</div><p>带着模糊的题目动笔 → 写的过程逼出更尖锐的真问题 → 论点在写中长出来</p></div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">动笔前的全部想法：「我想写一篇关于远程办公的文章。」（只有题目，没有论点）</span>
+<span class="after">写了三段后冒出的真正论点：「远程办公的核心矛盾不是效率，而是『被看见』——晋升仍然奖励可见度，而远程让贡献隐形。」</span>
+<span class="note">你坐下时以为要写「效率」，是写的过程替你找到了更值得写的问题。若等「想清楚再写」，这个论点永远不会出现。</span>
+</div>
+<div class="example">
+<span class="before">"I want to write something about remote work." (a topic, not an idea)</span>
+<span class="after">"The real tension in remote work isn't productivity — it's visibility. Promotion still rewards being seen, and remote makes contribution invisible."</span>
+<span class="note">论点是写出来才长出来的。逼自己多写两段，常常就翻出了埋在题目底下的真东西。</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 选题卡壳、不知道自己真正想说什么时——先写起来探路</li>
+<li>✓ 写完发现真正的论点在第三段：把它提到开头，重写全文</li>
+<li>✗ 误区：非要等「灵感来了、想透了」才动笔，于是永远不动</li>
+<li>✗ 误区：把第一个冒出来的论点当终点，不肯再往深处写</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>选一个你「有感觉但说不清」的话题，不打提纲，直接写满 400 字，看论点会自己浮出来。<strong>思考题</strong>：「写中发现」和「下笔前的结构规划」会冲突吗？该怎么在「让它涌现」与「有骨架」之间拿捏？</p>
+</div>
 </section>
-
 <!-- Card 3: 对话作为工具 -->
 <section class="card">
-  <div class="num">Principle 03</div>
-  <h2>对话作为工具：想清楚一件事最快的路，是讲给一个人听</h2>
-  <div class="en-name">Dialogue as a Thinking Tool</div>
-  <span class="tag">Kleist · Feynman · 人机协同</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>独自空想容易原地打转；<strong>把想法说给/写给一个具体的人，思路会在表达的过程中自己成形</strong>。读者——如今也包括 AI——是逼你想清楚的对手。</p>
-    <div class="quote">
+<div class="num">Principle 03</div>
+<h2 data-tts="a85e466f09a27773">对话作为工具：想清楚一件事最快的路，是讲给一个人听</h2>
+<div class="en-name">Dialogue as a Thinking Tool</div>
+<span class="tag">Kleist · Feynman · 人机协同</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>独自空想容易原地打转；<strong>把想法说给/写给一个具体的人，思路会在表达的过程中自己成形</strong>。读者——如今也包括 AI——是逼你想清楚的对手。</p>
+<div class="quote">
       "If you want to know something and cannot find it by meditation, speak about it with the next acquaintance who happens along. ... The appetite comes with eating; ideas form in the act of speaking."
       <span class="source">— Heinrich von Kleist《论思想在言说中的逐渐完成》(1805)</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>两百年前 Kleist 就发现：想不通的事，找个人讲讲，往往话说到一半思路就通了——「胃口在吃中产生，想法在说中成形」。机制有两层。一是<strong>对象的约束</strong>：面对具体听者，你被迫补上原本跳过的环节，而补环节的过程，正暴露出你哪几步其实没想通——这也是费曼学习法的内核：能讲给聪明的外行听懂，才算真懂。二是<strong>反馈的回弹</strong>：对方一句「等等，为什么？」就把你拽回逻辑断层。这正是 AI 时代的新杠杆：把 AI 当成永远在场、随叫随到的对话者，让它追问、扮反方、复述你的论点——你不是让它替你想，而是用它逼自己想得更清楚。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">（写给自己、术语堆砌）「利用最终一致性配合 CRDT 实现无冲突合并。」</span>
-      <span class="after">（讲给同事听）「两个人同时改同一份文档，断网也各改各的。重新联网后，系统怎么把两份改动自动合并、还不打架？CRDT 就是为这件事设计的数据结构。」</span>
-      <span class="note">把读者设成一个聪明但不懂行的对话者，你被迫补上自己跳过的环节——而正是在补的过程里，你发现有几步原来没真想通。</span>
-    </div>
-    <div class="example">
-      <span class="before">"Leverage eventual consistency with CRDTs for conflict-free merges."</span>
-      <span class="after">"Two people edit one doc offline. When they reconnect, how does the system merge both sets of edits without a fight? A CRDT is a data structure built for exactly that."</span>
-      <span class="note">能讲给外行听懂，才证明你真懂。讲不通的地方，就是你思考的断层所在。</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 写复杂文档卡住时：假想一个同事坐对面，对他讲一遍</li>
-      <li>✓ 让 AI 扮演挑剔的读者，逐句追问「为什么」「反例呢」</li>
-      <li>✗ 误区：把 AI 当代写，让它替你思考——省下的不是劳动，是成长</li>
-      <li>✗ 误区：只对「内行」讲，省略关键步骤，反而掩盖了自己的盲区</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>挑一个专业概念，写一段讲给「聪明的 12 岁孩子」听的解释，不许用行话。再让 AI 追问三轮。<strong>思考题</strong>：「讲给人听」会不会为了好懂而牺牲精确？通俗化和严谨之间，界线划在哪？</p>
-  </div>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>两百年前 Kleist 就发现：想不通的事，找个人讲讲，往往话说到一半思路就通了——「胃口在吃中产生，想法在说中成形」。机制有两层。一是<strong>对象的约束</strong>：面对具体听者，你被迫补上原本跳过的环节，而补环节的过程，正暴露出你哪几步其实没想通——这也是费曼学习法的内核：能讲给聪明的外行听懂，才算真懂。二是<strong>反馈的回弹</strong>：对方一句「等等，为什么？」就把你拽回逻辑断层。这正是 AI 时代的新杠杆：把 AI 当成永远在场、随叫随到的对话者，让它追问、扮反方、复述你的论点——你不是让它替你想，而是用它逼自己想得更清楚。</p>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">（写给自己、术语堆砌）「利用最终一致性配合 CRDT 实现无冲突合并。」</span>
+<span class="after">（讲给同事听）「两个人同时改同一份文档，断网也各改各的。重新联网后，系统怎么把两份改动自动合并、还不打架？CRDT 就是为这件事设计的数据结构。」</span>
+<span class="note">把读者设成一个聪明但不懂行的对话者，你被迫补上自己跳过的环节——而正是在补的过程里，你发现有几步原来没真想通。</span>
+</div>
+<div class="example">
+<span class="before">"Leverage eventual consistency with CRDTs for conflict-free merges."</span>
+<span class="after">"Two people edit one doc offline. When they reconnect, how does the system merge both sets of edits without a fight? A CRDT is a data structure built for exactly that."</span>
+<span class="note">能讲给外行听懂，才证明你真懂。讲不通的地方，就是你思考的断层所在。</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 写复杂文档卡住时：假想一个同事坐对面，对他讲一遍</li>
+<li>✓ 让 AI 扮演挑剔的读者，逐句追问「为什么」「反例呢」</li>
+<li>✗ 误区：把 AI 当代写，让它替你思考——省下的不是劳动，是成长</li>
+<li>✗ 误区：只对「内行」讲，省略关键步骤，反而掩盖了自己的盲区</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>挑一个专业概念，写一段讲给「聪明的 12 岁孩子」听的解释，不许用行话。再让 AI 追问三轮。<strong>思考题</strong>：「讲给人听」会不会为了好懂而牺牲精确？通俗化和严谨之间，界线划在哪？</p>
+</div>
 </section>
-
 <!-- Card 4: Zettelkasten -->
 <section class="card">
-  <div class="num">Principle 04</div>
-  <h2>卡片盒笔记法：让每条想法都能与未来的想法碰撞</h2>
-  <div class="en-name">Zettelkasten</div>
-  <span class="tag">Luhmann · Sönke Ahrens · 复利</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>不要囤积摘抄。<strong>把每个想法写成一张「用自己的话说清、且能被链接」的原子卡片</strong>，让它接入你已有的想法网络——思想就会像复利一样累积。</p>
-    <div class="quote">
+<div class="num">Principle 04</div>
+<h2 data-tts="a6c629b59f367e49">卡片盒笔记法：让每条想法都能与未来的想法碰撞</h2>
+<div class="en-name">Zettelkasten</div>
+<span class="tag">Luhmann · Sönke Ahrens · 复利</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>不要囤积摘抄。<strong>把每个想法写成一张「用自己的话说清、且能被链接」的原子卡片</strong>，让它接入你已有的想法网络——思想就会像复利一样累积。</p>
+<div class="quote">
       "Writing is not what follows research, learning or studying, it is the medium of all this work. ... We don't take notes to store information, we take them to develop ideas."
       <span class="source">— Sönke Ahrens《How to Take Smart Notes》(2017)</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>社会学家 Niklas Luhmann 一生写了 70 多本书、上百篇论文，他把功劳归给那个装着九万张卡片的木盒——他称之为「与卡片盒的对话」。秘诀不在收集，在<strong>三个动作</strong>：其一，<strong>原子化</strong>——一张卡只放一个想法，小到能被随处调用；其二，<strong>用自己的话重述</strong>——重述才完成了从「读过」到「想过」的转化；其三，<strong>显式链接</strong>——把新卡接到旧卡上，留下钩子。日积月累，卡片盒不再是仓库，而成了会和你对话、不断从旧想法碰撞里逼出新想法的伙伴。Ahrens 的洞见是：<strong>写作不是研究之后的事，它就是思考本身的媒介</strong>。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">（摘抄式）「书摘：『写作是一切智力工作的媒介。』——Ahrens, p.18」</span>
-      <span class="after">（永久卡片）「想法：把写作当成思考的容器，而非思考的记录。→ 这解释了为什么『先想清楚再写』是个陷阱：清晰是写的结果，不是前提。〔链接 → 卡#04 写作即思考；→ 卡#11 烂初稿〕」</span>
-      <span class="note">前者只是把别人的句子搬个位置，一周后毫无价值；后者用自己的话重述、接上已有想法、留钩子等未来碰撞——这才是卡片盒让思想复利的机制。</span>
-    </div>
-    <div class="example">
-      <span class="before">"Quote: 'Writing is the medium of all intellectual work.' — Ahrens, p.18"</span>
-      <span class="after">"Idea: writing is the container of thinking, not its record. → Why 'think first, then write' is a trap: clarity is the output, not the precondition. [links → #04 Writing is thinking; → #11 shitty drafts]"</span>
-      <span class="note">摘抄是搬运，永久卡片是接线：重述 + 链接 + 留钩，让每条笔记都能和未来的笔记发生反应。</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 长期知识积累：读书、追论文、攒写作素材，靠链接而非文件夹</li>
-      <li>✓ 每张卡问自己：半年后的我，能凭这一张读懂并用上吗？</li>
-      <li>✗ 误区：高亮收藏即满足，从不重述——等于没读</li>
-      <li>✗ 误区：迷恋工具与配色，卡越攒越多却从不回去链接、调用</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>这周读到的任意一个想法，写成一张原子卡片：用自己的话重述 + 至少链接到一个你已有的想法。<strong>思考题</strong>：维护卡片盒本身要花时间，什么样的人、什么样的工作，这套系统的收益才真正大于成本？</p>
-  </div>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>社会学家 Niklas Luhmann 一生写了 70 多本书、上百篇论文，他把功劳归给那个装着九万张卡片的木盒——他称之为「与卡片盒的对话」。秘诀不在收集，在<strong>三个动作</strong>：其一，<strong>原子化</strong>——一张卡只放一个想法，小到能被随处调用；其二，<strong>用自己的话重述</strong>——重述才完成了从「读过」到「想过」的转化；其三，<strong>显式链接</strong>——把新卡接到旧卡上，留下钩子。日积月累，卡片盒不再是仓库，而成了会和你对话、不断从旧想法碰撞里逼出新想法的伙伴。Ahrens 的洞见是：<strong>写作不是研究之后的事，它就是思考本身的媒介</strong>。</p>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">（摘抄式）「书摘：『写作是一切智力工作的媒介。』——Ahrens, p.18」</span>
+<span class="after">（永久卡片）「想法：把写作当成思考的容器，而非思考的记录。→ 这解释了为什么『先想清楚再写』是个陷阱：清晰是写的结果，不是前提。〔链接 → 卡#04 写作即思考；→ 卡#11 烂初稿〕」</span>
+<span class="note">前者只是把别人的句子搬个位置，一周后毫无价值；后者用自己的话重述、接上已有想法、留钩子等未来碰撞——这才是卡片盒让思想复利的机制。</span>
+</div>
+<div class="example">
+<span class="before">"Quote: 'Writing is the medium of all intellectual work.' — Ahrens, p.18"</span>
+<span class="after">"Idea: writing is the container of thinking, not its record. → Why 'think first, then write' is a trap: clarity is the output, not the precondition. [links → #04 Writing is thinking; → #11 shitty drafts]"</span>
+<span class="note">摘抄是搬运，永久卡片是接线：重述 + 链接 + 留钩，让每条笔记都能和未来的笔记发生反应。</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 长期知识积累：读书、追论文、攒写作素材，靠链接而非文件夹</li>
+<li>✓ 每张卡问自己：半年后的我，能凭这一张读懂并用上吗？</li>
+<li>✗ 误区：高亮收藏即满足，从不重述——等于没读</li>
+<li>✗ 误区：迷恋工具与配色，卡越攒越多却从不回去链接、调用</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>这周读到的任意一个想法，写成一张原子卡片：用自己的话重述 + 至少链接到一个你已有的想法。<strong>思考题</strong>：维护卡片盒本身要花时间，什么样的人、什么样的工作，这套系统的收益才真正大于成本？</p>
+</div>
 </section>
-
 <div class="deep-title">— 深入思考 —</div>
-
 <details>
-  <summary>「写作即思考」——那不写字、只在脑中默想或散步想清楚的人，算反例吗？</summary>
-  <div class="ans">不算，他们只是用了别的「外化」手段。关键不在「写」这个物理动作，而在把模糊的念头逼成一个受约束、可检验的完整结构——口头自语、对人讲解、画图推演，都能起到类似作用。但写作有两个别处难替代的优势：一是<strong>持久</strong>，想法被钉住，可反复回看比对；二是<strong>串行且无情</strong>，它不许你跳步，逼你把每一环都交代清楚。数学家写满草稿纸，正因为纯在脑中，工作记忆撑不住几步推演。散步能想通的，往往是已经写过、只差临门一脚的问题。</div>
+<summary>「写作即思考」——那不写字、只在脑中默想或散步想清楚的人，算反例吗？</summary>
+<div class="ans">不算，他们只是用了别的「外化」手段。关键不在「写」这个物理动作，而在把模糊的念头逼成一个受约束、可检验的完整结构——口头自语、对人讲解、画图推演，都能起到类似作用。但写作有两个别处难替代的优势：一是<strong>持久</strong>，想法被钉住，可反复回看比对；二是<strong>串行且无情</strong>，它不许你跳步，逼你把每一环都交代清楚。数学家写满草稿纸，正因为纯在脑中，工作记忆撑不住几步推演。散步能想通的，往往是已经写过、只差临门一脚的问题。</div>
 </details>
 <details>
-  <summary>AI 能秒把模糊想法写成清晰句子，那「用写作来思考」的训练价值是不是被掏空了？</summary>
-  <div class="ans">恰恰相反，它变得更值钱了。写作的价值从来不在产出那段文字，而在「把混沌拧成清晰」这个动作锻炼出的思考力——这正是 AI 时代最不能外包的能力。如果你把动笔的环节整个让给 AI，你省下的不是劳动，是成长；久不做，判断力会像不用的肌肉一样萎缩。正解是换用法：不让 AI 替你想，而让它当对手——追问、扮反方、复述你的论点逼你发现漏洞。守住「自己把想法逼到清晰」这个内核，AI 是放大器；交出这个内核，AI 是替代品。</div>
+<summary>AI 能秒把模糊想法写成清晰句子，那「用写作来思考」的训练价值是不是被掏空了？</summary>
+<div class="ans">恰恰相反，它变得更值钱了。写作的价值从来不在产出那段文字，而在「把混沌拧成清晰」这个动作锻炼出的思考力——这正是 AI 时代最不能外包的能力。如果你把动笔的环节整个让给 AI，你省下的不是劳动，是成长；久不做，判断力会像不用的肌肉一样萎缩。正解是换用法：不让 AI 替你想，而让它当对手——追问、扮反方、复述你的论点逼你发现漏洞。守住「自己把想法逼到清晰」这个内核，AI 是放大器；交出这个内核，AI 是替代品。</div>
 </details>
 <details>
-  <summary>中文和英文，哪一种更「逼」你把事情想清楚？</summary>
-  <div class="ans">各有逼法。英文的形合（显性的主谓、时态、连接词）天然不许含糊：写一个从句，你被迫交代主语是谁、逻辑是因果还是转折——语法本身就在替你查漏。中文是意合，靠语序和语感衔接，宽容度高，好处是流畅，代价是含糊更容易蒙混，所以用中文思考时更要自己警觉：这句的因果到底成不成立？一个实用法子是用英文逼出骨架的精确，再用中文调出表达的韵味——两种语言当两道检验，比只用一种更不容易自欺。</div>
+<summary>中文和英文，哪一种更「逼」你把事情想清楚？</summary>
+<div class="ans">各有逼法。英文的形合（显性的主谓、时态、连接词）天然不许含糊：写一个从句，你被迫交代主语是谁、逻辑是因果还是转折——语法本身就在替你查漏。中文是意合，靠语序和语感衔接，宽容度高，好处是流畅，代价是含糊更容易蒙混，所以用中文思考时更要自己警觉：这句的因果到底成不成立？一个实用法子是用英文逼出骨架的精确，再用中文调出表达的韵味——两种语言当两道检验，比只用一种更不容易自欺。</div>
 </details>
 <details>
-  <summary>口头「讲」和书面「写」都能帮思考，作为思考工具各自的长短在哪？</summary>
-  <div class="ans">讲胜在<strong>快与即时反馈</strong>：实时有人追问，思路在你来我往中被快速拽出断层，适合早期探路、把模糊念头说出雏形。但口语转瞬即逝、容许跳步，听上去通了不代表真通——很多「讲得很顺」的论证一落到纸上就漏洞百出。写胜在<strong>慢、持久、无情</strong>：它钉住每一步，逼你串行交代完整，是最终检验。聪明的做法是接力——先用「讲」（对人或对 AI）快速涌现、探方向，再用「写」压成经得起推敲的结构。讲负责发散，写负责收敛。</div>
+<summary>口头「讲」和书面「写」都能帮思考，作为思考工具各自的长短在哪？</summary>
+<div class="ans">讲胜在<strong>快与即时反馈</strong>：实时有人追问，思路在你来我往中被快速拽出断层，适合早期探路、把模糊念头说出雏形。但口语转瞬即逝、容许跳步，听上去通了不代表真通——很多「讲得很顺」的论证一落到纸上就漏洞百出。写胜在<strong>慢、持久、无情</strong>：它钉住每一步，逼你串行交代完整，是最终检验。聪明的做法是接力——先用「讲」（对人或对 AI）快速涌现、探方向，再用「写」压成经得起推敲的结构。讲负责发散，写负责收敛。</div>
 </details>
-
 <div class="nav">
-  <a href="index.html">← 回到写作目录</a>
+<a href="index.html">← 回到写作目录</a>
 </div>
-
 <footer>BigCat · Writing · Day 26 · 2026</footer>
-
 </div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
+<script defer="" src="https://cissy0802.github.io/comments.js"></script>
+<script defer="" src="https://cissy0802.github.io/search.js"></script>
+<script defer="" src="https://cissy0802.github.io/index-button.js"></script>
+<script defer="" src="https://cissy0802.github.io/i18n-tts.js"></script>
 </body>
 </html>

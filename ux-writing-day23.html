@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>写作与表达：设计与设计文案 — Day 23</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -76,262 +77,232 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 </head>
 <body>
 <div class="container">
-
 <header>
-  <div class="week-label">Day 23 · 2026.06.10</div>
-  <h1>写作与表达：设计与设计文案<span class="topic">微文案技艺 · 报错的人性 · Voice &amp; Tone 体系 · 文案检查表</span></h1>
-  <div class="date">BigCat's Writing</div>
-  <p class="intro">设计师和工程师其实一直在写作，只是没人这么叫它——按钮上的字、空状态的提示、报错弹窗、表单里的占位符。这些「微文案」(microcopy) 字少，却在用户最犹豫的关口决定他顺畅完成还是愤而离开。今天学四件事：怎样写好微文案、怎样让报错有人味、怎样建立 Voice &amp; Tone 体系，以及一张可以逐条过的产品文案检查表。</p>
+<div class="week-label">Day 23 · 2026.06.10</div>
+<h1 data-tts="f8f094b2287ff375">写作与表达：设计与设计文案<span class="topic">微文案技艺 · 报错的人性 · Voice &amp; Tone 体系 · 文案检查表</span></h1>
+<div class="date">BigCat's Writing</div>
+<p class="intro">设计师和工程师其实一直在写作，只是没人这么叫它——按钮上的字、空状态的提示、报错弹窗、表单里的占位符。这些「微文案」(microcopy) 字少，却在用户最犹豫的关口决定他顺畅完成还是愤而离开。今天学四件事：怎样写好微文案、怎样让报错有人味、怎样建立 Voice &amp; Tone 体系，以及一张可以逐条过的产品文案检查表。</p>
 </header>
-
 <!-- Card 1: 微文案 -->
 <section class="card">
-  <div class="num">Principle 01</div>
-  <h2>微文案：界面里最小的字，最大的杠杆</h2>
-  <div class="en-name">The Craft of Microcopy</div>
-  <span class="tag">Yifrah · 微文案 · 转化</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>微文案是界面里那些不起眼的小字——按钮、标签、占位符、提示。它们字数最少，却出现在用户<strong>正要做决定的那一秒</strong>，成为全部的引导。</p>
-    <div class="quote">
+<div class="num">Principle 01</div>
+<h2 data-tts="1537cf62f32e76bc">微文案：界面里最小的字，最大的杠杆</h2>
+<div class="en-name">The Craft of Microcopy</div>
+<span class="tag">Yifrah · 微文案 · 转化</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>微文案是界面里那些不起眼的小字——按钮、标签、占位符、提示。它们字数最少，却出现在用户<strong>正要做决定的那一秒</strong>，成为全部的引导。</p>
+<div class="quote">
       "Good microcopy can completely change the user experience, and turn a website from one that's tense and unclear into one that's friendly, considerate and human."
       <span class="source">— Kinneret Yifrah《Microcopy: The Complete Guide》(2017)</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>用户不「阅读」界面，他们扫描。在每个要做决定的瞬间——点不点这个按钮、填不填这一栏——能依靠的只有那几个字。通用词（「提交」「确定」）把决定又推回给用户：点了会发生什么？而<strong>具体到动作与结果的词，替用户消除了不确定</strong>。这是体验设计里成本最低、杠杆最高的一处：不改一行布局，只换几个字，转化率和信任感就动了。微文案的功夫不在辞藻，在于<strong>站在用户犹豫的那一刻，替他把下一步说清楚</strong>。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">Submit</span>
-      <span class="after">Create my account</span>
-      <span class="note">「Submit」是开发者视角，描述系统动作；「Create my account」是用户视角，说清点下去得到什么。按钮文案要回答「点了会发生什么」。</span>
-    </div>
-    <div class="example">
-      <span class="before">空状态：「暂无数据」</span>
-      <span class="after">「这里还没有项目。点右上角『新建』，开始第一个。」</span>
-      <span class="note">「暂无数据」是死路一条；好的空状态是一次邀请——告诉用户该做什么、入口在哪。</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 按钮、表单标签、空状态、确认弹窗、引导提示——一切用户要做决定的触点</li>
-      <li>✓ 写完自检：每个按钮是否回答了「点下去会发生什么」</li>
-      <li>✗ 误区：用「提交／确定／取消」这类通用词，把判断的负担丢给用户</li>
-      <li>✗ 误区：拿占位符当标签用——用户一开始输入，提示就消失，转头就忘了这栏填什么</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>找你产品（或常用 App）里一个「提交」按钮，改成一句说清「点了会发生什么」的动词短语，再想象用户看到它时的心理。<strong>思考题</strong>：微文案到底该由谁写——设计师、工程师，还是专职的 UX writer？</p>
-  </div>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>用户不「阅读」界面，他们扫描。在每个要做决定的瞬间——点不点这个按钮、填不填这一栏——能依靠的只有那几个字。通用词（「提交」「确定」）把决定又推回给用户：点了会发生什么？而<strong>具体到动作与结果的词，替用户消除了不确定</strong>。这是体验设计里成本最低、杠杆最高的一处：不改一行布局，只换几个字，转化率和信任感就动了。微文案的功夫不在辞藻，在于<strong>站在用户犹豫的那一刻，替他把下一步说清楚</strong>。</p>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">Submit</span>
+<span class="after">Create my account</span>
+<span class="note">「Submit」是开发者视角，描述系统动作；「Create my account」是用户视角，说清点下去得到什么。按钮文案要回答「点了会发生什么」。</span>
+</div>
+<div class="example">
+<span class="before">空状态：「暂无数据」</span>
+<span class="after">「这里还没有项目。点右上角『新建』，开始第一个。」</span>
+<span class="note">「暂无数据」是死路一条；好的空状态是一次邀请——告诉用户该做什么、入口在哪。</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 按钮、表单标签、空状态、确认弹窗、引导提示——一切用户要做决定的触点</li>
+<li>✓ 写完自检：每个按钮是否回答了「点下去会发生什么」</li>
+<li>✗ 误区：用「提交／确定／取消」这类通用词，把判断的负担丢给用户</li>
+<li>✗ 误区：拿占位符当标签用——用户一开始输入，提示就消失，转头就忘了这栏填什么</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>找你产品（或常用 App）里一个「提交」按钮，改成一句说清「点了会发生什么」的动词短语，再想象用户看到它时的心理。<strong>思考题</strong>：微文案到底该由谁写——设计师、工程师，还是专职的 UX writer？</p>
+</div>
 </section>
-
 <!-- Card 2: 报错的人性 -->
 <section class="card">
-  <div class="num">Principle 02</div>
-  <h2>报错的人性：说人话、指问题、给出路</h2>
-  <div class="en-name">Humane Error Messages</div>
-  <span class="tag">Nielsen · 报错 · 同理</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>好的报错只做三件事：<strong>用人话说清发生了什么、为什么、现在怎么办</strong>。绝不甩错误码，绝不责怪用户。</p>
-    <div class="quote">
+<div class="num">Principle 02</div>
+<h2 data-tts="681a220ea1f98be0">报错的人性：说人话、指问题、给出路</h2>
+<div class="en-name">Humane Error Messages</div>
+<span class="tag">Nielsen · 报错 · 同理</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>好的报错只做三件事：<strong>用人话说清发生了什么、为什么、现在怎么办</strong>。绝不甩错误码，绝不责怪用户。</p>
+<div class="quote">
       "Error messages should be expressed in plain language (no error codes), precisely indicate the problem, and constructively suggest a solution."
       <span class="source">— Jakob Nielsen《10 Usability Heuristics》第 9 条 (1994)</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>报错出现的时刻，用户已经受挫了。此时一句冷冰冰的「操作失败」或一串「Error 500」，是在伤口上撒盐。报错的本质是一次对话：用户做了某事没成，系统该像一个冷静的同事那样回应，而不是像一台报警器。还要警惕<strong>责怪</strong>——把「你输错了」换成中性的描述，主语从「你」移开。一条合格的报错有清晰的三段解剖结构，照着填即可。</p>
-    <div class="formula">
-      <div class="eq">
-        <span class="term">发生了什么</span><span class="op">+</span><span class="term">为什么</span><span class="op">+</span><span class="term">怎么办</span>
-      </div>
-      <div class="caption">报错三段式——缺「怎么办」最致命，等于把用户困在死路上</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">Error 500: Invalid input.</span>
-      <span class="after">We couldn't save your changes — the connection dropped. Try again; we've kept your draft.</span>
-      <span class="note">前者只有错误码和指责；后者三段齐全，还顺手安抚（草稿还在），把恐慌按了下去。</span>
-    </div>
-    <div class="example">
-      <span class="before">操作失败，请重试。</span>
-      <span class="after">这个邮箱已经注册过了。换一个邮箱，或直接登录。</span>
-      <span class="note">「操作失败」让用户原地打转；说清原因（已注册）并给两条出路，用户立刻知道怎么走。</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 表单校验、网络错误、空结果页、权限拒绝——任何「事情没成」的时刻</li>
-      <li>✓ 给开发者看的日志可以带错误码；给用户看的界面只留人话</li>
-      <li>✗ 误区：把堆栈、错误码原样抛给普通用户，徒增恐慌</li>
-      <li>✗ 误区：只说「出错了」却不给下一步，或用「你」开头变成指责</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>找你产品里最常见的一条报错，按「发生了什么 + 为什么 + 怎么办」重写一遍。<strong>思考题</strong>：哪些错误信息该详细（给开发者排查），哪些该极简体贴（给普通用户）？同一个错误能否两份措辞？</p>
-  </div>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>报错出现的时刻，用户已经受挫了。此时一句冷冰冰的「操作失败」或一串「Error 500」，是在伤口上撒盐。报错的本质是一次对话：用户做了某事没成，系统该像一个冷静的同事那样回应，而不是像一台报警器。还要警惕<strong>责怪</strong>——把「你输错了」换成中性的描述，主语从「你」移开。一条合格的报错有清晰的三段解剖结构，照着填即可。</p>
+<div class="formula">
+<div class="eq">
+<span class="term">发生了什么</span><span class="op">+</span><span class="term">为什么</span><span class="op">+</span><span class="term">怎么办</span>
+</div>
+<div class="caption">报错三段式——缺「怎么办」最致命，等于把用户困在死路上</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">Error 500: Invalid input.</span>
+<span class="after">We couldn't save your changes — the connection dropped. Try again; we've kept your draft.</span>
+<span class="note">前者只有错误码和指责；后者三段齐全，还顺手安抚（草稿还在），把恐慌按了下去。</span>
+</div>
+<div class="example">
+<span class="before">操作失败，请重试。</span>
+<span class="after">这个邮箱已经注册过了。换一个邮箱，或直接登录。</span>
+<span class="note">「操作失败」让用户原地打转；说清原因（已注册）并给两条出路，用户立刻知道怎么走。</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 表单校验、网络错误、空结果页、权限拒绝——任何「事情没成」的时刻</li>
+<li>✓ 给开发者看的日志可以带错误码；给用户看的界面只留人话</li>
+<li>✗ 误区：把堆栈、错误码原样抛给普通用户，徒增恐慌</li>
+<li>✗ 误区：只说「出错了」却不给下一步，或用「你」开头变成指责</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>找你产品里最常见的一条报错，按「发生了什么 + 为什么 + 怎么办」重写一遍。<strong>思考题</strong>：哪些错误信息该详细（给开发者排查），哪些该极简体贴（给普通用户）？同一个错误能否两份措辞？</p>
+</div>
 </section>
-
 <!-- Card 3: Voice & Tone -->
 <section class="card">
-  <div class="num">Principle 03</div>
-  <h2>Voice &amp; Tone：一个声音，多种语气</h2>
-  <div class="en-name">Voice &amp; Tone System</div>
-  <span class="tag">Mailchimp · 声音 · 一致性</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>声音（voice）是产品的人格，始终如一；语气（tone）随情境而变。<strong>一个声音，多种语气</strong>——正如一个人在婚礼和葬礼上，是同一个人，话却说得不同。</p>
-    <div class="quote">
+<div class="num">Principle 03</div>
+<h2 data-tts="f1d9bcdbff53975f">Voice &amp; Tone：一个声音，多种语气</h2>
+<div class="en-name">Voice &amp; Tone System</div>
+<span class="tag">Mailchimp · 声音 · 一致性</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>声音（voice）是产品的人格，始终如一；语气（tone）随情境而变。<strong>一个声音，多种语气</strong>——正如一个人在婚礼和葬礼上，是同一个人，话却说得不同。</p>
+<div class="quote">
       "Your voice doesn't change much from day to day, but your tone changes all the time."
       <span class="source">— Mailchimp《Content Style Guide》(Voice &amp; Tone)</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>一个人随手写一两句靠直觉，但一个产品有几百个文案触点、由多人协作——没有统一的声音，文案就会人格分裂：这一页活泼俏皮，那一页公文官腔。<strong>Voice 是固定的几个形容词</strong>（如「友好但不轻浮、专业但不端着」），写进规范文档，让所有人对齐。<strong>Tone 则要读场景</strong>：用户刚支付成功，可以欢快；刚撞上报错，就要克制体贴。最常见的灾难，是用同一种「俏皮」语气覆盖所有场景——在用户丢了数据时还卖萌，再统一的声音也变成冒犯。</p>
-    <div class="vt">
-      <div class="col voice"><div class="head">同一个 Voice</div><p>友好、清楚、不端架子——贯穿成功与失败两种场景</p></div>
-      <div class="col"><div class="head">成功 · 语气欢快</div><p>「搞定！报告已经发出去了 🎉」</p></div>
-      <div class="col"><div class="head">报错 · 语气收敛</div><p>「报告没能发出。草稿已保留，稍后再试。」</p></div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">Oops! Something went wrong, but no worries! 😄 (出现在支付失败页)</span>
-      <span class="after">Your payment didn't go through. Your card wasn't charged — check the number and try again.</span>
-      <span class="note">语气与场景错配是大忌：用户钱没付成，俏皮的 😄 像在嘲笑他。收敛语气、先安抚（没扣款），才得体。</span>
-    </div>
-    <div class="example">
-      <span class="before">报错页用了和首页一样的营销腔：「让我们一起开启精彩旅程！」</span>
-      <span class="after">「页面走丢了。回到首页，或用搜索找找看。」</span>
-      <span class="note">声音可以一致（都友好），但严肃场景必须换上克制的语气，而非套用欢迎词。</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 建立产品文案规范、多人协作、跨团队对齐时，先定 voice 再谈 tone</li>
-      <li>✓ 写每条文案前先问：用户此刻什么心情？该用什么语气接住他</li>
-      <li>✗ 误区：把 voice 和 tone 混为一谈，以为「品牌很活泼」就处处卖萌</li>
-      <li>✗ 误区：在报错、付费、隐私等严肃场景硬塞俏皮，灾难时刻还在开玩笑</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>给你的产品写下三个 voice 形容词，再为「成功 / 等待 / 报错」三种场景各写一句文案，检验声音是否一致、语气是否各得其所。<strong>思考题</strong>：正式的 B2B 或金融产品，也需要「人格化」的 voice 吗？还是克制本身就是它的声音？</p>
-  </div>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>一个人随手写一两句靠直觉，但一个产品有几百个文案触点、由多人协作——没有统一的声音，文案就会人格分裂：这一页活泼俏皮，那一页公文官腔。<strong>Voice 是固定的几个形容词</strong>（如「友好但不轻浮、专业但不端着」），写进规范文档，让所有人对齐。<strong>Tone 则要读场景</strong>：用户刚支付成功，可以欢快；刚撞上报错，就要克制体贴。最常见的灾难，是用同一种「俏皮」语气覆盖所有场景——在用户丢了数据时还卖萌，再统一的声音也变成冒犯。</p>
+<div class="vt">
+<div class="col voice"><div class="head">同一个 Voice</div><p>友好、清楚、不端架子——贯穿成功与失败两种场景</p></div>
+<div class="col"><div class="head">成功 · 语气欢快</div><p>「搞定！报告已经发出去了 🎉」</p></div>
+<div class="col"><div class="head">报错 · 语气收敛</div><p>「报告没能发出。草稿已保留，稍后再试。」</p></div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">Oops! Something went wrong, but no worries! 😄 (出现在支付失败页)</span>
+<span class="after">Your payment didn't go through. Your card wasn't charged — check the number and try again.</span>
+<span class="note">语气与场景错配是大忌：用户钱没付成，俏皮的 😄 像在嘲笑他。收敛语气、先安抚（没扣款），才得体。</span>
+</div>
+<div class="example">
+<span class="before">报错页用了和首页一样的营销腔：「让我们一起开启精彩旅程！」</span>
+<span class="after">「页面走丢了。回到首页，或用搜索找找看。」</span>
+<span class="note">声音可以一致（都友好），但严肃场景必须换上克制的语气，而非套用欢迎词。</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 建立产品文案规范、多人协作、跨团队对齐时，先定 voice 再谈 tone</li>
+<li>✓ 写每条文案前先问：用户此刻什么心情？该用什么语气接住他</li>
+<li>✗ 误区：把 voice 和 tone 混为一谈，以为「品牌很活泼」就处处卖萌</li>
+<li>✗ 误区：在报错、付费、隐私等严肃场景硬塞俏皮，灾难时刻还在开玩笑</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>给你的产品写下三个 voice 形容词，再为「成功 / 等待 / 报错」三种场景各写一句文案，检验声音是否一致、语气是否各得其所。<strong>思考题</strong>：正式的 B2B 或金融产品，也需要「人格化」的 voice 吗？还是克制本身就是它的声音？</p>
+</div>
 </section>
-
 <!-- Card 4: 文案检查表 -->
 <section class="card">
-  <div class="num">Principle 04</div>
-  <h2>文案检查表：能删一半吗？像人话吗？</h2>
-  <div class="en-name">The UX Copy Checklist</div>
-  <span class="tag">Krug · 检查表 · 删减</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>界面上的字比文章更要省——用户是来完成任务的，不是来读你的。终稿前过一遍清单，第一刀永远是：<strong>能不能删掉一半？</strong></p>
-    <div class="quote">
+<div class="num">Principle 04</div>
+<h2 data-tts="485d0972c70db653">文案检查表：能删一半吗？像人话吗？</h2>
+<div class="en-name">The UX Copy Checklist</div>
+<span class="tag">Krug · 检查表 · 删减</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>界面上的字比文章更要省——用户是来完成任务的，不是来读你的。终稿前过一遍清单，第一刀永远是：<strong>能不能删掉一半？</strong></p>
+<div class="quote">
       "Get rid of half the words on each page, then get rid of half of what's left."
       <span class="source">— Steve Krug《Don't Make Me Think》(2000)</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>Krug 的「砍一半，再砍一半」听着夸张，实践中却真能逼出大量「客套话」与「指示性废话」——欢迎辞、过度说明、礼貌缓冲。每个多余的字都在挡路。但砍字不是唯一标尺；一张实用的检查表至少四问：<strong>① 清晰</strong>（用户秒懂吗？）<strong>② 简洁</strong>（能更短吗？）<strong>③ 对话感</strong>（像人说话吗？）<strong>④ 有用</strong>（读完知道做什么吗？）。短而含糊和长而清楚之间，永远选清楚——砍字是为了让指引更锋利，不是为了字少。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">欢迎来到我们的平台！我们非常高兴您能加入。为了帮助您更好地开始，请按照以下步骤完成初始设置……</span>
-      <span class="after">三步开始：① 建项目　② 邀同事　③ 导入数据</span>
-      <span class="note">前者全是「happy talk」开场白，用户一个字也用不上；后者直接给路线图，砍掉八成，反而更友好。</span>
-    </div>
-    <div class="example">
-      <span class="before">Please be advised that in order to proceed you will need to complete all of the required fields below.</span>
-      <span class="after">Fill in the fields marked * to continue.</span>
-      <span class="note">「Please be advised that in order to」是纯礼貌噪音；砍到骨头，指令反而清楚。</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 任何界面文案的终稿审计；onboarding 与空状态是废话重灾区</li>
-      <li>✓ 终稿前逐条过四问：清晰 / 简洁 / 对话感 / 有用</li>
-      <li>✗ 误区：用「happy talk」开场白热场，把说明书整本塞进界面</li>
-      <li>✗ 误区：为了短而牺牲清晰——过度缩写、堆术语，用户反而更懵</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>拿你产品里一段 onboarding 或空状态文案，先用 Krug 法砍掉一半，再用四问逐条检查。<strong>思考题</strong>：「砍一半」在中文界面同样适用吗？中文单字信息密度更高，标尺该怎么调？</p>
-  </div>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>Krug 的「砍一半，再砍一半」听着夸张，实践中却真能逼出大量「客套话」与「指示性废话」——欢迎辞、过度说明、礼貌缓冲。每个多余的字都在挡路。但砍字不是唯一标尺；一张实用的检查表至少四问：<strong>① 清晰</strong>（用户秒懂吗？）<strong>② 简洁</strong>（能更短吗？）<strong>③ 对话感</strong>（像人说话吗？）<strong>④ 有用</strong>（读完知道做什么吗？）。短而含糊和长而清楚之间，永远选清楚——砍字是为了让指引更锋利，不是为了字少。</p>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">欢迎来到我们的平台！我们非常高兴您能加入。为了帮助您更好地开始，请按照以下步骤完成初始设置……</span>
+<span class="after">三步开始：① 建项目　② 邀同事　③ 导入数据</span>
+<span class="note">前者全是「happy talk」开场白，用户一个字也用不上；后者直接给路线图，砍掉八成，反而更友好。</span>
+</div>
+<div class="example">
+<span class="before">Please be advised that in order to proceed you will need to complete all of the required fields below.</span>
+<span class="after">Fill in the fields marked * to continue.</span>
+<span class="note">「Please be advised that in order to」是纯礼貌噪音；砍到骨头，指令反而清楚。</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 任何界面文案的终稿审计；onboarding 与空状态是废话重灾区</li>
+<li>✓ 终稿前逐条过四问：清晰 / 简洁 / 对话感 / 有用</li>
+<li>✗ 误区：用「happy talk」开场白热场，把说明书整本塞进界面</li>
+<li>✗ 误区：为了短而牺牲清晰——过度缩写、堆术语，用户反而更懵</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>拿你产品里一段 onboarding 或空状态文案，先用 Krug 法砍掉一半，再用四问逐条检查。<strong>思考题</strong>：「砍一半」在中文界面同样适用吗？中文单字信息密度更高，标尺该怎么调？</p>
+</div>
 </section>
-
 <div class="deep-title">— 深入思考 —</div>
-
 <details>
-  <summary>微文案到底该谁负责——设计师、工程师，还是专职 UX writer？</summary>
-  <div class="ans">理想状态有专职 UX writer，但多数团队没有。现实里它常沦为「最后顺手填的占位字」，由谁交付谁随手写，于是全产品声音四分五裂。更可行的做法：把微文案当成设计的一部分，在设计稿阶段就写真文案（而非 Lorem ipsum），并由一人或一份规范统一把关声音。文案不是上线前的装修，是体验的骨架。</div>
+<summary>微文案到底该谁负责——设计师、工程师，还是专职 UX writer？</summary>
+<div class="ans">理想状态有专职 UX writer，但多数团队没有。现实里它常沦为「最后顺手填的占位字」，由谁交付谁随手写，于是全产品声音四分五裂。更可行的做法：把微文案当成设计的一部分，在设计稿阶段就写真文案（而非 Lorem ipsum），并由一人或一份规范统一把关声音。文案不是上线前的装修，是体验的骨架。</div>
 </details>
 <details>
-  <summary>AI 能批量生成微文案吗？哪部分能交给 AI，哪部分不能？</summary>
-  <div class="ans">能起草，难定调。AI 很适合一次性产出大量按钮、提示的初稿，省掉空白页焦虑；但「此刻用户什么心情、该用什么语气接住他」这种判断，依赖对产品声音和具体情境的理解，仍要人把关。可行分工：AI 量产候选，人据 Voice &amp; Tone 规范筛选、调语气、定边界——尤其报错、付费、隐私这类高敏感触点，别让 AI 替你拿主意。</div>
+<summary>AI 能批量生成微文案吗？哪部分能交给 AI，哪部分不能？</summary>
+<div class="ans">能起草，难定调。AI 很适合一次性产出大量按钮、提示的初稿，省掉空白页焦虑；但「此刻用户什么心情、该用什么语气接住他」这种判断，依赖对产品声音和具体情境的理解，仍要人把关。可行分工：AI 量产候选，人据 Voice &amp; Tone 规范筛选、调语气、定边界——尤其报错、付费、隐私这类高敏感触点，别让 AI 替你拿主意。</div>
 </details>
 <details>
-  <summary>报错要「给出下一步」，但有时根本无解（服务器宕机），诚实和体贴怎么平衡？</summary>
-  <div class="ans">无解时，「下一步」就是诚实加最小可行动作。别假装有解（「请重试」明知重试也没用就是欺骗），而是说清现状、给一个真能做的动作：「我们这边出了问题，正在修。几分钟后再来，或到状态页看进展。」体贴不等于粉饰，而是不让用户徒劳地撞墙、不让他以为是自己的错。诚实本身就是一种体贴。</div>
+<summary>报错要「给出下一步」，但有时根本无解（服务器宕机），诚实和体贴怎么平衡？</summary>
+<div class="ans">无解时，「下一步」就是诚实加最小可行动作。别假装有解（「请重试」明知重试也没用就是欺骗），而是说清现状、给一个真能做的动作：「我们这边出了问题，正在修。几分钟后再来，或到状态页看进展。」体贴不等于粉饰，而是不让用户徒劳地撞墙、不让他以为是自己的错。诚实本身就是一种体贴。</div>
 </details>
 <details>
-  <summary>全球化产品在不同文化里，该坚持同一个 voice 吗？</summary>
-  <div class="ans">Voice 的内核（友好、清楚、可信）该全球一致，否则品牌人格会割裂；但表达分寸要本地化。英文界面里自然的俏皮和直呼「you」，在日文或正式商务中文里可能显得轻浮。所以不是照搬措辞，而是带着同一种性格、用当地得体的方式说话——像同一个人在不同国家做客，性情不变，礼数随俗。</div>
+<summary>全球化产品在不同文化里，该坚持同一个 voice 吗？</summary>
+<div class="ans">Voice 的内核（友好、清楚、可信）该全球一致，否则品牌人格会割裂；但表达分寸要本地化。英文界面里自然的俏皮和直呼「you」，在日文或正式商务中文里可能显得轻浮。所以不是照搬措辞，而是带着同一种性格、用当地得体的方式说话——像同一个人在不同国家做客，性情不变，礼数随俗。</div>
 </details>
 <details>
-  <summary>简洁、具体、对话感这些原则，在长文和微文案里是同一套吗？</summary>
-  <div class="ans">底层精神同源，约束截然不同。长文有铺陈、有节奏、可以慢慢带读者入境；微文案没有这个奢侈——它出现在用户分心、赶时间、只想完成任务的瞬间，必须一眼见效，且严重受空间和语境限制（一个按钮就几个字）。所以微文案把「简洁」推到极致，把「具体」聚焦到单一动作，对话感也要克制——它不是你在说话，是替用户把他的下一步说出来。</div>
+<summary>简洁、具体、对话感这些原则，在长文和微文案里是同一套吗？</summary>
+<div class="ans">底层精神同源，约束截然不同。长文有铺陈、有节奏、可以慢慢带读者入境；微文案没有这个奢侈——它出现在用户分心、赶时间、只想完成任务的瞬间，必须一眼见效，且严重受空间和语境限制（一个按钮就几个字）。所以微文案把「简洁」推到极致，把「具体」聚焦到单一动作，对话感也要克制——它不是你在说话，是替用户把他的下一步说出来。</div>
 </details>
-
 <div class="nav">
-  <a href="index.html">← 回到写作目录</a>
+<a href="index.html">← 回到写作目录</a>
 </div>
-
 <footer>BigCat · Writing · Day 23 · 2026</footer>
-
 </div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
+<script defer="" src="https://cissy0802.github.io/comments.js"></script>
+<script defer="" src="https://cissy0802.github.io/search.js"></script>
+<script defer="" src="https://cissy0802.github.io/index-button.js"></script>
+<script defer="" src="https://cissy0802.github.io/i18n-tts.js"></script>
 </body>
 </html>
