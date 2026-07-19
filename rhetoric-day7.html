@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>写作与表达：说服的修辞 — Day 7</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -105,361 +106,322 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 </head>
 <body>
 <div class="container">
-
 <header>
-  <div class="week-label">Day 7 · 2026.05.25</div>
-  <h1>写作与表达：说服的修辞<span class="topic">Rhetoric &amp; Persuasion — From Aristotle to Kahneman</span></h1>
-  <div class="date">BigCat's Writing</div>
-  <p class="intro">写作不是炫学，演讲不是表演，技术文档也不是清单——它们是"让另一个大脑产生位移"的工具。两千年前亚里士多德给出三柱：人格、情感、逻辑；两千年后 Kahneman 补上认知科学：系统 1 不放行，系统 2 不入场。本周四条原则——三柱、证据梯度、反论预处理、认知顺畅——把"我讲了"升级为"对方动了"的全套基础设施。技术人最容易跛的那条腿（ethos / pathos），本周补满。</p>
+<div class="week-label">Day 7 · 2026.05.25</div>
+<h1 data-tts="31e8b766a657fdba">写作与表达：说服的修辞<span class="topic">Rhetoric &amp; Persuasion — From Aristotle to Kahneman</span></h1>
+<div class="date">BigCat's Writing</div>
+<p class="intro">写作不是炫学，演讲不是表演，技术文档也不是清单——它们是"让另一个大脑产生位移"的工具。两千年前亚里士多德给出三柱：人格、情感、逻辑；两千年后 Kahneman 补上认知科学：系统 1 不放行，系统 2 不入场。本周四条原则——三柱、证据梯度、反论预处理、认知顺畅——把"我讲了"升级为"对方动了"的全套基础设施。技术人最容易跛的那条腿（ethos / pathos），本周补满。</p>
 </header>
-
 <!-- Card 1: Ethos / Pathos / Logos -->
 <section class="card">
-  <div class="num">Principle 01</div>
-  <h2>三柱说服：人格 · 情感 · 逻辑</h2>
-  <div class="en-name">Ethos · Pathos · Logos — Aristotle's Three Pillars</div>
-  <span class="tag">E · P · L · 三柱</span>
-
-  <div class="section">
-    <div class="label">一句话原则 + 名家原话</div>
-    <p>说服 = 人格可信（ethos） × 情感共振（pathos） × 逻辑严密（logos）。三者相乘，任何一柱为零，结果为零。</p>
-    <div class="quote">
+<div class="num">Principle 01</div>
+<h2 data-tts="461725d2fdf12c14">三柱说服：人格 · 情感 · 逻辑</h2>
+<div class="en-name">Ethos · Pathos · Logos — Aristotle's Three Pillars</div>
+<span class="tag">E · P · L · 三柱</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>说服 = 人格可信（ethos） × 情感共振（pathos） × 逻辑严密（logos）。三者相乘，任何一柱为零，结果为零。</p>
+<div class="quote">
       "Of the modes of persuasion furnished by the spoken word there are three kinds. The first depends on the personal character of the speaker [ethos]; the second on putting the audience into a certain frame of mind [pathos]; the third on the proof, or apparent proof, provided by the words of the speech itself [logos]."
       <span class="source">— Aristotle《Rhetoric》Book I, Ch. 2（约公元前 350 年）</span>
-    </div>
-    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：言说的说服方式有三类——讲者的人格、将听众带入某种心境、言语本身提供的（实在或表面上的）证据。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>技术人最常见的盲区：偏 logos 偏到对称失衡。"我数据漂亮，他应该被说服。"——但若听众不信你（ethos 失），或对议题不在乎（pathos 缺），再硬的数据也只从表面滑过。Aristotle 给的解药是三柱并立、无主次。关键洞察是 ethos 不是"我说我厉害"——是"在此刻对方眼里的我"，包括你的开场（自信 vs 局促）、你的经历（凭什么）、你引用的人（站在谁的肩膀）；pathos 也不是煽情，是让议题从"抽象数字"变成"会影响我的事"。</p>
-
-    <div class="pillars-box">
-      <div class="pillars">
-        <div class="pillar">
-          <div class="gk">Ethos</div>
-          <div class="nm">人格</div>
-          <div class="cn">凭什么是我说<br>资历 · 经历 · 引用</div>
-        </div>
-        <div class="pillar">
-          <div class="gk">Pathos</div>
-          <div class="nm">情感</div>
-          <div class="cn">为什么我要在乎<br>故事 · 利害 · 共情</div>
-        </div>
-        <div class="pillar">
-          <div class="gk">Logos</div>
-          <div class="nm">逻辑</div>
-          <div class="cn">为什么这是对的<br>数据 · 推理 · 证据</div>
-        </div>
-      </div>
-      <div class="caption">三柱并立，无主次。任一柱塌，论说全塌。</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">在过去 12 个月，我作为 tech lead 完成了 4 个 P0 项目，团队 NPS 从 38 提至 67，效率指标提升 32%。（晋升 packet 自述，纯 logos，三柱站一柱）</span>
-      <span class="after">四年前我加入时，这个系统每月宕机 6 次（pathos：让评委先记起痛点）。我 2019 年在 X 公司主导过一次类似迁移，那次失败给了我现在所有的判断（ethos：经历——含失败——给了可信度）。过去 12 个月，4 个 P0、NPS +29、效率 +32%（logos：硬数据落锤）。</span>
-    </div>
-    <div class="example">
-      <span class="before">Our service has 99.95% uptime and 23ms P99 latency.</span>
-      <span class="after">In 2021, we lost three days of orders to a cache miscalculation (pathos: a story). The on-call who fixed it now runs reliability for us (ethos: who is guarding the gate). Today: 99.95% uptime, 23ms P99 (logos).</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 晋升 packet · 决策备忘录 · 对外 keynote · 融资 pitch · 跨部门争取资源</li>
-      <li>✗ 不适用：纯技术评审（reviewer 要 spec / 数据，不要 ethos 表演）· 日常 Slack（过度修辞 = 做作）</li>
-      <li>错误一：工程师 90% 用 logos，以为对方理性——其实对方先得"为什么信你"</li>
-      <li>错误二：销售 / PR 90% 用 pathos，煽完情数据稀薄，事后被质疑"水货"</li>
-      <li>错误三：自吹 ethos——"我是行业专家"是反 ethos。Ethos 由别人或经历替你说</li>
-      <li>错误四：把 pathos 等于"激动语气"——pathos 是让对方在乎，不是你大声</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <div class="label">关键参考</div>
-    <p class="refs"><span>Aristotle</span>《Rhetoric》Book I, Ch. 2 · <span>James A. Herrick</span>《The History and Theory of Rhetoric》Ch. 3 — 三柱在现代修辞学中的演化</p>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p><strong>习作：</strong>找你下一份要发的 packet / memo（提名、争取、对内 ask），逐句标 E / P / L。若 80% 是 L、E 与 P 各 10%，重写：第一段补"为什么是我"（ethos），第二段补"为什么这事在乎"（pathos），保留你最硬的数据当落锤。<br><strong>思考：</strong>在 AI 时代，"ethos 由谁担保"会发生什么变化？当 AI 替我写、替我代发的部分越来越多——读者还在读"我"吗，还是读"我审过的我"？</p>
-  </div>
+</div>
+<p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：言说的说服方式有三类——讲者的人格、将听众带入某种心境、言语本身提供的（实在或表面上的）证据。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>技术人最常见的盲区：偏 logos 偏到对称失衡。"我数据漂亮，他应该被说服。"——但若听众不信你（ethos 失），或对议题不在乎（pathos 缺），再硬的数据也只从表面滑过。Aristotle 给的解药是三柱并立、无主次。关键洞察是 ethos 不是"我说我厉害"——是"在此刻对方眼里的我"，包括你的开场（自信 vs 局促）、你的经历（凭什么）、你引用的人（站在谁的肩膀）；pathos 也不是煽情，是让议题从"抽象数字"变成"会影响我的事"。</p>
+<div class="pillars-box">
+<div class="pillars">
+<div class="pillar">
+<div class="gk">Ethos</div>
+<div class="nm">人格</div>
+<div class="cn">凭什么是我说<br/>资历 · 经历 · 引用</div>
+</div>
+<div class="pillar">
+<div class="gk">Pathos</div>
+<div class="nm">情感</div>
+<div class="cn">为什么我要在乎<br/>故事 · 利害 · 共情</div>
+</div>
+<div class="pillar">
+<div class="gk">Logos</div>
+<div class="nm">逻辑</div>
+<div class="cn">为什么这是对的<br/>数据 · 推理 · 证据</div>
+</div>
+</div>
+<div class="caption">三柱并立，无主次。任一柱塌，论说全塌。</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">在过去 12 个月，我作为 tech lead 完成了 4 个 P0 项目，团队 NPS 从 38 提至 67，效率指标提升 32%。（晋升 packet 自述，纯 logos，三柱站一柱）</span>
+<span class="after">四年前我加入时，这个系统每月宕机 6 次（pathos：让评委先记起痛点）。我 2019 年在 X 公司主导过一次类似迁移，那次失败给了我现在所有的判断（ethos：经历——含失败——给了可信度）。过去 12 个月，4 个 P0、NPS +29、效率 +32%（logos：硬数据落锤）。</span>
+</div>
+<div class="example">
+<span class="before">Our service has 99.95% uptime and 23ms P99 latency.</span>
+<span class="after">In 2021, we lost three days of orders to a cache miscalculation (pathos: a story). The on-call who fixed it now runs reliability for us (ethos: who is guarding the gate). Today: 99.95% uptime, 23ms P99 (logos).</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 晋升 packet · 决策备忘录 · 对外 keynote · 融资 pitch · 跨部门争取资源</li>
+<li>✗ 不适用：纯技术评审（reviewer 要 spec / 数据，不要 ethos 表演）· 日常 Slack（过度修辞 = 做作）</li>
+<li>错误一：工程师 90% 用 logos，以为对方理性——其实对方先得"为什么信你"</li>
+<li>错误二：销售 / PR 90% 用 pathos，煽完情数据稀薄，事后被质疑"水货"</li>
+<li>错误三：自吹 ethos——"我是行业专家"是反 ethos。Ethos 由别人或经历替你说</li>
+<li>错误四：把 pathos 等于"激动语气"——pathos 是让对方在乎，不是你大声</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">关键参考</div>
+<p class="refs"><span>Aristotle</span>《Rhetoric》Book I, Ch. 2 · <span>James A. Herrick</span>《The History and Theory of Rhetoric》Ch. 3 — 三柱在现代修辞学中的演化</p>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p><strong>习作：</strong>找你下一份要发的 packet / memo（提名、争取、对内 ask），逐句标 E / P / L。若 80% 是 L、E 与 P 各 10%，重写：第一段补"为什么是我"（ethos），第二段补"为什么这事在乎"（pathos），保留你最硬的数据当落锤。<br/><strong>思考：</strong>在 AI 时代，"ethos 由谁担保"会发生什么变化？当 AI 替我写、替我代发的部分越来越多——读者还在读"我"吗，还是读"我审过的我"？</p>
+</div>
 </section>
-
 <!-- Card 2: Evidence Hierarchy -->
 <section class="card">
-  <div class="num">Principle 02</div>
-  <h2>证据梯度：把"我有多确定"显示出来</h2>
-  <div class="en-name">The Evidence Hierarchy — Explicit Epistemic Status</div>
-  <span class="tag">H · 证据</span>
-
-  <div class="section">
-    <div class="label">一句话原则 + 名家原话</div>
-    <p>每个论断都附一个隐形的"我多确定"标签——而这标签的依据有公开的梯级：直觉 &lt; 类比 &lt; 案例 &lt; 数据 &lt; 共识 &lt; 实证。把梯级显示出来，可信度成倍上升。</p>
-    <div class="quote">
+<div class="num">Principle 02</div>
+<h2 data-tts="ef2bc9a446b025ea">证据梯度：把"我有多确定"显示出来</h2>
+<div class="en-name">The Evidence Hierarchy — Explicit Epistemic Status</div>
+<span class="tag">H · 证据</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>每个论断都附一个隐形的"我多确定"标签——而这标签的依据有公开的梯级：直觉 &lt; 类比 &lt; 案例 &lt; 数据 &lt; 共识 &lt; 实证。把梯级显示出来，可信度成倍上升。</p>
+<div class="quote">
       "What you see is all there is. ... System 1 is radically insensitive to both the quality and the quantity of the information."
       <span class="source">— Daniel Kahneman《Thinking, Fast and Slow》(2011), Ch. 7（WYSIATI）</span>
-    </div>
-    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：你眼前看到的就是全部——系统 1 对信息的质量和数量都极度不敏感。所以写作者必须主动标出证据梯级，否则读者会用最弱证据冒充结论。配合 Hitchens's Razor："That which can be asserted without evidence can be dismissed without evidence."</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>最常见的隐性欺骗不是说谎，是"省略不确定度"。一句"用户更喜欢 A"，可能源自：(a) 自己直觉、(b) 4 个客户访谈、(c) 1000 人 A/B、(d) 3 份独立报告。四种证据级别天差地别，作者只写"用户更喜欢 A"——读者按最强证据信任。这是结构性失信。<br>解药是 Scott Alexander 在 Slate Star Codex 推广的 "Epistemic Status" 标注：每段或每篇标"我多信"。技术写作版本就是在论断后加括号注解："（n=4 访谈）"、"（A/B 1000 人）"、"（我猜的）"。看似谦虚，实际把整篇可信度抬上去——因为"作者会标弱证据 → 那么没标的应该是强的"。</p>
-
-    <div class="ladder">
-      <div class="rung"><div class="lvl">1</div><div class="nm">直觉 Intuition</div><div class="bar"><div class="fill" style="width:12%"></div></div><div class="ex">"我感觉…"</div></div>
-      <div class="rung"><div class="lvl">2</div><div class="nm">类比 Analogy</div><div class="bar"><div class="fill" style="width:24%"></div></div><div class="ex">"上次 X 也是这样"</div></div>
-      <div class="rung"><div class="lvl">3</div><div class="nm">案例 Anecdote</div><div class="bar"><div class="fill" style="width:40%"></div></div><div class="ex">"客户 A 告诉我"</div></div>
-      <div class="rung"><div class="lvl">4</div><div class="nm">数据 Data</div><div class="bar"><div class="fill" style="width:60%"></div></div><div class="ex">"n=200 的调研"</div></div>
-      <div class="rung"><div class="lvl">5</div><div class="nm">共识 Consensus</div><div class="bar"><div class="fill" style="width:78%"></div></div><div class="ex">"3 位独立专家一致"</div></div>
-      <div class="rung"><div class="lvl">6</div><div class="nm">实证 Empirical</div><div class="bar"><div class="fill" style="width:95%"></div></div><div class="ex">"RCT / A/B, p&lt;0.01"</div></div>
-      <div class="caption">证据梯度，弱到强。写作者的纪律：在论断后标出它属于哪级。</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">用户更喜欢新的 onboarding 流程，应该 ship。（决策 memo 一句话，读者无从判断作者多确定）</span>
-      <span class="after">新 onboarding 在 A/B 测试（n=12000，p&lt;0.001）将 D1 留存从 38% 提至 47%（实证）。这与 8 月那次改动方向一致（案例支持）。我对长期效应不确定——3 月那次的提升曾在 6 月回吐（标注弱证据）。建议 ship + 90 天监测。</span>
-    </div>
-    <div class="example">
-      <span class="before">Our users want simpler dashboards.</span>
-      <span class="after">Three customer interviews (anecdote, n=3) and one in-product survey (data, n=842; 67% prefer fewer panels) both point to simpler dashboards. I am 70% confident this generalizes to the enterprise tier — we have not tested there.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 决策 memo · 技术 RFC · ADR · 晋升 self-review · 对高层 ask</li>
-      <li>✓ 任何"我建议 X"句子之前——养成习惯：每个论断后问"我有多确定"</li>
-      <li>✗ 不适用：纯叙事 / 故事（标 epistemic 破坏节奏）· 销售文案（标弱证据折气势）</li>
-      <li>错误：用最强证据冒充全部——一份报告 80% 是直觉，读着像都是数据</li>
-      <li>错误："研究表明"做万能挡箭牌——不引论文等于没说</li>
-      <li>错误：全篇标"我 100% 确定"——一律最强反而失信，谦虚的"70%"更可信</li>
-      <li>错误：把"3 个客户反馈"等价数据——anecdote 不是 data</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <div class="label">关键参考</div>
-    <p class="refs"><span>Daniel Kahneman</span>《Thinking, Fast and Slow》Ch. 7 — WYSIATI · <span>Christopher Hitchens</span>《God Is Not Great》(2007) — Hitchens's Razor · <span>Scott Alexander</span>《Slate Star Codex》— "Epistemic Status" 标注的现代倡导</p>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p><strong>习作：</strong>找你最近写的一份决策 memo，逐句标 E1–E6。若超过 60% 是 E1–E2，重写：要么明确标弱证据，要么去找更强证据。Bonus：文末加一段 "Epistemic Status"——写明"全文我整体多自信、哪几点是猜的"。<br><strong>思考：</strong>在你的组织文化里，是"过度谦虚"被看穿弱，还是"过度确定"被看穿水？什么样的 mix 在你的语境里最 robust？</p>
-  </div>
+</div>
+<p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：你眼前看到的就是全部——系统 1 对信息的质量和数量都极度不敏感。所以写作者必须主动标出证据梯级，否则读者会用最弱证据冒充结论。配合 Hitchens's Razor："That which can be asserted without evidence can be dismissed without evidence."</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>最常见的隐性欺骗不是说谎，是"省略不确定度"。一句"用户更喜欢 A"，可能源自：(a) 自己直觉、(b) 4 个客户访谈、(c) 1000 人 A/B、(d) 3 份独立报告。四种证据级别天差地别，作者只写"用户更喜欢 A"——读者按最强证据信任。这是结构性失信。<br/>解药是 Scott Alexander 在 Slate Star Codex 推广的 "Epistemic Status" 标注：每段或每篇标"我多信"。技术写作版本就是在论断后加括号注解："（n=4 访谈）"、"（A/B 1000 人）"、"（我猜的）"。看似谦虚，实际把整篇可信度抬上去——因为"作者会标弱证据 → 那么没标的应该是强的"。</p>
+<div class="ladder">
+<div class="rung"><div class="lvl">1</div><div class="nm">直觉 Intuition</div><div class="bar"><div class="fill" style="width:12%"></div></div><div class="ex">"我感觉…"</div></div>
+<div class="rung"><div class="lvl">2</div><div class="nm">类比 Analogy</div><div class="bar"><div class="fill" style="width:24%"></div></div><div class="ex">"上次 X 也是这样"</div></div>
+<div class="rung"><div class="lvl">3</div><div class="nm">案例 Anecdote</div><div class="bar"><div class="fill" style="width:40%"></div></div><div class="ex">"客户 A 告诉我"</div></div>
+<div class="rung"><div class="lvl">4</div><div class="nm">数据 Data</div><div class="bar"><div class="fill" style="width:60%"></div></div><div class="ex">"n=200 的调研"</div></div>
+<div class="rung"><div class="lvl">5</div><div class="nm">共识 Consensus</div><div class="bar"><div class="fill" style="width:78%"></div></div><div class="ex">"3 位独立专家一致"</div></div>
+<div class="rung"><div class="lvl">6</div><div class="nm">实证 Empirical</div><div class="bar"><div class="fill" style="width:95%"></div></div><div class="ex">"RCT / A/B, p&lt;0.01"</div></div>
+<div class="caption">证据梯度，弱到强。写作者的纪律：在论断后标出它属于哪级。</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">用户更喜欢新的 onboarding 流程，应该 ship。（决策 memo 一句话，读者无从判断作者多确定）</span>
+<span class="after">新 onboarding 在 A/B 测试（n=12000，p&lt;0.001）将 D1 留存从 38% 提至 47%（实证）。这与 8 月那次改动方向一致（案例支持）。我对长期效应不确定——3 月那次的提升曾在 6 月回吐（标注弱证据）。建议 ship + 90 天监测。</span>
+</div>
+<div class="example">
+<span class="before">Our users want simpler dashboards.</span>
+<span class="after">Three customer interviews (anecdote, n=3) and one in-product survey (data, n=842; 67% prefer fewer panels) both point to simpler dashboards. I am 70% confident this generalizes to the enterprise tier — we have not tested there.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 决策 memo · 技术 RFC · ADR · 晋升 self-review · 对高层 ask</li>
+<li>✓ 任何"我建议 X"句子之前——养成习惯：每个论断后问"我有多确定"</li>
+<li>✗ 不适用：纯叙事 / 故事（标 epistemic 破坏节奏）· 销售文案（标弱证据折气势）</li>
+<li>错误：用最强证据冒充全部——一份报告 80% 是直觉，读着像都是数据</li>
+<li>错误："研究表明"做万能挡箭牌——不引论文等于没说</li>
+<li>错误：全篇标"我 100% 确定"——一律最强反而失信，谦虚的"70%"更可信</li>
+<li>错误：把"3 个客户反馈"等价数据——anecdote 不是 data</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">关键参考</div>
+<p class="refs"><span>Daniel Kahneman</span>《Thinking, Fast and Slow》Ch. 7 — WYSIATI · <span>Christopher Hitchens</span>《God Is Not Great》(2007) — Hitchens's Razor · <span>Scott Alexander</span>《Slate Star Codex》— "Epistemic Status" 标注的现代倡导</p>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p><strong>习作：</strong>找你最近写的一份决策 memo，逐句标 E1–E6。若超过 60% 是 E1–E2，重写：要么明确标弱证据，要么去找更强证据。Bonus：文末加一段 "Epistemic Status"——写明"全文我整体多自信、哪几点是猜的"。<br/><strong>思考：</strong>在你的组织文化里，是"过度谦虚"被看穿弱，还是"过度确定"被看穿水？什么样的 mix 在你的语境里最 robust？</p>
+</div>
 </section>
-
 <!-- Card 3: Steelmanning + Pre-mortem -->
 <section class="card">
-  <div class="num">Principle 03</div>
-  <h2>反论预处理：替对方把反驳说得更好</h2>
-  <div class="en-name">Steelmanning &amp; Pre-mortem — Pre-empting the Counter-argument</div>
-  <span class="tag">S · 反论</span>
-
-  <div class="section">
-    <div class="label">一句话原则 + 名家原话</div>
-    <p>在对方反驳你之前，先替对方把反驳说得比他自己更好——做得到，你赢一半；做不到，你的论点还没成熟到能 ship。</p>
-    <div class="quote">
+<div class="num">Principle 03</div>
+<h2 data-tts="11e4293cea73ade3">反论预处理：替对方把反驳说得更好</h2>
+<div class="en-name">Steelmanning &amp; Pre-mortem — Pre-empting the Counter-argument</div>
+<span class="tag">S · 反论</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>在对方反驳你之前，先替对方把反驳说得比他自己更好——做得到，你赢一半；做不到，你的论点还没成熟到能 ship。</p>
+<div class="quote">
       "I never allow myself to have an opinion on anything that I don't know the other side's argument better than they do."
       <span class="source">— Charlie Munger《Poor Charlie's Almanack》（1996 USC Law 演讲）</span>
-    </div>
-    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：除非我对反方观点的理解比反方自己还透彻，否则我从不让自己持有看法。延伸—— Gary Klein 的 "Pre-mortem"：Kahneman《Thinking, Fast and Slow》Ch. 24 引述并推广："Imagine the project has failed. Now write a history of that failure."（假装它已经失败了，回头写一段失败叙事。）</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>组织里的备忘录与提议，绝大多数是"半成熟的乐观"——作者把对自己有利的看到 90%，对反方的看到 10%。Steelmanning 把这比例倒过来：主张写完后，单独一段 "Strongest Counterargument"，替对方组织最强论据。写不出，说明你还没成熟到能 ship。写得出，读者读到这段会暴增信任——作者已经替我想过我会反驳的，那剩下的怀疑大概率作者也想过了。<br>Pre-mortem 是 steelmanning 的时间版：还没出事，先假装已经失败，回溯失败叙事。比起"风险清单"，pre-mortem 把人放进失败的未来叙事里——叙事激活的细节远远多于清单。</p>
-
-    <div class="steel-box">
-      <div class="steel-cell mine">
-        <div class="hd">My View</div>
-        <div class="body">"建议 H1 全力投入 Feature X，预期 30% DAU 提升。"</div>
-      </div>
-      <div class="steel-cell steel">
-        <div class="hd">Steelman</div>
-        <div class="body">"若低留存的根因是 onboarding 不是缺 X，Feature X 只能短暂拉新，3 个月内回吐——这与 Q1 类似实验的轨迹吻合。"</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">建议 H1 全力投入 Feature X，预期 30% DAU 提升。风险：执行风险、市场风险。（"风险"写得空、像 boilerplate）</span>
-      <span class="after">建议 H1 全力投入 Feature X，预期 30% DAU 提升。<br><strong>反方最强论据 (steelman)：</strong>若低留存根因是 onboarding 而非缺 X，Feature X 仅能短暂拉新、3 个月内回吐，且会错过 onboarding 重构窗口。<br><strong>Pre-mortem：</strong>假设 6 个月后失败——最可能的叙事是 ship 后 D7 +35%、D90 回基线、团队精疲力竭、onboarding 仍未动。<br><strong>缓解：</strong>设 90 天 kill criteria（D60 回吐 &gt;50% 则停）+ 并行启动 onboarding 探索。</span>
-    </div>
-    <div class="example">
-      <span class="before">We should migrate to Service Y. It's better.</span>
-      <span class="after">We should migrate to Service Y. <em>Steelman of staying:</em> Y is 18 months less battle-tested; our incident playbook is X-native; the 40ms latency gain sits below user-perceptible threshold for our workload. <em>Why I still recommend Y:</em> compounding cost curve, rollback gated on day-30 metrics.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 决策 memo · 产品 / 技术 RFC · 投资分析 · 晋升答辩 · 高 stake 谈判</li>
-      <li>✓ 越高 stake 的决定，steelman 越强代表你越准备好了</li>
-      <li>✗ 不适用：行动呼吁里塞 steelman 稀释紧迫感（"我们必须现在 ship！"后接反方等于自废武功）</li>
-      <li>错误：写成 strawman——把反方写成最弱版本，自己赢得开心</li>
-      <li>错误：pre-mortem 写成"风险列表"——丢了"已经失败"的叙事力，回到 boilerplate</li>
-      <li>错误：steelman 写完不回应——既然摆出来就要正面解决，不解决比不写更糟</li>
-      <li>错误：自己 steelman 自己易自欺——最强 steelman 来自请聪明同事或让 AI 用尽全力反驳你</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <div class="label">关键参考</div>
-    <p class="refs"><span>Charlie Munger</span>《Poor Charlie's Almanack》— Mental Models · <span>Gary Klein</span>"Performing a Project Premortem"《Harvard Business Review》2007 · <span>Daniel Kahneman</span>《Thinking, Fast and Slow》Ch. 24</p>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p><strong>习作：</strong>找你手上最重要的一份决策 memo，加两段：(1) Steelman（≥150 字，写到自己都被说服了一半的程度）；(2) Pre-mortem（≥120 字，一段"它失败了"的叙事）。Bonus：用一个反向人格的 prompt，让 AI 替你反驳一遍，挑最强一条放进 steelman。<br><strong>思考：</strong>在你组织的文化里，公开承认"反方有 X 一条强论据"是被看作"坦诚的强者"还是"立场不坚定"？怎样的语言能让两者两全？</p>
-  </div>
+</div>
+<p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：除非我对反方观点的理解比反方自己还透彻，否则我从不让自己持有看法。延伸—— Gary Klein 的 "Pre-mortem"：Kahneman《Thinking, Fast and Slow》Ch. 24 引述并推广："Imagine the project has failed. Now write a history of that failure."（假装它已经失败了，回头写一段失败叙事。）</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>组织里的备忘录与提议，绝大多数是"半成熟的乐观"——作者把对自己有利的看到 90%，对反方的看到 10%。Steelmanning 把这比例倒过来：主张写完后，单独一段 "Strongest Counterargument"，替对方组织最强论据。写不出，说明你还没成熟到能 ship。写得出，读者读到这段会暴增信任——作者已经替我想过我会反驳的，那剩下的怀疑大概率作者也想过了。<br/>Pre-mortem 是 steelmanning 的时间版：还没出事，先假装已经失败，回溯失败叙事。比起"风险清单"，pre-mortem 把人放进失败的未来叙事里——叙事激活的细节远远多于清单。</p>
+<div class="steel-box">
+<div class="steel-cell mine">
+<div class="hd">My View</div>
+<div class="body">"建议 H1 全力投入 Feature X，预期 30% DAU 提升。"</div>
+</div>
+<div class="steel-cell steel">
+<div class="hd">Steelman</div>
+<div class="body">"若低留存的根因是 onboarding 不是缺 X，Feature X 只能短暂拉新，3 个月内回吐——这与 Q1 类似实验的轨迹吻合。"</div>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">建议 H1 全力投入 Feature X，预期 30% DAU 提升。风险：执行风险、市场风险。（"风险"写得空、像 boilerplate）</span>
+<span class="after">建议 H1 全力投入 Feature X，预期 30% DAU 提升。<br/><strong>反方最强论据 (steelman)：</strong>若低留存根因是 onboarding 而非缺 X，Feature X 仅能短暂拉新、3 个月内回吐，且会错过 onboarding 重构窗口。<br/><strong>Pre-mortem：</strong>假设 6 个月后失败——最可能的叙事是 ship 后 D7 +35%、D90 回基线、团队精疲力竭、onboarding 仍未动。<br/><strong>缓解：</strong>设 90 天 kill criteria（D60 回吐 &gt;50% 则停）+ 并行启动 onboarding 探索。</span>
+</div>
+<div class="example">
+<span class="before">We should migrate to Service Y. It's better.</span>
+<span class="after">We should migrate to Service Y. <em>Steelman of staying:</em> Y is 18 months less battle-tested; our incident playbook is X-native; the 40ms latency gain sits below user-perceptible threshold for our workload. <em>Why I still recommend Y:</em> compounding cost curve, rollback gated on day-30 metrics.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 决策 memo · 产品 / 技术 RFC · 投资分析 · 晋升答辩 · 高 stake 谈判</li>
+<li>✓ 越高 stake 的决定，steelman 越强代表你越准备好了</li>
+<li>✗ 不适用：行动呼吁里塞 steelman 稀释紧迫感（"我们必须现在 ship！"后接反方等于自废武功）</li>
+<li>错误：写成 strawman——把反方写成最弱版本，自己赢得开心</li>
+<li>错误：pre-mortem 写成"风险列表"——丢了"已经失败"的叙事力，回到 boilerplate</li>
+<li>错误：steelman 写完不回应——既然摆出来就要正面解决，不解决比不写更糟</li>
+<li>错误：自己 steelman 自己易自欺——最强 steelman 来自请聪明同事或让 AI 用尽全力反驳你</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">关键参考</div>
+<p class="refs"><span>Charlie Munger</span>《Poor Charlie's Almanack》— Mental Models · <span>Gary Klein</span>"Performing a Project Premortem"《Harvard Business Review》2007 · <span>Daniel Kahneman</span>《Thinking, Fast and Slow》Ch. 24</p>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p><strong>习作：</strong>找你手上最重要的一份决策 memo，加两段：(1) Steelman（≥150 字，写到自己都被说服了一半的程度）；(2) Pre-mortem（≥120 字，一段"它失败了"的叙事）。Bonus：用一个反向人格的 prompt，让 AI 替你反驳一遍，挑最强一条放进 steelman。<br/><strong>思考：</strong>在你组织的文化里，公开承认"反方有 X 一条强论据"是被看作"坦诚的强者"还是"立场不坚定"？怎样的语言能让两者两全？</p>
+</div>
 </section>
-
 <!-- Card 4: System 1/2 -->
 <section class="card">
-  <div class="num">Principle 04</div>
-  <h2>认知顺畅：先放行系统 1，再说服系统 2</h2>
-  <div class="en-name">Cognitive Ease — System 1 Lets You In, System 2 Listens</div>
-  <span class="tag">K · 认知</span>
-
-  <div class="section">
-    <div class="label">一句话原则 + 名家原话</div>
-    <p>说服不是"让对方思考"——是让对方的系统 1（快、直觉）先放松，再让系统 2（慢、逻辑）愿意走一遍。读着累 → 系统 1 警铃 → 系统 2 不入场 → 你输。</p>
-    <div class="quote">
+<div class="num">Principle 04</div>
+<h2 data-tts="de648514625a7adc">认知顺畅：先放行系统 1，再说服系统 2</h2>
+<div class="en-name">Cognitive Ease — System 1 Lets You In, System 2 Listens</div>
+<span class="tag">K · 认知</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>说服不是"让对方思考"——是让对方的系统 1（快、直觉）先放松，再让系统 2（慢、逻辑）愿意走一遍。读着累 → 系统 1 警铃 → 系统 2 不入场 → 你输。</p>
+<div class="quote">
       "A reliable way to make people believe in falsehoods is frequent repetition, because familiarity is not easily distinguished from truth. ... Anything that makes it easier for the associative machine to run smoothly will also bias beliefs."
       <span class="source">— Daniel Kahneman《Thinking, Fast and Slow》(2011), Ch. 5</span>
-    </div>
-    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：让人相信谬误最可靠的办法是反复——熟悉与真相在大脑里难以区分。任何让联想机器运转更顺滑的东西，都会让信念更容易接受。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>这是 cognitive ease（认知顺畅）原理的核心。写作上的具体含义：<br>(1) <strong>可读性 = 可信度</strong>——清晰字体、舒服字号、短句、节奏 / 押韵。著名实验：同一句话用清晰字体 vs 模糊字体呈现，前者被评为"更可能为真"。<br>(2) <strong>句长经济</strong>——超 35 字的中文长句、超 25 词的英文句，读者已在用系统 2 解析语法，没精力同时审你的论点。<br>(3) <strong>锚定 Anchoring</strong>——第一个数字定调后面所有数字。先说"市场 1000 亿"再降到"我们要 1 亿"，读者觉得节制；颠倒过来读者觉得贪心。<br>(4) <strong>熟悉感</strong>——用读者已知的概念锚（"像 Stripe 之于支付"），系统 1 一秒接受；陌生术语先解释再用。</p>
-
-    <div class="flow-box">
-      <div class="flow">
-        <div class="step"><div class="hd">Step 1</div><div class="nm">System 1</div><div class="cn">扫一眼<br>顺 / 不顺</div></div>
-        <div class="arrow">→</div>
-        <div class="step"><div class="hd">放行 ✓</div><div class="nm">Ease</div><div class="cn">字净 · 句短<br>词熟 · 节奏对</div></div>
-        <div class="arrow">→</div>
-        <div class="step"><div class="hd">Step 2</div><div class="nm">System 2</div><div class="cn">才愿意<br>读论点</div></div>
-      </div>
-      <div class="caption">读者大脑里的两道闸——第一道不开，第二道压根不启动。</div>
-    </div>
-
-    <p style="margin-top:14px"><strong>实战守则：</strong>在读者醒着的前 5 秒（标题、首句、首段）做到最大 ease；中间允许局部"难"（关键 insight 必要时绕一弯）；最后回到 ease 收尾。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">鉴于现有 A/B testing infrastructure 在 statistical power calibration 与 multi-arm bandit allocation 方面存在 limitations，本方案 propose 实施 sequential hypothesis testing 框架以 mitigate 该 issues。（中英夹杂、60 字一句、术语未铺垫，系统 1 报警）</span>
-      <span class="after">现有 A/B 测试有两个老毛病：一是样本不够时容易误判，二是多臂决策容易偏向一边。本方案提出"按序检验"框架，治这两条。（28 字一句，术语本地化，节奏 2-2-1，系统 1 顺畅放行）</span>
-    </div>
-    <div class="example">
-      <span class="before">It is our recommendation that, in light of the aforementioned constraints, the team should consider the prioritization of refactoring efforts before the implementation of new functionality.</span>
-      <span class="after">Refactor before building new. The constraints above leave no other order.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 所有"读者注意力稀缺"的场合——执行汇报 · 对外文档 · 首屏文案 · 演讲开场</li>
-      <li>✓ 跨语言读者——ease 损失在二语读者那里会加倍</li>
-      <li>✓ 高 stake 第一印象——融资 deck 第一页 · 面试自我介绍 · tech talk 开场</li>
-      <li>✗ 不适用：法律 / 合规文本（精确性 &gt; ease）· 学术论文（受众预期就是 friction）</li>
-      <li>错误："专业 = 难读"——其实反过来：真懂的人写得简单</li>
-      <li>错误：长句不切——长句不是"信息密度高"，是"作者懒得分段"</li>
-      <li>错误：首句就抛术语——读者还没暖好，系统 2 罢工</li>
-      <li>错误：锚定颠倒——先说自己的小数字再扯大盘，读者觉得格局小</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <div class="label">关键参考</div>
-    <p class="refs"><span>Daniel Kahneman</span>《Thinking, Fast and Slow》Ch. 5 — Cognitive Ease · <span>Robert Cialdini</span>《Influence》— Reciprocity / Authority / Social Proof 等说服杠杆 · <span>Adam Alter &amp; Daniel Oppenheimer</span>"Effects of fluency on judgments" Psychological Science 2006</p>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p><strong>习作：</strong>找你最近写的任一段（备忘录、邮件、文档），三件事：(1) 算句长——任何超 35 字（中文）/ 25 词（英文）的句子，要么切要么删；(2) 数术语——前 200 字内每出现一个非通用术语，前面必须有一句白话铺垫；(3) 检查首段第一个数字——若是"小数字"，前面补一个大锚（市场 / 行业 / 全公司）。改完出声读，后者顺一倍的就成了。<br><strong>思考：</strong>极致精炼与"Made to Stick"里的具象细节，有时是矛盾的——短句牺牲细节，细节牺牲短句。你在自己的写作场景里，怎样判断这一句此刻该走哪边？</p>
-  </div>
+</div>
+<p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：让人相信谬误最可靠的办法是反复——熟悉与真相在大脑里难以区分。任何让联想机器运转更顺滑的东西，都会让信念更容易接受。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>这是 cognitive ease（认知顺畅）原理的核心。写作上的具体含义：<br/>(1) <strong>可读性 = 可信度</strong>——清晰字体、舒服字号、短句、节奏 / 押韵。著名实验：同一句话用清晰字体 vs 模糊字体呈现，前者被评为"更可能为真"。<br/>(2) <strong>句长经济</strong>——超 35 字的中文长句、超 25 词的英文句，读者已在用系统 2 解析语法，没精力同时审你的论点。<br/>(3) <strong>锚定 Anchoring</strong>——第一个数字定调后面所有数字。先说"市场 1000 亿"再降到"我们要 1 亿"，读者觉得节制；颠倒过来读者觉得贪心。<br/>(4) <strong>熟悉感</strong>——用读者已知的概念锚（"像 Stripe 之于支付"），系统 1 一秒接受；陌生术语先解释再用。</p>
+<div class="flow-box">
+<div class="flow">
+<div class="step"><div class="hd">Step 1</div><div class="nm">System 1</div><div class="cn">扫一眼<br/>顺 / 不顺</div></div>
+<div class="arrow">→</div>
+<div class="step"><div class="hd">放行 ✓</div><div class="nm">Ease</div><div class="cn">字净 · 句短<br/>词熟 · 节奏对</div></div>
+<div class="arrow">→</div>
+<div class="step"><div class="hd">Step 2</div><div class="nm">System 2</div><div class="cn">才愿意<br/>读论点</div></div>
+</div>
+<div class="caption">读者大脑里的两道闸——第一道不开，第二道压根不启动。</div>
+</div>
+<p style="margin-top:14px"><strong>实战守则：</strong>在读者醒着的前 5 秒（标题、首句、首段）做到最大 ease；中间允许局部"难"（关键 insight 必要时绕一弯）；最后回到 ease 收尾。</p>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">鉴于现有 A/B testing infrastructure 在 statistical power calibration 与 multi-arm bandit allocation 方面存在 limitations，本方案 propose 实施 sequential hypothesis testing 框架以 mitigate 该 issues。（中英夹杂、60 字一句、术语未铺垫，系统 1 报警）</span>
+<span class="after">现有 A/B 测试有两个老毛病：一是样本不够时容易误判，二是多臂决策容易偏向一边。本方案提出"按序检验"框架，治这两条。（28 字一句，术语本地化，节奏 2-2-1，系统 1 顺畅放行）</span>
+</div>
+<div class="example">
+<span class="before">It is our recommendation that, in light of the aforementioned constraints, the team should consider the prioritization of refactoring efforts before the implementation of new functionality.</span>
+<span class="after">Refactor before building new. The constraints above leave no other order.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 所有"读者注意力稀缺"的场合——执行汇报 · 对外文档 · 首屏文案 · 演讲开场</li>
+<li>✓ 跨语言读者——ease 损失在二语读者那里会加倍</li>
+<li>✓ 高 stake 第一印象——融资 deck 第一页 · 面试自我介绍 · tech talk 开场</li>
+<li>✗ 不适用：法律 / 合规文本（精确性 &gt; ease）· 学术论文（受众预期就是 friction）</li>
+<li>错误："专业 = 难读"——其实反过来：真懂的人写得简单</li>
+<li>错误：长句不切——长句不是"信息密度高"，是"作者懒得分段"</li>
+<li>错误：首句就抛术语——读者还没暖好，系统 2 罢工</li>
+<li>错误：锚定颠倒——先说自己的小数字再扯大盘，读者觉得格局小</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">关键参考</div>
+<p class="refs"><span>Daniel Kahneman</span>《Thinking, Fast and Slow》Ch. 5 — Cognitive Ease · <span>Robert Cialdini</span>《Influence》— Reciprocity / Authority / Social Proof 等说服杠杆 · <span>Adam Alter &amp; Daniel Oppenheimer</span>"Effects of fluency on judgments" Psychological Science 2006</p>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p><strong>习作：</strong>找你最近写的任一段（备忘录、邮件、文档），三件事：(1) 算句长——任何超 35 字（中文）/ 25 词（英文）的句子，要么切要么删；(2) 数术语——前 200 字内每出现一个非通用术语，前面必须有一句白话铺垫；(3) 检查首段第一个数字——若是"小数字"，前面补一个大锚（市场 / 行业 / 全公司）。改完出声读，后者顺一倍的就成了。<br/><strong>思考：</strong>极致精炼与"Made to Stick"里的具象细节，有时是矛盾的——短句牺牲细节，细节牺牲短句。你在自己的写作场景里，怎样判断这一句此刻该走哪边？</p>
+</div>
 </section>
-
 <!-- Resources -->
 <section class="card">
-  <div class="num">Deep Dive</div>
-  <h2>深入资源</h2>
-  <div class="en-name">For Further Reading</div>
-  <span class="tag">REF · 延伸</span>
-  <div class="section">
-    <ul>
-      <li><strong>Aristotle</strong>《Rhetoric》Book I —— 三柱说服的源头，公元前 350 年的文本至今未过时</li>
-      <li><strong>Daniel Kahneman</strong>《Thinking, Fast and Slow》(2011) —— Ch. 5 认知顺畅、Ch. 7 WYSIATI、Ch. 24 Pre-mortem</li>
-      <li><strong>Charlie Munger</strong>《Poor Charlie's Almanack》—— Steelmanning 与多元思维模型的实操原版</li>
-      <li><strong>Christopher Hitchens</strong>《God Is Not Great》(2007) —— Hitchens's Razor 与无神论修辞的范本</li>
-      <li><strong>Robert Cialdini</strong>《Influence: The Psychology of Persuasion》—— 六大说服杠杆（社会证明、权威、互惠等）</li>
-      <li><strong>Scott Alexander</strong>《Slate Star Codex / Astral Codex Ten》—— "Epistemic Status" 标注的现代典范博文</li>
-      <li><strong>Gary Klein</strong>"Performing a Project Premortem"《Harvard Business Review》2007 —— Pre-mortem 三页操作指南</li>
-      <li><strong>James A. Herrick</strong>《The History and Theory of Rhetoric》—— 西方修辞史的标准入门</li>
-    </ul>
-  </div>
+<div class="num">Deep Dive</div>
+<h2 data-tts="db778712e1b233d7">深入资源</h2>
+<div class="en-name">For Further Reading</div>
+<span class="tag">REF · 延伸</span>
+<div class="section">
+<ul>
+<li><strong>Aristotle</strong>《Rhetoric》Book I —— 三柱说服的源头，公元前 350 年的文本至今未过时</li>
+<li><strong>Daniel Kahneman</strong>《Thinking, Fast and Slow》(2011) —— Ch. 5 认知顺畅、Ch. 7 WYSIATI、Ch. 24 Pre-mortem</li>
+<li><strong>Charlie Munger</strong>《Poor Charlie's Almanack》—— Steelmanning 与多元思维模型的实操原版</li>
+<li><strong>Christopher Hitchens</strong>《God Is Not Great》(2007) —— Hitchens's Razor 与无神论修辞的范本</li>
+<li><strong>Robert Cialdini</strong>《Influence: The Psychology of Persuasion》—— 六大说服杠杆（社会证明、权威、互惠等）</li>
+<li><strong>Scott Alexander</strong>《Slate Star Codex / Astral Codex Ten》—— "Epistemic Status" 标注的现代典范博文</li>
+<li><strong>Gary Klein</strong>"Performing a Project Premortem"《Harvard Business Review》2007 —— Pre-mortem 三页操作指南</li>
+<li><strong>James A. Herrick</strong>《The History and Theory of Rhetoric》—— 西方修辞史的标准入门</li>
+</ul>
+</div>
 </section>
-
 <!-- Reflection -->
 <section class="card">
-  <div class="num">Reflection</div>
-  <h2>深入思考</h2>
-  <div class="en-name">Open Questions for the Practitioner</div>
-  <span class="tag">Q · 思考</span>
-  <div class="section">
-    <details>
-      <summary>1. AI 时代，ethos 由谁担保？当读者怀疑"这段是 AI 写的"，作者的可信度怎么重建？</summary>
-      <div>三条路径：(a) 把 AI 的角色显性化——"我用 AI 起草、自己改过"反而比"全自己写"更可信，因为透明本身是 ethos；(b) 在文里保留只有"你"能写的东西——一次具体的错误经历、一个家里的细节、一个客户的真名；(c) 注意 logos 反而要更硬——AI 容易在数据上偷懒，正好提供你 outperform 的空间。Ethos 的本质从"独立创作"迁移到"独立判断与负责"。</div>
-    </details>
-    <details>
-      <summary>2. 中文文化里 pathos 与"理性体面"的张力——领导汇报里太多情感被嫌"软"，怎么解？</summary>
-      <div>中文场域的 pathos 偏"分量"（厚度感、停顿、克制），不偏"感动"（眼泪、激动）。学董桥或龙应台的克制，不学演员的发挥。pathos 在中文里用一个具体细节（某客户的名字、某个晚上的故事）一笔点过即可——不展开就是分量，展开就显煽。这与英文 pathos 偏"展开"的传统正相反。</div>
-    </details>
-    <details>
-      <summary>3. 中英文写作的 cognitive ease 度量不同——直接套用会出什么问题？</summary>
-      <div>英文短句的 ease 来自"主谓宾闭合"的句子边界；中文短句的 ease 来自节奏（2-2-3、四字短语）。直接把"&lt;25 词"机械搬到中文，会丢中文特有的四字节奏；反过来把中文的并列结构搬到英文，又会失英文从句的精度。两套度量各自养，不互相搬运。</div>
-    </details>
-    <details>
-      <summary>4. Steelmanning 是诚实，还是高级修辞？两者的边界在哪？</summary>
-      <div>技术上是修辞策略——把反方强化是为了显得作者公正、抬升 ethos。但它的副作用是：你写多了 steelman，脑子真的开始相信反方的可能性，进而真的修改判断。形式上的诚实可以促成实质上的诚实——这是修辞史上少见的"工具反过来塑造作者"的案例。</div>
-    </details>
-    <details>
-      <summary>5. 不同形态（文 / 讲 / 视频）的"证据梯度"显示方式有何不同？</summary>
-      <div>文字可以直接打括号标 n=12000；演讲里念出括号会打断节奏，应改用语调或一句"我们做了一万两千人的测试"；视频可以用下标小字 / B-roll 展示数据源。文是最高（带链接），讲是最低（口播负担最大），视频中等。同一份内容在三种形态间迁移，证据该怎么"露"必须重新设计。</div>
-    </details>
-  </div>
+<div class="num">Reflection</div>
+<h2 data-tts="be555204f2bb56e8">深入思考</h2>
+<div class="en-name">Open Questions for the Practitioner</div>
+<span class="tag">Q · 思考</span>
+<div class="section">
+<details>
+<summary>1. AI 时代，ethos 由谁担保？当读者怀疑"这段是 AI 写的"，作者的可信度怎么重建？</summary>
+<div>三条路径：(a) 把 AI 的角色显性化——"我用 AI 起草、自己改过"反而比"全自己写"更可信，因为透明本身是 ethos；(b) 在文里保留只有"你"能写的东西——一次具体的错误经历、一个家里的细节、一个客户的真名；(c) 注意 logos 反而要更硬——AI 容易在数据上偷懒，正好提供你 outperform 的空间。Ethos 的本质从"独立创作"迁移到"独立判断与负责"。</div>
+</details>
+<details>
+<summary>2. 中文文化里 pathos 与"理性体面"的张力——领导汇报里太多情感被嫌"软"，怎么解？</summary>
+<div>中文场域的 pathos 偏"分量"（厚度感、停顿、克制），不偏"感动"（眼泪、激动）。学董桥或龙应台的克制，不学演员的发挥。pathos 在中文里用一个具体细节（某客户的名字、某个晚上的故事）一笔点过即可——不展开就是分量，展开就显煽。这与英文 pathos 偏"展开"的传统正相反。</div>
+</details>
+<details>
+<summary>3. 中英文写作的 cognitive ease 度量不同——直接套用会出什么问题？</summary>
+<div>英文短句的 ease 来自"主谓宾闭合"的句子边界；中文短句的 ease 来自节奏（2-2-3、四字短语）。直接把"&lt;25 词"机械搬到中文，会丢中文特有的四字节奏；反过来把中文的并列结构搬到英文，又会失英文从句的精度。两套度量各自养，不互相搬运。</div>
+</details>
+<details>
+<summary>4. Steelmanning 是诚实，还是高级修辞？两者的边界在哪？</summary>
+<div>技术上是修辞策略——把反方强化是为了显得作者公正、抬升 ethos。但它的副作用是：你写多了 steelman，脑子真的开始相信反方的可能性，进而真的修改判断。形式上的诚实可以促成实质上的诚实——这是修辞史上少见的"工具反过来塑造作者"的案例。</div>
+</details>
+<details>
+<summary>5. 不同形态（文 / 讲 / 视频）的"证据梯度"显示方式有何不同？</summary>
+<div>文字可以直接打括号标 n=12000；演讲里念出括号会打断节奏，应改用语调或一句"我们做了一万两千人的测试"；视频可以用下标小字 / B-roll 展示数据源。文是最高（带链接），讲是最低（口播负担最大），视频中等。同一份内容在三种形态间迁移，证据该怎么"露"必须重新设计。</div>
+</details>
+</div>
 </section>
-
 <div class="nav">
-  <a href="index.html">← 回到写作目录</a>
+<a href="index.html">← 回到写作目录</a>
 </div>
-
 <footer>BigCat · Writing · Day 7 · 2026</footer>
-
 </div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
+<script defer="" src="https://cissy0802.github.io/comments.js"></script>
+<script defer="" src="https://cissy0802.github.io/search.js"></script>
+<script defer="" src="https://cissy0802.github.io/index-button.js"></script>
+<script defer="" src="https://cissy0802.github.io/i18n-tts.js"></script>
 </body>
 </html>

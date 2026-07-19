@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>写作与表达：技术写作 — Day 8</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -101,371 +102,332 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 </head>
 <body>
 <div class="container">
-
 <header>
-  <div class="week-label">Day 8 · 2026.05.26</div>
-  <h1>写作与表达：技术写作<span class="topic">Technical Writing — Docs that Outlive their Authors</span></h1>
-  <div class="date">BigCat's Writing</div>
-  <p class="intro">资深技术人 80% 的 leverage 不在代码里，在"留得下来的文字"里——RFC、ADR、API 文档、关键注释。这些文字不写给当下的 reviewer，写给六个月后回头翻它的陌生人（包括那时已忘了上下文的你自己）。本周四条原则——设计文档、Diátaxis、ADR、注释哲学——把"我曾想清楚过"变成"我留下了思考的痕迹"。技术人最容易省的那笔投资，本周补上。</p>
+<div class="week-label">Day 8 · 2026.05.26</div>
+<h1 data-tts="87d4dfc79bdf2beb">写作与表达：技术写作<span class="topic">Technical Writing — Docs that Outlive their Authors</span></h1>
+<div class="date">BigCat's Writing</div>
+<p class="intro">资深技术人 80% 的 leverage 不在代码里，在"留得下来的文字"里——RFC、ADR、API 文档、关键注释。这些文字不写给当下的 reviewer，写给六个月后回头翻它的陌生人（包括那时已忘了上下文的你自己）。本周四条原则——设计文档、Diátaxis、ADR、注释哲学——把"我曾想清楚过"变成"我留下了思考的痕迹"。技术人最容易省的那笔投资，本周补上。</p>
 </header>
-
 <!-- Card 1: Design Doc / RFC -->
 <section class="card">
-  <div class="num">Principle 01</div>
-  <h2>设计文档：写给六个月后的自己</h2>
-  <div class="en-name">Design Docs &amp; RFCs — Writing as Thinking, Not Archiving</div>
-  <span class="tag">RFC · 设计文档</span>
-
-  <div class="section">
-    <div class="label">一句话原则 + 名家原话</div>
-    <p>设计文档的第一读者不是 reviewer，是"半年后的你自己"。它替你保存当时的判断、否决过的选项、那个"为什么不"——而不是表演当时的聪明。</p>
-    <div class="quote">
+<div class="num">Principle 01</div>
+<h2 data-tts="4472a4c4e22c6690">设计文档：写给六个月后的自己</h2>
+<div class="en-name">Design Docs &amp; RFCs — Writing as Thinking, Not Archiving</div>
+<span class="tag">RFC · 设计文档</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>设计文档的第一读者不是 reviewer，是"半年后的你自己"。它替你保存当时的判断、否决过的选项、那个"为什么不"——而不是表演当时的聪明。</p>
+<div class="quote">
       "The single most important point of a design doc is to make the author reason about the design at the right level of abstraction."
       <span class="source">— Malte Ubl《Design Docs at Google》(industrialempathy.com, 2020)</span>
-    </div>
-    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：设计文档最重要的一点，是逼作者在恰当的抽象层级上对设计进行推理——不是把已经定好的事归档下来。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>工程师常误以为"文档 = 把已知决定记下来"。错。文档的真正价值在写的过程：把模糊感落成句子，<strong>半数缺陷会在打字时自己露出来</strong>。这是 "writing is thinking" 的工程版。<br>而半年后回看的你（或新人）问的不是"这是什么"——是"<strong>当初为什么不选 B</strong>"。所以 <em>Alternatives Considered</em> 几乎是整份文档最有价值的一节：它替你保存"已被否决"的方案与理由，避免下一个 engineer 又走一遍坑。</p>
-
-    <div class="doc-skeleton">
-      <div class="skl-row"><div class="nm">Context &amp; Goals</div><div class="ds">问题在哪、解到什么程度算赢</div></div>
-      <div class="skl-row"><div class="nm">Non-goals</div><div class="ds">明确不解什么——挡 scope creep 的盾</div></div>
-      <div class="skl-row"><div class="nm">Design</div><div class="ds">一两段 + 一两张图，写意图不写代码</div></div>
-      <div class="skl-row"><div class="nm">Alternatives Considered</div><div class="ds">至少 3 个 · 每个含"为什么不"——本节最有长尾价值</div></div>
-      <div class="skl-row"><div class="nm">Risks &amp; Open Questions</div><div class="ds">已知风险 + 还没想清楚的事（诚实标出）</div></div>
-      <div class="skl-row"><div class="nm">Rollout &amp; Rollback</div><div class="ds">怎么 ship、出事怎么撤</div></div>
-      <div class="caption">六节骨架。不全等于不写完，全了不等于写好——但缺哪节，半年后那节就是"诡异巧合"的产地。</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">We will use Kafka for the event pipeline because it is scalable and reliable.（典型空话——"scalable / reliable" 对所有候选都成立，等于没说）</span>
-      <span class="after">Chose Kafka over Pulsar after benchmarking both at our 10K msg/s peak (3 days each). <strong>Pulsar's broker-bookie split adds two ops surfaces we don't have headcount for.</strong> Tradeoff accepted: weaker geo-replication, fine through Q3 because all consumers are us-east. Revisit when EU goes live.</span>
-    </div>
-    <div class="example">
-      <span class="before">本设计采用微服务架构，提升系统可扩展性。（同上空话；"提升可扩展性"什么都没说）</span>
-      <span class="after">在"单体 + 模块化包"与"三个微服务"两案之间，选后者。<strong>关键依据：付费链路与免费链路的发布节奏过去 8 周已差 3 倍</strong>（数据：deploy 频次 12 vs 4），共享代码库的合并冲突是主要瓶颈。已否决的第三案"事件驱动重写"——团队近两年无人做过 event sourcing，引入新范式的人力成本超过收益。</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 任何 ≥ 2 周 / ≥ 1 人月 的工程决策 · 跨团队接口变更 · 架构基线迁移</li>
-      <li>✗ 不适用：单文件 refactor · 产品 micro-copy 调整——用 PR 描述即可</li>
-      <li>错误一：写完才开始——文档应在决定之前写，不是事后归档</li>
-      <li>错误二：Alternatives Considered 只写"考虑过但没选"，没写"为什么没选"——丢了全部长尾价值</li>
-      <li>错误三：用伪码 / class diagram 替代设计——读者读不到 why、读不到 tradeoff</li>
-      <li>错误四：没有 Non-goals——reviewer 持续问"那 X 怎么办"，本来不在 scope</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <div class="label">关键参考</div>
-    <p class="refs"><span>Malte Ubl</span>《Design Docs at Google》industrialempathy.com 2020 · <span>Will Larson</span>《An Elegant Puzzle》Ch. 4 — 决策与备忘录在工程组织中的杠杆 · <span>Gergely Orosz</span>"How Big Tech Runs Tech Projects" — RFC / TDD 实操对比</p>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p><strong>习作：</strong>找你手上的下一份 RFC。把 "Implementation Details" 砍掉一半，把 "Alternatives Considered" 扩到原来的两倍。让一个跨团队同事先读——他若问"为什么不 X"，那段 X 就该加进 Alternatives。<br><strong>思考：</strong>当 AI 协作 RFC 的比例升高，"reason about the design"这件事谁在做？AI 起草的稿是否反而让作者懒得思考？怎样的人机分工能保留 "writing is thinking" 的效用？</p>
-  </div>
+</div>
+<p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：设计文档最重要的一点，是逼作者在恰当的抽象层级上对设计进行推理——不是把已经定好的事归档下来。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>工程师常误以为"文档 = 把已知决定记下来"。错。文档的真正价值在写的过程：把模糊感落成句子，<strong>半数缺陷会在打字时自己露出来</strong>。这是 "writing is thinking" 的工程版。<br/>而半年后回看的你（或新人）问的不是"这是什么"——是"<strong>当初为什么不选 B</strong>"。所以 <em>Alternatives Considered</em> 几乎是整份文档最有价值的一节：它替你保存"已被否决"的方案与理由，避免下一个 engineer 又走一遍坑。</p>
+<div class="doc-skeleton">
+<div class="skl-row"><div class="nm">Context &amp; Goals</div><div class="ds">问题在哪、解到什么程度算赢</div></div>
+<div class="skl-row"><div class="nm">Non-goals</div><div class="ds">明确不解什么——挡 scope creep 的盾</div></div>
+<div class="skl-row"><div class="nm">Design</div><div class="ds">一两段 + 一两张图，写意图不写代码</div></div>
+<div class="skl-row"><div class="nm">Alternatives Considered</div><div class="ds">至少 3 个 · 每个含"为什么不"——本节最有长尾价值</div></div>
+<div class="skl-row"><div class="nm">Risks &amp; Open Questions</div><div class="ds">已知风险 + 还没想清楚的事（诚实标出）</div></div>
+<div class="skl-row"><div class="nm">Rollout &amp; Rollback</div><div class="ds">怎么 ship、出事怎么撤</div></div>
+<div class="caption">六节骨架。不全等于不写完，全了不等于写好——但缺哪节，半年后那节就是"诡异巧合"的产地。</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">We will use Kafka for the event pipeline because it is scalable and reliable.（典型空话——"scalable / reliable" 对所有候选都成立，等于没说）</span>
+<span class="after">Chose Kafka over Pulsar after benchmarking both at our 10K msg/s peak (3 days each). <strong>Pulsar's broker-bookie split adds two ops surfaces we don't have headcount for.</strong> Tradeoff accepted: weaker geo-replication, fine through Q3 because all consumers are us-east. Revisit when EU goes live.</span>
+</div>
+<div class="example">
+<span class="before">本设计采用微服务架构，提升系统可扩展性。（同上空话；"提升可扩展性"什么都没说）</span>
+<span class="after">在"单体 + 模块化包"与"三个微服务"两案之间，选后者。<strong>关键依据：付费链路与免费链路的发布节奏过去 8 周已差 3 倍</strong>（数据：deploy 频次 12 vs 4），共享代码库的合并冲突是主要瓶颈。已否决的第三案"事件驱动重写"——团队近两年无人做过 event sourcing，引入新范式的人力成本超过收益。</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 任何 ≥ 2 周 / ≥ 1 人月 的工程决策 · 跨团队接口变更 · 架构基线迁移</li>
+<li>✗ 不适用：单文件 refactor · 产品 micro-copy 调整——用 PR 描述即可</li>
+<li>错误一：写完才开始——文档应在决定之前写，不是事后归档</li>
+<li>错误二：Alternatives Considered 只写"考虑过但没选"，没写"为什么没选"——丢了全部长尾价值</li>
+<li>错误三：用伪码 / class diagram 替代设计——读者读不到 why、读不到 tradeoff</li>
+<li>错误四：没有 Non-goals——reviewer 持续问"那 X 怎么办"，本来不在 scope</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">关键参考</div>
+<p class="refs"><span>Malte Ubl</span>《Design Docs at Google》industrialempathy.com 2020 · <span>Will Larson</span>《An Elegant Puzzle》Ch. 4 — 决策与备忘录在工程组织中的杠杆 · <span>Gergely Orosz</span>"How Big Tech Runs Tech Projects" — RFC / TDD 实操对比</p>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p><strong>习作：</strong>找你手上的下一份 RFC。把 "Implementation Details" 砍掉一半，把 "Alternatives Considered" 扩到原来的两倍。让一个跨团队同事先读——他若问"为什么不 X"，那段 X 就该加进 Alternatives。<br/><strong>思考：</strong>当 AI 协作 RFC 的比例升高，"reason about the design"这件事谁在做？AI 起草的稿是否反而让作者懒得思考？怎样的人机分工能保留 "writing is thinking" 的效用？</p>
+</div>
 </section>
-
 <!-- Card 2: API Docs / Diátaxis -->
 <section class="card">
-  <div class="num">Principle 02</div>
-  <h2>API 文档：四种文档不能写在一页里</h2>
-  <div class="en-name">API Docs &amp; Diátaxis — Four Modes, Four Pages</div>
-  <span class="tag">API · Diátaxis</span>
-
-  <div class="section">
-    <div class="label">一句话原则 + 名家原话</div>
-    <p>一个页面不能同时教初学者、查 reference、写攻略、讲原理——把"教程 / 任务指南 / 参考 / 解释"分开，读者来了各取所需。</p>
-    <div class="quote">
+<div class="num">Principle 02</div>
+<h2 data-tts="f97e36199e9f36f6">API 文档：四种文档不能写在一页里</h2>
+<div class="en-name">API Docs &amp; Diátaxis — Four Modes, Four Pages</div>
+<span class="tag">API · Diátaxis</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>一个页面不能同时教初学者、查 reference、写攻略、讲原理——把"教程 / 任务指南 / 参考 / 解释"分开，读者来了各取所需。</p>
+<div class="quote">
       "Documentation needs to include and be structured around its four different functions: tutorials, how-to guides, technical reference and explanation. Each of them requires a distinct mode of writing."
       <span class="source">— Daniele Procida《Diátaxis》(diataxis.fr, PyCon AU 2017)</span>
-    </div>
-    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：文档须包含并围绕四种功能展开——教程、任务指南、技术参考、原理解释。四者要求四种截然不同的写法。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>不分会怎样？<strong>新手读 reference 一脸懵；老手翻教程嫌啰嗦；运维查任务指南却读到"为什么这么设计"——所有人都恼。</strong>Diátaxis 把文档放在两个轴上：纵向"学习 vs 工作"，横向"实践 vs 认知"。四象限各司其职。</p>
-
-    <div class="diataxis-box">
-      <div class="diataxis">
-        <div class="corner"></div>
-        <div class="ax-top">实践 Action</div>
-        <div class="ax-top">认知 Cognition</div>
-
-        <div class="ax-side">学<br>习</div>
-        <div class="quad"><div class="nm">教程 Tutorials</div><div class="en">learning-oriented</div><div class="ds">"跟我做一遍"——一条 happy path，10 分钟跑出 Hello World。不解释为什么。</div></div>
-        <div class="quad"><div class="nm">解释 Explanation</div><div class="en">understanding-oriented</div><div class="ds">"为什么是这设计"——背景、tradeoff、历史。给已上手、开始好奇的人。</div></div>
-
-        <div class="ax-side">工<br>作</div>
-        <div class="quad"><div class="nm">任务指南 How-to</div><div class="en">problem-oriented</div><div class="ds">"如何处理 webhook 重试""如何在 sandbox 测退款"——已知问题的食谱。</div></div>
-        <div class="quad"><div class="nm">参考 Reference</div><div class="en">information-oriented</div><div class="ds">全 API 表 · 字段 · 类型 · 错误码。机器可生成的那种。冷峻、完整、无故事。</div></div>
-      </div>
-      <div class="caption">四象限。Stripe 的 API 文档被公认金标准，关键就是把四类严格分开 + 提供跨锚导航。</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">单页 "Getting Started"——300 行混了"安装 / 快速跑通 / 全 API 表 / 我们为什么这么设计"。结果：新手卡在 API 表，老手在故事里找字段。</span>
-      <span class="after">拆四页：① Tutorial（"10 分钟跑出第一笔 charge"，单一 happy path）② How-to（"如何处理 webhook 重试""如何在 sandbox 测退款"）③ Reference（全 API + 字段，自动生成）④ Explanation（"为什么 idempotency key 是这设计"）。首页只是分流入口。</span>
-    </div>
-    <div class="example">
-      <span class="before">A single markdown mixing function signature + usage demo + caveats + design philosophy. Readers can't tell where one ends and the next begins.</span>
-      <span class="after">Signature &amp; demo go to Reference. Caveats go to How-to ("Handling rate-limits"). Design philosophy goes to Explanation. Reference page links out to both — readers in scan mode stay in Reference; readers in "why" mode click through.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 公开 API · SDK · 内部平台（开发者向）· CLI 工具</li>
-      <li>✓ 文档站点重构——Diátaxis 是顶层 IA（信息架构），不是样式选择</li>
-      <li>✗ 不适用：单文件库（一页 README 足够）· 一次性脚本</li>
-      <li>错误一：把四类全塞进 README——README 是"扉页"，不是"全集"</li>
-      <li>错误二：写 tutorial 像 reference——堆 API 表不讲 happy path</li>
-      <li>错误三：写 reference 像 tutorial——堆故事不堆字段</li>
-      <li>错误四：explanation 摆首页——大多数读者来时要 how，不要 why；explanation 是给"已上手、开始好奇"的人</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <div class="label">关键参考</div>
-    <p class="refs"><span>Daniele Procida</span>《Diátaxis: A systematic framework for technical documentation》diataxis.fr · <span>Stripe API Docs</span> docs.stripe.com — Diátaxis 教科书级实践 · <span>Google</span>《Technical Writing Courses》developers.google.com/tech-writing — 免费两阶段课程</p>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p><strong>习作：</strong>找一份你自己写过的 API 文档（不限规模），用 Diátaxis 四象限给每段标类。任一类为零，问自己：是真不需要，还是默认漏了？教程页 / explanation 页缺，常常就是"看起来完整、用起来卡"的原因。<br><strong>思考：</strong>当 LLM 成为大部分 API 的"中介读者"（开发者通过 ChatGPT 调你的 API），文档该为人写还是为 LLM 写？哪几类 LLM 反而更不擅长读（tutorials？explanation？）？</p>
-  </div>
+</div>
+<p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：文档须包含并围绕四种功能展开——教程、任务指南、技术参考、原理解释。四者要求四种截然不同的写法。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>不分会怎样？<strong>新手读 reference 一脸懵；老手翻教程嫌啰嗦；运维查任务指南却读到"为什么这么设计"——所有人都恼。</strong>Diátaxis 把文档放在两个轴上：纵向"学习 vs 工作"，横向"实践 vs 认知"。四象限各司其职。</p>
+<div class="diataxis-box">
+<div class="diataxis">
+<div class="corner"></div>
+<div class="ax-top">实践 Action</div>
+<div class="ax-top">认知 Cognition</div>
+<div class="ax-side">学<br/>习</div>
+<div class="quad"><div class="nm">教程 Tutorials</div><div class="en">learning-oriented</div><div class="ds">"跟我做一遍"——一条 happy path，10 分钟跑出 Hello World。不解释为什么。</div></div>
+<div class="quad"><div class="nm">解释 Explanation</div><div class="en">understanding-oriented</div><div class="ds">"为什么是这设计"——背景、tradeoff、历史。给已上手、开始好奇的人。</div></div>
+<div class="ax-side">工<br/>作</div>
+<div class="quad"><div class="nm">任务指南 How-to</div><div class="en">problem-oriented</div><div class="ds">"如何处理 webhook 重试""如何在 sandbox 测退款"——已知问题的食谱。</div></div>
+<div class="quad"><div class="nm">参考 Reference</div><div class="en">information-oriented</div><div class="ds">全 API 表 · 字段 · 类型 · 错误码。机器可生成的那种。冷峻、完整、无故事。</div></div>
+</div>
+<div class="caption">四象限。Stripe 的 API 文档被公认金标准，关键就是把四类严格分开 + 提供跨锚导航。</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">单页 "Getting Started"——300 行混了"安装 / 快速跑通 / 全 API 表 / 我们为什么这么设计"。结果：新手卡在 API 表，老手在故事里找字段。</span>
+<span class="after">拆四页：① Tutorial（"10 分钟跑出第一笔 charge"，单一 happy path）② How-to（"如何处理 webhook 重试""如何在 sandbox 测退款"）③ Reference（全 API + 字段，自动生成）④ Explanation（"为什么 idempotency key 是这设计"）。首页只是分流入口。</span>
+</div>
+<div class="example">
+<span class="before">A single markdown mixing function signature + usage demo + caveats + design philosophy. Readers can't tell where one ends and the next begins.</span>
+<span class="after">Signature &amp; demo go to Reference. Caveats go to How-to ("Handling rate-limits"). Design philosophy goes to Explanation. Reference page links out to both — readers in scan mode stay in Reference; readers in "why" mode click through.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 公开 API · SDK · 内部平台（开发者向）· CLI 工具</li>
+<li>✓ 文档站点重构——Diátaxis 是顶层 IA（信息架构），不是样式选择</li>
+<li>✗ 不适用：单文件库（一页 README 足够）· 一次性脚本</li>
+<li>错误一：把四类全塞进 README——README 是"扉页"，不是"全集"</li>
+<li>错误二：写 tutorial 像 reference——堆 API 表不讲 happy path</li>
+<li>错误三：写 reference 像 tutorial——堆故事不堆字段</li>
+<li>错误四：explanation 摆首页——大多数读者来时要 how，不要 why；explanation 是给"已上手、开始好奇"的人</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">关键参考</div>
+<p class="refs"><span>Daniele Procida</span>《Diátaxis: A systematic framework for technical documentation》diataxis.fr · <span>Stripe API Docs</span> docs.stripe.com — Diátaxis 教科书级实践 · <span>Google</span>《Technical Writing Courses》developers.google.com/tech-writing — 免费两阶段课程</p>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p><strong>习作：</strong>找一份你自己写过的 API 文档（不限规模），用 Diátaxis 四象限给每段标类。任一类为零，问自己：是真不需要，还是默认漏了？教程页 / explanation 页缺，常常就是"看起来完整、用起来卡"的原因。<br/><strong>思考：</strong>当 LLM 成为大部分 API 的"中介读者"（开发者通过 ChatGPT 调你的 API），文档该为人写还是为 LLM 写？哪几类 LLM 反而更不擅长读（tutorials？explanation？）？</p>
+</div>
 </section>
-
 <!-- Card 3: ADR -->
 <section class="card">
-  <div class="num">Principle 03</div>
-  <h2>ADR：替决定盖时间戳</h2>
-  <div class="en-name">Architecture Decision Records — Immutable Memos for the Future</div>
-  <span class="tag">ADR · 决策记录</span>
-
-  <div class="section">
-    <div class="label">一句话原则 + 名家原话</div>
-    <p>决定 = 上下文 + 选择 + 后果。三者缺一，半年后回看就成"诡异巧合"。ADR 替决定盖时间戳——一旦写下不再改，要变只能写新的 ADR 标 "Supersedes ADR-042"。</p>
-    <div class="quote">
+<div class="num">Principle 03</div>
+<h2 data-tts="82fa87c6e7c117fd">ADR：替决定盖时间戳</h2>
+<div class="en-name">Architecture Decision Records — Immutable Memos for the Future</div>
+<span class="tag">ADR · 决策记录</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>决定 = 上下文 + 选择 + 后果。三者缺一，半年后回看就成"诡异巧合"。ADR 替决定盖时间戳——一旦写下不再改，要变只能写新的 ADR 标 "Supersedes ADR-042"。</p>
+<div class="quote">
       "We will keep a collection of records for 'architecturally significant' decisions: those that affect the structure, non-functional characteristics, dependencies, interfaces, or construction techniques."
       <span class="source">— Michael Nygard《Documenting Architecture Decisions》(Cognitect blog, 2011)</span>
-    </div>
-    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：我们要为所有"架构上重要"的决定保留记录——任何会影响系统结构、非功能特性、依赖、接口或构造方法的决定。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>设计文档讲 design，ADR 讲 decision——两者不同。设计文档可讨论几个方案，最后由 ADR 落锤"我们选了 A"。<br>ADR 的关键不在格式（五字段而已），在 <strong>immutable 的态度</strong>：一旦写下不再改。这是 git commit 思维，不是 wiki 思维。若改了 mind，写一份新的 ADR 标 "Supersedes ADR-042"，原文保留——历史不被改写、学习才能传承。</p>
-
-    <div class="adr">
-      <div class="adr-row"><div class="field">Title</div><div class="val">ADR-042: Migrate to Postgres 15</div></div>
-      <div class="adr-row"><div class="field">Status</div><div class="val">Accepted <span class="meta">· 2026-05-10 · authors: bc, jh · superseded by ADR-067 (2027-03)</span></div></div>
-      <div class="adr-row"><div class="field">Context</div><div class="val">PG12 reaches EOL 2024-11. Security patches end. PG16 released 2023-09 (8 months old, low adoption). PG15 mature, GA &gt; 2 years. Our shop is conservative on database majors.</div></div>
-      <div class="adr-row"><div class="field">Decision</div><div class="val">Migrate prod &amp; replicas to <strong>PG15</strong> (not 16). 2-week window Q3 weekend.</div></div>
-      <div class="adr-row"><div class="field">Consequences</div><div class="val">+ JSONB performance gain · + EOL exit before EU regulatory review · − must rewrite 12 JSONpath queries to PG15-compatible form · − loses access to PG16's improved logical replication; revisit in 12 months.</div></div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">PR description: "Switch to Postgres 15"（→ 18 个月后新人 reading the repo："为什么 PG15 不是 PG16？"——无人能答）</span>
-      <span class="after">ADR-042 上述五字段。文档活在 <code style="background:#eaeaea;padding:1px 5px;border-radius:2px;font-family:Courier New,monospace;font-size:0.86rem">docs/adr/0042-postgres-15.md</code>。永不被改写。18 个月后新人翻 ADR 即可：决定与上下文一目了然——他知道"当时不是因为蠢，是因为风险偏好"。</span>
-    </div>
-    <div class="example">
-      <span class="before">Wiki 页面"数据库选择"——半年内被五个人编辑过 12 次，谁也说不清当时为什么选 PG。每次新人入职都开同一场争论会。</span>
-      <span class="after">同一决定迁到 ADR-042 + immutable git history。"为什么选 PG"问题永久关闭：链接到 ADR，5 分钟读完。新人若不同意，写 ADR-067 提议替代——附其反方论据。组织进步走在 ADR 链条上，历史不丢。</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 框架 / 数据库 / 协议 / 区域基础设施选择 · 公司级 build vs buy · 关键依赖升降级</li>
-      <li>✓ 任何"未来人会问'为什么是这个'"的决定</li>
-      <li>✗ 不适用：日常实现选择（哪个第三方包、变量命名）——太频繁 ADR 反成噪音</li>
-      <li>错误一：把 ADR 当 wiki——可改、被改、改完没人记原版。ADR 是 immutable</li>
-      <li>错误二：只写 Decision、不写 Context——读者无法判断"现在还成不成立"</li>
-      <li>错误三：不写 Consequences——下一个人不知作者已认知的 tradeoff，重新踩坑</li>
-      <li>错误四：写得太晚——决定执行后再补 ADR 等于"考完试再写答案"，丢了思辨的痕迹</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <div class="label">关键参考</div>
-    <p class="refs"><span>Michael Nygard</span>《Documenting Architecture Decisions》Cognitect blog 2011 — 五字段原文 · <span>ThoughtWorks</span>《Technology Radar》— "Lightweight Architecture Decision Records" (Adopt, 2018) · <span>adr.github.io</span> — 模板与社区集合</p>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p><strong>习作：</strong>翻你过去半年最重要的一个技术决定（无论当时是否有 ADR），用 5 字段补写一份。重点是 Context——回到当时，<strong>你不知道现在知道的什么</strong>？把这个差异写出来。<br><strong>思考：</strong>ADR 的 immutability 与组织学习似乎矛盾——人会进步、知识会更新。怎么设计 ADR 与"后续修正"的关系，让历史不被改写、但学习能传承？</p>
-  </div>
+</div>
+<p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：我们要为所有"架构上重要"的决定保留记录——任何会影响系统结构、非功能特性、依赖、接口或构造方法的决定。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>设计文档讲 design，ADR 讲 decision——两者不同。设计文档可讨论几个方案，最后由 ADR 落锤"我们选了 A"。<br/>ADR 的关键不在格式（五字段而已），在 <strong>immutable 的态度</strong>：一旦写下不再改。这是 git commit 思维，不是 wiki 思维。若改了 mind，写一份新的 ADR 标 "Supersedes ADR-042"，原文保留——历史不被改写、学习才能传承。</p>
+<div class="adr">
+<div class="adr-row"><div class="field">Title</div><div class="val">ADR-042: Migrate to Postgres 15</div></div>
+<div class="adr-row"><div class="field">Status</div><div class="val">Accepted <span class="meta">· 2026-05-10 · authors: bc, jh · superseded by ADR-067 (2027-03)</span></div></div>
+<div class="adr-row"><div class="field">Context</div><div class="val">PG12 reaches EOL 2024-11. Security patches end. PG16 released 2023-09 (8 months old, low adoption). PG15 mature, GA &gt; 2 years. Our shop is conservative on database majors.</div></div>
+<div class="adr-row"><div class="field">Decision</div><div class="val">Migrate prod &amp; replicas to <strong>PG15</strong> (not 16). 2-week window Q3 weekend.</div></div>
+<div class="adr-row"><div class="field">Consequences</div><div class="val">+ JSONB performance gain · + EOL exit before EU regulatory review · − must rewrite 12 JSONpath queries to PG15-compatible form · − loses access to PG16's improved logical replication; revisit in 12 months.</div></div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">PR description: "Switch to Postgres 15"（→ 18 个月后新人 reading the repo："为什么 PG15 不是 PG16？"——无人能答）</span>
+<span class="after">ADR-042 上述五字段。文档活在 <code style="background:#eaeaea;padding:1px 5px;border-radius:2px;font-family:Courier New,monospace;font-size:0.86rem">docs/adr/0042-postgres-15.md</code>。永不被改写。18 个月后新人翻 ADR 即可：决定与上下文一目了然——他知道"当时不是因为蠢，是因为风险偏好"。</span>
+</div>
+<div class="example">
+<span class="before">Wiki 页面"数据库选择"——半年内被五个人编辑过 12 次，谁也说不清当时为什么选 PG。每次新人入职都开同一场争论会。</span>
+<span class="after">同一决定迁到 ADR-042 + immutable git history。"为什么选 PG"问题永久关闭：链接到 ADR，5 分钟读完。新人若不同意，写 ADR-067 提议替代——附其反方论据。组织进步走在 ADR 链条上，历史不丢。</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 框架 / 数据库 / 协议 / 区域基础设施选择 · 公司级 build vs buy · 关键依赖升降级</li>
+<li>✓ 任何"未来人会问'为什么是这个'"的决定</li>
+<li>✗ 不适用：日常实现选择（哪个第三方包、变量命名）——太频繁 ADR 反成噪音</li>
+<li>错误一：把 ADR 当 wiki——可改、被改、改完没人记原版。ADR 是 immutable</li>
+<li>错误二：只写 Decision、不写 Context——读者无法判断"现在还成不成立"</li>
+<li>错误三：不写 Consequences——下一个人不知作者已认知的 tradeoff，重新踩坑</li>
+<li>错误四：写得太晚——决定执行后再补 ADR 等于"考完试再写答案"，丢了思辨的痕迹</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">关键参考</div>
+<p class="refs"><span>Michael Nygard</span>《Documenting Architecture Decisions》Cognitect blog 2011 — 五字段原文 · <span>ThoughtWorks</span>《Technology Radar》— "Lightweight Architecture Decision Records" (Adopt, 2018) · <span>adr.github.io</span> — 模板与社区集合</p>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p><strong>习作：</strong>翻你过去半年最重要的一个技术决定（无论当时是否有 ADR），用 5 字段补写一份。重点是 Context——回到当时，<strong>你不知道现在知道的什么</strong>？把这个差异写出来。<br/><strong>思考：</strong>ADR 的 immutability 与组织学习似乎矛盾——人会进步、知识会更新。怎么设计 ADR 与"后续修正"的关系，让历史不被改写、但学习能传承？</p>
+</div>
 </section>
-
 <!-- Card 4: Comments -->
 <section class="card">
-  <div class="num">Principle 04</div>
-  <h2>代码注释：WHY 由注释，WHAT 由命名</h2>
-  <div class="en-name">Code Comments — Why &amp; Why-not, Not What</div>
-  <span class="tag">Comments · 哲学</span>
-
-  <div class="section">
-    <div class="label">一句话原则 + 名家原话</div>
-    <p>注释解释 <strong>WHY 与 WHY-NOT</strong>；命名解释 <strong>WHAT</strong>。两者重叠 → 噪音。当你想加一行解释 what 时，先问：能不能改个变量名或抽个函数？</p>
-    <div class="quote">
+<div class="num">Principle 04</div>
+<h2 data-tts="6faab87f8a455e08">代码注释：WHY 由注释，WHAT 由命名</h2>
+<div class="en-name">Code Comments — Why &amp; Why-not, Not What</div>
+<span class="tag">Comments · 哲学</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>注释解释 <strong>WHY 与 WHY-NOT</strong>；命名解释 <strong>WHAT</strong>。两者重叠 → 噪音。当你想加一行解释 what 时，先问：能不能改个变量名或抽个函数？</p>
+<div class="quote">
       "The most important reason to write comments is abstractions: comments can describe things that can't be inferred from the code. Without comments, you can't hide complexity."
       <span class="source">— John Ousterhout《A Philosophy of Software Design》Ch. 12（Stanford, 2018）</span>
-    </div>
-    <p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：写注释最重要的理由是抽象——它能描述代码本身推不出来的东西。没有注释，复杂度无法被隐藏。配合 Robert Martin《Clean Code》Ch. 4："Don't comment bad code—rewrite it."（不要为烂代码加注释——重写它）。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>三层分工：</p>
-    <table class="cmt-table">
-      <thead><tr><th>维度</th><th>由谁承担</th><th>例</th></tr></thead>
-      <tbody>
-        <tr><td>WHAT 做什么</td><td>命名</td><td><code>retryBudget</code> · <code>archiveUsersBefore()</code></td></tr>
-        <tr><td>HOW 怎么做</td><td>代码本身</td><td>函数体</td></tr>
-        <tr><td>WHY 为什么</td><td>注释</td><td><code># 3 因为上游 SLA P95 = 800ms</code></td></tr>
-        <tr><td>WHY-NOT</td><td>注释</td><td><code># 不用 async：worker 共享 db conn</code></td></tr>
-        <tr><td>不变量</td><td>注释</td><td><code># list must stay sorted — bisect downstream</code></td></tr>
-        <tr><td>契约</td><td>docstring</td><td>"Returns timestamp in UTC ms; raises TimeoutError after 5s"</td></tr>
-      </tbody>
-    </table>
-    <p style="margin-top:8px">注释还有一个被忽视的作用：<strong>标"未来的不变量"</strong>——如 <code style="background:#eaeaea;padding:1px 5px;border-radius:2px;font-family:Courier New,monospace;font-size:0.86rem"># this list must stay sorted — binary search downstream</code>。这是文档化的约束，告诉下个 engineer "改它前先看后果"。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">注释复述代码——零信息：
+</div>
+<p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：写注释最重要的理由是抽象——它能描述代码本身推不出来的东西。没有注释，复杂度无法被隐藏。配合 Robert Martin《Clean Code》Ch. 4："Don't comment bad code—rewrite it."（不要为烂代码加注释——重写它）。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>三层分工：</p>
+<table class="cmt-table">
+<thead><tr><th>维度</th><th>由谁承担</th><th>例</th></tr></thead>
+<tbody>
+<tr><td>WHAT 做什么</td><td>命名</td><td><code>retryBudget</code> · <code>archiveUsersBefore()</code></td></tr>
+<tr><td>HOW 怎么做</td><td>代码本身</td><td>函数体</td></tr>
+<tr><td>WHY 为什么</td><td>注释</td><td><code># 3 因为上游 SLA P95 = 800ms</code></td></tr>
+<tr><td>WHY-NOT</td><td>注释</td><td><code># 不用 async：worker 共享 db conn</code></td></tr>
+<tr><td>不变量</td><td>注释</td><td><code># list must stay sorted — bisect downstream</code></td></tr>
+<tr><td>契约</td><td>docstring</td><td>"Returns timestamp in UTC ms; raises TimeoutError after 5s"</td></tr>
+</tbody>
+</table>
+<p style="margin-top:8px">注释还有一个被忽视的作用：<strong>标"未来的不变量"</strong>——如 <code style="background:#eaeaea;padding:1px 5px;border-radius:2px;font-family:Courier New,monospace;font-size:0.86rem"># this list must stay sorted — binary search downstream</code>。这是文档化的约束，告诉下个 engineer "改它前先看后果"。</p>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">注释复述代码——零信息：
 <pre># increment i
 i += 1</pre></span>
-      <span class="after">注释解释"3"这个数字的来源：
+<span class="after">注释解释"3"这个数字的来源：
 <pre># retry budget is 3 — beyond this upstream
 # (payments-svc) gives up, so we should too
 i += 1</pre></span>
-    </div>
-    <div class="example">
-      <span class="before">注释像残片，"legacy" 含义模糊；魔法数字硬编码：
+</div>
+<div class="example">
+<span class="before">注释像残片，"legacy" 含义模糊；魔法数字硬编码：
 <pre># fix for legacy users created before 2018
 if user.created_at &lt; datetime(2018, 1, 1):
     user.role = "legacy"</pre></span>
-      <span class="after">提取常量做 WHAT，注释指向 ADR：
+<span class="after">提取常量做 WHAT，注释指向 ADR：
 <pre># Pre-cutoff users predate the role-schema migration
 # in ADR-019; default to LEGACY so they don't get
 # write-locked by new RBAC checks.
 if user.created_at &lt; LEGACY_USER_CUTOFF:
     user.role = ROLE_LEGACY</pre></span>
-    </div>
-    <div class="example">
-      <span class="before">注释做命名的工作：
+</div>
+<div class="example">
+<span class="before">注释做命名的工作：
 <pre>// loop through users
 for (const u of users) { ... }</pre></span>
-      <span class="after">删掉注释——<code>for (const u of users)</code> 已经自明。这就是 Martin "<em>Don't comment bad code—rewrite it</em>" 的简化版："Don't comment obvious code—delete the comment."</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 任何非显而易见的"为什么是这数""为什么不那样写""未来需小心改"</li>
-      <li>✓ 公共 API / SDK / 跨团队接口——契约必须 docstring 化（前置 / 后置条件、异常、单位）</li>
-      <li>✗ 不适用：复述代码 · 装饰性 banner · 版本号（git 已记录）· 姓名版权（在 LICENSE）</li>
-      <li>错误一：注释做 WHAT 的工作——改名 / 抽函数代替</li>
-      <li>错误二：<strong>注释撒谎</strong>——代码改了注释没改。过期注释比没有注释更糟，因为它主动误导</li>
-      <li>错误三：JSDoc / docstring 当装饰——只写类型不写语义，读者还是不知单位、不知失败模式</li>
-      <li>错误四：在烂逻辑前加一段诗——若需要一整段解释，先看能不能把代码改清晰</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <div class="label">关键参考</div>
-    <p class="refs"><span>John Ousterhout</span>《A Philosophy of Software Design》(2018, 2nd 2021) Ch. 12–15 — 注释与命名的核心读物 · <span>Robert C. Martin</span>《Clean Code》Ch. 4 — 注释的 17 戒 · <span>Steve McConnell</span>《Code Complete》Ch. 32 — 自文档化代码原则</p>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p><strong>习作：</strong>在自己最近的一个 PR 里，逐行注释做"三判定"：(a) 复述代码 → 删；(b) 解释 WHY → 留；(c) 命名能替代 → 改名再删。Bonus：找一个三个月前的老注释，看代码与注释是否还吻合；不吻合就更新或删——注释卫生最 underrated 的练习。<br><strong>思考：</strong>当 AI 能即时为代码生成"它在做什么"的注释，WHAT 类注释的边际成本趋零。这是好事还是坏事？AI 能否生成 WHY 类注释——还是 WHY 永远是人类作者保留的东西？</p>
-  </div>
+<span class="after">删掉注释——<code>for (const u of users)</code> 已经自明。这就是 Martin "<em>Don't comment bad code—rewrite it</em>" 的简化版："Don't comment obvious code—delete the comment."</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 任何非显而易见的"为什么是这数""为什么不那样写""未来需小心改"</li>
+<li>✓ 公共 API / SDK / 跨团队接口——契约必须 docstring 化（前置 / 后置条件、异常、单位）</li>
+<li>✗ 不适用：复述代码 · 装饰性 banner · 版本号（git 已记录）· 姓名版权（在 LICENSE）</li>
+<li>错误一：注释做 WHAT 的工作——改名 / 抽函数代替</li>
+<li>错误二：<strong>注释撒谎</strong>——代码改了注释没改。过期注释比没有注释更糟，因为它主动误导</li>
+<li>错误三：JSDoc / docstring 当装饰——只写类型不写语义，读者还是不知单位、不知失败模式</li>
+<li>错误四：在烂逻辑前加一段诗——若需要一整段解释，先看能不能把代码改清晰</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">关键参考</div>
+<p class="refs"><span>John Ousterhout</span>《A Philosophy of Software Design》(2018, 2nd 2021) Ch. 12–15 — 注释与命名的核心读物 · <span>Robert C. Martin</span>《Clean Code》Ch. 4 — 注释的 17 戒 · <span>Steve McConnell</span>《Code Complete》Ch. 32 — 自文档化代码原则</p>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p><strong>习作：</strong>在自己最近的一个 PR 里，逐行注释做"三判定"：(a) 复述代码 → 删；(b) 解释 WHY → 留；(c) 命名能替代 → 改名再删。Bonus：找一个三个月前的老注释，看代码与注释是否还吻合；不吻合就更新或删——注释卫生最 underrated 的练习。<br/><strong>思考：</strong>当 AI 能即时为代码生成"它在做什么"的注释，WHAT 类注释的边际成本趋零。这是好事还是坏事？AI 能否生成 WHY 类注释——还是 WHY 永远是人类作者保留的东西？</p>
+</div>
 </section>
-
 <!-- Resources -->
 <section class="card">
-  <div class="num">Deep Dive</div>
-  <h2>深入资源</h2>
-  <div class="en-name">For Further Reading</div>
-  <span class="tag">REF · 延伸</span>
-  <div class="section">
-    <ul>
-      <li><strong>Malte Ubl</strong>《Design Docs at Google》industrialempathy.com 2020 — Google 内部 RFC 形态的公开版描述</li>
-      <li><strong>Daniele Procida</strong>《Diátaxis》diataxis.fr — 文档四象限结构论，技术文档界近十年最有影响力的框架</li>
-      <li><strong>Michael Nygard</strong>《Documenting Architecture Decisions》Cognitect blog 2011 — ADR 五字段原文，三页改变了一代工程组织</li>
-      <li><strong>John Ousterhout</strong>《A Philosophy of Software Design》Ch. 12–15 — Stanford CS 190 课本，注释与抽象的源头</li>
-      <li><strong>Robert C. Martin</strong>《Clean Code》Ch. 4 — 注释 17 戒，争议但实用</li>
-      <li><strong>Will Larson</strong>《An Elegant Puzzle》Ch. 4《Staff Engineer》Ch. 6 — 工程组织里"写"作为 leverage 的论述</li>
-      <li><strong>Google</strong>《Technical Writing Courses》developers.google.com/tech-writing — 免费两阶段课程，30 分钟看完受益十年</li>
-      <li><strong>Stripe API Docs</strong> docs.stripe.com — Diátaxis 教科书级实践，建议直接拿来逆向学习 IA</li>
-    </ul>
-  </div>
+<div class="num">Deep Dive</div>
+<h2 data-tts="0a15f89729f75171">深入资源</h2>
+<div class="en-name">For Further Reading</div>
+<span class="tag">REF · 延伸</span>
+<div class="section">
+<ul>
+<li><strong>Malte Ubl</strong>《Design Docs at Google》industrialempathy.com 2020 — Google 内部 RFC 形态的公开版描述</li>
+<li><strong>Daniele Procida</strong>《Diátaxis》diataxis.fr — 文档四象限结构论，技术文档界近十年最有影响力的框架</li>
+<li><strong>Michael Nygard</strong>《Documenting Architecture Decisions》Cognitect blog 2011 — ADR 五字段原文，三页改变了一代工程组织</li>
+<li><strong>John Ousterhout</strong>《A Philosophy of Software Design》Ch. 12–15 — Stanford CS 190 课本，注释与抽象的源头</li>
+<li><strong>Robert C. Martin</strong>《Clean Code》Ch. 4 — 注释 17 戒，争议但实用</li>
+<li><strong>Will Larson</strong>《An Elegant Puzzle》Ch. 4《Staff Engineer》Ch. 6 — 工程组织里"写"作为 leverage 的论述</li>
+<li><strong>Google</strong>《Technical Writing Courses》developers.google.com/tech-writing — 免费两阶段课程，30 分钟看完受益十年</li>
+<li><strong>Stripe API Docs</strong> docs.stripe.com — Diátaxis 教科书级实践，建议直接拿来逆向学习 IA</li>
+</ul>
+</div>
 </section>
-
 <!-- Reflection -->
 <section class="card">
-  <div class="num">Reflection</div>
-  <h2>深入思考</h2>
-  <div class="en-name">Open Questions for the Practitioner</div>
-  <span class="tag">Q · 思考</span>
-  <div class="section">
-    <details>
-      <summary>1. AI 起草 RFC 后，"writing is thinking" 的红利还属于谁？</summary>
-      <div>风险是真实的——AI 把"打字时露馅"的过程外包，作者跳过了思考。可行的对冲：AI 只承担"骨架与措辞"（节段头、过渡句、语法清理），关键节段（Goals / Non-goals / Alternatives Considered / Risks）由作者亲手起初稿。判断标准：写完后，作者能否口头复述每个被否决方案的理由？能就保留了红利，不能就外包过头了。</div>
-    </details>
-    <details>
-      <summary>2. ADR 的 immutability 与组织进步如何并存？</summary>
-      <div>三条路径：(a) ADR 链——新决定写新 ADR、标 "Supersedes ADR-042"，原文不动；(b) 把 ADR 与 RFC 分开——RFC 可改、是"还在讨论的"，ADR 一旦 Accepted 即不可改；(c) 在 ADR 顶部加 status field，允许 "Deprecated" 但不允许 edit。本质是 git commit vs wiki 的认识论差异：知识库可改，但决定的历史不能改——否则后人无法判断"当时是怎么想的"。</div>
-    </details>
-    <details>
-      <summary>3. Diátaxis 四象限在中文技术社区为何普及度低？</summary>
-      <div>几条假设：(a) 中文 SaaS / 平台市场起步晚，公开开发者文档体量小；(b) 中文文档传统偏 "教程 + reference 合一" 的整本书形态（《XX 权威指南》），与 Diátaxis 的"四独立形态"模型相反；(c) 工具链——大部分 Diátaxis 实践依赖 Sphinx / MkDocs / Docusaurus，中文社区在 doc-as-code 工具链上覆盖薄。改进点：把 Diátaxis 作为 IA 框架而非排版要求引入，先分类再排版。</div>
-    </details>
-    <details>
-      <summary>4. 中英文代码注释——团队语言混杂时怎么权衡？</summary>
-      <div>分三类：(a) 内部小工具——团队主语言写就行，统一即可；(b) 开源 / 跨地域协作——必须英文，且术语统一；(c) 中外混杂大团队——折中方案是"WHY 注释用主语言、TODO 与 link 用英文"。最大的陷阱是混写——同一文件中英夹杂注释，新人 grep 失败、AI 读得也吃力。一条简单原则：注释的语言要么是 codebase 的 lingua franca，要么就完全是另一种——别混。</div>
-    </details>
-    <details>
-      <summary>5. "Writing for future you" vs "writing for the new hire"，哪个画像让你写得更好？</summary>
-      <div>"new hire" 画像写出更友好的文档（背景铺垫、术语解释），但容易写成"教程"——内容过载、决策被故事稀释。"future you" 画像写出更紧凑、决策导向、Alternatives 部分丰满的文档——因为你知道未来的自己懒得读冗余，要的就是"那个被否决的 B"的细节。一个常用混合：主体用 "future you" 画像（决策密度高），首段加 30 字 "for context"（给 new hire 入口）。两边都顾，互不稀释。</div>
-    </details>
-  </div>
+<div class="num">Reflection</div>
+<h2 data-tts="3a30379b7b363c17">深入思考</h2>
+<div class="en-name">Open Questions for the Practitioner</div>
+<span class="tag">Q · 思考</span>
+<div class="section">
+<details>
+<summary>1. AI 起草 RFC 后，"writing is thinking" 的红利还属于谁？</summary>
+<div>风险是真实的——AI 把"打字时露馅"的过程外包，作者跳过了思考。可行的对冲：AI 只承担"骨架与措辞"（节段头、过渡句、语法清理），关键节段（Goals / Non-goals / Alternatives Considered / Risks）由作者亲手起初稿。判断标准：写完后，作者能否口头复述每个被否决方案的理由？能就保留了红利，不能就外包过头了。</div>
+</details>
+<details>
+<summary>2. ADR 的 immutability 与组织进步如何并存？</summary>
+<div>三条路径：(a) ADR 链——新决定写新 ADR、标 "Supersedes ADR-042"，原文不动；(b) 把 ADR 与 RFC 分开——RFC 可改、是"还在讨论的"，ADR 一旦 Accepted 即不可改；(c) 在 ADR 顶部加 status field，允许 "Deprecated" 但不允许 edit。本质是 git commit vs wiki 的认识论差异：知识库可改，但决定的历史不能改——否则后人无法判断"当时是怎么想的"。</div>
+</details>
+<details>
+<summary>3. Diátaxis 四象限在中文技术社区为何普及度低？</summary>
+<div>几条假设：(a) 中文 SaaS / 平台市场起步晚，公开开发者文档体量小；(b) 中文文档传统偏 "教程 + reference 合一" 的整本书形态（《XX 权威指南》），与 Diátaxis 的"四独立形态"模型相反；(c) 工具链——大部分 Diátaxis 实践依赖 Sphinx / MkDocs / Docusaurus，中文社区在 doc-as-code 工具链上覆盖薄。改进点：把 Diátaxis 作为 IA 框架而非排版要求引入，先分类再排版。</div>
+</details>
+<details>
+<summary>4. 中英文代码注释——团队语言混杂时怎么权衡？</summary>
+<div>分三类：(a) 内部小工具——团队主语言写就行，统一即可；(b) 开源 / 跨地域协作——必须英文，且术语统一；(c) 中外混杂大团队——折中方案是"WHY 注释用主语言、TODO 与 link 用英文"。最大的陷阱是混写——同一文件中英夹杂注释，新人 grep 失败、AI 读得也吃力。一条简单原则：注释的语言要么是 codebase 的 lingua franca，要么就完全是另一种——别混。</div>
+</details>
+<details>
+<summary>5. "Writing for future you" vs "writing for the new hire"，哪个画像让你写得更好？</summary>
+<div>"new hire" 画像写出更友好的文档（背景铺垫、术语解释），但容易写成"教程"——内容过载、决策被故事稀释。"future you" 画像写出更紧凑、决策导向、Alternatives 部分丰满的文档——因为你知道未来的自己懒得读冗余，要的就是"那个被否决的 B"的细节。一个常用混合：主体用 "future you" 画像（决策密度高），首段加 30 字 "for context"（给 new hire 入口）。两边都顾，互不稀释。</div>
+</details>
+</div>
 </section>
-
 <div class="nav">
-  <a href="index.html">← 回到写作目录</a>
+<a href="index.html">← 回到写作目录</a>
 </div>
-
 <footer>BigCat · Writing · Day 8 · 2026</footer>
-
 </div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
+<script defer="" src="https://cissy0802.github.io/comments.js"></script>
+<script defer="" src="https://cissy0802.github.io/search.js"></script>
+<script defer="" src="https://cissy0802.github.io/index-button.js"></script>
+<script defer="" src="https://cissy0802.github.io/i18n-tts.js"></script>
 </body>
 </html>

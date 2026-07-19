@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>写作与表达：科普写作 — Day 35</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -82,275 +83,246 @@ footer{text-align:center;margin-top:40px;font-size:0.82rem;color:#a0a0a0;font-fa
 </head>
 <body>
 <div class="container">
-
 <header>
-  <div class="week-label">Day 35 · 2026.06.22</div>
-  <h1>写作与表达：科普写作<span class="topic">把复杂讲简单 · 类比的力量 · 准确 vs 可读 · 不看轻读者</span></h1>
-  <div class="date">BigCat's Writing</div>
-  <p class="intro">科普写作的本质，是把你脑子里那团复杂的东西，原样搬进另一个人脑子里——而且不失真。这比写论文难：论文只需对专家负责，科普要对一个聪明、好奇、却恰好还不懂的人负责。萨根、费曼、Pinker 都把它当成最高级的技艺。本周学四件手艺。</p>
+<div class="week-label">Day 35 · 2026.06.22</div>
+<h1 data-tts="4494e81f6e79319c">写作与表达：科普写作<span class="topic">把复杂讲简单 · 类比的力量 · 准确 vs 可读 · 不看轻读者</span></h1>
+<div class="date">BigCat's Writing</div>
+<p class="intro">科普写作的本质，是把你脑子里那团复杂的东西，原样搬进另一个人脑子里——而且不失真。这比写论文难：论文只需对专家负责，科普要对一个聪明、好奇、却恰好还不懂的人负责。萨根、费曼、Pinker 都把它当成最高级的技艺。本周学四件手艺。</p>
 </header>
-
 <!-- Card 1 -->
 <section class="card">
-  <div class="num">Principle 01</div>
-  <h2>战胜「知识的诅咒」：把复杂讲简单</h2>
-  <div class="en-name">Beat the Curse of Knowledge</div>
-  <span class="tag">Pinker · 认知盲点</span>
-
-  <div class="section">
-    <div class="label">一句话原则 · 名家原话</div>
-    <p>你写得让人看不懂，往往不是因为读者笨，而是因为你<strong>忘了「不懂」是什么感觉</strong>。</p>
-    <div class="quote">
+<div class="num">Principle 01</div>
+<h2 data-tts="ac5e61124da42a83">战胜「知识的诅咒」：把复杂讲简单</h2>
+<div class="en-name">Beat the Curse of Knowledge</div>
+<span class="tag">Pinker · 认知盲点</span>
+<div class="section">
+<div class="label">一句话原则 · 名家原话</div>
+<p>你写得让人看不懂，往往不是因为读者笨，而是因为你<strong>忘了「不懂」是什么感觉</strong>。</p>
+<div class="quote">
       "The curse of knowledge is the single best explanation I know of why good people write bad prose. It simply doesn't occur to the writer that her readers don't know what she knows."
       <span class="source">— Steven Pinker, The Sense of Style (2014)</span>
-    </div>
-    <p class="trans">中译：知识的诅咒，是我所知对「好人为何写出烂文章」最好的解释。作者根本想不到，读者并不知道她所知道的东西。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>一旦你掌握了一个概念，就<strong>再也无法精确想象「不懂它」的状态</strong>——这是大脑的不可逆。专家的诅咒不是炫技，而是真诚地高估了读者的起点。解药有二：一是费曼技巧——讲给一个完全外行听，卡壳处就是你自己没想透处；二是「具体先于抽象」——先给画面，再给定义。费曼说过，若一个理论无法降到大一新生能懂的程度，那意味着「我们其实并不真懂它」。</p>
-    <div class="ladder">
-      <div class="rung top">线性一致性 · 共识协议 · 状态机复制</div>
-      <div class="arrow">↓ 把读者拉回地面 ↓</div>
-      <div class="rung mid">多台机器要保证「看到的账本一样」</div>
-      <div class="arrow">↓</div>
-      <div class="rung bot">五个抄写员照同一本账本誊抄</div>
-      <div class="caption">抽象阶梯——好科普从最底层那级讲起，再往上爬</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">我们采用基于 RAFT 的共识协议，保证多副本状态机在节点故障下仍维持线性一致性。</span>
-      <span class="after">想象五个抄写员各管一本账本。系统先选一位「主抄写员」，其余四人只照他抄。哪怕两人请假，只要多数人记的一致，你查到的账永远是同一本——这就是 RAFT。</span>
-    </div>
-    <div class="example">
-      <span class="before">We leverage a transformer architecture with self-attention to capture long-range token dependencies.</span>
-      <span class="after">The model reads a sentence the way you do: when it hits "it," it glances back to find which noun "it" points to. "Attention" is just that glance—done for every word at once.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 · 常见错误</div>
-    <ul>
-      <li>✓ 技术博客、onboarding 文档、跨团队汇报、给非技术高管的 brief、对外科普</li>
-      <li>✗ 同行评审论文、给专家的 spec——此时术语是效率，不是障碍</li>
-      <li>坑：用术语堆砌冒充严谨；只给定义不给画面；默认「这谁都懂」（这正是诅咒本身）；一句话塞进三个新概念</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 · 思考题</div>
-    <p>选你工作中最熟的一个技术概念，讲给一个完全外行（家人、朋友）听 90 秒，全程禁用行话。卡壳之处，就是你「以为懂、其实没想透」的地方。</p>
-    <p class="think">思考题：你最近读到的、让你瞬间「懂了」的解释，它用什么具体画面替代了抽象？</p>
-  </div>
+</div>
+<p class="trans">中译：知识的诅咒，是我所知对「好人为何写出烂文章」最好的解释。作者根本想不到，读者并不知道她所知道的东西。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>一旦你掌握了一个概念，就<strong>再也无法精确想象「不懂它」的状态</strong>——这是大脑的不可逆。专家的诅咒不是炫技，而是真诚地高估了读者的起点。解药有二：一是费曼技巧——讲给一个完全外行听，卡壳处就是你自己没想透处；二是「具体先于抽象」——先给画面，再给定义。费曼说过，若一个理论无法降到大一新生能懂的程度，那意味着「我们其实并不真懂它」。</p>
+<div class="ladder">
+<div class="rung top">线性一致性 · 共识协议 · 状态机复制</div>
+<div class="arrow">↓ 把读者拉回地面 ↓</div>
+<div class="rung mid">多台机器要保证「看到的账本一样」</div>
+<div class="arrow">↓</div>
+<div class="rung bot">五个抄写员照同一本账本誊抄</div>
+<div class="caption">抽象阶梯——好科普从最底层那级讲起，再往上爬</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">我们采用基于 RAFT 的共识协议，保证多副本状态机在节点故障下仍维持线性一致性。</span>
+<span class="after">想象五个抄写员各管一本账本。系统先选一位「主抄写员」，其余四人只照他抄。哪怕两人请假，只要多数人记的一致，你查到的账永远是同一本——这就是 RAFT。</span>
+</div>
+<div class="example">
+<span class="before">We leverage a transformer architecture with self-attention to capture long-range token dependencies.</span>
+<span class="after">The model reads a sentence the way you do: when it hits "it," it glances back to find which noun "it" points to. "Attention" is just that glance—done for every word at once.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 · 常见错误</div>
+<ul>
+<li>✓ 技术博客、onboarding 文档、跨团队汇报、给非技术高管的 brief、对外科普</li>
+<li>✗ 同行评审论文、给专家的 spec——此时术语是效率，不是障碍</li>
+<li>坑：用术语堆砌冒充严谨；只给定义不给画面；默认「这谁都懂」（这正是诅咒本身）；一句话塞进三个新概念</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 · 思考题</div>
+<p>选你工作中最熟的一个技术概念，讲给一个完全外行（家人、朋友）听 90 秒，全程禁用行话。卡壳之处，就是你「以为懂、其实没想透」的地方。</p>
+<p class="think">思考题：你最近读到的、让你瞬间「懂了」的解释，它用什么具体画面替代了抽象？</p>
+</div>
 </section>
-
 <!-- Card 2 -->
 <section class="card">
-  <div class="num">Principle 02</div>
-  <h2>类比的力量：用已知点亮未知</h2>
-  <div class="en-name">The Power of Analogy</div>
-  <span class="tag">Hofstadter · 认知核心</span>
-
-  <div class="section">
-    <div class="label">一句话原则 · 名家原话</div>
-    <p>解释一个新事物，最快的路不是定义它，而是说<strong>「它就像你早已熟悉的那个东西」</strong>。</p>
-    <div class="quote">
+<div class="num">Principle 02</div>
+<h2 data-tts="f865cb0174e6679c">类比的力量：用已知点亮未知</h2>
+<div class="en-name">The Power of Analogy</div>
+<span class="tag">Hofstadter · 认知核心</span>
+<div class="section">
+<div class="label">一句话原则 · 名家原话</div>
+<p>解释一个新事物，最快的路不是定义它，而是说<strong>「它就像你早已熟悉的那个东西」</strong>。</p>
+<div class="quote">
       "Without concepts there can be no thought, and without analogies there can be no concepts."
       <span class="source">— Hofstadter &amp; Sander, Surfaces and Essences (2013)</span>
-    </div>
-    <p class="trans">中译：没有概念就没有思想，而没有类比就没有概念。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>类比之所以高效，是因为它不传输信息，而是<strong>复用读者脑中早已搭好的结构</strong>。你说「向量数据库就像图书馆按主题、而非按书名排架」，读者瞬间调用了一生的图书馆经验。好类比有三准则：(1) 映射在关键处成立——机制相似，不只是表面像；(2) 用更熟悉的解释更陌生的（别拿量子力学类比区块链）；(3) 明确边界，主动说「这个类比在哪里会失效」，否则读者会把它推过头。</p>
-    <div class="amap">
-      <div class="head"><div>源域（已知）</div><div></div><div>目标域（未知）</div></div>
-      <div class="row"><div class="cell">图书馆书架</div><div class="map-arrow">→</div><div class="cell">向量空间</div></div>
-      <div class="row"><div class="cell">按主题就近摆放</div><div class="map-arrow">→</div><div class="cell">相似内容向量相邻</div></div>
-      <div class="row"><div class="cell">「帮我找类似的书」</div><div class="map-arrow">→</div><div class="cell">最近邻检索</div></div>
-      <div class="caption">好类比＝一张清晰的「源域→目标域」映射表</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">梯度下降沿损失函数的负梯度方向迭代更新参数，逐步逼近局部最优。</span>
-      <span class="after">想象你蒙着眼站在山谷里，要走到最低处。你用脚感受哪个方向最陡、朝下迈一小步，再感受、再迈一步——模型训练就是这样下山。「学习率」是每步迈多大。（注意：山谷有很多小坑，你可能停在坑里而非谷底，这就是「局部最优」。）</span>
-    </div>
-    <div class="example">
-      <span class="before">A hash function maps arbitrary-length input to a fixed-length digest and is infeasible to invert.</span>
-      <span class="after">A hash is a fingerprint for data. Any file—tiny or huge—gets one short, unique print. You can check that two files share a print, but you can't rebuild the file from the fingerprint alone.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 · 常见错误</div>
-    <ul>
-      <li>✓ 引入新概念的头一分钟、科普文开篇、给高管解释技术风险、教学</li>
-      <li>✗ 精确的规格定义、安全关键的操作步骤——类比的模糊会害人</li>
-      <li>坑：类比比原概念还难懂；表面像而机制不同（误导）；不说边界，读者推过头得出错论；一个类比硬撑全部细节</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 · 思考题</div>
-    <p>为你领域里最难解释的一个概念，写三个不同类比，分别面向：孩子、非技术同事、投资人。再给每个补一句「它在______会失效」。</p>
-    <p class="think">思考题：一个被用滥的类比（如「大脑就像计算机」）会怎样反过来限制人的思考？</p>
-  </div>
+</div>
+<p class="trans">中译：没有概念就没有思想，而没有类比就没有概念。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>类比之所以高效，是因为它不传输信息，而是<strong>复用读者脑中早已搭好的结构</strong>。你说「向量数据库就像图书馆按主题、而非按书名排架」，读者瞬间调用了一生的图书馆经验。好类比有三准则：(1) 映射在关键处成立——机制相似，不只是表面像；(2) 用更熟悉的解释更陌生的（别拿量子力学类比区块链）；(3) 明确边界，主动说「这个类比在哪里会失效」，否则读者会把它推过头。</p>
+<div class="amap">
+<div class="head"><div>源域（已知）</div><div></div><div>目标域（未知）</div></div>
+<div class="row"><div class="cell">图书馆书架</div><div class="map-arrow">→</div><div class="cell">向量空间</div></div>
+<div class="row"><div class="cell">按主题就近摆放</div><div class="map-arrow">→</div><div class="cell">相似内容向量相邻</div></div>
+<div class="row"><div class="cell">「帮我找类似的书」</div><div class="map-arrow">→</div><div class="cell">最近邻检索</div></div>
+<div class="caption">好类比＝一张清晰的「源域→目标域」映射表</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">梯度下降沿损失函数的负梯度方向迭代更新参数，逐步逼近局部最优。</span>
+<span class="after">想象你蒙着眼站在山谷里，要走到最低处。你用脚感受哪个方向最陡、朝下迈一小步，再感受、再迈一步——模型训练就是这样下山。「学习率」是每步迈多大。（注意：山谷有很多小坑，你可能停在坑里而非谷底，这就是「局部最优」。）</span>
+</div>
+<div class="example">
+<span class="before">A hash function maps arbitrary-length input to a fixed-length digest and is infeasible to invert.</span>
+<span class="after">A hash is a fingerprint for data. Any file—tiny or huge—gets one short, unique print. You can check that two files share a print, but you can't rebuild the file from the fingerprint alone.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 · 常见错误</div>
+<ul>
+<li>✓ 引入新概念的头一分钟、科普文开篇、给高管解释技术风险、教学</li>
+<li>✗ 精确的规格定义、安全关键的操作步骤——类比的模糊会害人</li>
+<li>坑：类比比原概念还难懂；表面像而机制不同（误导）；不说边界，读者推过头得出错论；一个类比硬撑全部细节</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 · 思考题</div>
+<p>为你领域里最难解释的一个概念，写三个不同类比，分别面向：孩子、非技术同事、投资人。再给每个补一句「它在______会失效」。</p>
+<p class="think">思考题：一个被用滥的类比（如「大脑就像计算机」）会怎样反过来限制人的思考？</p>
+</div>
 </section>
-
 <!-- Card 3 -->
 <section class="card">
-  <div class="num">Principle 03</div>
-  <h2>准确与可读的钢丝：简到极致，但别更简</h2>
-  <div class="en-name">Accuracy vs. Readability</div>
-  <span class="tag">取舍 · 简化的边界</span>
-
-  <div class="section">
-    <div class="label">一句话原则 · 名家原话</div>
-    <p>科普的全部难度，在于一手砍掉复杂、一手守住真相——<strong>简化不是说谎的许可证</strong>。</p>
-    <div class="quote">
+<div class="num">Principle 03</div>
+<h2 data-tts="e29af54c4437d4e9">准确与可读的钢丝：简到极致，但别更简</h2>
+<div class="en-name">Accuracy vs. Readability</div>
+<span class="tag">取舍 · 简化的边界</span>
+<div class="section">
+<div class="label">一句话原则 · 名家原话</div>
+<p>科普的全部难度，在于一手砍掉复杂、一手守住真相——<strong>简化不是说谎的许可证</strong>。</p>
+<div class="quote">
       "Everything should be made as simple as possible, but not simpler."
       <span class="source">— 常归于 Albert Einstein（实为其思想的凝练转述）</span>
-    </div>
-    <p class="trans">中译：一切都应尽可能简单，但不能比这更简单。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>每一次简化都在丢信息，问题是丢「枝节」还是「主干」。丢枝节叫提炼，丢主干叫错误。最危险的是第三种——<strong>「听起来对、其实错」的简化</strong>，它比晦涩更有害，因为读者会带着虚假的确定感离开。守住准确的办法：分清哪些是「善意的近似」（可丢），哪些是「会误导决策的失真」（不可丢）；必要时用一句「严格说……」标注你略过的复杂，既保可读，又留一个诚实的逃生口。</p>
-    <div class="tradeoff">
-      <svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" aria-label="准确与可读权衡">
-        <line x1="60" y1="180" x2="540" y2="180" stroke="#8a8a8a" stroke-width="1"/>
-        <line x1="60" y1="180" x2="60" y2="20" stroke="#8a8a8a" stroke-width="1"/>
-        <text x="60" y="200" font-family="Georgia" font-size="11" fill="#8a8a8a">可读 ←</text>
-        <text x="470" y="200" font-family="Georgia" font-size="11" fill="#8a8a8a">→ 可读高</text>
-        <text x="14" y="28" font-family="Georgia" font-size="11" fill="#8a8a8a">准确高</text>
-        <path d="M 80 40 Q 300 120 520 40" fill="none" stroke="#c8c0a8" stroke-width="1.5" stroke-dasharray="5,4"/>
-        <circle cx="100" cy="58" r="5" fill="#a04040"/>
-        <text x="110" y="55" font-family="Georgia" font-size="11" fill="#a04040">学术黑话（准确但没人懂）</text>
-        <circle cx="500" cy="58" r="5" fill="#a04040"/>
-        <text x="300" y="78" font-family="Georgia" font-size="11" fill="#a04040">过度简化（好懂但失真）</text>
-        <circle cx="300" cy="118" r="7" fill="#3a6a3a"/>
-        <text x="210" y="145" font-family="Georgia" font-size="12" fill="#3a6a3a" font-weight="bold">Sweet Spot：简单但不失真</text>
-      </svg>
-      <div class="caption">两端都是悬崖，手艺在于守住中间那一点</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">（过度简化，已失真）AI 会像人一样思考，它理解你说的每一句话。</span>
-      <span class="after">（简单但准确）AI 并不「理解」语言，它是在海量文本里学会了「什么词后面最可能跟什么词」，再接龙下去。它常常对，但它的「懂」和你的懂不是一回事。</span>
-    </div>
-    <div class="example">
-      <span class="before">(Too technical) The LLM samples tokens autoregressively from a distribution conditioned on prior context.</span>
-      <span class="after">(Simple, still true) The model writes one word at a time, each time guessing the most likely next word given everything so far—like an extremely well-read autocomplete.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 · 常见错误</div>
-    <ul>
-      <li>✓ 对外科普、给非技术决策者的风险说明、教育材料、宣传中的技术声明</li>
-      <li>✗ 法律/合规/安全文档——此处准确压倒一切，宁晦涩勿失真</li>
-      <li>坑：为好懂把「通常」说成「总是」；用拟人制造错误直觉（「AI 想要……」）；砍掉了那个决定结论是否成立的前提；反向错误——为显严谨堆术语，可读性归零</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 · 思考题</div>
-    <p>找一段你写过的技术说明，标出每一处简化，逐一判断：「丢的是枝节还是主干？」把任何「听起来对、其实错」的地方，改成「简单且真」。</p>
-    <p class="think">思考题：当一个准确的解释注定让 90% 读者看不懂，你该降低准确性，还是缩小读者范围？</p>
-  </div>
+</div>
+<p class="trans">中译：一切都应尽可能简单，但不能比这更简单。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>每一次简化都在丢信息，问题是丢「枝节」还是「主干」。丢枝节叫提炼，丢主干叫错误。最危险的是第三种——<strong>「听起来对、其实错」的简化</strong>，它比晦涩更有害，因为读者会带着虚假的确定感离开。守住准确的办法：分清哪些是「善意的近似」（可丢），哪些是「会误导决策的失真」（不可丢）；必要时用一句「严格说……」标注你略过的复杂，既保可读，又留一个诚实的逃生口。</p>
+<div class="tradeoff">
+<svg aria-label="准确与可读权衡" viewbox="0 0 560 220" xmlns="http://www.w3.org/2000/svg">
+<line stroke="#8a8a8a" stroke-width="1" x1="60" x2="540" y1="180" y2="180"></line>
+<line stroke="#8a8a8a" stroke-width="1" x1="60" x2="60" y1="180" y2="20"></line>
+<text fill="#8a8a8a" font-family="Georgia" font-size="11" x="60" y="200">可读 ←</text>
+<text fill="#8a8a8a" font-family="Georgia" font-size="11" x="470" y="200">→ 可读高</text>
+<text fill="#8a8a8a" font-family="Georgia" font-size="11" x="14" y="28">准确高</text>
+<path d="M 80 40 Q 300 120 520 40" fill="none" stroke="#c8c0a8" stroke-dasharray="5,4" stroke-width="1.5"></path>
+<circle cx="100" cy="58" fill="#a04040" r="5"></circle>
+<text fill="#a04040" font-family="Georgia" font-size="11" x="110" y="55">学术黑话（准确但没人懂）</text>
+<circle cx="500" cy="58" fill="#a04040" r="5"></circle>
+<text fill="#a04040" font-family="Georgia" font-size="11" x="300" y="78">过度简化（好懂但失真）</text>
+<circle cx="300" cy="118" fill="#3a6a3a" r="7"></circle>
+<text fill="#3a6a3a" font-family="Georgia" font-size="12" font-weight="bold" x="210" y="145">Sweet Spot：简单但不失真</text>
+</svg>
+<div class="caption">两端都是悬崖，手艺在于守住中间那一点</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">（过度简化，已失真）AI 会像人一样思考，它理解你说的每一句话。</span>
+<span class="after">（简单但准确）AI 并不「理解」语言，它是在海量文本里学会了「什么词后面最可能跟什么词」，再接龙下去。它常常对，但它的「懂」和你的懂不是一回事。</span>
+</div>
+<div class="example">
+<span class="before">(Too technical) The LLM samples tokens autoregressively from a distribution conditioned on prior context.</span>
+<span class="after">(Simple, still true) The model writes one word at a time, each time guessing the most likely next word given everything so far—like an extremely well-read autocomplete.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 · 常见错误</div>
+<ul>
+<li>✓ 对外科普、给非技术决策者的风险说明、教育材料、宣传中的技术声明</li>
+<li>✗ 法律/合规/安全文档——此处准确压倒一切，宁晦涩勿失真</li>
+<li>坑：为好懂把「通常」说成「总是」；用拟人制造错误直觉（「AI 想要……」）；砍掉了那个决定结论是否成立的前提；反向错误——为显严谨堆术语，可读性归零</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 · 思考题</div>
+<p>找一段你写过的技术说明，标出每一处简化，逐一判断：「丢的是枝节还是主干？」把任何「听起来对、其实错」的地方，改成「简单且真」。</p>
+<p class="think">思考题：当一个准确的解释注定让 90% 读者看不懂，你该降低准确性，还是缩小读者范围？</p>
+</div>
 </section>
-
 <!-- Card 4 -->
 <section class="card">
-  <div class="num">Principle 04</div>
-  <h2>永远不要看轻你的读者</h2>
-  <div class="en-name">Never Talk Down</div>
-  <span class="tag">E.B. White · 尊重读者</span>
-
-  <div class="section">
-    <div class="label">一句话原则 · 名家原话</div>
-    <p>把复杂讲简单，是因为你<strong>尊重读者的时间，而非认为他们笨</strong>。这条界线，读者一眼能感到。</p>
-    <div class="quote">
+<div class="num">Principle 04</div>
+<h2 data-tts="67af164ff0fd1d28">永远不要看轻你的读者</h2>
+<div class="en-name">Never Talk Down</div>
+<span class="tag">E.B. White · 尊重读者</span>
+<div class="section">
+<div class="label">一句话原则 · 名家原话</div>
+<p>把复杂讲简单，是因为你<strong>尊重读者的时间，而非认为他们笨</strong>。这条界线，读者一眼能感到。</p>
+<div class="quote">
       "No one can write decently who is distrustful of the reader's intelligence, or whose attitude is patronizing."
       <span class="source">— E.B. White, The Elements of Style</span>
-    </div>
-    <p class="trans">中译：凡是不信任读者智力、或姿态居高临下的人，都写不出像样的文字。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>读者无知的是你的<strong>领域</strong>，不是他们的<strong>智力</strong>——这两者天差地别。居高临下会从细节里渗出来：「众所周知」「其实很简单」「你可能不懂，但……」每一句都在暗示读者低你一等，而人对轻蔑的嗅觉极其灵敏，一旦闻到便关上心门。萨根之所以伟大，不是因为他把宇宙讲得多浅，而是因为他始终假设对面坐着一个和他一样好奇、一样聪明、只是恰好还不知道的人。<strong>把读者当同伴，而非学生。</strong></p>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">众所周知，分布式系统很复杂。这个问题你可能理解不了，简单说就是机器之间会「打架」。</span>
-      <span class="after">分布式系统难在哪？难在多台机器要在没有上帝视角的情况下达成一致——就像一群人隔着墙投票，谁也不确定别人是否听见了自己。</span>
-    </div>
-    <div class="example">
-      <span class="before">Now, this might be a bit over your head, but the database basically just "remembers" things. Don't worry about the details.</span>
-      <span class="after">Here's the part that trips up even seasoned engineers: the database must stay correct even when the power dies mid-write. Here's how it pulls that off.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 · 常见错误</div>
-    <ul>
-      <li>✓ 一切面向更广读者的写作：科普、教程、对外沟通、跨职能协作</li>
-      <li>✗ 没有例外——居高临下在任何场合都是减分项</li>
-      <li>坑：「其实很简单」（对你简单，对读者是冒犯）；「众所周知」「不用我多说」（那为何还写？）；过度铺垫「这很难懂」反制造恐惧；用感叹号和卖萌替代真正的清晰</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 · 思考题</div>
-    <p>翻出最近一篇对外文字，搜索这些词：「众所周知」「其实」「简单来说」「你可能不懂」「不用担心细节」。每一处都问：删掉它、或换成对同伴说话的语气，是否更好？</p>
-    <p class="think">思考题：把读者当「同伴」，与把读者当「目标用户/受众」，写出来的东西有什么不同？</p>
-  </div>
-</section>
-
-<div class="deep-head">深入思考</div>
-
-<details>
-  <summary>1. 「把复杂讲简单」与「反智的标题党简化」的界线在哪？</summary>
-  <div class="answer">界线在于：你简化的是表达，还是事实本身。前者把同一个真相换一种说法让人听懂；后者为了好传播，扭曲或夸大了真相。一个检验：读者照你说的去行动/判断，会不会因为你的简化而犯错？会，就越界了。媚俗与科普的差别，不在浅深，而在是否诚实地守住了主干。</div>
-</details>
-<details>
-  <summary>2. 中文科普与英文科普，在「语气距离」上有何不同？</summary>
-  <div class="answer">中文书面语自带一层「文气」的距离感，「诸位」「不妨」「众所周知」这类词天然带点讲台腔，更易滑向居高临下；英文科普传统（Sagan、Bryson）更口语、更平视，常用第二人称「you」直接拉近。中文写科普，要刻意往下走半格——多用「你」、多用对话感，少用判断式的大词。</div>
-</details>
-<details>
-  <summary>3. 同一概念，写成文章 / 短视频 / 信息图，简化策略该如何变？</summary>
-  <div class="answer">文章可层层递进，先给类比再补「严格说……」，准确度最易守住；短视频时间极短，必须牺牲枝节、强化一个画面，最易因求快而失真；信息图靠空间并置，擅长展示「结构与对比」，却难表达「过程与因果」。形态决定你能守住哪部分准确——选形态前先问：这个概念的「主干」是结构、还是过程？</div>
-</details>
-<details>
-  <summary>4. 当 AI 能一键把论文「科普化」，人类科普写作者的不可替代性在哪？</summary>
-  <div class="answer">AI 擅长换词、降低句子难度，但科普的核心判断它仍弱：哪个类比对「这群特定读者」最亮、哪处简化会致命、哪里该停下来说「这里我不确定」。这些需要对读者的同理心与对真相的责任心——是立场，不是文采。人的价值正从「会写」转向「替读者把关，决定什么该简、什么不能简」。</div>
-</details>
-<details>
-  <summary>5. 费曼技巧（讲给外行听）真能检验理解吗，还是只检验了表达？</summary>
-  <div class="answer">两者难以完全分离，但费曼技巧检验的恰是它们的交集：能否把一个概念重新组织成对方已有结构能接住的形状。卡壳通常不是「词穷」，而是你自己心里那一环本就缺失——你只是用术语把缺口糊住了。所以它检验的是「可迁移的理解」：你不只记住了它，还能把它拆开、重装到别处。</div>
-</details>
-
-<footer>BigCat · Writing · Day 35 · 2026</footer>
-
 </div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
+<p class="trans">中译：凡是不信任读者智力、或姿态居高临下的人，都写不出像样的文字。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>读者无知的是你的<strong>领域</strong>，不是他们的<strong>智力</strong>——这两者天差地别。居高临下会从细节里渗出来：「众所周知」「其实很简单」「你可能不懂，但……」每一句都在暗示读者低你一等，而人对轻蔑的嗅觉极其灵敏，一旦闻到便关上心门。萨根之所以伟大，不是因为他把宇宙讲得多浅，而是因为他始终假设对面坐着一个和他一样好奇、一样聪明、只是恰好还不知道的人。<strong>把读者当同伴，而非学生。</strong></p>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">众所周知，分布式系统很复杂。这个问题你可能理解不了，简单说就是机器之间会「打架」。</span>
+<span class="after">分布式系统难在哪？难在多台机器要在没有上帝视角的情况下达成一致——就像一群人隔着墙投票，谁也不确定别人是否听见了自己。</span>
+</div>
+<div class="example">
+<span class="before">Now, this might be a bit over your head, but the database basically just "remembers" things. Don't worry about the details.</span>
+<span class="after">Here's the part that trips up even seasoned engineers: the database must stay correct even when the power dies mid-write. Here's how it pulls that off.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 · 常见错误</div>
+<ul>
+<li>✓ 一切面向更广读者的写作：科普、教程、对外沟通、跨职能协作</li>
+<li>✗ 没有例外——居高临下在任何场合都是减分项</li>
+<li>坑：「其实很简单」（对你简单，对读者是冒犯）；「众所周知」「不用我多说」（那为何还写？）；过度铺垫「这很难懂」反制造恐惧；用感叹号和卖萌替代真正的清晰</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 · 思考题</div>
+<p>翻出最近一篇对外文字，搜索这些词：「众所周知」「其实」「简单来说」「你可能不懂」「不用担心细节」。每一处都问：删掉它、或换成对同伴说话的语气，是否更好？</p>
+<p class="think">思考题：把读者当「同伴」，与把读者当「目标用户/受众」，写出来的东西有什么不同？</p>
+</div>
+</section>
+<div class="deep-head" data-tts="b750416c0034413a">深入思考</div>
+<details>
+<summary>1. 「把复杂讲简单」与「反智的标题党简化」的界线在哪？</summary>
+<div class="answer">界线在于：你简化的是表达，还是事实本身。前者把同一个真相换一种说法让人听懂；后者为了好传播，扭曲或夸大了真相。一个检验：读者照你说的去行动/判断，会不会因为你的简化而犯错？会，就越界了。媚俗与科普的差别，不在浅深，而在是否诚实地守住了主干。</div>
+</details>
+<details>
+<summary>2. 中文科普与英文科普，在「语气距离」上有何不同？</summary>
+<div class="answer">中文书面语自带一层「文气」的距离感，「诸位」「不妨」「众所周知」这类词天然带点讲台腔，更易滑向居高临下；英文科普传统（Sagan、Bryson）更口语、更平视，常用第二人称「you」直接拉近。中文写科普，要刻意往下走半格——多用「你」、多用对话感，少用判断式的大词。</div>
+</details>
+<details>
+<summary>3. 同一概念，写成文章 / 短视频 / 信息图，简化策略该如何变？</summary>
+<div class="answer">文章可层层递进，先给类比再补「严格说……」，准确度最易守住；短视频时间极短，必须牺牲枝节、强化一个画面，最易因求快而失真；信息图靠空间并置，擅长展示「结构与对比」，却难表达「过程与因果」。形态决定你能守住哪部分准确——选形态前先问：这个概念的「主干」是结构、还是过程？</div>
+</details>
+<details>
+<summary>4. 当 AI 能一键把论文「科普化」，人类科普写作者的不可替代性在哪？</summary>
+<div class="answer">AI 擅长换词、降低句子难度，但科普的核心判断它仍弱：哪个类比对「这群特定读者」最亮、哪处简化会致命、哪里该停下来说「这里我不确定」。这些需要对读者的同理心与对真相的责任心——是立场，不是文采。人的价值正从「会写」转向「替读者把关，决定什么该简、什么不能简」。</div>
+</details>
+<details>
+<summary>5. 费曼技巧（讲给外行听）真能检验理解吗，还是只检验了表达？</summary>
+<div class="answer">两者难以完全分离，但费曼技巧检验的恰是它们的交集：能否把一个概念重新组织成对方已有结构能接住的形状。卡壳通常不是「词穷」，而是你自己心里那一环本就缺失——你只是用术语把缺口糊住了。所以它检验的是「可迁移的理解」：你不只记住了它，还能把它拆开、重装到别处。</div>
+</details>
+<footer>BigCat · Writing · Day 35 · 2026</footer>
+</div>
+<script defer="" src="https://cissy0802.github.io/comments.js"></script>
+<script defer="" src="https://cissy0802.github.io/search.js"></script>
+<script defer="" src="https://cissy0802.github.io/index-button.js"></script>
+<script defer="" src="https://cissy0802.github.io/i18n-tts.js"></script>
 </body>
 </html>
