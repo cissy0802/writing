@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>写作与表达：论证与批判性写作 — Day 55</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -104,277 +105,247 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 </head>
 <body>
 <div class="container">
-
 <header>
-  <div class="week-label">Day 55 · 2026.07.13</div>
-  <h1>写作与表达：论证与批判性写作<span class="topic">立论与驳论 · 证据的层级 · 逻辑谬误 · 公正对待对手</span></h1>
-  <div class="date">BigCat's Writing</div>
-  <p class="intro">在充斥「看起来有道理」的时代，会论证是稀缺的硬功夫。一份 memo、一次评审、一场辩论，胜负往往不在谁嗓门大，而在谁的推理更经得起推敲。今天拆四件事：把主张搭成站得住的结构，分辨证据的分量，认出推理里的裂缝，以及最难的一件——先把对手说到最强，再去驳它。</p>
+<div class="week-label">Day 55 · 2026.07.13</div>
+<h1 data-tts="d0383664ad11f818">写作与表达：论证与批判性写作<span class="topic">立论与驳论 · 证据的层级 · 逻辑谬误 · 公正对待对手</span></h1>
+<div class="date">BigCat's Writing</div>
+<p class="intro">在充斥「看起来有道理」的时代，会论证是稀缺的硬功夫。一份 memo、一次评审、一场辩论，胜负往往不在谁嗓门大，而在谁的推理更经得起推敲。今天拆四件事：把主张搭成站得住的结构，分辨证据的分量，认出推理里的裂缝，以及最难的一件——先把对手说到最强，再去驳它。</p>
 </header>
-
 <!-- Card 1: 立论的骨架 -->
 <section class="card">
-  <div class="num">Principle 01</div>
-  <h2>立论的骨架：主张、理由、依据，缺一不成论证</h2>
-  <div class="en-name">The Anatomy of Argument — Claim, Grounds &amp; Warrant (Toulmin)</div>
-  <span class="tag">立论 · Toulmin · 论证结构</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>「我认为 X」不是论证，只是表态。一个完整的论证有三根骨头：<strong>主张（我说 X）+ 理由与证据（因为 Y）+ 依据（Y 能支撑 X，是因为 Z）。</strong>缺了理由是断言，缺了那根常被藏起来的「依据」，就是一次没搭桥的跳跃。</p>
-    <div class="quote">
+<div class="num">Principle 01</div>
+<h2 data-tts="9a4109a1c1f9d1b9">立论的骨架：主张、理由、依据，缺一不成论证</h2>
+<div class="en-name">The Anatomy of Argument — Claim, Grounds &amp; Warrant (Toulmin)</div>
+<span class="tag">立论 · Toulmin · 论证结构</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>「我认为 X」不是论证，只是表态。一个完整的论证有三根骨头：<strong>主张（我说 X）+ 理由与证据（因为 Y）+ 依据（Y 能支撑 X，是因为 Z）。</strong>缺了理由是断言，缺了那根常被藏起来的「依据」，就是一次没搭桥的跳跃。</p>
+<div class="quote">
       「依据（warrant）是一般性的、假设性的陈述，它像一座桥，授权我们从证据迈向主张的这一步。人们真正质疑的，往往不是你的证据，而是这座桥牢不牢。」
       <span class="source">— Stephen Toulmin《The Uses of Argument》(1958)</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>Toulmin 把论证拆成六个零件，最核心是三个：<strong>主张（Claim）、证据（Grounds）、依据（Warrant）</strong>。证据是你摆出的事实，依据是「凭什么这些事实能推出主张」的隐含规则。技术人常只有主张和数据，跳过 warrant——而那个没说出口的假设，最容易被一击而破。把它写出来，论证才从「我觉得」变成「你也得承认」。</p>
-    <div class="toulmin">
-      <div class="flow">
-        <div class="tb"><span class="t">证据 Grounds</span>摆出的事实、数据</div>
-        <div class="arrow"><span class="a">→</span><span>依据 Warrant<br>（凭什么）</span></div>
-        <div class="tb claim"><span class="t">主张 Claim</span>你要人接受的结论</div>
-      </div>
-      <div class="foot">↑ 限定 Qualifier「多数情况」　·　反驳 Rebuttal「除非……」 ↑</div>
-      <div class="caption">Toulmin 论证模型 — 最脆弱的常是那座没说出口的「桥」</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">我们应该马上迁移到微服务。</span>
-      <span class="after">建议 Q3 把订单系统拆成独立服务（主张）——它现在是部署瓶颈，每次小改都要全量发布，平均每周阻塞两次上线（证据）；对一个日均改动二十次的系统，解耦部署单元能显著降低发布风险（依据）。除非团队规模撑不起服务治理，则另议（反驳条件）。</span>
-    </div>
-    <div class="example">
-      <span class="before">We need a four-day work week.</span>
-      <span class="after">We should pilot a four-day week in Q3 (claim), because attrition rose to 18% and engineers report burnout (grounds); comparable firms cut attrition this way without losing output (warrant) — unless our on-call coverage can't absorb the lost day (rebuttal).</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 决策 memo、设计文档的 tradeoff、code review 里主张某方案、说服上级</li>
-      <li>✓ 自查：把「因为」和「这之所以能说明」显式写出，缺哪根骨头补哪根</li>
-      <li>✗ 误区：只有主张没有证据——「显然」「众所周知」正是没证据时的遮羞词</li>
-      <li>✗ 误区：把依据藏着不敢明说——越是关键的假设，越要摆出来接受检验</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>拿你最近一个主张，用「主张—证据—依据—反驳条件」四行写出，重点写出平时藏着的那根 warrant。<strong>思考题</strong>：一个论证最容易被攻破的，是证据还是依据？为什么高手常不纠缠数据，而直取那座桥？</p>
-  </div>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>Toulmin 把论证拆成六个零件，最核心是三个：<strong>主张（Claim）、证据（Grounds）、依据（Warrant）</strong>。证据是你摆出的事实，依据是「凭什么这些事实能推出主张」的隐含规则。技术人常只有主张和数据，跳过 warrant——而那个没说出口的假设，最容易被一击而破。把它写出来，论证才从「我觉得」变成「你也得承认」。</p>
+<div class="toulmin">
+<div class="flow">
+<div class="tb"><span class="t">证据 Grounds</span>摆出的事实、数据</div>
+<div class="arrow"><span class="a">→</span><span>依据 Warrant<br/>（凭什么）</span></div>
+<div class="tb claim"><span class="t">主张 Claim</span>你要人接受的结论</div>
+</div>
+<div class="foot">↑ 限定 Qualifier「多数情况」　·　反驳 Rebuttal「除非……」 ↑</div>
+<div class="caption">Toulmin 论证模型 — 最脆弱的常是那座没说出口的「桥」</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">我们应该马上迁移到微服务。</span>
+<span class="after">建议 Q3 把订单系统拆成独立服务（主张）——它现在是部署瓶颈，每次小改都要全量发布，平均每周阻塞两次上线（证据）；对一个日均改动二十次的系统，解耦部署单元能显著降低发布风险（依据）。除非团队规模撑不起服务治理，则另议（反驳条件）。</span>
+</div>
+<div class="example">
+<span class="before">We need a four-day work week.</span>
+<span class="after">We should pilot a four-day week in Q3 (claim), because attrition rose to 18% and engineers report burnout (grounds); comparable firms cut attrition this way without losing output (warrant) — unless our on-call coverage can't absorb the lost day (rebuttal).</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 决策 memo、设计文档的 tradeoff、code review 里主张某方案、说服上级</li>
+<li>✓ 自查：把「因为」和「这之所以能说明」显式写出，缺哪根骨头补哪根</li>
+<li>✗ 误区：只有主张没有证据——「显然」「众所周知」正是没证据时的遮羞词</li>
+<li>✗ 误区：把依据藏着不敢明说——越是关键的假设，越要摆出来接受检验</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>拿你最近一个主张，用「主张—证据—依据—反驳条件」四行写出，重点写出平时藏着的那根 warrant。<strong>思考题</strong>：一个论证最容易被攻破的，是证据还是依据？为什么高手常不纠缠数据，而直取那座桥？</p>
+</div>
 </section>
-
 <!-- Card 2: 证据的层级 -->
 <section class="card">
-  <div class="num">Principle 02</div>
-  <h2>证据的层级：不是所有「证据」都一样重</h2>
-  <div class="en-name">The Hierarchy of Evidence — Not All Proof Weighs the Same</div>
-  <span class="tag">证据 · 胡适 · 分级</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>「有证据」不等于「证据够硬」。一句轶事、一位专家的断言、一份对照实验、一份系统综述，分量天差地别。<strong>论证的强度取决于最硬的那层证据，可信度则取决于你是否诚实承认它只有那么硬。</strong></p>
-    <div class="quote">
+<div class="num">Principle 02</div>
+<h2 data-tts="4eca01e05ea67d81">证据的层级：不是所有「证据」都一样重</h2>
+<div class="en-name">The Hierarchy of Evidence — Not All Proof Weighs the Same</div>
+<span class="tag">证据 · 胡适 · 分级</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>「有证据」不等于「证据够硬」。一句轶事、一位专家的断言、一份对照实验、一份系统综述，分量天差地别。<strong>论证的强度取决于最硬的那层证据，可信度则取决于你是否诚实承认它只有那么硬。</strong></p>
+<div class="quote">
       「有几分证据，说几分话；有一分证据只可说一分话，有七分证据不能说八分话。」
       <span class="source">— 胡适（论治学的方法）</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>证据是分级的。先秦墨子已有<strong>「三表法」</strong>——考诸历史、验诸众人耳目、察其实际效用。现代版本由弱到强：<strong>个人轶事 → 专家意见 → 单个案例 → 统计与对照实验 → 元分析与系统综述</strong>。越往上越能排除偶然、偏见与幸存者偏差。写作的诚实，就是标清你引的是哪一层，别把「我一个朋友」说得像「大规模研究表明」。</p>
-    <div class="pyr">
-      <div class="lvl l1">系统综述 · 元分析</div>
-      <div class="lvl l2">统计数据 · 对照实验</div>
-      <div class="lvl l3">多个案例 · 观察研究</div>
-      <div class="lvl l4">专家意见 · 权威背书</div>
-      <div class="lvl l5">个人轶事 · 「我一个朋友」</div>
-      <div class="side"><span>↑ 越窄越硬，越能服人</span><span>越宽越软，越易误导 ↓</span></div>
-      <div class="caption">证据金字塔 — 论证的力量由最高那一层决定</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">我一个朋友用了这个框架效率翻倍，所以我们全公司都该换。</span>
-      <span class="after">一位同事试用后效率提升（个案，样本为一，或有幸存者偏差）；我又查到两份公开基准测试和一份五百人调研，结论一致（升到统计层）——建议先在两个团队做 A/B，用我们自己的数据验证再全面推广。</span>
-      <span class="note">不是不能用轶事，而是标明它只是金字塔底层，并主动往更硬的证据爬一层。</span>
-    </div>
-    <div class="example">
-      <span class="before">Studies show sugar makes kids hyperactive, so we should ban it.</span>
-      <span class="after">A few early studies hinted at a sugar-hyperactivity link, but a meta-analysis of 23 controlled trials found no effect — and a higher tier of evidence overrides a lower one.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 数据汇报、研究综述、尽调、任何用「数据显示」「研究表明」开头的句子</li>
-      <li>✓ 自查：问「几个样本？谁的利益在里面？有没有被我略过的反例？」</li>
-      <li>✗ 误区：把「权威说的」当最高证据——胡适、Sagan 都提醒：权威也会错</li>
-      <li>✗ 误区：樱桃挑选（cherry-picking），只引对自己有利的那一份研究</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>找你最近引用的一个「数据/研究」，标出它落在金字塔哪层，再找一个更高层、可能反驳它的证据。<strong>思考题</strong>：信息过载时，生动的轶事常比严谨的统计更有说服力。对诚实的写作者，这是该抵制的陷阱还是该善用的工具？</p>
-  </div>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>证据是分级的。先秦墨子已有<strong>「三表法」</strong>——考诸历史、验诸众人耳目、察其实际效用。现代版本由弱到强：<strong>个人轶事 → 专家意见 → 单个案例 → 统计与对照实验 → 元分析与系统综述</strong>。越往上越能排除偶然、偏见与幸存者偏差。写作的诚实，就是标清你引的是哪一层，别把「我一个朋友」说得像「大规模研究表明」。</p>
+<div class="pyr">
+<div class="lvl l1">系统综述 · 元分析</div>
+<div class="lvl l2">统计数据 · 对照实验</div>
+<div class="lvl l3">多个案例 · 观察研究</div>
+<div class="lvl l4">专家意见 · 权威背书</div>
+<div class="lvl l5">个人轶事 · 「我一个朋友」</div>
+<div class="side"><span>↑ 越窄越硬，越能服人</span><span>越宽越软，越易误导 ↓</span></div>
+<div class="caption">证据金字塔 — 论证的力量由最高那一层决定</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">我一个朋友用了这个框架效率翻倍，所以我们全公司都该换。</span>
+<span class="after">一位同事试用后效率提升（个案，样本为一，或有幸存者偏差）；我又查到两份公开基准测试和一份五百人调研，结论一致（升到统计层）——建议先在两个团队做 A/B，用我们自己的数据验证再全面推广。</span>
+<span class="note">不是不能用轶事，而是标明它只是金字塔底层，并主动往更硬的证据爬一层。</span>
+</div>
+<div class="example">
+<span class="before">Studies show sugar makes kids hyperactive, so we should ban it.</span>
+<span class="after">A few early studies hinted at a sugar-hyperactivity link, but a meta-analysis of 23 controlled trials found no effect — and a higher tier of evidence overrides a lower one.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 数据汇报、研究综述、尽调、任何用「数据显示」「研究表明」开头的句子</li>
+<li>✓ 自查：问「几个样本？谁的利益在里面？有没有被我略过的反例？」</li>
+<li>✗ 误区：把「权威说的」当最高证据——胡适、Sagan 都提醒：权威也会错</li>
+<li>✗ 误区：樱桃挑选（cherry-picking），只引对自己有利的那一份研究</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>找你最近引用的一个「数据/研究」，标出它落在金字塔哪层，再找一个更高层、可能反驳它的证据。<strong>思考题</strong>：信息过载时，生动的轶事常比严谨的统计更有说服力。对诚实的写作者，这是该抵制的陷阱还是该善用的工具？</p>
+</div>
 </section>
-
 <!-- Card 3: 识别逻辑谬误 -->
 <section class="card">
-  <div class="num">Principle 03</div>
-  <h2>识别逻辑谬误：论证塌方的常见裂缝</h2>
-  <div class="en-name">Spotting Fallacies — The Common Cracks in Reasoning</div>
-  <span class="tag">谬误 · 批判 · Sagan</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>谬误是「看起来像论证、其实站不住」的推理。认得出它们，你既能防自己塌方，也能一眼看穿别人的花招。<strong>最危险的谬误从来不是别人的，是你自己没察觉、还觉得很有道理的那一个。</strong></p>
-    <div class="quote">
+<div class="num">Principle 03</div>
+<h2 data-tts="04378431ca717552">识别逻辑谬误：论证塌方的常见裂缝</h2>
+<div class="en-name">Spotting Fallacies — The Common Cracks in Reasoning</div>
+<span class="tag">谬误 · 批判 · Sagan</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>谬误是「看起来像论证、其实站不住」的推理。认得出它们，你既能防自己塌方，也能一眼看穿别人的花招。<strong>最危险的谬误从来不是别人的，是你自己没察觉、还觉得很有道理的那一个。</strong></p>
+<div class="quote">
       「诉诸权威的论证分量很轻——权威过去犯过错，将来还会犯。更准确地说：科学里没有权威，至多只有专家。」
       <span class="source">— Carl Sagan《The Demon-Haunted World》(1995)</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>Sagan 给了一套<strong>「废话检测工具箱」（Baloney Detection Kit）</strong>，核心是一份谬误清单。它们共同点是绕过「证据→依据→主张」的某一环，用情绪、身份或错误联结冒充推理。下面几种是职场文字与网络辩论里最高频的，认得它们，等于给判断装了个刹车。</p>
-    <div class="fallacy">
-      <div class="row"><span class="nm">稻草人</span><span class="ds">把对方立场歪曲成更弱、更荒谬的版本，再去打它。</span></div>
-      <div class="row"><span class="nm">人身攻击</span><span class="ds">不驳观点，驳提出观点的人——「你懂什么」。</span></div>
-      <div class="row"><span class="nm">假两难</span><span class="ds">只给两个极端选项，藏起中间的第三条路。</span></div>
-      <div class="row"><span class="nm">滑坡</span><span class="ds">「一旦……就必然……最终……」，中间步步都缺证据。</span></div>
-      <div class="row"><span class="nm">诉诸权威</span><span class="ds">「专家说的」当结论本身，而非可被检验的证据。</span></div>
-      <div class="row"><span class="nm">相关当因果</span><span class="ds">两件事一起出现，就断定一个导致了另一个。</span></div>
-      <div class="caption">高频谬误清单 — 每一种都跳过了推理的某一环</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">你说要控制预算，就是要我们什么都别做、把创新饿死。</span>
-      <span class="after">你主张削减两成营销预算，我理解目标是延长现金跑道；我担心的是砍掉获客会让下季收入下滑得比省下的更多——能不能分渠道看效果，而不是一刀切？</span>
-      <span class="note">前者是稻草人（把「控制预算」夸张成「什么都别做」）；后者先准确复述对方，再就事论事地提出真正的分歧点。</span>
-    </div>
-    <div class="example">
-      <span class="before">Either we ship this Friday or the whole quarter is a failure.</span>
-      <span class="after">Shipping Friday is ideal, but a one-week slip with a stable release is also on the table — let's weigh both against the actual quarter goal.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ code review、评审、辩论，读新闻稿与 PR 稿时的「废话检测器」</li>
-      <li>✓ 自查：当一句话让你「情绪先于理智地点头」，停一下，找那句被跳过的推理</li>
-      <li>✗ 误区：学了名词后到处「抓谬误」——喊一句「这是滑坡！」本身常是逃避回应</li>
-      <li>✗ 误区：把「我不同意」当成「你有谬误」——观点不同 ≠ 逻辑出错</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>挑一篇你不同意的文章，找出其中一个真正的逻辑谬误（不是你单纯反对的立场），一句话说清它为何不成立。<strong>思考题</strong>：给谬误贴标签有时本身是偷懒——如何既指出裂缝，又真正回应对方的核心，而非用「你犯了 X 谬误」终结对话？</p>
-  </div>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>Sagan 给了一套<strong>「废话检测工具箱」（Baloney Detection Kit）</strong>，核心是一份谬误清单。它们共同点是绕过「证据→依据→主张」的某一环，用情绪、身份或错误联结冒充推理。下面几种是职场文字与网络辩论里最高频的，认得它们，等于给判断装了个刹车。</p>
+<div class="fallacy">
+<div class="row"><span class="nm">稻草人</span><span class="ds">把对方立场歪曲成更弱、更荒谬的版本，再去打它。</span></div>
+<div class="row"><span class="nm">人身攻击</span><span class="ds">不驳观点，驳提出观点的人——「你懂什么」。</span></div>
+<div class="row"><span class="nm">假两难</span><span class="ds">只给两个极端选项，藏起中间的第三条路。</span></div>
+<div class="row"><span class="nm">滑坡</span><span class="ds">「一旦……就必然……最终……」，中间步步都缺证据。</span></div>
+<div class="row"><span class="nm">诉诸权威</span><span class="ds">「专家说的」当结论本身，而非可被检验的证据。</span></div>
+<div class="row"><span class="nm">相关当因果</span><span class="ds">两件事一起出现，就断定一个导致了另一个。</span></div>
+<div class="caption">高频谬误清单 — 每一种都跳过了推理的某一环</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">你说要控制预算，就是要我们什么都别做、把创新饿死。</span>
+<span class="after">你主张削减两成营销预算，我理解目标是延长现金跑道；我担心的是砍掉获客会让下季收入下滑得比省下的更多——能不能分渠道看效果，而不是一刀切？</span>
+<span class="note">前者是稻草人（把「控制预算」夸张成「什么都别做」）；后者先准确复述对方，再就事论事地提出真正的分歧点。</span>
+</div>
+<div class="example">
+<span class="before">Either we ship this Friday or the whole quarter is a failure.</span>
+<span class="after">Shipping Friday is ideal, but a one-week slip with a stable release is also on the table — let's weigh both against the actual quarter goal.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ code review、评审、辩论，读新闻稿与 PR 稿时的「废话检测器」</li>
+<li>✓ 自查：当一句话让你「情绪先于理智地点头」，停一下，找那句被跳过的推理</li>
+<li>✗ 误区：学了名词后到处「抓谬误」——喊一句「这是滑坡！」本身常是逃避回应</li>
+<li>✗ 误区：把「我不同意」当成「你有谬误」——观点不同 ≠ 逻辑出错</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>挑一篇你不同意的文章，找出其中一个真正的逻辑谬误（不是你单纯反对的立场），一句话说清它为何不成立。<strong>思考题</strong>：给谬误贴标签有时本身是偷懒——如何既指出裂缝，又真正回应对方的核心，而非用「你犯了 X 谬误」终结对话？</p>
+</div>
 </section>
-
 <!-- Card 4: 公正对待对手 -->
 <section class="card">
-  <div class="num">Principle 04</div>
-  <h2>公正对待对手：先把对方说得比他自己还好，再驳</h2>
-  <div class="en-name">Steel-Manning — Refute the Strongest Version</div>
-  <span class="tag">驳论 · 钢人 · Rapoport / Dennett</span>
-
-  <div class="section">
-    <div class="label">一句话原则</div>
-    <p>稻草人是把对方削弱后再打，钢人（steel man）是先把对方的立场加固到最强、连他都点头，然后再驳。<strong>只有击败对方最强的版本，你的结论才真正站得住；打倒一个稻草人，说服不了任何人。</strong></p>
-    <div class="quote">
+<div class="num">Principle 04</div>
+<h2 data-tts="637ac1212bb41ead">公正对待对手：先把对方说得比他自己还好，再驳</h2>
+<div class="en-name">Steel-Manning — Refute the Strongest Version</div>
+<span class="tag">驳论 · 钢人 · Rapoport / Dennett</span>
+<div class="section">
+<div class="label">一句话原则</div>
+<p>稻草人是把对方削弱后再打，钢人（steel man）是先把对方的立场加固到最强、连他都点头，然后再驳。<strong>只有击败对方最强的版本，你的结论才真正站得住；打倒一个稻草人，说服不了任何人。</strong></p>
+<div class="quote">
       「你应当把对方的立场复述得如此清晰、生动、公正，以至于对方会说：『谢谢，我真希望自己当初能这样表达。』做到这一步，你才有资格反驳。」
       <span class="source">— Daniel Dennett《Intuition Pumps》(2013)，引 Rapoport 规则</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>Rapoport 规则共四条：先复述对方到他满意、列出共识、说你学到什么，最后才反驳。它<strong>先替你排除了「其实我误解了对方」这个最常见的失败</strong>，也让反驳落在真问题上。Paul Graham《How to Disagree》排了一座反驳的阶梯：从最低的谩骂到最高的「反驳核心论点」。多数网络争吵停在下三层，真正的批判性写作只在最顶端发生。</p>
-    <div class="ladder">
-      <div class="rung"><span class="dh">DH0-1</span><span class="what">谩骂 / 攻击语气：「一派胡言」——零信息量</span></div>
-      <div class="rung"><span class="dh">DH2</span><span class="what">人身攻击：驳的是人，不是观点</span></div>
-      <div class="rung"><span class="dh">DH3</span><span class="what">唱反调：只表态反对，不给理由</span></div>
-      <div class="rung"><span class="dh">DH4</span><span class="what">举反证：终于开始讲道理、摆证据</span></div>
-      <div class="rung"><span class="dh">DH5</span><span class="what">精准引用后反驳：先引原话，再逐点回应</span></div>
-      <div class="rung top"><span class="dh">DH6</span><span class="what">反驳核心：击中对方论证的命门，而非枝节</span></div>
-      <div class="caption">Paul Graham 反驳的阶梯 — 越往上越费力，也越有说服力</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">反对远程办公的人根本不懂现代协作，无非是控制欲作祟。</span>
-      <span class="after">主张回办公室的人有个真问题：初级同事靠耳濡目染成长，远程确实削弱了这种传承（先把对方说到最强）。但这可以用结构化的 mentorship 补上，不必牺牲所有人的灵活——所以我仍主张混合制。</span>
-    </div>
-    <div class="example">
-      <span class="before">People who want RTO just miss micromanaging.</span>
-      <span class="after">The strongest case for RTO is real: juniors learn by osmosis, and remote weakens that. But structured mentorship can close the gap without forcing everyone back — so I'd argue for hybrid, not full RTO.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 决策辩论、驳论文章、谈判、code review 里反对某方案、跨团队对齐</li>
-      <li>✓ 自查：动笔驳之前，先写一句「对方最有道理的地方是……」</li>
-      <li>✗ 误区：赢了辩论输了关系——目标是找到更对的答案，不是羞辱对方</li>
-      <li>✗ 误区：假钢人——嘴上说「我理解你」，复述的仍是被弱化的版本</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>挑一个你坚信的立场，用 Rapoport 规则替反方写一段最强辩护，强到你都有点动摇；再写你为何仍不改。<strong>思考题</strong>：「把对方说强再驳」需要底气。当权力不对等、你在反驳上级时，如何既公正又不丢掉立场？</p>
-  </div>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>Rapoport 规则共四条：先复述对方到他满意、列出共识、说你学到什么，最后才反驳。它<strong>先替你排除了「其实我误解了对方」这个最常见的失败</strong>，也让反驳落在真问题上。Paul Graham《How to Disagree》排了一座反驳的阶梯：从最低的谩骂到最高的「反驳核心论点」。多数网络争吵停在下三层，真正的批判性写作只在最顶端发生。</p>
+<div class="ladder">
+<div class="rung"><span class="dh">DH0-1</span><span class="what">谩骂 / 攻击语气：「一派胡言」——零信息量</span></div>
+<div class="rung"><span class="dh">DH2</span><span class="what">人身攻击：驳的是人，不是观点</span></div>
+<div class="rung"><span class="dh">DH3</span><span class="what">唱反调：只表态反对，不给理由</span></div>
+<div class="rung"><span class="dh">DH4</span><span class="what">举反证：终于开始讲道理、摆证据</span></div>
+<div class="rung"><span class="dh">DH5</span><span class="what">精准引用后反驳：先引原话，再逐点回应</span></div>
+<div class="rung top"><span class="dh">DH6</span><span class="what">反驳核心：击中对方论证的命门，而非枝节</span></div>
+<div class="caption">Paul Graham 反驳的阶梯 — 越往上越费力，也越有说服力</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">反对远程办公的人根本不懂现代协作，无非是控制欲作祟。</span>
+<span class="after">主张回办公室的人有个真问题：初级同事靠耳濡目染成长，远程确实削弱了这种传承（先把对方说到最强）。但这可以用结构化的 mentorship 补上，不必牺牲所有人的灵活——所以我仍主张混合制。</span>
+</div>
+<div class="example">
+<span class="before">People who want RTO just miss micromanaging.</span>
+<span class="after">The strongest case for RTO is real: juniors learn by osmosis, and remote weakens that. But structured mentorship can close the gap without forcing everyone back — so I'd argue for hybrid, not full RTO.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 决策辩论、驳论文章、谈判、code review 里反对某方案、跨团队对齐</li>
+<li>✓ 自查：动笔驳之前，先写一句「对方最有道理的地方是……」</li>
+<li>✗ 误区：赢了辩论输了关系——目标是找到更对的答案，不是羞辱对方</li>
+<li>✗ 误区：假钢人——嘴上说「我理解你」，复述的仍是被弱化的版本</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>挑一个你坚信的立场，用 Rapoport 规则替反方写一段最强辩护，强到你都有点动摇；再写你为何仍不改。<strong>思考题</strong>：「把对方说强再驳」需要底气。当权力不对等、你在反驳上级时，如何既公正又不丢掉立场？</p>
+</div>
 </section>
-
 <div class="deep-title">— 深入思考 —</div>
-
 <details>
-  <summary>证据金字塔在所有领域都通用吗？工程决策、产品直觉、人生选择，靠的是同一种「最高级证据」吗？</summary>
-  <div class="ans">不完全通用。金字塔源自循证医学，适合「有稳定因果、可重复实验」的领域，工程性能、A/B 实验很吃这套。但产品直觉、审美、战略这类高不确定、非重复的判断，往往没有对照实验可做——此时高质量的类比、少数人的深度洞察，权重反而超过一份含糊的问卷。关键不是死守金字塔，而是先问「这个问题，什么算强证据」，并承认有些决定注定要在证据不足时下。</div>
+<summary>证据金字塔在所有领域都通用吗？工程决策、产品直觉、人生选择，靠的是同一种「最高级证据」吗？</summary>
+<div class="ans">不完全通用。金字塔源自循证医学，适合「有稳定因果、可重复实验」的领域，工程性能、A/B 实验很吃这套。但产品直觉、审美、战略这类高不确定、非重复的判断，往往没有对照实验可做——此时高质量的类比、少数人的深度洞察，权重反而超过一份含糊的问卷。关键不是死守金字塔，而是先问「这个问题，什么算强证据」，并承认有些决定注定要在证据不足时下。</div>
 </details>
 <details>
-  <summary>说服与求真是同一件事吗？一篇论证，到底是为了「让人同意」还是「更接近对的答案」？</summary>
-  <div class="ans">常常同向，但会分岔。求真要求你摆出对方最强的理由、标清自己证据的弱点；纯说服则诱你隐藏不利证据、夸大有利的。分岔处见人品：宣传把说服凌驾于求真，于是滑向操纵。对想被长期信任的写作者，答案是把求真当约束条件——只用「经得起对方检验」的方式去说服。短期或许少赢几场，长期赢的是信誉，那才是最贵的 ethos。</div>
+<summary>说服与求真是同一件事吗？一篇论证，到底是为了「让人同意」还是「更接近对的答案」？</summary>
+<div class="ans">常常同向，但会分岔。求真要求你摆出对方最强的理由、标清自己证据的弱点；纯说服则诱你隐藏不利证据、夸大有利的。分岔处见人品：宣传把说服凌驾于求真，于是滑向操纵。对想被长期信任的写作者，答案是把求真当约束条件——只用「经得起对方检验」的方式去说服。短期或许少赢几场，长期赢的是信誉，那才是最贵的 ethos。</div>
 </details>
 <details>
-  <summary>AI 能秒生成「看起来严密」的论证和貌似权威的引用。批判性写作者最该守住的是什么？</summary>
-  <div class="ans">该守住的恰是 AI 最难替代的三件事：一，核验——追到原始出处，确认引用真实存在（AI 会编造以假乱真的文献）；二，判断证据层级——一段流畅的论证可能整个建在底层轶事上，形式的严密掩盖了空心；三，提出真问题——AI 擅长填充给定框架，却不擅长质疑框架本身。当生成论证变得极廉价，稀缺的不再是「写得像样」，而是「判断它是否为真」。批判力，从写作技巧升级成了生存技能。</div>
+<summary>AI 能秒生成「看起来严密」的论证和貌似权威的引用。批判性写作者最该守住的是什么？</summary>
+<div class="ans">该守住的恰是 AI 最难替代的三件事：一，核验——追到原始出处，确认引用真实存在（AI 会编造以假乱真的文献）；二，判断证据层级——一段流畅的论证可能整个建在底层轶事上，形式的严密掩盖了空心；三，提出真问题——AI 擅长填充给定框架，却不擅长质疑框架本身。当生成论证变得极廉价，稀缺的不再是「写得像样」，而是「判断它是否为真」。批判力，从写作技巧升级成了生存技能。</div>
 </details>
 <details>
-  <summary>中英论证文化不同：英文议论重 thesis-first、直接交锋，中文传统更重「以理服人」「留三分余地」。写给不同读者时怎么调？</summary>
-  <div class="ans">这是真实的语用差异，而非谁高谁低。英文商业写作偏好结论先行、显式反驳；中文语境里过直的驳斥易被读成「不给面子」，含蓄与「留余地」本身是修辞智慧。诀窍是「骨架统一、语气分层」：论证的骨头（主张—证据—依据）哪种文化都不能省；但表层措辞——是直说「你错了」还是「或许可再想想」——按读者调。给国际团队写英文就 thesis-first、直陈分歧；给重关系的中文场合，先立共识、再婉转推进。骨不变，皮随人。</div>
+<summary>中英论证文化不同：英文议论重 thesis-first、直接交锋，中文传统更重「以理服人」「留三分余地」。写给不同读者时怎么调？</summary>
+<div class="ans">这是真实的语用差异，而非谁高谁低。英文商业写作偏好结论先行、显式反驳；中文语境里过直的驳斥易被读成「不给面子」，含蓄与「留余地」本身是修辞智慧。诀窍是「骨架统一、语气分层」：论证的骨头（主张—证据—依据）哪种文化都不能省；但表层措辞——是直说「你错了」还是「或许可再想想」——按读者调。给国际团队写英文就 thesis-first、直陈分歧；给重关系的中文场合，先立共识、再婉转推进。骨不变，皮随人。</div>
 </details>
-
 <div class="nav">
-  <a href="index.html">← 回到写作目录</a>
+<a href="index.html">← 回到写作目录</a>
 </div>
-
 <footer>BigCat · Writing · Day 55 · 2026</footer>
-
 </div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
+<script defer="" src="https://cissy0802.github.io/comments.js"></script>
+<script defer="" src="https://cissy0802.github.io/search.js"></script>
+<script defer="" src="https://cissy0802.github.io/index-button.js"></script>
+<script defer="" src="https://cissy0802.github.io/i18n-tts.js"></script>
 </body>
 </html>
