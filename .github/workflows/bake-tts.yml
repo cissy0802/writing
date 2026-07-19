@@ -1,0 +1,79 @@
+name: Bake TTS Audio
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.html"
+      - "bake-tts.py"
+      - ".github/workflows/bake-tts.yml"
+  workflow_dispatch:
+    inputs:
+      file:
+        description: "Single HTML file to bake (leave blank for all)"
+        required: false
+        default: ""
+
+# Avoid running on commits the action itself pushes
+concurrency:
+  group: bake-tts
+  cancel-in-progress: false
+
+jobs:
+  bake:
+    # Skip if the commit was made by this workflow (prevents infinite loop)
+    if: github.actor != 'github-actions[bot]' && !contains(github.event.head_commit.message, '[skip bake]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          # Need full history so we can push back
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Install Python deps
+        run: pip install beautifulsoup4 requests
+
+      - name: Run bake-tts.py
+        env:
+          AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
+          AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
+          AZURE_VOICE_ID: zh-CN-XiaoxiaoMultilingualNeural
+          # AZURE_VOICE_ID_EN unset → English segments skipped (Web Speech fallback)
+        run: |
+          if [ -n "${{ inputs.file }}" ]; then
+            python3 bake-tts.py "${{ inputs.file }}"
+          else
+            python3 bake-tts.py
+          fi
+
+      - name: Commit and push generated audio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audio/ *.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-bake TTS audio [skip bake]"
+            # Rebase on top of any new commits that landed during the bake,
+            # then push. Retry once if a push race still occurs.
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push && break
+              echo "push attempt $i failed, retrying..."
+              sleep 3
+            done
+          fi
