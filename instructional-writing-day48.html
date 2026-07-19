@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>写作与表达：说明与指南写作 — Day 48</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -70,272 +71,237 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 </head>
 <body>
 <div class="container">
-
 <header>
-  <div class="week-label">Day 48 · 2026.07.06</div>
-  <h1>写作与表达：说明与指南写作<span class="topic">步骤化 · 心智模型 · 错误预防 · 极简指令</span></h1>
-  <div class="date">BigCat's Writing</div>
-  <p class="intro">说明书是最谦卑也最难写的文体——没人会夸一份好用的操作指南，但一份坏的能让整个团队卡在同一步。它不追求文采，只追求一件事：让一个不在你脑子里的人，照着做，做对。技术人写的 README、API 文档、runbook、onboarding 手册，本质都是它。本期借四位真正研究「怎么教人做事」的人，把它写到「不用问就会」。</p>
+<div class="week-label">Day 48 · 2026.07.06</div>
+<h1 data-tts="5bf337d89e7ffbb7">写作与表达：说明与指南写作<span class="topic">步骤化 · 心智模型 · 错误预防 · 极简指令</span></h1>
+<div class="date">BigCat's Writing</div>
+<p class="intro">说明书是最谦卑也最难写的文体——没人会夸一份好用的操作指南，但一份坏的能让整个团队卡在同一步。它不追求文采，只追求一件事：让一个不在你脑子里的人，照着做，做对。技术人写的 README、API 文档、runbook、onboarding 手册，本质都是它。本期借四位真正研究「怎么教人做事」的人，把它写到「不用问就会」。</p>
 </header>
-
 <!-- Card 1: 步骤化 -->
 <section class="card">
-  <div class="num">Principle 01</div>
-  <h2>步骤化：一步一个动作，条件写在动作前</h2>
-  <div class="en-name">Chunk the Steps — Condition Before Action</div>
-  <span class="tag">Redish · 编号 · 祈使句</span>
-
-  <div class="section">
-    <div class="label">一句话原则 + 名家原话</div>
-    <p>说明的最小单位是「一个可执行的动作」。把连贯的散文拆成编号步骤，每步只做一件事，用祈使句（动词打头）。关键在于——把条件、位置、目的写在<strong>动作之前</strong>，别让读者先动手，再发现原来有前提。</p>
-    <div class="quote">
+<div class="num">Principle 01</div>
+<h2 data-tts="1197207f1e0de581">步骤化：一步一个动作，条件写在动作前</h2>
+<div class="en-name">Chunk the Steps — Condition Before Action</div>
+<span class="tag">Redish · 编号 · 祈使句</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>说明的最小单位是「一个可执行的动作」。把连贯的散文拆成编号步骤，每步只做一件事，用祈使句（动词打头）。关键在于——把条件、位置、目的写在<strong>动作之前</strong>，别让读者先动手，再发现原来有前提。</p>
+<div class="quote">
       "Put the condition or the location before the action. People act as soon as they read the action; if the condition comes afterward, they've already done it wrong."
       <span class="cn">把条件或位置写在动作前面。人一读到动作就会去做；条件若放在后面，他们早已做错了。</span>
-      <span class="source">— Ginny Redish,《Letting Go of the Words》(2007)</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>读者读说明不是为了欣赏，是为了「边读边做」。他们的注意力像激光，只盯着「下一步按哪」。于是两条铁律：一，动作要短到能被<strong>扫读</strong>抓住——编号列表加动词打头，远快于一整段「首先…然后…接着…」；二，因为读者一读到动词就抬手，任何前提（先备份、仅限管理员、生产环境别动）必须<strong>抢在动作前面</strong>说，否则等于事后诸葛。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">点击"删除"即可移除该记录，但请注意删除前需先确认已导出备份，否则数据将无法恢复。</span>
-      <span class="after">1. 先导出备份（删除后数据无法恢复）。
+<span class="source">— Ginny Redish,《Letting Go of the Words》(2007)</span>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>读者读说明不是为了欣赏，是为了「边读边做」。他们的注意力像激光，只盯着「下一步按哪」。于是两条铁律：一，动作要短到能被<strong>扫读</strong>抓住——编号列表加动词打头，远快于一整段「首先…然后…接着…」；二，因为读者一读到动词就抬手，任何前提（先备份、仅限管理员、生产环境别动）必须<strong>抢在动作前面</strong>说，否则等于事后诸葛。</p>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">点击"删除"即可移除该记录，但请注意删除前需先确认已导出备份，否则数据将无法恢复。</span>
+<span class="after">1. 先导出备份（删除后数据无法恢复）。
 2. 确认无误后，点击"删除"。</span>
-      <span class="note">把「先备份」这个致命前提提到动作之前，并拆成两步——读者读到第 2 步时，备份已经做完了。</span>
-    </div>
-    <div class="example">
-      <span class="before">Click Delete to remove the record. Note that you should export a backup first, or the data cannot be recovered.</span>
-      <span class="after">1. Export a backup — deleted data cannot be recovered.
+<span class="note">把「先备份」这个致命前提提到动作之前，并拆成两步——读者读到第 2 步时，备份已经做完了。</span>
+</div>
+<div class="example">
+<span class="before">Click Delete to remove the record. Note that you should export a backup first, or the data cannot be recovered.</span>
+<span class="after">1. Export a backup — deleted data cannot be recovered.
 2. Click Delete.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ README 安装步骤、runbook、API 调用示例、onboarding checklist、故障处理 SOP</li>
-      <li>✗ 把多个动作塞进一步（"配置并重启并验证"）——一步一动作</li>
-      <li>✗ 前提写在动作后面（"点提交——记得先填必填项"），读者已经点了</li>
-      <li>✗ 用叙述体代替编号，读者无法扫读定位自己在第几步</li>
-      <li>✗ 跳步：作者脑补了"显然要先登录"，读者卡在第一步</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>拿你写过的一段安装或配置说明，改成编号步骤：每步一个祈使句、动词打头，所有前提和警告提到对应动作之前。数数原来有几个「先…其实要更早做」的坑。<br>思考题：你上次照别人的文档卡住，是卡在「没写」，还是「顺序错了」？</p>
-  </div>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ README 安装步骤、runbook、API 调用示例、onboarding checklist、故障处理 SOP</li>
+<li>✗ 把多个动作塞进一步（"配置并重启并验证"）——一步一动作</li>
+<li>✗ 前提写在动作后面（"点提交——记得先填必填项"），读者已经点了</li>
+<li>✗ 用叙述体代替编号，读者无法扫读定位自己在第几步</li>
+<li>✗ 跳步：作者脑补了"显然要先登录"，读者卡在第一步</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>拿你写过的一段安装或配置说明，改成编号步骤：每步一个祈使句、动词打头，所有前提和警告提到对应动作之前。数数原来有几个「先…其实要更早做」的坑。<br/>思考题：你上次照别人的文档卡住，是卡在「没写」，还是「顺序错了」？</p>
+</div>
 </section>
-
 <!-- Card 2: 心智模型 -->
 <section class="card">
-  <div class="num">Principle 02</div>
-  <h2>用户心智模型：你写给的是他的模型，不是你的</h2>
-  <div class="en-name">The User's Mental Model</div>
-  <span class="tag">Norman · 概念模型</span>
-
-  <div class="section">
-    <div class="label">一句话原则 + 名家原话</div>
-    <p>你（作者）脑子里有一套系统如何运作的完整模型；读者没有。他能看到的界面、命名、文档，是他唯一的信息来源（Norman 叫「系统映像」）。好说明的任务，是通过这个映像，在读者脑中装一个<strong>够用、能预测下一步</strong>的模型。</p>
-    <div class="quote">
+<div class="num">Principle 02</div>
+<h2 data-tts="65e2eef579de965b">用户心智模型：你写给的是他的模型，不是你的</h2>
+<div class="en-name">The User's Mental Model</div>
+<span class="tag">Norman · 概念模型</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>你（作者）脑子里有一套系统如何运作的完整模型；读者没有。他能看到的界面、命名、文档，是他唯一的信息来源（Norman 叫「系统映像」）。好说明的任务，是通过这个映像，在读者脑中装一个<strong>够用、能预测下一步</strong>的模型。</p>
+<div class="quote">
       "A good conceptual model allows us to predict the effects of our actions. Without a good model, we operate by rote, blindly; we do operations as we were told to do them."
       <span class="cn">好的概念模型让我们能预测自己行动的后果。没有它，我们只能死记硬背、盲目操作，别人叫我们怎么做就怎么做。</span>
-      <span class="source">— Don Norman,《The Design of Everyday Things》(1988/2013)</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>这解释了「照着做还是不会」的根源——纯步骤只给了 rote（死记），没给 model（模型）。读者一旦碰到文档没覆盖的情况就抓瞎，因为他不懂「为什么」。所以最好的说明会在关键处补一句<strong>「因为」</strong>：不是解释每个细节，而是给读者一个心智支点，让他能自己推断没写到的情形。这也是「知识的诅咒」的解药——你太懂系统，忘了读者是一张白纸。</p>
-  </div>
-
-  <div class="model-vis">
-    <div class="m-flow">
-      <div class="m-box"><span class="m-t">设计者模型</span><span class="m-d">你脑中系统如何运作的全貌</span></div>
-      <div class="arrow">↓</div>
-      <div class="m-box mid"><span class="m-t">系统映像</span><span class="m-d">界面 · 命名 · 文档——唯一的传递介质</span></div>
-      <div class="arrow">↓</div>
-      <div class="m-box"><span class="m-t">用户模型</span><span class="m-d">读者反推出的、用来预测的那套理解</span></div>
-    </div>
-    <div class="caption">设计者的模型不会直接传给用户；用户只能通过「系统映像」反推。说明写得好不好，就看这一步反推顺不顺</div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">执行 flush 命令清空缓存。</span>
-      <span class="after">执行 flush 清空缓存——缓存只是内存里的临时副本，flush 丢弃的是副本，不动数据库里的原始数据，所以可放心执行。</span>
-      <span class="note">加一句「为什么安全」，读者就有了模型：下次遇到「要不要 flush」他能自己判断，不必再来问你。</span>
-    </div>
-    <div class="example">
-      <span class="before">Run flush to clear the cache.</span>
-      <span class="after">Run flush to clear the cache. The cache is just a temporary in-memory copy — flush drops the copy, never the source data — so it's safe to run.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ API 行为说明、报错含义、"这个开关会影响什么"、架构 onboarding、命令行 help</li>
-      <li>✗ 只给操作不给模型，读者一出模板就卡死</li>
-      <li>✗ 反过来：为炫耀把实现细节全倒出来，淹没了那个「够用的模型」</li>
-      <li>✗ 命名与行为不一致（按钮叫"保存"实为"提交"）——系统映像本身在骗人</li>
-      <li>✗ 假设读者与你共享同一套概念，黑话、内部缩写不作解释</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>找你文档里一句纯操作指令，补一句「为什么／它其实在做什么」，让读者能据此推断一个你没写的相邻情形。<br>思考题：「给模型」和「保持简洁」会冲突吗？哪一句「因为」值得留，哪一句只是你想炫技？</p>
-  </div>
+<span class="source">— Don Norman,《The Design of Everyday Things》(1988/2013)</span>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>这解释了「照着做还是不会」的根源——纯步骤只给了 rote（死记），没给 model（模型）。读者一旦碰到文档没覆盖的情况就抓瞎，因为他不懂「为什么」。所以最好的说明会在关键处补一句<strong>「因为」</strong>：不是解释每个细节，而是给读者一个心智支点，让他能自己推断没写到的情形。这也是「知识的诅咒」的解药——你太懂系统，忘了读者是一张白纸。</p>
+</div>
+<div class="model-vis">
+<div class="m-flow">
+<div class="m-box"><span class="m-t">设计者模型</span><span class="m-d">你脑中系统如何运作的全貌</span></div>
+<div class="arrow">↓</div>
+<div class="m-box mid"><span class="m-t">系统映像</span><span class="m-d">界面 · 命名 · 文档——唯一的传递介质</span></div>
+<div class="arrow">↓</div>
+<div class="m-box"><span class="m-t">用户模型</span><span class="m-d">读者反推出的、用来预测的那套理解</span></div>
+</div>
+<div class="caption">设计者的模型不会直接传给用户；用户只能通过「系统映像」反推。说明写得好不好，就看这一步反推顺不顺</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">执行 flush 命令清空缓存。</span>
+<span class="after">执行 flush 清空缓存——缓存只是内存里的临时副本，flush 丢弃的是副本，不动数据库里的原始数据，所以可放心执行。</span>
+<span class="note">加一句「为什么安全」，读者就有了模型：下次遇到「要不要 flush」他能自己判断，不必再来问你。</span>
+</div>
+<div class="example">
+<span class="before">Run flush to clear the cache.</span>
+<span class="after">Run flush to clear the cache. The cache is just a temporary in-memory copy — flush drops the copy, never the source data — so it's safe to run.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ API 行为说明、报错含义、"这个开关会影响什么"、架构 onboarding、命令行 help</li>
+<li>✗ 只给操作不给模型，读者一出模板就卡死</li>
+<li>✗ 反过来：为炫耀把实现细节全倒出来，淹没了那个「够用的模型」</li>
+<li>✗ 命名与行为不一致（按钮叫"保存"实为"提交"）——系统映像本身在骗人</li>
+<li>✗ 假设读者与你共享同一套概念，黑话、内部缩写不作解释</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>找你文档里一句纯操作指令，补一句「为什么／它其实在做什么」，让读者能据此推断一个你没写的相邻情形。<br/>思考题：「给模型」和「保持简洁」会冲突吗？哪一句「因为」值得留，哪一句只是你想炫技？</p>
+</div>
 </section>
-
 <!-- Card 3: 错误预防 -->
 <section class="card">
-  <div class="num">Principle 03</div>
-  <h2>错误预防：最好的报错，是让错误无法发生</h2>
-  <div class="en-name">Error Prevention Over Error Messages</div>
-  <span class="tag">Nielsen · 防呆</span>
-
-  <div class="section">
-    <div class="label">一句话原则 + 名家原话</div>
-    <p>说明高手不满足于「写清怎么做对」，还会主动想「读者最可能在哪做错」，然后在那一步之前设一道防线——警告、约束、安全默认、验证步。比一句好报错更好的，是让那个错<strong>根本没机会发生</strong>。</p>
-    <div class="quote">
+<div class="num">Principle 03</div>
+<h2 data-tts="af07b80338baeac7">错误预防：最好的报错，是让错误无法发生</h2>
+<div class="en-name">Error Prevention Over Error Messages</div>
+<span class="tag">Nielsen · 防呆</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>说明高手不满足于「写清怎么做对」，还会主动想「读者最可能在哪做错」，然后在那一步之前设一道防线——警告、约束、安全默认、验证步。比一句好报错更好的，是让那个错<strong>根本没机会发生</strong>。</p>
+<div class="quote">
       "Good error messages are important, but the best designs carefully prevent problems from occurring in the first place."
       <span class="cn">好的报错信息很重要，但最好的设计会小心地从一开始就防止问题发生。</span>
-      <span class="source">— Jakob Nielsen,《10 Usability Heuristics》第 5 条 (1994)</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>报错是事后补救，预防是事前拦截，成本差一个数量级。对写文档的人，「错误预防」有具体动作：一，标出<strong>危险动作</strong>（这步不可逆／影响生产），并用视觉把警告与正文分开；二，给出<strong>安全默认</strong>（"无特殊需求，保持默认"），省掉读者做他没能力做的决定；三，把隐性前提变成显式检查项。Norman 把这类设计叫 forcing function（防呆）——文档里的对应物，就是让读者「想犯错都难」。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">修改 config.yaml 中的端口号，然后重启服务。</span>
-      <span class="after">⚠ 仅限测试环境；生产端口变更须走审批。
+<span class="source">— Jakob Nielsen,《10 Usability Heuristics》第 5 条 (1994)</span>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>报错是事后补救，预防是事前拦截，成本差一个数量级。对写文档的人，「错误预防」有具体动作：一，标出<strong>危险动作</strong>（这步不可逆／影响生产），并用视觉把警告与正文分开；二，给出<strong>安全默认</strong>（"无特殊需求，保持默认"），省掉读者做他没能力做的决定；三，把隐性前提变成显式检查项。Norman 把这类设计叫 forcing function（防呆）——文档里的对应物，就是让读者「想犯错都难」。</p>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">修改 config.yaml 中的端口号，然后重启服务。</span>
+<span class="after">⚠ 仅限测试环境；生产端口变更须走审批。
 1. 改 config.yaml 的 port（默认 8080，无特殊需求勿改）。
 2. 重启服务，用 curl localhost:新端口 确认已生效。</span>
-      <span class="note">三道防线：危险边界（仅测试）＋安全默认（勿改）＋验证步（确认生效）——读者想踩坑都难。</span>
-    </div>
-    <div class="example">
-      <span class="before">Change the port in config.yaml, then restart the service.</span>
-      <span class="after">⚠ Test environment only. Production port changes require approval.
+<span class="note">三道防线：危险边界（仅测试）＋安全默认（勿改）＋验证步（确认生效）——读者想踩坑都难。</span>
+</div>
+<div class="example">
+<span class="before">Change the port in config.yaml, then restart the service.</span>
+<span class="after">⚠ Test environment only. Production port changes require approval.
 1. Set port in config.yaml (default 8080 — leave it unless you have a reason).
 2. Restart, then verify with curl localhost:&lt;new-port&gt;.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ runbook、生产 SOP、不可逆命令、迁移／回滚手册、新人易错的配置</li>
-      <li>✗ 警告写在动作之后，或藏在正文里不显眼</li>
-      <li>✗ 只说"请谨慎操作"这种没信息量的空警告——要说清具体后果</li>
-      <li>✗ 不给默认值，逼读者做他没背景做的选择</li>
-      <li>✗ 缺验证步，读者做完不知道对没对</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>拿一份含「危险动作」的操作文档，为每个不可逆步骤加三样：一句具体后果的警告（提到动作前）、一个安全默认、一个「怎么确认成功」的验证步。<br>思考题：文档做错误预防，和产品直接用设计（禁用按钮、二次确认）做预防，边界在哪？哪些根本不该让文档兜？</p>
-  </div>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ runbook、生产 SOP、不可逆命令、迁移／回滚手册、新人易错的配置</li>
+<li>✗ 警告写在动作之后，或藏在正文里不显眼</li>
+<li>✗ 只说"请谨慎操作"这种没信息量的空警告——要说清具体后果</li>
+<li>✗ 不给默认值，逼读者做他没背景做的选择</li>
+<li>✗ 缺验证步，读者做完不知道对没对</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>拿一份含「危险动作」的操作文档，为每个不可逆步骤加三样：一句具体后果的警告（提到动作前）、一个安全默认、一个「怎么确认成功」的验证步。<br/>思考题：文档做错误预防，和产品直接用设计（禁用按钮、二次确认）做预防，边界在哪？哪些根本不该让文档兜？</p>
+</div>
 </section>
-
 <!-- Card 4: 极简指令 -->
 <section class="card">
-  <div class="num">Principle 04</div>
-  <h2>极简指令：删到不能再删，读者才动得起来</h2>
-  <div class="en-name">Minimalist Instruction</div>
-  <span class="tag">Carroll · Krug · 删</span>
-
-  <div class="section">
-    <div class="label">一句话原则 + 名家原话</div>
-    <p>人不读说明书，只想赶紧上手。极简主义（Carroll）不是写得少，是砍掉一切挡在「读者开始行动」之前的东西——冗长铺垫、显而易见的解释、面面俱到的选项——只留能让他<strong>立刻动手、且出错能自己爬出来</strong>的最小集合。</p>
-    <div class="quote">
+<div class="num">Principle 04</div>
+<h2 data-tts="1fcdceb4f516ca98">极简指令：删到不能再删，读者才动得起来</h2>
+<div class="en-name">Minimalist Instruction</div>
+<span class="tag">Carroll · Krug · 删</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>人不读说明书，只想赶紧上手。极简主义（Carroll）不是写得少，是砍掉一切挡在「读者开始行动」之前的东西——冗长铺垫、显而易见的解释、面面俱到的选项——只留能让他<strong>立刻动手、且出错能自己爬出来</strong>的最小集合。</p>
+<div class="quote">
       "The idea of minimalism is to reduce the extent to which instructional materials obstruct learning, and to find ways to support the learning activities already going on."
       <span class="cn">极简主义的核心，是减少教学材料对学习的阻碍，转而设法去支撑读者正在进行的学习。</span>
-      <span class="source">— John M. Carroll,《The Nurnberg Funnel》(1990)</span>
-    </div>
-    <div class="quote">
+<span class="source">— John M. Carroll,《The Nurnberg Funnel》(1990)</span>
+</div>
+<div class="quote">
       "Get rid of half the words on each page, then get rid of half of what's left."
       <span class="cn">把每页的字删掉一半，然后把剩下的再删一半。</span>
-      <span class="source">— Steve Krug,《Don't Make Me Think》(2000)</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>为什么「少」反而更好用？因为读者的耐心是稀缺资源，每句废话都在消耗它，让他更可能放弃、转而乱试。Carroll 的反直觉发现是：给新手更厚的手册，他们学得更<strong>慢</strong>——厚手册推迟了动手。极简的三个动作：砍掉 happy-talk 式引言（"欢迎使用…本工具旨在…"），直接给第一个动作；砍掉读者已知的（别解释什么叫"点击"）；把「完整」让位给「够用」——覆盖 80% 主路径，边角情况链接出去。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">欢迎使用本部署工具。开始之前，我们建议您先了解整体流程。本工具旨在帮助您更高效地完成部署。首先，请确保已安装所有必要依赖，然后我们就可以开始了。</span>
-      <span class="after">部署三步：
+<span class="source">— Steve Krug,《Don't Make Me Think》(2000)</span>
+</div>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>为什么「少」反而更好用？因为读者的耐心是稀缺资源，每句废话都在消耗它，让他更可能放弃、转而乱试。Carroll 的反直觉发现是：给新手更厚的手册，他们学得更<strong>慢</strong>——厚手册推迟了动手。极简的三个动作：砍掉 happy-talk 式引言（"欢迎使用…本工具旨在…"），直接给第一个动作；砍掉读者已知的（别解释什么叫"点击"）；把「完整」让位给「够用」——覆盖 80% 主路径，边角情况链接出去。</p>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">欢迎使用本部署工具。开始之前，我们建议您先了解整体流程。本工具旨在帮助您更高效地完成部署。首先，请确保已安装所有必要依赖，然后我们就可以开始了。</span>
+<span class="after">部署三步：
 1. 装依赖：make deps
 2. 部署：make deploy
 3. 验证：打开 /health，看到 OK 即成功。</span>
-      <span class="note">四十多字的暖场＋"旨在帮助"全删，直接给三个动作。读者十秒内已经在做第一步。</span>
-    </div>
-    <div class="example">
-      <span class="before">Welcome! Before we begin, we recommend familiarizing yourself with the overall process. This tool is designed to help you deploy more efficiently. First, make sure all dependencies are installed.</span>
-      <span class="after">Deploy in 3 steps:
+<span class="note">四十多字的暖场＋"旨在帮助"全删，直接给三个动作。读者十秒内已经在做第一步。</span>
+</div>
+<div class="example">
+<span class="before">Welcome! Before we begin, we recommend familiarizing yourself with the overall process. This tool is designed to help you deploy more efficiently. First, make sure all dependencies are installed.</span>
+<span class="after">Deploy in 3 steps:
 1. make deps
 2. make deploy
 3. Open /health — "OK" means success.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ Quickstart、README 开头、tutorial、工具 onboarding、"5 分钟上手"型文档</li>
-      <li>✗ happy-talk 引言、"众所周知""值得注意的是"这类零信息过渡</li>
-      <li>✗ 面面俱到：把所有边角选项塞进主流程，淹没主路径</li>
-      <li>✗ 解释读者早会的（别教什么是浏览器）</li>
-      <li>✗ 误把「极简」当「残缺」——出错恢复信息不能省，那正是新手最需要的</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>拿你一份 quickstart，用 Krug 法则删两轮字（先删一半，再删剩下的一半），删到读者能在读完前就开始做第一步。检查：有没有真的丢信息？<br>思考题：「极简」和「完整」在什么场景必然冲突？给外科医生的核查表 vs 给用户的 App 引导，边界一样吗？</p>
-  </div>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ Quickstart、README 开头、tutorial、工具 onboarding、"5 分钟上手"型文档</li>
+<li>✗ happy-talk 引言、"众所周知""值得注意的是"这类零信息过渡</li>
+<li>✗ 面面俱到：把所有边角选项塞进主流程，淹没主路径</li>
+<li>✗ 解释读者早会的（别教什么是浏览器）</li>
+<li>✗ 误把「极简」当「残缺」——出错恢复信息不能省，那正是新手最需要的</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>拿你一份 quickstart，用 Krug 法则删两轮字（先删一半，再删剩下的一半），删到读者能在读完前就开始做第一步。检查：有没有真的丢信息？<br/>思考题：「极简」和「完整」在什么场景必然冲突？给外科医生的核查表 vs 给用户的 App 引导，边界一样吗？</p>
+</div>
 </section>
-
-<div class="deep-head">深入思考</div>
-
+<div class="deep-head" data-tts="2fe53f650b65ec51">深入思考</div>
 <details><summary>好说明追求"消灭作者的存在感"，随笔与演讲却追求"独特声音"，正相反。同一个人怎么在两种模式间切换？</summary><div>好说明的最高褒奖是「透明」——读者顺畅做完事，根本没注意到文字。这确实与随笔、演讲的「声音」相反，但底层技艺相通：都要极度替读者着想。区别在服务对象——说明服务于「任务完成」，随笔服务于「思想共鸣」。成熟写作者的标志，正是能判断此刻该隐身还是该现身，并切换自如。声音不是到处都要，是该有时才有。</div></details>
-
 <details><summary>中文写说明有什么独特陷阱？</summary><div>中文易生「的字长句」和无主句，而说明恰恰最需要短句和明确主语（谁做什么）。祈使句在中文里天然省主语，反成优势（「点击保存」干净利落）；但危险在「请您」式的礼貌堆叠稀释了动作，以及语序让「条件先于动作」更难排。中文说明还爱用「即可」「相关」「进行」等软词——它们是清晰的敌人。解药同英文：动词打头、一步一动作、砍虚词。</div></details>
-
 <details><summary>图（截图、流程图、IKEA 式无字图）什么时候胜过文字步骤？</summary><div>当「空间／位置」是关键信息时（按钮在哪、线怎么连），图远胜文字——IKEA 说明书几乎无字正因如此。当「顺序和条件逻辑」是关键时（先判断 A 再决定 B），文字加编号更清楚。最强的是图文各司其职：截图标出「在哪」，文字说「做什么、为什么」。误区是截图配一句「如图所示点击这里」——图已表达的，别用字重复。</div></details>
-
 <details><summary>AI 能读代码自动生成文档、能对话式答疑，传统「写一份静态说明」会被取代吗？</summary><div>形态会变，技艺更值钱。AI 能生成 API 参考、即时回答「这个参数啥意思」——机械的、可从代码推出的那层它做得好。但它推不出「用户会在哪一步犯致命错误」「哪个前提必须前置」「什么该省什么该留」——这些来自对真实读者的共情和对任务的判断。未来「写文档」更少是码字，更多是设计信息架构、标注危险、定义心智模型。会替读者思考的人，更稀缺。</div></details>
-
 <details><summary>「让用户变强」（Kathy Sierra）和「让用户不用思考」（Krug）矛盾吗？</summary><div>不矛盾，是分层。Krug 的「别让我思考」针对界面与操作路径——找按钮、走流程这类杂务不该耗脑力。Sierra《Badass》的「让用户变厉害」针对能力——工具应帮用户在真正的任务上变强。好说明同时做两件事：把操作摩擦降到零（不用想怎么点），把认知投资引向值得的地方（理解模型、掌握技能）。省下的脑力，花在刀刃上。</div></details>
-
 <div class="nav">
-  <a href="index.html">← 回到写作目录</a>
+<a href="index.html">← 回到写作目录</a>
 </div>
-
 <footer>BigCat · Writing · Day 48 · 2026</footer>
-
 </div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
+<script defer="" src="https://cissy0802.github.io/comments.js"></script>
+<script defer="" src="https://cissy0802.github.io/search.js"></script>
+<script defer="" src="https://cissy0802.github.io/index-button.js"></script>
+<script defer="" src="https://cissy0802.github.io/i18n-tts.js"></script>
 </body>
 </html>

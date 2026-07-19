@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>写作与表达：新闻与非虚构 — Day 34</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -77,255 +78,221 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 </head>
 <body>
 <div class="container">
-
 <header>
-  <div class="week-label">Day 34 · 2026.06.21</div>
-  <h1>写作与表达：新闻与非虚构<span class="topic">倒金字塔 · 事实核查 · 叙事新闻 · 调查报道</span></h1>
-  <div class="date">BigCat's Writing</div>
-  <p class="intro">技术人写的事故报告、复盘、决策备忘，本质都是非虚构写作——把真实世界发生的事，准确、可核实、可信地讲给别人听。新闻业用一百年磨出了这套手艺：最重要的放最前、每个事实都经得起追问、用场景而非形容词打动人、用证据而非立场下结论。本周向记者学这四件事。</p>
+<div class="week-label">Day 34 · 2026.06.21</div>
+<h1 data-tts="1c7f27351c4a30f9">写作与表达：新闻与非虚构<span class="topic">倒金字塔 · 事实核查 · 叙事新闻 · 调查报道</span></h1>
+<div class="date">BigCat's Writing</div>
+<p class="intro">技术人写的事故报告、复盘、决策备忘，本质都是非虚构写作——把真实世界发生的事，准确、可核实、可信地讲给别人听。新闻业用一百年磨出了这套手艺：最重要的放最前、每个事实都经得起追问、用场景而非形容词打动人、用证据而非立场下结论。本周向记者学这四件事。</p>
 </header>
-
 <!-- Card 1: 倒金字塔 -->
 <section class="card">
-  <div class="num">Principle 01</div>
-  <h2>倒金字塔：把结论放在第一句</h2>
-  <div class="en-name">The Inverted Pyramid — Most Important First</div>
-  <span class="tag">新闻 · 结构</span>
-
-  <div class="section">
-    <div class="label">一句话原则 + 名家原话</div>
-    <p>把最重要的结论放在开头，信息按重要性<strong>递减</strong>排列——读者读到任何一行停下，都已拿到他最需要的东西。</p>
-    <div class="quote">
+<div class="num">Principle 01</div>
+<h2 data-tts="65a2172a8c095563">倒金字塔：把结论放在第一句</h2>
+<div class="en-name">The Inverted Pyramid — Most Important First</div>
+<span class="tag">新闻 · 结构</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>把最重要的结论放在开头，信息按重要性<strong>递减</strong>排列——读者读到任何一行停下，都已拿到他最需要的东西。</p>
+<div class="quote">
       "The most important sentence in any article is the first one. If it doesn't induce the reader to proceed to the second sentence, your article is dead."
       <span class="source">— William Zinsser, On Writing Well, Ch. 9</span>
-    </div>
-    <p class="cn-trans">中译：任何文章里最重要的一句，就是第一句。如果它不能让读者读下去第二句，这篇文章就死了。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>倒金字塔诞生于报纸时代：编辑要从文末删版面，按重要性倒序写，砍到哪一行都不会伤到核心。今天读者的注意力就是那把剪刀——邮件、Slack、事故报告，多数人只读前两行就走。它和金字塔原理（Day 2）的「结论先行」同源，但更狠：不只开头点题，<strong>全文都按「读者随时可能退出」来排序</strong>。</p>
-    <div class="pyramid">
-      <div class="row r1">核心结论 · 谁、何事、何影响、要你做什么</div>
-      <div class="row r2">关键支撑 · 数据、根因、范围</div>
-      <div class="row r3">次要细节 · 时间线、背景</div>
-      <div class="row r4">补充 · 引文、附录</div>
-      <div class="axis"><span>读者必读</span><span>可省略</span></div>
-      <div class="caption">倒金字塔 — 从这里任意一行截断，读者都已拿到该层的全部要点</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">昨晚我们的监控发现了一些异常，团队随后展开排查，经过几个小时定位，最终确认是数据库连接问题，目前服务已恢复。</span>
-      <span class="after">支付服务昨晚宕机 47 分钟，已恢复。根因是连接池耗尽；已扩容并加告警。无数据丢失，3 笔订单需人工补单（名单见末）。</span>
-    </div>
-    <div class="example">
-      <span class="before">After several weeks of discussion across teams, weighing many factors, we have arrived at a decision regarding the framework.</span>
-      <span class="after">We're standardizing on Framework X. Migration starts July 1, done by Q4. Here's why, and what your team needs to do.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 事故报告、状态更新、决策邮件、新闻稿、任何「读者很忙」的场合</li>
-      <li>✗ 不适用：悬念叙事、需要铺垫情绪的故事（那要用故事弧，见 Day 4）</li>
-      <li>✗ 常见错误：把「背景」当开头——读者要等到第三段才知道发生了什么</li>
-      <li>✗ 常见错误：第一句塞五个要点，反而没有重点；一句只放一个最重的结论</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>找你最近写的一封长邮件或一份报告，把它倒过来重排：第一句只写「读者最该知道的那一件事」，其余按重要性递减。删到「砍掉最后一段也不伤理解」为止。</p>
-    <p class="q">思考题：倒金字塔牺牲了悬念与节奏，什么场合「先抖结论」反而是败笔？</p>
-  </div>
+</div>
+<p class="cn-trans">中译：任何文章里最重要的一句，就是第一句。如果它不能让读者读下去第二句，这篇文章就死了。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>倒金字塔诞生于报纸时代：编辑要从文末删版面，按重要性倒序写，砍到哪一行都不会伤到核心。今天读者的注意力就是那把剪刀——邮件、Slack、事故报告，多数人只读前两行就走。它和金字塔原理（Day 2）的「结论先行」同源，但更狠：不只开头点题，<strong>全文都按「读者随时可能退出」来排序</strong>。</p>
+<div class="pyramid">
+<div class="row r1">核心结论 · 谁、何事、何影响、要你做什么</div>
+<div class="row r2">关键支撑 · 数据、根因、范围</div>
+<div class="row r3">次要细节 · 时间线、背景</div>
+<div class="row r4">补充 · 引文、附录</div>
+<div class="axis"><span>读者必读</span><span>可省略</span></div>
+<div class="caption">倒金字塔 — 从这里任意一行截断，读者都已拿到该层的全部要点</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">昨晚我们的监控发现了一些异常，团队随后展开排查，经过几个小时定位，最终确认是数据库连接问题，目前服务已恢复。</span>
+<span class="after">支付服务昨晚宕机 47 分钟，已恢复。根因是连接池耗尽；已扩容并加告警。无数据丢失，3 笔订单需人工补单（名单见末）。</span>
+</div>
+<div class="example">
+<span class="before">After several weeks of discussion across teams, weighing many factors, we have arrived at a decision regarding the framework.</span>
+<span class="after">We're standardizing on Framework X. Migration starts July 1, done by Q4. Here's why, and what your team needs to do.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 事故报告、状态更新、决策邮件、新闻稿、任何「读者很忙」的场合</li>
+<li>✗ 不适用：悬念叙事、需要铺垫情绪的故事（那要用故事弧，见 Day 4）</li>
+<li>✗ 常见错误：把「背景」当开头——读者要等到第三段才知道发生了什么</li>
+<li>✗ 常见错误：第一句塞五个要点，反而没有重点；一句只放一个最重的结论</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>找你最近写的一封长邮件或一份报告，把它倒过来重排：第一句只写「读者最该知道的那一件事」，其余按重要性递减。删到「砍掉最后一段也不伤理解」为止。</p>
+<p class="q">思考题：倒金字塔牺牲了悬念与节奏，什么场合「先抖结论」反而是败笔？</p>
+</div>
 </section>
-
 <!-- Card 2: 事实核查 -->
 <section class="card">
-  <div class="num">Principle 02</div>
-  <h2>事实核查：把「我以为」改成「我证实」</h2>
-  <div class="en-name">Verification — The Discipline That Defines Journalism</div>
-  <span class="tag">新闻 · 核实</span>
-
-  <div class="section">
-    <div class="label">一句话原则 + 名家原话</div>
-    <p>新闻与传言、公关的区别不在文采，而在<strong>每一个可被证伪的陈述都经过独立核实</strong>。核实是纪律，不是天赋。</p>
-    <div class="quote">
+<div class="num">Principle 02</div>
+<h2 data-tts="2c27ea8153819735">事实核查：把「我以为」改成「我证实」</h2>
+<div class="en-name">Verification — The Discipline That Defines Journalism</div>
+<span class="tag">新闻 · 核实</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>新闻与传言、公关的区别不在文采，而在<strong>每一个可被证伪的陈述都经过独立核实</strong>。核实是纪律，不是天赋。</p>
+<div class="quote">
       "In the end, the discipline of verification is what separates journalism from entertainment, propaganda, fiction, or art."
       <span class="source">— Kovach &amp; Rosenstiel, The Elements of Journalism</span>
-    </div>
-    <p class="cn-trans">中译：归根结底，正是「核实的纪律」把新闻与娱乐、宣传、虚构和艺术区分开来。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>核实的核心动作，是分清「我认为」与「我证实」。三条朴素规矩：<strong>具名优于匿名，两个独立来源优于一个，原始文件优于二手转述</strong>。对技术人，这就是事故复盘的命脉——「可能是因为」和「日志确认是因为」之间，隔着一个团队的信誉。每写一个断言就自问：如果有人追问「你怎么知道」，我拿得出证据吗？拿不出，就降级措辞或去查。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">由于上游服务不稳定，导致了本次故障。</span>
-      <span class="after">14:02 上游 API 错误率从 0.1% 升至 38%（监控链接）；我们的重试在 14:05 打满连接池（日志链接）。上游波动是触发，重试无退避是放大。</span>
-    </div>
-    <div class="example">
-      <span class="before">Users were unhappy with the redesign.</span>
-      <span class="after">23 of 40 surveyed users rated the new flow worse (survey link); support tickets on navigation rose 3× week-over-week (dashboard).</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 事故复盘、根因分析、调研报告、对外公告、任何会被引用的结论</li>
-      <li>✗ 常见错误：用「据说 / 听说 / 大家都觉得」搪塞，把传言当事实写</li>
-      <li>✗ 常见错误：把相关当因果——两件事同时发生，不等于一件导致另一件</li>
-      <li>✗ 常见错误：单一来源即下结论；尤其是来源正好支持你想要的结论时</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>拿出一份你写过的报告，给每一句断言标注来源：①亲自证实 ②有文件/数据 ③二手转述 ④纯推测。把③④的句子要么补证据，要么改成「待核实」的措辞。</p>
-    <p class="q">思考题：AI 给的答案该算第几级来源？你如何核实一段看起来很笃定的 AI 输出？</p>
-  </div>
+</div>
+<p class="cn-trans">中译：归根结底，正是「核实的纪律」把新闻与娱乐、宣传、虚构和艺术区分开来。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>核实的核心动作，是分清「我认为」与「我证实」。三条朴素规矩：<strong>具名优于匿名，两个独立来源优于一个，原始文件优于二手转述</strong>。对技术人，这就是事故复盘的命脉——「可能是因为」和「日志确认是因为」之间，隔着一个团队的信誉。每写一个断言就自问：如果有人追问「你怎么知道」，我拿得出证据吗？拿不出，就降级措辞或去查。</p>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">由于上游服务不稳定，导致了本次故障。</span>
+<span class="after">14:02 上游 API 错误率从 0.1% 升至 38%（监控链接）；我们的重试在 14:05 打满连接池（日志链接）。上游波动是触发，重试无退避是放大。</span>
+</div>
+<div class="example">
+<span class="before">Users were unhappy with the redesign.</span>
+<span class="after">23 of 40 surveyed users rated the new flow worse (survey link); support tickets on navigation rose 3× week-over-week (dashboard).</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 事故复盘、根因分析、调研报告、对外公告、任何会被引用的结论</li>
+<li>✗ 常见错误：用「据说 / 听说 / 大家都觉得」搪塞，把传言当事实写</li>
+<li>✗ 常见错误：把相关当因果——两件事同时发生，不等于一件导致另一件</li>
+<li>✗ 常见错误：单一来源即下结论；尤其是来源正好支持你想要的结论时</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>拿出一份你写过的报告，给每一句断言标注来源：①亲自证实 ②有文件/数据 ③二手转述 ④纯推测。把③④的句子要么补证据，要么改成「待核实」的措辞。</p>
+<p class="q">思考题：AI 给的答案该算第几级来源？你如何核实一段看起来很笃定的 AI 输出？</p>
+</div>
 </section>
-
 <!-- Card 3: 叙事新闻 -->
 <section class="card">
-  <div class="num">Principle 03</div>
-  <h2>叙事新闻：用场景呈现，而非用形容词断言</h2>
-  <div class="en-name">New Journalism — Show, Don't Assert</div>
-  <span class="tag">新闻 · 叙事</span>
-
-  <div class="section">
-    <div class="label">一句话原则 + 名家原话</div>
-    <p>非虚构也能有小说的张力。Tom Wolfe 总结「新新闻主义」四件武器：<strong>逐场景叙述、完整对话、视角代入、地位细节</strong>——用呈现代替形容。</p>
-    <div class="quote">
+<div class="num">Principle 03</div>
+<h2 data-tts="7c475c9cbd449315">叙事新闻：用场景呈现，而非用形容词断言</h2>
+<div class="en-name">New Journalism — Show, Don't Assert</div>
+<span class="tag">新闻 · 叙事</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>非虚构也能有小说的张力。Tom Wolfe 总结「新新闻主义」四件武器：<strong>逐场景叙述、完整对话、视角代入、地位细节</strong>——用呈现代替形容。</p>
+<div class="quote">
       "...scene-by-scene construction... the recording of dialogue in full... the third-person point of view... and the recording of everyday gestures, habits, manners — the 'status life' of the people."
       <span class="source">— Tom Wolfe, The New Journalism (1973)</span>
-    </div>
-    <p class="cn-trans">中译：……逐场景地构建……完整记录对话……第三人称视角……以及记录日常的手势、习惯、举止——人物的「身份生活」。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>形容词是作者替读者下的判断；场景让读者自己得出判断，因而更可信、更难忘。「他很愤怒」是断言；「他把咖啡杯轻轻放下，没有看任何人」是场景——读者自己读出了愤怒。地位细节（穿什么、用什么词、坐哪）则不动声色地透露人物的身份与处境。这套手艺在你写晋升 packet、团队故事、复盘里「人」的那部分时尤其有用。</p>
-    <div class="grid4">
-      <div class="cell"><b>逐场景</b>用一个具体时刻展开，而非概括「通常情况」</div>
-      <div class="cell"><b>完整对话</b>让人物自己开口，对话比转述更有现场感</div>
-      <div class="cell"><b>视角代入</b>带读者进入某个人的眼睛去看</div>
-      <div class="cell"><b>地位细节</b>用具体物件与举止暗示身份，不直说</div>
-      <div class="caption">Wolfe 的非虚构四手法 — 让真实的事，读起来像现场</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">那天值班的工程师压力很大，非常焦虑，团队气氛紧张。</span>
-      <span class="after">凌晨两点，告警第十七次响起。她盯着那条始终爬升的红线，键盘上的手停了三秒，然后在群里打出：「我需要有人帮我看一眼。」</span>
-    </div>
-    <div class="example">
-      <span class="before">The customer was a very demanding and difficult person.</span>
-      <span class="after">He read every line of the contract aloud, twice, and circled the word "best-effort" in red before he would shake hands.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 复盘的人性段落、个人品牌长文、团队叙事、需要打动而非告知的场合</li>
-      <li>✗ 不适用：纯技术 spec、结论式邮件（那里要倒金字塔，不要铺陈）</li>
-      <li>✗ 常见错误：为了戏剧性而虚构或扭曲细节——非虚构的底线是真实</li>
-      <li>✗ 常见错误：堆形容词当「文采」（「极其震撼、无比艰难」），等于没写</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>挑你经历过的一个工作时刻（一次发布、一场争论、一个深夜）。先用一句概括它，再用 150 字把它写成一个场景：只用动作、对话、可见的细节，不用任何评价性形容词。</p>
-    <p class="q">思考题：当真实的细节平淡无奇时，「呈现」会不会反而无力？此时该如何取舍？</p>
-  </div>
+</div>
+<p class="cn-trans">中译：……逐场景地构建……完整记录对话……第三人称视角……以及记录日常的手势、习惯、举止——人物的「身份生活」。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>形容词是作者替读者下的判断；场景让读者自己得出判断，因而更可信、更难忘。「他很愤怒」是断言；「他把咖啡杯轻轻放下，没有看任何人」是场景——读者自己读出了愤怒。地位细节（穿什么、用什么词、坐哪）则不动声色地透露人物的身份与处境。这套手艺在你写晋升 packet、团队故事、复盘里「人」的那部分时尤其有用。</p>
+<div class="grid4">
+<div class="cell"><b>逐场景</b>用一个具体时刻展开，而非概括「通常情况」</div>
+<div class="cell"><b>完整对话</b>让人物自己开口，对话比转述更有现场感</div>
+<div class="cell"><b>视角代入</b>带读者进入某个人的眼睛去看</div>
+<div class="cell"><b>地位细节</b>用具体物件与举止暗示身份，不直说</div>
+<div class="caption">Wolfe 的非虚构四手法 — 让真实的事，读起来像现场</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">那天值班的工程师压力很大，非常焦虑，团队气氛紧张。</span>
+<span class="after">凌晨两点，告警第十七次响起。她盯着那条始终爬升的红线，键盘上的手停了三秒，然后在群里打出：「我需要有人帮我看一眼。」</span>
+</div>
+<div class="example">
+<span class="before">The customer was a very demanding and difficult person.</span>
+<span class="after">He read every line of the contract aloud, twice, and circled the word "best-effort" in red before he would shake hands.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 复盘的人性段落、个人品牌长文、团队叙事、需要打动而非告知的场合</li>
+<li>✗ 不适用：纯技术 spec、结论式邮件（那里要倒金字塔，不要铺陈）</li>
+<li>✗ 常见错误：为了戏剧性而虚构或扭曲细节——非虚构的底线是真实</li>
+<li>✗ 常见错误：堆形容词当「文采」（「极其震撼、无比艰难」），等于没写</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>挑你经历过的一个工作时刻（一次发布、一场争论、一个深夜）。先用一句概括它，再用 150 字把它写成一个场景：只用动作、对话、可见的细节，不用任何评价性形容词。</p>
+<p class="q">思考题：当真实的细节平淡无奇时，「呈现」会不会反而无力？此时该如何取舍？</p>
+</div>
 </section>
-
 <!-- Card 4: 调查报道 -->
 <section class="card">
-  <div class="num">Principle 04</div>
-  <h2>调查报道：用证据建立问责，而非各打五十大板</h2>
-  <div class="en-name">Investigative Reporting — The Best Obtainable Version of the Truth</div>
-  <span class="tag">新闻 · 问责</span>
-
-  <div class="section">
-    <div class="label">一句话原则 + 名家原话</div>
-    <p>调查报道不是更长的报道，而是用累积的证据逼近真相。目标是<strong>「可获得的最接近真相的版本」</strong>，不是把双方观点对半摆开就算公正。</p>
-    <div class="quote">
+<div class="num">Principle 04</div>
+<h2 data-tts="8b066e170619fc0c">调查报道：用证据建立问责，而非各打五十大板</h2>
+<div class="en-name">Investigative Reporting — The Best Obtainable Version of the Truth</div>
+<span class="tag">新闻 · 问责</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>调查报道不是更长的报道，而是用累积的证据逼近真相。目标是<strong>「可获得的最接近真相的版本」</strong>，不是把双方观点对半摆开就算公正。</p>
+<div class="quote">
       "Our job is to put together the best obtainable version of the truth."
       <span class="source">— Bob Woodward</span>
-    </div>
-    <p class="cn-trans">中译：我们的工作，是拼出「可获得的、最接近真相的版本」。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">原理解读</div>
-    <p>关键是分清「伪平衡」与「对证据负责」。把「有人说 A，也有人说 B」并列，看似中立，实则是把判断的责任甩给读者。调查报道反其道而行：<strong>文件优于说法，多源相互印证，跟着证据走到它指向的地方</strong>，哪怕那是你不喜欢的结论。每篇还要有一段 nut graf——一句话讲清「这事为什么重要」。对技术人，根因分析就是一场内部调查：不停问为什么，追到 commit、日志、评审记录，不停在「我猜」。</p>
-  </div>
-
-  <div class="section">
-    <div class="label">修改示范</div>
-    <div class="example">
-      <span class="before">有人说是系统设计有问题，也有人说是运维操作失误，目前各执一词，难下定论。</span>
-      <span class="after">三份独立证据指向同一根因：配置变更在无回滚预案下上线（commit 链接 + 评审记录缺失），且监控未覆盖该路径（告警配置截图）。这不是谁对谁错，是流程缺了一道闸。</span>
-    </div>
-    <div class="example">
-      <span class="before">There were some concerns about the vendor's reliability.</span>
-      <span class="after">The vendor missed its SLA in 4 of the last 6 months (incident log); two teams independently flagged the same timeout pattern (tickets #2231, #2417). This matters because renewal is due in 30 days.</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="label">适用场景 + 常见错误</div>
-    <ul>
-      <li>✓ 根因分析、尽职调查、审计、任何需要「指出问题并负责」的报告</li>
-      <li>✗ 常见错误：伪平衡——用「各有道理」回避本可证实的结论</li>
-      <li>✗ 常见错误：先有立场再找证据（confirmation bias），只引用对自己有利的</li>
-      <li>✗ 常见错误：只列证据不写 nut graf，读者不知道「所以呢」</li>
-    </ul>
-  </div>
-
-  <div class="exercise">
-    <div class="label">本周习作 + 思考题</div>
-    <p>选一个你团队悬而未决的争议。别再「听各方说法」，去找三份独立的客观证据（数据、文件、日志），看它们是否指向同一结论。再写一句 nut graf：这事为什么值得现在解决。</p>
-    <p class="q">思考题：当证据指向一个会得罪人、或推翻你自己先前判断的结论时，你会怎么写？</p>
-  </div>
+</div>
+<p class="cn-trans">中译：我们的工作，是拼出「可获得的、最接近真相的版本」。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>关键是分清「伪平衡」与「对证据负责」。把「有人说 A，也有人说 B」并列，看似中立，实则是把判断的责任甩给读者。调查报道反其道而行：<strong>文件优于说法，多源相互印证，跟着证据走到它指向的地方</strong>，哪怕那是你不喜欢的结论。每篇还要有一段 nut graf——一句话讲清「这事为什么重要」。对技术人，根因分析就是一场内部调查：不停问为什么，追到 commit、日志、评审记录，不停在「我猜」。</p>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">有人说是系统设计有问题，也有人说是运维操作失误，目前各执一词，难下定论。</span>
+<span class="after">三份独立证据指向同一根因：配置变更在无回滚预案下上线（commit 链接 + 评审记录缺失），且监控未覆盖该路径（告警配置截图）。这不是谁对谁错，是流程缺了一道闸。</span>
+</div>
+<div class="example">
+<span class="before">There were some concerns about the vendor's reliability.</span>
+<span class="after">The vendor missed its SLA in 4 of the last 6 months (incident log); two teams independently flagged the same timeout pattern (tickets #2231, #2417). This matters because renewal is due in 30 days.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 根因分析、尽职调查、审计、任何需要「指出问题并负责」的报告</li>
+<li>✗ 常见错误：伪平衡——用「各有道理」回避本可证实的结论</li>
+<li>✗ 常见错误：先有立场再找证据（confirmation bias），只引用对自己有利的</li>
+<li>✗ 常见错误：只列证据不写 nut graf，读者不知道「所以呢」</li>
+</ul>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>选一个你团队悬而未决的争议。别再「听各方说法」，去找三份独立的客观证据（数据、文件、日志），看它们是否指向同一结论。再写一句 nut graf：这事为什么值得现在解决。</p>
+<p class="q">思考题：当证据指向一个会得罪人、或推翻你自己先前判断的结论时，你会怎么写？</p>
+</div>
 </section>
-
-<div class="deep-head">深入思考</div>
-
+<div class="deep-head" data-tts="4326802ebfc8d5e4">深入思考</div>
 <details><summary>倒金字塔与故事弧（Day 4）截然相反——一个先抖结论，一个层层铺垫。技术人该默认用哪个？</summary><div>默认倒金字塔：日常 99% 的工作写作（邮件、报告、状态更新）面对的是「很忙、随时退出」的读者，结论先行是对他们时间的尊重。故事弧只在两种场合值得动用：你需要的不是「告知」而是「说服 / 动员 / 共情」，且你确信读者会读完。误用的代价不对称——该用倒金字塔时用了故事弧，读者在你铺垫时就走了；反之最多是少了点戏剧性。</div></details>
-
 <details><summary>「核实的纪律」在 AI 时代是更容易还是更难了？</summary><div>更难。AI 让生成「看起来很笃定的陈述」的成本趋近于零，而核实成本没变。过去传言至少要人去传，现在一段流畅、自信、带假引用的文字可瞬间生成。这反而抬高了「核实」的稀缺价值：能区分「读起来对」与「经得起追问」的人，会越来越值钱。把 AI 输出当成「一个未具名的二手来源」——有用，但发布前必须独立验证。</div></details>
-
 <details><summary>叙事新闻的「呈现」手法用在中文与英文里，有什么不同？</summary><div>英文叙事传统更依赖动词与具体名词的精确（Wolfe、Didion 都是动词大师）；中文的「呈现」则更得力于白描——鲁迅、汪曾祺式的、不动声色的细节排列。共同的敌人是形容词堆砌，但中文还多一重风险：成语会替你「打包」判断（「焦头烂额」「剑拔弩张」），看似生动，其实和形容词一样是在替读者下结论。中文白描要敢于用最朴素的动词。</div></details>
-
 <details><summary>调查报道的「证据优于说法」，和团队里的「心理安全感」会冲突吗？</summary><div>表面冲突，实则互补。问责针对的是「事与流程」，不是「人」——这正是无指责复盘（blameless postmortem）的精髓。证据让讨论从「谁的错」转向「哪道闸缺了」，反而降低了人际防御。真正伤害安全感的，恰恰是伪平衡和模糊措辞：含糊会让每个人都觉得矛头可能指向自己。精确的证据，是对人最大的善意。</div></details>
-
 <details><summary>这四件武器——倒金字塔、核实、呈现、问责——能在同一篇文章里并存吗？</summary><div>能，而且最好的非虚构正是如此。一篇出色的事故复盘：开头倒金字塔给结论（影响 + 根因 + 行动），主体用核实过的证据支撑每个断言，关键时刻用一两个场景让读者「在场」，整体以问责的姿态指向流程而非个人。四者不是四选一，而是四个挡位：结构用倒金字塔，可信度靠核实，感染力靠呈现，公信力靠问责。</div></details>
-
 <div class="nav">
-  <a href="index.html">← 回到写作目录</a>
+<a href="index.html">← 回到写作目录</a>
 </div>
-
 <footer>BigCat · Writing · Day 34 · 2026</footer>
-
 </div>
-<script src="https://cissy0802.github.io/comments.js" defer></script>
-<script src="https://cissy0802.github.io/search.js" defer></script>
-<script src="https://cissy0802.github.io/index-button.js" defer></script>
-<script src="https://cissy0802.github.io/i18n-tts.js" defer></script>
+<script defer="" src="https://cissy0802.github.io/comments.js"></script>
+<script defer="" src="https://cissy0802.github.io/search.js"></script>
+<script defer="" src="https://cissy0802.github.io/index-button.js"></script>
+<script defer="" src="https://cissy0802.github.io/i18n-tts.js"></script>
 </body>
 </html>
