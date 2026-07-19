@@ -224,7 +224,7 @@ def collect_groups(soup) -> list[tuple]:
     # use per-thinker cards, sometimes alongside a trailing h2 like 深入思考).
     # Collect both, then sort by DOM order.
     candidates = list(body.find_all(["h2", "h3", "h4"]))
-    candidates += list(body.find_all("div", class_=lambda c: c and "card" in c))
+    candidates += list(body.find_all("div", class_=lambda c: c and ("card" in c or c == "deep-head")))
     candidates = [el for el in candidates if not el.find_parent(class_="mmd-controls")]
     # DOM order: use sourceline+sourcepos if available, else find_all() order
     candidate_ids = set(id(c) for c in candidates)
