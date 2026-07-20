@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Writing &amp; Expression: The Craft of Fiction — Day 62</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.2rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.25rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.5rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"BEFORE ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"AFTER ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .neutral{color:#3a3a3a;display:block}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.exercise .q{display:block;margin-top:12px;color:#d8c98a;font-style:italic;font-size:0.94rem}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* POV three columns */
+.pov-grid{display:flex;gap:8px;margin:18px 0}
+.pov-grid .pov-col{flex:1;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px;padding:14px 12px;text-align:center;font-family:Georgia,serif}
+.pov-grid .pov-col .p-name{display:block;font-weight:700;color:#1f1f1f;font-size:0.9rem;margin-bottom:8px;line-height:1.4}
+.pov-grid .pov-col .p-trait{display:block;font-size:0.8rem;color:#5a5a5a;line-height:1.6;margin:3px 0}
+.pov-grid .pov-col.mid{background:#1f1f1f}
+.pov-grid .pov-col.mid .p-name{color:#d8c98a}
+.pov-grid .pov-col.mid .p-trait{color:#e8e4d8}
+.pov-cap{font-size:0.86rem;color:#5a5a5a;font-style:italic;text-align:center;font-family:Georgia,serif;margin-top:-6px;margin-bottom:6px}
+
+/* Scene vs summary pacing bar */
+.pacing{background:#f8f6f1;padding:20px 16px;margin:18px 0;border-radius:2px}
+.pacing .p-bar{display:flex;height:44px;border-radius:2px;overflow:hidden;font-family:Georgia,serif}
+.pacing .seg{display:flex;align-items:center;justify-content:center;text-align:center;font-size:0.78rem;line-height:1.3;color:#fff;padding:2px}
+.pacing .seg.sum{background:#c8c0a8;color:#4a4436;flex:1}
+.pacing .seg.scene{background:#1f1f1f;color:#d8c98a;flex:5}
+.pacing .p-axis{display:flex;justify-content:space-between;font-size:0.72rem;color:#8a8a8a;font-family:Georgia,serif;margin-top:6px}
+.pacing .caption{font-size:0.86rem;color:#5a5a5a;font-style:italic;text-align:center;font-family:Georgia,serif;margin-top:10px}
+
+/* Show / Tell spectrum */
+.spectrum{background:#f8f6f1;padding:22px 18px 16px;margin:18px 0;border-radius:2px}
+.spectrum .track{height:10px;border-radius:5px;background:linear-gradient(to right,#b04a3a,#c8b060,#3a6a3a);position:relative;margin:26px 8px 8px}
+.spectrum .track .dot{position:absolute;top:-6px;width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid #1f1f1f;left:50%;transform:translateX(-50%)}
+.spectrum .track .sweet{position:absolute;top:-30px;left:50%;transform:translateX(-50%);font-size:0.74rem;color:#1f1f1f;font-weight:700;font-family:Georgia,serif;white-space:nowrap}
+.spectrum .ends{display:flex;justify-content:space-between;margin-top:4px;font-family:Georgia,serif}
+.spectrum .ends .end{width:44%;font-size:0.82rem;line-height:1.5}
+.spectrum .ends .end.tell{text-align:left;color:#a04040}
+.spectrum .ends .end.show{text-align:right;color:#3a6a3a}
+.spectrum .ends .end b{display:block;font-size:0.9rem}
+.spectrum .caption{font-size:0.86rem;color:#5a5a5a;font-style:italic;text-align:center;font-family:Georgia,serif;margin-top:12px}
+
+details{margin:10px 0;border-bottom:1px solid #e0ddd4;padding-bottom:8px}
+details summary{cursor:pointer;font-weight:600;color:#1f1f1f;font-size:1rem;padding:6px 0;list-style:none}
+details summary:before{content:"▸ ";color:#8a7a4a}
+details[open] summary:before{content:"▾ "}
+details .d-body{font-size:0.94rem;color:#4a4a4a;line-height:1.75;padding:8px 0 4px 18px}
+.deep{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.deep h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.6rem}
+  header h1 .topic{font-size:1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.25rem}
+  .pov-grid{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<div class="week-label">Day 62 · 2026.07.20</div>
+<h1>Writing &amp; Expression: The Craft of Fiction<span class="topic">Character · POV · Scene vs Summary · Show, Don't Tell</span></h1>
+<div class="date">BigCat's Writing</div>
+<p class="intro">You may never write a novel. But every customer case study you draft, every story you tell from a stage, every persuasive note you send borrows a craft novelists have polished for four centuries: making a person come alive, choosing where to stand and watch from, deciding when to slow down and play out a scene versus skip ahead — and hardest of all, when to <em>show</em> and when to simply tell. This issue lifts those four tools out of fiction and drops them into the leader's toolkit.</p>
+</header>
+<!-- Card 1: Character -->
+<section class="card">
+<div class="num">Principle 01</div>
+<h2>Character Is Choice, Not Adjectives</h2>
+<div class="en-name">Character — Revealed by Choice Under Pressure, Not by Adjectives</div>
+<span class="tag">Fiction Craft · Character</span>
+<div class="section">
+<div class="label">The Principle + The Master's Words</div>
+<p>Readers won't believe she's brave because you called her brave. Character shows itself only in the choices someone makes under pressure. Building a character isn't pinning on labels (kind, smart, tough); it's designing a desire, an obstacle, then forcing a choice in the bind — <strong>the choice is the character</strong>.</p>
+<div class="quote">
+      "True character is revealed in the choices a human being makes under pressure — the greater the pressure, the deeper the revelation, the truer the choice to the character's essential nature."
+      <span class="source">— Robert McKee, Story (1997)</span>
+</div>
+</div>
+<div class="section">
+<div class="label">Why It Works</div>
+<p>In Aspects of the Novel, E.M. Forster separates <em>flat</em> characters from <em>round</em> ones: a flat character can be summed up in a sentence and never changes; a round one "is capable of surprising in a convincing way." What makes a person dimensional is never more adjectives but <strong>inner contradiction</strong> — she wants the promotion and despises office politics; the conflict forces a choice, and the choice reveals who she is. Same at work: "a growth-minded CTO" is a label; "a CTO who feared downtime, was pushed to the cloud by her board, and finally hit the migration button at 3 a.m. on a Friday" is a person the reader remembers.</p>
+</div>
+<div class="section">
+<div class="label">Revision Demo</div>
+<div class="example">
+<span class="before">Sarah was a brave and principled leader.</span>
+<span class="after">The board offered to bury the incident. Sarah wrote the post-mortem herself, named her own mistake in paragraph one, and sent it to the whole company.</span>
+</div>
+<div class="example">
+<span class="before">Wei was a dedicated engineer, deeply trusted by his team.</span>
+<span class="after">The night the alert fired, Wei was already driving to the airport to pick up his daughter. He pulled onto the shoulder and opened his laptop — her flight would land in forty minutes.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">When to Use It + Common Mistakes</div>
+<ul>
+<li>✓ Case studies, founding stories, the "you" in a promo packet, the protagonist of a talk's opening</li>
+<li>✓ Anywhere you want a reader to remember a person</li>
+<li>✗ Stacking adjectives instead of showing one action (readers trust action, not labels)</li>
+<li>✗ A protagonist with no desire (no desire = no story), or a frictionless path (not believable)</li>
+<li>✗ Piling on detail unrelated to character — every detail must serve "who he is"</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">Key References</div>
+<p class="refs"><span>Robert McKee</span>, Story · <span>E.M. Forster</span>, Aspects of the Novel (flat vs. round characters) · <span>Cao Xueqin</span>, Dream of the Red Chamber (we hear Wang Xifeng's laugh before we see her)</p>
+</div>
+<div class="exercise">
+<div class="label">This Week's Exercise + A Question</div>
+<p>Write 150 words about yourself — but you may not use a single adjective for your character. You may only write one choice you made in a pressured moment, and let the reader infer who you are from it.</p>
+<span class="q">Question: In your last report, was "the customer" a living person, or a label?</span>
+</div>
+</section>
+<!-- Card 2: Point of View -->
+<section class="card">
+<div class="num">Principle 02</div>
+<h2>Decide Where You Stand Before You Write</h2>
+<div class="en-name">Point of View — Choose Where the Camera Stands First</div>
+<span class="tag">Fiction Craft · POV</span>
+<div class="section">
+<div class="label">The Principle + The Master's Words</div>
+<p>Before telling a story, settle "who sees, and how deep." First person is intimate but limited; third-person limited (over one character's shoulder) is balanced; third-person omniscient (the god's-eye view) is free but easily loses intimacy. <strong>POV and person are the first decision you make and the hardest to change</strong> — they set what the reader can know and whom they feel for.</p>
+<div class="quote">
+      "The whole intricate question of method, in the craft of fiction, I take to be governed by the question of the point of view — the question of the relation in which the narrator stands to the story."
+      <span class="source">— Percy Lubbock, The Craft of Fiction (1921)</span>
+</div>
+</div>
+<div class="section">
+<div class="label">Why It Works</div>
+<p>Henry James championed the "central consciousness": filter the whole story through one character's perception and the reader shares their fate. Let POV drift — into A's head one moment, into B's the next — and the reader loses their footing. This is "head-hopping," the most common tell of an amateur draft. Work writing is no different: the same incident review reads as accountability and solidarity in "we," as cool objectivity in "the system," as empathy and persuasion from "the user's" view. <strong>Choose the wrong person and the whole tone is wrong.</strong></p>
+<div class="pov-cap">Trade-offs of the three common viewpoints</div>
+<div class="pov-grid">
+<div class="pov-col">
+<span class="p-name">First person "I"</span>
+<span class="p-trait">Intimacy ★★★</span>
+<span class="p-trait">High credibility (owns it)</span>
+<span class="p-trait">Limited: knows only what I know</span>
+</div>
+<div class="pov-col mid">
+<span class="p-name">Third · limited</span>
+<span class="p-trait">Intimacy ★★</span>
+<span class="p-trait">Balanced · most used</span>
+<span class="p-trait">Watches over one shoulder</span>
+</div>
+<div class="pov-col">
+<span class="p-name">Third · omniscient</span>
+<span class="p-trait">Intimacy ★</span>
+<span class="p-trait">Free: knows everything</span>
+<span class="p-trait">Risk: reader unsure whom to care about</span>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="label">Revision Demo</div>
+<div class="example">
+<span class="before">Lena walked into the meeting room, nervous. Her boss thought the proposal would never pass. (One sentence dives into two heads)</span>
+<span class="after">Lena walked into the meeting room. Her boss didn't look up; he tapped the table twice — she knew that gesture, it usually meant "convince me." (Inferred only from what Lena sees; no drift)</span>
+</div>
+<div class="example">
+<span class="before">The system experienced an outage affecting some users. (No subject, dodges accountability)</span>
+<span class="after">We took the service down for 47 minutes. Here's what we missed, and what we've changed. (First person, shoulders the responsibility)</span>
+</div>
+</div>
+<div class="section">
+<div class="label">When to Use It + Common Mistakes</div>
+<ul>
+<li>✓ Case stories, post-mortems, brand narrative — anywhere you pick a voice among "I / we / no one"</li>
+<li>✗ Head-hopping: jumping between characters' viewpoints within one passage</li>
+<li>✗ First person turned into a to-do list ("I woke, I ate, I worked")</li>
+<li>✗ Hiding in impersonal passives when you should own it ("an interruption occurred")</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">Key References</div>
+<p class="refs"><span>Percy Lubbock</span>, The Craft of Fiction · <span>Henry James</span>, "central consciousness" (Prefaces) · <span>Ursula K. Le Guin</span>, Steering the Craft (chapter on POV and person)</p>
+</div>
+<div class="exercise">
+<div class="label">This Week's Exercise + A Question</div>
+<p>Take the opening of your last post-mortem and write it three ways — from "we," from "the system," and from "the user" — one sentence each. Read aloud the three different weights of responsibility and tone.</p>
+<span class="q">Question: When you avoid first person, are you reaching for objectivity, or dodging accountability?</span>
+</div>
+</section>
+<!-- Card 3: Scene vs Summary -->
+<section class="card">
+<div class="num">Principle 03</div>
+<h2>Slow Where It Matters, Speed Past the Rest</h2>
+<div class="en-name">Scene vs Summary — Slow Down for the Peak, Fast-Forward the Rest</div>
+<span class="tag">Fiction Craft · Pacing</span>
+<div class="section">
+<div class="label">The Principle + The Master's Words</div>
+<p>Fiction has two gears. <strong>Scene</strong>: slow down, play it out second by second — dialogue, action, a sense of now — for the moments that matter. <strong>Summary</strong>: speed up, cross three years in a sentence — for transitions and setup. The beginner's flaw is one constant speed: everything written with equal effort, so the peak drowns in the flow. The craft is in <strong>changing gears</strong>.</p>
+<div class="quote">
+      "Dramatise, dramatise!"
+      <span class="source">— Henry James, recurring across his notebooks and prefaces</span>
+</div>
+</div>
+<div class="section">
+<div class="label">Why It Works</div>
+<p>The ratio of story-time to page-length is pacing. Play a three-minute negotiation across two pages and the reader feels time stretch and tension focus; skip it with "after a hard negotiation, we signed" and they slide right past — and if that negotiation was your climax, you wasted it. Reverse the mistake and render a childhood in exhaustive scene, and the reader just grows impatient. The test: <strong>is this a turning point / climax / emotional peak? Yes → slow into scene; no → summarize past it.</strong> The same rule governs talks and pitches.</p>
+<div class="pacing">
+<div class="p-bar">
+<div class="seg sum">Summary<br/>5 yrs</div>
+<div class="seg scene">Scene · the crucial three minutes (played out)</div>
+</div>
+<div class="p-axis"><span>← long story-time / short text</span><span>short story-time / long text →</span></div>
+<div class="caption">Pacing = story-time ÷ text: magnify the peak, compress the rest</div>
+</div>
+</div>
+<div class="section">
+<div class="label">Revision Demo</div>
+<div class="example">
+<span class="before">That renewal was hard to close, but in the end we signed a three-year contract. (Summarized the climax away)</span>
+<span class="after">Three hours in, their CTO closed his laptop: "I need a promise it won't go down." I didn't promise. I opened our uptime dashboard for the last 90 days and turned the screen toward him. The room went quiet for ten seconds. He said, "We sign Monday."</span>
+</div>
+<div class="example">
+<span class="neutral"><b style="color:#8a8a8a">Summarize when you should (right):</b> Over the next five years I moved from IC to manager to director.</span>
+<span class="neutral" style="margin-top:6px"><b style="color:#8a8a8a">Scene it when you should (right):</b> The day my mentor quit, she left one line on my desk: "Now you decide what this team is." I read it four times before I saw it was a promotion.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">When to Use It + Common Mistakes</div>
+<ul>
+<li>✓ Talk openings, customer stories, the key decision moment in a post-mortem, founding narratives</li>
+<li>✗ Constant speed — peak and trivia given equal ink, so the climax is diluted</li>
+<li>✗ "Reporting" the climax away (using summary where you should have played the scene)</li>
+<li>✗ Over-scening the transitions — piling detail on the irrelevant until the reader quits</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">Key References</div>
+<p class="refs"><span>Henry James</span>, "Dramatise" · <span>John Gardner</span>, The Art of Fiction ("the vivid and continuous dream") · <span>Janet Burroway</span>, Writing Fiction (the scene / summary chapter)</p>
+</div>
+<div class="exercise">
+<div class="label">This Week's Exercise + A Question</div>
+<p>Take a stretch of your career: summarize five years in one sentence, then render the single most important three minutes as a full scene — with dialogue, action, and a sense of now.</p>
+<span class="q">Question: In your last talk, the moment that most deserved to slow down — did you play it, or wave it past in a sentence?</span>
+</div>
+</section>
+<!-- Card 4: Show, Don't Tell -->
+<section class="card">
+<div class="num">Principle 04</div>
+<h2>"Show, Don't Tell" Is a Dial, Not a Law</h2>
+<div class="en-name">Show, Don't Tell — A Dial to Turn, Not a Law to Obey</div>
+<span class="tag">Fiction Craft · Measure</span>
+<div class="section">
+<div class="label">The Principle + The Master's Words</div>
+<p>"Show, don't tell" is the most famous — and most misused — rule in writing. The truth: it's a <strong>dial, not a law</strong>. Showing (letting detail and evidence lead the reader to their own conclusion) is powerful but slow; telling (stating the verdict outright) is efficient but flat. Masters use both — <strong>show at the important places, tell at the transitions</strong>. All showing bloats; all telling hollows out.</p>
+<div class="quote">
+      "Don't tell me the moon is shining; show me the glint of light on broken glass."
+      <span class="source">— The popular condensation of Chekhov's 1886 letter to his brother</span>
+</div>
+<p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">The letter's actual counsel: seize on small details and group them so the reader can shut their eyes and see the scene — "you'll have a moonlit night if you write that on the mill dam a piece of broken bottle-glass glittered like a bright little star." Later readers pressed it into the famous line above.</p>
+</div>
+<div class="section">
+<div class="label">Why It Works</div>
+<p>Showing is powerful because it makes the reader <em>participate</em> — you supply the evidence, they draw the conclusion, and that conclusion becomes theirs rather than something you imposed. It's why "exhibit A, entered into evidence" persuades a jury more than "my client is a good person." But showing has a cost: it's slow and eats space. <strong>Whatever core judgment you want the reader to believe and remember, show it; for transitions, background, and minor facts, just tell — don't waste the ink.</strong> Le Guin warns: nothing-but-show becomes bloated prose where every gesture is filmed in slow motion.</p>
+<div class="spectrum">
+<div class="track">
+<div class="sweet">↓ Measure: show the core, tell the transitions</div>
+<div class="dot"></div>
+</div>
+<div class="ends">
+<div class="end tell"><b>Tell</b>efficient · but flat<br/>"ops is reliable"</div>
+<div class="end show"><b>Show</b>powerful · but slow<br/>"26 minutes of downtime all year"</div>
+</div>
+<div class="caption">Not "further right is better" — measure by the weight of the information</div>
+</div>
+</div>
+<div class="section">
+<div class="label">Revision Demo</div>
+<div class="example">
+<span class="before">Our ops team is highly professional and reliable. (A core claim — but merely told)</span>
+<span class="after">Over the past year, our total downtime was 26 minutes — shorter than one episode of a cartoon. (The core judgment, shown)</span>
+</div>
+<div class="example">
+<span class="before">He reached for the mug, its side still warm, took a sip, the coffee had gone cold, he frowned, set it back, sighed... (Hard-showing a transition — a drag)</span>
+<span class="after">He drank the cold coffee and kept editing the doc. (A minor action — just tell it)</span>
+</div>
+<div class="example">
+<span class="before">The product is very easy to use.</span>
+<span class="after">My mother set it up in four minutes, without calling me.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">When to Use It + Common Mistakes</div>
+<ul>
+<li>✓ Show for: core selling points, the judgment you most want remembered, emotional peaks, persuasive claims</li>
+<li>✓ Tell for: transitions, background, minor facts, premises the reader already accepts</li>
+<li>✗ Passing a slogan off as showing ("we're customer-obsessed" — that's a tell dressed as a value)</li>
+<li>✗ Telling a core claim away in one line; showing every irrelevant detail into bloat</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">Key References</div>
+<p class="refs"><span>Anton Chekhov</span>, 1886 letter · <span>Ursula K. Le Guin</span>, Steering the Craft · <span>John Gardner</span>, The Art of Fiction · <span>Stephen King</span>, On Writing ("Description begins in the writer's imagination, but should finish in the reader's.")</p>
+</div>
+<div class="exercise">
+<div class="label">This Week's Exercise + A Question</div>
+<p>Pick three "telling" self-assessments from your résumé or promo packet (e.g. "strong leadership"). Rewrite the most important one as "showing" — with one concrete action or number. For the other two, judge whether they're worth showing, or fine left told.</p>
+<span class="q">Question: Is "show, don't tell" a law or a dial? Give one example where you simply should tell.</span>
+</div>
+</section>
+<!-- Deeper reflection -->
+<section class="deep">
+<h2>Deeper Reflection</h2>
+<details>
+<summary>First person is the most intimate — so why do serious journalism and academic papers almost never use "I"?</summary>
+<div class="d-body">Intimacy cuts both ways. First person pushes the narrator to the front; as readers empathize, they also instinctively think, "well, that's just your view." Journalism and scholarship chase exactly the sense that "the conclusion stands independent of the teller," so they retreat to the impersonal and let the evidence speak. Memoir, founding stories, and apologies want the opposite — the weight of "I was there, I own it." Choosing person is a trade between credibility-as-objectivity and credibility-as-sincerity: decide which kind of trust you need this time.</div>
+</details>
+<details>
+<summary>"Show, don't tell" is near-scripture in English, yet the Records of the Grand Historian openly renders moral verdicts ("the Grand Historian says..."). Is that a flaw of Chinese, or another aesthetic?</summary>
+<div class="d-body">Another aesthetic, not a flaw. In the classical Chinese narrative tradition, the narrator's judgment — the historian's appraisal, the storyteller's "now listen, dear reader" — is itself an expected voice; readers want not only scenes but the verdict of a person of discernment. Western modern fiction, from Flaubert on, chased the vanishing author and demoted telling. They're different contracts: one trusts the narrator's wisdom, the other the reader's own discovery. Today's writer can take both — earn trust with scene, then close with one restrained verdict.</div>
+</details>
+<details>
+<summary>Moving from page to stage, how should the scene-versus-summary balance shift?</summary>
+<div class="d-body">Spoken telling adds three "showing" tools the page lacks: image, tone, and the pause — a single pause can do the work of a paragraph of description, so on stage fewer words play a stronger scene. But listeners can't re-read; too much summary and they can't retain it. Rule of thumb: on stage, cut scenes down to one or two but play them to the hilt (slow, concrete, with pauses), and nail the summary with a single memorable line rather than the continuous stream of information a written draft carries. The page works by density of words; the stage, by the carving of time.</div>
+</details>
+<details>
+<summary>Writing a real customer as a "character" — where's the ethical line?</summary>
+<div class="d-body">There's a line between craft and manipulation: <strong>cutting for clarity</strong> is craft; <strong>inventing for tension</strong> is crossing it. Focusing on the most decisive real choice in a customer's experience and dropping irrelevant branches is legitimate narrative editing. But once you "design" a desire they never had, inflate a conflict that never happened, or stitch several cases into one fake "him" without saying so, you've slid from telling the truth to making up a story. The safe line: every dramatic tension must trace to something that actually happened — you only choose which part to magnify.</div>
+</details>
+<details>
+<summary>AI can instantly generate rich "showing" detail. When detail is cheap, where does the human writer's scarcity lie?</summary>
+<div class="d-body">What was ever scarce isn't the output of detail but <strong>judgment</strong>: among ten million showable details, selecting the one that strikes this reader in this moment — and rarer still, knowing when to stop showing and simply tell. AI is superb at swelling a sentence into a page of imagery, but the sense of "expand here, cut there" comes from understanding a real reader and a real situation. In the AI era the writer's moat upgrades from "can you write detail" to "do you know what to leave out" — and each of this issue's four principles has, at its core, a matter of leaving out, not producing.</div>
+</details>
+</section>
+<div class="nav">
+<a href="index.en.html">← Back to Writing Index</a>
+</div>
+<footer>BigCat · Writing · Day 62 · 2026</footer>
+</div>
+</body>
+</html>

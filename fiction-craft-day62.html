@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>写作与表达：小说的技艺 — Day 62</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,"Noto Serif SC","Songti SC",serif;background:#fafafa;color:#1f1f1f;line-height:1.85}
+.container{max-width:760px;margin:0 auto;padding:32px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:2px solid #1f1f1f;margin-bottom:48px}
+header .week-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px;font-family:Georgia,serif}
+header h1{font-size:2.3rem;font-weight:800;letter-spacing:0.5px;line-height:1.3;color:#1f1f1f}
+header h1 .topic{display:block;font-size:1.3rem;font-weight:600;color:#5a5a5a;margin-top:8px;font-style:italic}
+header .date{margin-top:18px;font-size:0.9rem;color:#8a8a8a;font-family:Georgia,serif}
+header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+.card{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:36px 32px;margin-bottom:36px;border-top:3px solid #1f1f1f}
+.card .num{font-family:Georgia,serif;font-size:0.78rem;letter-spacing:3px;color:#8a8a8a;text-transform:uppercase;margin-bottom:10px}
+.card h2{font-size:1.55rem;font-weight:700;color:#1f1f1f;margin-bottom:6px;line-height:1.35}
+.card .en-name{font-size:1rem;color:#6a6a6a;font-style:italic;margin-bottom:14px;font-family:Georgia,serif}
+.card .tag{display:inline-block;background:#1f1f1f;color:#fafafa;padding:3px 10px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;font-family:Georgia,serif;border-radius:2px}
+.section{margin-top:24px}
+.section .label{font-size:0.82rem;font-weight:700;letter-spacing:1.5px;color:#1f1f1f;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif;border-bottom:1px solid #d0d0d0;padding-bottom:4px}
+.section p{font-size:1rem;color:#2a2a2a;line-height:1.85}
+.section ul{margin-left:0;list-style:none}
+.section ul li{padding:6px 0 6px 22px;position:relative;font-size:0.98rem;color:#2a2a2a;line-height:1.75}
+.section ul li:before{content:"—";position:absolute;left:0;color:#8a8a8a}
+.quote{background:#f3f0e8;border-left:4px solid #8a7a4a;padding:18px 22px;margin:14px 0;font-style:italic;color:#3a3a3a;font-size:0.98rem;line-height:1.75}
+.quote .source{display:block;margin-top:10px;font-style:normal;font-size:0.85rem;color:#8a7a4a;text-align:right;font-family:Georgia,serif}
+.example{background:#f8f6f1;padding:14px 18px;margin:10px 0;border-radius:2px;font-size:0.96rem;line-height:1.75}
+.example .before{color:#a04040;display:block;margin-bottom:6px}
+.example .before:before{content:"原句 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .after{color:#3a6a3a;display:block}
+.example .after:before{content:"改后 ";font-weight:700;color:#8a8a8a;font-family:Georgia,serif;font-style:normal}
+.example .neutral{color:#3a3a3a;display:block}
+.exercise{background:#1f1f1f;color:#fafafa;padding:22px 24px;margin-top:24px;border-radius:2px}
+.exercise .label{color:#d8c98a;font-size:0.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-family:Georgia,serif}
+.exercise p{color:#fafafa;font-size:0.98rem;line-height:1.8}
+.exercise .q{display:block;margin-top:12px;color:#d8c98a;font-style:italic;font-size:0.94rem}
+.refs{font-size:0.92rem;color:#5a5a5a;margin-top:10px}
+.refs span{color:#1f1f1f;font-weight:600}
+
+/* POV 三档表 */
+.pov-grid{display:flex;gap:8px;margin:18px 0}
+.pov-grid .pov-col{flex:1;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px;padding:14px 12px;text-align:center;font-family:Georgia,serif}
+.pov-grid .pov-col .p-name{display:block;font-weight:700;color:#1f1f1f;font-size:0.92rem;margin-bottom:8px;line-height:1.4}
+.pov-grid .pov-col .p-trait{display:block;font-size:0.8rem;color:#5a5a5a;line-height:1.6;margin:3px 0}
+.pov-grid .pov-col.mid{background:#1f1f1f}
+.pov-grid .pov-col.mid .p-name{color:#d8c98a}
+.pov-grid .pov-col.mid .p-trait{color:#e8e4d8}
+.pov-cap{font-size:0.86rem;color:#5a5a5a;font-style:italic;text-align:center;font-family:Georgia,serif;margin-top:-6px;margin-bottom:6px}
+
+/* 场景 vs 概述 节奏条 */
+.pacing{background:#f8f6f1;padding:20px 16px;margin:18px 0;border-radius:2px}
+.pacing .p-bar{display:flex;height:44px;border-radius:2px;overflow:hidden;font-family:Georgia,serif}
+.pacing .seg{display:flex;align-items:center;justify-content:center;text-align:center;font-size:0.8rem;line-height:1.3;color:#fff;padding:2px}
+.pacing .seg.sum{background:#c8c0a8;color:#4a4436;flex:1}
+.pacing .seg.scene{background:#1f1f1f;color:#d8c98a;flex:5}
+.pacing .p-axis{display:flex;justify-content:space-between;font-size:0.74rem;color:#8a8a8a;font-family:Georgia,serif;margin-top:6px}
+.pacing .caption{font-size:0.86rem;color:#5a5a5a;font-style:italic;text-align:center;font-family:Georgia,serif;margin-top:10px}
+
+/* Show / Tell 光谱 */
+.spectrum{background:#f8f6f1;padding:22px 18px 16px;margin:18px 0;border-radius:2px}
+.spectrum .track{height:10px;border-radius:5px;background:linear-gradient(to right,#b04a3a,#c8b060,#3a6a3a);position:relative;margin:26px 8px 8px}
+.spectrum .track .dot{position:absolute;top:-6px;width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid #1f1f1f;left:50%;transform:translateX(-50%)}
+.spectrum .track .sweet{position:absolute;top:-30px;left:50%;transform:translateX(-50%);font-size:0.76rem;color:#1f1f1f;font-weight:700;font-family:Georgia,serif;white-space:nowrap}
+.spectrum .ends{display:flex;justify-content:space-between;margin-top:4px;font-family:Georgia,serif}
+.spectrum .ends .end{width:44%;font-size:0.82rem;line-height:1.5}
+.spectrum .ends .end.tell{text-align:left;color:#a04040}
+.spectrum .ends .end.show{text-align:right;color:#3a6a3a}
+.spectrum .ends .end b{display:block;font-size:0.9rem}
+.spectrum .caption{font-size:0.86rem;color:#5a5a5a;font-style:italic;text-align:center;font-family:Georgia,serif;margin-top:12px}
+
+details{margin:10px 0;border-bottom:1px solid #e0ddd4;padding-bottom:8px}
+details summary{cursor:pointer;font-weight:600;color:#1f1f1f;font-size:1rem;padding:6px 0;list-style:none}
+details summary:before{content:"▸ ";color:#8a7a4a}
+details[open] summary:before{content:"▾ "}
+details .d-body{font-size:0.94rem;color:#4a4a4a;line-height:1.75;padding:8px 0 4px 18px}
+.deep{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.deep h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+
+.nav{text-align:center;margin-top:48px;padding-top:32px;border-top:1px solid #d0d0d0}
+.nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
+.nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
+footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+@media(max-width:600px){
+  .container{padding:20px 16px 60px}
+  header h1{font-size:1.7rem}
+  header h1 .topic{font-size:1rem}
+  .card{padding:24px 20px}
+  .card h2{font-size:1.3rem}
+  .pov-grid{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<div class="week-label">Day 62 · 2026.07.20</div>
+<h1>写作与表达：小说的技艺<span class="topic">Character · POV · Scene vs Summary · Show, Don't Tell</span></h1>
+<div class="date">BigCat's Writing</div>
+<p class="intro">你可能一辈子不写小说。但你写的每一份客户案例、每一次台上讲述、每一封说服信，都在借用小说家四百年打磨的技艺：让一个人活起来、选一个观看世界的位置、决定何时慢下来演一场戏、何时一笔带过，以及最难的——什么时候该「演」、什么时候干脆直说。本期把这四件工具从小说里借出来，装进 leader 的表达工具箱。</p>
+</header>
+<!-- Card 1: 人物塑造 -->
+<section class="card">
+<div class="num">Principle 01</div>
+<h2>人物是选择，不是形容词</h2>
+<div class="en-name">Character — Revealed by Choice Under Pressure, Not by Adjectives</div>
+<span class="tag">小说技艺 · 人物</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>读者不会因为你说「她很勇敢」就相信她勇敢。性格只在压力下的选择里显形。塑造人物不是贴标签（善良、聪明、坚韧），而是设计一个欲望、一个障碍，再逼他在两难中选——<strong>选择即性格</strong>。</p>
+<div class="quote">
+      "True character is revealed in the choices a human being makes under pressure — the greater the pressure, the deeper the revelation, the truer the choice to the character's essential nature."
+      <span class="source">— Robert McKee, Story (1997)</span>
+</div>
+<p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：真正的性格，在人于压力下所做的选择里显露——压力越大，揭示越深，那选择也越贴近他的本质。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>E.M. Forster 在《小说面面观》里区分「扁平人物」(flat) 与「圆形人物」(round)：扁平人物一句话可概括、永不改变；圆形人物「能以令人信服的方式让你意外」。让人立体的从不是更多形容词，而是<strong>内在矛盾</strong>——她既想升职又厌恶办公室政治，冲突逼她选择，选择暴露她是谁。工作里同理：「一位追求增长的 CTO」是标签；「一位既怕停机、又被董事会逼着上云、最终在周五凌晨按下迁移键的 CTO」，才是读者记得住的人。</p>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">张伟是个非常敬业、责任心极强的工程师，深受团队信赖。</span>
+<span class="after">线上告警那晚，张伟已在去机场接女儿的路上。他把车停进应急车道，翻开笔记本——航班还有四十分钟落地。</span>
+</div>
+<div class="example">
+<span class="before">Sarah was a brave and principled leader.</span>
+<span class="after">The board offered to bury the incident. Sarah wrote the post-mortem herself, named her own mistake in paragraph one, and sent it to the whole company.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 客户案例、创始故事、晋升 packet 里的「你」、演讲开场的主角</li>
+<li>✓ 任何「想让读者记住一个人」的地方</li>
+<li>✗ 用一串形容词代替一个行动（读者信行动，不信标签）</li>
+<li>✗ 主角没有欲望（无欲望＝无故事），或一路顺遂没有障碍（不可信）</li>
+<li>✗ 堆砌与性格无关的细节——细节必须为「他是谁」服务</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">关键参考</div>
+<p class="refs"><span>Robert McKee</span>《Story》 · <span>E.M. Forster</span>《Aspects of the Novel》（扁平 vs 圆形人物） · <span>曹雪芹</span>《红楼梦》（王熙凤未见其人先闻其声）</p>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>写你自己 150 字——但不许用一个形容词描述性格，只许写你在某个压力时刻做出的一个选择，让读者从选择里读出你是谁。</p>
+<span class="q">思考题：你最近一次汇报里的「客户」，是一个活人，还是一个标签？</span>
+</div>
+</section>
+<!-- Card 2: 视角与人称 -->
+<section class="card">
+<div class="num">Principle 02</div>
+<h2>先决定站在哪里看</h2>
+<div class="en-name">Point of View — Choose Where the Camera Stands Before You Write</div>
+<span class="tag">小说技艺 · 视角</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>讲故事前，先定「谁在看、看得多深」。第一人称亲密却受限；第三人称限知（贴着一个人的肩膀）平衡；第三人称全知（上帝视角）自由却易失亲密。<strong>视角与人称是你最先做、最难改的决定</strong>——它决定读者能知道什么、又共情谁。</p>
+<div class="quote">
+      "The whole intricate question of method, in the craft of fiction, I take to be governed by the question of the point of view — the question of the relation in which the narrator stands to the story."
+      <span class="source">— Percy Lubbock, The Craft of Fiction (1921)</span>
+</div>
+<p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：小说技法这个盘根错节的问题，在我看来全由「视角」主宰——即叙述者与故事之间站着何种关系。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>Henry James 主张「中心意识」：把整个故事过滤through一个人物的感知，读者便与他共命运。视角一乱——一会儿钻进 A 的脑子、一会儿跳进 B——读者失去立足点，这叫「视角滑移」(head-hopping)，是业余稿最常见的破绽。工作写作亦然：同一份复盘，用「我们」是担责与团结，用「系统」是客观冷静，用「用户」视角是同理与说服。<strong>选错人称，语气全错。</strong></p>
+<div class="pov-cap">三种常用视角的取舍</div>
+<div class="pov-grid">
+<div class="pov-col">
+<span class="p-name">第一人称「我」</span>
+<span class="p-trait">亲密 ★★★</span>
+<span class="p-trait">可信度高（担责）</span>
+<span class="p-trait">受限：只知我所知</span>
+</div>
+<div class="pov-col mid">
+<span class="p-name">第三人称·限知</span>
+<span class="p-trait">亲密 ★★</span>
+<span class="p-trait">平衡·最常用</span>
+<span class="p-trait">贴一人肩膀而观</span>
+</div>
+<div class="pov-col">
+<span class="p-name">第三人称·全知</span>
+<span class="p-trait">亲密 ★</span>
+<span class="p-trait">自由：无所不知</span>
+<span class="p-trait">险：读者不知该关心谁</span>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">李娜走进会议室，她很紧张。老板心想这个方案肯定通不过。（一句话钻进两个人的脑子）</span>
+<span class="after">李娜走进会议室。老板没抬头，手指在桌面敲了两下——她认得这动作，通常意味着「说服我」。（只从李娜所见推测，视角不滑移）</span>
+</div>
+<div class="example">
+<span class="before">The system experienced an outage affecting some users.（无主语，回避担责）</span>
+<span class="after">We took the service down for 47 minutes. Here's what we missed, and what we've changed.（第一人称，把责任扛在肩上）</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 案例故事、复盘、品牌叙事——凡需在「我／我们／无人称」间选语气之处</li>
+<li>✗ head-hopping：一段之内在多人视角间跳，读者晕头</li>
+<li>✗ 第一人称写成流水账（「我起床、我吃饭、我上班」）</li>
+<li>✗ 该担责时躲进无人称被动句（「服务出现了中断」）</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">关键参考</div>
+<p class="refs"><span>Percy Lubbock</span>《The Craft of Fiction》 · <span>Henry James</span>「central consciousness」（Prefaces） · <span>Ursula K. Le Guin</span>《Steering the Craft》（POV 与人称专章）</p>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>把你上一份复盘的开头，分别用「我们」「系统」「用户」三种视角各写一句，读出三种不同的责任重量与语气。</p>
+<span class="q">思考题：你回避第一人称的时候，是在追求客观，还是在躲避担责？</span>
+</div>
+</section>
+<!-- Card 3: 场景 vs 概述 -->
+<section class="card">
+<div class="num">Principle 03</div>
+<h2>该慢的地方慢，该快的地方快</h2>
+<div class="en-name">Scene vs Summary — Slow Down for the Peak, Fast-Forward the Rest</div>
+<span class="tag">小说技艺 · 节奏</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>小说有两种档位。<strong>场景</strong>(scene)：慢下来，一分一秒地演，有对话、有动作、有当下感——用在关键时刻。<strong>概述</strong>(summary)：加速，一句话跨过三年——用在过渡与铺垫。新手通病是「匀速」：什么都用同样力气写，重点便淹没在流水里。技艺在于<strong>变速</strong>。</p>
+<div class="quote">
+      "Dramatise, dramatise!"
+      <span class="source">— Henry James，反复出现于其笔记与序言</span>
+</div>
+<p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">中译：到了要紧处，别转述，把它演成一场戏。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>故事时间与文本篇幅的比例，就是节奏。把一场三分钟的谈判演成两页纸，读者感到时间被拉长、张力聚焦；用一句「经过艰苦谈判，我们签了约」带过，读者一滑而过——若这场谈判正是全文高潮，你就浪费了它。反之，把「童年往事」事无巨细全演成场景，读者只会不耐烦。判断法：<strong>此刻是否是转折／高潮／情感峰值？是→放慢演场景；否→概述带过。</strong>这条同样管着演讲与 pitch。</p>
+<div class="pacing">
+<div class="p-bar">
+<div class="seg sum">概述<br/>五年</div>
+<div class="seg scene">场景 · 那关键的三分钟（演出来）</div>
+</div>
+<div class="p-axis"><span>← 故事时间长 / 篇幅短</span><span>故事时间短 / 篇幅长 →</span></div>
+<div class="caption">节奏＝故事时间 ÷ 篇幅：高潮处放大，其余压缩</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">那次客户续约谈得很辛苦，最后我们成功签下了三年合同。（把高潮概述掉了）</span>
+<span class="after">谈到第三小时，对方 CTO 合上电脑：「我需要一个不宕机的承诺。」我没有承诺。我打开过去 90 天的可用性看板，把屏幕转向他。房间静了十秒。他说：「周一签。」</span>
+</div>
+<div class="example">
+<span class="neutral"><b style="color:#8a8a8a">该概述就概述（对）：</b>Over the next five years I moved from IC to manager to director.</span>
+<span class="neutral" style="margin-top:6px"><b style="color:#8a8a8a">该演就演（对）：</b>The day my mentor quit, she left one line on my desk: "Now you decide what this team is." I read it four times before I saw it was a promotion.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 演讲开场、客户故事、复盘中的关键决策时刻、创始叙事</li>
+<li>✗ 匀速——重点与琐事同等笔墨，高潮被稀释</li>
+<li>✗ 把高潮「转述」掉（该演的地方用了概述）</li>
+<li>✗ 把过渡「演」烂——无关处堆细节，读者拖沓到弃读</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">关键参考</div>
+<p class="refs"><span>Henry James</span>「Dramatise」 · <span>John Gardner</span>《The Art of Fiction》（"the vivid and continuous dream"） · <span>Janet Burroway</span>《Writing Fiction》（scene / summary 一章）</p>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>找你一段职业经历：用一句话概述五年，再用整整一段场景演其中最关键的三分钟——对话、动作、当下感都要有。</p>
+<span class="q">思考题：你上次演讲里最该「慢下来」的那一刻，你是演了，还是一句话带过了？</span>
+</div>
+</section>
+<!-- Card 4: Show Don't Tell 的分寸 -->
+<section class="card">
+<div class="num">Principle 04</div>
+<h2>「展示，别告诉」是分寸，不是铁律</h2>
+<div class="en-name">Show, Don't Tell — A Dial to Turn, Not a Law to Obey</div>
+<span class="tag">小说技艺 · 分寸</span>
+<div class="section">
+<div class="label">一句话原则 + 名家原话</div>
+<p>「展示，别告诉」是最有名也最被误用的写作律。真相是：它是<strong>分寸，不是铁律</strong>。展示（用细节与证据让读者自己得出结论）有力但慢；告诉（直接下判断）高效但扁。高手两者都用——<strong>在重要处展示，在过渡处告诉</strong>。全部展示会臃肿，全部告诉会空洞。</p>
+<div class="quote">
+      "Don't tell me the moon is shining; show me the glint of light on broken glass."
+      <span class="source">— 契诃夫致其兄的信（1886）之通行浓缩版</span>
+</div>
+<p style="font-size:0.92rem;color:#6a6a6a;margin-top:8px">原信本意：写景要抓住小细节并加以组织，让读者闭眼即见画面——「你想写月夜，就写水坝上一片碎瓶玻璃闪着一颗亮星般的光」。后人把它凝成上面这句名言。</p>
+</div>
+<div class="section">
+<div class="label">原理解读</div>
+<p>展示之所以有力，是因为它让读者「参与」——你给证据，结论由他自己得出，这结论便成了他的，而非你强加的。这正是法庭上「呈堂证供」比「我方当事人是好人」更服人的原因。但展示有成本：它慢、占篇幅。<strong>凡你想让读者「相信并记住」的核心判断，展示它；凡过渡、背景、次要信息，直接告诉，别浪费笔墨。</strong>Le Guin 提醒：一味 show，会写成每个动作都拍慢镜头的臃肿散文。</p>
+<div class="spectrum">
+<div class="track">
+<div class="sweet">↓ 分寸：核心处 show，过渡处 tell</div>
+<div class="dot"></div>
+</div>
+<div class="ends">
+<div class="end tell"><b>Tell 告诉</b>高效 · 但扁平<br/>「运维很可靠」</div>
+<div class="end show"><b>Show 展示</b>有力 · 但缓慢<br/>「全年宕机 26 分钟」</div>
+</div>
+<div class="caption">不是越右越好——分寸在于按信息的重要性调节</div>
+</div>
+</div>
+<div class="section">
+<div class="label">修改示范</div>
+<div class="example">
+<span class="before">我们的运维团队非常专业可靠。（核心卖点，却只是告诉）</span>
+<span class="after">过去一年，我们的服务宕机总时长是 26 分钟——短于一集动画片。（把核心判断展示出来）</span>
+</div>
+<div class="example">
+<span class="before">他伸手拿起马克杯，杯壁尚有余温，他喝了一口，咖啡已凉，他皱眉，把杯子放回，叹了口气……（过渡处硬 show，拖沓）</span>
+<span class="after">他喝了口凉掉的咖啡，继续改方案。（次要动作，该告诉就告诉）</span>
+</div>
+<div class="example">
+<span class="before">The product is very easy to use.</span>
+<span class="after">My mother set it up in four minutes, without calling me.</span>
+</div>
+</div>
+<div class="section">
+<div class="label">适用场景 + 常见错误</div>
+<ul>
+<li>✓ 展示用于：核心卖点、你最想被记住的判断、情感峰值、说服性主张</li>
+<li>✓ 告诉用于：过渡、背景、次要事实、读者已认同的前提</li>
+<li>✗ 把口号当展示（「我们客户至上」——这是 tell 伪装成价值观）</li>
+<li>✗ 该 show 的核心主张用一句 tell 带过；无关细节却全 show 到臃肿</li>
+</ul>
+</div>
+<div class="section">
+<div class="label">关键参考</div>
+<p class="refs"><span>Anton Chekhov</span> 1886 年书信 · <span>Ursula K. Le Guin</span>《Steering the Craft》 · <span>John Gardner</span>《The Art of Fiction》 · <span>Stephen King</span>《On Writing》（"Description begins in the writer's imagination, but should finish in the reader's."）</p>
+</div>
+<div class="exercise">
+<div class="label">本周习作 + 思考题</div>
+<p>挑你简历／晋升 packet 里三句「告诉」式自我评价（如「我领导力强」）：把最重要的一句改成「展示」——用一个具体行动或数字；另两句判断它们是否值得展示，或保留告诉即可。</p>
+<span class="q">思考题：Show don't tell 是律条还是分寸？给一个「就该直接告诉」的例子。</span>
+</div>
+</section>
+<!-- 深入思考 -->
+<section class="deep">
+<h2>深入思考</h2>
+<details>
+<summary>第一人称最亲密，为什么严肃新闻与学术论文几乎从不用「我」？</summary>
+<div class="d-body">亲密是双刃剑。第一人称把叙述者推到台前，读者共情的同时也会本能地想「这只是你的视角」。新闻与论文追求「结论独立于叙述者」的客观感，于是退到无人称让证据自己说话；而回忆录、创始故事、道歉信偏偏要那份「我在场、我担责」的重量。选人称，本质是在「可信＝客观」与「可信＝真诚」之间权衡——看你这次要哪种信任。</div>
+</details>
+<details>
+<summary>「展示别告诉」在英文写作里近乎圣律，但《史记》大量用直接的道德评断（「太史公曰」）。这是中文的缺陷，还是另一种美学？</summary>
+<div class="d-body">是另一种美学。中国古典叙事里，叙述者的判断（史评、话本的「看官听说」）本身是被期待的声音——读者要的不只是场景，还有一位有见识者的裁断。西方现代小说自福楼拜起追求「作者隐身」，才把 tell 贬为低级。两者是不同契约：一个信「叙述者的智慧」，一个信「读者的自得」。今天的写作者可两者兼取——用场景赢得信任，再以一句克制的评断收束。</div>
+</details>
+<details>
+<summary>从文字搬到台上，「场景 vs 概述」的配比该怎么变？</summary>
+<div class="d-body">口头讲述多了三样文字没有的展示工具：画面、语气、停顿——一个停顿抵一段环境描写，所以台上用更少的词能演出更强的场景。但听众不能回看，概述太密便记不住。法则：台上把场景减到一两个却演到极致（慢、具体、有停顿），概述用一句金句钉住，而非文字稿那种连续信息流。文字靠词的密度，演讲靠时间的雕刻。</div>
+</details>
+<details>
+<summary>把真实客户写成「人物」，伦理边界在哪里？</summary>
+<div class="d-body">技艺与操纵间有一条线：<strong>为清晰而剪裁</strong>是技艺，<strong>为张力而虚构</strong>是越界。聚焦客户真实经历中最关键的选择、略去无关枝节，是合法的叙事编辑；但一旦「设计」了他并不存在的欲望、夸大从未发生的冲突、或把多个案例拼成一个假的「他」而不说明，就从讲真话滑向了造故事。安全线：所有张力都须源于真实发生过的事，你只选择放大哪一部分。</div>
+</details>
+<details>
+<summary>AI 能瞬间生成「展示」式的丰富细节。当细节变廉价，人类写作者的稀缺性在哪里？</summary>
+<div class="d-body">稀缺的从不是细节的产量，而是<strong>判断力</strong>：在千万个可展示的细节里选中能击中此刻这位读者的那一个；以及更稀有的——知道何时该停止展示、直接告诉。AI 擅长把一句话膨胀成一页画面，但「这里该膨胀、那里该收」的分寸，来自对真实读者与处境的理解。AI 时代写作者的护城河，从「会不会写细节」升级为「懂不懂取舍」——本期四条，核心都是取舍，而非产出。</div>
+</details>
+</section>
+<div class="nav">
+<a href="index.html">← 回到写作目录</a>
+</div>
+<footer>BigCat · Writing · Day 62 · 2026</footer>
+</div>
+</body>
+</html>
