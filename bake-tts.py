@@ -83,6 +83,14 @@ def normalize_for_tts(text: str) -> str:
     # obviously numeric/short-word contexts; leave "A=B" style alone since
     # it's often used as inline labelling in Chinese copy.
     text = _re.sub(r"\s+=\s+", " 等于 ", text)
+    # Strip decorative icons. Azure narrates them by name (🌀 → "龙卷风"),
+    # which derails a heading like "🌀 越界 · 跨学科的联想". Runs AFTER the
+    # ✓/✗/⚠ replacements above, which need those glyphs intact.
+    text = _re.sub(
+        r"[\U0001F300-\U0001FAFF\u2600-\u27BF\u2B00-\u2BFF\uFE0F\u200D]",
+        "", text,
+    )
+    text = _re.sub(r"[ \t]{2,}", " ", text)
     return text
 
 
