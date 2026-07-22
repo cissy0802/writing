@@ -90,7 +90,6 @@ def normalize_for_tts(text: str) -> str:
         r"[\U0001F300-\U0001FAFF\u2600-\u27BF\u2B00-\u2BFF\uFE0F\u200D]",
         "", text,
     )
-    text = _re.sub(r"[ \t]{2,}", " ", text)
     return text
 
 
@@ -478,7 +477,11 @@ def process_page(
                 skipped_lang += 1
                 continue
 
-            digest = hash_text(normalize_for_tts(text))
+            # Hash the RAW text on purpose: normalisation rules keep evolving
+            # (icons, ✓/✗, math symbols) and hashing their output would silently
+            # invalidate — and re-bake — every existing segment on the next push.
+            # Old audio therefore stays as baked; new pages get current rules.
+            digest = hash_text(text)
             # SPLIT mode: each file is single-language, JS reads `data-tts`.
             # FULL mode: file holds both, JS reads `data-tts-{lang}`.
             attr_name = "data-tts" if mode == "split" else f"data-tts-{lang}"
