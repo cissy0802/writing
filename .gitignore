@@ -1,0 +1,4 @@
+# Baked TTS MP3s live in R2 (bucket bigcat-audio, prefix writing/),
+# served by the bigcat-audio Worker. A local bake without R2_* credentials
+# still writes them here — they must never be committed again.
+audio/

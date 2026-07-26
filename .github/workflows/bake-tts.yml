@@ -45,7 +45,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
 
       - name: Install Python deps
-        run: pip install beautifulsoup4 requests
+        run: pip install beautifulsoup4 requests boto3
 
       - name: Run bake-tts.py
         env:
@@ -53,6 +53,13 @@ jobs:
           AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
           AZURE_VOICE_ID: zh-CN-XiaoxiaoMultilingualNeural
           # AZURE_VOICE_ID_EN unset → English segments skipped (Web Speech fallback)
+          # With these three set, MP3s go to R2 instead of audio/ — that's what
+          # keeps this repo (and its Pages site) small. Drop them and the bake
+          # silently falls back to writing files that nothing will commit.
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_PREFIX: writing
         run: |
           if [ -n "${{ inputs.file }}" ]; then
             python3 bake-tts.py "${{ inputs.file }}"
@@ -64,7 +71,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add audio/ *.html
+          # Audio lives in R2 now; only the data-tts hashes written back
+          # into the HTML get committed.
+          git add *.html
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else

@@ -14,6 +14,12 @@ Env vars:
     AZURE_VOICE_ID          optional  Chinese voice (default: zh-CN-XiaoxiaoNeural)
     AZURE_VOICE_ID_EN       optional  English voice; if absent, EN baking skipped
 
+    R2_ACCOUNT_ID           optional  set all three to upload MP3s to R2 instead
+    R2_ACCESS_KEY_ID        optional  of writing audio/ (see make_store below);
+    R2_SECRET_ACCESS_KEY    optional  needs `pip install boto3`
+    R2_BUCKET               optional  default "bigcat-audio"
+    R2_PREFIX               optional  default = this repo's directory name
+
 Usage:
     pip install beautifulsoup4 requests
     python3 bake-tts.py                              # all *-dayNN.html
@@ -45,6 +51,113 @@ AUDIO_DIR = REPO_DIR / "audio"
 # headroom under their ~10-min audio-per-request limit; most model sections fit
 # in one call so ffmpeg concat isn't usually needed.
 MAX_CHARS_PER_CALL = 3000
+
+
+# ---------------------------------------------------------------------------
+# Where baked MP3s go.
+#
+# Historically: audio/<lang>/<hash>.mp3, committed to the repo. That put ~8GB
+# of binaries across the fleet into git and pushed the biggest sites toward the
+# 1GB GitHub Pages limit. Migrated repos upload to R2 instead (bucket key
+# <repo>/<lang>/<hash>.mp3, served by the bigcat-audio Worker) and stop
+# tracking audio/ entirely.
+#
+# R2 mode switches on when the three R2_* env vars are present, so a local run
+# without credentials still bakes to disk and behaves exactly as before.
+# ---------------------------------------------------------------------------
+
+
+class LocalStore:
+    """Baked MP3s as files under audio/<lang>/."""
+
+    label = "local audio/"
+
+    def __init__(self, root: Path):
+        self.root = root
+
+    def has(self, lang: str, digest: str) -> bool:
+        return (self.root / lang / f"{digest}.mp3").exists()
+
+    def put(self, lang: str, digest: str, data: bytes) -> None:
+        p = self.root / lang / f"{digest}.mp3"
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_bytes(data)
+
+
+class R2Store:
+    """Baked MP3s as R2 objects under <prefix>/<lang>/<hash>.mp3.
+
+    The existing keys are listed once up front: the bake is idempotent by
+    "does this object already exist", and one paginated LIST is far cheaper
+    than a HEAD per segment.
+    """
+
+    def __init__(self, account_id: str, access_key: str, secret_key: str,
+                 bucket: str, prefix: str):
+        import boto3  # imported lazily so local runs need no extra dep
+        from botocore.config import Config
+
+        self.bucket = bucket
+        self.prefix = prefix.strip("/")
+        self.label = f"r2://{bucket}/{self.prefix}"
+        self.client = boto3.client(
+            "s3",
+            endpoint_url=f"https://{account_id}.r2.cloudflarestorage.com",
+            aws_access_key_id=access_key,
+            aws_secret_access_key=secret_key,
+            region_name="auto",
+            config=Config(signature_version="s3v4", retries={"max_attempts": 5}),
+        )
+        self.existing = self._list_existing()
+        print(f"  {self.label}: {len(self.existing)} objects already baked")
+
+    def _list_existing(self) -> set:
+        keys = set()
+        token = None
+        while True:
+            kw = {"Bucket": self.bucket, "Prefix": self.prefix + "/"}
+            if token:
+                kw["ContinuationToken"] = token
+            resp = self.client.list_objects_v2(**kw)
+            for o in resp.get("Contents", []):
+                keys.add(o["Key"])
+            if not resp.get("IsTruncated"):
+                return keys
+            token = resp["NextContinuationToken"]
+
+    def _key(self, lang: str, digest: str) -> str:
+        return f"{self.prefix}/{lang}/{digest}.mp3"
+
+    def has(self, lang: str, digest: str) -> bool:
+        return self._key(lang, digest) in self.existing
+
+    def put(self, lang: str, digest: str, data: bytes) -> None:
+        key = self._key(lang, digest)
+        self.client.put_object(
+            Bucket=self.bucket,
+            Key=key,
+            Body=data,
+            ContentType="audio/mpeg",
+            # Content-addressed keys, so the bytes behind one never change.
+            CacheControl="public, max-age=31536000, immutable",
+        )
+        self.existing.add(key)
+
+
+def make_store() -> LocalStore | R2Store:
+    env = {k: os.environ.get(k) for k in
+           ("R2_ACCOUNT_ID", "R2_ACCESS_KEY_ID", "R2_SECRET_ACCESS_KEY")}
+    if not all(env.values()):
+        if any(env.values()):
+            missing = [k for k, v in env.items() if not v]
+            print(f"WARNING: partial R2 config, baking to disk instead. "
+                  f"Missing: {', '.join(missing)}", file=sys.stderr)
+        return LocalStore(AUDIO_DIR)
+    return R2Store(
+        env["R2_ACCOUNT_ID"], env["R2_ACCESS_KEY_ID"], env["R2_SECRET_ACCESS_KEY"],
+        os.environ.get("R2_BUCKET", "bigcat-audio"),
+        os.environ.get("R2_PREFIX", REPO_DIR.name),
+    )
 
 
 def hash_text(text: str) -> str:
@@ -443,6 +556,7 @@ def process_page(
     voice_en: str | None,
     langs: set,
     dry_run: bool,
+    store,
 ) -> None:
     print(f"\n=== {path.name} ===")
     html_src = path.read_text(encoding="utf-8")
@@ -489,9 +603,8 @@ def process_page(
                 anchor[attr_name] = digest
                 changed = True
 
-            mp3_path = AUDIO_DIR / lang / f"{digest}.mp3"
             label = (anchor.get_text() or "(cover)")[:20]
-            if mp3_path.exists():
+            if store.has(lang, digest):
                 skipped_existing += 1
                 continue
             if dry_run:
@@ -499,8 +612,7 @@ def process_page(
                 continue
             try:
                 audio = synth_long(key, region, voice, text)
-                mp3_path.parent.mkdir(parents=True, exist_ok=True)
-                mp3_path.write_bytes(audio)
+                store.put(lang, digest, audio)
                 generated += 1
                 n_chunks = len(chunk_text(text))
                 print(f"  [{lang}] {digest}.mp3 ({len(audio):,} B, {n_chunks} chunks) ← {label}")
@@ -559,9 +671,12 @@ def main():
             and not p.name.endswith("-index.html")
         )
 
+    store = make_store()
+    print(f"Audio store: {store.label}")
+
     for path in files:
         try:
-            process_page(path, key, region, voice_zh, voice_en, langs, args.dry_run)
+            process_page(path, key, region, voice_zh, voice_en, langs, args.dry_run, store)
         except Exception as e:
             print(f"  PAGE FAILED: {e}", file=sys.stderr)
 
