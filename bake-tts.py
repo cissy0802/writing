@@ -589,6 +589,18 @@ def process_page(
             voice = voice_zh if lang == "zh" else voice_en
             if not voice and not dry_run:
                 skipped_lang += 1
+                # No voice for this lang, so nothing gets baked. But an anchor can
+                # still carry a hash no bake ever produced (copied from TEMPLATE,
+                # or written by hand), and the player would fetch a guaranteed-404
+                # URL. Drop it -- only when R2 is the store (authoritative), and
+                # only if the object it names is missing, so audio baked earlier
+                # keeps playing.
+                attr_name = "data-tts" if mode == "split" else f"data-tts-{lang}"
+                old = anchor.get(attr_name)
+                if old and isinstance(store, R2Store) and not store.has(lang, old):
+                    del anchor[attr_name]
+                    changed = True
+                    print(f"  [{lang}] dropped dead {attr_name}={old} (no voice, not in R2)")
                 continue
 
             # Hash the RAW text on purpose: normalisation rules keep evolving
@@ -662,11 +674,11 @@ def main():
     else:
         # Discover by exclusion, not by a name pattern: a positive pattern
         # silently matches zero files when a page adopts a new naming scheme,
-        # and the workflow still goes green.
+        # and the workflow still goes green. *.en.html is included: with an EN
+        # voice it gets baked, without one its dead data-tts get dropped.
         files = sorted(
             p for p in REPO_DIR.iterdir()
             if p.suffix == ".html"
-            and not p.name.endswith(".en.html")
             and not p.name.startswith("index.")
             and not p.name.endswith("-index.html")
         )
