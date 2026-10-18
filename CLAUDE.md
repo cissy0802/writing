@@ -50,3 +50,55 @@ TOPICS.md 是本仓选题的**唯一真相源**。以下三条每次运行都适
 ```
 
 这样 CI 的 inject-comments 不会再对新页面追加自动提交。
+
+## 页面结构增补：越界 + 十条要点（2026-10-17 起）
+
+每期中文页和英文页都加两节，**放在最后一张原则卡 `</section>` 之后、收尾节之前**（收尾节＝「深入思考」`section.deep` / `.deep-title`、「把 X 收成一句话」`section.closing`，以及 `.nav`）。顺序：越界在前，十条要点在后。若本期的「深入思考」被写在最后一张卡里面（`.deep-title`），就把它挪出来放到两节之后，别让两节夹在卡片中间。这条与 routine prompt 里的页面结构清单冲突时以这里为准。
+
+1. **越界 · 跨学科的联想**（2026-10-17 起，必写，3–5 条）：写本期某条写作原则和另一个领域的什么东西是同一个结构，一两句说清像在哪、不像在哪。**每条约 60–90 字**，只有展开的那 1 条可到约 120 字。
+   - 优先挂读者的深度兴趣：认知科学、信息论、神经科学、语言学、佛学、意识、心理学、东西方哲学、生物进化、复杂性科学、分布式系统；旁支领导力、投资、商业。**别挂回写作自己的地盘**：修辞学、文学理论、出版、编辑、其他写作流派都不算越界。
+   - 提到的具体研究、人物、年份必须真实准确，拿不准就换一条。
+   - 「名家原话」「关键参考」里名家自己说的东西进正文；**我们联想到的只进越界**，不写进原则卡。和本期「深入思考」已经展开的跨界话题**不重复**。
+   - 中文 h2 `越界 · 跨学科的联想`，英文页 h2 `Crossovers`。
+2. **十条要点**（2026-10-17 起，必写，**正好 10 条**）：读者直接拿它记笔记。每条一句完整的话，约 20–45 字，**单独抄出去也能看懂**：写出原则名和概念名，不用「它」「这一招」这类要靠上下文的代词。人名不必每条都当主语开头：全组里名家的名字出现两三次就够，其余各条直接写原则、机制或做法（写「人物靠压力下的选择立起来，不靠形容词」，不写「契诃夫认为……」）。覆盖四张原则卡最值得记的原则、机制和常见错误，以及越界里的一两条；顺序跟正文走。**只总结正文已经写过的东西**，不加新信息，不放引语，不放习作题和思考题。中文 h2 `十条要点`，英文页 h2 `Ten takeaways`。
+
+骨架（英文页同结构，只换标题和内容）：
+
+```html
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>认知科学 · 组块</b>：……</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>……</li>
+</ol>
+</section>
+```
+
+`.crossx` 里面不要再套 `<div>`（闸门按第一个 `</div>` 截取条目）。
+
+CSS（旧页的 `<style>` 里没有这段，写新页时**追加到 `<style>` 末尾、`@media` 之前**；配色沿用本仓的墨黑 + 暗金）：
+
+```css
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
+```
+
+`@media(max-width:600px)` 里再加一行 `.xbox{padding:24px 20px}`，和 `.card` 一致。
+
+篇幅：越界约 400 字、十条要点约 350 字，`.maxchars` 已为这两节从 3500 上调到 4250（2026-10-17）；原则卡和深入思考的篇幅不跟着涨。
+
+`publish.sh` 对**从未提交过的新页**（中英两页都查）卡两道闸：十条要点正好 10 个 `<li>`；越界框存在且 3–5 个 `<li>`。旧页不查。
