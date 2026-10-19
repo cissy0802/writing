@@ -64,11 +64,23 @@ details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .formula .eq{font-size:0.95rem}
 }
@@ -291,6 +303,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>拿一段你写过、自觉「文笔不错」的文字，逐句问：这句是帮读者看清意思，还是在让读者欣赏我？把所有「污渍」擦掉，看意思是否更亮。<strong>思考题</strong>：奥威尔要「玻璃」，鲁迅要「为效果破例」。这两种主张矛盾吗？你会在什么场合各用哪一种？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>心理学 · 班杜拉的道德脱离</b>：班杜拉把「委婉标签」列为人作恶而不内疚的机制之一，和第三张卡「用『优化』久了，感觉不到在解雇活人」同构：词先给良心打了麻药。不同在于奥威尔主要怕公共语言骗听众，班杜拉研究的是语言先骗过说话人自己。</li>
+<li><b>认知科学 · 双重编码</b>：佩维奥 1971 年提出，具体词有语言和心象两套编码，比抽象词好记。翻译实验里「快跑、战斗」记得住，objective considerations 读完就空。不像的是：佩维奥只讲记忆，奥威尔多加了一层道德判断。</li>
+<li><b>信息论 · 可预测即无信息</b>：香农的信息量取决于意外程度，越好猜的词信息越少。「攻坚克难」这类预制板读者闭眼都能补全，几乎不传信息。但通信要靠冗余纠错，正如第六条承认删到生硬就过头。</li>
+<li><b>语言学 · 语言相对论</b>：「语言也能败坏思想」近于萨丕尔—沃尔夫假说的弱版本，证据有但效应小：俄语分浅蓝深蓝两个词，母语者辨这两种蓝只快一点。奥威尔说的更像习惯：用惯的词组替人省掉了思考。</li>
+<li><b>佛学 · 正语</b>：八正道的正语既戒妄语，也戒绮语，即无实义的漂亮话，分别对应第三张卡的诚实和第四张卡玻璃上的污渍。区别在目的：佛家修正语为安自己的心，奥威尔为公共讨论不被雾遮住。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>奥威尔的六条规则几乎全是「不要」，是每写一句都能逐条执行的减法。</li>
+<li>现成短语像预制板，写的人不必思考，意思就在堆砌中蒸发。</li>
+<li>六条规则把「写得好」从天赋问题，变成一个谁都能练的检查动作。</li>
+<li>第六条规定宁可破例也不写生硬的句子：规则是仆人，不是主人。</li>
+<li>奥威尔把好英语反译成「最糟的现代英语」，让人亲眼看见抽象名词怎样抽干画面。</li>
+<li>抽象不是高级而是逃避，具体的名词和动词是诚实思考的副产品。</li>
+<li>清晰语言最大的敌人是不真诚，委婉语让不可接受的事听起来可以接受。</li>
+<li>含糊的思想和含糊的语言互相喂养，写清楚能打断这个双向回路。</li>
+<li>好散文像窗玻璃：读者透过它看见意思，而透明本身是最难的工艺。</li>
+<li>委婉标签会先麻醉说话人自己的良心，与班杜拉的「道德脱离」同构。</li>
+</ol>
 </section>
 <div class="deep-title">— 深入思考 —</div>
 <details>

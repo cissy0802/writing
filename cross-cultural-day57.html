@@ -70,7 +70,19 @@ details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -287,6 +299,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>挑一段你写给全球读者的文字，逐处标出所有"默认"——节日、单位、比喻、梗、颜色、日期格式，把依赖本地背景的那些改成中性表达。<strong>思考题</strong>：完全剔除文化特定的比喻和梗后，表达会不会失去具体与生动？"跨文化的通用"与"扎根本土的鲜活",如何取舍？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>信息论 · 香农的共享码本</b>：消息能压缩，靠收发双方共享一本码本，码本越厚，要传的就越少。高语境就是重度压缩的消息，读者码本不同，解出来就是乱码。不像在于：香农 1948 年明说语义与工程问题无关，Hall 的语境却全在意义和关系里。</li>
+<li><b>心理学 · 知识的诅咒（敲节奏实验）</b>：1990 年斯坦福研究生 Elizabeth Newton 让人用手指敲出名曲的节奏，敲的人估计听者能猜中一半，实际 120 首只猜中 3 首。「我说得很清楚了」是同一个错觉：旋律只在作者脑中响。不像的是，实验双方同属一种文化，差距只来自信息不对称；跨文化写作在这之上又叠了一层语境错配。</li>
+<li><b>语言学 · 格赖斯的会话含义</b>：Grice 认为听者假定对方合作，才能从「也许再看看」里推出言外之意。Elinor Ochs Keenan 1976 年在马达加斯加发现，当地人常有意少给信息，「量的准则」并不普世。像 Meyer 的刻度：推理规则本身随文化而变。</li>
+<li><b>分布式系统 · Postel 的稳健性原则</b>：TCP 规范里有一句「发送时保守，接收时宽容」，发出去只用最标准的格式，收进来尽量容错。国际英语就是对发送端保守。不像在于：协议的对端不会被冒犯，人会，一味保守的直白可能伤到高语境读者。</li>
+<li><b>神经科学 · 感觉适应</b>：持续不变的刺激，感觉神经元会渐渐停止报告，所以你感觉不到身上的衣服。文化默认就是这样一直在场的刺激，于是察觉不到。不像的是，衣服一脱感觉就回来，文化默认往往要一位圈外读者才看得见。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>跨文化沟通常因语境层级错配而失败：Edward Hall 区分把意思放在言外的高语境和放进字面的低语境。</li>
+<li>写给混合读者时往低语境靠，照房间里语境最低的那位读者来写。</li>
+<li>把关键决定写成可执行的字面陈述，不要留在潜台词里指望对方自己悟。</li>
+<li>反馈多直接才合适是文化设定的：Erin Meyer 指出有的文化用加码词批评，有的用减码词软化。</li>
+<li>跨文化反馈要把「问题有多严重」和「怎么说」拆开：语气可以柔，是 blocker 还是 nit 要标死。</li>
+<li>国际英语不是降智，而是删掉习语、俚语和文化梗，让意思不依赖读者没有的背景。</li>
+<li>国际英语的具体做法：短句、常用词、显式主语、一词一义、缩写首次出现写全称。</li>
+<li>最危险的文化禁忌是自己没意识到的默认：节日、颜色、单位、日期格式和本地典故。</li>
+<li>防文化禁忌不靠背清单，而靠「这是不是我的水」的自查反射，再请一位圈外读者先读一遍。</li>
+<li>国际英语和 TCP 的稳健性原则同构：发送端保守，只用最标准、最不易误读的说法。</li>
+</ol>
 </section>
 <div class="deep-title">— 深入思考 —</div>
 <details>

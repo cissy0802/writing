@@ -64,11 +64,23 @@ details{margin:10px 0;border-bottom:1px solid #e0e0e0;padding-bottom:8px}
 summary{cursor:pointer;font-weight:600;color:#1f1f1f;font-size:1rem;padding:6px 0}
 details > div{font-size:0.94rem;color:#4a4a4a;line-height:1.75;padding:8px 0 4px 16px}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .flow .frow{flex-direction:column}
   .flow .farrow{transform:rotate(90deg);justify-content:center}
@@ -309,6 +321,31 @@ Or we <span class="spot">don't ship</span> at all.</div>
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Cognitive psychology · Dual coding (Allan Paivio, 1971)</b>: Paivio found concrete words are remembered better than abstract ones because they are stored in both a verbal and an imagery system, giving two routes back. "Ten cameras, all black" outlasts "low morale" for exactly that extra image code. The difference: Paivio measured memory, while the objective correlative wants the feeling itself to revive in the reader.</li>
+<li><b>Linguistics · End focus</b>: Grammarians note that new information and the main stress naturally fall at the end of a clause, so writers reorder sentences to move the key word there. A line break manufactures extra "ends," which is why the last word on a line lights up. Unlike grammar, whose focus follows syntax, a poem can break mid-phrase on purpose and create an unexpected stress.</li>
+<li><b>Cognitive psychology · The generation effect (Slamecka &amp; Graf, 1978)</b>: In their experiments, words people produced themselves from a cue (say, a word plus the first letter of its synonym) were remembered better than words simply read. That is the same mechanism behind white space, where people only trust conclusions they reach themselves: the reader takes the last step, so the conclusion becomes theirs. The limit: the effect proves retention, not belief, and a wrong completion is retained just as well, so the gap you leave must be precise and single.</li>
+<li><b>Buddhism · The finger pointing at the moon (Surangama Sutra)</b>: Teachings are a finger; you point so others see the moon, and once they see it the finger can be forgotten. An objective correlative is also a finger: the object is not the point, the feeling it indicates is. The difference is that Zen asks you to drop the finger in the end, while a poem must carve its finger until nothing could replace it, because the finger is all the reader can hold.</li>
+<li><b>Distributed systems · The hourglass waist of protocols</b>: The internet squeezes its middle layer down to a single narrow point, IP, and applications above and link technologies below flourish because of it. A narrow constraint buys freedom at both ends, the same structure as a five-character regulated poem or a one-sentence slide. The difference: a protocol's constraint serves interoperability and should stay stable; a poem's constraint exists to force depth, and left too long it hardens into formula.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Don't shout an emotion; find a set of concrete objects that equals it, which Eliot called the "objective correlative."</li>
+<li>Abstract words tell and images show: one precise concrete picture beats ten adjectives.</li>
+<li>An image must aim at the emotion you want to evoke; concreteness for its own sake only distracts the reader.</li>
+<li>The line break is a free emphasis tool: the word left at a line's start or end gets lit, and the half-beat pause becomes stress.</li>
+<li>A long sentence crammed with three parallel items leaves readers breathless; recast it as lines of mixed length, though all-short lines turn monotonous too.</li>
+<li>White space lets readers take the last step themselves, because people only trust the conclusions they reach on their own.</li>
+<li>White space is precise omission, not vagueness: metrics, owners and dates must be clear, and incident reviews and safety alerts need plain words.</li>
+<li>The generation effect in cognitive psychology shows self-produced information is remembered better than information read, one mechanism behind white space.</li>
+<li>Constraint narrows choice and sharpens focus: set a word limit or a single running image first, then look for freedom inside the frame.</li>
+<li>Once a constraint becomes the goal, twisting meaning for rhyme, parallelism or a template, it decays into a new kind of formula writing.</li>
+</ol>
+</section>
 <section class="card">
   <div class="num">Reflection</div>
   <h2>Go Deeper</h2>

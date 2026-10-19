@@ -82,11 +82,23 @@ details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.25rem}
   .haiku .row{flex-direction:column}
   .haiku .cut{transform:rotate(90deg)}
@@ -324,6 +336,32 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <p class="q">思考题：悬念能拉住注意力，但忙碌的 leader 常常只想要「结论先行」（BLUF）。什么时候该用钩子吊着，什么时候该开门见山？</p>
 </div>
 </section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>佛学 · 以指指月</b>：《楞严经》说文字是指月的手指，盯着手指就看不见月亮；俳句也只伸出一根手指，把「幽静」留给读者自己看。不像在于：禅要人连手指一起放下，俳句却离不开那几个精确的意象。</li>
+<li><b>认知科学 · 生成效应（Slamecka &amp; Graf，1978）</b>：自己补出来的词比直接读到的记得牢；留白让读者补完情绪，参与本身就是效果。不像的是，它讲记忆，物哀讲感受；读者补不出来时，两者都落空。</li>
+<li><b>心理学 · 合取谬误（Tversky &amp; Kahneman，1983）</b>：「琳达问题」里，多数人觉得「银行出纳且投身女权运动」比「银行出纳」更可能，细节越多越像真的；魔幻现实正靠具体细节替叙述担保。不像的是，概率上每加一个细节，事情只会更不可能；第二张卡担心「平淡语气也能让谎言可信」，这就是证据。</li>
+<li><b>量子力学 · 玻尔的互补原理（1927）</b>：光既要用波描述，也要用粒子描述，两种图像互斥却缺一不可，像复调里「两点都是真的」。不像在于：互补的两面不会在同一次实验里同时出现，复调却要两个声音同时在场。</li>
+<li><b>心理学 · 蔡格尼克效应（Bluma Zeigarnik，1927）</b>：被打断的任务比做完的更容易被记住；开放回路也靠这种「没完」的张力。不像的是，她测的是被试自己手上的任务，后来的重复实验结果也不一致。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>物哀与俳句的原则：不写「我很难过」这类情绪词，而是摆出具体意象，让读者自己生出情绪。</li>
+<li>俳句靠「切」把两个意象并置、中间留白，情感在读者脑中发生；说得越满，读者越空。</li>
+<li>摆好意象后再补一句「这让我很感慨」，等于亲手拆掉留白；含蓄也不能滑成读者接收不到的晦涩。</li>
+<li>魔幻现实的原则：内容越非凡，越要用平淡语气加具体细节陈述，像马尔克斯外祖母那样面不改色。</li>
+<li>可信度来自叙述者的笃定和细节的精确；「革命性」「无可限量」这类形容词和感叹号只会暴露虚张。</li>
+<li>复调是巴赫金对陀思妥耶夫斯基小说的概括：多个完整、平等、互不融合的声音同时在场。</li>
+<li>把最强的反方写得理直气壮再回应，读者更信敢让对手开口的人；复调是带着对手抵达立场。</li>
+<li>框架叙事用故事套故事给庞杂内容一个容器，山鲁佐德每晚在悬念处收住，用「下回分解」续命。</li>
+<li>开放回路靠未闭合的问题拉读者往下读，但钩子必须兑现；要被快速查询的文档不该硬塞悬念。</li>
+<li>合取谬误说明细节越具体故事越显得可信，所以平淡语气加细节既能担保奇迹，也能担保谎言。</li>
+</ol>
+</section>
+
 <div class="deep-head" data-tts="8d6d90c26643eea3">深入思考</div>
 <details><summary>这四种传统都「反英美主流」吗？它们和清晰、简洁的原则冲突吗？</summary><div>不冲突，是互补。盎格鲁传统（Zinsser、Orwell）解决「别让读者看不懂」，是地基；这四种传统解决「看懂之后，怎么打动、怎么可信、怎么拉住」，是上层。物哀的留白建立在每个字都精确之上——含糊不是留白，是失误；魔幻现实的平淡，恰恰要求细节极度具体。先把话说清楚，再谈这些高阶手艺，顺序反了就是灾难。</div></details>
 <details><summary>留白（日本）和悬念（阿拉伯）看似都靠「不说全」，本质区别是什么？</summary><div>留白是<strong>空间性</strong>的——它把情感的位置空出来，让读者用自己的经验填满，目标是「共鸣」；填的是意义。悬念是<strong>时间性</strong>的——它把答案推迟，制造一个未闭合的回路，目标是「续读」；填的是好奇。一个让你停下来感受，一个推你往前翻页。误用会互相打架：在需要共鸣的安静时刻吊悬念，显得廉价；在需要推进的叙事里强行留白，显得拖沓。</div></details>

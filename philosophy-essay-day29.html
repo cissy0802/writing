@@ -56,7 +56,19 @@ details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -255,6 +267,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>写一段 300 字随笔，必须包含一个只有你亲历、AI 绝对编不出的具体细节。写完让 AI 当反方挑刺，再据此改一版。<strong>思考题</strong>：如果 AI 读遍你全部的文字，它能模仿出「你」吗？「你」的不可替代，到底落在哪？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>佛学 · 正念观照</b>：内观修行要你看着念头怎样生起、怎样转弯，不急着下结论，和随笔「展示一颗脑子在动」是同一种注意力。不像在于：禅修者看见念头就放下，随笔作者却要跟上去，把它想到底再写下来。</li>
+<li><b>道家 · 「味无味」</b>：《老子》第六十三章说「为无为，事无事，味无味」，从淡处尝出味来，正是周作人闲适的底子：把味道收住，不是没有味道。不像的是，老子讲的是处世与治国，随笔要的只是一个从容的语气。</li>
+<li><b>科学哲学 · 波普尔的猜想与反驳</b>：Popper 在《猜想与反驳》（1963）里说知识靠大胆猜想、再设法驳倒它而前进，和 Montaigne 的「Que sais-je?」加自我反驳同一个结构：不确定是起点，不是耻辱。不同在于，科学要拿外部实验去证伪，随笔的反驳只在作者自己心里过一遍。</li>
+<li><b>信息论 · 香农的信息量</b>：Shannon（1948）把信息量定义为「意外程度」，越可预测的消息携带的信息越少。AI 生成的通顺套话正是概率最高、最不意外的那串字；你亲历的细节才带来信息。不像在于：香农的信息量不管意义，一串乱码的意外度最高，随笔要的是有意义的意外。</li>
+<li><b>认知心理学 · 生成效应</b>：Slamecka 与 Graf（1978）发现，自己生成的词比现成读到的词记得更牢。让 AI 整篇代写，失去的正是这份「亲手生成」带来的理解。不同的是，生成效应量的是记忆，随笔要的是把混沌想清楚，后者比记住更难测量。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>essay 源自法文 essai，本义是「尝试」，随笔是为弄明白一件事而写的。</li>
+<li>随笔不陈列结论，而是把犹豫、转弯和自我反驳原样留在纸上。</li>
+<li>随笔可以「散」不能「松」：允许岔开，但每一步都得真在想。</li>
+<li>把随笔写成「中心论点加三条论据」，等于擦掉了最珍贵的思考过程。</li>
+<li>周作人式的闲适是一种节制：不把话说满，把情绪压到纸面以下。</li>
+<li>题材越小，越要靠语气的从容撑住，堆形容词和感叹号只会显得空洞。</li>
+<li>Montaigne 把「我」当题材，借一个具体的人照见普遍的人，而不是自恋。</li>
+<li>承认「我不确定」并边写边自我修正，比冒充全知的绝对结论更可信。</li>
+<li>AI 让通顺文字近乎白送，写作的价值迁到你独有的判断和亲历细节上。</li>
+<li>把 AI 当查证和扮反方的陪练而非代笔，守住亲手把混沌想清楚的过程。</li>
+</ol>
 </section>
 <div class="deep-title">— 深入思考 —</div>
 <details>

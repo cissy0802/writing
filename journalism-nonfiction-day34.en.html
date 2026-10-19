@@ -65,7 +65,19 @@ details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -300,6 +312,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Information theory · Progressive encoding</b>: The inverted pyramid and progressive JPEG share one idea: order the data so it is usable wherever it gets cut, sending what matters most first and letting every later layer only add. They differ in what gets ordered. A progressive image first shows a blurry outline of the whole picture and then sharpens it; the inverted pyramid opens with one complete, sharp conclusion, and what gets cut is minor facts, not resolution.</li>
+<li><b>Distributed systems · Quorum reads</b>: "Two independent sources beat one" works like a quorum read: trust only a value most replicas agree on. In both, independence is the point. Two outlets rewriting the same press release are like two replicas on the same rack: two votes on paper, one failure point. Unlike replicas, sources cannot reconcile themselves; someone has to trace them back by hand.</li>
+<li><b>Buddhism · Dignaga's epistemology</b>: Dignaga accepted only two reliable means of knowing, perception and inference, and folded other people's testimony into inference instead of granting it its own status. The discipline of verification likewise demotes hearsay and sends you back to what was seen and what can be inferred. The difference: journalism still relies on witnesses, as long as they are named and corroborated.</li>
+<li><b>Cognitive psychology · Dual coding</b>: Allan Paivio's dual-coding theory holds that concrete words activate both a verbal and an imagery code, so they are remembered better than abstract ones. "He set the coffee cup down gently" sticks better than "he was angry" partly because you can see it. Unlike a vivid word, though, a scene also makes the reader infer the emotion, adding participation on top of memory.</li>
+<li><b>Psychology · The 2-4-6 task</b>: In 1960 Peter Wason asked people to find the rule behind the sequence 2-4-6. Most tested only sequences that fit their own guess and rarely tried one that could prove it wrong. Deciding first and gathering evidence later is the same trap in investigative work, and the cure is the same: go looking for the document that could show you are wrong.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>The inverted pyramid puts the most important conclusion in the first sentence and orders everything else by declining importance.</li>
+<li>In an inverted-pyramid piece, a reader who stops at any line already has what they needed most.</li>
+<li>Common inverted-pyramid mistakes: opening with background, or cramming five points into the first sentence so none stands out.</li>
+<li>Kovach and Rosenstiel treat the discipline of verification as what separates journalism from propaganda, entertainment and fiction.</li>
+<li>Three rules of verification: named beats anonymous, two independent sources beat one, original documents beat secondhand accounts.</li>
+<li>For every claim you write, ask whether you can produce the evidence; if not, soften the wording or go check.</li>
+<li>Tom Wolfe's New Journalism has four tools: scene-by-scene construction, full dialogue, point of view, and status details.</li>
+<li>Adjectives are the writer judging for the reader; scenes let readers reach the judgment themselves, which makes it more credible and memorable.</li>
+<li>Investigative reporting avoids false balance: laying out both sides half and half just hands the reader the job of judging.</li>
+<li>Two sources count as two votes only if they are truly independent; two outlets rewriting one press release are one source.</li>
+</ol>
+</section>
 <div class="deep-head">Going Deeper</div>
 
 <details><summary>The inverted pyramid and the story arc (Day 4) are opposites — one drops the conclusion first, one builds layer by layer. Which should a technical person default to?</summary><div>Default to the inverted pyramid: 99% of daily work writing (emails, reports, status updates) faces a busy reader who may quit any second, and conclusion-first respects their time. The story arc is worth deploying only when you need not to "inform" but to "persuade / mobilize / move," and you're confident they'll read to the end. The cost of misuse is asymmetric — use the arc where the pyramid was needed and the reader leaves during your build-up; the reverse costs only a little drama.</div></details>

@@ -67,7 +67,19 @@ details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.6rem}
   header h1 .topic{font-size:1rem}
@@ -306,6 +318,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Distributed systems · Git's commit chain</b>: every Git commit records its author and its parent, and content is addressed by hash, so history can be traced back layer by layer. A citation does the same for an idea: it lets the reader follow the chain to the source. The difference: tamper with a hash chain and a machine catches it instantly; a broken or faked citation chain is caught only if a reader goes digging.</li>
+<li><b>Psychology · source monitoring and cryptomnesia</b>: in the source-monitoring framework laid out by Marcia Johnson and colleagues in 1993, memory stores content, while "where it came from" is inferred after the fact. When that inference fails, an idea you read feels like your own: cryptomnesia. That is exactly the mechanism behind "I can't recall whether I read it or thought it." The difference: cryptomnesia is an honest slip, plagiarism a deliberate concealment. The remedy is the same: note the source as you read, and don't count on your brain to keep it.</li>
+<li><b>Business · Sarbanes-Oxley sign-off</b>: Section 302 of the 2002 Sarbanes-Oxley Act requires the CEO and CFO to personally certify the financial reports, which they obviously did not prepare by hand. The signature vouches for judgment and accountability, not for keystrokes, the same line that separates honest ghostwriting. The difference: a false certification carries legal liability; the byline on a ghostwritten letter is policed mostly by conscience.</li>
+<li><b>Psychology · Bartlett's reconstructive memory</b>: in 1932 Frederic Bartlett had subjects repeatedly recall an unfamiliar Native American folk tale, "The War of the Ghosts"; each retelling got shorter, smoother, and closer to their own culture's templates. Dialogue filled in from "the gist" is this kind of reconstruction. The difference: the brain reconstructs without knowing it; a writer who knows has a duty to flag it.</li>
+<li><b>Buddhism · the Abhaya Sutta's test for speech</b>: the Buddha says he never speaks what is untrue or unbeneficial, however pleasing; what is true and beneficial he says even when unwelcome, but he knows the right time to say it. This mirrors the "true" and "necessary" gates for writing about real people, and adds a third: timing. The difference: the sutta concerns speech face to face; once writing is published, it can't be taken back or re-timed.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Plagiarism isn't about whether you used someone else's work, but whether readers can see what is yours and what is borrowed.</li>
+<li>Citing sources doesn't diminish a writer; it shows breadth, honesty, and checkability, and originality lives in how you select, arrange, and argue with them.</li>
+<li>Rewording someone's text, abusing the "common knowledge" exemption, and undisclosed self-plagiarism all deceive readers about sources.</li>
+<li>Ghostwriting is honest on one condition: the named author truly owns the ideas and judgments in it and answers for them.</li>
+<li>A byline conveys accountability and credibility, not keystrokes, which is why executive letters may be ghostwritten and academic papers may not.</li>
+<li>Nonfiction may compress and focus, but it may not present dialogue or events that never happened as if they did.</li>
+<li>Moving from compression and focus toward composite characters and invented dialogue, the closer you get to fiction, the more you owe readers a disclosure.</li>
+<li>Before writing about a real person, pass three gates: is it true, is it necessary, and who holds more power, you or them.</li>
+<li>Janet Malcolm and Anne Lamott frame the tension: you have a right to write your life, and the people in it have lives of their own.</li>
+<li>Bartlett showed that memory reconstructs, so dialogue rebuilt from "the gist" should be flagged as such rather than written as verbatim speech.</li>
+</ol>
+</section>
 <div class="deep-title">— Going Deeper —</div>
 
 <details>

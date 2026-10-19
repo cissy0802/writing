@@ -89,11 +89,23 @@ header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .opening-vis .row{flex-direction:column;gap:4px}
   .opening-vis .row .label-col{text-align:left;width:auto;padding-top:0}
@@ -447,6 +459,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Distributed systems · single-leader replication</b>: A throughline works like the leader in single-leader replication: every write is ordered through one node, so the replicas never disagree. Two throughlines are multi-leader, and the audience is left to merge the conflicts. The difference: a crashed leader can be re-elected; switch lines mid-talk and the audience simply drops off.</li>
+<li><b>Psychology · thin slices</b>: In Ambady and Rosenthal's 1993 study, strangers watched 30 seconds of silent classroom video, and their ratings predicted the end-of-term evaluations students gave the teacher. The resemblance: judgment really does form within half a minute. The difference: those clips had no sound, so raters read posture and expression; a hook competes on content. Together they make up the whole first 30 seconds.</li>
+<li><b>Neuroscience · the information gap</b>: Loewenstein proposed in 1994 that curiosity comes from noticing a gap between what we know and what we want to know. An open loop deliberately digs that gap. The difference: a gap too wide to close breeds giving up, so a hook must feel answerable within the talk.</li>
+<li><b>Information theory · redundancy</b>: Shannon estimated English is about half redundant, and redundancy is what lets a message survive noise. Slide text read aloud is redundancy too, yet it lowers comprehension. The receiver explains it: Shannon's redundancy lives in one channel and corrects errors; a talk's arrives through two channels at once, fighting over the same working memory.</li>
+<li><b>Psychology · procedural justice</b>: Tom Tyler's procedural-justice research finds that whether people accept an outcome depends heavily on whether they felt genuinely heard. The Pivot's acknowledgment runs on the same mechanism. The difference: procedural justice requires that voice actually shape the outcome, while a Pivot only promises to listen, so the Land has to be true or the acknowledgment becomes theater.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Chris Anderson's throughline rule: a talk gets one connecting line, a single sentence of 15 words or fewer, with a verb and some tension.</li>
+<li>The throughline is the knife for cutting material: any story, statistic or joke that will not hang on it gets cut, and a topic noun is not a throughline.</li>
+<li>Audiences decide within the first 30 seconds whether to commit, so those seconds should not go to pleasantries, self-deprecation or an agenda.</li>
+<li>The three reliable opening hooks are a story, a contrast and a question; each opens a loop the brain must keep listening to close.</li>
+<li>Slides are a stage set, not cue cards: one image, one number or one word per slide, with the words left to the speaker.</li>
+<li>The redundancy effect: slide text plus a speaker reading it aloud makes two channels compete for working memory, and comprehension drops.</li>
+<li>Material that must circulate offline needs two versions, a projection deck and a reading document, instead of one slideument doing both jobs.</li>
+<li>Hard Q&amp;A questions get three steps, Pivot, Bridge and Land: acknowledge the question, transition in one line, land on a prepared core message.</li>
+<li>Whether Pivot, Bridge and Land is craft or manipulation depends on whether the Land is true; when you do not know an answer, say so.</li>
+<li>Ambady and Rosenthal's thin-slice research shows 30 silent seconds can produce a stable judgment, which is why the opening carries so much weight.</li>
+</ol>
+</section>
 <!-- Deep Reflection -->
 <div class="deepthink">
   <h3>Deep Reflection</h3>

@@ -69,7 +69,19 @@ details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -311,6 +323,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>找你写过的一句抽象判断（「团队很高效」「项目风险很大」），把它换成一个具象画面或一个比喻——一个读者能「看见」的东西。思考题：图像即刻、文字精确——在一个面向技术读者、要求精确的场合，什么时候你该牺牲一点精确，换一个能被「看见」的画面？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>认知心理学 · 双重编码（Allan Paivio，1971）</b>：Paivio 认为大脑有语言和图像两套表征系统，同一内容两边都编码时记得更牢。像在：图和文本来就走两个通道。不像在：双重编码说同义复述有利于记忆，McCloud 嫌它浪费通道，他求的是理解。</li>
+<li><b>神经科学 · 盲点的填补</b>：视网膜上视神经穿出的地方没有感光细胞，我们却看不见那个洞，大脑用周围的信息把它补齐。这和画格间的闭合同构：缺口由读者的脑子补上。不同在于盲点填补全自动、无意识，漫画的闭合是读者察觉得到的参与，这份参与正是留白的价值。</li>
+<li><b>认知科学 · 特征整合理论（Anne Treisman，1980）</b>：一排灰框里唯一的黑框会自己「跳出来」，不必逐个查找；视觉层级借的就是这种前注意的弹出效应。不像的是，弹出只回答「先看哪」，Treisman 测的是找目标的速度，信息图还得靠阅读路径给出顺序，才算讲了故事。</li>
+<li><b>心理学 · 可识别受害者效应（Small、Loewenstein、Slovic，2007）</b>：实验里，马里女孩 Rokia 的照片和故事募到的捐款，比非洲饥荒的统计数字多得多，一格画面扛起历史也是这个机制。不像在：同一研究里把统计数字附在女孩旁边，捐款反而下降；具象擅长打动人，不擅长传达规模。</li>
+<li><b>佛学 · 以手指月</b>：《楞严经》说，有人用手指月亮给人看，看的人应顺着手指看月，别把手指当成月亮。Cairo 说图是眼睛的工具，也是这层意思：图是指，结论是月。不像在：佛家最后连手指也要放下，一张图表却得留在页面上当证据。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>图与文要各干一半的活：文字给结论，图给证据，同义复述只是浪费一个通道。</li>
+<li>McCloud 把最好的图文配合叫「互依」：图文携手，表达出谁都无法单独表达的意思。</li>
+<li>slide 标题应写成一句结论，而不是图的名字，让图退为佐证。</li>
+<li>画格之间的空隙里，读者靠「闭合」自己补出中间发生的事，所以不必画出一切。</li>
+<li>节奏由切几格、每格多大决定：小格快，大格慢，最重的一刻给最大的一格。</li>
+<li>一页塞下整张架构图就是信息墙；逐步揭示、每格只加一个变化，听众才跟得上。</li>
+<li>信息图要替读者先看一遍：主路径加粗、次要元素灰化、关键步骤编号，给出阅读起点。</li>
+<li>所有指标同等突出等于都不突出；强调即叙事，但截断坐标轴这类强调会变成误导。</li>
+<li>《Maus》《Persepolis》这类图像小说用一个具象画面扛起抽象的痛苦，不解释，让读者自己去痛。</li>
+<li>可识别受害者效应说明，一个具体的人比统计数字更打动人，但具象画面不擅长传达规模。</li>
+</ol>
 </section>
 <div class="deep-head" data-tts="be70657ffd364678">深入思考</div>
 <details><summary>这套「视觉叙事」的手艺，搬到纯文字（没有任何图）的场合还成立吗？</summary><div>成立，而且变成隐喻。漫画的三个核心机制在无图时各有对应：<strong>分镜</strong>＝分段，你在哪断句、哪起新段，就是在切画格；<strong>gutter / 闭合</strong>＝留白，省略掉的过渡让读者自己补，反而更有参与感；<strong>视觉层级</strong>＝加粗、小标题、列表、句子长短，是没有图时的「强调」工具。换句话说，即便一个字的图都不画，你仍在做视觉叙事——只是画布换成了文字的排布。读者的眼睛永远先看「形状」，再读「内容」，这一点不因有没有图而改变。</div></details>

@@ -89,7 +89,19 @@ details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -348,6 +360,30 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Buddhism · the three-part Indian syllogism</b>: Dignāga's logic sets an argument in three members: sound is impermanent (thesis), because it is produced (reason), whatever is produced is impermanent, like a pot (example). That "whatever is produced is impermanent" is exactly Toulmin's warrant, and the form forces you to state it. Where it differs: Dignāga also demands a counter-example from the other side, so the bridge is tested in both directions, which is stricter than Toulmin's one-way span.</li>
+<li><b>Probability · Bayesian updating</b>: "Speak only as much as your evidence allows" is, in probability terms, adjusting confidence by how much each piece of evidence weighs instead of leaping to certainty. The evidence pyramid roughly ranks that weight: an anecdote barely moves the needle, a controlled trial moves it a lot. Where it differs: Bayes also counts the prior; the pyramid looks only at the evidence.</li>
+<li><b>Psychology · System 1 and System 2</b>: Kahneman calls fast, automatic intuition System 1 and slow, effortful reasoning System 2. Fallacies work because they feed System 1 directly, so you nod before you think; spotting a fallacy hands the judgment back to System 2. Where it differs: System 1 isn't always wrong, and a fallacy list covers only the cases where it is.</li>
+<li><b>Distributed systems · Byzantine fault tolerance</b>: In the Byzantine Generals Problem (Lamport and colleagues, 1982), a protocol assumes nodes may misbehave in the worst possible way, and counts as reliable only if it survives that strongest adversary. Steel-manning is the same move: set the other side at full strength and keep only the argument that holds. Where it differs: the protocol's adversary is malicious; a steel-manned opponent is usually arguing in good faith.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>"I think X" is only a stance; a complete argument needs three bones: claim, grounds and warrant.</li>
+<li>The weakest part of a Toulmin argument is usually the warrant, the unspoken bridge from evidence to claim.</li>
+<li>The more critical an assumption, the more it must be stated and tested; "obviously" often covers missing evidence.</li>
+<li>Evidence comes in tiers, from anecdote and expert opinion up to controlled trials and systematic reviews, each tier better at ruling out chance and bias.</li>
+<li>An argument is as strong as its hardest tier of evidence, and as credible as the writer's honesty about how hard that evidence really is.</li>
+<li>A logical fallacy looks like reasoning but fails, because it skips some link between evidence and claim.</li>
+<li>Disagreeing with a view is not the same as finding a fallacy, and shouting "fallacy!" is often a way to dodge a reply.</li>
+<li>Steel-manning means reinforcing the opponent's position until they would endorse it, then refuting that strongest version.</li>
+<li>The top rung of Paul Graham's disagreement ladder is refuting the central point, not attacking the person or the tone.</li>
+<li>Dignāga's three-part syllogism forces the general rule into the open, putting Toulmin's warrant on the table.</li>
+</ol>
+</section>
 <div class="deep-title">— Going Deeper —</div>
 
 <details>

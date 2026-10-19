@@ -84,7 +84,19 @@ header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -437,6 +449,32 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <p>选你最近一份数据汇报或 dashboard 截图。先问："如果只展示三个数字，是哪三个？"把这三个数字按 Setup–Conflict–Resolution 三幕排列，写成不超过 80 字的口述脚本。试着对一个不在你团队的人讲一次——若他能复述这个故事，说明你成功了。</p>
 </div>
 </section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>佛学 · 四圣谛</b>：先说透苦，再说苦可灭，最后指出道，正是 What Is → What Could Be → 召唤启程的骨架。不像在于：佛陀的「可能」是熄灭欲求，New Bliss 却要点燃欲求。</li>
+<li><b>心理学 · 信息缺口理论（Loewenstein，1994）</b>：察觉到「已知」与「想知」之间的落差，人就想去填它。共鸣模型把知识缺口换成了处境缺口；不同在于好奇心填完就散，Duarte 要的是之后的行动。</li>
+<li><b>心理学 · 峰终定律（Kahneman 等，1993）</b>：冷水实验里，人对一段痛苦的记忆主要取决于最强烈的时刻和结尾，时长几乎被忽略。Sparkline 押注结尾的 New Bliss 与此吻合；不像的是，峰终定律暗示中段可被遗忘，Sparkline 却靠中段一次次振荡把听众推上去。</li>
+<li><b>信息论 · Shannon 信息量（1948）</b>：越意外的消息携带的比特越多。Conflict 就是数据里最意外的拐点，指标全摊开等于往信道灌噪声。不像在于：Shannon 的信息不管意义，DataStory 要的正是意义。</li>
+<li><b>分布式系统 · 共识（Paxos / Raft）</b>：节点先对同一个值达成一致，系统才能往下走，正如人人能复述同一句 Big Idea 才算对齐。不像的是，共识算法有多数派就够，叙事若只有多数人记住，其余人会各讲各的版本。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>改变人心的演讲在「现状」（What Is）与「可能」（What Could Be）两极之间反复振荡，用落差制造张力。</li>
+<li>只讲愿景像鸡汤，只讲现状像诊断报告；共鸣模型要求两极同样具体、同样有画面。</li>
+<li>共鸣模型的关键一步，是把听众放进 What Could Be，让他们当主角而不是观众。</li>
+<li>Duarte 把数百场伟大演讲画成 Sparkline：开场立现状，中段振荡，结尾抵达 New Bliss。</li>
+<li>先画演讲的 Sparkline 再写稿，因为演讲是一段时间里的体验，不是一份文档。</li>
+<li>Sparkline 缺了「召唤启程」的转折，听众不知何时该行动；缺了 New Bliss，演讲就没有落点。</li>
+<li>Big Idea 等于独特观点加利害关系，是一句不超过两行的完整句子，而不是一个话题名词。</li>
+<li>一句话写不出 Big Idea，说明还没想清，应该回去想，而不是急着做幻灯片。</li>
+<li>Duarte 的 DataStory 分三幕：Setup 建立基线，Conflict 揭示反差或拐点，Resolution 导向决策。</li>
+<li>把所有指标都列出来等于什么都没讲，数据故事要突出信息量最大的那个意外拐点。</li>
+</ol>
+</section>
+
 <div class="nav">
 <a href="index.html">← 回到写作目录</a>
 </div>

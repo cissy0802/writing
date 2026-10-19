@@ -59,11 +59,23 @@ details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.25rem}
 }
 </style>
@@ -287,6 +299,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Cognitive science · The redundancy effect</b>: Sweller's cognitive load theory (1988) holds that working memory is tiny, so surplus explanation crowds it out and cutting it speeds learning. That is the logic behind trimming the warm-up. The difference: he studied learning, while instructions only need the reader to get it done, with even less patience.</li>
+<li><b>Neuroscience · Predictive coding</b>: Predictive coding treats the brain as a machine that keeps forecasting its next input and corrects its internal model by prediction error. A reader's mental model likewise exists to predict what a click will do. Unlike the brain, though, the reader's model updates only through the "because" the doc supplies.</li>
+<li><b>Distributed systems · Write-ahead logging</b>: Before a database changes data, it writes the operation to a log (WAL) so a crash can be replayed. "Export a backup, then click Delete" is the same ordering: the recoverable record always comes before the irreversible act. The difference is that machines never skip a step and people do, so the precondition must sit before the action, and stand out.</li>
+<li><b>Psychology · The Swiss cheese model</b>: In Human Error (1990), James Reason pictured safety defenses as slices of cheese full of holes; accidents happen when the holes line up. A warning, a safe default and a verification step are three slices, each leaky, solid together. But Reason analyzed whole organizations; a doc governs only the step in the reader's hands.</li>
+<li><b>Business · The premortem</b>: In Harvard Business Review in 2007, Gary Klein proposed the premortem: before starting, assume the project has failed and work out why. Asking "where will the reader most likely go wrong?" is the same move. The difference is that a premortem hunts the team's own blind spots, while a doc must guess a stranger's.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>The smallest unit of instruction is one executable action: numbered steps, one action each, starting with an imperative verb.</li>
+<li>Put conditions, locations and warnings before the action, because readers act the moment they read the action.</li>
+<li>Skipped steps are the classic trap: the author assumes "obviously log in first," and the reader gets stuck at step one.</li>
+<li>Norman showed that users can only reconstruct their mental model from the system image: the interface, names and docs.</li>
+<li>Bare steps produce rote behavior; adding one "because" at key points lets readers infer cases the doc never covers.</li>
+<li>The best error message is an error that cannot happen: put a defense before the step where readers most likely slip.</li>
+<li>Error prevention in a doc has three defenses: a warning with concrete consequences, a safe default, and a verification step.</li>
+<li>Carroll's minimalist instruction is not about writing less but about cutting whatever stands between readers and their first action.</li>
+<li>Minimal does not mean incomplete: cut the warm-up and the obvious, but never cut error-recovery information.</li>
+<li>"Back up, then delete" mirrors write-ahead logging: the recoverable record always comes before the irreversible action.</li>
+</ol>
+</section>
 <div class="deep-head">Going Deeper</div>
 
 <details><summary>Good instruction erases the author's presence; the essay and the speech chase a distinct voice — the opposite. How does one person switch between the two modes?</summary><div>The highest praise for instruction is "transparent" — the reader breezes through the task without noticing the prose. That's the reverse of the "voice" prized in essays and speeches, yet the underlying craft is shared: both demand extreme consideration for the reader. The difference is who you serve — instruction serves task completion, the essay serves resonance of thought. The mark of a mature writer is judging, moment to moment, whether to vanish or to appear — and switching cleanly. Voice isn't for everywhere; it's for when it belongs.</div></details>

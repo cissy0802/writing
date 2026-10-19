@@ -66,7 +66,19 @@ details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -278,6 +290,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <p>选一个你团队悬而未决的争议。别再「听各方说法」，去找三份独立的客观证据（数据、文件、日志），看它们是否指向同一结论。再写一句 nut graf：这事为什么值得现在解决。</p>
 <p class="q">思考题：当证据指向一个会得罪人、或推翻你自己先前判断的结论时，你会怎么写？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>信息论 · 渐进式编码</b>：倒金字塔和渐进式 JPEG 是同一个思路：数据按「截在哪都能用」来排，先传最要紧的，后面每一层只是补充。不像在排序标准：渐进式图片先给整幅的模糊轮廓，再一层层补细节；倒金字塔第一句就给一个完整清晰的结论，砍掉的是次要事实，不是清晰度。</li>
+<li><b>分布式系统 · 法定人数读</b>：「两个独立来源优于一个」很像 quorum 读，只信多数副本一致的值。要害都在独立：两家媒体转的是同一份通稿，就像两个副本挂在同一台机架上，看着是两票，其实是一个故障点。不像的是副本能自动对账，消息源只能人工追出处。</li>
+<li><b>佛学 · 陈那的量论</b>：陈那只承认两种可靠的认识途径：现量（直接感知）和比量（推理），他人言说归入比量，不另立一量。核实的纪律同样把「听说」降级，要求回到亲见和可推的证据。不同在于新闻仍要采信证人，只是要求具名、多源。</li>
+<li><b>认知心理学 · 双重编码</b>：Paivio 的双重编码理论认为，具体词能同时激活语言和意象两套表征，所以比抽象词记得牢。「他把咖啡杯轻轻放下」比「他很愤怒」难忘，部分就因为前者能被看见。不像的是，场景还要读者自己推出情绪，记忆之外多了一层参与。</li>
+<li><b>心理学 · 2-4-6 任务</b>：Wason 1960 年让被试猜数列「2-4-6」背后的规则，多数人只拿符合自己猜想的数列去试，很少试能推翻猜想的。调查报道里「先有立场再找证据」就是这个陷阱，解药也相同：主动去找可能证明你错了的那份证据。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>倒金字塔把最重要的结论放在第一句，其余信息按重要性递减排列。</li>
+<li>按倒金字塔写的文章，读者在任何一行停下，都已拿到他最需要的东西。</li>
+<li>倒金字塔的常见错误是拿背景当开头，或把五个要点塞进第一句，反而没了重点。</li>
+<li>Kovach 和 Rosenstiel 把核实的纪律看作新闻区别于宣传、娱乐和虚构的标志。</li>
+<li>核实的三条规矩：具名优于匿名，两个独立来源优于一个，原始文件优于二手转述。</li>
+<li>每写一个断言都先自问能否拿出证据，拿不出就降级措辞，或者去查。</li>
+<li>Tom Wolfe 的新新闻主义有四件武器：逐场景叙述、完整对话、视角代入、地位细节。</li>
+<li>形容词是作者替读者下判断，场景让读者自己读出判断，因而更可信、更难忘。</li>
+<li>调查报道要避开伪平衡：把各方说法对半摆开，等于把判断的责任甩给读者。</li>
+<li>两个来源只有真正独立才算两票，转同一份通稿的两家媒体其实只是一个来源。</li>
+</ol>
 </section>
 <div class="deep-head" data-tts="4326802ebfc8d5e4">深入思考</div>
 <details><summary>倒金字塔与故事弧（Day 4）截然相反——一个先抖结论，一个层层铺垫。技术人该默认用哪个？</summary><div>默认倒金字塔：日常 99% 的工作写作（邮件、报告、状态更新）面对的是「很忙、随时退出」的读者，结论先行是对他们时间的尊重。故事弧只在两种场合值得动用：你需要的不是「告知」而是「说服 / 动员 / 共情」，且你确信读者会读完。误用的代价不对称——该用倒金字塔时用了故事弧，读者在你铺垫时就走了；反之最多是少了点戏剧性。</div></details>

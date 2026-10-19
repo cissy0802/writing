@@ -78,6 +78,17 @@ details div{font-size:0.94rem;line-height:1.75;color:#3a3a3a}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
@@ -86,6 +97,7 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   .card h2{font-size:1.3rem}
   .sbi{flex-direction:column}
   .vs-grid{grid-template-columns:1fr}
+  .xbox{padding:24px 20px}
 }
 </style>
 </head>
@@ -329,6 +341,32 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <p><strong>习作：</strong>这周抓住一次正要发"在吗？"的冲动，改成一条自足消息：背景、问题、你的倾向、期望回复时间各一句。看对方是不是一次就给到位，省了来回。<br/><strong>思考：</strong>异步省了打断，却牺牲即时澄清与情绪温度。团队几乎全异步会失去什么"弱连接"？哪些事你会刻意留给同步，哪怕更低效？</p>
 </div>
 </section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>分布式系统 · 报文头部</b>：路由器只读数据包头部就决定转发，不拆载荷；扫主题行的人也只读头部就决定删、存或现在回。不像的是，协议强制头部格式，邮件主题全靠自觉，所以要手贴 [需决定] 标签。</li>
+<li><b>计算机科学 · 随时可中断算法（anytime algorithm）</b>：这类算法任何时刻被打断，都能交出当前最好的答案。BLUF 的倒金字塔也一样，读者在哪段停下，手里都有可用的结论。不像在于：算法的答案越算越好，BLUF 的第一句已是完整答案，后文只补理由。</li>
+<li><b>心理学 · 基本归因错误（Lee Ross，1977）</b>：人解释别人行为时高估性格、低估情境，「你就是粗心」即是；SBI 逼人写出情境和行为，等于手动纠偏。不像的是，归因错误在旁观者脑中，SBI 改的是说出口的话。</li>
+<li><b>佛学 · 正语（《无畏王子经》）</b>：佛陀说会讲真实、有益但对方不爱听的话，并拣时机讲，正是「对事直接、对人在意」。不像的是，正语先戒虚妄和无益之言，彻底坦率更提防怕伤感情而不说。</li>
+<li><b>分布式系统 · 无状态请求（REST）</b>：Roy Fielding 2000 年的论文要求每个请求自带全部所需信息。自足消息就是无状态请求，「在吗？」是先握手再说事。不像的是，机器重发几乎免费，人每被打断一次都要付注意力。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>收件箱是扫描场而不是阅读场，读者对每封邮件只花半秒做分诊。</li>
+<li>主题行是路由标签加优先级标签，用 [需决定]、[FYI 无需回复] 这类标签把动作前置。</li>
+<li>主题行要具体到三个月后能检索到，而且最后写，等正文落定再定。</li>
+<li>BLUF（结论先行）要求正文第一句就给出结论、请求和截止时间，背景和细节放在后面。</li>
+<li>倒金字塔按读者需要的紧迫度排信息，不按事情发生的顺序排。</li>
+<li>Kim Scott 的彻底坦率要求对事直接、对人在意：含糊的好意比直接的坏消息更伤人。</li>
+<li>SBI 模型用情境、行为、影响三段事实代替「你就是粗心」这类标签，事实不引发防御。</li>
+<li>说「不」时要把「不」说出口并给一条出路，夹心三明治式反馈会把核心批评埋掉。</li>
+<li>异步消息要自足：一条写全上下文、问题、你的倾向和期望回复时间，不发「在吗？」。</li>
+<li>默认异步、按需同步；自足消息像无状态请求，不依赖上一轮来回也能被处理。</li>
+</ol>
+</section>
+
 <!-- Resources -->
 <section class="card">
 <div class="num">Deep Dive</div>

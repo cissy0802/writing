@@ -64,11 +64,23 @@ details .answer{padding:0 18px 16px;font-size:0.94rem;color:#3a3a3a;line-height:
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .qa-flow .qa-row{flex-direction:column}
 }
@@ -269,6 +281,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 · 思考题</div>
 <p>回想一次你用委婉词包装坏消息的场合，把它重写成一句直话，再补一句你正在做的应对。<br/>思考：哪些"委婉"是体贴对方，哪些其实是在保护你自己？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>信息论 · 渐进式传输</b>：渐进式 JPEG 先传一张模糊的整图，再逐层补细节，传输在哪一刻中断，手里都有一张能看的图。结论先行是同一个结构：听众在第几秒走神，都已经拿到答案。不像在图像的分层由编码器算好，答问时哪句是「粗图」得靠你自己判断。</li>
+<li><b>心理学 · 罗杰斯的非指导性咨询</b>：Carl Rogers 在 1940 年代提出来访者中心疗法，咨询师不诊断、不引导，只复述和等待，让来访者自己说出问题在哪。开放式提问加沉默是同一种姿态。不像在 Rogers 是为了让对方成长，访谈者终究要带走信息。</li>
+<li><b>佛学 · 无记</b>：《中部》第 72 经里，婆蹉追问如来死后存在与否，佛陀反问：火熄灭了，是往东去还是往西去？问法本身不成立。拆预设同构：不接「是/否」，先指出问题问歪了。不像在佛陀以不答收场，你拆完预设还得给数据、回到真问题。</li>
+<li><b>生物进化 · 互惠利他</b>：Robert Trivers 1971 年指出，反复相遇的个体之间能演化出合作，前提是能认出并记住骗子。「糊弄一次，下次真话也被打折」正是这套记账机制。不像在动物只记行为，人还会回头重估你过去说过的每句话。</li>
+<li><b>分布式系统 · 拜占庭故障</b>：Lamport 等人 1982 年的拜占庭将军问题说明，宕机的节点好处理，发错误数据的节点要多得多的冗余才容得下。「我不知道」是一次干净的超时报错，临时编数字则是拜占庭故障。不像在节点没有意图，人撒谎是自己选的。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>被问到什么，第一句话就给答案：是或否、一个数字、一句结论，然后再补背景。</li>
+<li>问答三段式是答案、桥接、展开；只给结论不给桥接的「因为」，会显得武断。</li>
+<li>口头回答无法回看，把铺垫放在结论前面，会先占满听众的工作记忆。</li>
+<li>好的访谈靠开放式问题加三秒沉默，人会本能地填补沉默，说出最坦诚的部分。</li>
+<li>诱导式和封闭式问题只换回礼貌附和，在用户访谈里会让你验证一个不存在的需求。</li>
+<li>带敌意的难题常藏着错误前提，直接辩护等于默认前提，应先用一个数据校正它。</li>
+<li>拆预设要冷静要轻，借 Chris Voss 的校准式问题先共情后引导，重点是回到真问题。</li>
+<li>不知道就说不知道，再加一个承诺和时限，把知识空缺变成一次靠谱的承诺。</li>
+<li>诚实不等于全盘托出：保密时可以说「这部分还不能公开」，但不能撒谎。</li>
+<li>用委婉词包装坏消息只会让对方更慌，糊弄一次，以后说真话也会被打折扣。</li>
+</ol>
 </section>
 <section class="card">
 <div class="num">Going Deeper</div>

@@ -44,7 +44,19 @@ header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -324,6 +336,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作</div>
 <p>选一个你下周需要发出的决策邮件或提案。用 SCQA 写一个 4 句话的开头：一句情境、一句冲突、一句问题、一句答案。让一位同事只读这 4 句话，问他：你知道我想要什么决策吗？你觉得这件事紧迫吗？如果两个答案都是"是"，开头就成功了。</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>认知心理学 · 先给主题的实验</b>：Bransford 和 Johnson 1972 年让被试读一段讲洗衣服却不点题的文字。读前先知道主题的一组，理解和回忆都明显好过没给主题的组；读完才告知的一组几乎没有起色。结论先行是同一个机制：框架先到，细节才挂得上去。不像的是实验只给了主题，备忘录给的是判断，读者可能一上来就不同意。</li>
+<li><b>分布式系统 · 数据分片</b>：分片要求每个键恰好落在一个分片上（互斥），整个键空间都有归属（穷尽）；重叠会双写冲突，留缝会丢数据，和 MECE 是同一张约束。不像的是分片可以按哈希随手切，写作的分组维度必须对读者有意义，切得均匀却无意义照样没用。</li>
+<li><b>佛学 · 龙树的四句</b>：中观逐一检验「有、无、亦有亦无、非有非无」四种可能，先把逻辑空间穷尽，再一个个否掉，和 MECE 的穷尽是同一个动作。不同在终点：顾问穷尽是为了挑出一条路，龙树穷尽四句，是为了说明问题的提法本身站不住。</li>
+<li><b>哲学 · 波普尔的探照灯</b>：波普尔反对「心灵是水桶」：先装满观察，理论自己归纳出来。他认为观察总被某个假设照亮，像探照灯，这正是自上而下更容易起步的理由。不像的是波普尔要你专找推翻假设的证据，而写作者手握结论时，最容易只找支持它的。</li>
+<li><b>神经科学 · 好奇心的信息缺口</b>：Loewenstein 1994 年提出，人察觉到知识缺口才会好奇；Kang 等人 2009 年的 fMRI 研究发现，好奇时尾状核等奖赏相关区域更活跃，答案也记得更牢。SCQA 的冲突和问题就是在制造这个缺口。区别是缺口得让读者认领，看不出和自己有关，他就不想要答案。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>结论先行：把读者最想知道的「所以呢」放在第一句，论据和细节放在后面。</li>
+<li>结论先行省力，是因为读者先拿到心智地图，后面每个细节都有地方可挂。</li>
+<li>用「经过仔细分析……」或一大段背景开头，等于浪费读者最宝贵的第一句注意力。</li>
+<li>Minto 的 MECE 要求同一层子论点彼此不重叠、合起来完全覆盖问题。</li>
+<li>分组维度不一致、两条理由说同一件事、用「等等」收尾，都是 MECE 没想透的破绽。</li>
+<li>自下而上适合探索阶段做研究，自上而下适合表达阶段写成稿：先归纳，再按结论重排。</li>
+<li>最常见的结构错误，是把研究过程原样交给读者，让读者自己拼出结论。</li>
+<li>Minto 的 SCQA 导言按情境、冲突、问题、答案展开，让读者把作者的问题认作自己的问题。</li>
+<li>SCQA 的情境应是读者熟悉的共识，冲突必须真实；空洞的宏大背景和硬造的紧张感都会失效。</li>
+<li>Bransford 的实验显示，读前先知道主题，理解和回忆明显更好，这正是结论先行起作用的机制。</li>
+</ol>
 </section>
 <div class="nav">
 <a href="index.html">← 返回目录 Writing</a>

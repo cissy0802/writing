@@ -63,11 +63,23 @@ details .think{color:#3a3a3a;font-size:0.94rem;line-height:1.75;padding:4px 0 14
 .closing{background:#fff;border-top:3px solid #8a7a4a;padding:32px;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06)}
 .closing h2{font-size:1.35rem;margin-bottom:6px}
 .closing .en-name{font-size:0.95rem;color:#6a6a6a;font-style:italic;margin-bottom:18px;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.25rem}
 }
 </style>
@@ -290,6 +302,30 @@ details .think{color:#3a3a3a;font-size:0.94rem;line-height:1.75;padding:4px 0 14
 <div class="label">本周习作 + 思考题</div>
 <p>列出你写过（或想写）的一篇文章，除稿费外可能带来的 3 种"间接回报"（机会 / 信任 / 网络）。<strong>思考题</strong>：你是否因为只算"直接稿费"这一本账，而低估了写作、迟迟不肯动笔？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>复杂性科学 · 优先连接</b>：Barabási 与 Albert 1999 年的无标度网络模型里，新节点偏爱连向连接已多的节点，先富者越富。作品体复利是同一结构：旧文被链接越多，越容易被搜到、再被链接。不像在于，网络里的优势靠先到，作品体的年龄没法抢跑，只能一周周写出来。</li>
+<li><b>心理学 · 可识别受害者效应</b>：Small 等人 2007 年发现，一个具名的马里小女孩募到的捐款多于一串饥荒数字。「为一个人写」是同一机制：具体的人唤起共鸣，总量不能。不像在于，那里被打动的是捐赠者，这里先被校准的是作者。</li>
+<li><b>投资 · 风险投资的幂律</b>：风投回报集中在极少数项目，多数归零，所以靠组合撒网。「持续展示」是同一打法：一堆入口里常常只有一个被撞见。不像在于，风投由投资人挑，写作由读者挑，押上的是时间不是本金。</li>
+<li><b>东方哲学 · 《薄伽梵歌》</b>：《薄伽梵歌》说人只对行动有权，对果实无权。「不看单篇数据，只问是否按时交付」与它同构。不像在于，《薄伽梵歌》要人连果实一并放下，写作的长期主义仍在等十年后那条曲线上翘。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>公开写作有两重复利：技艺随篇数进步，旧文作为资产持续被搜到、带来新读者。</li>
+<li>衡量写作要看十年的曲线，不看单篇数据；用单篇得失决定去留是赌徒心态。</li>
+<li>多数人倒在平台期，长期主义拼的是在无人喝彩的头两年里能否继续按时交付。</li>
+<li>读者是愿意反复回来的关系，不是可计数的流量；读者关系是平台和算法都夺不走的资产。</li>
+<li>Vonnegut 主张只为一个具体的人写：语气、例子和深浅会自动校准，反而打动一群相似的人。</li>
+<li>为所有人写会磨平棱角，四平八稳的文章谁都不反感，也谁都不记得。</li>
+<li>今天发布权不再稀缺，稀缺的是被发现；不必等许可，也别等自己「准备好」。</li>
+<li>Kleon 的 show your work：公开过程、笔记和半成品，增加可被搜索到的表面积。</li>
+<li>写作收入分两层：直接收入是细而慢的塔尖，声誉、机会和议价权这些间接杠杆才是山。</li>
+<li>持续展示和风投的幂律组合同构：多数入口无人问津，回报集中在读者撞见的那一两篇上。</li>
+</ol>
 </section>
 <!-- 收束 -->
 <section class="closing">

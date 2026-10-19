@@ -61,7 +61,19 @@ details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -275,6 +287,30 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>选一个你专业里的概念，写两段解释给一个聪明但完全外行的人（比如你的父母或孩子）：既不许用术语，也不许牺牲准确。写完请对方复述——他讲对了，你就成了。<strong>思考题</strong>：「向上写」要求既准确又易懂，但有些概念的准确性本就依赖术语。当二者真冲突时，你先保哪个？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>信息论 · 冗余</b>：香农 1948 年估算，日常英语约有一半是冗余。删冗词像压缩：去掉可预测的部分，信息密度就上去了。不像在哪：香农的冗余也是纠错码，信道有噪声时正是它让信息不丢；写作里读者分散的注意力就是噪声信道，删到要人脑补，等于把纠错位也压没了。</li>
+<li><b>语言学 · 格赖斯的量准则</b>：格赖斯 1975 年的会话合作原则里，量的准则要求信息恰好够用，不多也不少。「省略多余的词」只管前半句；后半句正是正文警告的坑：把简洁误当简短，说少了，读者一样被带偏。</li>
+<li><b>佛学 · 无我</b>：越抓着「我」，人越不自在；越想炫耀风格，风格越不见。两者都要放下对自我形象的经营。不像在无我是看破自我并无实体，White 的作者却有鲜明的脾性和偏见，放下的只是表演，不是自己。</li>
+<li><b>心理学 · 知识的诅咒</b>：1990 年 Elizabeth Newton 的敲节奏实验里，敲的人以为一半听众能猜出曲名，实际约 2.5%。它和「向下写」方向相反：一个高估读者知道多少，一个低估读者有多聪明；「向上写」两样都要校准。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>有力的写作是简洁的：好句子里没有可删的词，正如好机器里没有多余的零件。</li>
+<li>删词不是为了短，是为了让每个词都做工；冗词和缓冲语往往是思维没想清的痕迹。</li>
+<li>简洁不等于简短，为了短而牺牲清晰，读者反而看不懂。</li>
+<li>删掉冗词还不够，「优化体验」这类抽象说法也要换成具体的名词、动词和数字。</li>
+<li>E.B. White 认为风格是减出来的：把自己放到背景，让内容站到前台，声音自然留下。</li>
+<li>刻意的文采和堆砌的谦辞都是表演，删掉表演，读者才听见一个真人。</li>
+<li>好散文是对一个具体的人说话，用「我」和「你」代替机构腔和公文体。</li>
+<li>亲切不是套近乎，刻意装熟的油腻腔调比公文体更让人难受。</li>
+<li>向上写、不向下写：给外行讲复杂的事要提纯表达而不稀释内容，尊重读者的聪明。</li>
+<li>知识的诅咒高估读者懂多少，居高临下低估读者多聪明，向上写要同时校准这两样。</li>
+</ol>
 </section>
 <div class="deep-title">— 深入思考 —</div>
 <details>

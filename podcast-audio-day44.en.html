@@ -58,7 +58,19 @@ details summary:before{content:"▸ ";color:#8a7a4a}
 details[open] summary:before{content:"▾ "}
 details > div{padding:0 20px 18px;font-size:0.96rem;color:#3a3a3a;line-height:1.8}
 .deep-title{text-align:center;font-size:1.3rem;font-weight:700;margin:48px 0 8px;color:#1f1f1f}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -301,6 +313,32 @@ details > div{padding:0 20px 18px;font-size:0.96rem;color:#3a3a3a;line-height:1.
     <div class="label">This Week's Practice · Reflection</div>
     <p>Pick a point you want to share—don't state it. First write a 60-second "anecdote": one specific person, a chain of actions, one suspense. Then write one line of "reflection" that reveals what it means. Hide the point behind the story. <strong>Reflection:</strong> last time you gave a report or talk, did you open with an "anecdote" or a "table of contents"?</p>
   </div>
+</section>
+
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Information theory · Redundancy and error correction</b>: Shannon showed in 1948 that over a noisy channel, only added redundancy gets a message through reliably. The ear is a noisy channel, full of dishwashing and drifting attention, and "repeat the noun instead of pointing back to it" is an error-correcting code for key words. The difference: a code spreads redundancy evenly, while speech should repeat only the word that matters most.</li>
+<li><b>Psychology · Leading questions</b>: In Loftus and Palmer's 1974 study, asking how fast the cars were going when they "smashed" rather than "hit" produced higher speed estimates, and a week later more people "remembered" broken glass that was never there. A closed, leading question does not just box in the answer; it can rewrite the memory. In an interview, it writes the story for the guest.</li>
+<li><b>Neuroscience · Speaker-listener coupling</b>: In 2010, Hasson's lab used fMRI to show that a listener's brain activity couples with the speaker's while a story is understood, and stronger coupling means better comprehension. Writing "as if on the phone to one person" aims at exactly that alignment. The difference: the study measured comprehension, not style; whether conversational phrasing strengthens coupling is untested.</li>
+<li><b>Buddhism · Vipassana's "hearing, without labels"</b>: Insight meditation trains you to notice a sound simply as hearing, without rushing to judge it. Sound montage likewise strips away narration's layer of judgment and lets tape go straight to the ear. The difference: meditation lets meaning go, while montage manufactures meaning through juxtaposition; the iron gate slamming after "this job fed three generations" is an editor's choice.</li>
+<li><b>Psychology · The information gap of curiosity</b>: Loewenstein proposed in 1994 that curiosity is the discomfort of knowing a piece is missing. An anecdote's "and then what?" opens the gap; the moment of reflection fills it. The difference: when the gap is too wide people give up, so a small, concrete suspense hooks better than a grand opening question.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Writing for the ear means listeners cannot reread, so each sentence carries one idea and fits in one breath.</li>
+<li>Audio scripts swap long sentences for short ones, back-references like "the former" for repetition, and headings for spoken signposts.</li>
+<li>Conversational style changes the syntax; rigor guards the facts and logic, and the two do not conflict.</li>
+<li>An interview's quality is set by the question list before recording: open not yes/no, scenes not verdicts, then ask why.</li>
+<li>Waiting three seconds after an answer lets silence draw out the truest part; half of Terry Gross's craft is not talking.</li>
+<li>Closed, leading questions box in the answer, and psychology experiments show they can even rewrite the guest's memory.</li>
+<li>The rule of sound montage: whatever tape can let listeners hear for themselves, narration should not conclude for them.</li>
+<li>Juxtaposed sounds collide and the contrast speaks; once you have great tape, never re-narrate it.</li>
+<li>Ira Glass's story engine has two blocks: the anecdote builds "and then what?" suspense, and the moment of reflection answers "so what?"</li>
+<li>Open an audio piece with a concrete anecdote, not a "three points today" menu, and let the points follow the story.</li>
+</ol>
 </section>
 
 <h2 class="deep-title">Going Deeper</h2>

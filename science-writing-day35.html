@@ -69,11 +69,23 @@ details .answer{font-size:0.95rem;color:#4a4a4a;line-height:1.8;padding:8px 0 4p
 .deep-head{font-size:1.3rem;font-weight:700;margin:48px 0 8px;text-align:center}
 
 footer{text-align:center;margin-top:40px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .amap .row{flex-direction:column}
   .amap .map-arrow{justify-content:center;transform:rotate(90deg)}
@@ -296,6 +308,30 @@ footer{text-align:center;margin-top:40px;font-size:0.82rem;color:#a0a0a0;font-fa
 <p>翻出最近一篇对外文字，搜索这些词：「众所周知」「其实」「简单来说」「你可能不懂」「不用担心细节」。每一处都问：删掉它、或换成对同伴说话的语气，是否更好？</p>
 <p class="think">思考题：把读者当「同伴」，与把读者当「目标用户/受众」，写出来的东西有什么不同？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>佛学 · 初心</b>：铃木俊隆在 1970 年的《禅者的初心》里说，初学者心里可能性很多，专家心里很少。知识的诅咒就是丢了初心：懂了以后，再也回不到不懂的位置。不像的是禅修要找回自己看世界的新鲜感，写作要借的是别人的不懂，只能靠外行试读把它借回来。</li>
+<li><b>认知科学 · 结构映射</b>：Gentner 1983 年的结构映射理论认为，类比成立靠关系对得上，不靠外表像，和「机制相似，不只是表面像」是同一个判断。不同在于实验也发现，人回想类比时偏偏被表面相似牵着走，所以挑类比得逆着直觉去查机制。</li>
+<li><b>复杂性科学 · 粗粒化</b>：统计物理把亿万分子的微观状态粗粒化成温度、压强几个宏观量，丢掉海量细节，预测照样准，这就是「丢枝节不丢主干」。不像的是物理有明确标准判定哪些变量可丢，写作者只能看读者会据此做什么决定。</li>
+<li><b>领导力 · X 理论与 Y 理论</b>：McGregor 1960 年指出，管理者若假设员工天生懒惰，就会事事盯控，员工也真变得被动。看轻读者是同一种自我实现：假设对方笨，就写得啰嗦又居高临下，读者真就关上心门。不同在于管理有几个月去纠偏，文章只有开头几句。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>知识的诅咒指作者忘了不懂是什么感觉，从而高估读者的起点，Pinker 认为这是好人写出烂文章的主因。</li>
+<li>破解知识的诅咒有两招：讲给外行听找出自己卡壳的地方，以及具体先于抽象，先给画面再给定义。</li>
+<li>类比高效，是因为它复用读者脑中早已搭好的结构，Hofstadter 甚至认为没有类比就没有概念。</li>
+<li>好类比有三条准则：关键机制相似而非表面像，用更熟悉的解释更陌生的，主动说明类比在哪里失效。</li>
+<li>每一次简化都在丢信息：丢枝节叫提炼，丢主干叫错误。</li>
+<li>最危险的简化是听起来对、其实错，它让读者带着虚假的确定感离开，比晦涩更有害。</li>
+<li>用一句「严格说……」标注略过的复杂，既保住可读性，又给真相留一个诚实的逃生口。</li>
+<li>读者不懂的是你的领域，不是他们的智力；「众所周知」「其实很简单」都在暗示读者低你一等。</li>
+<li>萨根把读者当同伴，始终假设对面坐着一个同样聪明好奇、只是恰好还不知道的人。</li>
+<li>好的简化像统计物理的粗粒化：丢掉海量细节，却保住决定结论的那几个关键量。</li>
+</ol>
 </section>
 <div class="deep-head" data-tts="b750416c0034413a">深入思考</div>
 <details>

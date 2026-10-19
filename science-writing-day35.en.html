@@ -68,11 +68,23 @@ details .answer{font-size:0.95rem;color:#4a4a4a;line-height:1.8;padding:8px 0 4p
 .deep-head{font-size:1.3rem;font-weight:700;margin:48px 0 8px;text-align:center}
 
 footer{text-align:center;margin-top:40px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .amap .row{flex-direction:column}
   .amap .map-arrow{justify-content:center;transform:rotate(90deg)}
@@ -315,6 +327,31 @@ footer{text-align:center;margin-top:40px;font-size:0.82rem;color:#a0a0a0;font-fa
     <p>Pull up your latest piece of external writing and search for: "as everyone knows," "actually," "simply put," "you may not understand," "don't worry about the details." For each, ask: would it read better deleted, or recast as talking to a peer?</p>
     <p class="think">Reflection: Treating the reader as a "peer" versus a "target user / audience"—how does the writing come out different?</p>
   </div>
+</section>
+
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Buddhism · Beginner's mind</b>: In Zen Mind, Beginner's Mind (1970), Shunryu Suzuki says the beginner's mind holds many possibilities and the expert's holds few. The curse of knowledge is losing beginner's mind: once you understand, you can't get back to not understanding. The difference: Zen practice recovers your own fresh way of seeing, while a writer needs someone else's not-knowing, which only an outside test reader can lend you.</li>
+<li><b>Cognitive science · Structure mapping</b>: Dedre Gentner's structure-mapping theory (1983) holds that an analogy works when relations line up, not when surfaces look alike: the same test as "similar mechanism, not just similar looks." But experiments also show people recall analogies by surface resemblance, so choosing one means checking the mechanism against your instinct.</li>
+<li><b>Complexity science · Coarse-graining</b>: Statistical physics coarse-grains the microstates of countless molecules into a few macro variables like temperature and pressure, drops vast detail, and still predicts well: cut the branches, keep the trunk. Unlike physics, which has formal criteria for what can be dropped, a writer judges by what the reader will decide based on the text.</li>
+<li><b>Leadership · Theory X and Theory Y</b>: Douglas McGregor (1960) argued that managers who assume workers are lazy end up controlling everything, and workers really do turn passive. Talking down is the same self-fulfilling loop: assume the reader is slow, write in a wordy, lofty tone, and the reader really does tune out. The difference: a manager has months to correct course; an article has its opening lines.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>The curse of knowledge means forgetting what not knowing feels like and overestimating the reader's starting point; Pinker calls it the main reason good people write bad prose.</li>
+<li>Two cures for the curse of knowledge: explain to an outsider to find where you stall, and put the concrete before the abstract, picture before definition.</li>
+<li>Analogy is efficient because it reuses structures already built in the reader's mind; Hofstadter goes so far as to say there are no concepts without analogies.</li>
+<li>A good analogy matches on the key mechanism rather than surface looks, explains the less familiar with the more familiar, and states where it breaks down.</li>
+<li>Every simplification discards information: dropping branches is distillation, dropping the trunk is error.</li>
+<li>The most dangerous simplification sounds right but is wrong, sending readers away with false certainty, which is worse than obscurity.</li>
+<li>Flagging skipped complexity with "strictly speaking..." keeps the text readable while leaving an honest escape hatch for the truth.</li>
+<li>Readers lack your field, not intelligence; phrases like "as everyone knows" or "it's actually simple" signal that they rank below you.</li>
+<li>Sagan treated readers as peers, always assuming the person opposite was just as smart and curious, only not yet informed.</li>
+<li>Good simplification works like coarse-graining in statistical physics: shed vast detail but keep the few variables that decide the conclusion.</li>
+</ol>
 </section>
 
 <div class="deep-head">Going Deeper</div>

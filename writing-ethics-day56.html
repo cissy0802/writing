@@ -70,7 +70,19 @@ details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -282,6 +294,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>选一段写到了真实同事或家人的文字，对每个人问："如果他此刻正读到这段，我还敢原样发吗？"改到你敢为止。<strong>思考题</strong>：Malcolm 的"道德上无从辩解"与 Lamott 的"该表现好点"，你更靠哪一端？当"讲真相"会伤到一个信任你的人，你用什么标准决定写还是不写？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>分布式系统 · Git 的提交链</b>：Git 每次提交都记下作者和父提交，内容按哈希寻址，历史可以一层层回溯；引用对观点做的是同一件事，让读者顺着链条查回源头。不像在于：哈希链被篡改，机器当场就能验出来；引用链断了或造假，只能靠读者自己去翻。</li>
+<li><b>心理学 · 源监测与潜隐记忆</b>：Marcia Johnson 等人 1993 年系统提出源监测框架：记忆存下的是内容，「从哪来」要靠事后推断，推断出错，读来的想法就会被当成自己的，这叫潜隐记忆（cryptomnesia）。「记不清是读来的还是自己想的」正是这个机制。不像在于：潜隐记忆是无心之失，剽窃是有意隐去；但办法相同，来源要在读的当下记下，别指望大脑替你保存。</li>
+<li><b>商业 · 萨班斯法案的签字责任</b>：2002 年《萨班斯-奥克斯利法案》第 302 条要求 CEO 和 CFO 亲自签字担保财报，报表当然不是他们亲手做的。签名担保的是判断和责任，不是逐字劳动，和代笔的判定线同构。不像在于：财报签错要担法律责任，代笔信的署名多半只靠良心约束。</li>
+<li><b>心理学 · Bartlett 的重构记忆</b>：Bartlett 1932 年让被试反复回忆一则陌生的印第安民间故事《鬼魂之战》，复述越来越短、越来越顺，也越来越像本文化的套路。凭「大意」补出的台词就是这种重构。不像在于：大脑重构时并不自知，写作者知道了这一点，就有义务向读者标出来。</li>
+<li><b>佛学 · 《无畏王子经》的说话标准</b>：经中佛陀说，不真或无益的话再动听也不说；真实而有益的话，对方不爱听也说，但要择时而说。这和写真人时「真实、必要」两关同构，还多出一维「时机」。不像在于：经里讲的是当面说话，文字一旦发表就收不回，也没法再挑时机。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>剽窃的分界不在用没用别人的东西，而在有没有让读者看清哪些是你的、哪些是借来的。</li>
+<li>署上出处不减损作者，反而证明读得广、诚实、经得起核查；原创体现在如何选择、编排和反驳来源。</li>
+<li>洗稿、滥用「常识豁免」和不注明的自我剽窃，都是在来源上欺骗读者。</li>
+<li>代笔是否诚实只看一条：署名者是否真正拥有其中的思想与判断，并为之担责。</li>
+<li>署名传递的是责任与信誉而不是逐字劳动，所以高管信可以代笔，学术论文禁止代笔。</li>
+<li>非虚构写作允许压缩和聚焦，不允许把没发生过的对话或事件写成发生过。</li>
+<li>从压缩、聚焦到合成人物、杜撰对话，越靠近虚构一端，越该向读者明示做了处理。</li>
+<li>写到真实的人之前先过三关：是不是真的、是否非写不可、你和被写者谁更有权势。</li>
+<li>Janet Malcolm 与 Anne Lamott 框出的张力是：你有权写自己的人生，笔下的人也有他们的人生。</li>
+<li>Bartlett 的实验表明记忆会被重构，凭「大意」补出的台词要向读者标明，而不是写成原话。</li>
+</ol>
 </section>
 <div class="deep-title">— 深入思考 —</div>
 <details>

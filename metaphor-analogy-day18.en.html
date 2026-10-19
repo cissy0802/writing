@@ -96,7 +96,19 @@ header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -377,6 +389,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Psychology · Framing effect</b>: In Tversky and Kahneman's 1981 "Asian disease problem," the same numbers framed as "200 people will be saved" made most people play safe; framed as "400 people will die," most switched to the gamble. Picking a metaphor is picking a frame. The difference: there only gain versus loss changed, while a metaphor imports a whole system of inferences.</li>
+<li><b>Neuroscience · Sensorimotor simulation</b>: Desai and colleagues (2011) found with fMRI that the more familiar an action metaphor, the weaker the response in motor cortex. You can watch a metaphor die in the brain; unlike Orwell's categories, though, the fading is gradual, with no clear line where it dies.</li>
+<li><b>Evolution · Analogy vs. homology</b>: Bird wings and butterfly wings both fly, but they are only analogous: same function, entirely different origin and build. "A neural network is like a brain" is that kind of likeness. The difference: biologists must say which kind they mean; writers rarely do.</li>
+<li><b>Cognitive science · The radiation problem</b>: Gick and Holyoak (1980) had people read about a general splitting his army to converge on a fortress, then solve how to kill a tumor with converging rays. Without a hint most missed the parallel; with one, most solved it. Analogies work when the matches are pointed out; unlike the lab, real analogies are never perfectly built.</li>
+<li><b>Buddhism · The finger pointing at the moon</b>: The Shurangama Sutra warns that whoever mistakes the finger for the moon loses both. The vehicle is that finger; stretch it to a fourth layer and readers start staring at the finger. The difference: the sutra treats all words as mere fingers, while a writer believes some fingers point better.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Lakoff showed that metaphor is first a way of thinking: we grasp an abstract target domain through a familiar source domain.</li>
+<li>Choosing a metaphor chooses the reader's lens: "tech debt as shame" breeds avoidance, "tech debt as a loan" breeds trade-offs.</li>
+<li>Borrowing stock metaphors like "war" or "race track" without noticing imports all their implications into a team.</li>
+<li>A good metaphor's vehicle is more concrete and familiar than its tenor; explaining the strange with the strange collapses the bridge.</li>
+<li>A metaphor stands or falls on its ground: the shared structure must align where it matters, or surface likeness misleads.</li>
+<li>Argument by analogy borrows the reader's settled judgment about a familiar case to move a judgment about an unfamiliar one.</li>
+<li>Before arguing by analogy, run a bridge stress test: list the matches, find the break point, and state the analogy's limits.</li>
+<li>Orwell's prime target is the half-dead metaphor, like "leverage" or "synergize," which has lost its image but keeps the pose.</li>
+<li>To test jargon, swap each metaphor for its literal meaning; if the sentence empties out, the metaphor was hiding unclear thinking.</li>
+<li>The more familiar an action metaphor, the weaker its echo in the brain's motor regions, so metaphor death is visible neurally.</li>
+</ol>
+</section>
 <!-- Deep thinking -->
 <div class="deep">
   <h2>Deeper Questions</h2>

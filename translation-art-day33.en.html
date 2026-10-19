@@ -61,7 +61,19 @@ details{margin:10px 0;border-bottom:1px solid #e0e0e0;padding-bottom:8px}
 summary{cursor:pointer;font-weight:600;color:#1f1f1f;font-size:1rem;padding:6px 0}
 details > div{font-size:0.94rem;color:#4a4a4a;line-height:1.75;padding:8px 0 4px 16px}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -302,6 +314,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Information theory · Rate-distortion</b>: Shannon's rate-distortion theory says that with limited bandwidth some distortion is unavoidable; you choose what to lose by asking which error costs most. The fidelity-fluency dial has the same shape: a technical manual fears ambiguity, so it sacrifices smoothness; ad copy fears indifference, so it sacrifices the literal. Unlike the math, translation's cost function can't be written down; you estimate it from the reader and the goal.</li>
+<li><b>Linguistics · Carving up color</b>: Russian splits light blue (goluboy) and dark blue (siniy) into two basic words, and Winawer and colleagues (2007) found Russian speakers were slightly faster at telling apart blues across that line. Languages cut the world at different joints, which is why the untranslatable exists. Unlike the strong version of the idea, the effect is small: English speakers still see both blues, just as a missing word is not a missing concept.</li>
+<li><b>Buddhism · Xuanzang's five non-translations</b>: The monk Xuanzang set out five cases where a Sanskrit term should be transliterated rather than rendered, two of which match this lesson exactly: words with many senses, and things that don't exist in the target culture. Prajna was kept as a sound rather than flattened into everyday "wisdom." The likeness is admitting there is no equivalent and naming the original word. The difference: one of his reasons was that the foreign sound itself inspires reverence, whereas here keeping the original word is about losing less meaning, and strangeness is a cost, not the goal.</li>
+<li><b>Neuroscience · Predictive coding</b>: The brain mostly processes what it failed to predict; what it predicts well barely registers. A domesticated translation drives prediction error toward zero, so the reader never notices the translator: that is the invisibility. Foreignizing deliberately leaves some error so the reader feels another language underneath. Unlike the brain, which cancels error to save effort, the translator who leaves it is preserving information.</li>
+<li><b>Psychology · Proactive interference</b>: Earlier learning intrudes on later learning, which is why an old phone number keeps surfacing when you try to recall the new one. Mother-tongue syntax leaking into a translation is the same intrusion: "although... but" is an old habit overriding a new rule. Unlike memory interference, translationese usually goes unnoticed, so the fix is to reread with the target language's ear alone.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Literal versus free is not a binary; you set a mix of faithfulness, fluency, and refinement for each task.</li>
+<li>Yan Fu pointed out that a translation that is faithful but not fluent is no translation at all.</li>
+<li>Technical documents turn the dial toward faithfulness even at some stiffness; marketing copy turns it toward refinement even at the cost of rewriting.</li>
+<li>For an untranslatable cultural term, don't force a false equivalent: pick the facet you need this time and add a line of explanation.</li>
+<li>Qian Zhongshu's ideal of transformation demands no awkward seams and the full original flavor, which is harder than literal translation, not a license to improvise.</li>
+<li>Venuti showed that the fluent, transparent "invisible" translation is a choice, not a neutral default.</li>
+<li>Domestication moves toward the reader and reads easily but sands off edges; foreignization moves toward the original and stays true but costs the reader effort.</li>
+<li>When translating an outside framework for a team, the mistake is not domesticating but domesticating unconsciously until the original meaning is gone.</li>
+<li>Translationese in Chinese shows up as empty all-purpose verbs, overused passives, and long modifier chains; in English, as missing articles and "although... but" pairs.</li>
+<li>Mother-tongue syntax leaks into translations like an old habit, so the final pass should be read with target-language instinct alone.</li>
+</ol>
+</section>
 <section class="card">
   <div class="num">Reflection</div>
   <h2>Going Deeper</h2>

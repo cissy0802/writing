@@ -84,7 +84,20 @@ details div{font-size:0.94rem;line-height:1.75;color:#3a3a3a}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+/* crossovers + takeaways */
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -372,6 +385,32 @@ for (const u of users) { ... }</pre></span>
 <p><strong>习作：</strong>在自己最近的一个 PR 里，逐行注释做"三判定"：(a) 复述代码 → 删；(b) 解释 WHY → 留；(c) 命名能替代 → 改名再删。Bonus：找一个三个月前的老注释，看代码与注释是否还吻合；不吻合就更新或删——注释卫生最 underrated 的练习。<br/><strong>思考：</strong>当 AI 能即时为代码生成"它在做什么"的注释，WHAT 类注释的边际成本趋零。这是好事还是坏事？AI 能否生成 WHY 类注释——还是 WHY 永远是人类作者保留的东西？</p>
 </div>
 </section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>认知科学 · 知识的诅咒</b>：1990 年斯坦福的 Elizabeth Newton 让人敲出熟悉歌曲的节奏给别人猜，敲的人估计能中一半，实际 120 首只中 3 首：脑中响着旋律的人想象不出对方只听见敲击声。半年后的你也只剩敲击声。不像：实验里隔开两人的是身份，设计文档隔开的是时间。</li>
+<li><b>生物进化 · 喉返神经</b>：长颈鹿的喉返神经绕过主动脉弓再折回喉部，白绕数米，是祖先鱼类的布局留下的。演化不记"为什么不"，只能倒推；Alternatives Considered 就是给系统留化石。不像：自然选择没有作者，从不比较方案。</li>
+<li><b>佛学 · 对机说法</b>：佛陀依听者根器说法，对初学讲浅、对久修讲深，同一道理几种讲法；Diátaxis 也承认一种写法教不了所有人。不像：佛陀分的是人，Diátaxis 分的是同一个人上午学、下午查的不同需求。</li>
+<li><b>神经科学 · 记忆再巩固</b>：2000 年 Nader 等人在大鼠身上发现，被唤起的记忆会重新变得可塑、可被改写。人脑因此像 wiki：每回忆一次就编辑一次，原版不留。ADR 的不可改写，是给组织补上大脑没有的原稿。</li>
+<li><b>信息论 · 香农信息量</b>：香农把信息定义为不确定性的减少，从代码已能推出的内容信息量为零，"# increment i"正是如此。不像：通信里冗余能纠错，过期注释却是反向噪声，越冗余越误导。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>设计文档的第一读者是半年后忘了上下文的自己，而不是当下的 reviewer。</li>
+<li>设计文档的价值在写的过程：把模糊感落成句子，缺陷会在打字时露出来。</li>
+<li>Alternatives Considered 要写清每个被否方案"为什么不"，这是设计文档最有长尾价值的一节。</li>
+<li>设计文档要在决定之前写，并用 Non-goals 明确不解决什么，挡住 scope creep。</li>
+<li>Procida 的 Diátaxis 把文档分为教程、任务指南、参考、解释四类，四类各写各的页。</li>
+<li>README 是扉页不是全集，四类文档塞进一页，新手和老手都会卡住。</li>
+<li>Nygard 的 ADR 记录上下文、决定和后果；缺了上下文，后人判断不了决定是否还成立。</li>
+<li>ADR 写下后不再修改，改主意就写新 ADR 标明 Supersedes，原文保留。</li>
+<li>注释解释 WHY 与 WHY-NOT，命名解释 WHAT；想写 what 注释时先试改名或抽函数。</li>
+<li>复述代码的注释信息量为零，过期注释比没有注释更糟，因为它主动误导读者。</li>
+</ol>
+</section>
+
 <!-- Resources -->
 <section class="card">
 <div class="num">Deep Dive</div>

@@ -70,11 +70,23 @@ details .ans{font-size:0.95rem;color:#3a3a3a;line-height:1.8;padding-bottom:16px
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .deck-grid{grid-template-columns:repeat(2,1fr)}
   .flow-vis .flow-row{flex-direction:column}
@@ -317,6 +329,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <p>把你方案的"市场"用 Airbnb 的漏斗法重写：总盘子 → 可触达 → 你真正吃的那口，三个数字层层收窄。再检查你 deck 里有没有哪一页同时塞了两个观点——拆成两页。</p>
 <p class="q">思考题：AI 让人人都能一键生成精美 deck。当"漂亮"变得零成本，pitch 里真正稀缺、AI 替不了的东西是什么？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>认知科学 · 预测加工</b>：大脑听讲时一直在预测下一句，落空就卡住。Sequoia 十张的顺序，恰是听众脑中自然冒出的问题序列。不同在于：预测因人而异，骨架只押中投资人的平均期待。</li>
+<li><b>神经科学 · 奖励预测误差</b>：Schultz 等人 1997 年发现，多巴胺神经元对「比预期好」的结果放电，对已料到的奖励几乎不响应。先把问题讲疼，方案才有正向落差。不像的是：夸大的疼一旦被戳破，落差会反向结算成失信。</li>
+<li><b>佛学 · 四圣谛</b>：苦、集、灭、道，是一条先诊断再开方的弧：承认苦，追问苦从哪来，确认可止息，再给出道路。「先让人疼，再给药」与之同构。不同处更有意思：四圣谛的苦人人共有，pitch 的疼必须具体到某个人、某个数字；而且这条道路不收钱，要听者自己走。</li>
+<li><b>生物进化 · 生态位空窗</b>：约 6600 万年前小行星终结了非鸟恐龙，空出的生态位让哺乳动物迅速分化。Why Now 讲的是同一件事：剧变开窗，造出赢家输家。不像在于：进化没有远见，创业者却要在窗口刚开时押注。</li>
+<li><b>信息论 · 信道容量</b>：香农 1948 年证明信道有容量上限，超过就必然出错。一页塞多个观点，是让眼睛和耳朵挤同一条窄信道。不同在于：香农靠加冗余对抗噪声，幻灯片靠做减法，一页只留一个信号。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>Sequoia 骨架把一份融资故事压成十张幻灯片，每张回答投资人脑中一个必答问题。</li>
+<li>第一张幻灯片用一个陈述句讲清公司是什么、为谁服务、改变了什么，技术架构留到后面。</li>
+<li>十张的顺序本身就是说服的逻辑链，先讲方案再讲问题，听众接不住这药治什么病。</li>
+<li>Problem-Solution 弧先把问题讲到听众心疼再给方案，问题与方案的落差越大，方案越显得必须。</li>
+<li>投资人买止痛药不买维生素，问题如果只是「可以更好」而非「现在很痛」，撑不起一份 pitch。</li>
+<li>问题要写实到谁、多频繁、多痛，带一个数字和一个画面，但夸大到失真会让整场信任崩塌。</li>
+<li>Andy Raskin 的战略叙事从世界上一个不可逆的变化开场，而不是从产品开场。</li>
+<li>Why Now 要回答这件事五年前为什么做不成、五年后为什么会太晚，窗口本身就是势。</li>
+<li>Airbnb 2009 deck 一张幻灯片只讲一件事，市场页用三个数字层层收窄，不用形容词。</li>
+<li>Problem-Solution 弧与佛学四圣谛同构：先诊断苦，再讲苦的来由、止息与道路。</li>
+</ol>
 </section>
 <div class="deepthink-title">深入思考</div>
 <details>

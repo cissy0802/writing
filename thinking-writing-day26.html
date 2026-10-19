@@ -56,7 +56,19 @@ details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -257,6 +269,30 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>这周读到的任意一个想法，写成一张原子卡片：用自己的话重述 + 至少链接到一个你已有的想法。<strong>思考题</strong>：维护卡片盒本身要花时间，什么样的人、什么样的工作，这套系统的收益才真正大于成本？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>心理学 · 解释深度错觉</b>：Rozenblit 与 Keil 2002 年先让人给自己对拉链、马桶这类东西的理解打分，再要求一步步写出原理，之后的自评明显下跌。这就是「以为想过」的实验版。不像的是，实验只负责揭穿错觉，写作还会接着把缺口补上。</li>
+<li><b>生物进化 · 盲目变异与选择保留</b>：心理学家 Donald Campbell 1960 年提出，创造性思维和自然选择是同一个结构：先大量产生没把握的变体，再筛掉不合格的。「写中发现」正是如此，多写两段是在制造变异，回头改稿是在做选择。不像的是，自然选择没有作者，写作的筛子握在你自己手里，还能对着目标挑。</li>
+<li><b>西方哲学 · 苏格拉底的产婆术</b>：柏拉图《泰阿泰德篇》里，苏格拉底自称思想的接生婆，不给答案，只靠追问帮对方把想法生出来。让 AI 扮挑剔的读者，站的就是这个位置。不像的是，Kleist 说的听者哪怕不开口也管用，产婆却必须会问。</li>
+<li><b>复杂性科学 · 小世界网络</b>：Watts 与 Strogatz 1998 年发现，规则网络里只要加上少量随机的远程连线，任意两点间的路径就急剧变短。卡片盒里跨主题的链接起的是同样的作用。不像的是，网络里的捷径是随机连上的，卡片之间的链接是你判断之后亲手接的。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>写作不是思考的记录，而是思考本身：没写成完整句子的想法，无从知道它成不成立。</li>
+<li>脑中的模糊判断能靠感觉蒙混过关，写成句子就必须交代主语、因果和例外。</li>
+<li>技术决策和架构评审前先写一页，把「感觉不对」逼成论证，或者发现它根本没有理由。</li>
+<li>论点常常不是写作的前提而是产物：带着模糊的题目动笔，更尖锐的真问题会在写中长出来。</li>
+<li>写下来等于把想法从狭窄的工作记忆搬到纸上摊开，新意多半诞生在比对和并置里。</li>
+<li>Kleist 发现，想不通的事讲给一个具体的人听，听者会逼你补上原本跳过的环节。</li>
+<li>费曼学习法的内核是能讲给聪明的外行听懂才算真懂，讲不通的地方就是思考的断层。</li>
+<li>把 AI 当成追问、扮反方的对话者而不是代写，让它替你想，省下的不是劳动而是成长。</li>
+<li>Luhmann 的卡片盒笔记法靠三个动作：一张卡只放一个想法、用自己的话重述、显式链接到旧卡。</li>
+<li>解释深度错觉实验显示，人被要求一步步讲清原理之后，才发现自己没有想象中那么懂。</li>
+</ol>
 </section>
 <div class="deep-title">— 深入思考 —</div>
 <details>

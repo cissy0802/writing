@@ -68,7 +68,19 @@ details .think{color:#3a3a3a;font-size:0.94rem;line-height:1.75;padding:4px 0 14
 .closing{background:#fff;border-top:3px solid #8a7a4a;padding:32px;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06)}
 .closing h2{font-size:1.35rem;margin-bottom:6px}
 .closing .en-name{font-size:0.95rem;color:#6a6a6a;font-style:italic;margin-bottom:18px;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -301,6 +313,30 @@ details .think{color:#3a3a3a;font-size:0.94rem;line-height:1.75;padding:4px 0 14
 <div class="label">本周习作 + 思考题</div>
 <p>统计过去一周，你花在"整理 / 挑工具 / 调系统"上的时间，与真正"写字"的时间之比。如果整理 &gt; 写作，本周立一条规矩：动笔满 300 字之前，不许碰任何设置。<strong>思考题</strong>：你最近一次"换工具就能变高产"的期待，兑现了吗？还是只换来了新一轮折腾？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>认知科学 · 生成效应</b>：Slamecka 与 Graf 1978 年发现，自己生成出来的词比照着读过的词记得更牢。"用自己的话写卡片"走的是同一个机制：输出逼大脑把材料重新加工一遍。不像的是，实验测的是记忆，原子笔记要的是理解之后还能被拆开重组。</li>
+<li><b>神经科学 · 赫布学习</b>：Hebb 1949 年提出，反复一起激活的神经元之间连接会加强，记忆存在连接里，不在单个细胞里。卡片盒的价值同样在链接密度。不像的是，大脑自动加固连接，卡片的链接得你每次手动去问"它像哪张"。</li>
+<li><b>复杂性科学 · 共识主动性（stigmergy）</b>：法国生物学家 Grassé 1959 年研究白蚁时提出这个词：没有蓝图，每只白蚁只回应前一只留下的痕迹，蚁丘就长了出来。卢曼"问卡片盒下一步该讲什么"是同一个结构，主题从痕迹的堆积里涌现。不像的是，白蚁不必回头整理，涌现出的草稿还得用大纲为读者重构一遍。</li>
+<li><b>佛学 · 筏喻</b>：《蛇喻经》里佛陀说法如筏，为渡河而用，过了河不必扛在肩上。写作工具也是筏，价值只在减少你和想法之间的摩擦，供起来反复打磨就成了负担。不像的是，写作者每天都要再渡一次河，筏扔不得，只是别把造筏当成渡河。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>原子笔记的标准是一张卡片只装一个想法，用自己的话写，离开上下文也能独立成立。</li>
+<li>用自己的话复述是理解的试金石，写不出来的那张卡片，就是你其实没懂的地方。</li>
+<li>卡片的价值在连接而不在数量，"收藏家谬误"是把存下来误当成学会了。</li>
+<li>卢曼靠约九万张互相链接的卡片写出七十多本书，文章从连接密集处自下而上涌现。</li>
+<li>标签只是抽屉，连接才是思路：每存一张新卡，都要问它支持、反驳或延伸了哪张旧卡。</li>
+<li>大纲派和涌现派没有高下，已知结论的 memo 用大纲先行，要靠写来想清的复盘先涌现。</li>
+<li>先涌现出来的草稿，最后还要用大纲为读者重构一遍，探索归自己，结构归读者。</li>
+<li>工具唯一的价值是减少你和想法之间的摩擦，频繁迁移、折腾系统是"生产力色情"式的拖延。</li>
+<li>AI 应当做质疑论点、逼出反例的思考伙伴而不是代笔，因为被省掉的思考正是写作的目的。</li>
+<li>卡片盒像白蚁筑巢的共识主动性：结构从前一步留下的痕迹里涌现，不靠预先画好的蓝图。</li>
+</ol>
 </section>
 <!-- 收束 -->
 <section class="closing">

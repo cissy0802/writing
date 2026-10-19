@@ -74,7 +74,19 @@ details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -307,6 +319,32 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <p>找一段你写的正式文字，圈出所有「文言壳」词（兹／望／颇／实乃／之…），全删或换成大白话；再挑一处，试着借一个凝练的古典意象提气。<br/>思考题：删掉那些古壳后，句子是更空了，还是更实了？</p>
 </div>
 </section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>信息论 · 冗余（香农）</b>：香农 1948 年估算，英文大约一半是冗余，删掉了读者也大体猜得回来；凝练删的就是这一半里不干活的字。不像在于：冗余在通信里是抗噪的保险，删光了，一个错字就让人读不懂，所以凝练只删虚字、不删信息。</li>
+<li><b>神经科学 · 预测加工</b>：大脑一直在猜下一个输入，猜中就省力。对偶的上联一出，读者已猜到下联的结构，注意力全留给意义上那一点差异，两半才互相照亮。不像的是，大脑靠意外保持清醒，排比堆到四五项、每项都猜得中，读者就开始跳读。</li>
+<li><b>计算机科学 · 字典压缩与分层编码</b>：典故像带字典的压缩，一个词调出整个故事，前提是收发两端存着同一本字典。不像在于：普通压缩缺字典就整段解不开，好用典更像分层编码，基础层人人可解，增强层只给懂的人，这正是「不隔」的要求。</li>
+<li><b>生物进化 · 扩展适应（古尔德与弗尔巴，1982）</b>：羽毛起初可能为保温而生，后来被挪去飞行，旧结构在新环境里换个功能重新服役。文言的凝练和节奏进了今天的 memo，也是换了用途的旧骨。不像的是，进化没有挑选者，拿来主义要人「运用脑髓」主动去挑。</li>
+<li><b>佛学 · 筏喻</b>：《金刚经》把佛法比作渡河的筏，过了河就该放下，不必扛着走；取骨弃形同样不执着于形，要的是过河的功用，不是筏子的样子。不像在于：佛家连法本身也要舍，拿来主义却要把有用的东西据为己有。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>文言凝练的标准是字不得减：每个字都在干活，删掉一个句子就塌。</li>
+<li>凝练删的是不干活的虚字和铺垫，不是信息；删到读者看不懂就过了头。</li>
+<li>白话的虚胖多来自双音节冗余成串，比如「进行」「加以」「所面临的」。</li>
+<li>对偶靠结构相同、意义相映让两半互相照亮，排比靠同构的重复叠出气势。</li>
+<li>对偶要对的是意思而不只是字面，为对而对就成了骈文的花架子。</li>
+<li>好用典不知出处也读得通，知道出处则多得一层，王国维称这种效果为不隔。</li>
+<li>一句连堆几个典、用需要脚注的生僻典，都是掉书袋，把读者挡在门外。</li>
+<li>古为今用是取文言的骨（凝练、节奏、意象），弃它之乎者也的形和公文腔。</li>
+<li>鲁迅的拿来主义是第三条路：对文言既不全盘丢弃，也不全盘照搬，而是主动挑。</li>
+<li>典故像带字典的压缩，好用典更像分层编码：基础层人人可解，增强层留给懂的人。</li>
+</ol>
+</section>
+
 <div class="deep-head" data-tts="cf18b4eb59a118fe">深入思考</div>
 <details><summary>文言的凝练，和英文的简洁（Strunk / Zinsser）是一回事吗？</summary><div>内核相同——都是删虚字、追密度；但发力点不同。汉语的凝练更依赖单音词与意合：省掉连词、省掉主语，也能「落霞孤鹜」四字成画，这是拼音文字难做的。英文的简洁更靠删修饰、少被动、动词选得准。别把两种简洁混为一谈：学汉语的意象密度，也学英文的句法直白，各取其长。</div></details>
 <details><summary>白话文运动百年前要「打倒文言」，今天又谈「古为今用」，不矛盾吗？</summary><div>不矛盾。胡适们打倒的是文言作为唯一书面语的垄断，以及八股的僵死，不是文言的一切养分。白话赢了之后，反而可以从容回头，挑遗产里还活着的部分为己所用。丢掉枷锁，不等于丢掉整个工具箱。真正该警惕的，是把「反文言」也变成一种新八股。</div></details>

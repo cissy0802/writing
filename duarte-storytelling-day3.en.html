@@ -79,7 +79,19 @@ header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -473,6 +485,32 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
     <p>Take your most recent data report or dashboard. Ask: if I could only show three numbers, which three? Arrange them as Setup–Conflict–Resolution. Write the spoken version in under eighty words. Tell it to someone outside your team. If they can retell the story, you've made it.</p>
   </div>
 </section>
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Buddhism · The Four Noble Truths</b>: suffering, its origin, its cessation, the path. First make the pain of the present vivid, then show it can end, then give the way: the skeleton of What Is, What Could Be, and the call to adventure. The difference: the Buddha's "could be" extinguishes craving, while Duarte's New Bliss sets out to ignite it.</li>
+<li><b>Psychology · Information-gap theory (George Loewenstein, 1994)</b>: curiosity arises when we notice a gap between what we know and what we want to know, and we feel driven to close it. Resonance runs on the same mechanism, swapping a knowledge gap for a situational one. Unlike curiosity, which fades once satisfied, Duarte wants action after the gap closes.</li>
+<li><b>Psychology · The peak-end rule (Kahneman et al., 1993)</b>: in the cold-water experiment, people remembered an unpleasant episode mostly by its most intense moment and its ending, nearly ignoring how long it lasted. The Sparkline's bet on a New Bliss ending fits this. The mismatch: the peak-end rule implies the middle is forgettable, while the Sparkline relies on repeated oscillation in the middle to lift the audience step by step.</li>
+<li><b>Information theory · Shannon's measure of information (1948)</b>: the more surprising a message, the more bits it carries. DataStory's Conflict is the most surprising turn in the data; dumping every metric just pours noise into the channel. The difference: Shannon's information is indifferent to meaning, and meaning is exactly what DataStory is after.</li>
+<li><b>Distributed systems · Consensus (Paxos / Raft)</b>: nodes must agree on a single value before the system can move on, just as a team is aligned only when everyone can restate the same Big Idea. The difference: a consensus protocol needs only a majority, but if only a majority remembers the Big Idea, the rest will tell their own versions.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Speeches that change minds oscillate repeatedly between What Is and What Could Be, using the gap to create tension.</li>
+<li>Vision alone sounds like a pep talk and reality alone reads like a diagnosis; the resonance model needs both poles equally concrete and vivid.</li>
+<li>The crucial move in the resonance model is putting the audience inside What Could Be, as heroes rather than spectators.</li>
+<li>Duarte annotated hundreds of great speeches line by line into a Sparkline: open on What Is, oscillate through the middle, end in New Bliss.</li>
+<li>Draw the Sparkline before writing the speech, because a speech is an experience unfolding in time, not a document.</li>
+<li>A Sparkline without a call to adventure leaves listeners unsure when to act; one without New Bliss leaves them nowhere to land.</li>
+<li>A Big Idea is your unique point of view plus what is at stake, stated as one complete sentence of two lines at most, not a topic.</li>
+<li>If you cannot write the Big Idea in one sentence, you have not finished thinking, so go back and think before building slides.</li>
+<li>Duarte's DataStory arranges data in three acts: Setup establishes the baseline, Conflict reveals the contrast or turning point, Resolution drives the decision.</li>
+<li>Listing every metric means saying nothing; a data story should spotlight the single surprising turn that carries the most information.</li>
+</ol>
+</section>
+
 
 <nav class="nav">
   <a href="index.en.html">← Back to Writing</a>

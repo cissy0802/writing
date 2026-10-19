@@ -55,7 +55,19 @@ details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -283,6 +295,30 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Psychology · The illusion of explanatory depth</b>: In 2002 Rozenblit and Keil had people rate how well they understood things like zippers and flush toilets, then asked them to write out step by step how each works; their ratings dropped sharply afterward. It is the lab version of "only thinking you've thought." The difference: the experiment just exposes the illusion, while writing goes on to fill the gap.</li>
+<li><b>Evolution · Blind variation and selective retention</b>: In 1960 the psychologist Donald Campbell argued that creative thought shares the structure of natural selection: generate many uncertain variants, then weed out the ones that fail. Writing as discovery works the same way: writing two more paragraphs produces variation, and revising is selection. The difference: natural selection has no author, while in writing the sieve is in your hands and can aim at a goal.</li>
+<li><b>Western philosophy · Socratic midwifery</b>: In Plato's Theaetetus, Socrates calls himself a midwife of ideas: he gives no answers and only questions others until they deliver their own thoughts. An AI playing the demanding reader stands in exactly that spot. The difference: Kleist's listener helps even without speaking, while a midwife has to know how to ask.</li>
+<li><b>Complexity science · Small-world networks</b>: In 1998 Watts and Strogatz showed that adding a handful of random long-range links to a regular network sharply shortens the path between any two nodes. Cross-topic links in a slip-box do the same job. The difference: shortcuts in the network appear at random, while links between cards are ones you judge and wire by hand.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Writing is not a record of thinking but thinking itself: until an idea is a full sentence, you cannot tell whether it holds.</li>
+<li>A vague judgment survives in your head on feeling alone; a written sentence must name its subject, causes and exceptions.</li>
+<li>Before a technical decision or design review, write one page to turn "something feels off" into an argument, or find there is no reason.</li>
+<li>The thesis is often a product of writing, not its premise: start with a fuzzy topic and the sharper real question grows as you write.</li>
+<li>Writing moves an idea out of cramped working memory onto the page, where comparison and juxtaposition give rise to new insight.</li>
+<li>Kleist noticed that explaining a stuck problem to a concrete listener forces you to fill in the steps you had skipped.</li>
+<li>The core of the Feynman technique: you understand something only if a smart non-expert can follow you, and where it breaks is your gap.</li>
+<li>Use AI as an interlocutor that probes and plays devil's advocate, not as a ghostwriter; outsourcing the thinking costs you growth, not labor.</li>
+<li>Luhmann's slip-box rests on three moves: one idea per card, a restatement in your own words, and explicit links to older cards.</li>
+<li>The illusion of explanatory depth shows that people asked to explain a mechanism step by step discover they understood less than they thought.</li>
+</ol>
+</section>
 <div class="deep-title">— Going Deeper —</div>
 
 <details>

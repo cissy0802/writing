@@ -74,7 +74,19 @@ header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -301,6 +313,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>选你下周要写的一份文件，先问三个问题：(1) 这是几层论点？(2) 表里推荐的长度是多少？(3) 我目前的草稿差多少？多了就砍，少了就补——只服从论点深度，不服从惯性。<br/><br/><strong>思考</strong>：在中文里"长 = 用心"的隐性预设比英文强——读者会觉得 300 字邮件"太敷衍"、3000 字 memo"才有诚意"。如何在这种文化引力下还能坚持 short？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>生物进化 · 昂贵信号</b>：Zahavi 1975 年的累赘原理说，孔雀尾巴可信，正因为造假太贵。十年不断更的 newsletter 档案同样没法伪造，频率本身就是信用。不像的是，孔雀一次付清，写作者得一期一期地付。</li>
+<li><b>神经科学 · 奖赏预测误差</b>：Schultz 等人 1997 年发现，奖赏可预期后，多巴胺放电前移到提示信号上，预期落空时跌到基线以下。准时的 newsletter 让「周日晚上」成了提示，断更一次就是一次负的预测误差。不像的是，读者会替你找理由，但只够用一两次。</li>
+<li><b>认知科学 · 信息觅食</b>：Pirolli 和 Card 1999 年把找信息比作觅食，靠「信息气味」决定留不留。推文前 12 个字符就是气味：名字、数字、利害气味浓，「今天想聊聊」没有气味。不像的是，timeline 换块地几乎零成本，判断更苛刻。</li>
+<li><b>分布式系统 · Gossip 协议</b>：Gossip 协议里没有节点能一次写遍全网，消息靠邻居转传。声誉也靠同事在你不在场时转述，教人一招的帖子才是值得转的载荷。不像的是，机器转发不走样，人转述会变形，载荷得短到能复述。</li>
+<li><b>信息论 · 最小描述长度</b>：Rissanen 的最小描述长度原则说，最好的模型是能还原数据的最短描述。一层论点写五段是冗余，三层压成一句是有损压缩。不像的是，人读文章需要一点冗余跟上节奏，最优长度略高于数学下限。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>Newsletter 是作者与读者签的隐性合约：用主题、频率、承诺三柱，换取读者收件箱里的位置。</li>
+<li>Newsletter 主题贪大或频率漂移都算违约，读者不再期待，订阅就退化成邮件群发。</li>
+<li>Ben Thompson 的 Stratechery 证明契约纪律会复利：十年每个工作日一篇，从不漏更。</li>
+<li>推文的前 12 个字符决定读者停下还是划走，280 字符是上限，不是目标。</li>
+<li>让人停下的钩子是具体名字、数字或个人利害；有钩子没 payoff 比平淡更伤信任。</li>
+<li>LinkedIn 是你不在场时的职业代言人：写「我学到了什么」，不写「我又升职了」。</li>
+<li>高互动 LinkedIn 帖子的四段式：反直觉观察、具体亲历故事、可推广的模式、留给读者的问题。</li>
+<li>文章长度由论点需要打开几层决定：一层论点一句话就够，三层论点才需要 800 到 2,000 字。</li>
+<li>长度错配有两种死法：本该短写长，读者中途离开；本该长写短，读者读完反而更怀疑。</li>
+<li>写不出短版说明还没想清；从信息论看，把三层论点硬压成一句，是还原不出论证的有损压缩。</li>
+</ol>
 </section>
 <!-- 深入思考 -->
 <div class="deepthink">

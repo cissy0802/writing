@@ -95,11 +95,23 @@ header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .opening-vis .row{flex-direction:column;gap:4px}
   .opening-vis .row .label-col{text-align:left;width:auto;padding-top:0}
@@ -416,6 +428,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>把你下次演讲/汇报最怕的 5 个问题写下来。每个问题写出 Pivot（一句承认）+ Bridge（一句过渡）+ Land（一句核心信息）。然后请一个同事按这 5 个问题"突袭"你三遍——直到三步流畅得像本能。<br/><br/><strong>思考</strong>：当你能"答你希望他问的那个"，这是技巧还是操纵？分界线在哪里？我的答案：分界线在你的 Land 是否真实——真实的核心信息 + 优雅的过渡 = 沟通技艺；虚假的核心信息 + 漂亮的过渡 = 操纵。</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>分布式系统 · 单主复制</b>：Throughline 像单主复制的主节点：所有写入经它排序，副本才不打架；两根主线就是双主，冲突留给听众合并。不像在：主节点挂了能重选，演讲中途换线，听众只会断片。</li>
+<li><b>心理学 · 薄片判断</b>：Ambady 与 Rosenthal 1993 年发现，陌生人看 30 秒无声课堂录像打的分，能预测学生期末给老师的评价。像在：判断确实半分钟成形。不像在：录像没有声音，靠的是神态姿态；钩子拼的是内容，两者合起来才是前 30 秒。</li>
+<li><b>神经科学 · 好奇心的信息缺口</b>：Loewenstein 1994 年提出，好奇来自察觉「知道的」和「想知道的」之间有缺口，开放循环就是故意挖这个缺口。不像在：缺口大到看不到补上的希望，好奇会变成放弃。</li>
+<li><b>信息论 · 冗余</b>：香农估计英语约一半是冗余，冗余让信息穿过噪声仍能还原。字幕式幻灯片也是冗余，却让理解下降。差别在接收端：香农的冗余在一条信道里纠错，演讲的冗余从两条通道涌入，抢同一块工作记忆。</li>
+<li><b>心理学 · 程序公正</b>：Tom Tyler 发现，人是否接受结果，很看重自己是否被认真听见，Pivot 先承认问题就靠这个。不像在：程序公正要求发言真能影响结果，Pivot 只承诺听见，所以 Land 必须真实。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>Chris Anderson 的 throughline 原则：一场演讲只能有一根主线，一句含动词、含张力、不超过 15 个英文单词的话。</li>
+<li>Throughline 是筛素材的刀：故事、数据、玩笑挂不上主线就剪掉；把题目名词当主线是常见错误。</li>
+<li>听众在开场 30 秒内决定是否投入，这 30 秒不该花在寒暄、自谦和议程上。</li>
+<li>开场最可靠的三种钩子是故事、反差和问题，原理是制造一个必须听下去才能闭合的开放循环。</li>
+<li>幻灯片是布景不是讲稿：一页只放一张图、一个数字或一个词，文字留给讲者说。</li>
+<li>冗余效应：屏幕文字加讲者照念，两个通道在工作记忆里抢资源，听众的理解反而下降。</li>
+<li>需要离线传阅的材料做两份，投影版和阅读版分开，别让一份 slideument 兼做两件事。</li>
+<li>Q&amp;A 难题用 Pivot、Bridge、Land 三步：承认问题，一句过渡，落到事先备好的核心信息。</li>
+<li>Pivot·Bridge·Land 是沟通还是操纵，取决于 Land 是否真实；不知道答案就直说不知道。</li>
+<li>Ambady 与 Rosenthal 的薄片研究显示，30 秒无声片段就足以形成稳定判断，开场的分量由此可见。</li>
+</ol>
 </section>
 <!-- 深入思考 -->
 <div class="deepthink">

@@ -72,7 +72,19 @@ header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -289,6 +301,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <p>挑一件你每周都要用 AI 做的事，把它写成一个<strong>含全部五要件的 prompt 模板</strong>，存下来复用。重点补齐你平时最爱省的"约束"和"范例"。</p>
 <p class="think">思考题：把要求写清楚，对 AI 和对人是同一种能力吗？练 prompt 会让你对人的沟通也更清晰吗？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>生物进化 · 变异与选择</b>：AI 当草稿引擎、人当主编，和进化是同一个结构：变异便宜且大量，设计感全来自选择。不像的是自然选择没有目标，只筛眼下能活下来的；主编的筛子是立意，所以立意不能交给负责出变异的那一方。</li>
+<li><b>心理学 · 加工流畅性</b>：Reber 和 Schwarz 1999 年的实验发现，越容易读的句子，人越倾向于判断为真。AI 文本的流畅正是这种错觉的放大器：读着顺，就以为想通了。不同在于实验里流畅只轻推一下判断，而一整篇无懈可击的 AI 初稿，会让作者自己也跳过检查。</li>
+<li><b>信息论 · 香农信息量</b>：香农 1948 年把信息量定义为意外程度：越可能出现的符号，携带的信息越少。模型挑最可能的词，AI 味因此就是低信息量。但意外不等于有价值，噪声最意外；该补的是既意外又真实的细节。</li>
+<li><b>佛学 · 藏传辩经</b>：藏传寺院辩经时，立宗者坐着，问难者站着击掌追问，专攻论点最弱的一环，理解是被逼出来的。让 AI 扮怀疑的读者是同一个结构。不像的是辩经双方都背着经论立场，AI 没有立场，问向哪里得你来指。</li>
+<li><b>领导力 · 任务式指挥</b>：普鲁士军队的任务式指挥只下达意图和边界，细节交给下级，好 prompt 也是这种 brief。区别在补空白：下级凭对意图的理解补，模型凭语料平均值补，所以给模型的约束和范例要更满。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>AI 时代的分工：AI 当草稿引擎负责产量，人当主编负责判断与取舍。</li>
+<li>写作流水线的两端是立意和用谁的声音，必须留给自己；素材、起草、改结构可以交给 AI。</li>
+<li>连立意也外包给 AI，文章会变得正确、流畅，却谁写的都一样。</li>
+<li>AI 味是正确却空洞的气味，根源是模型总选最可能的词，产出统计意义上的平庸。</li>
+<li>去 AI 味靠 Orwell 和 Zinsser 的老办法：具体替抽象，能删就删，打破工整节奏。</li>
+<li>只换同义词去不掉 AI 味，要换的是抽象本身；万能开头和三连排比是最强的 AI 指纹。</li>
+<li>Paul Graham 说写作会暴露没想透之处，所以可外包搜索与批评，绝不外包核心判断。</li>
+<li>把 AI 当陪练而不当枪手：先写下自己的观点，再让 AI 扮怀疑的读者，找出最弱的论点。</li>
+<li>好 prompt 是一份含角色、背景、任务、约束、范例五要件的 brief，缺哪项模型就用平均值补哪项。</li>
+<li>按香农信息论，越可能出现的词信息量越少，所以 AI 味本质上就是低信息量的文字。</li>
+</ol>
 </section>
 <!-- 深入思考 -->
 <div class="deepthink">

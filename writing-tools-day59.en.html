@@ -67,7 +67,19 @@ details .think{color:#3a3a3a;font-size:0.94rem;line-height:1.75;padding:4px 0 14
 .closing{background:#fff;border-top:3px solid #8a7a4a;padding:32px;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06)}
 .closing h2{font-size:1.35rem;margin-bottom:6px}
 .closing .en-name{font-size:0.95rem;color:#6a6a6a;font-style:italic;margin-bottom:18px;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -333,6 +345,30 @@ details .think{color:#3a3a3a;font-size:0.94rem;line-height:1.75;padding:4px 0 14
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Cognitive science · The generation effect</b>: In 1978 Slamecka and Graf showed that words people generate themselves are remembered better than words they merely read. Writing a card in your own words runs on the same mechanism: producing forces the brain to reprocess the material. The difference: the experiments measured recall, while an atomic note is after understanding that can later be taken apart and recombined.</li>
+<li><b>Neuroscience · Hebbian learning</b>: Donald Hebb proposed in 1949 that neurons repeatedly active together strengthen their connection, so memory lives in the links, not in any single cell. A slip-box's value likewise lies in link density. The difference: the brain reinforces links automatically; a card gets linked only when you stop and ask what it resembles.</li>
+<li><b>Complexity science · Stigmergy</b>: The French biologist Pierre-Paul Grassé coined the term in 1959 while studying termites. There is no blueprint; each termite responds only to the traces the last one left, and a mound grows. Luhmann asking his slip-box what comes next is the same structure: the topic emerges from accumulated traces. The difference: termites never go back and tidy up, while an emergent draft still has to be rebuilt with an outline for the reader.</li>
+<li><b>Buddhism · The parable of the raft</b>: In the Snake Simile discourse, the Buddha likens his teaching to a raft, used to cross the river, not carried on your back afterward. A writing tool is a raft too: its only value is less friction between you and your ideas, and once you enshrine and polish it, it becomes a burden. The difference: a writer crosses the river again every day, so you keep the raft; you just stop mistaking raft-building for crossing.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>An atomic note holds one idea per card, written in your own words, and stands on its own outside any context.</li>
+<li>Paraphrasing in your own words tests understanding: the card you cannot write marks what you never really understood.</li>
+<li>A note collection's value lies in its links, not its size; the collector's fallacy mistakes saving something for learning it.</li>
+<li>Luhmann wrote over seventy books from roughly ninety thousand linked cards, letting essays emerge bottom-up where links clustered.</li>
+<li>Tags are drawers and links are lines of thought, so every new card should be tied to an old card it supports, refutes, or extends.</li>
+<li>Outlining and discovery writing are equally valid: outline a memo whose conclusion you know, and discover a retro you need to think through.</li>
+<li>A draft that emerged through discovery still needs to be rebuilt with an outline, because exploration serves you and structure serves the reader.</li>
+<li>A tool's only value is reducing friction between you and your ideas; constant migrating and tinkering is productivity porn, a refined form of procrastination.</li>
+<li>Use AI as a sparring partner that attacks your claims and finds counterexamples, not as a ghostwriter, since the thinking it skips is the point of writing.</li>
+<li>A slip-box works like stigmergy in termite building: structure emerges from traces left by earlier steps, not from a blueprint drawn in advance.</li>
+</ol>
+</section>
 <!-- Closing -->
 <section class="closing">
   <h2>The method, in one line</h2>

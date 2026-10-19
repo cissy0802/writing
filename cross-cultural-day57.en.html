@@ -69,7 +69,19 @@ details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -313,6 +325,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Information theory · Shannon's shared codebook</b>: a message compresses only because sender and receiver share a codebook; the thicker the codebook, the less has to travel. High context is a heavily compressed message, and a reader with a different codebook decodes noise. Where it breaks: Shannon said in 1948 that meaning is irrelevant to the engineering problem, while Hall's context is all meaning and relationship.</li>
+<li><b>Psychology · The curse of knowledge (the tapping study)</b>: in 1990 the Stanford graduate student Elizabeth Newton had people tap out the rhythm of well-known songs. Tappers guessed listeners would name half; listeners named 3 of 120. "I was perfectly clear" is the same illusion: the melody plays only in the writer's head. The difference: both sides of the experiment shared a culture, so the gap was pure information asymmetry; cross-cultural writing stacks a context mismatch on top.</li>
+<li><b>Linguistics · Grice's implicature</b>: Grice argued that listeners assume the speaker is cooperating, which is how they infer the real message behind "maybe take another look." In 1976 Elinor Ochs Keenan found Malagasy speakers routinely withholding information, so the maxim of quantity is not universal. Like Meyer's scale: the inference rules themselves shift with culture.</li>
+<li><b>Distributed systems · Postel's robustness principle</b>: the TCP spec says "be conservative in what you send, be liberal in what you accept": send only the most standard format, tolerate whatever arrives. International English is conservatism on the sending side. Where it breaks: a protocol peer can't take offense and a person can, so relentless plainness may still bruise a high-context reader.</li>
+<li><b>Neuroscience · Sensory adaptation</b>: when a stimulus stays constant, sensory neurons gradually stop reporting it, which is why you don't feel your clothes. Cultural defaults are a stimulus that never goes away, so they go unnoticed. The difference: take the clothes off and the sensation returns, but cultural defaults usually take an outside reader to see.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Cross-cultural communication often fails on a mismatch of context level: Edward Hall split high context, where meaning sits outside the words, from low context, where it sits in them.</li>
+<li>When writing for a mixed audience, lean low-context and write for the reader in the room with the least shared context.</li>
+<li>Put key decisions into explicit, actionable statements instead of leaving them in subtext for the reader to intuit.</li>
+<li>How direct feedback should be is set by culture: Erin Meyer notes some cultures intensify criticism with upgraders and others soften it with downgraders.</li>
+<li>Cross-cultural feedback separates how serious a problem is from how you phrase it: the tone can be soft, but blocker versus nit must be explicit.</li>
+<li>International English is not dumbing down; it removes idioms, slang, and cultural references so meaning doesn't depend on background the reader lacks.</li>
+<li>International English in practice means short sentences, common words, explicit subjects, one meaning per word, and acronyms spelled out on first use.</li>
+<li>The most dangerous cultural taboos are unnoticed defaults: holidays, colors, units, date formats, and local allusions.</li>
+<li>Avoiding cultural taboos takes not a memorized list but a reflex of asking "is this my water?", plus an outside reader before sending.</li>
+<li>International English mirrors TCP's robustness principle: be conservative on the sending side and use only the most standard, least misreadable phrasing.</li>
+</ol>
+</section>
 <div class="deep-title">— Deeper Questions —</div>
 
 <details>

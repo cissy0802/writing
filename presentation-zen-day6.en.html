@@ -83,11 +83,23 @@ header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .crap-grid{grid-template-columns:1fr}
   .rule-pillars{grid-template-columns:1fr;gap:10px}
@@ -500,6 +512,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
     <div class="label">This Week's Exercise</div>
     <p>Take any deck you have in progress, whatever its length. Force 10/20/30 onto it. (1) Cut to ten slides — and write down what you couldn't bear to lose; that list is your real priority order. (2) Set the minimum font to 30pt — what no longer fits must be cut, moved to the next slide, or sent to the appendix. (3) Time the talk; if you can't finish in twenty minutes, the core hasn't converged. The seventy percent you cut becomes your Q&amp;A ammunition — which is where it belonged all along.</p>
   </div>
+</section>
+
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Information theory · Shannon's signal-to-noise ratio</b>: In Shannon's 1948 theory, how much a channel can carry reliably depends on the ratio of signal to noise, and every logo, watermark, and border on a slide pushes that ratio down. The difference: Shannon's noise comes from the channel itself, beyond the sender's control; nearly all the noise on a slide was put there by the speaker, which is why it can be deleted.</li>
+<li><b>Neuroscience · biased competition</b>: Desimone and Duncan proposed in 1995 that objects in view compete for limited representation in visual cortex; the more items, the less each one gets, a neural version of "noise is negative." The difference: the brain weights whatever matches its goal, and CRAP's Contrast is the speaker applying that weight for the audience in advance.</li>
+<li><b>Eastern philosophy · Laozi on the empty hub</b>: Chapter 11 of the Tao Te Ching says the use of a wheel, a pot, or a room lies in its hollow, treating emptiness as the working part, just as ma does. The difference: Laozi's void is a container for things to go into; the white space on a slide is room for the audience's own understanding to grow.</li>
+<li><b>Psychology · Cowan's magical number 4</b>: Nelson Cowan's 2001 reassessment put working memory at about four chunks, tighter than seven plus or minus two. That actually strengthens "one slide, one idea": ten slides work not because people hold all ten at once, but because each slide is a single chunk handed off in turn.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Garr Reynolds brings the Japanese idea of ma into slide design: white space is not unfinished, it is deliberately left to guide the eye.</li>
+<li>Any decorative element that does not serve the message is noise, and noise is negative because it competes with the signal for limited attention.</li>
+<li>A "slideument" meant both to be presented and read later should be split into a minimal talk version and a detailed reading version.</li>
+<li>The CRAP principles (Contrast, Repetition, Alignment, Proximity) give non-designers an executable checklist for professional-looking slides.</li>
+<li>Contrast should be large: keep just two type sizes, and cut or move anything below the second level to another slide.</li>
+<li>Visual storytelling means each slide carries one idea and one image; the image is the argument and the words are only its caption.</li>
+<li>A data chart should drop 3D, shadows, and gridlines, and color only the one bar you want remembered, letting the data speak.</li>
+<li>Guy Kawasaki's 10/20/30 rule: no more than ten slides, no more than twenty minutes, and no font smaller than 30 points.</li>
+<li>A 30-point minimum font works as a content editor, physically unable to hold a sea of bullets and forcing only the core onto the slide.</li>
+<li>Noise in Shannon's channel comes from outside, but nearly all noise on a slide is added by the speaker, which means it can be removed.</li>
+</ol>
 </section>
 
 <nav class="nav">

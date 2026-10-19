@@ -56,7 +56,19 @@ details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -263,6 +275,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>挑一件你想让人记住的事（一次故障、一个决定），先写成一句「正常」的陈述，再改写：只准用短句，至少重复一个关键词一次，不许加形容词。念出声，对比哪个更狠。<strong>思考题</strong>：重复与短句能制造力量，但用多了会像喊口号。这条「诗与口号」的界线，你凭什么判断？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>心理学 · 生成效应</b>：Slamecka 与 Graf 1978 年的实验发现，自己补全出来的词比直接读到的词记得更牢。冷眼观察是同一个结构：作者只给细节，结论由读者自己推出来，所以留得住。不像在于，生成效应只测记忆，Didion 要的还有信任：读者不信被灌输的判断。</li>
+<li><b>神经科学 · 左脑「解释器」</b>：Gazzaniga 研究裂脑病人时发现，左半球会为右半球做出的动作当场编一个说得通的理由，病人自己深信不疑。「我们靠给自己讲故事活下去」说的正是这台机器：把碎片拼成连贯叙事，是大脑的默认动作。不像在于，解释器不知道自己在编，Didion 偏把选择、排列的过程摊开给你看，她的诚实恰恰是对这台机器的反抗。</li>
+<li><b>量子力学 · 玻尔的测量观</b>：玻尔强调，量子现象离不开测量它的整套实验装置，结果要连同仪器一起报告。「用我当仪器」是同一个结构：观察者不假装隐身，而是写进报告。不像在于，物理仪器能校准、能换人重做；Didion 的「我」只此一台，无法复现，只能靠坦白边界换取可信。</li>
+<li><b>心理学 · 序列位置效应</b>：Murdock 1962 年的自由回忆实验显示，一串词里最后几个记得最好，即近因效应。把「我错了」压到句末、独立成句，借的就是这条曲线。不像在于，近因效应讲的是一长串里的位置，句末重音作用在一句之内，而且带着立场：放在最后的，是你愿意担的。</li>
+<li><b>信息论 · 冗余</b>：Shannon 1948 年估计普通英文约有一半是冗余；冗余降低每个字的信息量，却让信息扛得住噪声。「挂了四十七分钟」的重复就是有意加冗余，让重点穿过读者的分心。不像的是，信道里冗余越多越稳，文字里重复过量会撞上神经层面的重复抑制：大脑对同一刺激反应递减，诗就成了口号。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>形容词是作者替读者下的结论，具体细节让读者自己得出结论，后者更可信也更难忘。</li>
+<li>改稿时把每个形容词圈出来，问能否换成一个摄像机拍得到的具体事实。</li>
+<li>冷峻不是冷漠：Didion 的克制底下始终有关切，冷到失了体温才是误区。</li>
+<li>「个人即仪器」：诚实写下一个具体的「我」看到的碎片，比空喊时代判断更能照出时代。</li>
+<li>叙事是从混乱碎片里选择、排列出的说得通的版本，不是真相本身；承认这一点反而更可信。</li>
+<li>词序即立场：挪动一个词的位置就像挪动相机，句子的意义和担当随之改变。</li>
+<li>把最重要的词压在句末、独立成句；塞进「虽然」从句里的关键信息会被软化成借口。</li>
+<li>非虚构的诗意来自节奏而非辞藻：重复制造重量，短句制造停顿，日常小动作让抽象落地。</li>
+<li>想强调就调节奏、别加形容词；但句句排比、滥用重复，诗就滑成了口号。</li>
+<li>Didion 把叙事的选择过程摊开，正好反抗了大脑把碎片自动拼成连贯故事的「解释器」。</li>
+</ol>
 </section>
 <div class="deep-title">— 深入思考 —</div>
 <details>

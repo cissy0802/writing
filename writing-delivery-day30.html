@@ -60,7 +60,19 @@ details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -286,6 +298,30 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>给自己设一个能坚持一整年的最小写作节奏（如每周 300 字），写下来贴在显眼处。再翻出你一年前写的东西，对比今天的手感。<strong>思考题</strong>：在 AI 能瞬间生成无限文章的时代，「持续亲手写」复的到底是什么利——是文字本身，还是别的什么？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>心理学 · 暴露疗法</b>：治焦虑时，回避让恐惧续命，反复渐进地面对才让它降下来。「再改一稿」就是体面的回避。像在哪：发得越勤，被评判的刺痛越钝。不像在哪：暴露疗法只管恐惧，不管作品好坏，发布前清单仍省不得。</li>
+<li><b>分布式系统 · 单点故障</b>：读者全押在一个平台，等于系统挂在一台没有副本的节点上，一宕机全盘归零；邮件列表建在开放协议上，没人能单方面收走。不像在哪：送达率仍受大邮箱的过滤规则左右。</li>
+<li><b>进化人类学 · 邓巴数</b>：Robin Dunbar 认为人能维持的稳定关系约 150 个，往外是 500、1500 两层更浅的圈子，一千个铁杆正落在其间。像在哪：一对一的经营有认知上限。不像在哪：读者彼此连接，作者不必记住所有人。</li>
+<li><b>复杂性科学 · 优先连接</b>：Barabási 与 Albert 1999 年指出，连接越多的节点越容易得到新连接，网络因此呈幂律。作品体越厚，越多人顺着旧文找上门。不像在哪：写作更像 2001 年加入「适应度」的版本，内容质量也算数，不只看谁先来。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>草稿不发布价值为零，读者的真实反馈是闷头改十遍也换不来的信息。</li>
+<li>用一份具体的发布前清单替代「再改一稿」的模糊冲动，清单走完就发。</li>
+<li>完美主义常常不是高标准，而是怕被评判的恐惧；反复发布能让这份恐惧慢慢变钝。</li>
+<li>社交平台的触达是借来的，算法一改、账号一封，作者和读者的连接当场归零。</li>
+<li>用租用平台做发现入口，用邮件列表和博客这类自有渠道沉淀读者的许可。</li>
+<li>Kevin Kelly 算过：创作者只需约一千个铁杆粉丝，就足以靠作品谋生。</li>
+<li>为一个具体的理想读者写，比试图讨好所有人更能打动人。</li>
+<li>读者社区的地基是手工的：回早期读者的信、记住名字，经营关系而不是流量。</li>
+<li>写作复利来自技艺、资产、关系三处叠加，作品体越厚，新的读者和机会越容易找上门。</li>
+<li>James Clear 提醒复利前期有段看不出差别的平台期，只看单篇数据就是用利息否定本金。</li>
+</ol>
 </section>
 <div class="deep-title">— 深入思考 —</div>
 <details>

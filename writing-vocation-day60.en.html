@@ -62,11 +62,23 @@ details .think{color:#3a3a3a;font-size:0.94rem;line-height:1.75;padding:4px 0 14
 .closing{background:#fff;border-top:3px solid #8a7a4a;padding:32px;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06)}
 .closing h2{font-size:1.35rem;margin-bottom:6px}
 .closing .en-name{font-size:0.95rem;color:#6a6a6a;font-style:italic;margin-bottom:18px;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.25rem}
 }
 </style>
@@ -322,6 +334,30 @@ details .think{color:#3a3a3a;font-size:0.94rem;line-height:1.75;padding:4px 0 14
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Complexity science · Preferential attachment</b>: In Barabási and Albert's 1999 scale-free network model, new nodes prefer to link to nodes that already have many links, so the rich get richer. A compounding body of work has the same shape: the more an old post is linked, the easier it is to find and link again. The difference: in a network the edge comes from arriving early, while a body of work cannot skip ahead; its age has to be written one week at a time.</li>
+<li><b>Psychology · The identifiable victim effect</b>: In a 2007 study by Small, Loewenstein and Slovic, a named seven-year-old girl from Mali drew more donations than a page of famine statistics. Writing for one person runs on the same mechanism: a specific person stirs feeling, an aggregate does not. The difference: there the donor is moved; here the first one recalibrated is the writer.</li>
+<li><b>Investing · The venture power law</b>: Venture returns come from a tiny share of deals while most go to zero, so investors build portfolios instead of betting on one company. Showing your work is the same play: of all the doors you open, often just one gets walked through. The difference: in venture the investor picks; in writing the reader picks, and the stake is time, not capital.</li>
+<li><b>Eastern philosophy · The Bhagavad Gita</b>: The Gita says you have a right to your action but never to its fruits. The long game's rule of ignoring per-post numbers and only asking whether you shipped on time has the same structure, moving attention from outcomes back to daily action. The difference: the Gita asks you to let go of the fruit entirely, while the writer's long game is still waiting for the curve to bend upward in year ten.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Public writing compounds twice: craft improves with every piece, and old posts keep getting found and bringing in readers.</li>
+<li>Judge writing by the ten-year curve, not single-post numbers; quitting over one post's stats is a gambler's move.</li>
+<li>Most writers stall on the plateau; the long game is whether you keep shipping through the first two unapplauded years.</li>
+<li>Readers are a relationship of people who keep coming back, not countable traffic, and that relationship outlasts platforms and algorithms.</li>
+<li>Vonnegut's advice is to write for one specific person: tone, examples and depth calibrate themselves and reach many similar people.</li>
+<li>Writing for everyone sands off every edge, producing a piece nobody objects to and nobody remembers.</li>
+<li>The right to publish is no longer scarce; being found is, so stop waiting for permission or for feeling ready.</li>
+<li>Kleon's show-your-work strategy means publishing process, notes and drafts to enlarge your searchable surface area.</li>
+<li>Writing income has two layers: books and subscriptions are a thin, slow tip, while reputation, opportunities and leverage form the mountain.</li>
+<li>Showing your work mirrors a venture power-law portfolio: most doors go unvisited, and the payoff comes from the one or two readers find.</li>
+</ol>
+</section>
 <!-- Closing -->
 <section class="closing">
   <h2>The Vocation, in One Line</h2>

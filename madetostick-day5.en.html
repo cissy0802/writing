@@ -63,7 +63,19 @@ header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -438,6 +450,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Information theory · minimum description length</b>: "Core plus compact" is like finding the shortest description of data: good compression keeps a part that can regenerate the whole, and Commander's Intent must regenerate every decision in the field. The difference: information theory prizes lossless compression; Commander's Intent is deliberately lossy, keeping only what to do when every plan fails.</li>
+<li><b>Neuroscience · reward prediction error</b>: Schultz and colleagues showed in 1997 that dopamine neurons fire for rewards that beat expectation and go quiet once the expectation updates: the opposite of attention is the already known, and constant surprise stops registering. The difference: neurons don't care whether surprise leads anywhere; writing must close the gap with insight.</li>
+<li><b>Cognitive science · dual coding</b>: Paivio's dual coding theory holds that concrete words are stored in both verbal and imagery systems, abstract words mostly in the verbal one, which makes them harder to recall: nearly a lab version of the Velcro theory. The difference: Paivio counts channels, Heath counts hooks, where a scene, a sense, or a memory each adds one.</li>
+<li><b>Distributed systems · coordination-free agreement</b>: Commander's Intent lets soldiers reach consistent decisions when plans break and communication is cut, like distributed systems that converge through shared invariants rather than a central coordinator. The difference: CRDTs guarantee convergence mathematically; a sentence of intent only raises the odds, and it drifts as it is passed down.</li>
+<li><b>Buddhism · the finger pointing at the moon</b>: Zen calls the scriptures a finger pointing at the moon; stare at the finger and you miss the moon. Heath says readers should remember the relationship, not the number: the number is the finger, the relationship the moon. The difference: Zen finally drops the finger, while writing must sharpen it, since a missing baseline or wrong scale points it astray.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>The Heaths found that ideas stick not through creative genius but through six learnable design choices, the SUCCESs checklist.</li>
+<li>Simple does not mean short; it means core plus compact: find the core first, then compress it into one sentence.</li>
+<li>Finding the core means ranking every candidate point in order, not grouping them; seven parallel priorities mean no priority.</li>
+<li>A good Commander's Intent is an actionable proposition the team can still decide by when every plan has failed.</li>
+<li>The opposite of attention is the already known, so a writer must break the reader's schema to capture attention.</li>
+<li>In Loewenstein's gap theory, surprise opens a curiosity gap, but insight has to close it or the piece becomes clickbait.</li>
+<li>Concrete language lets every reader see the same picture; more hooks make an idea more memorable and easier to coordinate on.</li>
+<li>Credibility comes not from piling on authorities but from a Sinatra-test case, anti-authority testimony, and human-scale statistics.</li>
+<li>Statistics exist to illustrate a relationship, so give a baseline and translate numbers into a scale readers can feel.</li>
+<li>Dual coding theory says concrete words are stored in both verbal and imagery memory, one reason concrete beats abstract.</li>
+</ol>
+</section>
 <nav class="nav">
   <a href="index.en.html">← Back to Writing</a>
 </nav>

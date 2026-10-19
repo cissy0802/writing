@@ -66,7 +66,19 @@ header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -398,6 +410,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作</div>
 <p>找你最近一篇含数据的汇报或 Pitch。逐条审视每个数字，问自己三个问题：(1) 读者能否用直觉感受这个量级？不能 → 翻译成人体尺度。(2) 这个数字相对什么是 baseline？没说 → 补上对比基线。(3) 我有没有一个"无可争辩的硬案例"（Sinatra Test）？没有 → 找一个最极端的客户讲他的故事。改完之后，把新旧两版给同一个人看（最好是非本领域同事），问他："你记住了哪些数字？"——能复述的，就是粘住的。</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>信息论 · 最小描述长度</b>：「核心 + 压缩」像给数据找最短描述：好的压缩不在删得多，而在留下的部分能重新生成整体，司令官意图也要能生出现场的每个决定。不像在：信息论追求无损，司令官意图是刻意的有损压缩，只保住「计划全失效时该做什么」。</li>
+<li><b>神经科学 · 奖赏预测误差</b>：Schultz 等人 1997 年发现，多巴胺神经元只对超出预期的奖赏放电，预期一更新信号就消失，正合「注意力的反义词是已知」，也解释了每段都炸等于没炸。不像在：神经元不管意外有没有下文，写作必须用洞见关上缺口。</li>
+<li><b>认知科学 · 双重编码</b>：Paivio 的双重编码理论认为，具体词同时存进语言和图像两套系统，抽象词多半只有语言一套，所以更难记，近乎魔术贴理论的实验版。不像在：Paivio 数编码通道，Heath 数钩子，场景、感官、个人经历各算一个。</li>
+<li><b>分布式系统 · 无协调的一致</b>：司令官意图让士兵在计划失效、联络中断时各自做出一致判断，像分布式系统靠共享不变量而非中心协调来收敛。不像在：CRDT 的收敛有数学保证，一句意图只能提高一致的概率，层层转述还会漂移。</li>
+<li><b>佛学 · 以指指月</b>：禅家说经文是指月的手指，盯着指头就看不见月亮；Heath 说读者该记住关系而不是数字：数字是指，关系是月。不像在：禅宗终要放下手指，写作却得把手指磨准，缺了基线、错了量级就指歪了。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>Heath 兄弟发现，想法能否粘住不靠天才创意，靠 SUCCESs 六个可学的设计选择逐项对照。</li>
+<li>Simple 不等于说得短，而是「核心 + 压缩」：先找到核心，再把核心压成一句话。</li>
+<li>找核心要给全部候选信息排出序号而不是分类，并列七大重点等于没有重点。</li>
+<li>好的司令官意图是可执行的命题，计划全部失效时团队仍能凭这一句话做对决策。</li>
+<li>注意力的反义词是「已知」，先打破读者的预期模式（schema），才能抓住注意。</li>
+<li>按 Loewenstein 的缺口理论，意外制造好奇缺口，但缺口必须用洞见关上，否则就沦为骗点击。</li>
+<li>具象让所有读者在脑中看到同一幅画面，钩子越多越好记，也越便于跨部门协作。</li>
+<li>可信不靠堆权威，靠 Sinatra 式硬案例、被影响者的反权威背书和人体尺度的统计。</li>
+<li>统计数字是用来呈现关系的，要给出对比基线，并翻译成读者能直接感受的量级。</li>
+<li>双重编码理论认为具体词同时存进语言和图像两套记忆，这是具象比抽象更好记的一个原因。</li>
+</ol>
 </section>
 <div class="nav">
 <a href="index.html">← 回到写作目录</a>

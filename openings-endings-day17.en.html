@@ -85,6 +85,17 @@ header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
@@ -92,6 +103,7 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   .card{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .deep{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .gap-vis .gap-row{flex-direction:column}
   .loop-vis .arrow{transform:rotate(90deg)}
 }
@@ -348,6 +360,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
     <p>Dig out an old piece that had an opening image or question. Rewrite the ending so it returns to that image or question — but carries the new meaning earned by the whole journey. Read it twice: once to check it's a "surprise," once to check it's "exactly right."</p>
     <p class="think">Reflection: Which forms suit a full-circle ending, and which are better off cutting off sharply or ending on a call to action?</p>
   </div>
+</section>
+
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Buddhism · The Poisoned Arrow</b>: In MN 63, the Buddha says a man shot with a poisoned arrow who first demands to know who shot it and what wood the bow was made of will die before he finds out. Throat-clearing openings study the bow; the reader wants the arrow out. Unlike the Buddha, a writer does eventually return to background.</li>
+<li><b>Neuroscience · Curiosity and the Hippocampus</b>: Gruber and colleagues found in 2014 that the more curious people were about a question, the better they remembered the answer, and even unrelated faces seen while waiting. Alike: a gap stamps nearby material into memory. Unlike: the lab gap closed in seconds; an essay's gap must last the whole piece.</li>
+<li><b>Cognitive Science · Predictive Processing</b>: Predictive processing holds that the brain keeps guessing the next moment and updates its model on prediction errors. "Surprise yet exactly right" is a small, digestible error: the reader did not see the ending coming, but a clue planted in the opening explains it at once, and the model moves up a notch. Unlike: the brain works to minimize surprise, while a good ending manufactures one on purpose and then resolves it.</li>
+<li><b>Psychology · The Peak-End Rule</b>: In Kahneman and colleagues' 1993 cold-water study, adding 30 seconds of slightly warmer water made most people prefer to repeat the longer trial. Memory grabs the peak and the end, so endings carry leverage. Unlike: the lab gained by adding a gentle tail; an essay that keeps going past its peak only deflates.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>The first two paragraphs of most drafts are a warm-up written for yourself; in revision, try cutting them and starting at paragraph three.</li>
+<li>Opening on a scene (in medias res) means skipping the throat-clearing and starting from a concrete moment, person, or action, as Horace demanded two thousand years ago.</li>
+<li>A concrete scene lets the reader see it directly, while an abstract claim must be rendered in the reader's head, so it is easier to skim past.</li>
+<li>A scene opening needs a sentence that ties the image back to the point, or it is vividness for its own sake and leads the reader astray.</li>
+<li>Curiosity is a state, not a trait: readers itch when they realize something is missing, so a good opening first cuts a precise information gap.</li>
+<li>A curiosity gap must sit where readers think they already know; a gap too broad does not itch, and a gap never paid off is clickbait.</li>
+<li>The hook principle: the first sentence has one job, to induce the reader to read the second, so an opening should create momentum, not summarize.</li>
+<li>A lead should grab the one thing the reader actually cares about, like the "no school Thursday" lesson Nora Ephron learned, not list the meeting details.</li>
+<li>A full-circle ending returns to the opening image or question but carries the new meaning earned along the way; a verbatim replay is cheap.</li>
+<li>The peak-end rule says memory weights the peak and the end, so an "in summary" close or padding after the climax wastes the ending's leverage.</li>
+</ol>
 </section>
 
 <!-- Deep dive -->

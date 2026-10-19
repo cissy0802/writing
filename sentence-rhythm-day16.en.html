@@ -61,7 +61,19 @@ header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -307,6 +319,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Neuroscience · Mismatch negativity</b>: Slip an odd tone into a run of identical sounds and the brain emits a mismatch negativity on EEG (Näätänen et al., 1978). Same-length sentences are the repeated tone; the hammer sentence is the deviant. The difference: the brain reacts automatically, while the writer plants the deviant on purpose.</li>
+<li><b>Information theory · Surprisal</b>: In Shannon's framework, the less probable a signal, the more information it carries. After several long sentences the reader expects another; a short one is the least expected, so it lands hardest. The difference: surprisal measures content, while rhythm creates a surprise of form.</li>
+<li><b>Psychology · Working memory</b>: We can hold only a few chunks in mind at once, so a long sentence piling up conditions pushes its own beginning out. A paragraph break seals a chunk for the reader. The difference: working memory counts items, while paragraphs are cut by meaning, so one idea can run long.</li>
+<li><b>Buddhism · Counting the breath</b>: Anapanasati rests attention on each in-breath and out-breath, and the end of a breath is where awareness lands. Punctuation as breath marks likewise tells the reader where to inhale and where to stop. The difference: meditation lets attention rest on the breath itself; writing uses the breath to push attention toward content.</li>
+<li><b>Complexity science · 1/f noise</b>: In 1975 Voss and Clarke found that fluctuations of pitch and loudness in music approximate a 1/f spectrum, between random white noise and monotonous Brownian noise. Sentence length works the same way: uniform length is monotony, random jumps are noise, and good rhythm has both variation and echo. The difference: 1/f is a statistical regularity, while a writer chooses every length deliberately.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Le Guin treats hearing as the primary way to control prose rhythm: to judge a sentence, read it aloud first.</li>
+<li>Several sentences in a row with the same subject-verb-object structure lull the reader; switching subjects, inserting a short sentence, or adding a question changes the beat.</li>
+<li>Varying sentence structure is not decoration but a way to put key information on the stress; the most effective variation is often one short sentence.</li>
+<li>Parallelism is deliberate sameness, and beyond three rounds it slides from forceful to monotonous.</li>
+<li>Rhythm comes from mixing long and short: a short sentence after a run of long ones is the hammer sentence, so put the most important judgment in the shortest sentence.</li>
+<li>A hammer sentence draws its force from contrast; surrounded by other short sentences it disappears, and prose made only of short sentences is just as tiring.</li>
+<li>Paragraphs are a larger unit of rhythm: one idea per paragraph, and a key judgment standing alone as its own paragraph uses white space to shout.</li>
+<li>Lu Xun urged cutting every dispensable word, sentence, and paragraph, so rhythmic pruning reaches beyond the sentence to whole paragraphs.</li>
+<li>Punctuation is a score for reading aloud: a comma is a small pause, a period lands, a dash is a sudden turn, and a colon promises the answer is coming.</li>
+<li>Same-length sentences act like a repeated stimulus that dulls the brain's response, while a short sentence after long ones is the least expected and so the heaviest.</li>
+</ol>
+</section>
 <!-- Deep Dive -->
 <div class="deepthink">
   <h3>Deep Dive</h3>

@@ -58,12 +58,24 @@ details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
   .card{padding:24px 20px}
   .card h2{font-size:1.3rem}
+  .xbox{padding:24px 20px}
 }
 </style>
 </head>
@@ -284,6 +296,30 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>把你写的一段文字，用手机的「朗读屏幕」功能听一遍。记下每一处：读错的字、念成噪音的缩写数字、失效的「见上图」。逐条改成耳朵能接住的说法。思考题：如果一段文字在 AI 朗读下变得难懂，问题真出在「机器不懂」，还是它替你照出了文字本就含混的地方？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>认知科学 · 语音回路（Baddeley 与 Hitch，1974）</b>：工作记忆里有一条「语音回路」，靠默念把约两秒的声音留在脑中；1975 年的词长效应实验发现，人记得住的词数大约就是两秒内念得完的量。默读发声走的正是这条回路，一口气念不完的长句会把它撑满。不像的是，回路只管短时缓存，句子好不好听它不管。</li>
+<li><b>神经科学 · 皮层振荡（Giraud 与 Poeppel，2012）</b>：听人说话时，听觉皮层约 4–8 赫兹的 θ 振荡会对上音节的节拍，把语流切成一块一块。像在大脑本来就按节律去听；不像在振荡偏爱规律，写作却要打破等长，靠错落制造重音。</li>
+<li><b>信息论 · 前向纠错</b>：能重传的信道出了错可以再要一遍，只播一次的广播就得预先塞进冗余码。书面是可回看的重传信道，演讲是广播，重复关键句就是纠错码。不像的是，纠错码对每一位一视同仁，演讲者只重复最该记住的那句。</li>
+<li><b>佛学 · 刹那灭</b>：佛教的刹那灭论说，一切有为法生起的当下就在灭去；翁说声音只在消逝时存在，几乎是同一句话。不像在于，佛学认为纸上的字同样无常，翁却正是拿声音的流逝去对照文字的持久。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>读者默读时脑中会无声地发音，这叫默读发声，所以读着拗口的句子看着也累。</li>
+<li>写完最便宜也最有效的检验是出声读一遍，舌头打结的地方就是该改的地方。</li>
+<li>眼睛会跳读、脑补、原谅，耳朵只如实报告哪里别扭，朗读因此是最诚实的编辑器。</li>
+<li>Gary Provost 用五字句示范：句子长短交替文字才有呼吸，句句等长就成了节拍器。</li>
+<li>好的节奏是用长句把读者带远，再用一个短句把他钉住，最重的话放进最短的句子。</li>
+<li>读者能回看而听众不能，所以演讲稿要短句、少从句、口语词、一句一个意思。</li>
+<li>书面忌重复，演讲靠重复让人记住，不敢复述关键句的演讲稿会让听众跟丢。</li>
+<li>Walter Ong 指出声音只在消逝时存在，音频只有时间一根线，要靠口头小结、编号和关键词复现当路标。</li>
+<li>加粗、项目符号和「见上表」到了耳朵里全部失效，缩写和长数字要翻成耳朵接得住的说法。</li>
+<li>演讲重复关键句和信息论的前向纠错同构：只播一次的信道，得预先塞进冗余。</li>
+</ol>
 </section>
 <div class="deep-head" data-tts="58ce3a6530eaec47">深入思考</div>
 <details><summary>「为耳朵写」会不会和「为读者省时间」冲突——口语化往往更长、更啰嗦？</summary><div>表面看冲突，实则不。口语化的「啰嗦」分两种：一种是无意义的填充（「这个那个」「然后呢」），该删；另一种是<strong>为理解服务的冗余</strong>——重复关键句、设问引路、口头小结，它们用字数换「不必回看」的省心。书面读者用回看省时间，听众没有回看，就得靠这些路标省时间。所以判据还是「为谁」：为听众不迷路而多的字，是投资；为自己嘴顺而多的字，是脂肪。书面追求字字千金，音频追求步步有标——目标都是省读者的力气，只是省的地方不同。</div></details>

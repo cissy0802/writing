@@ -81,11 +81,23 @@ details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .role-vis .roles{flex-direction:column}
   .arc-vis .arc-row{flex-direction:column}
@@ -311,6 +323,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>用 Moore 模板给你的产品填一句，每个空都要具体，不许用形容词。填不出「关键差异」？那就是你真正的问题。思考题：价值主张要不要写给「所有人」看？聚焦一个窄客群的主张，往往比讨好所有人的主张卖得更好——这与直觉相反，为什么？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>心理学 · 可识别受害者效应</b>：Small、Loewenstein 与 Slovic 2007 年的实验里，具名的马里小女孩募到的钱远多于饥荒统计。案例不写「某大型企业」靠的是同一机制：具体的人让人动心。不像的是，实验里数字冲淡了同情，案例却要靠数字落地：人负责打动，数字负责被转述。</li>
+<li><b>心理学 · 自我参照效应</b>：Rogers 等人 1977 年发现，判断一个词「像不像自己」，比只判断词义记得牢得多。「让客户当主角」就是把信息挂到读者的自我上。不像在于，实验只测记忆，文案还要读者动手。</li>
+<li><b>佛学 · 指月之指</b>：《楞严经》说以手指月，该看月亮，盯着手指就连月带指一起丢了。向导品牌是手指，客户要抵达的处境是月亮。不像的是，佛法最终要人放下手指，品牌却希望客户上岸后还记得谁指的路。</li>
+<li><b>信息论 · 最小描述长度</b>：Rissanen 1978 年的最小描述长度原则：描述得越短，越说明抓到了规律。价值主张压不成一句，往往是定位还没结构。不像在于，信息论的压缩要能还原原数据，价值主张却有意丢弃，只留客户付钱的那条理由。</li>
+<li><b>生物进化 · 累赘原理</b>：Zahavi 1975 年提出，孔雀大尾巴可信，正因为代价高、弱者装不出。形容词是最廉价的主张，真名客户和可核查的数字才是昂贵信号。不像的是，孔雀的代价长在身上，商业里的代价要读者能核查才算数。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>创始故事别用「成立于哪年、专注于什么」开场，先讲一个具体的人遇到的、让他坐不住的真实痛点。</li>
+<li>功能可以被抄，「为什么」抄不走；Sinek 的黄金圈从内向外讲：Why、How、What。</li>
+<li>起源写成融资获奖的大事记就成了简历，动机拔高或造假会让听众立刻失去信任。</li>
+<li>品牌叙事里客户才是英雄，品牌只当帮英雄的向导，就像尤达之于卢克。</li>
+<li>向导要同时亮出共情和权威：只有共情像客服，只有权威像王婆卖瓜。</li>
+<li>案例研究是一个客户的小型英雄之旅：现状、冲突、转折，最后落在一个带数字的结果上。</li>
+<li>「某公司」「显著提升」这类模糊说法等于无效，没有冲突的案例读起来只像广告。</li>
+<li>价值主张讲客户雇你去干的活，不讲产品参数：人们要的是墙上的洞，不是钻头。</li>
+<li>用 Moore 的定位模板逐格填具体内容，填不出关键差异，说明定位没想清楚。</li>
+<li>形容词是最廉价的主张，真名客户和可核查的数字像累赘原理里的昂贵信号，难以伪造所以可信。</li>
+</ol>
 </section>
 <div class="deep-head" data-tts="354d6bb0e30e90a4">深入思考</div>
 <details><summary>创始故事讲「真实的痛」，但公司大了、创始人退居幕后，起源故事还成立吗？</summary><div>成立，但要转化。起源故事的价值不在「创始人个人」，而在它锚定的那个「为什么」——最初的痛点如果依然是客户的痛点，故事就仍然真。公司变大后，叙事主角要从「某个创始人」迁移到「这群人共同守护的信念」，甚至迁移到客户身上。危险的是把起源变成神话和个人崇拜，脱离今天客户的现实。定期问一句：我们最初解决的那个痛，今天客户还在痛吗？痛还在，故事就还活着。</div></details>

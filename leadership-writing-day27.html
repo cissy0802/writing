@@ -81,7 +81,19 @@ details .answer{padding:0 18px 16px;font-size:0.94rem;color:#3a3a3a;line-height:
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -326,6 +338,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <p>找一个你正在推动的变革，写出它的四幕：Dream / Leap / Fight / Climb，每幕一句话。重点打磨 Fight：你打算如何陪团队熬过中间的怀疑期？</p>
 <p class="think">思考题：上一次变革沟通，你是说了一次就走，还是真的重复了十遍、并在低谷处反复出现？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>分布式系统 · 持久化日志</b>：把同步调用换成写进日志的消息，晚到的节点也能重放出同一状态；备忘录正是把开会换成可转发、可存档的日志。不像在于：机器重放结果一致，人读同一份 memo 仍会读出不同重点。</li>
+<li><b>心理学 · Bartlett 的「幽灵之战」（1932）</b>：Frederic Bartlett 让英国被试接力复述一则北美原住民故事，几轮后陌生细节消失，情节被改成听者熟悉的图式。可复述的公司叙事是顺着这股力，先给一个经得起转述的骨架。不像的是，Bartlett 看到的是失真，leader 要的是转述收敛到同一核心。</li>
+<li><b>复杂性科学 · Reynolds 的 Boids（1987）</b>：每只模拟鸟只守分离、对齐、聚拢三条局部规则，整群就飞出队形，无需领头鸟；「当 X 时就 Y」的原则同样让团队在你不在场时协同。不像在于：Boids 的规则永不修改，好原则要靠异议不断重审。</li>
+<li><b>心理学 · 损失厌恶（Kahneman 与 Tversky，1979）</b>：同样大小的损失，心理分量约是收益的两倍，所以现状天然比未来重，变革叙事得反复讲。不像的是，实验测一次性选择，变革中人要在几个月里一次次决定退不退回去。</li>
+<li><b>信息论 · 冗余对抗噪声（Shannon，1948）</b>：嘈杂信道里加入恰当冗余，出错率能压到任意低；Kotter 说愿景少讲十倍，就是组织里冗余不够。不像在于：编码冗余只重复比特，leader 重讲本身还在传递「我是认真的」。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>资深 leader 的杠杆是写作：想清楚的备忘录能在你不在场时替你工作。</li>
+<li>幻灯片要点会藏起逻辑断裂，完整句子的叙事备忘录逼你把因果写成显式。</li>
+<li>Bezos 让亚马逊开会先静读六页 memo，让最好的想法而非最大的嗓门胜出。</li>
+<li>好的备忘录敢写出代价与风险，不用术语和被动语态掩盖「我不确定」。</li>
+<li>公司叙事是一条因果链：从哪来、世界变了什么、为何非做不可、做成后有何不同。</li>
+<li>使命宣言换成竞争对手的名字仍成立，说明它还只是套话，不是叙事。</li>
+<li>可复用的原则由「触发情境 + 应对方式」组成，写成「当 X 时，就 Y」。</li>
+<li>价值观不能指导具体行动，原则要具体可操作，并定期重审，不能只进不出。</li>
+<li>Kotter 指出变革愿景普遍少讲十倍，变革叙事要在 Fight 低谷处反复出现。</li>
+<li>损失厌恶让现状天然比未来更重，所以变革沟通必须反复讲，而不是讲一次就走。</li>
+</ol>
 </section>
 <div class="details-wrap">
 <h3 data-tts="c61e5c8e98c8e0e4">深入思考</h3>

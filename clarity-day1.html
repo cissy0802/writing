@@ -43,7 +43,19 @@ header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -340,6 +352,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作</div>
 <p>写一段 200 字的自我介绍——给你尚未见面的领导/合作方。第一稿不要删，自由写。然后用 Zinsser 四原则各做一遍修订：(1) 清晰版——每句话只说一件事；(2) 简洁版——删掉所有杂物；(3) 精练版——压到 100 字以内；(4) 人味版——加回一个只有你能写出的细节（一个具体的项目、一个真实的失败、一个独特的偏好）。第四版就是你的"超级个体"开场白。把它收进你的素材库。</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>信息论 · 香农的冗余度</b>：香农 1948 年估计普通英文约一半是冗余，删了也猜得回来，所以杂物能删而不损意。不像在于：香农的冗余能在噪声里帮人纠错，杂物什么也不保护，只摊薄密度。</li>
+<li><b>心理学 · 施动语言与责备（Fausey &amp; Boroditsky，2010）</b>：读「他扯破了衣服」的被试，比读「衣服破了」的责备更多、判罚更重。不像的是，实验比的是不及物句而非被动句；但两者都让人从句子里消失。</li>
+<li><b>认知科学 · 双重编码（Allan Paivio，1971）</b>：具体词同时存进语言和意象两套编码，抽象词多半只有一套，所以「首屏 4 秒」比「性能下降」记得牢。不像在于：Paivio 研究的是记忆，不是可信。</li>
+<li><b>统计学习 · 最小描述长度（Jorma Rissanen，1978）</b>：最好的模型让「模型＋剩余误差」总长最短。简洁同理：删到读者得自己补意思，省下的字就变成读者头上的误差项。过度压缩和啰嗦一样让总长变长，所以简洁不等于幼稚。</li>
+<li><b>东方哲学 · 老子「为道日损」</b>：《道德经》第四十八章讲「损之又损」，和 Zinsser 的删同一个方向。不像在于：老子一路损到无为，Zinsser 的删停在人味；删到看不见写的人，就过头了。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>Zinsser 把杂物看作写作的头号敌人：凡是删掉不损意思的字、套话和缓冲短语，都该删。</li>
+<li>每个赘词都在消耗读者的注意力，杂物越多，关键信息的密度越低。</li>
+<li>主动语态应当是默认选择；被动语态不算错，只在需要隐去施动者或强调对象时才用。</li>
+<li>滥用被动语态会模糊责任，在组织沟通里，责任模糊就等于行动模糊。</li>
+<li>心理学实验显示，句子里写出施动者，读者会分配更多责备，语态选择会改写责任判断。</li>
+<li>具体名词和强动词让读者落地，抽象名词和「进行」「实施」这类弱动词让句子悬浮。</li>
+<li>名词化把动词埋进名词里，把「作出决定」还原成「决定」，句子就重新有了力气。</li>
+<li>用数字和可观察的结果替代抽象评价，比如写清加载时间从几秒降到几秒，而不是只说体验有提升。</li>
+<li>Zinsser 的四条信条是清晰、简洁、精练、人味，前三条是工程，人味是灵魂。</li>
+<li>只删不留人味，文章就会退化成没有温度的报告；人味是 AI 做不到、写作者独有的杠杆。</li>
+</ol>
 </section>
 <nav class="nav">
 <a href="index.html">← 返回 Writing 目录</a>

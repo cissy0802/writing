@@ -65,11 +65,23 @@ header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .funnel .fn-1,.funnel .fn-2,.funnel .fn-3{max-width:100%}
 }
@@ -296,6 +308,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Psychology · Divergent and convergent thinking (J. P. Guilford)</b>: Guilford split creative thought into divergent thinking (fanning out possibilities) and convergent thinking (narrowing to the best one). The shitty first draft simply separates them in time: diverge first, converge later. Where it breaks: later brain-imaging work found the default mode network and the executive control network cooperating during creative tasks. The brain does not strictly take turns; the turn-taking is a discipline the writer imposes.</li>
+<li><b>Complexity science · Simulated annealing (Kirkpatrick et al., 1983)</b>: the algorithm starts "hot," taking big random jumps and even accepting worse solutions so it does not get stuck in a local optimum, then cools until it only makes small tweaks. Three-pass revision has the same shape: bold cuts on structure, light touches on words. The difference: annealing is random, while every revision cut is a judgment.</li>
+<li><b>Neuroscience · Predictive processing</b>: the brain reads by guessing first and correcting against the input. Authors predict their own text so strongly that they read the imagined version, with typos and broken transitions papered over. Cooling weakens the prior; reading aloud feeds in a different sense. The twist: everyday filling-in saves effort, but in revision it becomes a blind spot.</li>
+<li><b>Cybernetics · Negative feedback (Norbert Wiener, 1948)</b>: a thermostat does not judge the room; it reports how far the temperature is from the target, and the system corrects. Asking readers where they got stuck turns them into sensors. Where it breaks: a thermostat's set point is built in, while a piece of writing's target lives only in the reader's head, visible to the author only through someone else's readings.</li>
+<li><b>Buddhism · Clinging and letting go</b>: killing a darling is hard not because the judgment is unclear but because the sentence feels like "mine." Buddhism traces clinging to taking phenomena as part of the self; once seen clearly, the grip loosens. Unlike Buddhist letting go, revision has an external test: does the reader lose anything when the line is gone?</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>A first draft's only job is to exist, not to be good; nobody can revise a blank page.</li>
+<li>Generating and judging are competing mental modes, so editing while drafting is driving with one foot on the gas and one on the brake.</li>
+<li>Polishing each sentence before moving on, and still sitting on line one an hour later, is procrastination dressed up as diligence.</li>
+<li>Three-pass revision looks at one layer per pass: structure first, then sentences, then words, never in reverse.</li>
+<li>Polishing sentences before fixing structure wastes work on lines that get cut with their paragraph; fixing typos alone is proofreading, not revision.</li>
+<li>Letting a draft cool overnight moves the writer from author back to reader, so the page replaces the version in the head.</li>
+<li>Reading aloud brings in the ear, the more honest organ: wherever you need a breath and cannot take one, break the sentence.</li>
+<li>Stephen King's rule is to write with the door closed, rewrite with the door open, and make the second draft the first minus 10%.</li>
+<li>Ask readers for locations, not verdicts: where did attention drift, which line needed rereading, what felt skippable.</li>
+<li>Diagnostic feedback works like cybernetic negative feedback: the reader is a sensor reporting deviation, not a judge handing out scores.</li>
+</ol>
+</section>
 <!-- Deep thinking -->
 <div class="deepthink">
   <h3>Going Deeper</h3>

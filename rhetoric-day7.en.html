@@ -83,11 +83,23 @@ details div{font-size:0.94rem;line-height:1.75;color:#3a3a3a}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .pillars{grid-template-columns:1fr;gap:10px}
   .pillar{padding:16px 10px}
@@ -392,6 +404,32 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
     <div class="label">This Week's Exercise + Reflection</div>
     <p><strong>Exercise:</strong> Take any recent paragraph (memo, email, doc). Three passes: (1) Sentence length — anything over 25 English words / 35 Chinese characters, split or cut. (2) Term count — every non-universal term in the first 200 words needs a plain-language gloss before its first use. (3) First number in paragraph one — if it's small, add a bigger anchor in front (market size, total org). Read both aloud — if the after-version is twice as smooth, you're done.<br><strong>Reflection:</strong> Extreme concision and "Made to Stick"-style concrete detail can conflict — short sentences sacrifice detail; detail sacrifices brevity. In your writing context, how do you decide which way a given sentence should lean?</p>
   </div>
+</section>
+
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Ecology · Liebig's law of the minimum</b>: A crop is capped by its scarcest nutrient: plenty of nitrogen and phosphorus will not save it if potassium runs out. That is the same structure as "any pillar at zero, persuasion at zero." The difference: Liebig's law takes the minimum, so the short stave sets a hard ceiling; the three pillars multiply, so a weak pillar drags the whole down, but as long as it is above zero, strengthening the other two still pays.</li>
+<li><b>Evolutionary biology · Zahavi's handicap principle</b>: Amotz Zahavi argued in 1975 that a peacock's tail is believable precisely because it is costly and a weak bird cannot afford one. "I am an industry expert" is a free signal, so it earns no ethos; admitting a failure costs something. Unlike the peacock, the writer pays in face and exposure to questioning, not in survival odds.</li>
+<li><b>Physics · 3 sigma and 5 sigma</b>: Particle physicists call a 3σ result "evidence" and reserve "discovery" for 5σ; the Higgs boson was announced in 2012 only after crossing 5σ. It is a public ladder that writes confidence into the wording. The difference: sigma is computed, while a writer's evidence tier is a judgment with no shared scale.</li>
+<li><b>Buddhism · hetuvidyā and premises both sides accept</b>: Dignāga's Buddhist logic requires that the reason in an argument be accepted by both the proponent and the opponent, or the argument fails; like pre-empting the counter-argument, it starts on the other side's ground. Unlike steelmanning, it only asks for shared premises; a steelman also builds the opponent's conclusion to full strength.</li>
+<li><b>Distributed systems · chaos engineering</b>: Netflix's Chaos Monkey randomly kills servers in production so the system rehearses failure before failure arrives, which is the pre-mortem's move of assuming the project has already failed. The difference: chaos engineering actually breaks things and watches the real response; a pre-mortem fails only in imagination and relies on narrative to surface the details.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Aristotle's three pillars of persuasion, ethos, pathos and logos, multiply: if any one is zero, persuasion is zero.</li>
+<li>Engineers' most common blind spot is leaning on logos alone, forgetting the audience must first trust you and care.</li>
+<li>Ethos cannot be self-asserted; "I am an industry expert" backfires, and experience, failures included, must speak for you.</li>
+<li>Evidence has a public ladder, intuition, analogy, anecdote, data, consensus, empirical test, and each claim should show its rung.</li>
+<li>The most common quiet breach of trust is omitting uncertainty, because readers trust an unlabeled claim at the strongest level.</li>
+<li>Flagging your weak evidence raises the credibility of the whole piece, since readers infer the unflagged claims are strong.</li>
+<li>Steelmanning means stating the opposing case better than its holders would; if you cannot, the argument is not ready to ship.</li>
+<li>A pre-mortem assumes the project has already failed and writes the failure story, which surfaces far more detail than a risk list.</li>
+<li>Kahneman's cognitive ease: hard-to-read text trips System 1's alarm, and System 2 never shows up to weigh the argument.</li>
+<li>Particle physics calls 3σ "evidence" and 5σ "discovery", writing confidence into the wording just like an evidence ladder.</li>
+</ol>
 </section>
 
 <!-- Resources -->

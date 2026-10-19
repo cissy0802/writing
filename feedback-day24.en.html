@@ -65,11 +65,23 @@ details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .vt{flex-direction:column}
 }
@@ -300,6 +312,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Complexity science · Simulated annealing</b>: Simulated annealing (Kirkpatrick et al., 1983) takes big jumps while hot to find the right valley, then cools to fine-tune; fine-tuning from the start traps you in a local optimum. The feedback ladder keeps the same order: argument and structure first, sentences later. The difference: annealing explores at random, while the ladder is steered by the writer's questions.</li>
+<li><b>Psychology · The limits of introspection</b>: Nisbett and Wilson (1977) found that people often cannot say why they like something, yet can report their reactions accurately. That is why "where did you drift?" beats "is it good?" The difference: their subjects confabulated without knowing it; a reader's score is usually just politeness.</li>
+<li><b>Psychology · Average faces</b>: Langlois and Roggman (1990) blended many faces into a composite and found it rated more attractive, yet it was the hardest to tell apart. AI polishing pulls prose toward the same average: smooth, error-free, forgettable. The difference: a pretty face need not be distinctive, but writing is remembered for its distinctiveness.</li>
+<li><b>Neuroscience · Prediction error</b>: In predictive coding (Rao and Ballard, 1999), lower brain areas pass upward only the error between what arrived and what was expected, and higher areas decide how to revise the model. A reader's "I got stuck here" is that error signal; the writer is the higher level. The difference: the brain updates automatically, while the writer must judge which errors deserve a fix.</li>
+<li><b>Buddhism · The second arrow</b>: The Sallatha Sutta says that an untrained person, struck by one arrow, adds a second through resistance and distress. Criticism is the first arrow; defending yourself on the spot is the second. The difference: the Buddhist aim is to stop clinging to the pain, while taking feedback means remembering exactly where it hurt and using it.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Feedback comes in layers: idea, structure, paragraph, sentence, typo, so say which layer you want before asking.</li>
+<li>Liz Lerman's Critical Response Process puts the writer's own questions first and holds reader opinions until permission is given.</li>
+<li>Collecting punctuation fixes before the draft's skeleton is set means fussing over sentences that may be cut.</li>
+<li>Write a complete first draft with the door closed, then open it to a few target readers; asking too early can kill a draft.</li>
+<li>Ask readers where they drifted, what they re-read and what they remember, not whether it is good: diagnose, don't score.</li>
+<li>AI works well as an always-available reader for diagnosis, not as a ghostwriter; letting it polish grinds your voice into an average.</li>
+<li>An AI reader tends to agree and lacks your context and taste, so its approval is not real approval and humans must cover its blind spots.</li>
+<li>Gaiman's rule: when readers say something is wrong they are almost always right; when they say how to fix it they are almost always wrong.</li>
+<li>Don't defend yourself when criticized; record the reader's reaction as a symptom and save diagnosis and prescription for a calmer moment.</li>
+<li>A reader's "I got stuck here" works like a prediction error signal: it reports the mismatch, and the writer decides the fix.</li>
+</ol>
+</section>
 <div class="deep-title">— Deeper Questions —</div>
 
 <details>

@@ -70,7 +70,19 @@ details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -295,6 +307,30 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>拿你最近一段正式文字，圈出所有"X 的 Y 的 Z"名词块和"进行／加以＋名词"结构，逐个改回"谁＋动词＋什么"，数数删了多少字。<br/>思考题：有没有一种情况，模糊的黑话是"故意的"——你其实不想把话说死？那是表达问题，还是你还没想清楚？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>神经科学 · 预测编码</b>：Rao 与 Ballard 1999 年的模型里，大脑上层不断预测下层输入，向上传的主要是预测误差。Gopen 与 Swan 的句子也这样分工：句首旧信息是已预测好的部分，句尾才放真正的「误差」。像在都把注意力省给意外；不像在大脑自动完成这件事，句子得靠作者排好。</li>
+<li><b>分布式系统 · Raft 新节点追日志</b>：Raft 的成员变更里，新节点先以不投票的身份把日志追平，才参与表决，很像 Burke 客厅里先听懂脉络再插桨。不像的是，节点要复制完整状态、与别人一致；写综述的人只需听懂争论的走向，入场是为了说出别人没说过的那句。</li>
+<li><b>心理学 · 双重编码</b>：Paivio 1971 年提出双重编码理论：具体词能同时唤起画面和词语，比抽象词更好记。僵尸名词把「我们调整缓存」压成「调整的实现」，正是把能成像的人和动作换成无法成像的实体。不像在 Paivio 研究的是单词记忆，名词化伤的是整句的动作链。</li>
+<li><b>生物进化 · 累赘原理</b>：Zahavi 1975 年提出，孔雀尾巴这类昂贵装饰之所以可信，正因为代价高。晦涩黑话也是一种昂贵信号，标明「我是圈内人」。不像在孔雀自己付代价且信号诚实；黑话的代价转嫁给读者，还常用来掩饰空洞。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>摘要是论文的电梯陈述，必须自己讲完一个完整的故事，结论不能卖关子。</li>
+<li>Simon Peyton Jones 的四句摘要公式：问题、为何重要、你做了什么、由此意味着什么。</li>
+<li>摘要写不出第四句「意味着什么」，往往说明工作本身的意义还没想清楚。</li>
+<li>文献综述不是「A 说、B 说、C 说」的点名册，而是加入 Burke 客厅里那场早已开始的对话。</li>
+<li>好的文献综述画出一张知识地图并落到一处空白，那处空白就是你的工作出场的理由。</li>
+<li>读者期待句首话题位放旧信息和已知主角，句尾重音位放新信息和要强调的内容。</li>
+<li>学术论证难读常常不是逻辑断了，而是上一句结尾没接上下一句开头的新旧信息接力。</li>
+<li>名词化是学术黑话的头号病症，Helen Sword 称之为僵尸名词：它吞掉动词，用抽象实体取代人。</li>
+<li>含糊的黑话常用来逃避责任，把「存在一定挑战」翻回具体的谁、缺什么、晚多久，事实就现形。</li>
+<li>句尾放新信息与预测编码同构：大脑主要向上传递预测误差，读者的注意力也留给意外的部分。</li>
+</ol>
 </section>
 <div class="deep-head" data-tts="8eda625e35abd8dd">深入思考</div>
 <details><summary>学术要求"清晰"，但有些思想本身复杂精微，说得太简单会不会失真？</summary><div>复杂的思想和复杂的句子是两回事。爱因斯坦说"尽量简单，但不能过分简单"。清晰不是简化内容，而是去掉理解的障碍——让读者把认知资源花在思想上，而非解码句子上。精微的思想恰恰需要最清晰的表达才不被误读。如果一个观点只有绕着说才成立，往往不是它太深，而是还没想透，或在用晦涩掩饰空洞。</div></details>

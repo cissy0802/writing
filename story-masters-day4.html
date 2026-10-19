@@ -71,7 +71,19 @@ header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -468,6 +480,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作</div>
 <p>找你最近写过的一篇较长文本（演讲稿、年度信、长邮件、launch blog）。检查它的 Freytag 弧：找出高潮句。问自己——高潮之后，还有几句话？如果是 0 句，加 2-3 句"下降"，再加 1 句"收束"。读两遍：第一遍是仪式感（高潮版），第二遍是落地感（含 denouement 版）。把后者发给一位朋友，问他："哪一句让你停下来想了几秒？"——那一句通常就在下降段里。</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>认知科学 · 故事记忆的因果网络（Trabasso &amp; van den Broek，1985）</b>：故事里因果连接越多的事件，越容易被回忆，也越被读者当成要紧；两个「正因如此」就是在给事件加连接。不像在于：实验测的是读者事后的记忆，Story Spine 是写作者事先强加的骨架。</li>
+<li><b>神经科学 · 奖赏预测误差（Wolfram Schultz，1997）</b>：多巴胺神经元对「意外」放电，对预料之中的奖赏几乎不动；没有「每天」立下的基线，「直到有一天」就算不上意外。不像在于：大脑很快会把误差学平，故事得靠渐进复杂让扰动一路升级。</li>
+<li><b>佛学 · 十牛图（宋 · 廓庵师远）</b>：寻牛、得牛、骑牛归家，末图「入鄽垂手」回到市井施惠于人，和英雄带着馈赠归来是同一个环。不像在于：第八图「人牛俱忘」连寻找者自己也空掉了，英雄之旅的英雄却带着更强的自我回来。</li>
+<li><b>复杂性科学 · 分岔点</b>：系统走到分岔点，两个稳定态都够得着，一点扰动就决定落向哪边，而且回不去；McKee 的危机正是两个价值之间的分岔。不像在于：物理系统由噪声替它选，故事里必须由人物亲手选，并为没选的那边付代价。</li>
+<li><b>心理学 · 峰终定律（Kahneman 等，1993）</b>：冷水实验里，一轮是手泡冷水 60 秒，另一轮在此之后再多泡 30 秒、水温略升。多数人反而愿意重来更长的那轮，因为结尾更温和。这像 Freytag 的下降段：结尾决定人们带走的记忆。不像在于：实验里那段尾巴让记忆偏离了真实的痛苦总量，好的收束是让观众消化，不是改写账本。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>Pixar Story Spine 用八个固定句子开头，把故事压成「日常基线→扰动→因果链→解决→新常态→教训」。</li>
+<li>两个「正因如此」把事件串成因果链；只会说「然后」的叙述只是事件流水账。</li>
+<li>跳过「每天」这句日常基线，「直到有一天」的扰动就失去了反差。</li>
+<li>英雄之旅是离开凡俗世界、穿越未知、带着馈赠归来的环形结构，被简化成 12 个阶段。</li>
+<li>诚实的英雄之旅要保留「拒绝召唤」的犹豫和「最深洞穴」的低谷，删掉它们就只剩英雄海报。</li>
+<li>McKee 说故事是一串价值的变化，讲完要能说出主角在哪条价值轴上移动了。</li>
+<li>真正的危机是两个都想要却不能兼得的二选一，不是「难但能克服」的困难。</li>
+<li>高潮里的选择必须付出不可挽回的代价，零成本的胜利让故事失重。</li>
+<li>Freytag 金字塔提醒：高潮之后要有下降段和收束，让观众的情绪落地。</li>
+<li>峰终定律说明，一段更温和的结尾会改变人们对整段经历的记忆，故事的下降段也是这个作用。</li>
+</ol>
 </section>
 <div class="nav">
 <a href="index.html">← 回到写作目录</a>

@@ -59,7 +59,19 @@ details summary:before{content:"▸ ";color:#8a7a4a}
 details[open] summary:before{content:"▾ "}
 details > div{padding:0 20px 18px;font-size:0.96rem;color:#3a3a3a;line-height:1.8}
 .deep-title{text-align:center;font-size:1.3rem;font-weight:700;margin:48px 0 8px;color:#1f1f1f}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -274,6 +286,31 @@ details > div{padding:0 20px 18px;font-size:0.96rem;color:#3a3a3a;line-height:1.
 <div class="label">本周习作 · 思考题</div>
 <p>选一个你想分享的观点，别直接说观点。先写一段 60 秒的「轶事」——一个具体的人、一串动作、一个悬念；再写一句「反思」点破它意味着什么。把观点藏在故事后面。<strong>思考题：</strong>你上一次做汇报或演讲，是从「轶事」还是从「目录」开的场？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>信息论 · 冗余与纠错</b>：香农 1948 年证明，在有噪声的信道里，加冗余才能让信息可靠送达。耳朵就是一条有噪信道：洗碗声、走神都是噪声，「用重复代替指代」等于给关键词加纠错码。不像在哪：纠错码的冗余是均匀铺的，口语的重复要挑最关键的那个词。</li>
+<li><b>心理学 · 引导性提问</b>：Loftus 与 Palmer 1974 年的实验里，问「两车猛撞时车速多快」比问「两车碰到时」，被试估的车速更高，一周后还有更多人「记得」现场有碎玻璃，其实并没有。封闭加引导的问题不只框死答案，还会改写对方的记忆；访谈里的引导问题，同样在替对方编故事。</li>
+<li><b>神经科学 · 讲者与听者的脑同步</b>：Hasson 团队 2010 年用 fMRI 发现，听者理解一段讲述时，脑活动会与讲者耦合，耦合越强理解越好。像在哪：「像对一个人打电话」那种写法，追求的正是这种对齐。不像在哪：实验测的是理解，没测文体，口语化能否加强耦合还没人验证。</li>
+<li><b>佛学 · 内观的「只听，不贴标签」</b>：内观禅修练习听见声音时只知道「在听」，不急着判断好坏。声音蒙太奇也拿掉旁白那层评价，让现场声直接进耳朵。不像在哪：禅修是放下意义，蒙太奇却靠并置刻意制造意义，铁门巨响紧接「养活了三代人」，落差是剪辑师安排好的。</li>
+<li><b>心理学 · 好奇心的信息缺口</b>：Loewenstein 1994 年提出，好奇来自「知道自己缺了一块」的那种不适。轶事的「然后呢」就是开一个缺口，反思时刻负责补上。不像在哪：缺口太大人会放弃，所以开场用一个具体的小悬念，比抛一个宏大问题更勾人。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>为耳朵写作：听众没有回看的权利，每句话要一句一个意思、一口气念得完。</li>
+<li>音频脚本用短句代替长句，用重复代替「前者」「上述」这类指代，用路标词代替小标题。</li>
+<li>口语化改的是句法，严谨守的是事实与逻辑，两者并不冲突。</li>
+<li>访谈的质量在录音前由问题清单决定：问开放不问是非，问场景不问评价，再追问为什么。</li>
+<li>访谈中对方答完后多等三秒，沉默常常逼出最真的一段话，Terry Gross 的功力一半在忍住不说。</li>
+<li>封闭又带引导的提问会框死答案，心理学实验显示这类提问甚至会改写对方的记忆。</li>
+<li>声音蒙太奇的规则：能用现场声让人亲耳听见的，就别用旁白替听众下结论。</li>
+<li>把几段声音并置让它们碰撞，落差自己说话；录到好素材后别再用旁白复述一遍。</li>
+<li>Ira Glass 的故事引擎由两块积木组成：动作序列制造「然后呢」的悬念，反思时刻回答「所以呢」。</li>
+<li>音频开场别报「本期三点」式的目录，先用一个具体的轶事把人拽进门，要点放在故事后面。</li>
+</ol>
 </section>
 <h2 class="deep-title" data-tts="474210fb6b9f6539">深入思考</h2>
 <details><summary>音频脚本要「像说话」，会不会和技术表达「必须精确」冲突？</summary><div>不冲突，关键是分清「口语化」和「不严谨」。口语化改的是<strong>句法</strong>——短句、少定语、用「所以」不用「综上」；严谨守的是<strong>事实与逻辑</strong>——数据、因果、限定条件一个不能少。精确的内容完全可以用说话的方式送达：与其说「该方案在多数场景下有效」，不如说「大部分情况这招管用——但有个例外，我一会儿讲」。后者既口语又没丢掉限定。真正的敌人不是口语，是<strong>书面腔的含糊</strong>：很多「显著」「相关」「一定程度上」听着严谨，其实什么也没说。</div></details>

@@ -69,7 +69,19 @@ details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -302,6 +314,30 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Neuroscience · Predictive coding</b>: In Rao and Ballard's 1999 model, higher brain areas keep predicting the input from lower ones, and what travels upward is mostly prediction error. Gopen and Swan's sentence splits the work the same way: the old information up front is the already-predicted part, and the stress position holds the real "error." Both save attention for surprise; the difference is that the brain does it automatically, while a sentence only does it if the writer arranges it.</li>
+<li><b>Distributed systems · Raft catch-up</b>: In Raft membership changes, a new server first joins as a non-voting member and catches up on the log before it gets a vote, much like Burke's latecomer who listens before putting in an oar. Unlike the server, which must copy the full state and agree with everyone, a reviewer only needs the tenor of the argument and enters to say something nobody has said.</li>
+<li><b>Psychology · Dual coding</b>: Allan Paivio's 1971 dual coding theory holds that concrete words are remembered better than abstract ones because they evoke both an image and a word. Zombie nouns turn "we changed the cache" into "the implementation of a modification," swapping picturable people and actions for unpicturable entities. Unlike Paivio's single words, nominalization breaks the whole chain of action in a sentence.</li>
+<li><b>Evolutionary biology · Handicap principle</b>: Amotz Zahavi argued in 1975 that costly ornaments like the peacock's tail are believable precisely because they are expensive. Dense jargon is a costly signal too, announcing "I belong here." The difference: the peacock pays its own cost and the signal is honest, while jargon shifts the cost to the reader and often hides emptiness.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>An abstract is the paper's elevator pitch: it must tell a complete story on its own and state the conclusion, not tease it.</li>
+<li>Simon Peyton Jones's four-sentence abstract: the problem, why it matters, what you achieved, and what follows from it.</li>
+<li>If you cannot write the fourth sentence of the abstract, the meaning of the work itself is often not yet clear.</li>
+<li>A literature review is not a roll call of "A said, B said, C said" but a way of joining the conversation in Burke's parlor.</li>
+<li>A good literature review draws a map of the field and lands on a gap, and that gap is the reason your work exists.</li>
+<li>Readers expect old information and the familiar subject in the topic position, and new, emphasized information in the stress position.</li>
+<li>Hard-to-read arguments are often not broken in logic but in the old-to-new handoff from one sentence's end to the next one's start.</li>
+<li>Nominalization is the chief disease of academic prose; Helen Sword calls the results zombie nouns that eat verbs and replace people.</li>
+<li>Vague jargon is often a way to dodge responsibility; translate "certain challenges" back into who is missing what and how late, and the facts appear.</li>
+<li>Putting new information last mirrors predictive coding: the brain mainly passes up prediction errors, and readers save attention for surprise.</li>
+</ol>
+</section>
 <div class="deep-head">Going Deeper</div>
 
 <details><summary>Clarity is demanded, but some ideas are genuinely intricate. Does saying them simply distort them?</summary><div>A complex idea and a complex sentence are two different things. Einstein: "as simple as possible, but no simpler." Clarity doesn't simplify the content; it removes the obstacles to understanding — so the reader spends their cognitive budget on the idea, not on decoding the sentence. Intricate ideas need the clearest prose precisely so they aren't misread. If a claim only holds when stated obliquely, that's usually not depth — it hasn't been thought through, or obscurity is hiding a void.</div></details>

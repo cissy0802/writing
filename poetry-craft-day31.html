@@ -65,11 +65,23 @@ details{margin:10px 0;border-bottom:1px solid #e0e0e0;padding-bottom:8px}
 summary{cursor:pointer;font-weight:600;color:#1f1f1f;font-size:1rem;padding:6px 0}
 details > div{font-size:0.94rem;color:#4a4a4a;line-height:1.75;padding:8px 0 4px 16px}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .flow .frow{flex-direction:column}
   .flow .farrow{transform:rotate(90deg);justify-content:center}
@@ -283,6 +295,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>取你团队那段冗长的使命/愿景，套上三条约束：不超过十个字、含一个动词、含一个具体画面。写五个版本，选一个读出声最有力的。<strong>思考题</strong>：约束催生创造，但什么时候它变成束缚？格律诗在明清的僵化，与今天「模板化表达」的泛滥，是否同一种病？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>认知心理学 · 双重编码（Allan Paivio，1971）</b>：Paivio 发现具体词比抽象词好记，因为它同时存进语言和表象两套系统，多了一条提取路径。「十个摄像头全黑」比「士气低落」难忘，就是多了那份画面编码。不像在于：Paivio 测的是记忆，客观对应物要的是情感在读者心里复活。</li>
+<li><b>语言学 · 句末焦点</b>：语法学注意到，一句话的新信息和重音天然落在句尾，写作者靠调语序把要紧的词挪过去。断行等于给一句话多造了几个「句尾」，行末的词因此被照亮。不同在于，语法的焦点跟着句法走，诗的断行可以故意切在句法中间，造出意外的重音。</li>
+<li><b>认知心理学 · 生成效应（Slamecka &amp; Graf，1978）</b>：实验里，被试按线索自己补出来的词（比如给一个词和它同义词的首字母），比直接读到的词记得更牢。这和留白的「人只相信自己得出的结论」是同一个机制：读者走完最后一步，结论才归他。不像的是，生成效应证明的是记得牢，不是信得过；读者补错了也会记得牢，所以留白必须精确，缝只能留一道。</li>
+<li><b>佛学 · 以指指月（《楞严经》）</b>：经教如手指，指是为了让人看月，见了月就该忘指。客观对应物也是一根手指：物象不是目的，它指向的那份情感才是。不像在于，禅最后要你连手指也放下，诗却要把这根手指雕到不可替换，因为读者能抓住的只有它。</li>
+<li><b>分布式系统 · 协议的「沙漏腰」</b>：互联网把中间一层压到只剩 IP 这一个窄口，上面的应用、下面的链路反而百花齐放。一个窄约束换来两端的自由，和五律、一页只放一句的 slide 是同一个结构。不同在于，协议的约束为互通而设，越稳越好；诗的约束为逼出深度，用久了会变八股。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>情感不要直接喊出来，要找一组恰好等于那份情感的具体物象，也就是艾略特说的「客观对应物」。</li>
+<li>抽象词是「告诉」，意象是「呈现」：一个准确的具体画面，胜过十个形容词。</li>
+<li>意象必须对准想唤起的情感，为具体而具体的画面只会分散读者的注意。</li>
+<li>断行是一件免费的强调工具：留在行首或行尾的词被照亮，断行处停顿的半拍就是重音。</li>
+<li>一口气塞三个并列的长句让人喘不过气，拆成长短交错的几行，重点自己站出来；但全用短句同样单调。</li>
+<li>留白让读者自己走完最后一步，因为人只相信自己得出的结论。</li>
+<li>留白是精确地省略，不是含糊其辞：指标、责任、时间必须说清，事故复盘和安全告警更要直说。</li>
+<li>认知心理学的生成效应显示，自己补出的信息比直接读到的记得更牢，这是留白起作用的一个机制。</li>
+<li>约束减少选择、提高专注：先给自己设一个字数上限或一个贯穿的意象，再在框里找自由。</li>
+<li>约束一旦变成目的，为押韵、对仗或套模板而扭曲意思，就退化成新的八股。</li>
+</ol>
 </section>
 <section class="card">
 <div class="num">Reflection</div>

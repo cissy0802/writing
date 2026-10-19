@@ -66,6 +66,17 @@ details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
@@ -76,6 +87,7 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   .flowd .arrow{justify-content:center;transform:rotate(90deg)}
   .constr .row{flex-direction:column;gap:2px}
   .constr .nm{width:auto}
+  .xbox{padding:24px 20px}
 }
 </style>
 </head>
@@ -281,6 +293,30 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>给自己发明一条 Oulipo 式约束（如：写一段介绍你的工作，全程禁用「我」字），写 150 字。<strong>思考题</strong>：禁用一个你最依赖的词后，你的表达是变差了还是变新了？这说明你平时的「顺手」，有多少其实是惰性？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>信息论 · 香农的冗余</b>：字数上限像一次压缩。香农证明，有冗余的信息可以压短而不丢内容，「反复」「认真」「相对来说」正是可删的冗余。不像在哪：语言里的冗余有一半是留给读者纠错的，像校验位；砍过了头，读者就没法自行补全，短就成了晦涩。</li>
+<li><b>生物进化 · 选择压力</b>：格兰特夫妇在加拉帕戈斯看到，1977 年大旱后只剩硬种子，中嘴地雀下一代喙明显变厚。约束挑出形状，像字数替你选中故事；不像的是演化没有作者，写作者能自己挑压力。</li>
+<li><b>佛学 · 戒定慧</b>：佛家讲「因戒生定，因定发慧」：先立规矩收住心，专注才生得出来，像约束把注意力挪到「怎么写好」。不像在哪：戒为放下欲求，写作的约束却为产出更多。</li>
+<li><b>复杂性科学 · 生命游戏</b>：康威 1970 年的生命游戏只有几条生死规则，却长出没人预先画过的滑翔机，正是 Oulipo 的生成观。不像在哪：它开局后全自动，写作规则只划边界，每步仍要人选。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>空白页给人的不是自由而是瘫痪，约束把开放的「写点什么」收成一个可以下手的封闭问题。</li>
+<li>选项一旦有限，注意力才能从「写什么」转到「怎么写好」，闻一多称之为戴着脚镣跳舞。</li>
+<li>约束要够紧才起作用，「500 到 5000 字都行」这种宽松限制等于没有约束。</li>
+<li>命题写作替你跳过最难的从零开始：先用「Yes, and」接住题目，再加一个只有你有的角度。</li>
+<li>灵感是结果而不是前提，动作常先于动机，先动笔，写作的状态才会被唤起。</li>
+<li>字数上限是最诚实的编辑，逼人只留最重要的内容，每个词都得挣到自己的位置。</li>
+<li>写短不等于少讲：精炼删的是冗余不是内容，新读者读完若卡住，就是砍到了肉。</li>
+<li>Oulipo 主动发明严苛规则当造句机器，佩雷克整本小说不用一个字母 e。</li>
+<li>禁用自己最顺手的形容词，能堵死偷懒的套话，逼出具体的画面和可验证的证据。</li>
+<li>字数限制像信息论里的压缩：可删的是冗余，但语言的冗余也在帮读者纠错，不能砍过头。</li>
+</ol>
 </section>
 <div class="deep-title">— 深入思考 —</div>
 <details>

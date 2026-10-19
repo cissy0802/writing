@@ -92,7 +92,19 @@ details div{font-size:0.94rem;line-height:1.75;color:#3a3a3a}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -433,6 +445,32 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
     <div class="label">This week's exercise + reflection</div>
     <p><strong>Exercise:</strong> Pick a project your team is doing or considering. <strong>Write the PR/FAQ in reverse:</strong> (1) a one-page PR with headline, customer problem, our solution, and one mock customer quote; (2) an 8-question FAQ that includes 4 hard questions ("Where's the differentiation?" "What if year-one revenue hits 30% of plan?" "What happens if our key dependency hikes price 50%?" "Why won't customers just stitch it together themselves?"). After you finish, ask: did the customer quote feel <strong>grounded in a real scenario</strong>, or was it hollow? Can you answer the hard questions? If not, the project may belong back at step 3.<br><strong>Reflection:</strong> The PR/FAQ process barely works once a project has been over-promised upstream — the commitment is already made, no PR is hollow enough to kill it. How does an organization put <strong>PR/FAQ before commitment</strong> rather than after? Is this a process design problem or a culture problem?</p>
   </div>
+</section>
+
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Distributed systems · Barrier synchronization</b>: In parallel computing, every process halts at a barrier until the slowest one arrives, then all move to the next phase together. The twenty-minute silent read is a barrier: discussion starts only when everyone holds the same state. The difference: processes receive identical data, while readers of the same memo still walk away with different versions in their heads.</li>
+<li><b>Cognitive science · The illusion of explanatory depth</b>: In Rozenblit and Keil's 2002 experiments, people rated their understanding of zippers or flush toilets highly, then rated it markedly lower after being asked to write out the mechanism step by step. Bullets let you stay at the "feels understood" layer; a narrative memo is a forced step-by-step explanation, and the gaps surface on the spot. The difference: the experiments test causal mechanism only, while a memo also demands ranking and a recommendation, so it exposes not just ignorance but reluctance to commit.</li>
+<li><b>Buddhism · Dependent origination</b>: "When this exists, that comes to be": Buddhist thought sees everything as arising from interdependent conditions, and a narrative memo likewise turns parallel facts into a chain of conditions. The difference: dependent origination denies any single root, while a memo must name the dominant cause and assign ownership so action has somewhere to land.</li>
+<li><b>Neuroscience · Gist before detail</b>: Glance at a picture and the brain first registers the gist, kitchen or beach, filling in detail afterward, coarse to fine. BLUF writes along that grain by putting the conclusion in the first sentence. The difference: visual gist is computed by the viewer's own brain, while a memo's conclusion has to be computed by the author and placed up front.</li>
+<li><b>Psychology · The premortem</b>: Gary Klein popularized it in Harvard Business Review in 2007: before a project starts, assume it has already failed and work out why. PR/FAQ also reasons backward from the future, and its hard FAQ questions are nearly a premortem. The difference: the press release imagines launch-day success and tests whether customers will care, not only how things might fail.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Bezos's 6-pager replaces the presentation with about twenty minutes of silent reading, turning a performance into collective thinking.</li>
+<li>The 6-pager has two iron rules: at most six narrative pages with the appendix not counted, and silent reading before discussion.</li>
+<li>Pasting slide text into a Word document misses the point; bullets must be rewritten as complete sentences that carry causality.</li>
+<li>The grammar of bullets is juxtaposition, letting authors list two claims without causality; complete sentences make the author own the causal link.</li>
+<li>The payoff of narrative lies in verbs and causality, not length; sentences full of nominalizations stay hollow.</li>
+<li>Pure enumerations and status updates read better as bullets; save the narrative memo for writing that drives a decision.</li>
+<li>BLUF (bottom line up front) puts the decision you need in the first sentence, because reader attention drops steeply after the opening.</li>
+<li>A real BLUF is a verb, an object, and a deadline; soft phrasing like "we may want to consider evaluating" hides the decision.</li>
+<li>Working Backwards writes the launch-day press release and FAQ before deciding to build, since killing a project on paper is cheapest.</li>
+<li>The illusion of explanatory depth shows people find gaps only when forced to explain causes step by step, which is what a narrative memo forces.</li>
+</ol>
 </section>
 
 <!-- Resources -->

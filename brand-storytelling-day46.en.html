@@ -80,11 +80,23 @@ details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .role-vis .roles{flex-direction:column}
   .arc-vis .arc-row{flex-direction:column}
@@ -337,6 +349,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Psychology · The identifiable victim effect</b>: In a 2007 study by Small, Loewenstein and Slovic, a named seven-year-old girl from Mali drew far more donations than a set of famine statistics. A case study that refuses to say "a leading enterprise" runs on the same mechanism: a specific person moves people. The difference: in that study the statistics actually dampened sympathy, while a case study still has to land on a hard number. The person does the persuading; the number is what gets repeated.</li>
+<li><b>Psychology · The self-reference effect</b>: Rogers and colleagues found in 1977 that judging whether a word describes you makes it far more memorable than judging its meaning. Making the customer the hero swaps "how great we are" for "where you are stuck," hooking the message onto the reader's own self. The difference: the experiment measured memory, while copy needs the reader to act, and remembering is only step one.</li>
+<li><b>Buddhism · The finger pointing at the moon</b>: The Surangama Sutra says that when someone points at the moon, you should look at the moon; stare at the finger and you lose both. The guide brand is the finger, and the place the customer wants to reach is the moon. The difference: the Dharma asks you to let go of the finger in the end, while a brand hopes the customer, once across, remembers who pointed the way.</li>
+<li><b>Information theory · Minimum description length</b>: Rissanen's 1978 minimum description length principle says that if you can describe the data more briefly, you have found real structure. A value proposition that will not compress into one line usually means the positioning has no structure yet. The difference: compression in information theory must reconstruct the data, while a value proposition throws things away on purpose, keeping only the one reason the customer pays.</li>
+<li><b>Evolutionary biology · The handicap principle</b>: Zahavi proposed in 1975 that a peacock's huge tail is believable precisely because it is costly and a weak bird cannot fake it. Adjectives are the cheapest claim; a named customer and a checkable number act like costly signals that are hard to counterfeit. The difference: the peacock carries its cost in its body, while in business the cost only counts if readers can actually verify it.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Do not open a founding story with "founded in year X, focused on Y"; start with a specific person and the real pain they could not stand.</li>
+<li>Features can be copied but the "why" cannot; Sinek's Golden Circle runs from the inside out, Why, then How, then What.</li>
+<li>An origin written as a timeline of funding rounds and awards is a resume, and an inflated or fake motive destroys trust instantly.</li>
+<li>In brand storytelling the customer is the hero and the brand is only the guide, the way Yoda serves Luke.</li>
+<li>A guide needs both empathy and authority: empathy alone sounds like customer service, authority alone sounds like bragging.</li>
+<li>A case study is one customer's small hero's journey: situation, complication, resolution, and a result anchored by a number.</li>
+<li>Vague phrases like "a leading company" or "significant gains" carry no weight, and a case study without conflict reads like an ad.</li>
+<li>A value proposition names the job the customer hires you to do, not product specs: people want the hole, not the drill.</li>
+<li>Fill every slot of Geoffrey Moore's positioning template with specifics; if you cannot fill in the key difference, the positioning is not done.</li>
+<li>Adjectives are the cheapest claim; named customers and checkable numbers work like costly signals under the handicap principle, hard to fake and so believable.</li>
+</ol>
+</section>
 <div class="deep-head">Going Deeper</div>
 
 <details><summary>The founding story tells a "real pain," but once the company grows and the founder steps back, does the origin still hold?</summary><div>It holds, but it has to transform. The value of an origin story isn't the founder as a person—it's the "why" it anchors. If the original pain is still the customer's pain, the story is still true. As the company grows, the protagonist migrates from "a certain founder" to "a belief this group protects together," and even onto the customer. The danger is turning the origin into myth and a cult of personality detached from today's customer reality. Ask periodically: the pain we first solved—do customers still feel it? If they do, the story is still alive.</div></details>

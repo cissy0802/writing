@@ -63,11 +63,23 @@ details .answer{padding:0 18px 16px;font-size:0.94rem;color:#3a3a3a;line-height:
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .qa-flow .qa-row{flex-direction:column}
 }
@@ -295,6 +307,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Information theory · Progressive transmission</b>: A progressive JPEG sends a blurry version of the whole image first, then refines it layer by layer, so wherever the connection drops you still have a usable picture. Answer-first has the same structure: whenever the listener drifts off, they already have the answer. Unlike an image, though, no encoder decides which sentence is the "coarse layer"; you have to judge that yourself.</li>
+<li><b>Psychology · Rogers's non-directive counseling</b>: In the 1940s Carl Rogers developed client-centered therapy: the counselor doesn't diagnose or steer, only reflects back and waits, letting clients name the problem themselves. Open questions plus silence are the same posture. The difference: Rogers aimed at the client's growth; an interviewer still has to leave with information.</li>
+<li><b>Buddhism · The undeclared questions</b>: In Majjhima Nikaya 72, Vacchagotta presses the Buddha on whether the Tathagata exists after death. The Buddha asks back: when a fire goes out, does it go east or west? The question itself doesn't apply. Disarming a premise works alike: refuse the yes/no and show the question is bent. Unlike the Buddha, though, you can't end there; you still owe data and an answer to the real question.</li>
+<li><b>Evolution · Reciprocal altruism</b>: In 1971 Robert Trivers argued that cooperation can evolve among individuals who meet repeatedly, provided they can spot and remember cheaters. "Fool them once and even your truth gets discounted" is that same bookkeeping. The difference: animals track behavior, while people go back and re-weigh everything you've ever said.</li>
+<li><b>Distributed systems · Byzantine faults</b>: Lamport and colleagues' 1982 Byzantine Generals problem showed that crashed nodes are easy to handle, while nodes sending false data need far more redundancy to tolerate. "I don't know" is a clean timeout error; inventing a number on the spot is a Byzantine fault. The difference: nodes have no intent, but a person chooses to lie.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>When asked something, put the answer in your first sentence (yes or no, a number, a conclusion), then add background.</li>
+<li>The Q&amp;A three-step is answer, bridge, expand; a conclusion with no bridging "because" comes across as arbitrary.</li>
+<li>Spoken answers can't be reread, so preamble placed before the conclusion fills up the listener's working memory first.</li>
+<li>Good interviews run on open questions plus three seconds of silence; people instinctively fill silence with their most candid words.</li>
+<li>Leading and closed questions only buy polite agreement, and in user research they let you validate a need that doesn't exist.</li>
+<li>Hostile questions often hide a false premise; defending directly concedes it, so correct the premise first with one fact.</li>
+<li>Disarm premises calmly and lightly, using Chris Voss's calibrated questions to empathize before steering, and always return to the real question.</li>
+<li>If you don't know, say so and add a commitment and a deadline, turning a knowledge gap into a reliable promise.</li>
+<li>Honesty isn't telling everything: under confidentiality you can say "I can't share that yet," but you can't lie.</li>
+<li>Euphemism around bad news only makes people more anxious, and fooling them once means even your truth gets discounted later.</li>
+</ol>
+</section>
 <section class="card">
   <div class="num">Going Deeper</div>
   <h2>Going Deeper</h2>

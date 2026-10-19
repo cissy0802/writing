@@ -42,7 +42,19 @@ header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -378,6 +390,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Information theory · Shannon's redundancy</b>: In 1948 Shannon estimated that ordinary English is about half redundant: delete much of it and readers can still guess it back, which is why clutter can go without loss of meaning. The difference: Shannon's redundancy corrects errors on a noisy channel; clutter protects nothing and only thins the signal.</li>
+<li><b>Psychology · Agentive language and blame (Fausey &amp; Boroditsky, 2010)</b>: Readers told "he ripped the costume" assigned more blame and larger fines than readers told "the costume ripped." The difference: the study contrasted intransitive phrasing, not the passive voice proper; but both make the person vanish from the sentence.</li>
+<li><b>Cognitive science · Dual coding (Allan Paivio, 1971)</b>: Concrete words are stored twice, as language and as image, while abstract words usually get only the verbal code, so "a four-second first load" sticks better than "degraded performance." The difference: Paivio studied memory, not credibility.</li>
+<li><b>Statistical learning · Minimum description length (Jorma Rissanen, 1978)</b>: The best model minimizes the total length of the model plus its leftover error. Simplicity works the same way: cut until the reader must reconstruct the meaning, and the saved words return as an error term the reader pays. Over-compression lengthens the total just as wordiness does, which is why simple never means childish.</li>
+<li><b>Eastern philosophy · Laozi's "decrease day by day"</b>: Chapter 48 of the <em>Tao Te Ching</em> asks for losing and losing again, the same direction as Zinsser's cutting. The difference: Laozi decreases all the way to non-action; Zinsser stops at humanity. Once the writer disappears from the page, you have cut too far.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Zinsser treats clutter as the writer's chief enemy: any word, stock phrase, or hedge that can go without losing meaning should go.</li>
+<li>Every needless word spends some of the reader's attention, and the more clutter there is, the thinner the key information becomes.</li>
+<li>Active voice should be the default; passive voice is not wrong, but it is a tool for hiding the actor or stressing the object.</li>
+<li>Overusing the passive voice blurs responsibility, and in organizations blurred responsibility means blurred action.</li>
+<li>Psychology experiments show that naming the agent in a sentence makes readers assign more blame, so voice shapes judgments of responsibility.</li>
+<li>Concrete nouns and strong verbs ground the reader, while abstract nouns and weak verbs like "conduct" or "make" leave the sentence floating.</li>
+<li>Nominalization buries a verb inside a noun; turning "make a decision" back into "decide" gives the sentence its force again.</li>
+<li>Replace abstract praise with numbers and observable results, such as how many seconds a page load dropped, rather than saying the experience improved.</li>
+<li>Zinsser's four articles of faith are clarity, simplicity, brevity, and humanity: the first three are engineering, humanity is the soul.</li>
+<li>Cutting without humanity turns writing into a report with no warmth; humanity is the lever a model cannot supply and the writer alone holds.</li>
+</ol>
+</section>
 <nav class="nav">
   <a href="index.en.html">← Back to Writing</a>
 </nav>

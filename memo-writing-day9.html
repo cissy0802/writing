@@ -94,7 +94,19 @@ details div{font-size:0.94rem;line-height:1.75;color:#3a3a3a}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -405,6 +417,32 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <p><strong>习作：</strong>挑一个你团队正在做或在考虑做的项目。<strong>反向写一份 PR/FAQ</strong>：(1) 1 页 PR，含标题 / 客户问题 / 我方方案 / 一个模拟客户证言；(2) 8 条 FAQ，含 4 条 hard questions（"差异化在哪？""第一年收入只达预期 30% 怎么办？""依赖的 X 突然涨价 50% 怎么应对？""客户为什么不自己拼凑而要买我们的？"）。写完问自己：客户证言写出来时是<strong>来自具体场景</strong>的还是空洞的？硬问题答得上来吗？若不能，项目可能值得回到 step 3。<br/><strong>思考：</strong>PR/FAQ 流程对"已经 over-promise 给上层"的项目几乎不起作用——因为承诺已经做了，PR 写得多空洞都不会 kill。组织上怎么<strong>把 PR/FAQ 放在承诺之前</strong>而不是之后？这是流程设计问题还是文化问题？</p>
 </div>
 </section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>分布式系统 · 屏障同步（barrier）</b>：并行计算里，所有进程跑到屏障处都要停下，等最慢的那个也到了才一起进入下一阶段；会前 20 分钟静默阅读就是一道屏障，保证讨论开始时人人手里是同一份状态。不像在于：进程拿到的是同一份数据，读者读完同一份 memo，脑中的版本仍各不相同。</li>
+<li><b>认知科学 · 解释深度错觉</b>：Rozenblit 与 Keil 2002 年的实验里，受试者先给自己「懂拉链、马桶怎么工作」打高分，被要求一步步写出机制后，自评明显下跌。Bullet 正是让人停在「觉得懂」的那一层，叙事备忘录则是强制的分步讲解，空洞当场露出来。不像在于：实验只测因果机制，memo 还要作者排出轻重、给出建议，暴露的不止是不懂，还有不敢表态。</li>
+<li><b>佛学 · 缘起</b>：「此有故彼有」，佛学看一切事都是条件相依而成，叙事备忘录同样要求把并列的事实写成彼此依存的条件链。不像在于：缘起说没有哪一个条件是唯一的根，memo 却必须挑出主因、分配责任，好让行动有个落点。</li>
+<li><b>神经科学 · 视觉先抓大意</b>：看一张图，大脑一瞥之下先得出「这是厨房还是海边」的大意，细节随后才慢慢填进来，由粗到细。BLUF 把结论放在第一句，是顺着这条读法写。不像在于：视觉的大意是大脑自己算出来的，memo 的结论只能由作者替读者算好摆在最前面。</li>
+<li><b>心理学 · 事前验尸（premortem）</b>：Gary Klein 2007 年在《哈佛商业评论》推广的做法：项目开工前，先假设它已经失败，倒推是怎么败的。PR/FAQ 同样是站在未来往回推，FAQ 里的硬问题几乎就是一场事前验尸。不像在于：新闻稿想象的是成功那天，检验的是「客户会不会在乎」，不只是「会怎么败」。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>Bezos 的 6-pager 用会前约 20 分钟的全员静默阅读取代演讲，把汇报表演换成集体思考。</li>
+<li>6-pager 的两条铁律：叙事页不超过 6 页且 appendix 不算，以及会前全员静默阅读。</li>
+<li>把 PPT 文字原样塞进 Word 拿不到叙事红利，bullet 必须改写成带因果的完整句子。</li>
+<li>Bullet 的语法是并列，容许作者并排两个 claim 不写因果；完整句子逼作者为因果负责。</li>
+<li>叙事的红利在动词和因果，不在字数；满篇「进行」「加以」的名词化句子依然空洞。</li>
+<li>纯枚举和 status update 用 bullet 反而清晰，叙事备忘录留给需要决策的写作。</li>
+<li>BLUF（结论先行）把要读者决定的事放进第一段第一句，因为读者的注意力从开头起陡降。</li>
+<li>合格的 BLUF 是动词＋对象＋期限三元组，「建议考虑评估」这种软话让读者找不到决策点。</li>
+<li>Working Backwards 先写上线那天的新闻稿和 FAQ，再决定做不做；在纸上 kill 项目最便宜。</li>
+<li>解释深度错觉说明，人要被迫一步步讲出因果才发现自己不懂，叙事备忘录就是这种强制讲解。</li>
+</ol>
+</section>
+
 <!-- Resources -->
 <section class="card">
 <div class="num">Deep Dive</div>

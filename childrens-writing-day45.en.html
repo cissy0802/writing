@@ -59,7 +59,19 @@ details summary:before{content:"▸ ";color:#8a7a4a}
 details[open] summary:before{content:"▾ "}
 details > div{padding:0 20px 18px;font-size:0.96rem;color:#3a3a3a;line-height:1.8}
 .deep-title{text-align:center;font-size:1.3rem;font-weight:700;margin:48px 0 8px;color:#1f1f1f}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -314,6 +326,31 @@ details > div{padding:0 20px 18px;font-size:0.96rem;color:#3a3a3a;line-height:1.
     <div class="label">This Week's Exercise · A Question</div>
     <p>Take a classic children's book you've reread and dissect three layers: (1) <strong>rhythm</strong>—which sentences are built to be read aloud? (2) <strong>repetition</strong>—how does it escalate within the repeats? (3) <strong>core</strong>—what's the one true emotion underneath? Write one sentence for each. <strong>Question:</strong> Could you use that "simple surface, deep undercurrent" structure on your next exec communication—letting the outsider read the surface and the insider read the current?</p>
   </div>
+</section>
+
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Psychology · Vygotsky's zone of proximal development</b>: Vygotsky held that children learn fastest in the band of tasks they can't yet do alone but can do with a helping hand; "writing up" aims the text at that band, not at what the child already knows. The difference: in a classroom an adult adjusts the scaffold on the fly, while a book is one-way, so the scaffold has to be built in advance from concrete images and short sentences.</li>
+<li><b>Buddhism · the Zen koan</b>: a Zen master doesn't explain the point; he throws out a question or a gesture and makes the student run into the answer, because a handed-over conclusion isn't awakening. A book that doesn't preach also leaves the conclusion to the reader. Unlike a story, though, a koan often has no answer on purpose; it exists to break conceptual thinking, while a story's moral grows out of its plot.</li>
+<li><b>Neuroscience · binocular disparity and stereo vision</b>: the two eyes see slightly offset images, and the brain builds depth out of that very difference; give both eyes the identical image and the sense of depth disappears. Word-image counterpoint works the same way: meaning lives in the gap. The difference is that stereo fusion is automatic, while the gap between text and picture is one the reader has to fill actively.</li>
+<li><b>Distributed systems · progressive enhancement</b>: one web page gives an old browser a working basic version and layers richer features on for a capable one. A classic children's book's two-layer structure is likewise one text serving two readers. The difference: a web page's layers are separate code paths, while a book makes the same sentence carry both layers at once.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Writing for an age group isn't dumbing down; it's choosing the right register, words a reader of that age can chew, to deliver the real thing whole.</li>
+<li>E.B. White's rule is to write up, not down: treat children as smart, demanding readers worth taking seriously.</li>
+<li>Writing down mistakes simple words for simple ideas; age-matching should change the vessel, not the core, and keep the full weight of the idea.</li>
+<li>Preaching triggers psychological reactance, so values belong in characters' choices and costs, where readers reach the conclusion themselves.</li>
+<li>C.S. Lewis warned against writing a story just to carry a moral; a moral label tacked on at the end flattens what the reader just felt.</li>
+<li>In a picture book, words and pictures each carry half: what the picture shows, the text shouldn't describe; it should handle inner thoughts, suspense and time.</li>
+<li>Word-image counterpoint lets two voices move independently and fuse into a third thing in the reader's mind; on slides, don't read the screen aloud.</li>
+<li>Lasting children's books run on two layers: a surface simple enough for a child, and an undercurrent that hits the adult reading aloud.</li>
+<li>Classic children's books stay rereadable through rhythm built for reading aloud, repetition that escalates, and one true emotion at the core.</li>
+<li>Word-image counterpoint resembles binocular disparity: the eyes' images are slightly offset, the brain builds depth from that, and meaning likewise lives in the difference.</li>
+</ol>
 </section>
 
 <h2 class="deep-title">Going Deeper</h2>

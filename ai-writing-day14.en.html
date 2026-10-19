@@ -71,7 +71,19 @@ header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -315,6 +327,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Evolution · Variation and selection</b>: AI as draft engine, you as editor-in-chief, is the same structure as evolution: variation is cheap and plentiful, and all the appearance of design comes from selection. The difference: natural selection has no goal and keeps only what survives now; an editor selects against an intent, which is why the intent can't be handed to whatever generates the variation.</li>
+<li><b>Psychology · Processing fluency</b>: Reber and Schwarz (1999) found that statements that are easier to read are more likely to be judged true. Fluent AI prose amplifies that illusion: it reads smoothly, so it feels thought through. The difference is scale: in the lab fluency nudges a judgment slightly, while a whole seamless AI draft can lead the author to skip checking altogether.</li>
+<li><b>Information theory · Shannon surprisal</b>: Shannon (1948) measured information as surprise: the more probable a symbol, the less information it carries. A model picks the likeliest word, so AI smell is literally low-information text. But the theory also warns that surprise isn't value; random noise is maximally surprising. What you add must be unexpected and true.</li>
+<li><b>Buddhism · Tibetan monastic debate</b>: In Tibetan monastic debate the defender sits while the challenger stands, claps, and presses on the weakest link; understanding is forced out under attack. Asking AI to play the skeptical reader is the same move. Unlike a debater, though, AI holds no doctrinal position, so you have to aim its questions.</li>
+<li><b>Leadership · Mission command</b>: Prussian Auftragstaktik, or mission command, issues intent and boundaries and leaves execution to subordinates. A good prompt is the same kind of brief. The gap gets filled differently: a subordinate fills it from understanding the intent, a model from the corpus average, so a model needs fuller limits and examples than a person does.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>The division of labor in the AI era: AI is the draft engine for volume, you are the editor-in-chief for judgment.</li>
+<li>Keep both ends of the writing pipeline, the core idea and whose voice it speaks in; sourcing, drafting and restructuring can go to AI.</li>
+<li>Outsource the core idea too, and the piece comes out correct and fluent but interchangeable with anyone's.</li>
+<li>AI smell is correct-but-hollow prose, rooted in a model always choosing the likeliest word: statistical mediocrity.</li>
+<li>The cure for AI smell is the old advice of Orwell and Zinsser: concrete over abstract, cut what you can, break the even rhythm.</li>
+<li>Swapping synonyms never removes AI smell; replace the abstraction itself, and drop stock openers and tricolons, the strongest fingerprints.</li>
+<li>As Paul Graham observes, writing exposes what you haven't thought through, so outsource search and critique but never core judgment.</li>
+<li>Use AI as a sparring partner, not a ghostwriter: write your own view first, then have AI play the skeptic and find the weakest claim.</li>
+<li>A good prompt is a good brief with five parts: role, context, task, limits, example; whatever you omit, the model fills with the average.</li>
+<li>In Shannon's terms, the more probable a word, the less information it carries, so AI smell is essentially low-information text.</li>
+</ol>
+</section>
 <!-- Deep thinking -->
 <div class="deepthink">
   <h3>Going Deeper</h3>

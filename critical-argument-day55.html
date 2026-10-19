@@ -90,7 +90,19 @@ details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -320,6 +332,30 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>挑一个你坚信的立场，用 Rapoport 规则替反方写一段最强辩护，强到你都有点动摇；再写你为何仍不改。<strong>思考题</strong>：「把对方说强再驳」需要底气。当权力不对等、你在反驳上级时，如何既公正又不丢掉立场？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>佛学 · 因明三支</b>：陈那的新因明把论式立为宗、因、喻三支：声是无常（宗），所作性故（因），凡所作者皆无常，如瓶（喻）。喻支里那句「凡所作者皆无常」，正是 Toulmin 的依据，而且被强制写出来。不像在哪：因明还要同喻、异喻正反两面都举，比 Toulmin 那座单向的桥验得更严。</li>
+<li><b>概率论 · 贝叶斯更新</b>：「有几分证据说几分话」换成概率语言，就是按证据的分量一点点调信心，而不是一步跳到确定。证据金字塔大致是在给证据的分量排座次：轶事几乎不动指针，对照实验动得多。不像在哪：贝叶斯还要算先验，金字塔只看证据本身。</li>
+<li><b>心理学 · 系统1与系统2</b>：Kahneman 把快而自动的直觉叫系统1，慢而费力的推理叫系统2。谬误好用，正因为它直接喂给系统1，让人情绪先于理智地点头；识别谬误就是把判断交还系统2。不像在哪：系统1并不总出错，谬误清单只管它出错的那部分。</li>
+<li><b>分布式系统 · 拜占庭容错</b>：Lamport 等人 1982 年提出拜占庭将军问题，协议设计时假设节点会以最坏的方式作恶，扛得住最强对手才算可靠。钢人是同一个思路：先把反方设到最强，论证经得住才算数。不像在哪：协议的对手是恶意的，钢人里的对手往往是善意的。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>「我认为 X」只是表态，完整的论证要有主张、证据和依据三根骨头。</li>
+<li>Toulmin 模型里最脆弱的常是依据，也就是从证据通往主张、却没说出口的那座桥。</li>
+<li>越关键的假设越要写出来接受检验，「显然」「众所周知」常是缺证据时的遮羞词。</li>
+<li>证据分层级：从个人轶事、专家意见到对照实验和系统综述，越往上越能排除偶然与偏差。</li>
+<li>论证的强度看最硬的那层证据，可信度看写作者是否诚实标清证据只有那么硬。</li>
+<li>逻辑谬误是看起来像论证、其实站不住的推理，共同点是跳过了证据到主张之间的某一环。</li>
+<li>观点不同不等于逻辑出错，到处喊「这是谬误」本身常常是在逃避回应。</li>
+<li>钢人做法是先把对方立场加固到最强、让对方点头，再去反驳那个最强的版本。</li>
+<li>Paul Graham 反驳阶梯的最高一层是击中对方的核心论点，而不是攻击人或语气。</li>
+<li>陈那因明的喻支强制写出普遍规则，等于把 Toulmin 模型的依据摆上台面。</li>
+</ol>
 </section>
 <div class="deep-title">— 深入思考 —</div>
 <details>

@@ -54,11 +54,23 @@ details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .formula .eq{font-size:0.95rem}
 }
@@ -284,6 +296,30 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Philosophy of science · Popper's bold conjectures</b>: For Popper, the bolder a hypothesis, the more it rules out, the more it says, and the easier it is to refute; "it may or may not rain tomorrow" is always true and tells you nothing. PG's "as strong as it can be without becoming false" has the same structure. The difference: science is tested by experiment, an essay by the reader's experience and objections.</li>
+<li><b>Cognitive science · The illusion of explanatory depth</b>: In 2002 Rozenblit and Keil had people rate how well they understood zippers and flush toilets, then write out how they work step by step; the ratings dropped. That is PG's point that you only find the gaps once you write. Unlike the experiment, which only exposes the illusion, an essay goes on to fill the gaps.</li>
+<li><b>Psychology · Cognitive load theory</b>: Sweller proposed in 1988 that working memory is small and that load comes in intrinsic and extraneous kinds. PG's "tax" is extraneous load: fancy words and winding clauses add no understanding, they just occupy working memory. What doesn't map: intrinsic load can't be cut, since a hard idea is heavy in itself, which is why simple is not simplistic.</li>
+<li><b>Buddhism · The Chan recorded sayings</b>: Tang and Song Chan masters taught in the spoken language of their day, and disciples wrote it down as "recorded sayings," far from the stately style of translated sutras, so the live sparring survived. That matches PG's "athletic clothing": speech keeps up with thinking in motion. The difference: Chan used plain speech to break concepts apart, PG uses it to make an argument clear.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Useful writing tells readers something true and important they didn't already know, and says it as unequivocally as possible.</li>
+<li>Paul Graham breaks usefulness into four parts, importance, novelty, correctness and strength, which multiply, so a zero in any one sinks the whole piece.</li>
+<li>Make each claim as strong as it can be without becoming false; hedges like "perhaps" and "to some extent" dilute the information and dodge responsibility.</li>
+<li>"Essay" comes from the French essayer, "to try": an essay is where you work an idea out while writing, not where you copy down a finished conclusion.</li>
+<li>Writing is a lie detector for thinking: once ideas are forced into linear sentences, every leap you never thought through shows.</li>
+<li>The illusion-of-explanatory-depth experiments show people discover they don't understand something once they write out the steps, the same structure as writing as thinking.</li>
+<li>A reader's attention is a fixed budget, and every fancy word and winding clause taxes it, leaving less for the ideas.</li>
+<li>Simple is not simplistic: complex ideas fit in simple sentences, and the hard part is digesting the complexity for the reader first.</li>
+<li>Paul Graham calls informal language the athletic clothing of ideas; formal prose is where vagueness and bluster hide best.</li>
+<li>To test for a natural voice, read the piece aloud to a friend and rewrite every sentence you would never say; it is trimmed speech, not a transcript.</li>
+</ol>
+</section>
 <div class="deep-title">— Deeper Questions —</div>
 
 <details>

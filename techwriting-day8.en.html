@@ -79,7 +79,20 @@ details div{font-size:0.94rem;line-height:1.75;color:#3a3a3a}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+/* crossovers + takeaways */
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -400,6 +413,32 @@ for (const u of users) { ... }</pre></span>
     <div class="label">This Week's Exercise + Reflection</div>
     <p><strong>Exercise:</strong> In your most recent PR, apply a three-way test to every comment: (a) restates code → delete; (b) explains WHY → keep; (c) names could replace it → rename and delete. Bonus: find a comment from three months ago and check whether it still matches the code — update or delete. This is the most under-rated piece of comment hygiene.<br><strong>Reflect:</strong> When AI can instantly generate "what this code does" comments, the marginal cost of WHAT-comments approaches zero. Is that a feature or a bug? Can AI generate WHY-comments — or is WHY forever the human author's territory?</p>
   </div>
+</section>
+
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Cognitive science · The curse of knowledge</b>: In 1990 Elizabeth Newton at Stanford had people tap out well-known songs for a listener to guess. Tappers expected half to be named; only 3 of 120 were. With the melody playing in your head, you cannot imagine hearing only knocks. Writing for the you of six months from now means admitting you will hear only knocks too. The difference: in the experiment a role separates the two people; in a design doc, time does.</li>
+<li><b>Evolution · The recurrent laryngeal nerve</b>: In the giraffe this nerve runs down from the brain, loops under the aortic arch and climbs back to the larynx, a detour of metres inherited from a fish body plan. Evolution keeps no record of "why not", so biologists reverse-engineer it. Alternatives Considered is the fossil record you leave. Unlike selection, you are an author who weighed options.</li>
+<li><b>Buddhism · Teaching to the listener</b>: The sutras show the Buddha fitting each teaching to the listener: plain words for beginners, depth for long-time practitioners, one truth told several ways. Diátaxis likewise accepts that no single register teaches everyone. The difference: the Buddha sorted people; Diátaxis sorts the needs of one person at different moments, learning in the morning, looking things up after lunch.</li>
+<li><b>Neuroscience · Memory reconsolidation</b>: In 2000 Nader, Schafe and LeDoux showed in rats that a recalled memory becomes labile again and must be re-stored, and can be altered in the process. The brain behaves like a wiki: every recall is an edit and no original survives. An immutable ADR gives the organization the original copy the brain never keeps.</li>
+<li><b>Information theory · Shannon information</b>: Shannon defined information as reduced uncertainty, so whatever a reader can already infer from the code carries zero information; "# increment i" is exactly that. A WHY comment carries the part the code cannot tell you. The difference: in a channel redundancy corrects errors, while a stale comment is noise pointing the wrong way.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>The first reader of a design doc is you, six months later and without context, not today's reviewer.</li>
+<li>A design doc pays off while you write it: turning vague hunches into sentences exposes half the flaws.</li>
+<li>Alternatives Considered must say why each rejected option lost; it is the section with the longest shelf life.</li>
+<li>Write the design doc before the decision, and use Non-goals to state what is out of scope and stop creep.</li>
+<li>Procida's Diátaxis splits docs into tutorials, how-to guides, reference and explanation, each on its own page.</li>
+<li>A README is a title page, not the whole book; cramming all four doc types into one page stalls beginners and experts alike.</li>
+<li>Nygard's ADR records context, decision and consequences; without the Context, no one can tell if the decision still holds.</li>
+<li>An ADR is never edited once written; to change course, write a new ADR marked Supersedes and keep the original.</li>
+<li>Comments explain WHY and WHY-NOT while names explain WHAT; before writing a what-comment, try renaming or extracting a function.</li>
+<li>A comment that restates the code carries zero information, and a stale comment is worse than none because it misleads.</li>
+</ol>
 </section>
 
 <!-- Resources -->

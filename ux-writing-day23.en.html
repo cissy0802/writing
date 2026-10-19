@@ -63,7 +63,19 @@ details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -299,6 +311,30 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Information theory · Shannon information</b>: Shannon (1948) defined information as uncertainty removed, so a symbol that could appear anywhere carries almost none. "Submit" fits on any button, so it tells the user next to nothing; "Create my account" rules out the alternatives and actually resolves the hesitation. The difference: Shannon's measure deliberately ignores meaning, while microcopy exists to remove uncertainty about meaning, about what the click will do.</li>
+<li><b>Psychology · Learned helplessness (Seligman and Maier, 1967)</b>: dogs given shocks they could not escape later stopped trying even when escape was possible. An error that only says "Something went wrong, try again" teaches users the same lesson by letting them hit the wall repeatedly. The difference: users can simply close the app, so helplessness turns into churn.</li>
+<li><b>Buddhism · Skillful means (upāya)</b>: the Lotus Sutra describes the Buddha teaching each listener in a different way, one Dharma through many expedient means, much like one voice with many tones. The difference: skillful means may say contradictory things as long as they help; a product's tone can shift, but its voice must never contradict itself.</li>
+<li><b>Cognitive science · Working-memory capacity</b>: Cowan (2001) estimated that people hold only about four chunks in working memory at once. Every extra pleasantry on screen takes one of those scarce slots, so "cut half" clears room for the task. The difference: chunks grow with practice, so experienced users can absorb more words than newcomers.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Microcopy appears in the second a user is deciding, and despite its tiny word count it is the cheapest, highest-leverage spot in experience design.</li>
+<li>A button label should answer "what happens when I click this?", replacing generic words like Submit or OK with a user-side action phrase.</li>
+<li>By the standard of Shannon's information theory, a label like Submit that fits on any button carries almost no information and cannot resolve hesitation.</li>
+<li>An empty state should not be a dead end like "No data"; it should tell users what to do next and where to start.</li>
+<li>Following Nielsen's heuristic, a good error message says what happened, why, and what to do now; leaving out the next step is the worst failure.</li>
+<li>Error messages should use plain language instead of error codes and move the subject away from "you" so they never blame a frustrated user.</li>
+<li>Voice is the product's constant personality while tone shifts with the situation: one voice, many tones.</li>
+<li>Forcing a playful tone onto errors, payments, or privacy turns even the most consistent voice into an insult.</li>
+<li>Krug's rule is to cut half the words on a screen and then half of what remains, then check copy for clarity, brevity, conversational feel, and usefulness.</li>
+<li>Between short and vague and longer and clear, always choose clear: cutting words should sharpen the guidance, not merely shorten it.</li>
+</ol>
+</section>
 <div class="deep-title">— Going Deeper —</div>
 
 <details>

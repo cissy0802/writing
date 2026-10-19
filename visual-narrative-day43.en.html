@@ -68,7 +68,19 @@ details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -339,6 +351,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Cognitive psychology · Dual coding (Allan Paivio, 1971)</b>: Paivio proposed that the mind keeps two systems, one verbal and one imagistic, and that content encoded in both is remembered better. The match: words and pictures really do travel separate channels. The mismatch: dual coding says restating the same content in both helps memory, while McCloud calls that a wasted channel because he is after understanding.</li>
+<li><b>Neuroscience · Filling in the blind spot</b>: where the optic nerve leaves the retina there are no photoreceptors, yet we never see a hole; the brain fills it from the surroundings. That is closure in the gutter: the reader's brain patches the gap. The difference is that blind-spot filling is automatic and unconscious, while closure in comics is participation the reader can feel, and that participation is the whole point of leaving the gap.</li>
+<li><b>Cognitive science · Feature integration theory (Anne Treisman, 1980)</b>: one dark box in a row of gray ones pops out without a serial search; visual hierarchy borrows this preattentive pop-out. The limit: pop-out only answers "where do I look first." Treisman measured how fast people find a target; an infographic still needs a reading path to put things in order before it tells a story.</li>
+<li><b>Psychology · The identifiable victim effect (Small, Loewenstein &amp; Slovic, 2007)</b>: in their study, the photo and story of Rokia, a girl from Mali, drew far more donations than statistics about famine in Africa; a single frame carrying a whole history runs on the same mechanism. The mismatch: adding the statistics next to Rokia actually lowered giving. The concrete moves people; it does not convey scale.</li>
+<li><b>Buddhism · The finger pointing at the moon</b>: the Shurangama Sutra says that when someone points at the moon, you should follow the finger to the moon and not mistake the finger for it. Cairo's "a tool for your eyes" says the same: the chart is the finger, the conclusion is the moon. Unlike the sutra, which finally lets go of the finger too, a chart has to stay on the page as evidence.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Words and pictures should each do half the work: words give the conclusion, pictures give the evidence, and restating one in the other wastes a channel.</li>
+<li>McCloud calls the strongest word-picture pairing "inter-dependent": together they convey an idea neither could convey alone.</li>
+<li>A slide title should be a one-sentence conclusion, not the chart's name, so the chart becomes the supporting evidence.</li>
+<li>In the gutter between panels, readers use closure to fill in what happened, so you never need to draw everything.</li>
+<li>Pacing comes from how many panels you cut and how big each is: small is fast, large is slow, the heaviest moment gets the biggest panel.</li>
+<li>Cramming a whole architecture diagram onto one slide builds a wall; reveal it step by step, one change per panel, and the audience keeps up.</li>
+<li>An infographic should look for the reader first: bold the main path, gray out the rest, number the key steps, and give a clear starting point.</li>
+<li>Highlighting every metric equally highlights none; emphasis is narrative, but emphasis like a truncated axis turns into deception.</li>
+<li>Graphic novels like Maus and Persepolis carry abstract suffering in one concrete image, explaining nothing and letting readers feel it themselves.</li>
+<li>The identifiable victim effect shows that one specific person moves people more than statistics, but a concrete image is poor at conveying scale.</li>
+</ol>
+</section>
 <div class="deep-head">Going Deeper</div>
 
 <details><summary>Does this "visual narrative" craft still hold in pure-text settings with no images at all?</summary><div>It does—and it turns into metaphor. The three core mechanisms of comics each have a no-image counterpart: <strong>paneling</strong> = paragraphing—where you break and where you start a new section is where you cut a frame; <strong>gutter / closure</strong> = white space—the omitted transition the reader fills in, which actually deepens engagement; <strong>visual hierarchy</strong> = bold, subheads, lists, sentence length—your "emphasis" tools when there's no picture. In other words, even without a single drawn image you're still doing visual narrative; the canvas is just the arrangement of words. The reader's eye always sees the "shape" before reading the "content," image or no image.</div></details>

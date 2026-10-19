@@ -88,11 +88,23 @@ details div{font-size:0.94rem;line-height:1.75;color:#3a3a3a}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .pillars{grid-template-columns:1fr;gap:10px}
   .pillar{padding:16px 10px}
@@ -366,6 +378,32 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <p><strong>习作：</strong>找你最近写的任一段（备忘录、邮件、文档），三件事：(1) 算句长——任何超 35 字（中文）/ 25 词（英文）的句子，要么切要么删；(2) 数术语——前 200 字内每出现一个非通用术语，前面必须有一句白话铺垫；(3) 检查首段第一个数字——若是"小数字"，前面补一个大锚（市场 / 行业 / 全公司）。改完出声读，后者顺一倍的就成了。<br/><strong>思考：</strong>极致精炼与"Made to Stick"里的具象细节，有时是矛盾的——短句牺牲细节，细节牺牲短句。你在自己的写作场景里，怎样判断这一句此刻该走哪边？</p>
 </div>
 </section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>生态学 · 李比希最小因子定律</b>：作物产量被最稀缺的养分卡住，氮磷再足，缺钾照样长不好，和三柱「任一柱为零，结果为零」同构。不像在于：最小因子定律取最小值，短板封顶；三柱相乘，弱的一柱拖低全局，但只要不到零，补强另两柱仍有收益。</li>
+<li><b>进化生物学 · 扎哈维的累赘原理</b>：Amotz Zahavi 1975 年提出，孔雀尾巴可信，正因为它昂贵、弱者造不起；自称「行业专家」零成本，所以不算 ethos，坦白一次失败才有成本。不像的是，孔雀付生存代价，写作者付的是面子。</li>
+<li><b>物理学 · 3σ 与 5σ</b>：粒子物理把 3σ 叫「证据」，5σ 才叫「发现」，2012 年希格斯玻色子过了 5σ 才宣布，这是把确定程度写进措辞的公共梯级。不像在于：σ 能算出来，写作的证据梯级靠判断。</li>
+<li><b>佛学 · 因明的「立敌共许」</b>：陈那的因明规定，论证用的理由必须立论者和对手都承认，和反论预处理一样先走进对方的地盘。不像的是，因明只要求前提共许，steelman 还要替对方把结论也做到最强。</li>
+<li><b>分布式系统 · 混沌工程</b>：Netflix 的 Chaos Monkey 在生产环境随机关掉服务器，让系统在故障真来之前先演一遍，和 pre-mortem 先假设失败同构。不像在于：混沌工程真把东西弄坏；pre-mortem 只在想象里失败，靠叙事挖细节。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>亚里士多德的三柱说服是人格、情感、逻辑相乘，任何一柱为零，整体说服力就为零。</li>
+<li>技术人最常见的盲区是只用 logos，以为数据漂亮就够，忘了对方先得信你、在乎这件事。</li>
+<li>Ethos 不能靠自吹，「我是行业专家」反而失分，可信度要由经历（包括失败经历）替你说。</li>
+<li>证据有公开的梯级：直觉、类比、案例、数据、共识、实证，写作者要在论断后标出它属于哪一级。</li>
+<li>最常见的隐性失信是省略不确定度，读者会按最强证据去相信一句没标注的论断。</li>
+<li>主动标出弱证据反而抬高整篇可信度，因为读者会推断没标的部分是强证据。</li>
+<li>Steelmanning 是先替反方把反驳说得比他更好，写不出来说明论点还不能 ship。</li>
+<li>Pre-mortem 假设项目已经失败、倒写失败叙事，叙事激活的细节远多于一张风险清单。</li>
+<li>Kahneman 的认知顺畅：读着累让系统 1 拉警报，系统 2 就不会进场审你的论点。</li>
+<li>粒子物理 3σ 叫「证据」、5σ 才叫「发现」，和写作的证据梯级一样把确定程度写进措辞。</li>
+</ol>
+</section>
+
 <!-- Resources -->
 <section class="card">
 <div class="num">Deep Dive</div>

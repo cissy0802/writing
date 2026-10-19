@@ -60,11 +60,23 @@ details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.25rem}
 }
 </style>
@@ -287,6 +299,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>拿你一份 quickstart，用 Krug 法则删两轮字（先删一半，再删剩下的一半），删到读者能在读完前就开始做第一步。检查：有没有真的丢信息？<br/>思考题：「极简」和「完整」在什么场景必然冲突？给外科医生的核查表 vs 给用户的 App 引导，边界一样吗？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>认知科学 · 冗余效应</b>：Sweller 的认知负荷理论（1988）指出工作记忆容量很小，多余的解释会挤占它，删掉反而学得更快。这和极简指令砍暖场是同一个道理；不同在于他研究的是「学会」，说明书只求「做对」，读者更没耐心。</li>
+<li><b>神经科学 · 预测编码</b>：预测编码把大脑看成一台不停预测下一刻输入的机器，靠预测误差修正内部模型。读者的心智模型也是拿来预测「点了会怎样」的。区别是大脑自己更新模型，读者的模型只能靠文档里那句「因为」装进去。</li>
+<li><b>分布式系统 · 预写日志</b>：数据库改数据之前，先把这次操作写进日志（WAL），崩溃后能照日志恢复。「先导出备份，再点删除」是同一个顺序：可恢复的记录永远抢在不可逆动作前面。不像的是机器从不跳步，人会，所以前提必须写在动作之前，而且要醒目。</li>
+<li><b>心理学 · 瑞士奶酪模型</b>：James Reason 在《Human Error》（1990）里把事故防线画成一片片带孔的奶酪，孔恰好连成一线才出事。警告、安全默认、验证步就是三片奶酪，单片都会漏，叠起来才稳。不同在于他分析的是整个组织，文档只管得到读者手边这一步。</li>
+<li><b>商业 · 事前验尸</b>：Gary Klein 2007 年在《哈佛商业评论》提出 premortem：开工前先假设项目已经失败，倒推死因。写说明时追问「读者最可能在哪做错」是同一个动作。不像的是事前验尸找团队自己的盲点，文档要猜的是陌生读者的盲点。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>说明的最小单位是一个可执行动作：用编号步骤，每步只做一件事，祈使句动词打头。</li>
+<li>条件、位置和警告要写在动作之前，因为读者一读到动作就会动手。</li>
+<li>跳步是说明最常见的坑：作者觉得「显然要先登录」，读者恰恰卡在第一步。</li>
+<li>Norman 指出，用户只能通过系统映像（界面、命名、文档）反推出自己的心智模型。</li>
+<li>纯步骤只能让人死记，在关键处补一句「因为」，读者才能推断文档没写到的情形。</li>
+<li>最好的报错是让错误无法发生：在读者最可能出错的那一步之前设防线。</li>
+<li>文档里的错误预防有三道防线：写明具体后果的警告、安全默认值、确认成功的验证步。</li>
+<li>Carroll 的极简指令不是写得少，而是砍掉一切挡在读者开始行动之前的东西。</li>
+<li>极简不等于残缺：暖场引言和显而易见的解释可以删，出错恢复信息不能省。</li>
+<li>「先备份再删除」和数据库的预写日志同构：可恢复的记录总要抢在不可逆动作之前。</li>
+</ol>
 </section>
 <div class="deep-head" data-tts="2fe53f650b65ec51">深入思考</div>
 <details><summary>好说明追求"消灭作者的存在感"，随笔与演讲却追求"独特声音"，正相反。同一个人怎么在两种模式间切换？</summary><div>好说明的最高褒奖是「透明」——读者顺畅做完事，根本没注意到文字。这确实与随笔、演讲的「声音」相反，但底层技艺相通：都要极度替读者着想。区别在服务对象——说明服务于「任务完成」，随笔服务于「思想共鸣」。成熟写作者的标志，正是能判断此刻该隐身还是该现身，并切换自如。声音不是到处都要，是该有时才有。</div></details>

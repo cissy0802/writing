@@ -88,11 +88,23 @@ header .intro{margin-top:24px;font-size:1rem;color:#3a3a3a;font-style:italic;max
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .crap-grid{grid-template-columns:1fr}
   .rule-pillars{grid-template-columns:1fr;gap:10px}
@@ -463,6 +475,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作</div>
 <p>找你手上任意一份正在做的 deck（无论几页）。强行套上 10/20/30：(1) 砍到 10 张——记下每砍掉一张时你的"舍不得"清单，那是诚实的优先级排序；(2) 把最小字号全部设为 30pt——装不下的内容，要么删，要么挪到下一张，要么进 appendix；(3) 计时演讲一遍，看是否能在 20 分钟内讲完——超时就是核心还没收敛。做完之后，把删掉的 70% 内容存档成"备战包"，留作 Q&amp;A 时的弹药——这才是它们真正的用武之地。</p>
 </div>
+</section>
+
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>信息论 · 香农的信噪比</b>：香农 1948 年奠定信息论，信道能可靠传多少信息取决于信号与噪声之比——幻灯上每多一个 logo、水印、装饰边框，都在压低这个比值。不像的地方：香农的噪声来自信道本身，发送者管不着；幻灯上的噪声几乎全是演讲者亲手加上去的，所以删得掉。</li>
+<li><b>神经科学 · 偏向竞争</b>：Desimone 与 Duncan 1995 年提出，视野里的物体在视觉皮层里争夺有限的表征，元素越多，每个分到的越少，这正是「噪音是负数」的神经版。不同在于大脑会按目标给某个物体加权，CRAP 的「对比」就是替观众预先加好这份权。</li>
+<li><b>东方哲学 · 老子「当其无，有车之用」</b>：《道德经》第十一章说车毂、陶器、屋室的用处都在中空处，和「間」一样把空当成起作用的部分。不像在：老子的空是让东西装进去的容器，幻灯的留白是让观众自己的理解长出来的位置。</li>
+<li><b>心理学 · Cowan 的「神奇的数字 4」</b>：Nelson Cowan 2001 年重估工作记忆，认为人能同时抓住的约是 4 个组块，比 7±2 更紧。这反而更支持「一张幻灯一个想法」：10 张不是靠一次全记住，而是每张只占一个组块、逐张交接。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>Garr Reynolds 把日语「間」引入演示设计：留白不是没填完，而是特意留下、用来引导视线的空。</li>
+<li>不为信息服务的装饰元素都是噪音，噪音是负数，会和信号争夺观众有限的注意力。</li>
+<li>既要演讲又要会后阅读的「slideument」应拆成两份：极简的演讲版和详尽的阅读版。</li>
+<li>CRAP 四原则（对比、重复、对齐、接近）是非设计师做出专业幻灯的可执行审查清单。</li>
+<li>对比要差就差出三倍：字号只留两个梯度，三级以下的信息砍掉或挪到下一张。</li>
+<li>视觉叙事要求每张幻灯只承担一个想法加一张图，图就是论点，文字只做图的注脚。</li>
+<li>数据图应删掉 3D、阴影和网格，只给要强调的那一根柱子上色，让数据自己说话。</li>
+<li>Guy Kawasaki 的 10/20/30 守则：不超过 10 张幻灯、不超过 20 分钟、字号不小于 30pt。</li>
+<li>30pt 的最小字号是一台内容审查器，物理上装不下 bullet 海，逼演讲者只放核心。</li>
+<li>香农信道里的噪声来自外界，而幻灯上的噪音几乎都是演讲者自己加的，所以删得掉。</li>
+</ol>
 </section>
 <div class="nav">
 <a href="index.html">← 回到写作目录</a>

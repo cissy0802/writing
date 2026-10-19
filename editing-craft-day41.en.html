@@ -60,11 +60,23 @@ details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
   .card{padding:24px 20px}
+  .xbox{padding:24px 20px}
   .card h2{font-size:1.3rem}
   .edit-stack .layer{width:100%!important}
 }
@@ -307,6 +319,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
   </div>
 </section>
 
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Computer science · Premature optimization (Knuth)</b>: In 1974 Donald Knuth wrote that premature optimization is the root of all evil: get the structure right first, then find the real hot spots, and never shave microseconds off code you will rewrite anyway. Skeleton-before-sentences is the same discipline. The difference: a program has a profiler to measure its hot spots; a draft has only the reader you imagine.</li>
+<li><b>Neuroscience · Synaptic pruning</b>: The developing brain grows a surplus of synapses, then prunes the little-used ones on a use-it-or-lose-it basis, and the network gets more efficient. Cutting dispensable sentences runs on the same logic. Unlike the brain, though, killing darlings means pruning the connection the author likes most, not the one used least.</li>
+<li><b>Psychology · The IKEA effect (Norton et al., 2012)</b>: Norton, Mochon and Ariely found that people value things they assembled themselves well above identical ready-made ones; the labor itself breeds the attachment. Darlings are hard to cut because they cost the most effort. The difference: the bookshelf you built really is useful to you, while a darling's value is visible only to its author.</li>
+<li><b>Linguistics · The principle of contrast (Eve Clark, 1987)</b>: Children learning words assume that a different word means a different thing, and go looking for a new referent. Readers bring the same assumption to a document: when "user" and "customer" alternate, they hunt for the difference, and that hunt is the hidden tax of inconsistency. The difference: for a child the assumption speeds up learning; in a document it sends readers chasing a distinction that isn't there.</li>
+<li><b>Leadership · Servant leadership (Greenleaf, 1970)</b>: Robert Greenleaf argued that a leader is a servant first, and that the test is whether those served grow; Perkins's editor-as-handmaiden has the same shape. The difference: a servant leader still owns the team's direction, while an editor should hand even the direction back to the author.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>Do macro-editing (structure, order, argument) before micro-editing (word choice, punctuation), or you will polish paragraphs that end up deleted.</li>
+<li>Skeleton-before-sentences is the same discipline as avoiding premature optimization in code: get the structure right, then polish what survives.</li>
+<li>Kill your darlings: the line you are proudest of is often the one to cut, because you keep it for yourself, not the reader.</li>
+<li>A darling turns the reader's attention to how well the author writes and away from the message, and sunk cost makes the most labored lines hardest to cut.</li>
+<li>The test for a darling: cut a good sentence and the meaning collapses; cut a darling and only the author feels the loss.</li>
+<li>Killing darlings does not mean stripping out all color: style that serves the reader stays, style kept for showing off goes.</li>
+<li>Use one word for one concept and one format for one kind of thing throughout, or readers will suspect they are different things.</li>
+<li>Keep the surface of the prose mechanically consistent but leave the thinking free; "fixing" spellings inside a quotation is Emerson's foolish consistency.</li>
+<li>Editing fails in two opposite ways: the rubber stamp that only praises, and the over-editor who, like Lish with Carver, turns the author into himself.</li>
+<li>Query editing leaves the judgment with the author: fix where the reader stumbles, keep the author's voice, and serve the book the author meant to write.</li>
+</ol>
+</section>
 <div class="deep-head">Going Deeper</div>
 
 <details><summary>Don't "kill your darlings" and "sentences should have rhythm and color" contradict each other?</summary><div>No, because the test is "whom does it serve." A good sentence and a darling may be equally lovely; the difference is function. Cut a good sentence and the meaning collapses, the emotion breaks, the rhythm limps; cut a darling and only the author feels the loss, the reader none. Color isn't a sin—color kept to show off is. A practical check: lift the line out and read what remains; if it flows, even reads cleaner, it was a darling. So this rule doesn't oppose fine prose—it opposes dressing the author's vanity up as the reader's need.</div></details>

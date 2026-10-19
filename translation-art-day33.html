@@ -62,7 +62,19 @@ details{margin:10px 0;border-bottom:1px solid #e0e0e0;padding-bottom:8px}
 summary{cursor:pointer;font-weight:600;color:#1f1f1f;font-size:1rem;padding:6px 0}
 details > div{font-size:0.94rem;color:#4a4a4a;line-height:1.75;padding:8px 0 4px 16px}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.1rem}
@@ -276,6 +288,31 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>翻出你最近一封中英混写的邮件，标出所有「进行/作出/加以/被……所」和多余的「的」，逐一删改；再把英文部分朗读一遍，揪出缺冠词与 although…but 之类的中式痕迹。<strong>思考题</strong>：AI 翻译已极少犯这类语法错，那么人在「转骨」上还剩什么不可替代的判断？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>信息论 · 率失真</b>：香农的率失真理论说，带宽有限时失真不可避免，只能按「哪种错误代价最大」决定丢什么。信达雅的旋钮是同一结构：技术文档最怕歧义，就让流畅失真；文案最怕无感，就让字面失真。不像的是，翻译的失真代价没法写成一个公式，要靠读者和目的去估。</li>
+<li><b>语言学 · 颜色词的切分</b>：俄语把浅蓝（goluboy）和深蓝（siniy）分成两个基本词，Winawer 等人 2007 年的实验发现，俄语使用者分辨跨这条界线的蓝色略快。语言切分世界的刀口不同，所以才有不可译。不像的是，效应很小，说英语的人照样看得见两种蓝，正如没有对应词不等于没有那个概念。</li>
+<li><b>佛学 · 玄奘「五不翻」</b>：玄奘译经定下五种情况保留梵音不意译，其中「多含故」「此无故」恰好对上本篇的不可译：一词多义、此土所无。比如「般若」不译作「智慧」，怕把它压扁成世俗的聪明。像在都承认没有等价物、宁可点名原词；不像的是，玄奘保留原音还有「生善故」，要借陌生感让人生起敬重，而本篇保留原词是为了少丢意思，陌生感是代价而不是目的。</li>
+<li><b>神经科学 · 预测编码</b>：大脑主要处理预测之外的信号，预测得中的部分几乎察觉不到。归化的译文就是把预测误差压到最低，读者感觉不到译者，所以「隐身」。异化则故意留下误差，让读者注意到这是另一种语言。不像的是，大脑消除误差是为省力，译者留下误差却是在保存信息。</li>
+<li><b>心理学 · 前摄干扰</b>：先学的东西会挤进后学的东西，背了旧电话号码，新号码就老记串。母语句法渗进译文是同一种侵入：although…but 就是旧习惯顶替了新规则。不像的是，前摄干扰是记忆提取出错，翻译腔却常常没被察觉，所以解药是换成目标语言的耳朵再读一遍。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>直译和意译不是二选一，而是在信、达、雅三者之间为这次任务调一个配比。</li>
+<li>严复指出只信不达等于没译，所以准确之外，通顺同样不可少。</li>
+<li>技术文档把旋钮拧向「信」宁可生硬，市场文案把旋钮拧向「雅」宁可改写。</li>
+<li>遇到不可译的文化词，别硬塞假等价物，先选这次要传的侧面，再补一句解释。</li>
+<li>钱钟书的「化境」要求既无生硬痕迹又完全保留原味，比直译更难，不是自由发挥的借口。</li>
+<li>Venuti 指出流畅透明的「隐身」译文是一种选择，并不中立。</li>
+<li>归化向读者靠拢、好读但磨掉棱角，异化向原作靠拢、保真但增加阅读成本。</li>
+<li>把外来方法论讲给团队时，错的不是归化本身，而是无意识地默认归化、把原意磨平。</li>
+<li>中译常见的翻译腔是万能动词、滥用「被」和长定语，英译常见的是缺冠词和 although…but 配对。</li>
+<li>母语句法会像旧习惯一样渗进译文，终稿要只用目标语言的语感再读一遍。</li>
+</ol>
 </section>
 <section class="card">
 <div class="num">Reflection</div>

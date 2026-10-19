@@ -64,7 +64,19 @@ details .ans{padding:0 0 16px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -273,6 +285,30 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
 <div class="label">本周习作 + 思考题</div>
 <p>拿你产品里一段 onboarding 或空状态文案，先用 Krug 法砍掉一半，再用四问逐条检查。<strong>思考题</strong>：「砍一半」在中文界面同样适用吗？中文单字信息密度更高，标尺该怎么调？</p>
 </div>
+</section>
+<section class="xbox cx">
+<h2>越界 · 跨学科的联想</h2>
+<div class="crossx"><ul>
+<li><b>信息论 · 香农的信息量</b>：香农（1948）把信息定义为被消除的不确定性，一个在什么场合都会出现的符号几乎不带信息。「提交」能贴在任何按钮上，所以几乎什么也没告诉用户；「Create my account」排除了别的可能，才真的消除了犹豫。不像在于：香农的信息量刻意不管意义，微文案要消除的恰恰是「点了会怎样」这种关于意义的不确定。</li>
+<li><b>心理学 · 习得性无助（Seligman 与 Maier，1967）</b>：反复受到躲不开电击的狗，后来能逃也不逃了。只说「操作失败，请重试」的报错让用户一再撞墙，学到的也是放弃。不像的是，用户随时能关掉产品走人，无助很快变成流失。</li>
+<li><b>佛学 · 方便（upāya）</b>：《法华经》讲佛对不同根器的人用不同说法，法只有一个，方便有多门，正像一个 voice、多种 tone。不像在于：方便可以说出彼此矛盾的话，只要能渡人；产品的语气再变，voice 也不能前后打架。</li>
+<li><b>认知科学 · 工作记忆容量</b>：Cowan（2001）估计，人一次能在工作记忆里同时抓住的大约只有 4 个组块。界面上每多一句客套话，都在占这本就不多的位置，「砍一半」是在给任务腾地方。不像的是，组块会随熟练变大，老用户吞得下的字比新手多。</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>十条要点</h2>
+<ol class="takeaways">
+<li>微文案出现在用户要做决定的那一秒，字数最少，却是体验设计里成本最低、杠杆最高的一处。</li>
+<li>按钮文案要回答「点下去会发生什么」，用用户视角的动作短语代替「提交」「确定」这类通用词。</li>
+<li>「提交」能贴在任何按钮上，按香农信息论的标准几乎不带信息，消除不了用户的犹豫。</li>
+<li>空状态别写「暂无数据」这种死路，要告诉用户下一步做什么、入口在哪。</li>
+<li>按 Nielsen 的启发式，合格的报错要说清发生了什么、为什么、怎么办，缺「怎么办」最致命。</li>
+<li>报错要用人话而不甩错误码，并把主语从「你」移开，别责怪已经受挫的用户。</li>
+<li>Voice 是产品始终如一的人格，tone 随场景而变，一个声音配多种语气。</li>
+<li>在报错、付费、隐私这类严肃场景硬套俏皮语气，再统一的 voice 也会变成冒犯。</li>
+<li>Krug 主张界面文字砍掉一半再砍一半，终稿前再过清晰、简洁、对话感、有用四问。</li>
+<li>短而含糊和长而清楚之间永远选清楚，砍字是为了让指引更锋利，不是为了字少。</li>
+</ol>
 </section>
 <div class="deep-title">— 深入思考 —</div>
 <details>

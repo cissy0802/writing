@@ -63,7 +63,19 @@ details div{padding:6px 0 14px;font-size:0.95rem;color:#3a3a3a;line-height:1.8}
 .nav a{color:#1f1f1f;text-decoration:none;font-family:Georgia,serif;font-size:0.95rem;border-bottom:1px solid #1f1f1f;padding-bottom:2px}
 .nav a:hover{color:#8a7a4a;border-color:#8a7a4a}
 footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-family:Georgia,serif}
+.xbox{background:#fff;border-radius:2px;box-shadow:0 1px 6px rgba(0,0,0,0.06);padding:30px 32px;margin-bottom:36px;border-top:3px solid #8a7a4a}
+.xbox.tk{border-top-color:#1f1f1f}
+.xbox h2{font-size:1.3rem;font-weight:700;margin-bottom:16px;color:#1f1f1f}
+.crossx ul{list-style:none;margin:0;padding:0}
+.crossx li{padding:12px 0;border-top:1px solid #e0ddd4;font-size:0.96rem;color:#2a2a2a;line-height:1.8}
+.crossx li:first-child{border-top:none;padding-top:0}
+.crossx b{color:#8a7a4a;font-family:Georgia,serif}
+.takeaways{counter-reset:tk;list-style:none;margin:0;padding:0;background:#f8f6f1;border:1px solid #d8d0bc;border-radius:2px}
+.takeaways li{counter-increment:tk;position:relative;padding:11px 18px 11px 52px;border-top:1px solid #e8e2d2;font-size:0.96rem;color:#2a2a2a;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-family:Georgia,serif;font-size:0.8rem;font-weight:700;color:#8a7a4a}
 @media(max-width:600px){
+  .xbox{padding:24px 20px}
   .container{padding:20px 16px 60px}
   header h1{font-size:1.7rem}
   header h1 .topic{font-size:1.05rem}
@@ -305,6 +317,32 @@ footer{text-align:center;margin-top:30px;font-size:0.82rem;color:#a0a0a0;font-fa
     <p>Write a 100-word self-intro with no adjectives at all — only one moment so specific it could only be yours. Have a stranger read it, then ask what they remember.</p>
     <p class="q">Question: What is the one moment in your career that "only you would tell this way"? Why have you always assumed it wasn't worth telling?</p>
   </div>
+</section>
+
+<section class="xbox cx">
+<h2>Crossovers</h2>
+<div class="crossx"><ul>
+<li><b>Neuroscience · Memory reconsolidation</b>: In 2000, Nader, Schafe and LeDoux found in rats that a reactivated fear memory turns unstable and must be stored again, and can be altered in that window. That is the mechanism behind "every recall is a rewrite." The difference: the brain rewrites without leaving a trace, while a memoirist can mark which parts are remembered and which are inferred after the fact.</li>
+<li><b>Buddhism · Non-self</b>: Buddhism treats the "self" as a coherent label pasted onto a stream of aggregates; Didion says we tell ourselves stories in order to live. Both see the self as something narrative builds. The directions differ: practice aims to see through the story, memoir aims to tell a more honest one.</li>
+<li><b>Information theory · Lossy compression</b>: Distilling the story from the situation is like JPEG discarding high-frequency detail the eye barely registers. Alike: both decide "what matters, and to whom" before cutting. Unlike: JPEG cuts against a fixed model of vision, while the writer has to build the story filter themselves.</li>
+<li><b>Neuroscience · Predictive coding</b>: Predictive coding (Rao and Ballard, 1999) holds that the brain keeps filling incomplete input with its priors. The iceberg uses the same machinery: give only facts, and the reader fills in the feeling. The catch: where that filling converges depends on whether the writer truly knows the seven-eighths underwater.</li>
+<li><b>Psychology · Identifiable victim effect</b>: In a 2007 study by Small, Loewenstein and Slovic, one named Malian girl, Rokia, drew more donations than a page of famine statistics: the particular moves people more than the abstract, the same structure as Principle 4. The difference: in charity it is a bias to guard against; in writing it is a legitimate tool.</li>
+</ul></div>
+</section>
+<section class="xbox tk">
+<h2>Ten takeaways</h2>
+<ol class="takeaways">
+<li>A memoir owes readers emotional and interpretive truth, not a frame-by-frame transcript.</li>
+<li>Memory reconsolidation shows that recalling a memory rewrites it, so honest retrospection admits the limits of memory.</li>
+<li>The classic failure in postmortems and promo packets is turning luck into foresight and chaos into a plan.</li>
+<li>Gornick separates the situation, everything that happened, from the story, the one thing you have come to say.</li>
+<li>Fix the story in one sentence first, then use it as a filter for every detail in the situation.</li>
+<li>Forty items in a promo packet means no story; three items pointing at one arc of growth means a story.</li>
+<li>When writing pain or failure, restraint hits harder, because emotion adjectives package the feeling for the reader.</li>
+<li>Hemingway's iceberg principle: what the writer knows deeply and leaves out, the reader still feels strongly.</li>
+<li>What moves readers is not how rare the life was but how specific the detail is; the particular opens onto the universal.</li>
+<li>The identifiable victim effect shows one specific person moves people more than statistics, the same structure as particular-to-universal.</li>
+</ol>
 </section>
 
 <div class="deep-head">Going Deeper</div>
