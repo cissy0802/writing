@@ -12,7 +12,7 @@
 #   - each new file is not a tiny error stub (>2KB)
 #   - index.html references the new Chinese file (index.en.html refs the .en one if present)
 #   - no DUPLICATE N (treats day1 / day01 / day9 / day09 as same N=9)
-#   - no hardcoded shared scripts (comments/search/index-button/i18n-tts)
+#   - shared scripts (comments/search/index-button/i18n-tts): exactly one canonical hub tag each
 #   - <div> balance + data-zh/data-en attribute integrity
 #   - pushes to main via HEAD:main (bypasses claude/* harness branches)
 #   - also pushes current branch to origin (keeps claude/* harness branches in sync with stop-hook)
@@ -77,9 +77,21 @@ for F in $NEW_FILES; do
     grep -q "$F" index.html || { echo "ERROR: index.html does not reference $F"; exit 1; }
   fi
 
-  # Forbidden hardcoded scripts (auto-injected by GitHub Action)
+  # Shared scripts: CLAUDE.md requires every new page to carry exactly ONE
+  # canonical hub.cissychen.com tag, so the inject-comments Action has nothing
+  # to append (no extra bot commit). Reject duplicates and non-hub copies.
   for s in comments.js search.js index-button.js i18n-tts.js; do
-    grep -q "$s" "$F" && { echo "ERROR: $F hardcodes $s (auto-injected, will duplicate)"; exit 1; }
+    ESC=$(echo "$s" | sed 's/\./\\./g')
+    TOTAL=$(grep -o "$ESC" "$F" | wc -l | tr -d ' ')
+    HUB=$(grep -o "https://hub\.cissychen\.com/$ESC" "$F" | wc -l | tr -d ' ')
+    if [ "$TOTAL" != "$HUB" ]; then
+      echo "ERROR: $F references $s from a non-hub URL (use https://hub.cissychen.com/$s)"
+      exit 1
+    fi
+    if [ "$HUB" -gt 1 ]; then
+      echo "ERROR: $F has $HUB copies of $s (exactly one canonical tag expected)"
+      exit 1
+    fi
   done
   grep -q "← Hub" "$F" && echo "WARN: $F hardcodes ← Hub button (will be deduped, consider removing)"
 
