@@ -301,6 +301,78 @@ def synth_long(key: str, region: str, voice_name: str, text: str) -> bytes:
         return out.read_bytes()
 
 
+# Off only while recomputing the pre-table narration (see process_page).
+READ_TABLES = True
+
+
+def table_speech(table, lang: str) -> str:
+    """Linearise a <table> for the ear: each row as "列名：内容；列名：内容。".
+
+    Flattening the cells into one run ("方案 改配置要重发二进制吗 能否独立回滚
+    配置放主干 head 不用 …") is noise, so tables used to be skipped outright.
+    Reading every cell after its column title makes a comparison table
+    listenable. A leading column with an empty title (the row label) is read
+    bare, as the row's subject.
+    """
+    text_of = globals().get("visible_text") or (lambda n: n.get_text())
+    colon, sep, stop = ("：", "；", "。") if lang == "zh" else (": ", "; ", ". ")
+    strip_chars = " \t\n：:；;，,。."
+
+    def clean(cell) -> str:
+        return " ".join(text_of(cell).split()).strip(strip_chars)
+
+    def cells(tr):
+        out = []
+        for c in tr.find_all(["th", "td"], recursive=False):
+            try:
+                span = max(1, min(int(c.get("colspan", 1)), 20))
+            except ValueError:
+                span = 1
+            out.append((clean(c), span))
+        return out
+
+    rows = [tr for tr in table.find_all("tr") if tr.find_parent("table") is table]
+    if not rows:
+        return ""
+    # Header row: the last row of <thead> (multi-row heads put the real
+    # column titles last), else a first row made only of <th>.
+    head = table.find("thead")
+    head_rows = [r for r in rows if head is not None and r.find_parent("thead") is head]
+    if head_rows:
+        header_tr = head_rows[-1]
+    elif rows[0].find("th") is not None and rows[0].find("td", recursive=False) is None:
+        header_tr = rows[0]
+    else:
+        header_tr = None
+    headers = []
+    if header_tr is not None:
+        for text, span in cells(header_tr):
+            headers.extend([text] * span)
+
+    parts = []
+    cap = table.find("caption")
+    if cap is not None and clean(cap):
+        parts.append(clean(cap) + stop)
+    for tr in rows:
+        if tr is header_tr or tr in head_rows:
+            continue
+        said, col, subject = [], 0, ""
+        for text, span in cells(tr):
+            title = headers[col] if col < len(headers) else ""
+            col += span
+            if not text:
+                continue
+            if not title and col == span and not subject:
+                subject = text  # untitled first column: the row's label
+            else:
+                said.append(f"{title}{colon}{text}" if title and title != text else text)
+        if subject or said:
+            parts.append((subject + stop if subject else "") + (sep.join(said) + stop if said else ""))
+    if not parts and headers:
+        parts.append(sep.join(h for h in headers if h) + stop)
+    return " ".join(parts)
+
+
 def detect_page_mode(soup) -> str:
     """Return 'split', 'full', or 'legacy' based on document markup.
 
@@ -386,7 +458,7 @@ def collect_groups(soup) -> list[tuple]:
         for node in body.descendants:
             if id(node) in h2_set:
                 h2_seen += 1
-            if not hasattr(node, "name") or node.name not in NARRATION_TAGS:
+            if not hasattr(node, "name") or (node.name not in NARRATION_TAGS and not (node.name == "table" and READ_TABLES)):
                 continue
             if skip_descendants_of and any(
                 id(anc) in skip_descendants_of for anc in node.parents
@@ -396,6 +468,20 @@ def collect_groups(soup) -> list[tuple]:
                 continue
             # Skip elements inside a diagram/SVG, footers, anything purely decorative
             if node.find_parent("svg") or node.find_parent("style") or node.find_parent("script"):
+                continue
+            # Tables are read row by row, each cell after its column title
+            # (table_speech); their cells are never narrated on their own.
+            if READ_TABLES and node.name == "table":
+                if node.find_parent("table") is not None:
+                    continue
+                tcls = node.get("class") or []
+                if (lang == "zh" and "en" in tcls) or (lang == "en" and "zh" in tcls):
+                    continue
+                ttext = table_speech(node, lang)
+                if ttext:
+                    bins_split[h2_seen].append(ttext)
+                continue
+            if READ_TABLES and node.find_parent("table") is not None:
                 continue
             # Only direct visible text — skip divs that WRAP block-level children
             # (their text is captured via those inner elements). Include divs whose
@@ -563,6 +649,19 @@ def process_page(
     soup = BeautifulSoup(html_src, "html.parser")
     mode = detect_page_mode(soup)
     groups = collect_groups(soup)
+    # Sections baked before tables were narrated keep their audio: if the
+    # anchor still carries the hash of the old table-less text and that mp3
+    # exists, skip. Editing the section changes both texts, so it re-bakes
+    # with its tables read. Saves re-synthesising every old table section.
+    global READ_TABLES
+    READ_TABLES = False
+    try:
+        legacy_groups = collect_groups(soup)
+    finally:
+        READ_TABLES = True
+    legacy = {}
+    if len(legacy_groups) == len(groups):
+        legacy = {id(a): t for a, t in legacy_groups}
     print(f"  {len(groups)} model groups (cover + N models)  [mode={mode}]")
 
     changed = False
@@ -611,6 +710,12 @@ def process_page(
             # SPLIT mode: each file is single-language, JS reads `data-tts`.
             # FULL mode: file holds both, JS reads `data-tts-{lang}`.
             attr_name = "data-tts" if mode == "split" else f"data-tts-{lang}"
+            old_text = legacy.get(id(anchor), {}).get(lang, "")
+            if old_text and old_text != text:
+                old_digest = hash_text(old_text)
+                if anchor.get(attr_name) == old_digest and store.has(lang, old_digest):
+                    skipped_existing += 1
+                    continue
             if anchor.get(attr_name) != digest:
                 anchor[attr_name] = digest
                 changed = True
