@@ -649,19 +649,6 @@ def process_page(
     soup = BeautifulSoup(html_src, "html.parser")
     mode = detect_page_mode(soup)
     groups = collect_groups(soup)
-    # Sections baked before tables were narrated keep their audio: if the
-    # anchor still carries the hash of the old table-less text and that mp3
-    # exists, skip. Editing the section changes both texts, so it re-bakes
-    # with its tables read. Saves re-synthesising every old table section.
-    global READ_TABLES
-    READ_TABLES = False
-    try:
-        legacy_groups = collect_groups(soup)
-    finally:
-        READ_TABLES = True
-    legacy = {}
-    if len(legacy_groups) == len(groups):
-        legacy = {id(a): t for a, t in legacy_groups}
     print(f"  {len(groups)} model groups (cover + N models)  [mode={mode}]")
 
     changed = False
@@ -710,12 +697,6 @@ def process_page(
             # SPLIT mode: each file is single-language, JS reads `data-tts`.
             # FULL mode: file holds both, JS reads `data-tts-{lang}`.
             attr_name = "data-tts" if mode == "split" else f"data-tts-{lang}"
-            old_text = legacy.get(id(anchor), {}).get(lang, "")
-            if old_text and old_text != text:
-                old_digest = hash_text(old_text)
-                if anchor.get(attr_name) == old_digest and store.has(lang, old_digest):
-                    skipped_existing += 1
-                    continue
             if anchor.get(attr_name) != digest:
                 anchor[attr_name] = digest
                 changed = True
