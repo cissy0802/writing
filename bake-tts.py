@@ -643,7 +643,7 @@ def process_page(
     langs: set,
     dry_run: bool,
     store,
-) -> None:
+) -> int:
     print(f"\n=== {path.name} ===")
     html_src = path.read_text(encoding="utf-8")
     soup = BeautifulSoup(html_src, "html.parser")
@@ -697,26 +697,30 @@ def process_page(
             # SPLIT mode: each file is single-language, JS reads `data-tts`.
             # FULL mode: file holds both, JS reads `data-tts-{lang}`.
             attr_name = "data-tts" if mode == "split" else f"data-tts-{lang}"
-            if anchor.get(attr_name) != digest:
-                anchor[attr_name] = digest
-                changed = True
-
             label = (anchor.get_text() or "(cover)")[:20]
             if store.has(lang, digest):
                 skipped_existing += 1
-                continue
-            if dry_run:
+            elif dry_run:
                 print(f"  [{lang}] would bake {digest}.mp3 ← {label} ({len(text)} chars)")
                 continue
-            try:
-                audio = synth_long(key, region, voice, text)
-                store.put(lang, digest, audio)
-                generated += 1
-                n_chunks = len(chunk_text(text))
-                print(f"  [{lang}] {digest}.mp3 ({len(audio):,} B, {n_chunks} chunks) ← {label}")
-            except Exception as e:
-                errors += 1
-                print(f"  [{lang}] FAILED {digest} ← {label}\n         {e}", file=sys.stderr)
+            else:
+                try:
+                    audio = synth_long(key, region, voice, text)
+                    store.put(lang, digest, audio)
+                    generated += 1
+                    n_chunks = len(chunk_text(text))
+                    print(f"  [{lang}] {digest}.mp3 ({len(audio):,} B, {n_chunks} chunks) ← {label}")
+                except Exception as e:
+                    # Keep the old hash: its audio still plays, and the next
+                    # bake retries this section. Pointing at the new hash
+                    # here would ship a guaranteed-404 mp3.
+                    errors += 1
+                    print(f"  [{lang}] FAILED {digest} ← {label}\n         {e}", file=sys.stderr)
+                    continue
+            # Only now does the mp3 for `digest` exist.
+            if anchor.get(attr_name) != digest:
+                anchor[attr_name] = digest
+                changed = True
 
     if changed and not dry_run:
         path.write_text(str(soup), encoding="utf-8")
@@ -726,6 +730,7 @@ def process_page(
         f"  generated={generated} skipped_existing={skipped_existing} "
         f"skipped_lang={skipped_lang} errors={errors}"
     )
+    return errors
 
 
 def main():
@@ -772,11 +777,18 @@ def main():
     store = make_store()
     print(f"Audio store: {store.label}")
 
+    failures = 0
     for path in files:
         try:
-            process_page(path, key, region, voice_zh, voice_en, langs, args.dry_run, store)
+            failures += process_page(path, key, region, voice_zh, voice_en, langs, args.dry_run, store)
         except Exception as e:
+            failures += 1
             print(f"  PAGE FAILED: {e}", file=sys.stderr)
+    # A failed section used to leave the run green; fail it so it is seen.
+    # (The workflow still commits whatever did bake.)
+    if failures:
+        print(f"\n{failures} section(s)/page(s) failed", file=sys.stderr)
+        sys.exit(1)
 
 
 if __name__ == "__main__":
